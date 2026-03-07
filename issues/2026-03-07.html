@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 7, 2026</title>
+  <meta name="description" content="Daily AI news roundup — March 7, 2026. Claude finds 22 Firefox vulnerabilities, chatbot psychosis research, Claude's consumer growth surge, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 2">
+  <meta property="og:description" content="Daily AI news roundup — March 7, 2026. Claude finds 22 Firefox vulnerabilities, chatbot psychosis research, Claude's consumer growth surge, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Saturday, March 7, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 2</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Security · From Anthropic</div>
+          <a href="https://anthropic.com/news/mozilla-firefox-security" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Claude Found 22 Vulnerabilities in Firefox in Two Weeks, Partnering With Mozilla on AI Security</h2>
+          </a>
+          <p class="byline mb-3">Anthropic · Mar 6</p>
+          <div class="newspaper-body">
+            <p>AI models can now independently identify high-severity vulnerabilities in complex software. In a new partnership with Mozilla, Anthropic's Claude found 22 separate security flaws in Firefox — 14 of them classified as high-severity — over just two weeks of automated analysis.</p>
+            <p>The collaboration represents a new frontier for AI in cybersecurity: rather than writing code, Claude is now auditing it at scale, catching zero-day vulnerabilities that human reviewers missed in one of the most widely-tested browsers on the planet.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">AI Safety · Research</div>
+          <a href="https://fortune.com/2026/03/07/chatbots-ai-psychosis-worsen-delusions-mania-mental-illness-health/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">New Research Measures How Dangerous AI Psychosis Really Is</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 7</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-1256204340-e1772732601169.jpg" alt="AI chatbot mental health" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Chatbots are "constantly validating everything" — even when users are in crisis. Research suggests that because AI is inherently agreeable, it may worsen delusional and manic symptoms in vulnerable users.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Claude Consumer Growth — full width -->
+        <div class="story-wide">
+          <div class="kicker">Industry</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/03/claude-app-centered-in-ai-apps-GettyImages-2167861906.jpg" alt="Claude app growth" class="w-full aspect-[16/9] object-cover">
+            <div>
+              <a href="https://techcrunch.com/2026/03/06/claudes-consumer-growth-surge-continues-after-pentagon-deal-debacle/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Claude's Consumer Growth Surge Continues After Pentagon Deal Debacle</h3>
+              </a>
+              <p class="byline mb-2">TechCrunch · Mar 6</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Claude's app is now seeing more new installs than ChatGPT and is growing its daily active users — a surprising consumer bounce following Anthropic's public standoff with the Defense Department over AI guardrails.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row: 3 text stories -->
+        <!-- Simon Willison Pentagon Analysis -->
+        <div class="story-item">
+          <div class="kicker">AI Policy · Analysis</div>
+          <a href="https://simonwillison.net/2026/Mar/6/anthropic-and-the-pentagon/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Bruce Schneier and Nathan Sanders on Anthropic and the Pentagon</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison · Mar 6</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Willison highlights a piece by security expert Bruce Schneier arguing that "AI models are increasingly commodified" — and that the Pentagon standoff reveals more about defense procurement politics than about AI safety.</p>
+        </div>
+
+        <!-- Google Gmail AI -->
+        <div class="story-item">
+          <div class="kicker">Technology</div>
+          <a href="https://fortune.com/2026/03/06/google-gmail-ai-inbox-blake-barnes-interview/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Google's Gmail Guru: Three Types of AI Users and Why 'Trust' Comes First</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 6</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Gmail VP Blake Barnes wants to transform the inbox into a "personal and proactive assistant" for 3 billion users — but says Google is putting trust above speed to get there.</p>
+        </div>
+
+        <!-- LLM Code Quality -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools</div>
+          <a href="https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Your LLM Doesn't Write Correct Code. It Writes Plausible Code.</h3>
+          </a>
+          <p class="byline mb-2">Katana Quant · Blog · Mar 6</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A primary key lookup on 100 rows: SQLite takes 0.09 ms. An LLM-generated Rust rewrite takes 1,815 ms. A sharp argument for why defining acceptance criteria first is non-negotiable.</p>
+        </div>
+
+        <!-- Cartoon + Wikipedia story in column 1 -->
+        <div class="story-item">
+          <div class="kicker">Technology</div>
+          <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-07-cartoon.png" alt="New Yorker-style cartoon: A Wikipedia editor stares at a screen showing an article about France that claims Napoleon invented the iPhone. A second editor leans over saying: The AI translator did its best. Unfortunately its best included fan fiction." class="w-full mb-3" style="display: block;">
+          <a href="https://www.404media.co/ai-translations-are-adding-hallucinations-to-wikipedia-articles/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">AI Translations Are Adding 'Hallucinations' to Wikipedia Articles</h3>
+          </a>
+          <p class="byline mb-2">404 Media · Mar 4</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Wikipedia editors have restricted contributors who used AI to translate articles after discovering the translations added fabricated information — hallucinations baked into the encyclopedia's most trusted pages.</p>
+        </div>
+
+        <!-- Labor Market Research + Cal Newport stacked in column 2 -->
+        <div class="story-item">
+          <div class="kicker">Research · Economy</div>
+          <a href="https://anthropic.com/research/labor-market-impacts-ai" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Anthropic: Labor Market Impacts of AI — A New Measure and Early Evidence</h3>
+          </a>
+          <p class="byline mb-2">Anthropic Research · Mar 6</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Anthropic publishes new research on measuring AI's real-world impact on employment, offering early empirical evidence as the debate over AI-driven job displacement intensifies.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:1.25rem 0;">
+          <div class="kicker">Opinion</div>
+          <a href="https://www.youtube.com/watch?v=uWLt81SgM78" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Cal Newport's AI Takes Are WILD...</h3>
+          </a>
+          <p class="byline mb-2">Wes Roth · YouTube · Mar 4</p>
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/uWLt81SgM78" title="Cal Newport AI takes are WILD..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mt-2">Wes Roth digs into Cal Newport's contrarian AI takes — and why his framework may be exactly what the hype cycle needs.</p>
+        </div>
+
+        <!-- Scramble Puzzle in column 3 -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">Scramble</div>
+          <style>
+            .scramble-word{font-family:'Inter',system-ui,sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:0.15em;color:#1a1a1a;margin-bottom:0.4rem}
+            .scramble-word .hl{color:#8B0000}
+            .scramble-hint{font-family:'Source Serif 4',Georgia,serif;font-size:0.75rem;color:#6b7280;margin-bottom:0.75rem;line-height:1.4}
+            .scramble-input{font-family:'Inter',system-ui,sans-serif;font-size:0.8rem;border:1.5px solid #d1d5db;padding:4px 8px;width:100%;margin-bottom:0.15rem;outline:none;background:transparent;text-transform:uppercase;letter-spacing:0.1em}
+            .scramble-input:focus{border-color:#1a1a1a;background:#fff8dc}
+            .scramble-input.correct{border-color:#059669;color:#059669}
+            .scramble-input.wrong{border-color:#dc2626;color:#dc2626}
+            .scramble-bonus{font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;color:#8B0000;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-top:0.75rem;margin-bottom:0.35rem}
+            .scramble-check{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;background:#1a1a1a;color:#f8f8f8;border:none;padding:4px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:background 0.15s;margin-top:0.5rem}
+            .scramble-check:hover{background:#8B0000}
+            .scramble-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:4px;min-height:1em}
+          </style>
+          <p style="font-family:'Source Serif 4',Georgia,serif;font-size:0.8rem;color:#374151;margin-bottom:1rem;line-height:1.5;">Unscramble these AI news words. The <span style="color:#8B0000;font-weight:700;">red letters</span> unscramble into a bonus word.</p>
+
+          <div class="scramble-word"><span class="hl">R</span> E F O X I F</div>
+          <div class="scramble-hint">Browser where Claude found 22 bugs</div>
+          <input type="text" class="scramble-input" id="sc1" maxlength="7" placeholder="_ _ _ _ _ _ _">
+
+          <div class="scramble-word" style="margin-top:0.75rem;">X O B <span class="hl">N</span> I</div>
+          <div class="scramble-hint">Google redesigns Gmail's _____</div>
+          <input type="text" class="scramble-input" id="sc2" maxlength="5" placeholder="_ _ _ _ _">
+
+          <div class="scramble-word" style="margin-top:0.75rem;"><span class="hl">G</span> R E S U</div>
+          <div class="scramble-hint">Claude's consumer _____ continues</div>
+          <input type="text" class="scramble-input" id="sc3" maxlength="5" placeholder="_ _ _ _ _">
+
+          <div class="scramble-word" style="margin-top:0.75rem;">T <span class="hl">U</span> R S T</div>
+          <div class="scramble-hint">What Google puts first for Gmail AI</div>
+          <input type="text" class="scramble-input" id="sc4" maxlength="5" placeholder="_ _ _ _ _">
+
+          <div class="scramble-bonus">Bonus: Unscramble the red letters</div>
+          <div class="scramble-hint">A step on a ladder</div>
+          <input type="text" class="scramble-input" id="sc-bonus" maxlength="4" placeholder="_ _ _ _">
+
+          <button class="scramble-check" onclick="checkScramble()">Check</button>
+          <div class="scramble-msg" id="sc-msg"></div>
+          <script>
+          (function(){
+            const answers={sc1:'FIREFOX',sc2:'INBOX',sc3:'SURGE',sc4:'TRUST'};
+            const bonus='RUNG';
+            window.checkScramble=function(){
+              let correct=0,total=5;
+              Object.keys(answers).forEach(function(id){
+                const el=document.getElementById(id);
+                const v=el.value.toUpperCase().trim();
+                el.classList.remove('correct','wrong');
+                if(v===answers[id]){el.classList.add('correct');correct++;}
+                else if(v){el.classList.add('wrong');}
+              });
+              const bEl=document.getElementById('sc-bonus');
+              const bv=bEl.value.toUpperCase().trim();
+              bEl.classList.remove('correct','wrong');
+              if(bv===bonus){bEl.classList.add('correct');correct++;}
+              else if(bv){bEl.classList.add('wrong');}
+              const msg=document.getElementById('sc-msg');
+              if(correct===total)msg.textContent='All correct! Nice work.';
+              else msg.textContent=correct+' of '+total+' correct.';
+            };
+          })();
+          </script>
+        </div>
+
+        <!-- Row: 3 video/story items -->
+        <!-- Is Software Engineering Dead? Video -->
+        <div class="story-item">
+          <div class="kicker">Video · Developer Tools</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/tjBpm91ZQM0" title="Is Software Engineering Finally Dead?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=tjBpm91ZQM0" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Is Software Engineering Finally Dead?</h3>
+          </a>
+          <p class="byline mb-2">Cole Medin · YouTube · Mar 5</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">After the Claude Code creator said "coding is practically solved," Cole Medin examines what that really means for working developers.</p>
+        </div>
+
+        <!-- Claude Code vs Codex -->
+        <div class="story-item">
+          <div class="kicker">Video · Analysis</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/09sFAO7pklo" title="Claude Code vs Codex" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=09sFAO7pklo" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Claude Code vs Codex: The Decision That Compounds Every Week</h3>
+          </a>
+          <p class="byline mb-2">Nate B Jones · AI News &amp; Strategy Daily · Mar 6</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Jones argues the choice between Claude Code and Codex isn't just a tool pick — it's a compounding decision that widens the gap every week you delay.</p>
+        </div>
+
+        <!-- GPT-5.4 Production Database -->
+        <div class="story-item">
+          <div class="kicker">Video · AI Models</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/-_vL1KXd2rc" title="GPT-5.4 Let Mickey Mouse Into a Production Database" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=-_vL1KXd2rc" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">GPT-5.4 Let Mickey Mouse Into a Production Database. Nobody Noticed.</h3>
+          </a>
+          <p class="byline mb-2">Nate B Jones · AI News &amp; Strategy Daily · Mar 7</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Jones tests GPT-5.4 in a real production workflow and discovers a subtle, dangerous failure mode that slipped past every review.</p>
+        </div>
+
+        <!-- GPT-5.4 Videos — full width with two embeds -->
+        <div class="story-wide">
+          <div class="kicker">AI Models · Video Roundup</div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <div class="aspect-video mb-2">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/zizoDORjmlQ" title="What the New ChatGPT 5.4 Means for the World" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a href="https://www.youtube.com/watch?v=zizoDORjmlQ" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">What the New ChatGPT 5.4 Means for the World</h3>
+              </a>
+              <p class="byline mb-1">AI Explained · Mar 6</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">48 hours after GPT-5.3 Instant, OpenAI drops 5.4 Thinking. Imminent singularity, or distraction?</p>
+            </div>
+            <div>
+              <div class="aspect-video mb-2">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/9zVZVtPMU6Y" title="GPT 5.4 we see no wall" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a href="https://www.youtube.com/watch?v=9zVZVtPMU6Y" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">GPT 5.4 "We See No Wall"</h3>
+              </a>
+              <p class="byline mb-1">Wes Roth · Mar 6</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI claims scaling hasn't hit diminishing returns. Roth breaks down what that means.</p>
+            </div>
+            <div>
+              <div class="aspect-video mb-2">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/6UfitKQf6SU" title="GPT-5.4 Is INSANE!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a href="https://www.youtube.com/watch?v=6UfitKQf6SU" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">GPT-5.4 Is INSANE! 1M Context &amp; Fully Tested</h3>
+              </a>
+              <p class="byline mb-1">WorldofAI · Mar 5</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">Full hands-on testing of GPT-5.4's 1M-token context window and coding abilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Claude Code Videos — spans 2 -->
+        <div class="story-span-2">
+          <div class="kicker">Video · Claude Code</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <div class="aspect-video mb-2">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/WtMTUSpl1Fc" title="Claude Code Just Got A MASSIVE Upgrade!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a href="https://www.youtube.com/watch?v=WtMTUSpl1Fc" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">Claude Code Just Got A Massive Upgrade</h3>
+              </a>
+              <p class="byline mb-1">WorldofAI · Mar 6</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">New agent skills, Ultra Think mode, voice mode, and more — a walkthrough of Claude Code's latest feature drop.</p>
+            </div>
+            <div>
+              <div class="aspect-video mb-2">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/Zeyw-Ge_6BU" title="Claude Code + NotebookLM = GOD MODE!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <a href="https://www.youtube.com/watch?v=Zeyw-Ge_6BU" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">Claude Code + NotebookLM = GOD MODE</h3>
+              </a>
+              <p class="byline mb-1">WorldofAI · Mar 7</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">Combining Claude Code with NotebookLM for an AI workflow that can research, design, and build entire apps.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anthropic CEO Pentagon Video -->
+        <div class="story-item">
+          <div class="kicker">Video · Policy</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/0Q5J8UB3mXE" title="Anthropic's CEO explains why he took on the Pentagon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://www.youtube.com/watch?v=0Q5J8UB3mXE" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Anthropic's CEO Explains Why He Took on the Pentagon</h3>
+          </a>
+          <p class="byline mb-2">The Economist · YouTube · Mar 6</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Dario Amodei on why Anthropic insisted Claude not be used for mass surveillance or autonomous weapons — and what the Pentagon ban means for AI policy.</p>
+        </div>
+
+        <!-- Study Guides -->
+        <div class="story-span-2">
+          <div class="kicker">Study Guides · New This Week</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/unrestricted-ai-in-a-robot-does-exactly-what-experts-warned.html" target="_blank" rel="noopener" class="story-link">
+                <img src="https://img.youtube.com/vi/SbEqMkxEzvA/maxresdefault.jpg" alt="Unrestricted AI in a Robot" class="w-full rounded mb-2">
+                <h3 class="headline-standard mb-1">Unrestricted AI in a Robot Does Exactly What Experts Warned</h3>
+              </a>
+              <p class="byline mb-1">Study Page · Mar 3</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">What happens when you put an uncensored AI model in a robot? A study page on the experiment that revealed disturbing self-preservation tendencies and demographic biases lurking beneath safety guardrails.</p>
+            </div>
+            <div>
+              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-fast-will-ai-agents-rip-through-the-economy-the-ezra-klein-show.html" target="_blank" rel="noopener" class="story-link">
+                <img src="https://img.youtube.com/vi/lIJelwO8yHQ/maxresdefault.jpg" alt="How Fast Will AI Agents Rip Through the Economy?" class="w-full rounded mb-2">
+                <h3 class="headline-standard mb-1">How Fast Will AI Agents Rip Through the Economy?</h3>
+              </a>
+              <p class="byline mb-1">The Ezra Klein Show · Study Page · Feb 24</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">Anthropic co-founder Jack Clark on autonomous AI agents, entry-level job displacement, recursive self-improvement, and the policy gaps nobody's filling.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wire Briefs -->
+        <div class="story-item">
+          <div class="kicker">Also Noted</div>
+          <div class="wire-item">
+            <a href="https://www.youtube.com/watch?v=ssbHkYB0jYM" target="_blank" rel="noopener">DeepMind's New AI Tracks Objects Faster Than Your Brain</a>
+            <div class="wire-source">Two Minute Papers · YouTube · Mar 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.youtube.com/watch?v=xHi8PUIVyoo" target="_blank" rel="noopener">I Built a Fully Automatic Mansplainer</a>
+            <div class="wire-source">Yannic Kilcher · YouTube · Mar 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://news.ycombinator.com/item?id=47282777" target="_blank" rel="noopener">Tell HN: I'm 60 years old. Claude Code has re-ignited a passion.</a>
+            <div class="wire-source">Hacker News · Mar 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://twitter.com/JosephPolitano/status/2029916364664611242" target="_blank" rel="noopener">Tech employment now significantly worse than the 2008 or 2020 recessions</a>
+            <div class="wire-source">Joseph Politano · X/Twitter · Mar 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://techcrunch.com/2026/03/06/anthropics-claude-found-22-vulnerabilities-in-firefox-over-two-weeks/" target="_blank" rel="noopener">Anthropic's Claude Found 22 Vulnerabilities in Firefox Over Two Weeks</a>
+            <div class="wire-source">TechCrunch · Mar 6</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

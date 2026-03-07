@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup — March 6, 2026. Anthropic vs. the Pentagon, GPT-5.4 launches, AI and the labor market, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 1">
+  <meta property="og:description" content="Daily AI news roundup — March 6, 2026. Anthropic vs. the Pentagon, GPT-5.4 launches, AI and the labor market, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Friday, March 6, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 1</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">National Security · AI Policy</div>
+          <a href="https://www.nytimes.com/2026/03/05/technology/anthropic-supply-chain-risk-defense-department.html" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Pentagon Designates Anthropic a 'Supply Chain Risk,' Escalating Standoff Over AI Guardrails</h2>
+          </a>
+          <p class="byline mb-3">The New York Times</p>
+          <div class="newspaper-body">
+            <p>The Defense Department has formally designated Anthropic a supply chain risk to national security — the first time the label has been applied to an American AI company. The move requires defense contractors to certify they don't use Anthropic's Claude model, and gives the military six months to phase it out of classified systems where it is already deeply embedded.</p>
+            <p>Anthropic has pushed for explicit guarantees against fully autonomous weapons and mass domestic surveillance — restrictions the Defense Department views as unacceptable constraints on operational flexibility. CEO Dario Amodei said the company plans to challenge the action in court.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Video · Analysis</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/openai-leaked-gpt-54-its-a-distraction-the-ai-lock-in-no-one-is-talking-about-study.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">OpenAI Leaked GPT-5.4. It's a Distraction. (The AI Lock-In No One Is Talking About)</h3>
+          </a>
+          <p class="byline mb-2">Nate B Jones · AI News &amp; Strategy Daily</p>
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/JYcidOS9ozU" title="OpenAI Leaked GPT-5.4. It's a Distraction." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mt-3">Jones argues the real story behind GPT-5.4 is the infrastructure lock-in OpenAI is building — and why no one's paying attention.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- GPT-5.4 Launch — full width -->
+        <div class="story-wide">
+          <div class="kicker">AI Models</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <div class="w-full aspect-[16/9] flex items-center justify-center" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);">
+              <div class="text-center px-4">
+                <div style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 2.5rem; color: #fff; letter-spacing: -0.02em;">GPT-5.4</div>
+                <div style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 0.85rem; color: rgba(255,255,255,0.6); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.25rem;">OpenAI</div>
+              </div>
+            </div>
+            <div>
+              <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">OpenAI Introduces GPT-5.4: Native Computer Use, 1M-Token Context, and a Claim It Surpasses Humans</h3>
+              </a>
+              <p class="byline mb-2">OpenAI</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI's most capable model to date arrives in three variants — standard, Thinking, and Pro. GPT-5.4 scores 75% on OSWorld-Verified (surpassing the 72.4% human benchmark), supports 1M-token context windows, and is the first OpenAI model with native computer-use capabilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 1: Three stories (image, image, text-only) -->
+        <!-- AI and Labor -->
+        <div class="story-item">
+          <div class="kicker">Opinion · Economy</div>
+          <a href="https://www.nytimes.com/2026/03/06/opinion/ai-labor-unemployment.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">The AI Jobs Question Is No Longer Theoretical</h3>
+          </a>
+          <p class="byline mb-2">The New York Times · Opinion</p>
+          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=338&fit=crop&crop=center" alt="Office workers and AI automation" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">As AI capabilities accelerate and companies like Block cut thousands of jobs citing AI efficiency, the debate over whether artificial intelligence will displace workers at scale has moved from prediction to lived experience.</p>
+        </div>
+
+        <!-- Hard Fork Podcast -->
+        <div class="story-item">
+          <div class="kicker">Podcast</div>
+          <a href="https://www.nytimes.com/2026/03/06/podcasts/hardfork-openai-iran-kids-slop.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Hard Fork: OpenAI's Fog of War, Betting on Iran, and a Review of Slop</h3>
+          </a>
+          <p class="byline mb-2">The New York Times · Podcast</p>
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/de/c5/20/dec52092-6be0-9007-875c-6aa8e690a905/mza_12490014444602578825.jpg/600x600bf.webp" alt="Hard Fork podcast cover art" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">This week's Hard Fork tackles OpenAI's positioning amid the Pentagon reshuffle, the role of AI in the Iran campaign, and a frank review of the growing "slop" problem across AI platforms.</p>
+        </div>
+
+        <!-- Anthropic Response + Agentic Testing (stacked in one cell) -->
+        <div class="story-item">
+          <div class="kicker">From Anthropic</div>
+          <a href="https://www.anthropic.com/news/where-stand-department-war" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Dario Amodei: Where Things Stand With the Department of War</h3>
+          </a>
+          <p class="byline mb-2">Anthropic</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Anthropic's CEO responds directly to the supply chain risk designation, outlining its narrow scope and the company's plan to challenge the action in court.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <div class="kicker">Developer Tools</div>
+          <a href="https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Simon Willison: How Coding Agents Should Manually Test Their Own Work</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A practical guide to making AI coding agents verify their output — because "never assume that code generated by an LLM works until that code has been executed."</p>
+        </div>
+
+        <!-- AI and Taxes with Cartoon — spans 2 columns -->
+        <div class="story-span-2">
+          <div class="kicker">Technology</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-06-cartoon.png" alt="New Yorker-style cartoon: A robot in a suit sits behind a desk labeled AI Tax Services, telling a couple: The good news is I found you an extra two thousand dollars. The bad news is it might be someone else's." class="w-full" style="display: block;">
+            </div>
+            <div>
+              <a href="https://www.nytimes.com/2026/03/05/technology/artificial-intelligence-taxes-tax-refund.html" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">AI Chatbots Tried to Do Your Taxes. They Miscalculated Refunds by an Average of $2,000.</h3>
+              </a>
+              <p class="byline mb-2">The New York Times</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">The Times tested ChatGPT, Gemini, Claude, and Grok on eight fictional tax scenarios. The models struggled badly, miscalculating refunds by over $2,000 on average.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Two text stories + video (span 2) -->
+        <!-- Data Centers -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure</div>
+          <a href="https://www.nytimes.com/2026/03/05/technology/ai-data-centers-land-cloverleaf-infrastructure.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The AI Land Rush: How Cloverleaf Infrastructure Is Reshaping the Data Center Map</h3>
+          </a>
+          <p class="byline mb-2">The New York Times</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Companies like Cloverleaf are snapping up rural land across America for massive data centers — triggering community resistance and raising questions about the physical footprint of the AI boom.</p>
+        </div>
+
+        <!-- Matt Maher Video — 2 columns wide -->
+        <div class="story-span-2">
+          <div class="kicker">Video · Workflow</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/FcWi9j0FiYk" title="My Biggest AI Unlock — It Does Everything" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/my-biggest-ai-unlock-it-does-everything-study.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">My Biggest AI Unlock — It Does Everything</h3>
+          </a>
+          <p class="byline mb-2">Matt Maher · YouTube</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">It takes 30 seconds to set up. It sounds like absolutely nothing. And it replaced every other AI tool Maher uses.</p>
+        </div>
+
+        <!-- Mini Crossword -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+          <style>
+            .xw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:0.75rem;max-width:220px}
+            .xw-cell{position:relative;aspect-ratio:1;border:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:center}
+            .xw-cell input{width:100%;height:100%;border:none;background:transparent;text-align:center;font-family:'Inter',system-ui,sans-serif;font-size:1.1rem;font-weight:700;color:#1a1a1a;text-transform:uppercase;outline:none;padding:0}
+            .xw-cell input:focus{background:#fff8dc}
+            .xw-cell.black{background:#1a1a1a;border-color:#1a1a1a}
+            .xw-cell .xw-num{position:absolute;top:1px;left:2px;font-family:'Inter',sans-serif;font-size:0.5rem;font-weight:600;color:#6b7280;line-height:1;pointer-events:none}
+            .xw-cell.correct input{color:#059669}
+            .xw-cell.wrong input{color:#dc2626}
+            .xw-clues{font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;color:#374151;line-height:1.5}
+            .xw-clues strong{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:#1a1a1a}
+            .xw-clues ol{list-style:none;padding:0;margin:0 0 0.5rem 0}
+            .xw-clues li{padding:1px 0}
+            .xw-clues li span.clue-num{font-weight:700;color:#8B0000;margin-right:3px}
+            .xw-check{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;background:#1a1a1a;color:#f8f8f8;border:none;padding:4px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:background 0.15s}
+            .xw-check:hover{background:#8B0000}
+            .xw-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:4px;min-height:1em}
+          </style>
+          <div class="xw-grid" id="xw-grid"></div>
+          <div class="xw-clues">
+            <strong>Across</strong>
+            <ol>
+              <li><span class="clue-num">1</span> Where AI models run</li>
+              <li><span class="clue-num">3</span> An AI that acts on its own</li>
+              <li><span class="clue-num">5</span> AI-generated junk on the web</li>
+            </ol>
+            <strong>Down</strong>
+            <ol>
+              <li><span class="clue-num">1</span> What GPT does</li>
+              <li><span class="clue-num">2</span> What AI centers store</li>
+            </ol>
+          </div>
+          <button class="xw-check" onclick="checkXW()">Check</button>
+          <div class="xw-msg" id="xw-msg"></div>
+          <script>
+          (function(){
+            const solution=[
+              ['C','L','O','U','D'],
+              ['H',null,null,null,'A'],
+              ['A','G','E','N','T'],
+              ['T',null,null,null,'A'],
+              ['S','L','O','P',null]
+            ];
+            const numbers={
+              '0,0':'1','2,0':'3','4,0':'5','0,4':'2'
+            };
+            const grid=document.getElementById('xw-grid');
+            const cells=[];
+            for(let r=0;r<5;r++){
+              cells[r]=[];
+              for(let c=0;c<5;c++){
+                const div=document.createElement('div');
+                div.className='xw-cell'+(solution[r][c]===null?' black':'');
+                const key=r+','+c;
+                if(numbers[key]){
+                  const num=document.createElement('span');
+                  num.className='xw-num';
+                  num.textContent=numbers[key];
+                  div.appendChild(num);
+                }
+                if(solution[r][c]!==null){
+                  const inp=document.createElement('input');
+                  inp.maxLength=1;
+                  inp.dataset.r=r;
+                  inp.dataset.c=c;
+                  inp.addEventListener('input',function(){
+                    this.value=this.value.toUpperCase();
+                    this.parentElement.classList.remove('correct','wrong');
+                    if(this.value){
+                      const nr=parseInt(this.dataset.r),nc=parseInt(this.dataset.c);
+                      const next=findNext(nr,nc);
+                      if(next)next.focus();
+                    }
+                  });
+                  inp.addEventListener('keydown',function(e){
+                    if(e.key==='Backspace'&&!this.value){
+                      const nr=parseInt(this.dataset.r),nc=parseInt(this.dataset.c);
+                      const prev=findPrev(nr,nc);
+                      if(prev){prev.focus();prev.value='';prev.parentElement.classList.remove('correct','wrong');}
+                    }
+                  });
+                  div.appendChild(inp);
+                  cells[r][c]=inp;
+                } else {
+                  cells[r][c]=null;
+                }
+                grid.appendChild(div);
+              }
+            }
+            function findNext(r,c){
+              for(let i=c+1;i<5;i++)if(cells[r][i])return cells[r][i];
+              for(let j=r+1;j<5;j++)for(let i=0;i<5;i++)if(cells[j][i])return cells[j][i];
+              return null;
+            }
+            function findPrev(r,c){
+              for(let i=c-1;i>=0;i--)if(cells[r][i])return cells[r][i];
+              for(let j=r-1;j>=0;j--)for(let i=4;i>=0;i--)if(cells[j][i])return cells[j][i];
+              return null;
+            }
+            window.checkXW=function(){
+              let correct=0,total=0;
+              for(let r=0;r<5;r++){
+                for(let c=0;c<5;c++){
+                  if(solution[r][c]===null)continue;
+                  total++;
+                  const v=cells[r][c].value.toUpperCase();
+                  if(v===solution[r][c]){
+                    cells[r][c].parentElement.classList.add('correct');
+                    cells[r][c].parentElement.classList.remove('wrong');
+                    correct++;
+                  } else if(v){
+                    cells[r][c].parentElement.classList.add('wrong');
+                    cells[r][c].parentElement.classList.remove('correct');
+                  }
+                }
+              }
+              const msg=document.getElementById('xw-msg');
+              if(correct===total)msg.textContent='All correct! You nailed it.';
+              else msg.textContent=correct+' of '+total+' correct.';
+            };
+          })();
+          </script>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
