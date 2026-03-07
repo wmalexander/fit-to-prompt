@@ -24,7 +24,7 @@ The workflow:
 
 ## Distribution
 
-- **Web:** Issues are also hosted on S3 at `wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/`
+- **Web:** Hosted on GitHub Pages at [fittoprompt.com](https://fittoprompt.com)
 - **Email:** Sent via [Buttondown](https://buttondown.com/fittoprompt) with a teaser email linking to the full issue
 
 ## Newsletter data
