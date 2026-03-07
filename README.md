@@ -26,7 +26,3 @@ The workflow:
 
 - **Web:** Hosted on GitHub Pages at [fittoprompt.com](https://fittoprompt.com)
 - **Email:** Sent via [Buttondown](https://buttondown.com/fittoprompt) with a teaser email linking to the full issue
-
-## Newsletter data
-
-Issue metadata lives in the parent repo at `WFU Study Guides/wfu-study-guide-book/data/newsletter-data.js`.
