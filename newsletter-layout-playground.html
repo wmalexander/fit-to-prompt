@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter Layout Feedback</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:#111;color:#ccc;font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:13px}
+
+.app{display:grid;grid-template-columns:1fr 360px;height:100vh}
+
+/* Preview panel */
+.preview-wrap{overflow-y:auto;position:relative;background:#f8f8f8}
+.preview-wrap iframe{width:100%;height:100%;border:none}
+
+/* Annotation overlay */
+.click-layer{position:absolute;top:0;left:0;width:100%;height:100%;z-index:50;display:none}
+.annotation-mode .click-layer{display:block;cursor:crosshair}
+.preview-wrap{position:relative}
+.pin{position:absolute;width:28px;height:28px;border-radius:50%;background:#8B0000;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.3);transform:translate(-50%,-50%);transition:transform 0.15s,box-shadow 0.15s;border:2px solid #fff}
+.pin:hover{transform:translate(-50%,-50%) scale(1.15);box-shadow:0 4px 12px rgba(0,0,0,0.4)}
+.pin.active{background:#fff;color:#8B0000;border-color:#8B0000;transform:translate(-50%,-50%) scale(1.2)}
+
+/* Right panel */
+.right-panel{background:#1a1a1a;border-left:1px solid #333;display:flex;flex-direction:column;overflow:hidden}
+
+/* Header */
+.panel-header{padding:16px;border-bottom:1px solid #333}
+.panel-header h2{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+.panel-header p{font-size:11px;color:#888;line-height:1.4}
+.mode-toggle{display:flex;gap:4px;margin-top:10px}
+.mode-btn{flex:1;padding:6px;border:1px solid #444;background:#222;color:#aaa;font-size:11px;font-weight:600;cursor:pointer;border-radius:4px;text-align:center;transition:all 0.15s}
+.mode-btn:hover{background:#333}
+.mode-btn.active{background:#8B0000;border-color:#8B0000;color:#fff}
+
+/* Annotations list */
+.annotations-list{flex:1;overflow-y:auto;padding:8px}
+.annotation-card{background:#222;border:1px solid #333;border-radius:6px;padding:12px;margin-bottom:8px;cursor:pointer;transition:all 0.15s}
+.annotation-card:hover{border-color:#555}
+.annotation-card.active{border-color:#8B0000;background:#2a1a1a}
+.annotation-card .card-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.annotation-card .pin-num{width:22px;height:22px;border-radius:50%;background:#8B0000;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.annotation-card.active .pin-num{background:#fff;color:#8B0000}
+.annotation-card .card-label{font-size:11px;color:#888;flex:1}
+.annotation-card .delete-btn{background:none;border:none;color:#555;font-size:16px;cursor:pointer;padding:0 4px;line-height:1}
+.annotation-card .delete-btn:hover{color:#cf222e}
+.annotation-card textarea{width:100%;background:#1a1a1a;border:1px solid #444;border-radius:4px;color:#ccc;padding:8px;font-size:12px;line-height:1.5;font-family:inherit;resize:vertical;min-height:60px;margin-top:6px;outline:none}
+.annotation-card textarea:focus{border-color:#8B0000}
+.annotation-card textarea::placeholder{color:#555}
+
+.empty-state{text-align:center;padding:40px 20px;color:#555}
+.empty-state p{font-size:12px;line-height:1.6}
+
+/* Prompt bar */
+.prompt-bar{border-top:1px solid #333;padding:12px;background:#1a1a1a}
+.prompt-bar .count{font-size:11px;color:#888;margin-bottom:8px}
+.prompt-actions{display:flex;gap:8px}
+.copy-btn,.clear-btn{flex:1;padding:8px;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;text-align:center;transition:all 0.15s;border:1px solid}
+.copy-btn{background:#8B0000;border-color:#8B0000;color:#fff}
+.copy-btn:hover{background:#a00000}
+.copy-btn.copied{background:#1a7f37;border-color:#1a7f37}
+.clear-btn{background:#222;border-color:#444;color:#aaa}
+.clear-btn:hover{background:#333;color:#fff}
+</style>
+</head>
+<body>
+<div class="app annotation-mode" id="app">
+  <div class="preview-wrap" id="preview-wrap">
+    <div class="click-layer" id="click-layer"></div>
+    <iframe id="newsletter-frame" src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/2026-03-06.html"></iframe>
+  </div>
+
+  <div class="right-panel">
+    <div class="panel-header">
+      <h2>Layout Feedback</h2>
+      <p>Click anywhere on the newsletter to drop a pin and add feedback. Your annotations become a prompt you can copy back to Claude.</p>
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="mode-annotate" onclick="setMode('annotate')">+ Annotate</button>
+        <button class="mode-btn" id="mode-view" onclick="setMode('view')">View Only</button>
+      </div>
+    </div>
+
+    <div class="annotations-list" id="annotations-list">
+      <div class="empty-state" id="empty-state">
+        <p>No annotations yet.<br>Click on the newsletter to start.</p>
+      </div>
+    </div>
+
+    <div class="prompt-bar">
+      <div class="count" id="annotation-count">0 annotations</div>
+      <div class="prompt-actions">
+        <button class="copy-btn" id="copy-btn" onclick="copyPrompt()">Copy Feedback</button>
+        <button class="clear-btn" onclick="clearAll()">Clear All</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let annotations = [];
+let nextId = 1;
+let activeId = null;
+let mode = 'annotate';
+
+function setMode(m) {
+  mode = m;
+  document.getElementById('mode-annotate').classList.toggle('active', m === 'annotate');
+  document.getElementById('mode-view').classList.toggle('active', m === 'view');
+  document.getElementById('app').classList.toggle('annotation-mode', m === 'annotate');
+}
+
+// Sync click layer height with iframe content
+function syncLayerHeight() {
+  try {
+    const iframe = document.getElementById('newsletter-frame');
+    const h = iframe.contentDocument?.body?.scrollHeight;
+    if (h) document.getElementById('click-layer').style.height = h + 'px';
+  } catch(e) {}
+}
+document.getElementById('newsletter-frame').addEventListener('load', () => {
+  syncLayerHeight();
+  setInterval(syncLayerHeight, 1000);
+});
+
+// Click on the click layer to place a pin
+document.getElementById('click-layer').addEventListener('click', function(e) {
+  if (mode !== 'annotate') return;
+  if (e.target.classList.contains('pin')) return;
+
+  const wrap = document.getElementById('preview-wrap');
+  const rect = wrap.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top + wrap.scrollTop;
+  const xPct = (x / rect.width) * 100;
+
+  const annotation = {
+    id: nextId++,
+    x: xPct,
+    y: y,
+    text: '',
+    region: guessRegion(y, wrap)
+  };
+  annotations.push(annotation);
+  activeId = annotation.id;
+  renderAll();
+  setTimeout(() => {
+    const ta = document.querySelector(`.annotation-card[data-id="${annotation.id}"] textarea`);
+    if (ta) ta.focus();
+  }, 50);
+});
+
+function guessRegion(y, wrap) {
+  const frameHeight = wrap.scrollHeight;
+  const ratio = y / frameHeight;
+  if (ratio < 0.08) return 'Masthead';
+  if (ratio < 0.25) return 'Lead story section';
+  if (ratio < 0.75) return 'Masonry stories section';
+  if (ratio < 0.92) return 'Bottom stories / video';
+  return 'Footer';
+}
+
+function renderAll() {
+  renderPins();
+  renderList();
+  updateCount();
+}
+
+function renderPins() {
+  document.querySelectorAll('.pin').forEach(p => p.remove());
+  const wrap = document.getElementById('preview-wrap');
+  annotations.forEach(a => {
+    const pin = document.createElement('div');
+    pin.className = 'pin' + (a.id === activeId ? ' active' : '');
+    pin.textContent = a.id;
+    pin.style.left = a.x + '%';
+    pin.style.top = a.y + 'px';
+    pin.onclick = (e) => { e.stopPropagation(); setActive(a.id); };
+    wrap.appendChild(pin);
+  });
+}
+
+function renderList() {
+  const list = document.getElementById('annotations-list');
+  const empty = document.getElementById('empty-state');
+  if (annotations.length === 0) {
+    empty.style.display = 'block';
+    list.querySelectorAll('.annotation-card').forEach(c => c.remove());
+    return;
+  }
+  empty.style.display = 'none';
+  const existing = list.querySelectorAll('.annotation-card');
+  existing.forEach(c => c.remove());
+  annotations.forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'annotation-card' + (a.id === activeId ? ' active' : '');
+    card.dataset.id = a.id;
+    card.onclick = (e) => {
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON') return;
+      setActive(a.id);
+    };
+    card.innerHTML = `
+      <div class="card-header">
+        <span class="pin-num">${a.id}</span>
+        <span class="card-label">${a.region}</span>
+        <button class="delete-btn" onclick="event.stopPropagation();deleteAnnotation(${a.id})">&times;</button>
+      </div>
+      <textarea placeholder="What's wrong here? What would you change?" oninput="updateText(${a.id},this.value)">${a.text}</textarea>
+    `;
+    list.appendChild(card);
+  });
+  // Scroll active card into view
+  if (activeId) {
+    const activeCard = list.querySelector(`.annotation-card[data-id="${activeId}"]`);
+    if (activeCard) activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function setActive(id) {
+  activeId = id;
+  renderAll();
+  // Scroll preview to pin
+  const a = annotations.find(a => a.id === id);
+  if (a) {
+    const wrap = document.getElementById('preview-wrap');
+    wrap.scrollTo({ top: a.y - wrap.clientHeight / 3, behavior: 'smooth' });
+  }
+}
+
+function updateText(id, text) {
+  const a = annotations.find(a => a.id === id);
+  if (a) a.text = text;
+}
+
+function deleteAnnotation(id) {
+  annotations = annotations.filter(a => a.id !== id);
+  if (activeId === id) activeId = null;
+  renderAll();
+}
+
+function clearAll() {
+  if (annotations.length === 0) return;
+  if (!confirm('Clear all annotations?')) return;
+  annotations = [];
+  activeId = null;
+  nextId = 1;
+  renderAll();
+}
+
+function updateCount() {
+  const filled = annotations.filter(a => a.text.trim()).length;
+  const total = annotations.length;
+  document.getElementById('annotation-count').textContent =
+    `${total} annotation${total !== 1 ? 's' : ''}` +
+    (filled < total ? ` (${total - filled} need comments)` : '');
+}
+
+function copyPrompt() {
+  const filled = annotations.filter(a => a.text.trim());
+  if (filled.length === 0) {
+    alert('Add comments to your annotations first.');
+    return;
+  }
+  let prompt = `Update the newsletter layout in AI Newsletter/issues/2026-03-06.html. Here's my feedback:\n\n`;
+  filled.forEach((a, i) => {
+    prompt += `${i + 1}. **${a.region}:** ${a.text.trim()}\n\n`;
+  });
+  prompt += `Please make these changes and re-upload to S3.`;
+  navigator.clipboard.writeText(prompt).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy Feedback'; btn.classList.remove('copied'); }, 1500);
+  });
+}
+</script>
+</body>
+</html>
