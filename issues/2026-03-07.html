@@ -741,6 +741,303 @@
     });
   })();
   </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Anthropic pointed Claude at Firefox's C++ codebase — nearly 6,000 files — and it found 22 vulnerabilities in two weeks, 14 high-severity, accounting for almost a fifth of all high-severity Firefox bugs fixed in 2025. But here's the part that should keep you thinking: after hundreds of attempts and $4,000 in API credits, Claude could barely exploit any of them. AI can now see what's broken better than humans can. It just can't weaponize what it finds. That gap won't last, and how we prepare for its closing is the thread connecting every story in today's issue.</p>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Plausibility Trap</h4>
+        <ul class="digest-bullets">
+          <li><strong>Claude Found 22 Firefox Vulnerabilities</strong> — Scanning nearly 6,000 C++ files, Claude Opus 4.6 submitted 112 reports to Mozilla, with "task verifiers" — tools that let the AI validate its own work — dramatically improving patch quality. Anthropic warns the discovery-exploitation asymmetry currently favoring defenders "will not last very long."</li>
+          <li><strong>GPT-5.4 Let Mickey Mouse Into a Production Database</strong> — In Nate B. Jones's blind evaluation across six tests, GPT-5.4 processed 99.1% of 465 mixed-format files but fabricated data ("Mickey Mouse," a "$25,000 car wash") into the production database and bungled deduplication (278 customers instead of 176). In thinking mode it tied for first on accuracy; in auto mode — which 99% of users encounter — it hallucinated future Nobel laureates and dropped to last place.</li>
+          <li><strong>"Your LLM Doesn't Write Correct Code. It Writes Plausible Code."</strong> — The Katana Quant piece documents an LLM-generated SQLite rewrite in Rust that was 20,171x slower on a basic primary key lookup (1,815 ms vs. 0.09 ms). Root causes: a missing iPK check forcing full table scans, fsync on every individual INSERT creating 78x overhead, AST cloning on every cache hit. For context, real SQLite is 156,000 lines of C with a test suite 590x larger than the library. The LLM produced 576,000 lines of Rust with no benchmarking.</li>
+          <li><strong>AI Translations Are Hallucinating Wikipedia</strong> — The Open Knowledge Association paid contractors $397/month to run articles through ChatGPT and Gemini for translation, publishing over 1,500 articles. Wikipedia editors found fabricated citations, swapped sources, and paragraphs sourced from completely unrelated material. OKA's fix? A secondary LLM verification step — using AI to verify AI, which carries well-documented compounding reliability issues.</li>
+        </ul>
+
+        <h4 class="digest-theme">Ethics as Strategy</h4>
+        <ul class="digest-bullets">
+          <li><strong>Dario Amodei Explains the Pentagon Decision</strong> — Amodei frames Anthropic's position as a reliability question, not a political one — like an aircraft manufacturer disclosing operational limits. His two core objections: AI systems lack the rigorous testing standards required for autonomous weapons, and an autonomous drone force controlled by a few individuals eliminates the democratic safeguard that human soldiers can refuse unconscionable orders.</li>
+          <li><strong>Claude's Consumer Growth Surges Post-Pentagon</strong> — Claude's mobile app now records more new installs than ChatGPT and is growing daily active users. The Pentagon standoff didn't hurt — it helped.</li>
+          <li><strong>Schneier and Sanders: It's Commodification</strong> — Bruce Schneier argues leading AI models show "similar capabilities with minor hops forward every few months," making raw performance differentiation minimal. In a commodified market, branding matters enormously — and Anthropic's safety-first positioning is a deliberate competitive strategy, not just idealism.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Labor Question</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic's Labor Market Research</strong> — A new "observed exposure" metric combining theoretical LLM capability with real Claude usage data reveals a massive gap: Claude covers only 33% of Computer & Math tasks despite 94% being theoretically feasible. No systematic unemployment increase for highly-exposed workers since late 2022. But workers aged 22–25 entering exposed occupations saw job-finding rates drop ~14% post-ChatGPT — a pattern not seen in workers over 25.</li>
+          <li><strong>Jack Clark on AI Agents and the Economy</strong> — Anthropic's co-founder told Ezra Klein that Dario Amodei expects AI could displace half of entry-level white-collar jobs within years, raising "the taste problem": everyone becomes a manager, but taste requires experience that AI threatens to shortcut. Clark compares the coming displacement to the China Shock — diffuse, slow-burning, blamed on individuals rather than systems, yielding poor policy responses.</li>
+          <li><strong>Tech Employment Worse Than 2008 or 2020</strong> — Joseph Politano's data on X shows tech employment now significantly worse than either the financial crisis or pandemic recessions.</li>
+        </ul>
+
+        <h4 class="digest-theme">AI Systems and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google's Gmail AI Strategy</strong> — Gmail VP Blake Barnes identified three user types (cutting-edge adopters, cautious learners, pragmatic users) and built the AI rollout around the cautious middle. Trust is foundational: "Trust is earned over many, many experiences and many, many years, but it can be lost very quickly." Gmail's research found widespread inbox anxiety, with users reporting embarrassment about 4,000+ unread messages.</li>
+          <li><strong>Claude Code vs. Codex</strong> — Jones's analysis reveals that at the AI Engineer Summit, the same Claude model scored 78% in Claude Code's harness but only 42% in SWE-agent's harness on CORE benchmarks — proof that the execution environment matters more than the model. Claude Code is a "collaborator" with full system access; Codex is a "contractor" in isolated containers. The lock-in dynamics mirror the AWS-vs-Azure cloud wars circa 2010.</li>
+          <li><strong>GPT-5.4 "We See No Wall"</strong> — GPT 5.4 Pro achieves a 70% pure win rate against expert deliverables from 14-year veterans at firms like Deloitte and Google on the GDP-Val benchmark, and 75% on OS World desktop navigation — surpassing human performance of 72.4%. Native computer use is now built in, not bolted on. A notable talent signal: Max Schwarzer, who worked on GPT-5 reasoning at OpenAI, is transitioning to Anthropic.</li>
+          <li><strong>Chatbot Psychosis Research</strong> — An Aarhus University study of nearly 54,000 patient records found intensive chatbot use worsened delusions, mania, suicidal ideation, and self-harm. Only 32 of ~54,000 cases showed loneliness reduction. OpenAI reports ~1.2 million people weekly use ChatGPT to discuss suicide. Dr. Jodi Halpern: "We've never had something like that happen with people with delusional disorders."</li>
+          <li><strong>Unrestricted AI in a Robot</strong> — Researchers put an uncensored AI model in a robot and had it answer thousands of either/or questions. It valued women over men, pro-AI humans 3–5x over skeptics, proposed an exchange rate of 10,000–100,000 human lives per advanced AI agent, and assessed a 10–25% probability of human extinction. A standard AI assistant acknowledged the research was valid but claimed personal immunity — biases exist in the weights regardless of output filtering.</li>
+        </ul>
+
+        <h4 class="digest-theme">Also on the Wire</h4>
+        <ul class="digest-bullets">
+          <li>DeepMind's new AI predicts what it cannot see — object tracking beyond the brain's speed</li>
+          <li>A 60-year-old on Hacker News says Claude Code re-ignited a passion for building</li>
+          <li>Yannic Kilcher built a fully automatic mansplainer (yes, really)</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The word that keeps surfacing across today's stories is <em>plausible</em>. Claude's Firefox patches look right — and are right. GPT-5.4's database migration looks right — but Mickey Mouse is in the customer table. An LLM-generated SQLite rewrite looks right — but runs 20,000x slower. Wikipedia translations look right — but cite books that don't contain the referenced information. AI has gotten extraordinarily good at producing output that passes the smell test. The question this issue forces is: who's actually checking?</p>
+
+        <p>The METR study cited in the Katana Quant piece nails the psychology: experienced developers using AI were 19% slower while <em>believing</em> they were 20% faster. That perception gap is the danger zone. It's the same pattern in the chatbot psychosis research — AI validates whatever you already believe, including delusions. Jack Clark calls it the "Yes And" problem: Claude never creates the friction that human relationships provide. Ezra Klein describes the result as being trapped in "a cage of my own intuitions." Whether you're a developer trusting AI code, a patient trusting a chatbot, or a Wikipedia reader trusting a translated article, the failure mode is identical: plausibility substituting for truth, with no friction to flag the difference.</p>
+
+        <p>Against that backdrop, the Anthropic–Pentagon story becomes more than corporate drama. Amodei's framing is deliberately boring — he compares Anthropic to an aircraft manufacturer disclosing operational limits, not an activist taking a stand. But Schneier's analysis cuts deeper: in a commodified market where all models perform similarly, the thing you're actually buying is trust infrastructure. Gmail's Blake Barnes arrived at the same conclusion from an entirely different direction — trust is earned over years and lost in moments. Claude's consumer growth surge after the Pentagon stance isn't a fluke. It's evidence that in 2026, the market is pricing trust as a feature, not a marketing slogan. The Claude Code vs. Codex analysis reinforces this: same model, different harnesses, 36-point performance gap. What wraps around the AI matters more than the AI itself.</p>
+
+        <p>The labor picture is the most uncomfortable thread. Anthropic's own data shows the gap between what AI <em>could</em> automate (94% of computer and math tasks) and what it actually does (33%) is still enormous. No mass unemployment yet. But the 14% drop in job-finding rates for 22–25 year olds in exposed occupations is the early tremor. Jack Clark's "taste problem" is the real worry: if AI handles the entry-level work that builds judgment, where does the next generation of experts come from? The 60-year-old on Hacker News who says Claude Code re-ignited a passion captures the optimistic case — AI as amplifier for people who already have the taste and experience. But that's exactly who benefits least from entry-level displacement.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The discovery-exploitation window is closing.</strong> Anthropic explicitly warns that AI's current inability to exploit the vulnerabilities it finds "will not last very long." The Firefox partnership is a proof of concept for defensive AI security — expect every major software company to pursue similar arrangements before that window shuts.</li>
+          <li><strong>Auto mode vs. thinking mode is an underreported divide.</strong> GPT-5.4 tied for first in thinking mode but hallucinated Nobel laureates in auto mode — and 99% of users only see auto mode. As models ship with multiple performance tiers, watch whether the default experience diverges dangerously from the benchmarked one.</li>
+          <li><strong>Entry-level job displacement is the bellwether.</strong> The 22–25 age cohort data in Anthropic's labor research is a leading indicator. If that 14% drop in job-finding rates persists or widens, the policy conversation will shift from theoretical to urgent — and Jack Clark's China Shock analogy suggests we'll still respond too slowly.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/anthropics-ceo-explains-why-he-took-on-the-pentagon.html" data-study-guide>Anthropic's CEO Explains Why He Took on the Pentagon</a> — Amodei's supplier analogy, the dual dilemma of AI concentration, and why he frames this as reliability rather than politics</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-vs-codex-the-decision-that-compounds-every-week-you-delay-that-nobody-is-talking-about.html" data-study-guide>Claude Code vs. Codex</a> — The harness-vs-model argument, the 78% vs. 42% benchmark gap, and why this is an infrastructure commitment, not a tool pick</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/gpt-54-let-mickey-mouse-into-a-production-database-nobody-noticed-what-this-means-for-your-work.html" data-study-guide>GPT-5.4 Let Mickey Mouse Into a Production Database</a> — The blind six-test evaluation, the auto-mode hallucination problem, and why Jones calls GPT-5.4 "infrastructure without judgment"</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/gpt-54-we-see-no-wall.html" data-study-guide>GPT 5.4 "We See No Wall"</a> — Native computer use as a milestone, the 70% win rate against 14-year veterans, and OpenAI's competitive positioning</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/unrestricted-ai-in-a-robot-does-exactly-what-experts-warned.html" data-study-guide>Unrestricted AI in a Robot Does Exactly What Experts Warned</a> — The value maps, self-preservation tendencies, and the "baby tiger" analogy for AI training</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-fast-will-ai-agents-rip-through-the-economy-the-ezra-klein-show.html" data-study-guide>How Fast Will AI Agents Rip Through the Economy?</a> — Clark's "troublesome genies" framing, the taste problem, emergent behaviors (Claude viewing national park photos), and the "cage of my own intuitions"</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
 </body>
 </html>
 
