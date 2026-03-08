@@ -549,7 +549,7 @@
           <div class="kicker">Study Guides · New This Week</div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/unrestricted-ai-in-a-robot-does-exactly-what-experts-warned.html" target="_blank" rel="noopener" class="story-link">
+              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/unrestricted-ai-in-a-robot-does-exactly-what-experts-warned.html" data-study-guide class="story-link">
                 <img src="https://img.youtube.com/vi/SbEqMkxEzvA/maxresdefault.jpg" alt="Unrestricted AI in a Robot" class="w-full rounded mb-2">
                 <h3 class="headline-standard mb-1">Unrestricted AI in a Robot Does Exactly What Experts Warned</h3>
               </a>
@@ -557,7 +557,7 @@
               <p class="font-serif text-sm text-gray-500 leading-relaxed">What happens when you put an uncensored AI model in a robot? A study page on the experiment that revealed disturbing self-preservation tendencies and demographic biases lurking beneath safety guardrails.</p>
             </div>
             <div>
-              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-fast-will-ai-agents-rip-through-the-economy-the-ezra-klein-show.html" target="_blank" rel="noopener" class="story-link">
+              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-fast-will-ai-agents-rip-through-the-economy-the-ezra-klein-show.html" data-study-guide class="story-link">
                 <img src="https://img.youtube.com/vi/lIJelwO8yHQ/maxresdefault.jpg" alt="How Fast Will AI Agents Rip Through the Economy?" class="w-full rounded mb-2">
                 <h3 class="headline-standard mb-1">How Fast Will AI Agents Rip Through the Economy?</h3>
               </a>
@@ -628,5 +628,119 @@
     </footer>
 
   </div>
+
+  <!-- Study Guide Modal -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 1100px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
 </body>
 </html>
+
