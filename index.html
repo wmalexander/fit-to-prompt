@@ -210,6 +210,13 @@
       <div>
         <div class="archive-item flex items-baseline justify-between gap-4">
           <div>
+            <span class="archive-issue mr-2">No. 3</span>
+            <a href="issues/2026-03-08.html">OpenAI Robotics Lead Quits Over Pentagon Deal</a>
+          </div>
+          <span class="archive-date whitespace-nowrap">Mar 8, 2026</span>
+        </div>
+        <div class="archive-item flex items-baseline justify-between gap-4">
+          <div>
             <span class="archive-issue mr-2">No. 2</span>
             <a href="issues/2026-03-07.html">Claude Found 22 Firefox Vulnerabilities in Two Weeks</a>
           </div>
@@ -238,7 +245,24 @@
   </div>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
+      navigator.serviceWorker.register('sw.js').then(function(reg) {
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState === 'visible') {
+            reg.update().then(function() {
+              if (reg.waiting) {
+                reg.waiting.postMessage('skipWaiting');
+              }
+            });
+          }
+        });
+        var refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function() {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
+        });
+      });
     }
   </script>
 </body>

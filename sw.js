@@ -1,9 +1,9 @@
-const CACHE_NAME = 'ftp-v1';
+const CACHE_NAME = 'ftp-v2';
 const ASSETS = [
-  '/wm/ai-newsletter/index.html',
-  '/wm/ai-newsletter/assets/favicon.svg',
-  '/wm/ai-newsletter/assets/favicon-192x192.png',
-  '/wm/ai-newsletter/assets/favicon-512x512.png'
+  '/index.html',
+  '/assets/favicon.svg',
+  '/assets/favicon-192x192.png',
+  '/assets/favicon-512x512.png'
 ];
 
 self.addEventListener('install', function(e) {
@@ -41,4 +41,10 @@ self.addEventListener('fetch', function(e) {
       return caches.match(e.request);
     })
   );
+});
+
+self.addEventListener('message', function(e) {
+  if (e.data === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
