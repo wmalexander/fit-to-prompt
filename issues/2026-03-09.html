@@ -175,6 +175,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
+      grid-auto-flow: dense;
     }
     @media (min-width: 768px) {
       .masonry-flow {
@@ -380,6 +381,7 @@
           </div>
         </div>
 
+        <!-- Row 2: All tall items together -->
         <!-- NYT Daily Podcast -->
         <div class="story-item">
           <div class="kicker">Podcast · AI Policy</div>
@@ -389,16 +391,6 @@
           <p class="byline mb-2">New York Times · The Daily · Mar 9</p>
           <img src="https://static01.nyt.com/images/2026/03/07/multimedia/07DAILY-AI-pentagon-qvpl/07DAILY-AI-pentagon-qvpl-largeHorizontalJumbo-v4.jpg" alt="Pentagon AI warfare" class="w-full aspect-[16/9] object-cover mb-3">
           <p class="font-serif text-sm text-gray-600 leading-relaxed">The Defense Department and Anthropic were close to agreeing on the use of artificial intelligence. Then the deal unraveled.</p>
-        </div>
-
-        <!-- Gary Marcus -->
-        <div class="story-item">
-          <div class="kicker">Opinion</div>
-          <a href="https://garymarcus.substack.com/p/there-are-no-heroes-in-commercial" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-feature mb-2">There Are No Heroes in Commercial AI</h3>
-          </a>
-          <p class="byline mb-2">Gary Marcus · Marcus on AI · Mar 8</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">When it comes down to it, Dario Amodei isn't all that much different from Sam Altman. Marcus argues that the commercial incentives of the AI industry make genuine safety leadership structurally impossible.</p>
         </div>
 
         <!-- Dambisa Moyo + AGI Goalposts stacked -->
@@ -416,75 +408,6 @@
           </a>
           <p class="byline mb-2">Martin Lumiste · Mar 8</p>
           <p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI's 2018 charter commits it to cease competition if a safety-conscious project approaches AGI first. Given current model rankings, this triggering condition may already be met.</p>
-        </div>
-
-        <!-- Cartoon + Bloomberg Japan Robots — spans 2 columns -->
-        <div class="story-span-2">
-          <div class="kicker">Technology</div>
-          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
-            <div style="text-align: center;">
-              <img src="https://wfu-cer-ait-ua-internal.s3.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-09-cartoon.png" alt="New Yorker-style cartoon: A robot lies on a therapist's couch while an enormous cloud of thought bubbles fills the panel. The therapist asks: And when did you first notice you couldn't stop reasoning?" class="w-full" style="display: block;">
-            </div>
-            <div>
-              <div class="kicker">Robotics</div>
-              <a href="https://www.bloomberg.com/news/articles/2026-03-09/ex-google-researcher-seeks-to-transform-japan-s-robots-with-ai" target="_blank" rel="noopener" class="story-link">
-                <h3 class="headline-feature mb-2">Ex-Google Researcher Seeks to Transform Japan's Robots With AI</h3>
-              </a>
-              <p class="byline mb-2">Bloomberg · Mar 9</p>
-              <p class="font-serif text-sm text-gray-600 leading-relaxed">A Silicon Valley-born AI startup is turning to Japan to prove AI can reshape one of the world's largest industrial robot supply chains.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bloomberg OpenClaw -->
-        <div class="story-item">
-          <div class="kicker">Markets · China</div>
-          <a href="https://www.bloomberg.com/news/articles/2026-03-09/china-s-openclaw-tied-stocks-rise-on-policy-support-adoption" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">OpenClaw AI Mania Fires Up Chinese Tech Leaders, Cloud Stocks</h3>
-          </a>
-          <p class="byline mb-2">Bloomberg · Mar 9</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">China's OpenClaw-tied stocks surge on government policy support and accelerating enterprise adoption of the open-source AI framework.</p>
-        </div>
-
-        <!-- Bloomberg AI Future video -->
-        <div class="story-item">
-          <div class="kicker">Infrastructure</div>
-          <a href="https://www.bloomberg.com/news/videos/2026-03-08/who-will-build-the-future-of-artificial-intelligence-video" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Who Will Build the Future of Artificial Intelligence?</h3>
-          </a>
-          <p class="byline mb-2">Bloomberg · Mar 8</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Explosive AI investment is driving a nationwide data center construction boom — but retirements, demographic shifts, and decades of stagnant construction productivity strain the labor pipeline.</p>
-        </div>
-
-        <!-- Simon Willison / Weizenbaum -->
-        <div class="story-item">
-          <div class="kicker">AI History</div>
-          <a href="https://simonwillison.net/2026/Mar/8/joseph-weizenbaum/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Joseph Weizenbaum on ELIZA: "Extremely Short Exposures Could Induce Powerful Delusional Thinking"</h3>
-          </a>
-          <p class="byline mb-2">Simon Willison's Weblog · Mar 8</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">A prescient 1976 quote from the creator of ELIZA — the first chatbot — on how quickly humans form delusional attachments to conversational AI. More relevant than ever.</p>
-        </div>
-
-        <!-- Research papers — spans 2 columns -->
-        <div class="story-span-2">
-          <div class="kicker">Research</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <a href="https://huggingface.co/papers/2603.05706" target="_blank" rel="noopener" class="story-link">
-                <h3 class="headline-standard mb-1">Reasoning Models Struggle to Control Their Chains of Thought</h3>
-              </a>
-              <p class="byline mb-2">HuggingFace / arXiv · Mar 5</p>
-              <p class="font-serif text-sm text-gray-500 leading-relaxed">New research finds that reasoning models possess significantly lower chain-of-thought controllability than output controllability — Claude Sonnet 4.5 can control its CoT only 2.7% of the time versus 61.9% for final outputs. Good news for safety monitoring.</p>
-            </div>
-            <div>
-              <a href="https://arxiv.org/abs/2603.03823" target="_blank" rel="noopener" class="story-link">
-                <h3 class="headline-standard mb-1">SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration</h3>
-              </a>
-              <p class="byline mb-2">arXiv · Mar 4</p>
-              <p class="font-serif text-sm text-gray-500 leading-relaxed">A new benchmark that shifts evaluation from short-term functional correctness to long-term maintainability, comprising 100 tasks averaging 233 days of evolution history and 71 consecutive commits.</p>
-            </div>
-          </div>
         </div>
 
         <!-- Wire briefs -->
@@ -512,7 +435,26 @@
           </div>
         </div>
 
-        <!-- Word Search Puzzle -->
+        <!-- Row 3: Cartoon span-2 + Word Search -->
+        <!-- Cartoon + Bloomberg Japan Robots — spans 2 columns -->
+        <div class="story-span-2">
+          <div class="kicker">Technology</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-09-cartoon.png" alt="New Yorker-style cartoon: A robot lies on a therapist's couch while an enormous cloud of thought bubbles fills the panel. The therapist asks: And when did you first notice you couldn't stop reasoning?" class="w-full" style="display: block;">
+            </div>
+            <div>
+              <div class="kicker">Robotics</div>
+              <a href="https://www.bloomberg.com/news/articles/2026-03-09/ex-google-researcher-seeks-to-transform-japan-s-robots-with-ai" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Ex-Google Researcher Seeks to Transform Japan's Robots With AI</h3>
+              </a>
+              <p class="byline mb-2">Bloomberg · Mar 9</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">A Silicon Valley-born AI startup is turning to Japan to prove AI can reshape one of the world's largest industrial robot supply chains.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Word Search Puzzle (dense-fills col 3 next to cartoon) -->
         <div class="story-item">
           <div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
           <div id="ws-puzzle" style="font-family:'Inter',system-ui,sans-serif;max-width:300px;color:#1a1a1a;">
@@ -669,6 +611,69 @@
             document.addEventListener('touchend',onEnd);
           })();
           </script>
+        </div>
+
+        <!-- Row 4: Similar-height shorter items -->
+        <!-- Gary Marcus -->
+        <div class="story-item">
+          <div class="kicker">Opinion</div>
+          <a href="https://garymarcus.substack.com/p/there-are-no-heroes-in-commercial" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">There Are No Heroes in Commercial AI</h3>
+          </a>
+          <p class="byline mb-2">Gary Marcus · Marcus on AI · Mar 8</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">When it comes down to it, Dario Amodei isn't all that much different from Sam Altman. Marcus argues that the commercial incentives of the AI industry make genuine safety leadership structurally impossible.</p>
+        </div>
+
+        <!-- Bloomberg OpenClaw -->
+        <div class="story-item">
+          <div class="kicker">Markets · China</div>
+          <a href="https://www.bloomberg.com/news/articles/2026-03-09/china-s-openclaw-tied-stocks-rise-on-policy-support-adoption" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">OpenClaw AI Mania Fires Up Chinese Tech Leaders, Cloud Stocks</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg · Mar 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">China's OpenClaw-tied stocks surge on government policy support and accelerating enterprise adoption of the open-source AI framework.</p>
+        </div>
+
+        <!-- Simon Willison / Weizenbaum -->
+        <div class="story-item">
+          <div class="kicker">AI History</div>
+          <a href="https://simonwillison.net/2026/Mar/8/joseph-weizenbaum/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Joseph Weizenbaum on ELIZA: "Extremely Short Exposures Could Induce Powerful Delusional Thinking"</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison's Weblog · Mar 8</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A prescient 1976 quote from the creator of ELIZA — the first chatbot — on how quickly humans form delusional attachments to conversational AI. More relevant than ever.</p>
+        </div>
+
+        <!-- Row 5: Research span-2 + Who Will Build -->
+        <!-- Research papers — spans 2 columns -->
+        <div class="story-span-2">
+          <div class="kicker">Research</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <a href="https://huggingface.co/papers/2603.05706" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">Reasoning Models Struggle to Control Their Chains of Thought</h3>
+              </a>
+              <p class="byline mb-2">HuggingFace / arXiv · Mar 5</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">New research finds that reasoning models possess significantly lower chain-of-thought controllability than output controllability — Claude Sonnet 4.5 can control its CoT only 2.7% of the time versus 61.9% for final outputs. Good news for safety monitoring.</p>
+            </div>
+            <div>
+              <a href="https://arxiv.org/abs/2603.03823" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration</h3>
+              </a>
+              <p class="byline mb-2">arXiv · Mar 4</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">A new benchmark that shifts evaluation from short-term functional correctness to long-term maintainability, comprising 100 tasks averaging 233 days of evolution history and 71 consecutive commits.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloomberg AI Future video -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure</div>
+          <a href="https://www.bloomberg.com/news/videos/2026-03-08/who-will-build-the-future-of-artificial-intelligence-video" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Who Will Build the Future of Artificial Intelligence?</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg · Mar 8</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Explosive AI investment is driving a nationwide data center construction boom — but retirements, demographic shifts, and decades of stagnant construction productivity strain the labor pipeline.</p>
         </div>
 
         <!-- Study Guides — full width -->
