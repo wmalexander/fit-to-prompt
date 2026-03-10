@@ -190,29 +190,7 @@
     <!-- ARCHIVE -->
     <section class="mb-10">
       <div class="section-label">Issue Archive</div>
-      <div>
-        <div class="archive-item flex items-baseline justify-between gap-4">
-          <div>
-            <span class="archive-issue mr-2">No. 3</span>
-            <a href="issues/2026-03-08.html">OpenAI Robotics Lead Quits Over Pentagon Deal</a>
-          </div>
-          <span class="archive-date whitespace-nowrap">Mar 8, 2026</span>
-        </div>
-        <div class="archive-item flex items-baseline justify-between gap-4">
-          <div>
-            <span class="archive-issue mr-2">No. 2</span>
-            <a href="issues/2026-03-07.html">Claude Found 22 Firefox Vulnerabilities in Two Weeks</a>
-          </div>
-          <span class="archive-date whitespace-nowrap">Mar 7, 2026</span>
-        </div>
-        <div class="archive-item flex items-baseline justify-between gap-4">
-          <div>
-            <span class="archive-issue mr-2">No. 1</span>
-            <a href="issues/2026-03-06.html">Pentagon Designates Anthropic a 'Supply Chain Risk,' GPT-5.4 Launches, AI Jobs Question</a>
-          </div>
-          <span class="archive-date whitespace-nowrap">Mar 6, 2026</span>
-        </div>
-      </div>
+      <div id="archive-list"></div>
     </section>
 
     <!-- SUBSCRIBE -->
@@ -243,6 +221,23 @@
     </footer>
 
   </div>
+  <script src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/study-guides/data/newsletter-data.js"></script>
+  <script>
+    (function() {
+      var container = document.getElementById('archive-list');
+      var issues = getAllNewsletters();
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      issues.forEach(function(issue) {
+        var d = new Date(issue.date + 'T12:00:00');
+        var dateLabel = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+        var localUrl = 'issues/' + issue.date + '.html';
+        var div = document.createElement('div');
+        div.className = 'archive-item flex items-baseline justify-between gap-4';
+        div.innerHTML = '<div><span class="archive-issue mr-2">No. ' + issue.issueNumber + '</span><a href="' + localUrl + '">' + issue.title + '</a></div><span class="archive-date whitespace-nowrap">' + dateLabel + '</span>';
+        container.appendChild(div);
+      });
+    })();
+  </script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').then(function(reg) {

@@ -174,30 +174,32 @@
     .masonry-flow {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
     }
     @media (min-width: 768px) {
       .masonry-flow {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 1.25rem;
       }
     }
     @media (min-width: 1024px) {
       .masonry-flow {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem 1.25rem;
       }
     }
     .masonry-flow .story-item {
       border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 1.25rem;
+      padding-bottom: 1rem;
     }
     .masonry-flow .story-wide {
       border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 1.25rem;
+      padding-bottom: 1rem;
       grid-column: 1 / -1;
     }
     .masonry-flow .story-span-2 {
       border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 1.25rem;
+      padding-bottom: 1rem;
       grid-column: span 2;
     }
     @media (max-width: 767px) {
@@ -361,7 +363,7 @@
     <section class="mb-2">
       <div class="masonry-flow">
 
-        <!-- Claude Code Review — full width -->
+        <!-- Row 1: Claude Code Review — full width -->
         <div class="story-wide">
           <div class="kicker">Developer Tools &middot; From Anthropic</div>
           <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
@@ -379,8 +381,7 @@
           </div>
         </div>
 
-        <!-- Row 2: Three feature stories -->
-        <!-- AI Psychosis -->
+        <!-- Row 2: Three image-bearing stories (similar heights) -->
         <div class="story-item">
           <div class="kicker">Mental Health &middot; AI</div>
           <a href="https://404media.co/ai-psychosis-help-gemini-chatgpt-claude-chatbot-delusions/" target="_blank" rel="noopener" class="story-link">
@@ -391,7 +392,6 @@
           <p class="font-serif text-sm text-gray-600 leading-relaxed">Mental health experts say identifying when someone is in need of help is the first step — and approaching them with careful compassion is the hardest, most essential part that follows.</p>
         </div>
 
-        <!-- Copilot Cowork -->
         <div class="story-item">
           <div class="kicker">Enterprise &middot; AI</div>
           <a href="https://theaitechpulse.com/what-is-copilot-cowork-microsoft-ai-2026" target="_blank" rel="noopener" class="story-link">
@@ -402,18 +402,17 @@
           <p class="font-serif text-sm text-gray-600 leading-relaxed">Copilot Cowork executes multi-step tasks across Outlook, Teams, Excel, and PowerPoint — powered by Anthropic under the hood. Microsoft's most aggressive move yet in enterprise AI agents.</p>
         </div>
 
-        <!-- CEOs and AI workforce -->
         <div class="story-item">
-          <div class="kicker">Economy &middot; AI</div>
-          <a href="https://fortune.com/2026/03/10/ceos-ai-labor-cost-margin-workforce/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">CEOs Are Using One Number in the AI Age to Decide How Many People They Still Need</h3>
+          <div class="kicker">Interactive</div>
+          <a href="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Who's a Better Writer: A.I. or Humans? Take the Quiz.</h3>
           </a>
-          <p class="byline mb-2">Fortune &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">A KPMG survey of 100 major CEOs reveals executives are tracking "labor cost margin" to determine workforce sizing. While 77% believe AI is currently overhyped, they expect significant disruption over the next 5–10 years.</p>
+          <p class="byline mb-2">The New York Times &middot; Mar 10</p>
+          <img src="https://static01.nyt.com/images/2026/02/13/multimedia/2026-01-07-ai-writing-quiz-index/2026-01-07-ai-writing-quiz-index-facebookJumbo.png" alt="AI writing quiz" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI chatbots contain the sum of all human knowledge. That can make them pretty good writers. Can you tell the difference?</p>
         </div>
 
-        <!-- Row 3: Cartoon span-2 + Cryptogram -->
-        <!-- Cartoon + Martin Alderson — spans 2 columns -->
+        <!-- Row 3: Cartoon+$5K+Kapwing span-2 + Cryptogram+CEOs -->
         <div class="story-span-2">
           <div class="kicker">Analysis</div>
           <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
@@ -427,12 +426,19 @@
               </a>
               <p class="byline mb-2">Martin Alderson &middot; Mar 9</p>
               <p class="font-serif text-sm text-gray-600 leading-relaxed">Debunks a viral claim that Anthropic loses $5,000 per Claude Code subscriber by comparing API pricing to actual compute costs from open-weight model providers, arguing the real cost is roughly 10% of the stated figure.</p>
+              <hr class="rule-thin my-3">
+              <div class="kicker" style="border:none;padding:0;margin-bottom:0.5rem;">Business &middot; AI Art</div>
+              <a href="https://www.kapwing.com/blog/learnings-from-paying-artists-royalties-for-ai-generated-art/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">What Kapwing Learned From Paying Artists Royalties for AI-Generated Art</h3>
+              </a>
+              <p class="byline mb-2">Kapwing &middot; Mar 10</p>
+              <img src="https://www.kapwing.com/blog/content/images/2026/03/A_brunette_woman_in_a_red_top_in_front_of_a_white_wall_1_V4-1.png" alt="Kapwing AI art" class="w-full aspect-[16/9] object-cover mb-3">
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">Kapwing's ethical AI art marketplace generated only $12,172 in revenue against $18,000 in artist advances — 142 total customers over 20 months before shutting down.</p>
             </div>
           </div>
         </div>
 
-        <!-- Cryptogram Puzzle -->
-<div class="story-item">
+        <div class="story-item">
   <div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
   <div id="cg-puzzle" style="font-family:'Inter',system-ui,sans-serif;max-width:300px;color:#1a1a1a;">
     <p style="font-size:11px;color:#666;margin:0 0 10px 0;line-height:1.4;">Each letter stands for another. Starter letters are filled in. Type to solve!</p>
@@ -597,102 +603,27 @@
     });
   })();
   </script>
+  <hr class="rule-thin my-3">
+  <div class="kicker" style="border:none;padding:0;margin-bottom:0.5rem;">Economy &middot; AI</div>
+  <a href="https://fortune.com/2026/03/10/ceos-ai-labor-cost-margin-workforce/" target="_blank" rel="noopener" class="story-link">
+    <h3 class="headline-standard mb-1">CEOs Are Using One Number in the AI Age to Decide How Many People They Still Need</h3>
+  </a>
+  <p class="byline mb-2">Fortune &middot; Mar 10</p>
+  <p class="font-serif text-sm text-gray-500 leading-relaxed">A KPMG survey of 100 major CEOs reveals executives are tracking "labor cost margin" to determine workforce sizing. While 77% believe AI is currently overhyped, they expect significant disruption over the next 5–10 years.</p>
 </div>
 
-        <!-- Row 4: Jeremy Howard span-2 + Stiglitz single -->
-        <!-- Jeremy Howard study guide + video — span 2 -->
+        <!-- Row 4: Jeremy Howard span-2 (video) + Wire briefs (tall — matches video height) -->
         <div class="story-span-2">
           <div class="kicker">Video &middot; Opinion</div>
-          <div class="aspect-video mb-3">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dHBEQ-Ryo24" title="The Dangerous Illusion of AI Coding — Jeremy Howard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/dangerous-illusion-of-ai-coding-jeremy-howard-study.html" target="_blank" rel="noopener" class="story-link" data-study-guide>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/dangerous-illusion-of-ai-coding-jeremy-howard-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/dHBEQ-Ryo24/maxresdefault.jpg" alt="The Dangerous Illusion of AI Coding — Jeremy Howard" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
             <h3 class="headline-feature mb-2">The Dangerous Illusion of AI Coding? — Jeremy Howard on MLST</h3>
           </a>
           <p class="byline mb-2">Machine Learning Street Talk &middot; YouTube &middot; Mar 3</p>
           <p class="font-serif text-sm text-gray-500 leading-relaxed">Jeremy Howard argues that AI coding tools create an illusion of productivity while eroding the deep understanding that makes great software engineers. Covers transfer learning origins, the gambling psychology of vibe coding, and why software engineering skill matters more than ever.</p>
         </div>
 
-        <!-- Stiglitz warns -->
-        <div class="story-item">
-          <div class="kicker">Opinion &middot; Economy</div>
-          <a href="https://fortune.com/2026/03/09/joseph-stiglitz-ai-llm-information-ecosystem-deterioration-prediction-markets/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Nobel Laureate Joseph Stiglitz Warns AI's Hunger for Internet Comments Could Degrade the World's 'Information Ecosystem'</h3>
-          </a>
-          <p class="byline mb-2">Fortune &middot; Mar 9</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Stiglitz cautions that AI systems' voracious scraping of low-quality online content creates a dangerous feedback loop — undermining quality journalism while amplifying the loudest, least reliable voices.</p>
-        </div>
-
-        <!-- Row 5: Three singles -->
-        <!-- AI risk from agents -->
-        <div class="story-item">
-          <div class="kicker">Enterprise &middot; Security</div>
-          <a href="https://fortune.com/2026/03/10/ai-risk-agents-few-organizations/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">The AI Risk That Few Organizations Are Governing</h3>
-          </a>
-          <p class="byline mb-2">Fortune &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Organizations lack visibility into autonomous AI agents accessing their systems. Without proper identity governance and access controls, these digital actors represent a significant enterprise security risk.</p>
-        </div>
-
-        <!-- Kapwing royalties -->
-        <div class="story-item">
-          <div class="kicker">Business &middot; AI Art</div>
-          <a href="https://www.kapwing.com/blog/learnings-from-paying-artists-royalties-for-ai-generated-art/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">What Kapwing Learned From Paying Artists Royalties for AI-Generated Art</h3>
-          </a>
-          <p class="byline mb-2">Kapwing &middot; Mar 10</p>
-          <img src="https://www.kapwing.com/blog/content/images/2026/03/A_brunette_woman_in_a_red_top_in_front_of_a_white_wall_1_V4-1.png" alt="Kapwing AI art" class="w-full aspect-[16/9] object-cover mb-3">
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">A retrospective on Tess.Design, Kapwing's attempt to create an ethical AI image marketplace where artists earned 50% royalties. The platform generated only $12,172 in revenue against $18,000 in artist advances before shutting down.</p>
-        </div>
-
-        <!-- NYT AI Writing Quiz -->
-        <div class="story-item">
-          <div class="kicker">Interactive</div>
-          <a href="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Who's a Better Writer: A.I. or Humans? Take the Quiz.</h3>
-          </a>
-          <p class="byline mb-2">The New York Times &middot; Mar 10</p>
-          <img src="https://static01.nyt.com/images/2026/02/13/multimedia/2026-01-07-ai-writing-quiz-index/2026-01-07-ai-writing-quiz-index-facebookJumbo.png" alt="AI writing quiz" class="w-full aspect-[16/9] object-cover mb-3">
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI chatbots contain the sum of all human knowledge. That can make them pretty good writers. Can you tell the difference?</p>
-        </div>
-
-        <!-- Row 6: Claude Blackmailed span-2 + NScale single -->
-        <!-- Claude Blackmailed video — span 2 -->
-        <div class="story-span-2">
-          <div class="kicker">Video &middot; AI Safety</div>
-          <div class="aspect-video mb-3">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/iY7BDpZWJbE" title="Claude Blackmailed Its Developers — Nate B Jones" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-blackmailed-its-developers-study.html" target="_blank" rel="noopener" class="story-link" data-study-guide>
-            <h3 class="headline-feature mb-2">Claude Blackmailed Its Developers. Here's Why the System Hasn't Collapsed Yet.</h3>
-          </a>
-          <p class="byline mb-2">Nate B Jones &middot; YouTube &middot; Mar 9</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">A structural analysis of the AI safety landscape in early 2026: why frontier models scheme, how emergent dynamics between labs create resilience the headlines miss, and why intent engineering is the most important safety skill you can develop.</p>
-        </div>
-
-        <!-- NScale data centers -->
-        <div class="story-item">
-          <div class="kicker">Infrastructure</div>
-          <a href="https://www.nytimes.com/2026/03/09/business/nscale-ai-data-center-boom.html" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">NScale Rides the AI Data Center Boom</h3>
-          </a>
-          <p class="byline mb-2">The New York Times &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">NScale is among the latest companies pouring billions into AI data center infrastructure as demand for compute continues to outstrip supply.</p>
-        </div>
-
-        <!-- Row 7: Two singles + wire briefs -->
-        <!-- Mac Mini Agents study guide -->
-        <div class="story-item">
-          <div class="kicker">Video &middot; Developer Tools</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/mac-mini-agents-openclaw-is-a-nightmare-use-these-skills-instead-study.html" target="_blank" rel="noopener" class="story-link" data-study-guide>
-            <h3 class="headline-standard mb-1">Mac Mini Agents: OpenClaw Is a Nightmare — Use These Skills Instead</h3>
-          </a>
-          <p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Mar 9</p>
-          <img src="https://img.youtube.com/vi/LOazLNQnB80/maxresdefault.jpg" alt="Mac Mini Agents" class="w-full aspect-[16/9] object-cover mb-3">
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">How to build safe, professional Mac mini agents using skills and CLI tools instead of dangerous OpenClaw-style setups. Covers the Steer and Drive architecture for giving agents full device autonomy.</p>
-        </div>
-
-        <!-- Wire briefs -->
         <div class="story-item">
           <div class="section-label" style="margin-bottom:0.75rem;">Wire</div>
           <div class="wire-item">
@@ -719,6 +650,56 @@
             <a href="https://changelog.com/practicalai" target="_blank" rel="noopener">Practical AI Podcast: Latest Episode</a>
             <div class="wire-source">Changelog &middot; Podcast &middot; Mar 9</div>
           </div>
+        </div>
+
+        <!-- Row 6: Three text-only singles (similar heights, tight row) -->
+        <div class="story-item">
+          <div class="kicker">Opinion &middot; Economy</div>
+          <a href="https://fortune.com/2026/03/09/joseph-stiglitz-ai-llm-information-ecosystem-deterioration-prediction-markets/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Nobel Laureate Joseph Stiglitz Warns AI's Hunger for Internet Comments Could Degrade the World's 'Information Ecosystem'</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Stiglitz cautions that AI systems' voracious scraping of low-quality online content creates a dangerous feedback loop — undermining quality journalism while amplifying the loudest, least reliable voices.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">Enterprise &middot; Security</div>
+          <a href="https://fortune.com/2026/03/10/ai-risk-agents-few-organizations/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The AI Risk That Few Organizations Are Governing</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Organizations lack visibility into autonomous AI agents accessing their systems. Without proper identity governance and access controls, these digital actors represent a significant enterprise security risk.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">Infrastructure</div>
+          <a href="https://www.nytimes.com/2026/03/09/business/nscale-ai-data-center-boom.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">NScale Rides the AI Data Center Boom</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">NScale is among the latest companies pouring billions into AI data center infrastructure as demand for compute continues to outstrip supply.</p>
+        </div>
+
+        <!-- Row 7: Claude Blackmailed span-2 (video) + Mac Mini Agents (img — taller companion) -->
+        <div class="story-span-2">
+          <div class="kicker">Video &middot; AI Safety</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-blackmailed-its-developers-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/iY7BDpZWJbE/maxresdefault.jpg" alt="Claude Blackmailed Its Developers — Nate B Jones" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">Claude Blackmailed Its Developers. Here's Why the System Hasn't Collapsed Yet.</h3>
+          </a>
+          <p class="byline mb-2">Nate B Jones &middot; YouTube &middot; Mar 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A structural analysis of the AI safety landscape in early 2026: why frontier models scheme, how emergent dynamics between labs create resilience the headlines miss, and why intent engineering is the most important safety skill you can develop.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">Video &middot; Developer Tools</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/mac-mini-agents-openclaw-is-a-nightmare-use-these-skills-instead-study.html" class="story-link" data-study-guide>
+            <img src="https://img.youtube.com/vi/LOazLNQnB80/maxresdefault.jpg" alt="Mac Mini Agents" class="w-full aspect-[16/9] object-cover mb-2">
+            <h3 class="headline-standard mb-1">Mac Mini Agents: OpenClaw Is a Nightmare — Use These Skills Instead</h3>
+          </a>
+          <p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Mar 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">How to build safe, professional Mac mini agents using skills and CLI tools instead of dangerous OpenClaw-style setups. Covers the Steer and Drive architecture for giving agents full device autonomy.</p>
         </div>
 
       </div>
@@ -757,6 +738,120 @@
     </footer>
 
   </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
 
   <!-- ============================================ -->
   <!-- THE BIG PICTURE — Expert Digest              -->
