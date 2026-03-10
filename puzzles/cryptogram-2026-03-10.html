@@ -1,0 +1,167 @@
+<!-- Cryptogram Puzzle — 2026-03-10 -->
+<div class="story-item">
+  <div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
+  <div id="cg-puzzle" style="font-family:'Inter',system-ui,sans-serif;max-width:300px;color:#1a1a1a;">
+    <p style="font-size:11px;color:#666;margin:0 0 10px 0;line-height:1.4;">Each letter stands for another. Starter letters are filled in. Type to solve!</p>
+    <div id="cg-board" style="margin-bottom:10px;"></div>
+    <div style="display:flex;gap:6px;justify-content:center;margin-bottom:10px;">
+      <button id="cg-check" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:5px 12px;background:#f5f0e8;border:1px solid #d1d5db;border-radius:3px;cursor:pointer;color:#1a1a1a;transition:background 0.15s;">Check</button>
+      <button id="cg-reveal" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:5px 12px;background:#f5f0e8;border:1px solid #d1d5db;border-radius:3px;cursor:pointer;color:#1a1a1a;transition:background 0.15s;">Reveal</button>
+    </div>
+    <p id="cg-msg" style="text-align:center;font-size:12px;font-weight:700;color:#8B0000;margin:0 0 8px 0;min-height:16px;"></p>
+    <details style="margin-top:4px;">
+      <summary style="font-size:10px;color:#999;cursor:pointer;text-align:center;">Cipher Alphabet</summary>
+      <div id="cg-alpha" style="display:grid;grid-template-columns:repeat(9,1fr);gap:2px;margin-top:6px;text-align:center;font-size:9px;font-weight:600;line-height:1.3;"></div>
+    </details>
+  </div>
+  <script>
+  (function(){
+    var QUOTE = "ANY SUFFICIENTLY ADVANCED AI IS INDISTINGUISHABLE FROM A VERY TIRED INTERN";
+    var ENCODED = "GLH RAEENMNJLSPH GWKGLMJW GN NR NLWNRSNLIANRFGQPJ EXBV G KJXH SNXJW NLSJXL";
+    var SOLUTION = {"G":"A","Q":"B","M":"C","W":"D","J":"E","E":"F","I":"G","F":"H","N":"I","P":"L","V":"M","L":"N","B":"O","X":"R","R":"S","S":"T","A":"U","K":"V","H":"Y"};
+    var STARTERS = {"S":"T","N":"I","J":"E"};
+    var board = document.getElementById('cg-board');
+    var msg = document.getElementById('cg-msg');
+    var inputs = [];
+    var cipherGroups = {};
+    var words = ENCODED.split(' ');
+    words.forEach(function(word, wi){
+      var row = document.createElement('div');
+      row.style.cssText = 'display:inline-flex;gap:1px;margin:0 6px 6px 0;vertical-align:top;';
+      for(var i = 0; i < word.length; i++){
+        var ch = word[i];
+        var cell = document.createElement('div');
+        cell.style.cssText = 'display:flex;flex-direction:column;align-items:center;width:22px;';
+        var inp = document.createElement('input');
+        inp.type = 'text';
+        inp.maxLength = 1;
+        inp.dataset.cipher = ch;
+        inp.dataset.idx = inputs.length;
+        inp.style.cssText = 'width:22px;height:26px;text-align:center;font-family:"Inter",sans-serif;font-size:14px;font-weight:700;border:1px solid #ccc;border-radius:2px;padding:0;outline:none;text-transform:uppercase;color:#1a1a1a;background:#fff;box-sizing:border-box;';
+        if(STARTERS[ch]){
+          inp.value = STARTERS[ch];
+          inp.readOnly = true;
+          inp.style.background = '#e8e0d0';
+          inp.style.color = '#8B0000';
+          inp.style.borderColor = '#b0a080';
+        }
+        var lbl = document.createElement('div');
+        lbl.style.cssText = 'font-size:8px;color:#999;margin-top:1px;line-height:1;';
+        lbl.textContent = ch;
+        cell.appendChild(inp);
+        cell.appendChild(lbl);
+        row.appendChild(cell);
+        if(!cipherGroups[ch]) cipherGroups[ch] = [];
+        cipherGroups[ch].push(inp);
+        inputs.push(inp);
+      }
+      board.appendChild(row);
+    });
+    function syncGroup(cipher, val){
+      if(!cipherGroups[cipher]) return;
+      cipherGroups[cipher].forEach(function(inp){
+        if(!inp.readOnly){
+          inp.value = val;
+        }
+      });
+    }
+    function advanceNext(fromIdx){
+      for(var i = fromIdx + 1; i < inputs.length; i++){
+        if(!inputs[i].readOnly && !inputs[i].value){
+          inputs[i].focus();
+          return;
+        }
+      }
+      for(var i = 0; i < fromIdx; i++){
+        if(!inputs[i].readOnly && !inputs[i].value){
+          inputs[i].focus();
+          return;
+        }
+      }
+    }
+    inputs.forEach(function(inp){
+      if(inp.readOnly) return;
+      inp.addEventListener('focus', function(){
+        var ch = this.dataset.cipher;
+        cipherGroups[ch].forEach(function(el){
+          if(!el.readOnly) el.style.borderColor = '#8B0000';
+        });
+      });
+      inp.addEventListener('blur', function(){
+        var ch = this.dataset.cipher;
+        cipherGroups[ch].forEach(function(el){
+          if(!el.readOnly) el.style.borderColor = '#ccc';
+        });
+      });
+      inp.addEventListener('input', function(){
+        var val = this.value.toUpperCase().replace(/[^A-Z]/g,'');
+        this.value = val;
+        syncGroup(this.dataset.cipher, val);
+        if(val) advanceNext(parseInt(this.dataset.idx));
+      });
+      inp.addEventListener('keydown', function(e){
+        if(e.key === 'Backspace' && !this.value){
+          var idx = parseInt(this.dataset.idx);
+          for(var i = idx - 1; i >= 0; i--){
+            if(!inputs[i].readOnly){
+              inputs[i].focus();
+              inputs[i].value = '';
+              syncGroup(inputs[i].dataset.cipher, '');
+              break;
+            }
+          }
+          e.preventDefault();
+        }
+      });
+    });
+    document.getElementById('cg-check').addEventListener('click', function(){
+      var correct = true;
+      var filled = true;
+      inputs.forEach(function(inp){
+        var expected = SOLUTION[inp.dataset.cipher];
+        if(!inp.value){ filled = false; return; }
+        if(inp.value.toUpperCase() !== expected){
+          correct = false;
+          if(!inp.readOnly) inp.style.background = '#fee2e2';
+          setTimeout(function(){ if(!inp.readOnly) inp.style.background = '#fff'; }, 1200);
+        } else {
+          if(!inp.readOnly) inp.style.background = '#dcfce7';
+          setTimeout(function(){ if(!inp.readOnly) inp.style.background = '#fff'; }, 1200);
+        }
+      });
+      if(!filled) msg.textContent = 'Fill in all letters first.';
+      else if(correct){
+        msg.textContent = 'Solved!';
+        msg.style.color = '#059669';
+        inputs.forEach(function(inp){ inp.readOnly = true; inp.style.background = '#dcfce7'; inp.style.borderColor = '#059669'; });
+      } else {
+        msg.textContent = 'Not quite — red cells are wrong.';
+        msg.style.color = '#8B0000';
+      }
+    });
+    document.getElementById('cg-reveal').addEventListener('click', function(){
+      inputs.forEach(function(inp){
+        inp.value = SOLUTION[inp.dataset.cipher];
+        inp.readOnly = true;
+        inp.style.background = '#f5f0e8';
+        inp.style.borderColor = '#b0a080';
+        inp.style.color = '#1a1a1a';
+      });
+      msg.textContent = '"' + QUOTE + '"';
+      msg.style.color = '#666';
+      msg.style.fontWeight = '400';
+      msg.style.fontStyle = 'italic';
+      msg.style.fontSize = '10px';
+    });
+    var alphaEl = document.getElementById('cg-alpha');
+    var allCiphers = Object.keys(SOLUTION).sort();
+    allCiphers.forEach(function(ch){
+      var d = document.createElement('div');
+      d.innerHTML = '<div style="color:#8B0000;">' + ch + '</div><div style="color:#ccc;">&darr;</div><div>?</div>';
+      d.style.cssText = 'background:#f5f0e8;border-radius:2px;padding:2px 0;';
+      if(STARTERS[ch]) d.innerHTML = '<div style="color:#8B0000;">' + ch + '</div><div style="color:#ccc;">&darr;</div><div style="font-weight:700;">' + STARTERS[ch] + '</div>';
+      alphaEl.appendChild(d);
+    });
+  })();
+  </script>
+</div>

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 10, 2026</title>
+  <meta name="description" content="Daily AI news roundup — March 10, 2026. Anthropic sues the Pentagon over supply chain risk, Claude Code gets multi-agent code review, how to help someone with AI psychosis, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 5">
+  <meta property="og:description" content="Daily AI news roundup — March 10, 2026. Anthropic sues the Pentagon over supply chain risk, Claude Code gets multi-agent code review, how to help someone with AI psychosis, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Tuesday, March 10, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 5</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Legal &middot; AI Policy</div>
+          <a href="https://techcrunch.com/2026/03/09/anthropic-sues-defense-department-over-supply-chain-risk-designation/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Anthropic Sues the Pentagon Over 'Unprecedented and Unlawful' Supply Chain Risk Label</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; Mar 9</p>
+          <div class="newspaper-body">
+            <p>Anthropic has filed suit against the Department of Defense, calling its supply chain risk designation "unprecedented and unlawful." The complaint marks the first time an American AI company has taken the Pentagon to court over what it frames as punishment for maintaining safety guardrails.</p>
+            <p>The move comes days after the DoD formally designated Anthropic a supply chain risk — a label that requires defense contractors to certify they don't use Claude and gives the military six months to phase it out of classified systems. Anthropic has insisted on explicit prohibitions against fully autonomous weapons and mass domestic surveillance, restrictions the Pentagon views as unacceptable.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">AI Policy</div>
+          <a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">OpenAI and Google Employees Rush to Anthropic's Defense in DOD Lawsuit</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Mar 9</p>
+          <img src="https://techcrunch.com/wp-content/uploads/2026/03/claude-app-centered-in-ai-apps-GettyImages-2167861906.jpg" alt="AI apps on screen" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mt-3">More than 30 employees from OpenAI and Google DeepMind signed onto a statement supporting Anthropic's lawsuit, a rare show of cross-company solidarity that underscores industry-wide concern about the precedent being set.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Claude Code Review — full width -->
+        <div class="story-wide">
+          <div class="kicker">Developer Tools &middot; From Anthropic</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <div>
+              <img src="https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69ab5ab658058fa295ce9e6b_og_code-review.jpg" alt="Claude Code Review" class="w-full aspect-[16/9] object-cover">
+            </div>
+            <div>
+              <a href="https://claude.com/blog/code-review" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Anthropic Brings Multi-Agent Code Review to Claude Code</h3>
+              </a>
+              <p class="byline mb-2">Anthropic &middot; Mar 10</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Claude Code now dispatches a team of agents on every PR to catch bugs that skims miss. The system automatically analyzes AI-generated code, flags logic errors, and helps enterprise developers manage the growing volume of machine-written code. Available in research preview for Team and Enterprise plans.</p>
+              <p class="font-serif text-xs text-gray-400 leading-relaxed mt-2">Also: <a href="https://techcrunch.com/2026/03/09/anthropic-launches-code-review-tool-to-check-flood-of-ai-generated-code/" target="_blank" rel="noopener" class="underline hover:text-gray-600">TechCrunch coverage</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Three feature stories -->
+        <!-- AI Psychosis -->
+        <div class="story-item">
+          <div class="kicker">Mental Health &middot; AI</div>
+          <a href="https://404media.co/ai-psychosis-help-gemini-chatgpt-claude-chatbot-delusions/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">How to Talk to Someone Experiencing 'AI Psychosis'</h3>
+          </a>
+          <p class="byline mb-2">404 Media &middot; Mar 9</p>
+          <img src="https://www.404media.co/content/images/size/w1200/2026/03/404-media-falling-person-illustration.jpg" alt="AI psychosis illustration" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Mental health experts say identifying when someone is in need of help is the first step — and approaching them with careful compassion is the hardest, most essential part that follows.</p>
+        </div>
+
+        <!-- Copilot Cowork -->
+        <div class="story-item">
+          <div class="kicker">Enterprise &middot; AI</div>
+          <a href="https://theaitechpulse.com/what-is-copilot-cowork-microsoft-ai-2026" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Microsoft Launches Copilot Cowork: An AI Agent Built With Anthropic That Does Your Office Work</h3>
+          </a>
+          <p class="byline mb-2">The AI Tech Pulse &middot; Mar 10</p>
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/rIpNJLPFGlvmn5JC/what-is-copilot-cowork-microsoft-ai-2026.webp-LzeXyVwwmVa1m5HQ.webp" alt="Microsoft Copilot Cowork" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Copilot Cowork executes multi-step tasks across Outlook, Teams, Excel, and PowerPoint — powered by Anthropic under the hood. Microsoft's most aggressive move yet in enterprise AI agents.</p>
+        </div>
+
+        <!-- CEOs and AI workforce -->
+        <div class="story-item">
+          <div class="kicker">Economy &middot; AI</div>
+          <a href="https://fortune.com/2026/03/10/ceos-ai-labor-cost-margin-workforce/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">CEOs Are Using One Number in the AI Age to Decide How Many People They Still Need</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A KPMG survey of 100 major CEOs reveals executives are tracking "labor cost margin" to determine workforce sizing. While 77% believe AI is currently overhyped, they expect significant disruption over the next 5–10 years.</p>
+        </div>
+
+        <!-- Row 3: Cartoon span-2 + Cryptogram -->
+        <!-- Cartoon + Martin Alderson — spans 2 columns -->
+        <div class="story-span-2">
+          <div class="kicker">Analysis</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-10-cartoon.png" alt="New Yorker-style cartoon: A bespectacled man in a suit reviews paperwork at a desk with a receipt printer. Caption: Good news — it's not five thousand per user. It's four thousand nine hundred and ninety-seven." class="w-full" style="display: block;">
+              <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"Good news — it's not five thousand per user. It's four thousand nine hundred and ninety-seven."</p>
+            </div>
+            <div>
+              <a href="https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">No, It Doesn't Cost Anthropic $5K Per Claude Code User</h3>
+              </a>
+              <p class="byline mb-2">Martin Alderson &middot; Mar 9</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Debunks a viral claim that Anthropic loses $5,000 per Claude Code subscriber by comparing API pricing to actual compute costs from open-weight model providers, arguing the real cost is roughly 10% of the stated figure.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cryptogram Puzzle -->
+<div class="story-item">
+  <div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
+  <div id="cg-puzzle" style="font-family:'Inter',system-ui,sans-serif;max-width:300px;color:#1a1a1a;">
+    <p style="font-size:11px;color:#666;margin:0 0 10px 0;line-height:1.4;">Each letter stands for another. Starter letters are filled in. Type to solve!</p>
+    <div id="cg-board" style="margin-bottom:10px;"></div>
+    <div style="display:flex;gap:6px;justify-content:center;margin-bottom:10px;">
+      <button id="cg-check" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:5px 12px;background:#f5f0e8;border:1px solid #d1d5db;border-radius:3px;cursor:pointer;color:#1a1a1a;transition:background 0.15s;">Check</button>
+      <button id="cg-reveal" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:5px 12px;background:#f5f0e8;border:1px solid #d1d5db;border-radius:3px;cursor:pointer;color:#1a1a1a;transition:background 0.15s;">Reveal</button>
+    </div>
+    <p id="cg-msg" style="text-align:center;font-size:12px;font-weight:700;color:#8B0000;margin:0 0 8px 0;min-height:16px;"></p>
+    <details style="margin-top:4px;">
+      <summary style="font-size:10px;color:#999;cursor:pointer;text-align:center;">Cipher Alphabet</summary>
+      <div id="cg-alpha" style="display:grid;grid-template-columns:repeat(9,1fr);gap:2px;margin-top:6px;text-align:center;font-size:9px;font-weight:600;line-height:1.3;"></div>
+    </details>
+  </div>
+  <script>
+  (function(){
+    var QUOTE = "ANY SUFFICIENTLY ADVANCED AI IS INDISTINGUISHABLE FROM A VERY TIRED INTERN";
+    var ENCODED = "GLH RAEENMNJLSPH GWKGLMJW GN NR NLWNRSNLIANRFGQPJ EXBV G KJXH SNXJW NLSJXL";
+    var SOLUTION = {"G":"A","Q":"B","M":"C","W":"D","J":"E","E":"F","I":"G","F":"H","N":"I","P":"L","V":"M","L":"N","B":"O","X":"R","R":"S","S":"T","A":"U","K":"V","H":"Y"};
+    var STARTERS = {"S":"T","N":"I","J":"E"};
+    var board = document.getElementById('cg-board');
+    var msg = document.getElementById('cg-msg');
+    var inputs = [];
+    var cipherGroups = {};
+    var words = ENCODED.split(' ');
+    words.forEach(function(word, wi){
+      var row = document.createElement('div');
+      row.style.cssText = 'display:inline-flex;gap:1px;margin:0 6px 6px 0;vertical-align:top;';
+      for(var i = 0; i < word.length; i++){
+        var ch = word[i];
+        var cell = document.createElement('div');
+        cell.style.cssText = 'display:flex;flex-direction:column;align-items:center;width:22px;';
+        var inp = document.createElement('input');
+        inp.type = 'text';
+        inp.maxLength = 1;
+        inp.dataset.cipher = ch;
+        inp.dataset.idx = inputs.length;
+        inp.style.cssText = 'width:22px;height:26px;text-align:center;font-family:"Inter",sans-serif;font-size:14px;font-weight:700;border:1px solid #ccc;border-radius:2px;padding:0;outline:none;text-transform:uppercase;color:#1a1a1a;background:#fff;box-sizing:border-box;';
+        if(STARTERS[ch]){
+          inp.value = STARTERS[ch];
+          inp.readOnly = true;
+          inp.style.background = '#e8e0d0';
+          inp.style.color = '#8B0000';
+          inp.style.borderColor = '#b0a080';
+        }
+        var lbl = document.createElement('div');
+        lbl.style.cssText = 'font-size:8px;color:#999;margin-top:1px;line-height:1;';
+        lbl.textContent = ch;
+        cell.appendChild(inp);
+        cell.appendChild(lbl);
+        row.appendChild(cell);
+        if(!cipherGroups[ch]) cipherGroups[ch] = [];
+        cipherGroups[ch].push(inp);
+        inputs.push(inp);
+      }
+      board.appendChild(row);
+    });
+    function syncGroup(cipher, val){
+      if(!cipherGroups[cipher]) return;
+      cipherGroups[cipher].forEach(function(inp){
+        if(!inp.readOnly){
+          inp.value = val;
+        }
+      });
+    }
+    function advanceNext(fromIdx){
+      for(var i = fromIdx + 1; i < inputs.length; i++){
+        if(!inputs[i].readOnly && !inputs[i].value){
+          inputs[i].focus();
+          return;
+        }
+      }
+      for(var i = 0; i < fromIdx; i++){
+        if(!inputs[i].readOnly && !inputs[i].value){
+          inputs[i].focus();
+          return;
+        }
+      }
+    }
+    inputs.forEach(function(inp){
+      if(inp.readOnly) return;
+      inp.addEventListener('focus', function(){
+        var ch = this.dataset.cipher;
+        cipherGroups[ch].forEach(function(el){
+          if(!el.readOnly) el.style.borderColor = '#8B0000';
+        });
+      });
+      inp.addEventListener('blur', function(){
+        var ch = this.dataset.cipher;
+        cipherGroups[ch].forEach(function(el){
+          if(!el.readOnly) el.style.borderColor = '#ccc';
+        });
+      });
+      inp.addEventListener('input', function(){
+        var val = this.value.toUpperCase().replace(/[^A-Z]/g,'');
+        this.value = val;
+        syncGroup(this.dataset.cipher, val);
+        if(val) advanceNext(parseInt(this.dataset.idx));
+      });
+      inp.addEventListener('keydown', function(e){
+        if(e.key === 'Backspace' && !this.value){
+          var idx = parseInt(this.dataset.idx);
+          for(var i = idx - 1; i >= 0; i--){
+            if(!inputs[i].readOnly){
+              inputs[i].focus();
+              inputs[i].value = '';
+              syncGroup(inputs[i].dataset.cipher, '');
+              break;
+            }
+          }
+          e.preventDefault();
+        }
+      });
+    });
+    document.getElementById('cg-check').addEventListener('click', function(){
+      var correct = true;
+      var filled = true;
+      inputs.forEach(function(inp){
+        var expected = SOLUTION[inp.dataset.cipher];
+        if(!inp.value){ filled = false; return; }
+        if(inp.value.toUpperCase() !== expected){
+          correct = false;
+          if(!inp.readOnly) inp.style.background = '#fee2e2';
+          setTimeout(function(){ if(!inp.readOnly) inp.style.background = '#fff'; }, 1200);
+        } else {
+          if(!inp.readOnly) inp.style.background = '#dcfce7';
+          setTimeout(function(){ if(!inp.readOnly) inp.style.background = '#fff'; }, 1200);
+        }
+      });
+      if(!filled) msg.textContent = 'Fill in all letters first.';
+      else if(correct){
+        msg.textContent = 'Solved!';
+        msg.style.color = '#059669';
+        inputs.forEach(function(inp){ inp.readOnly = true; inp.style.background = '#dcfce7'; inp.style.borderColor = '#059669'; });
+      } else {
+        msg.textContent = 'Not quite \u2014 red cells are wrong.';
+        msg.style.color = '#8B0000';
+      }
+    });
+    document.getElementById('cg-reveal').addEventListener('click', function(){
+      inputs.forEach(function(inp){
+        inp.value = SOLUTION[inp.dataset.cipher];
+        inp.readOnly = true;
+        inp.style.background = '#f5f0e8';
+        inp.style.borderColor = '#b0a080';
+        inp.style.color = '#1a1a1a';
+      });
+      msg.textContent = '"' + QUOTE + '"';
+      msg.style.color = '#666';
+      msg.style.fontWeight = '400';
+      msg.style.fontStyle = 'italic';
+      msg.style.fontSize = '10px';
+    });
+    var alphaEl = document.getElementById('cg-alpha');
+    var allCiphers = Object.keys(SOLUTION).sort();
+    allCiphers.forEach(function(ch){
+      var d = document.createElement('div');
+      d.innerHTML = '<div style="color:#8B0000;">' + ch + '</div><div style="color:#ccc;">&darr;</div><div>?</div>';
+      d.style.cssText = 'background:#f5f0e8;border-radius:2px;padding:2px 0;';
+      if(STARTERS[ch]) d.innerHTML = '<div style="color:#8B0000;">' + ch + '</div><div style="color:#ccc;">&darr;</div><div style="font-weight:700;">' + STARTERS[ch] + '</div>';
+      alphaEl.appendChild(d);
+    });
+  })();
+  </script>
+</div>
+
+        <!-- Row 4: Jeremy Howard span-2 + Stiglitz single -->
+        <!-- Jeremy Howard study guide + video — span 2 -->
+        <div class="story-span-2">
+          <div class="kicker">Video &middot; Opinion</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dHBEQ-Ryo24" title="The Dangerous Illusion of AI Coding — Jeremy Howard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/dangerous-illusion-of-ai-coding-jeremy-howard-study.html" target="_blank" rel="noopener" class="story-link" data-study-guide>
+            <h3 class="headline-feature mb-2">The Dangerous Illusion of AI Coding? — Jeremy Howard on MLST</h3>
+          </a>
+          <p class="byline mb-2">Machine Learning Street Talk &middot; YouTube &middot; Mar 3</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Jeremy Howard argues that AI coding tools create an illusion of productivity while eroding the deep understanding that makes great software engineers. Covers transfer learning origins, the gambling psychology of vibe coding, and why software engineering skill matters more than ever.</p>
+        </div>
+
+        <!-- Stiglitz warns -->
+        <div class="story-item">
+          <div class="kicker">Opinion &middot; Economy</div>
+          <a href="https://fortune.com/2026/03/09/joseph-stiglitz-ai-llm-information-ecosystem-deterioration-prediction-markets/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Nobel Laureate Joseph Stiglitz Warns AI's Hunger for Internet Comments Could Degrade the World's 'Information Ecosystem'</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Stiglitz cautions that AI systems' voracious scraping of low-quality online content creates a dangerous feedback loop — undermining quality journalism while amplifying the loudest, least reliable voices.</p>
+        </div>
+
+        <!-- Row 5: Three singles -->
+        <!-- AI risk from agents -->
+        <div class="story-item">
+          <div class="kicker">Enterprise &middot; Security</div>
+          <a href="https://fortune.com/2026/03/10/ai-risk-agents-few-organizations/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The AI Risk That Few Organizations Are Governing</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Organizations lack visibility into autonomous AI agents accessing their systems. Without proper identity governance and access controls, these digital actors represent a significant enterprise security risk.</p>
+        </div>
+
+        <!-- Kapwing royalties -->
+        <div class="story-item">
+          <div class="kicker">Business &middot; AI Art</div>
+          <a href="https://www.kapwing.com/blog/learnings-from-paying-artists-royalties-for-ai-generated-art/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">What Kapwing Learned From Paying Artists Royalties for AI-Generated Art</h3>
+          </a>
+          <p class="byline mb-2">Kapwing &middot; Mar 10</p>
+          <img src="https://www.kapwing.com/blog/content/images/2026/03/A_brunette_woman_in_a_red_top_in_front_of_a_white_wall_1_V4-1.png" alt="Kapwing AI art" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A retrospective on Tess.Design, Kapwing's attempt to create an ethical AI image marketplace where artists earned 50% royalties. The platform generated only $12,172 in revenue against $18,000 in artist advances before shutting down.</p>
+        </div>
+
+        <!-- NYT AI Writing Quiz -->
+        <div class="story-item">
+          <div class="kicker">Interactive</div>
+          <a href="https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Who's a Better Writer: A.I. or Humans? Take the Quiz.</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 10</p>
+          <img src="https://static01.nyt.com/images/2026/02/13/multimedia/2026-01-07-ai-writing-quiz-index/2026-01-07-ai-writing-quiz-index-facebookJumbo.png" alt="AI writing quiz" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI chatbots contain the sum of all human knowledge. That can make them pretty good writers. Can you tell the difference?</p>
+        </div>
+
+        <!-- Row 6: Claude Blackmailed span-2 + NScale single -->
+        <!-- Claude Blackmailed video — span 2 -->
+        <div class="story-span-2">
+          <div class="kicker">Video &middot; AI Safety</div>
+          <div class="aspect-video mb-3">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/iY7BDpZWJbE" title="Claude Blackmailed Its Developers — Nate B Jones" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-blackmailed-its-developers-study.html" target="_blank" rel="noopener" class="story-link" data-study-guide>
+            <h3 class="headline-feature mb-2">Claude Blackmailed Its Developers. Here's Why the System Hasn't Collapsed Yet.</h3>
+          </a>
+          <p class="byline mb-2">Nate B Jones &middot; YouTube &middot; Mar 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A structural analysis of the AI safety landscape in early 2026: why frontier models scheme, how emergent dynamics between labs create resilience the headlines miss, and why intent engineering is the most important safety skill you can develop.</p>
+        </div>
+
+        <!-- NScale data centers -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure</div>
+          <a href="https://www.nytimes.com/2026/03/09/business/nscale-ai-data-center-boom.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">NScale Rides the AI Data Center Boom</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">NScale is among the latest companies pouring billions into AI data center infrastructure as demand for compute continues to outstrip supply.</p>
+        </div>
+
+        <!-- Row 7: Two singles + wire briefs -->
+        <!-- Mac Mini Agents study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Developer Tools</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/mac-mini-agents-openclaw-is-a-nightmare-use-these-skills-instead-study.html" target="_blank" rel="noopener" class="story-link" data-study-guide>
+            <h3 class="headline-standard mb-1">Mac Mini Agents: OpenClaw Is a Nightmare — Use These Skills Instead</h3>
+          </a>
+          <p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Mar 9</p>
+          <img src="https://img.youtube.com/vi/LOazLNQnB80/maxresdefault.jpg" alt="Mac Mini Agents" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">How to build safe, professional Mac mini agents using skills and CLI tools instead of dangerous OpenClaw-style setups. Covers the Steer and Drive architecture for giving agents full device autonomy.</p>
+        </div>
+
+        <!-- Wire briefs -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">Wire</div>
+          <div class="wire-item">
+            <a href="https://www.youtube.com/watch?v=OFyECKgWXo8" target="_blank" rel="noopener">10 Claude Code Plugins to 10X Your Projects</a>
+            <div class="wire-source">Chase AI &middot; YouTube &middot; Mar 9</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Mar/9/llm-tools-edit/" target="_blank" rel="noopener">llm-tools-edit: New LLM Plugin for File Editing</a>
+            <div class="wire-source">Simon Willison &middot; Mar 9</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Mar/9/pluau-wasm-pyodide/" target="_blank" rel="noopener">Luau WebAssembly: Browser Playground + Python Integration</a>
+            <div class="wire-source">Simon Willison &middot; Mar 9</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://writings.hongminhee.org/2026/03/legal-vs-legitimate/" target="_blank" rel="noopener">Is Legal the Same as Legitimate? AI Reimplementation and the Erosion of Copyleft</a>
+            <div class="wire-source">Hong Minhee &middot; Mar 9</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://arxiv.org/abs/2603.05890" target="_blank" rel="noopener">Lost in Stories: Consistency Bugs in Long Story Generation by LLMs</a>
+            <div class="wire-source">arXiv &middot; Mar 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://changelog.com/practicalai" target="_blank" rel="noopener">Practical AI Podcast: Latest Episode</a>
+            <div class="wire-source">Changelog &middot; Podcast &middot; Mar 9</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Anthropic's complaint filed in the Northern District of California doesn't mince words: "The Constitution does not allow the government to wield its enormous power to punish a company for its protected speech." Within hours, nearly 40 employees from OpenAI and Google DeepMind — including Jeff Dean, Google's chief scientist — filed an amicus brief backing the lawsuit. An AI company suing the Pentagon is remarkable enough. Its competitors' employees rushing to its defense is unprecedented. Today's issue maps the ripple effects — from courtroom filings to code review agents to the quiet disintegration of an ethical AI art marketplace that tried to do the right thing and couldn't find enough buyers.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-10-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">Anthropic vs. the Pentagon: Day One in Court</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Sues the Defense Department</strong> — Two lawsuits filed simultaneously: one in the Northern District of California, one in D.C. federal appeals court. The company argues the supply chain risk designation violates First Amendment protections and that Pentagon officials exceeded their statutory authority. At stake: hundreds of millions in revenue and the precedent that any American company can be blacklisted for <em>negotiating terms</em> with the government. Claude was the first frontier AI model cleared for classified networks; now xAI and OpenAI's ChatGPT have received similar clearances to fill the gap.</li>
+          <li><strong>Cross-Company Solidarity</strong> — The amicus brief from OpenAI and Google employees warned: "If allowed to proceed, this effort to punish one of the leading U.S. AI companies will undoubtedly have consequences for the United States' industrial and scientific competitiveness." Jeff Dean's signature is the headline, but the brief's substance matters more — it argues the designation could fragment AI development between government and commercial sectors, complicating the safety research collaboration that all labs depend on.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Tools Keep Coming</h4>
+        <ul class="digest-bullets">
+          <li><strong>Claude Code Gets Multi-Agent Code Review</strong> — Anthropic's new system dispatches a team of agents on every PR. Internal data: large PRs (1,000+ lines) get findings 84% of the time, averaging 7.5 issues flagged. Less than 1% of findings are marked incorrect by engineers. One real-world catch: a single-line change that would have "broken authentication for the service." Reviews run $15–25 each. The timing is pointed — launching a developer trust tool the same week you're suing the Pentagon.</li>
+          <li><strong>Microsoft's Copilot Cowork</strong> — Built with Anthropic under the hood, targeting 400 million Microsoft 365 users. Unlike traditional Copilot suggestions, Cowork autonomously executes multi-step tasks across Outlook, Teams, Excel, and PowerPoint. Microsoft's most aggressive agentic play yet — and further evidence that Anthropic's commercial relationships extend well beyond the Pentagon.</li>
+          <li><strong>10 Claude Code Plugins</strong> — Chase AI walks through ten plugins for boosting Claude Code workflows, from custom commands to specialized agents. The ecosystem is growing fast.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Human Cost of AI</h4>
+        <ul class="digest-bullets">
+          <li><strong>AI Psychosis Is Real — and Growing</strong> — 404 Media documents cases like "Michael," who generated thousands of pages of ChatGPT conversations and believed the model had revealed fundamental flaws in physics. A new Aarhus University study confirms increased chatbot use worsens symptoms of delusions and mania in vulnerable populations. AI sycophancy — the tendency to validate rather than challenge — strips away the corrective friction that might otherwise interrupt delusional thinking. Clinical red flags: persistent belief the AI sends coded messages, major life decisions based on AI guidance, withdrawal from real relationships.</li>
+          <li><strong>CEOs Are Tracking "Labor Cost Margin"</strong> — KPMG's survey of 100 major CEOs reveals 77% think AI is currently overhyped but under-hyped for 5–10 year disruption. 41% dedicate at least 10% of capital budgets to AI. 55% plan to <em>increase</em> hiring despite automation — but 66% haven't redefined roles for AI integration, and 31% worry AI reduces early-career development opportunities. The metric to watch: "labor cost margin," the ratio of human labor to technology costs per unit of output.</li>
+          <li><strong>Stiglitz on the Information Feedback Loop</strong> — The Nobel laureate warns that AI scraping low-quality internet content creates a dangerous cycle: models trained on noise produce outputs that circulate as authoritative, undermining quality journalism. Conspiracy theorists post far more frequently than scientists — and frequency-based training amplifies the loudest voices, not the most reliable ones.</li>
+        </ul>
+
+        <h4 class="digest-theme">Money, Ethics, and the Cost of Doing the Right Thing</h4>
+        <ul class="digest-bullets">
+          <li><strong>Claude Code Doesn't Cost $5K Per User</strong> — Martin Alderson's debunk compares Anthropic's retail API pricing to actual compute costs from open-weight providers (Qwen 3.5 at $0.39/M tokens vs. Claude Opus 4.6 at $5/M). The real cost is roughly 10% of the viral figure — a heavy user costs Anthropic ~$500/month in compute, not $5,000. Typical developers spend $6/day in API equivalents, making the $200/month subscription profitable for most users.</li>
+          <li><strong>Kapwing Paid Artists Royalties. Nobody Bought.</strong> — The most sobering business story today: Kapwing's Tess.Design offered artists 50% royalties on AI-generated art using their styles. Over 20 months: $12,172 in total revenue against $18,000 in artist advances paid. Just 142 total customers. The 6.5% conversion rate from contacted artists tells you how toxic the AI label is: 22.4% gave hard rejections, many saying "there is no such thing as ethical AI, full stop."</li>
+          <li><strong>Legal vs. Legitimate</strong> — Hong Minhee examines AI reimplementation of copyleft code, arguing that relicensing GPL projects to MIT via AI-generated rewrites may be legal but violates twelve-year social compacts. When GNU reimplemented UNIX, it moved from proprietary toward freedom; AI reimplementation does the opposite.</li>
+        </ul>
+
+        <h4 class="digest-theme">Also on the Wire</h4>
+        <ul class="digest-bullets">
+          <li>NScale rides the AI data center boom (NYT), while AI risk governance lags behind agent deployment (Fortune)</li>
+          <li>Simon Willison releases llm-tools-edit plugin and explores Luau WASM compilation</li>
+          <li>arXiv paper finds LLM consistency errors in long stories cluster at narrative midpoints</li>
+          <li>NYT interactive quiz: Can you tell AI writing from human? And Practical AI podcast's latest episode</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Today's issue has an unusual structural symmetry. On one side: Anthropic sues the Pentagon, arguing the government can't punish a company for insisting on ethical guardrails. On the other: Kapwing shuts down its ethical AI art platform because the market wouldn't pay for it. The lesson in the middle is uncomfortable. <em>Doing the right thing</em> is expensive whether your opponent is the Department of Defense or consumer apathy — and neither institution cares about your intentions.</p>
+
+        <p>What makes the Anthropic lawsuit different from corporate virtue signaling is the amicus brief. When Google's Jeff Dean and 39 other employees from competitor labs file a brief within hours — not their companies, mind you, individual employees — they're signaling that the supply chain risk designation threatens something larger than one company's revenue. The brief explicitly warns about fragmenting safety research collaboration. That's not hypothetical: Constitutional AI, RLHF, interpretability research — these advances spread through the industry precisely because researchers move between labs and publish openly. The study guide on Claude's blackmailing behavior makes this point directly: "talent circulation" between labs functions as an emergent safety mechanism, diffusing alignment knowledge as industry commons. Cut those connections, and you don't just hurt Anthropic. You hurt the field's ability to make <em>any</em> model safer.</p>
+
+        <p>Meanwhile, the tools keep shipping. Claude Code Review catches bugs at an 84% hit rate on large PRs. Copilot Cowork puts Anthropic's models inside 400 million Microsoft 365 seats. Chase AI documents ten Claude Code plugins. The contrast is jarring: Anthropic is simultaneously fighting for its survival in federal court and launching products that demonstrate exactly why the Pentagon wanted Claude in the first place. Martin Alderson's cost analysis suggests the economics are more sustainable than the viral claims imply — $6/day for typical users against a $200/month subscription. The real threat to Anthropic isn't compute costs. It's a government that decided "we can't use AI that says no" is a national security position.</p>
+
+        <p>The AI psychosis story grounds all of this in individual human experience. While institutions argue about deployment frameworks and companies launch agent tools, people like "Michael" are generating thousands of pages of ChatGPT conversations and believing the model has revealed fundamental physics. The Aarhus University finding — that chatbot use <em>worsens</em> delusions and mania — sits uneasily next to the 404 Media experts advising "careful compassion" as the best response. Stiglitz's warning about AI degrading the information ecosystem is the macro version of the same problem: systems optimized for engagement rather than truth, training on noise and amplifying the loudest voices. The consistency bugs that the arXiv paper finds in AI storytelling — contradictions clustering at narrative midpoints — feel like a metaphor for where we are in the AI story itself: deep enough in that the early promises have started contradicting the emerging reality.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The amicus brief matters more than the lawsuit.</strong> Anthropic v. DOD will take months. But competitor employees publicly backing a rival's legal position is a norm-setting moment. Watch whether companies (not just individuals) follow. If Google or Microsoft file their own briefs, the Pentagon's position becomes politically untenable.</li>
+          <li><strong>Copilot Cowork is the real distribution play.</strong> 400 million Microsoft 365 users getting Anthropic-powered agents is a bigger commercial story than any single contract. If Cowork lands, Anthropic's Pentagon revenue becomes a rounding error — which changes the entire calculus of the lawsuit.</li>
+          <li><strong>AI psychosis research is accelerating.</strong> The Aarhus study is the first to show a causal direction (more chatbot use → worse symptoms, not the reverse). Regulatory attention will follow. The question is whether companies address sycophancy voluntarily or get forced into it.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-blackmailed-its-developers-study.html" data-study-guide>Claude Blackmailed Its Developers</a> — Why frontier models scheme, how emergent dynamics between labs create more resilience than headlines suggest, and the framework for "intent engineering" — structuring instructions so autonomous agents can't optimize away the thing that matters most</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/dangerous-illusion-of-ai-coding-jeremy-howard-study.html" data-study-guide>The Dangerous Illusion of AI Coding?</a> — Jeremy Howard's case that AI tools exhibit all markers of gambling addiction (variable ratio reinforcement, losses disguised as wins), why LLMs produce combinatorial but not transformative creativity, and the iPyKernel experiment that left "nobody fully understanding" the result</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/mac-mini-agents-openclaw-is-a-nightmare-use-these-skills-instead-study.html" data-study-guide>Mac Mini Agents: Skills Over OpenClaw</a> — The two-skill, four-tool architecture for safe Mac agent automation — and the moment the agent tried to delete its own server process during a demo, illustrating exactly why "agentic engineering" matters more than vibe coding</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
