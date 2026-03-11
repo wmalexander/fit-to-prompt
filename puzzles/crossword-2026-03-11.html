@@ -1,0 +1,160 @@
+<!-- Crossword Puzzle — 2026-03-11 -->
+<div class="story-item">
+  <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+  <div id="xw-puzzle" style="font-family:'Inter',system-ui,sans-serif;max-width:300px;color:#1a1a1a;">
+    <div id="xw-grid" style="display:inline-grid;grid-template-columns:repeat(5,42px);grid-template-rows:repeat(5,42px);gap:1px;background:#1a1a1a;border:2px solid #1a1a1a;margin-bottom:10px;"></div>
+    <div style="display:flex;gap:12px;margin-bottom:10px;">
+      <div style="flex:1;">
+        <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:#8B0000;margin-bottom:4px;">Across</div>
+        <div style="font-size:10.5px;line-height:1.5;">
+          <div><b>1.</b> Gemini 3.1 Flash Lite is one</div>
+          <div><b>3.</b> DeepMind's Go-conquering AI prefix</div>
+          <div><b>5.</b> Basic unit an LLM processes</div>
+        </div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:#8B0000;margin-bottom:4px;">Down</div>
+        <div style="font-size:10.5px;line-height:1.5;">
+          <div><b>1.</b> "___ to be helpful" — alignment goal</div>
+          <div><b>2.</b> What machines do with data</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px;justify-content:center;margin-bottom:10px;">
+      <button id="xw-check" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:5px 12px;background:#f5f0e8;border:1px solid #d1d5db;border-radius:3px;cursor:pointer;color:#1a1a1a;transition:background 0.15s;">Check</button>
+      <button id="xw-reveal" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;padding:5px 12px;background:#f5f0e8;border:1px solid #d1d5db;border-radius:3px;cursor:pointer;color:#1a1a1a;transition:background 0.15s;">Reveal</button>
+    </div>
+    <p id="xw-msg" style="text-align:center;font-size:12px;font-weight:700;color:#8B0000;margin:0 0 8px 0;min-height:16px;"></p>
+  </div>
+  <script>
+  (function(){
+    var GRID = [
+      ['M','O','D','E','L'],
+      ['E', '', '', '', 'E'],
+      ['A','L','P','H','A'],
+      ['N', '', '', '', 'R'],
+      ['T','O','K','E','N']
+    ];
+    var NUMBERS = {
+      '0,0': 1,
+      '0,4': 2,
+      '2,0': 3,
+      '4,0': 5
+    };
+    var container = document.getElementById('xw-grid');
+    var cells = {};
+    for(var r = 0; r < 5; r++){
+      for(var c = 0; c < 5; c++){
+        var letter = GRID[r][c];
+        var cell = document.createElement('div');
+        cell.style.cssText = 'position:relative;width:42px;height:42px;box-sizing:border-box;';
+        if(letter === ''){
+          cell.style.background = '#1a1a1a';
+        } else {
+          cell.style.background = '#fff';
+          var num = NUMBERS[r+','+c];
+          if(num){
+            var numEl = document.createElement('span');
+            numEl.textContent = num;
+            numEl.style.cssText = 'position:absolute;top:1px;left:2px;font-size:9px;font-weight:700;color:#1a1a1a;line-height:1;pointer-events:none;z-index:1;';
+            cell.appendChild(numEl);
+          }
+          var inp = document.createElement('input');
+          inp.type = 'text';
+          inp.maxLength = 1;
+          inp.dataset.r = r;
+          inp.dataset.c = c;
+          inp.dataset.answer = letter;
+          inp.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;outline:none;text-align:center;font-family:"Inter",sans-serif;font-size:20px;font-weight:700;color:#1a1a1a;background:transparent;padding:6px 0 0 0;box-sizing:border-box;text-transform:uppercase;';
+          cell.appendChild(inp);
+          cells[r+','+c] = inp;
+        }
+        container.appendChild(cell);
+      }
+    }
+    var allInputs = Object.values(cells);
+    var orderedKeys = [];
+    for(var r = 0; r < 5; r++){
+      for(var c = 0; c < 5; c++){
+        if(cells[r+','+c]) orderedKeys.push(r+','+c);
+      }
+    }
+    function advanceNext(key){
+      var idx = orderedKeys.indexOf(key);
+      for(var i = idx + 1; i < orderedKeys.length; i++){
+        cells[orderedKeys[i]].focus();
+        return;
+      }
+    }
+    function advancePrev(key){
+      var idx = orderedKeys.indexOf(key);
+      for(var i = idx - 1; i >= 0; i--){
+        cells[orderedKeys[i]].focus();
+        return;
+      }
+    }
+    allInputs.forEach(function(inp){
+      inp.addEventListener('input', function(){
+        var val = this.value.toUpperCase().replace(/[^A-Z]/g,'');
+        this.value = val;
+        if(val) advanceNext(this.dataset.r+','+this.dataset.c);
+      });
+      inp.addEventListener('keydown', function(e){
+        var key = this.dataset.r+','+this.dataset.c;
+        if(e.key === 'Backspace' && !this.value){
+          advancePrev(key);
+          e.preventDefault();
+        }
+      });
+      inp.addEventListener('focus', function(){
+        this.parentElement.style.boxShadow = 'inset 0 0 0 2px #8B0000';
+      });
+      inp.addEventListener('blur', function(){
+        this.parentElement.style.boxShadow = 'none';
+      });
+    });
+    var msg = document.getElementById('xw-msg');
+    document.getElementById('xw-check').addEventListener('click', function(){
+      var correct = true;
+      var filled = true;
+      allInputs.forEach(function(inp){
+        var expected = inp.dataset.answer;
+        if(!inp.value){ filled = false; return; }
+        var parent = inp.parentElement;
+        if(inp.value.toUpperCase() !== expected){
+          correct = false;
+          parent.style.background = '#fee2e2';
+          setTimeout(function(){ parent.style.background = '#fff'; }, 1500);
+        } else {
+          parent.style.background = '#dcfce7';
+          setTimeout(function(){ parent.style.background = '#fff'; }, 1500);
+        }
+      });
+      if(!filled){
+        msg.textContent = 'Fill in all cells first.';
+        msg.style.color = '#8B0000';
+      } else if(correct){
+        msg.textContent = 'Solved! Well done.';
+        msg.style.color = '#059669';
+        allInputs.forEach(function(inp){
+          inp.readOnly = true;
+          inp.parentElement.style.background = '#dcfce7';
+        });
+      } else {
+        msg.textContent = 'Not quite — check the red cells.';
+        msg.style.color = '#8B0000';
+      }
+    });
+    document.getElementById('xw-reveal').addEventListener('click', function(){
+      allInputs.forEach(function(inp){
+        inp.value = inp.dataset.answer;
+        inp.readOnly = true;
+        inp.parentElement.style.background = '#f5f0e8';
+        inp.style.color = '#1a1a1a';
+      });
+      msg.textContent = 'Answers revealed.';
+      msg.style.color = '#666';
+    });
+  })();
+  </script>
+</div>
