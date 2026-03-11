@@ -53,7 +53,7 @@
     .newspaper-body p + p { text-indent: 1.5em; }
     .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
     @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
-    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; grid-auto-flow: dense; }
     @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
     .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
@@ -226,6 +226,18 @@
           </div>
         </div>
 
+        <!-- AI is Frying Your Brain — study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Research</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ai-is-frying-your-brain-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/njIDEpMolRA/maxresdefault.jpg" alt="AI Is Frying Your Brain" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">AI Is Frying Your Brain</h3>
+          </a>
+          <p class="byline mb-2">Matt Wolfe &middot; YouTube &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Research from Harvard Business Review and MIT on how AI tools affect cognitive function and critical thinking — and what you can do about it.</p>
+        </div>
+
         <!-- 8 Levels of Agentic Engineering -->
         <div class="story-item">
           <div class="kicker">Opinion &middot; Developer Practice</div>
@@ -234,16 +246,6 @@
           </a>
           <p class="byline mb-2">Bassim Eledath &middot; Mar 11</p>
           <p class="font-serif text-sm text-gray-500 leading-relaxed">AI's coding ability is outpacing our ability to wield it effectively. That gap doesn't close overnight — it closes in levels. 8 of them.</p>
-        </div>
-
-        <!-- Yann LeCun $1B -->
-        <div class="story-item">
-          <div class="kicker">AI Models &middot; Funding</div>
-          <a href="https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-2">Yann LeCun Raises $1 Billion to Build AI That Understands the Physical World</h3>
-          </a>
-          <p class="byline mb-2">Wired &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Meta's chief AI scientist raises a massive round for AMI Labs to build "world models" — AI systems that understand physics and spatial reasoning rather than just pattern-matching text.</p>
         </div>
 
         <!-- Ars Technica AI Quotes -->
@@ -256,16 +258,14 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">A reporter at Ars Technica was terminated after it was discovered they used AI-generated quotes attributed to real people in published articles.</p>
         </div>
 
-        <!-- AI is Frying Your Brain — study guide -->
+        <!-- Yann LeCun $1B -->
         <div class="story-item">
-          <div class="kicker">Video &middot; Research</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ai-is-frying-your-brain-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
-            <img src="https://img.youtube.com/vi/njIDEpMolRA/maxresdefault.jpg" alt="AI Is Frying Your Brain" class="w-full aspect-video object-cover mb-3">
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
-            <h3 class="headline-feature mb-2">AI Is Frying Your Brain</h3>
+          <div class="kicker">AI Models &middot; Funding</div>
+          <a href="https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Yann LeCun Raises $1 Billion to Build AI That Understands the Physical World</h3>
           </a>
-          <p class="byline mb-2">Matt Wolfe &middot; YouTube &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Research from Harvard Business Review and MIT on how AI tools affect cognitive function and critical thinking — and what you can do about it.</p>
+          <p class="byline mb-2">Wired &middot; Mar 10</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Meta's chief AI scientist raises a massive round for AMI Labs to build "world models" — AI systems that understand physics and spatial reasoning rather than just pattern-matching text.</p>
         </div>
 
         <!-- Amazon Healthcare + ChatGPT Interactive (stacked) -->
