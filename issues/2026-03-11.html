@@ -53,13 +53,15 @@
     .newspaper-body p + p { text-indent: 1.5em; }
     .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
     @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
-    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; grid-auto-rows: auto; gap: 1rem; }
     @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
-    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
-    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
-    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
-    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .masonry-flow.masonry-ready { grid-auto-rows: 8px; gap: 0; grid-auto-flow: dense; }
+    .masonry-flow > * { padding: 0 0.5rem 1rem; border-bottom: 1px solid #e5e7eb; }
+    .masonry-flow .story-span-2 { grid-column: span 2; }
+    .masonry-flow .story-wide { grid-column: 1 / -1; }
+    .masonry-flow .story-span-2-right { grid-column: 2 / span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } .masonry-flow .story-span-2-right { grid-column: span 1; } }
     .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
     .wire-item:last-child { border-bottom: none; }
     .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
@@ -149,15 +151,18 @@
           </div>
         </div>
 
-        <!-- NVIDIA NemoClaw + ChatGPT Senate (stacked) -->
+        <!-- NVIDIA NemoClaw -->
         <div class="story-item">
           <div class="kicker">Developer Tools &middot; Open Source</div>
           <a href="https://www.cnbc.com/2026/03/10/nvidia-open-source-ai-agent-platform-nemoclaw-wired-agentic-tools-openclaw-clawdbot-moltbot.html" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-feature mb-2">NVIDIA Open-Sources NemoClaw Agent Platform Alongside OpenClaw, ClawdBot, and MoltBot</h3>
           </a>
           <p class="byline mb-2">CNBC &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed mb-4">NVIDIA releases its agentic AI platform as open source, joining a wave of wired agentic tools from multiple companies. NemoClaw provides a framework for building autonomous AI agents with built-in safety guardrails.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">NVIDIA releases its agentic AI platform as open source, joining a wave of wired agentic tools from multiple companies. NemoClaw provides a framework for building autonomous AI agents with built-in safety guardrails.</p>
+        </div>
+
+        <!-- ChatGPT Senate -->
+        <div class="story-item">
           <div class="kicker">AI Policy</div>
           <a href="https://finance.yahoo.com/news/chatgpt-other-ai-chatbots-approved-224358019.html" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">ChatGPT and Other AI Chatbots Approved for Official Use in U.S. Senate</h3>
@@ -167,7 +172,7 @@
         </div>
 
         <!-- Cartoon + Bloomberg Google Pentagon -->
-        <div class="story-span-2">
+        <div class="story-span-2-right">
           <div class="kicker">Defense &middot; AI</div>
           <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
             <div style="text-align:center;">
@@ -183,7 +188,7 @@
           </div>
         </div>
 
-        <!-- Stop Accepting AI Output + Microsoft Memory (stacked) -->
+        <!-- Stop Accepting AI Output -->
         <div class="story-item">
           <div class="kicker">Video &middot; AI Skills</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/stop-accepting-ai-output-that-looks-right-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
@@ -192,8 +197,11 @@
             <h3 class="headline-feature mb-2">Stop Accepting AI Output That "Looks Right"</h3>
           </a>
           <p class="byline mb-2">YouTube &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">The most valuable AI skill isn't prompting — it's the ability to reject bad AI output with precision and specificity.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">The most valuable AI skill isn't prompting — it's the ability to reject bad AI output with precision and specificity.</p>
+        </div>
+
+        <!-- Microsoft Memory -->
+        <div class="story-item">
           <div class="kicker">Research &middot; AI Agents</div>
           <a href="https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Microsoft Research: Rethinking Memory for AI Agents</h3>
@@ -203,7 +211,7 @@
         </div>
 
         <!-- YouTube AI Slop — study guide -->
-        <div class="story-span-2">
+        <div class="story-wide">
           <div class="kicker">Video &middot; Podcast &middot; AI &amp; Kids</div>
           <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
             <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/youtubes-ai-slop-problem-for-kids-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
@@ -220,15 +228,18 @@
           </div>
         </div>
 
-        <!-- 8 Levels + Ars Technica (stacked) -->
+        <!-- 8 Levels of Agentic Engineering -->
         <div class="story-item">
           <div class="kicker">Opinion &middot; Developer Practice</div>
           <a href="https://www.bassimeledath.com/blog/levels-of-agentic-engineering" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">The 8 Levels of Agentic Engineering</h3>
           </a>
           <p class="byline mb-2">Bassim Eledath &middot; Mar 11</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">AI's coding ability is outpacing our ability to wield it effectively. That gap doesn't close overnight — it closes in levels. 8 of them.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI's coding ability is outpacing our ability to wield it effectively. That gap doesn't close overnight — it closes in levels. 8 of them.</p>
+        </div>
+
+        <!-- Ars Technica -->
+        <div class="story-item">
           <div class="kicker">Media &middot; AI Ethics</div>
           <a href="https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Ars Technica Fires Reporter Over AI-Fabricated Quotes</h3>
@@ -259,15 +270,18 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">Meta's chief AI scientist raises a massive round for AMI Labs to build "world models" — AI systems that understand physics and spatial reasoning rather than just pattern-matching text.</p>
         </div>
 
-        <!-- Amazon Healthcare + ChatGPT Interactive (stacked) -->
+        <!-- Amazon Healthcare -->
         <div class="story-item">
           <div class="kicker">Healthcare &middot; AI</div>
           <a href="https://techcrunch.com/2026/03/10/amazon-healthcare-ai-launch/" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Amazon Launches Healthcare AI Platform</h3>
           </a>
           <p class="byline mb-2">TechCrunch &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Amazon enters the healthcare AI space with a new platform targeting clinical workflows, diagnostic support, and administrative automation.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Amazon enters the healthcare AI space with a new platform targeting clinical workflows, diagnostic support, and administrative automation.</p>
+        </div>
+
+        <!-- ChatGPT Interactive -->
+        <div class="story-item">
           <div class="kicker">AI Products</div>
           <a href="https://techcrunch.com/2026/03/10/chatgpt-interactive-visuals/" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">ChatGPT Gets Interactive Visual Outputs</h3>
@@ -276,15 +290,18 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI introduces interactive visual elements to ChatGPT responses, allowing manipulation of charts and diagrams within conversations.</p>
         </div>
 
-        <!-- Meta MoltBook + YouTube Deepfakes (stacked) -->
+        <!-- Meta MoltBook -->
         <div class="story-item">
           <div class="kicker">Social Media &middot; AI</div>
           <a href="https://www.nytimes.com/2026/03/10/technology/meta-moltbook-social-ai-bots.html" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Meta Launches MoltBook: Social AI Bots That Interact With Each Other</h3>
           </a>
           <p class="byline mb-2">The New York Times &middot; Mar 10</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">AI-powered social bots interact with each other and with human users — blurring the line between human and artificial social engagement.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI-powered social bots interact with each other and with human users — blurring the line between human and artificial social engagement.</p>
+        </div>
+
+        <!-- YouTube Deepfakes -->
+        <div class="story-item">
           <div class="kicker">Technology &middot; Safety</div>
           <a href="https://www.nytimes.com/2026/03/10/technology/youtube-deepfakes-detection-tool.html" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">YouTube Launches Deepfakes Detection Tool</h3>
@@ -379,7 +396,7 @@
           </script>
         </div>
 
-        <!-- More Wire -->
+        <!-- More Wire (split for column balance) -->
         <div class="story-item">
           <div class="section-label">More</div>
           <div class="wire-item">
@@ -398,6 +415,8 @@
             <a href="https://ai.meta.com/blog/world-resources-institute-dino-canopy-height-maps-v2/" target="_blank" rel="noopener">Mapping the World's Forests: Canopy Height Maps v2</a>
             <div class="wire-source">Meta AI &middot; Mar 10</div>
           </div>
+        </div>
+        <div class="story-item">
           <div class="wire-item">
             <a href="https://ai.google.dev/gemini-api/docs/embeddings" target="_blank" rel="noopener">Gemini API: Embeddings Documentation</a>
             <div class="wire-source">Google AI &middot; Mar 10</div>
@@ -412,18 +431,6 @@
           </div>
         </div>
 
-        <!-- Subscribe filler -->
-        <div class="story-item">
-          <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box" style="border-width:1px;">
-            <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-3">Never miss an issue</p>
-            <p class="font-serif text-sm text-gray-600 mb-4" style="line-height:1.5;">Get the daily AI news digest delivered to your inbox — free, every morning.</p>
-            <div class="flex flex-col items-center gap-3">
-              <input type="email" name="email" placeholder="Your email address" required style="width:100%;">
-              <button type="submit" style="width:100%;">Subscribe</button>
-            </div>
-            <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
-          </form>
-        </div>
 
       </div>
     </section>
@@ -623,6 +630,46 @@
     cta.addEventListener('click',openDigest);closeBtn.addEventListener('click',closeDigest);
     overlay.addEventListener('click',function(e){if(e.target===overlay)closeDigest();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('active'))closeDigest();});
+  })();
+  </script>
+
+  <!-- Masonry row-span calculator -->
+  <script>
+  (function(){
+    var ROW_H = 8;
+    function layoutMasonry(){
+      var grid = document.querySelector('.masonry-flow');
+      if(!grid || window.innerWidth < 1024) return;
+      grid.classList.remove('masonry-ready');
+      var items = grid.querySelectorAll('.story-item, .story-span-2, .story-span-2-right, .story-wide');
+      for(var i = 0; i < items.length; i++){
+        items[i].style.gridRowEnd = '';
+      }
+      void grid.offsetHeight;
+      var heights = [];
+      for(var i = 0; i < items.length; i++){
+        heights.push(items[i].getBoundingClientRect().height);
+      }
+      grid.classList.add('masonry-ready');
+      for(var i = 0; i < items.length; i++){
+        var span = Math.ceil(heights[i] / ROW_H) + 1;
+        items[i].style.gridRowEnd = 'span ' + span;
+      }
+    }
+    function onReady(){
+      layoutMasonry();
+      setTimeout(layoutMasonry, 300);
+      setTimeout(layoutMasonry, 1000);
+    }
+    if(document.readyState === 'complete') onReady();
+    else window.addEventListener('load', onReady);
+    window.addEventListener('resize', function(){
+      var grid = document.querySelector('.masonry-flow');
+      if(grid) grid.classList.remove('masonry-ready');
+      var items = grid.querySelectorAll('.story-item, .story-span-2, .story-span-2-right, .story-wide');
+      for(var i = 0; i < items.length; i++) items[i].style.gridRowEnd = '';
+      setTimeout(layoutMasonry, 100);
+    });
   })();
   </script>
 
