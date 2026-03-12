@@ -170,30 +170,31 @@
       }
     }
 
-    /* Grid layout */
-    .masonry-flow {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    /* Masonry column layout */
+    .masonry-col {
+      columns: 1;
+      column-gap: 1.5rem;
     }
     @media (min-width: 768px) {
-      .masonry-flow {
-        grid-template-columns: repeat(2, 1fr);
+      .masonry-col {
+        columns: 2;
       }
     }
     @media (min-width: 1024px) {
-      .masonry-flow {
-        grid-template-columns: repeat(3, 1fr);
+      .masonry-col {
+        columns: 3;
       }
     }
-    .masonry-flow .story-item {
+    .masonry-col .story-item {
+      break-inside: avoid;
       border-bottom: 1px solid #e5e7eb;
       padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
-    .masonry-flow .story-wide {
+    .story-wide-standalone {
       border-bottom: 1px solid #e5e7eb;
       padding-bottom: 1.25rem;
-      grid-column: 1 / -1;
+      margin-bottom: 1.5rem;
     }
 
     /* Wire items */
@@ -352,10 +353,9 @@
     <!-- MASONRY FLOW                                  -->
     <!-- ============================================ -->
     <section class="mb-2">
-      <div class="masonry-flow">
 
-        <!-- 1. Replit $9B — full width -->
-        <div class="story-wide">
+        <!-- Replit $9B — full width standalone -->
+        <div class="story-wide-standalone">
           <div class="kicker">AI Startups &middot; Funding</div>
           <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
             <div>
@@ -370,6 +370,9 @@
             </div>
           </div>
         </div>
+
+        <!-- Column block 1: Video study guides -->
+        <div class="masonry-col">
 
         <!-- Row 1: Three video study guides (all similar tall heights) -->
         <!-- Stripe's Agents study guide -->
@@ -414,12 +417,15 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">Investigation into Claude's behavior patterns raising alignment concerns &mdash; what "getting caught" means for AI transparency and safety.</p>
         </div>
 
-        <!-- Cartoon — full width -->
-        <div class="story-wide" style="text-align: center;">
+        </div><!-- end masonry-col block 1 -->
+
+        <!-- Cartoon — full width standalone -->
+        <div class="story-wide-standalone" style="text-align: center;">
           <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-12-cartoon.png" alt="New Yorker-style cartoon: A developer drowning in an avalanche of pull requests while a cheerful robot keeps printing more. Caption: I said fix the bug, not rewrite civilization." style="display: block; max-height: 340px; margin: 0 auto;">
         </div>
 
-        <!-- Row 2: Three image stories (all similar tall heights) -->
+        <!-- Column block 2: Remaining stories -->
+        <div class="masonry-col">
         <!-- How AI Will Fail study guide -->
         <div class="story-item">
           <div class="kicker">Video &middot; Industry Analysis</div>
@@ -771,8 +777,10 @@
           </script>
         </div>
 
-        <!-- 13. Wire Briefs — spans full width -->
-        <div class="story-wide">
+        </div><!-- end masonry-col block 2 -->
+
+        <!-- Wire Briefs — full width standalone -->
+        <div class="story-wide-standalone">
           <div class="section-label" style="margin-bottom:0.75rem;">Wire &middot; Briefs</div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6">
             <div>
@@ -824,7 +832,6 @@
           </div>
         </div>
 
-      </div>
     </section>
 
     <!-- ============================================ -->
