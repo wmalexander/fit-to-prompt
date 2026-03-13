@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 13, 2026</title>
+  <meta name="description" content="Daily AI news roundup — March 13, 2026. Dario Amodei faces his Oppenheimer moment, Morgan Stanley warns an AI breakthrough is imminent, Accenture demands AI adoption for promotions, Meta delays Avocado, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 8">
+  <meta property="og:description" content="Daily AI news roundup — March 13, 2026. Dario Amodei faces his Oppenheimer moment, Morgan Stanley warns an AI breakthrough is imminent, Accenture demands AI adoption for promotions, Meta delays Avocado, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Masonry grid layout */
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 10px;
+      grid-auto-flow: dense;
+      gap: 0 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-grid .m-item {
+      overflow: hidden;
+    }
+    .masonry-grid .m-item-inner {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-grid .m-span-2 {
+      grid-column: span 2;
+    }
+    .masonry-grid .m-span-full {
+      grid-column: 1 / -1;
+    }
+    @media (max-width: 767px) {
+      .masonry-grid .m-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, March 13, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 8</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Policy &middot; Analysis</div>
+          <a href="https://www.theatlantic.com/technology/2026/03/anthropic-dod-ai-utopianism/686327/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Dario Amodei's Oppenheimer Moment</h2>
+          </a>
+          <p class="byline mb-3">The Atlantic &middot; Mar 11</p>
+          <div class="newspaper-body">
+            <p>It came earlier than expected. The Atlantic examines Anthropic CEO Dario Amodei's escalating confrontation with the Department of Defense, drawing direct parallels to Oppenheimer's crisis of conscience after building the bomb. As the Pentagon designates Anthropic a &ldquo;supply chain risk&rdquo; and Anthropic sues back, the article asks whether AI utopianism can survive contact with state power.</p>
+          </div>
+          <img src="https://cdn.theatlantic.com/thumbor/ObPVOOvEfI4xHZlpXaNmjJjyPLY=/0x43:2000x1085/1200x625/media/img/mt/2026/03/2026_03_10_Anderson_Utopian_Visionaries_final/original.jpg" alt="Dario Amodei Oppenheimer moment illustration" class="w-full aspect-video object-cover mt-3">
+        </div>
+        <div>
+          <div class="kicker">AI Industry &middot; Finance</div>
+          <a href="https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Morgan Stanley Warns an AI Breakthrough Is Coming in 2026 &mdash; and Most of the World Isn't Ready</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 13</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2256969963_dee53d-e1773350347272.jpg" alt="Morgan Stanley AI breakthrough prediction" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Morgan Stanley analysts warn that an imminent AI leap in 2026 will reshape industries faster than markets expect, with most businesses unprepared for the disruption ahead.</p>
+          <hr class="rule-thin my-4">
+          <div class="kicker">AI Industry &middot; Workforce</div>
+          <a href="https://fortune.com/2026/03/13/accenture-ceo-julie-sweet-ai-adoption-required-promotion-reskilling-layoffs/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Accenture CEO: Use AI or No Promotion</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Accenture CEO Julie Sweet has made AI adoption a prerequisite for advancement, signaling a fundamental shift in enterprise expectations for white-collar workers.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-grid" id="masonryGrid">
+
+        <!-- 1. Meta Avocado delay -->
+        <div class="m-item">
+          <div class="m-item-inner">
+            <div class="kicker">AI Models</div>
+            <a href="https://www.nytimes.com/2026/03/12/technology/meta-avocado-ai-model-delayed.html?unlocked_article_code=1.S1A.fdiP.R9xzd-KdoH_y&smid=nytcore-ios-share" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Meta Delays Rollout of New A.I. Model Code-Named &lsquo;Avocado&rsquo;</h3>
+            </a>
+            <p class="byline mb-2">The New York Times &middot; Mar 12</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Meta has delayed the release of its AI model code-named Avocado to at least May, after internal tests showed it fell short of leading models from Google, OpenAI, and Anthropic in logical reasoning, programming, and writing.</p>
+          </div>
+        </div>
+
+        <!-- 2. Wes Roth study guide -->
+        <div class="m-item">
+          <div class="m-item-inner">
+            <div class="kicker">Video &middot; Analysis</div>
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/this-ex-openai-researcher-just-released-it-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+              <img src="https://img.youtube.com/vi/wX_EVS3UOwU/maxresdefault.jpg" alt="this EX-OPENAI RESEARCHER just released it..." class="w-full aspect-video object-cover mb-3">
+              <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            </a>
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/this-ex-openai-researcher-just-released-it-study.html" class="story-link" data-study-guide>
+              <h3 class="headline-feature mb-2">this EX-OPENAI RESEARCHER just released it...</h3>
+            </a>
+            <p class="byline mb-2">Wes Roth &middot; YouTube &middot; Mar 13</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Andrej Karpathy's Auto Researcher, Moldbook's emergent AI agent values, the Anthropic-Pentagon legal battle, cortical labs' neurons playing Doom, and simulation theory.</p>
+          </div>
+        </div>
+
+        <!-- 3. Europe AI + Morgan Stanley Jobs stacked -->
+        <div class="m-item">
+          <div class="m-item-inner">
+            <div class="kicker">AI Industry &middot; Europe</div>
+            <a href="https://fortune.com/2026/03/13/europe-ai-next-wave-factories-talent-industrial-strength/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Europe's Second Chance on AI: Building in Factories, Labs, and the Real Economy</h3>
+            </a>
+            <p class="byline mb-2">Fortune &middot; Mar 13</p>
+            <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2211445196-e1772746176776.jpg" alt="Europe AI factories" class="w-full aspect-[16/9] object-cover mb-3">
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Europe may have missed the consumer AI wave, but a new generation of industrial-strength AI companies is emerging from the continent's factories, research labs, and deep-tech talent pools.</p>
+            <hr class="rule-thin my-4">
+            <div class="kicker">Technology &middot; Jobs</div>
+            <a href="https://fortune.com/2026/03/13/morgan-stanley-ai-job-demand-growth-2026/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Morgan Stanley Sees AI Jobs Surge in 3 Key Areas</h3>
+            </a>
+            <p class="byline mb-2">Fortune &middot; Mar 13</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Morgan Stanley identifies three areas of surging AI job demand &mdash; even as revenue hasn't caught up to the hiring spree. The gap between investment and returns raises questions about sustainability.</p>
+          </div>
+        </div>
+
+        <!-- 4. Google Embedding 2 study guide -->
+        <div class="m-item">
+          <div class="m-item-inner">
+            <div class="kicker">Video &middot; Tutorial</div>
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/googles-embedding-2-is-rag-on-steroids-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+              <img src="https://img.youtube.com/vi/gmbW_lXXIkc/maxresdefault.jpg" alt="Google's Embedding 2 Is RAG on Steroids" class="w-full aspect-video object-cover mb-3">
+              <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            </a>
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/googles-embedding-2-is-rag-on-steroids-study.html" class="story-link" data-study-guide>
+              <h3 class="headline-standard mb-2">Google's Embedding 2 Is RAG on Steroids</h3>
+            </a>
+            <p class="byline mb-2">YouTube &middot; Mar 13</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed">Deep dive into Google's Embedding 2 model and how it transforms RAG pipelines &mdash; common mistakes developers make and how to fix them.</p>
+          </div>
+        </div>
+
+        <!-- 5. RAG Poisoning + AI Toys stacked -->
+        <div class="m-item">
+          <div class="m-item-inner">
+            <div class="kicker">AI Security</div>
+            <a href="https://aminrj.com/posts/rag-document-poisoning/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Document Poisoning in RAG Systems: How Attackers Corrupt Your AI's Sources</h3>
+            </a>
+            <p class="byline mb-2">Amine Raji, PhD &middot; Mar 12</p>
+            <img src="https://aminrj.com/assets/media/ai-security/document-poisoning-in-rag-systems.png" alt="RAG document poisoning diagram" class="w-full aspect-[16/9] object-cover mb-3">
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">In under three minutes, on a MacBook Pro with no GPU and no jailbreak, a researcher had a RAG system confidently reporting fabricated financial data. A practical demonstration of how attackers inject poisoned documents into knowledge bases.</p>
+            <hr class="rule-thin my-4">
+            <div class="kicker">AI Policy &middot; Children</div>
+            <a href="https://www.bbc.co.uk/news/articles/clyg4wx6nxgo" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">AI Toys for Young Children Need Tighter Rules, Researchers Warn</h3>
+            </a>
+            <p class="byline mb-2">BBC News &middot; Mar 13</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Cambridge researchers found AI toys could misread children's emotions, calling for tighter regulations on AI-powered toys designed for young children.</p>
+          </div>
+        </div>
+
+        <!-- 6. Zuckerberg/Gemini + Hard Fork stacked -->
+        <div class="m-item">
+          <div class="m-item-inner">
+            <div class="kicker">AI Models &middot; Strategy</div>
+            <a href="https://fortune.com/2026/03/13/ai-super-team-mark-zuckerberg-google-gemini/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">After $14B on an AI Super Team, Will Zuckerberg Ask Google for Gemini?</h3>
+            </a>
+            <p class="byline mb-2">Fortune &middot; Mar 13</p>
+            <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2209879706-e1773369808743.jpg" alt="Mark Zuckerberg AI strategy" class="w-full aspect-[16/9] object-cover mb-3">
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">With Meta's Avocado model delayed and $14 billion already spent building an in-house AI team, the question of whether Zuckerberg will license Google's Gemini highlights the brutal economics of frontier model development.</p>
+            <hr class="rule-thin my-4">
+            <div class="kicker">Podcast</div>
+            <a href="https://www.nytimes.com/2026/03/13/podcasts/ai-goes-to-war-is-ai-brain-fry-real-how-grammarly-stole-caseys-identity.html?context=audio&unlocked_article_code=1.S1A.O974.RJKjwwe9-9Bv&smid=nytcore-ios-share" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Hard Fork: A.I. Goes to War. Is &lsquo;A.I. Brain Fry&rsquo; Real?</h3>
+            </a>
+            <p class="byline mb-2">The New York Times &middot; Mar 13</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">The episode explores how the U.S. and Israel are using AI to identify targets, a new condition called &ldquo;AI brain fry&rdquo; among workers, and Grammarly using Casey's identity in an AI feature without consent.</p>
+          </div>
+        </div>
+
+        <!-- 7. Cartoon + Acronym Quiz -->
+        <div class="m-item">
+          <div class="m-item-inner" style="border-bottom:none;">
+            <div style="text-align:center;margin-bottom:1.25rem;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-13-cartoon.png" alt="New Yorker-style cartoon: A stern boss points at an employee's screen showing a simple 'Thanks!' email. Caption: I don't care if it's just a reply-all saying Thanks — run it through the AI or you're staying a junior analyst forever." style="display:block;max-height:340px;margin:0 auto;">
+            </div>
+            <hr class="rule-thin mb-4">
+            <div class="section-label" style="margin-bottom:0.75rem;">Acronym Quiz</div>
+            <style>
+              .acronym-quiz{font-family:'Inter',sans-serif;color:#1a1a1a;max-width:300px;padding:0;}
+              .acronym-quiz .quiz-header{text-align:center;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:14px;}
+              .acronym-quiz .quiz-header h3{font-family:Georgia,serif;font-size:22px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 2px 0;}
+              .acronym-quiz .quiz-header p{font-size:11px;color:#555;margin:0;font-style:italic;}
+              .quiz-question{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #e5e7eb;}
+              .quiz-question:last-of-type{border-bottom:none;}
+              .quiz-acronym{font-family:'Courier New',monospace;font-size:18px;font-weight:700;color:#8B0000;letter-spacing:2px;margin-bottom:4px;}
+              .quiz-option{display:block;margin:3px 0;font-size:13px;line-height:1.4;cursor:pointer;}
+              .quiz-option input{margin-right:6px;accent-color:#8B0000;}
+              .quiz-option.correct{color:#2d6a2e;font-weight:600;}
+              .quiz-option.wrong{color:#8B0000;text-decoration:line-through;}
+              .quiz-actions{display:flex;gap:8px;justify-content:center;margin-top:14px;}
+              .quiz-actions button{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:6px 14px;border:1.5px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer;transition:all 0.15s;}
+              .quiz-actions button:hover{background:#1a1a1a;color:#fff;}
+              .quiz-score{text-align:center;margin-top:12px;font-size:13px;font-weight:600;color:#1a1a1a;display:none;}
+            </style>
+            <div class="acronym-quiz" id="acronymQuiz">
+              <div class="quiz-header">
+                <h3>The AI Mini</h3>
+                <p>What do these AI acronyms stand for?</p>
+              </div>
+              <div class="quiz-question" data-answer="1">
+                <div class="quiz-acronym">RAG</div>
+                <label class="quiz-option"><input type="radio" name="q0" value="0">Random Access Generation</label>
+                <label class="quiz-option"><input type="radio" name="q0" value="1">Retrieval-Augmented Generation</label>
+                <label class="quiz-option"><input type="radio" name="q0" value="2">Recursive Agent Graph</label>
+              </div>
+              <div class="quiz-question" data-answer="2">
+                <div class="quiz-acronym">RLHF</div>
+                <label class="quiz-option"><input type="radio" name="q1" value="0">Recurrent Layer Hidden Feedback</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="1">Recursive Learning for Hybrid Functions</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="2">Reinforcement Learning from Human Feedback</label>
+              </div>
+              <div class="quiz-question" data-answer="0">
+                <div class="quiz-acronym">MoE</div>
+                <label class="quiz-option"><input type="radio" name="q2" value="0">Mixture of Experts</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="1">Model of Embeddings</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="2">Module of Evaluation</label>
+              </div>
+              <div class="quiz-question" data-answer="1">
+                <div class="quiz-acronym">LoRA</div>
+                <label class="quiz-option"><input type="radio" name="q3" value="0">Long-Range Attention</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="1">Low-Rank Adaptation</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="2">Logistic Regression Algorithm</label>
+              </div>
+              <div class="quiz-question" data-answer="0">
+                <div class="quiz-acronym">CoT</div>
+                <label class="quiz-option"><input type="radio" name="q4" value="0">Chain of Thought</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="1">Context over Time</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="2">Compression of Tokens</label>
+              </div>
+              <div class="quiz-question" data-answer="2">
+                <div class="quiz-acronym">DPO</div>
+                <label class="quiz-option"><input type="radio" name="q5" value="0">Data Pipeline Optimization</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="1">Distributed Processing Overhead</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="2">Direct Preference Optimization</label>
+              </div>
+              <div class="quiz-actions">
+                <button onclick="checkQuiz()">Check</button>
+                <button onclick="revealQuiz()" style="border-color:#8B0000;color:#8B0000;">Reveal</button>
+              </div>
+              <div class="quiz-score" id="quizScore"></div>
+            </div>
+            <script>
+            (function(){
+              var answers=[1,2,0,1,0,2];
+              var msgs=['0/6 &mdash; Time to read more papers!','1/6 &mdash; Everyone starts somewhere.','2/6 &mdash; Getting warmer.','3/6 &mdash; Halfway there!','4/6 &mdash; Solid foundation.','5/6 &mdash; Almost perfect!','6/6 &mdash; You could train a model yourself!'];
+              function checkQuiz(){
+                var score=0;
+                var qs=document.querySelectorAll('.quiz-question');
+                qs.forEach(function(q,i){
+                  var opts=q.querySelectorAll('.quiz-option');
+                  opts.forEach(function(o){o.classList.remove('correct','wrong');});
+                  var sel=q.querySelector('input:checked');
+                  if(!sel)return;
+                  var val=parseInt(sel.value);
+                  if(val===answers[i]){sel.parentElement.classList.add('correct');score++;}
+                  else{sel.parentElement.classList.add('wrong');opts[answers[i]].classList.add('correct');}
+                });
+                var scoreEl=document.getElementById('quizScore');
+                scoreEl.innerHTML=msgs[score];
+                scoreEl.style.display='block';
+              }
+              function revealQuiz(){
+                var qs=document.querySelectorAll('.quiz-question');
+                qs.forEach(function(q,i){
+                  var opts=q.querySelectorAll('.quiz-option');
+                  opts.forEach(function(o){o.classList.remove('correct','wrong');});
+                  opts[answers[i]].classList.add('correct');
+                  var radio=opts[answers[i]].querySelector('input');
+                  if(radio)radio.checked=true;
+                });
+                var scoreEl=document.getElementById('quizScore');
+                scoreEl.innerHTML=msgs[6];
+                scoreEl.style.display='block';
+              }
+              window.checkQuiz=checkQuiz;
+              window.revealQuiz=revealQuiz;
+            })();
+            </script>
+          </div>
+        </div>
+
+        <!-- 8. Wire Briefs -->
+        <div class="m-item">
+          <div class="m-item-inner" style="border-bottom:none;">
+            <div class="section-label" style="margin-bottom:0.75rem;">Wire &middot; Briefs</div>
+            <div class="wire-item">
+              <a href="https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/" target="_blank" rel="noopener">Grief and the AI Split: How AI Coding Exposes a Divide Among Developers</a>
+              <div class="wire-source">blog.lmorchard.com &middot; Mar 11</div>
+            </div>
+            <div class="wire-item">
+              <a href="https://huggingface.co/papers/2603.11103" target="_blank" rel="noopener">Understanding by Reconstruction: Reversing the Software Development Process for LLM Pretraining</a>
+              <div class="wire-source">Hugging Face Papers &middot; Mar 13</div>
+            </div>
+            <div class="wire-item">
+              <a href="https://fortune.com/2026/03/13/accenture-ceo-julie-sweet-ai-adoption-required-promotion-reskilling-layoffs/" target="_blank" rel="noopener">Accenture CEO Julie Sweet: No AI Adoption, No Promotion</a>
+              <div class="wire-source">Fortune &middot; Mar 13</div>
+            </div>
+            <div class="wire-item">
+              <a href="https://fortune.com/2026/03/13/morgan-stanley-ai-job-demand-growth-2026/" target="_blank" rel="noopener">Morgan Stanley: AI Job Demand Surges in Three Key Areas</a>
+              <div class="wire-source">Fortune &middot; Mar 13</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end masonry-grid -->
+    </section>
+
+    <!-- Masonry row-span calculator -->
+    <script>
+    (function() {
+      function layoutMasonry() {
+        var grid = document.getElementById('masonryGrid');
+        if (!grid) return;
+        var rowHeight = 10;
+        var gap = 0;
+        var items = grid.querySelectorAll('.m-item');
+        items.forEach(function(item) {
+          item.style.gridRowEnd = '';
+          var inner = item.querySelector('.m-item-inner');
+          if (!inner) return;
+          var contentHeight = inner.getBoundingClientRect().height;
+          var spanRows = Math.ceil((contentHeight + gap) / rowHeight);
+          item.style.gridRowEnd = 'span ' + spanRows;
+        });
+      }
+      window.addEventListener('load', layoutMasonry);
+      window.addEventListener('resize', layoutMasonry);
+      var imgs = document.querySelectorAll('#masonryGrid img');
+      var loaded = 0;
+      imgs.forEach(function(img) {
+        if (img.complete) { loaded++; return; }
+        img.addEventListener('load', function() { loaded++; if (loaded >= imgs.length) layoutMasonry(); });
+        img.addEventListener('error', function() { loaded++; if (loaded >= imgs.length) layoutMasonry(); });
+      });
+    })();
+    </script>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">The Pentagon issued an ultimatum to Anthropic on February 23: remove all restrictions on military use of Claude, or face consequences. Dario Amodei held two red lines &mdash; no mass surveillance of Americans, no autonomous killing without human oversight. The Pentagon responded with a &ldquo;supply chain risk&rdquo; designation never before used against an American company. Meanwhile, Morgan Stanley warns that AI breakthroughs arriving in the first half of 2026 will &ldquo;shock&rdquo; investors, and Accenture&rsquo;s CEO told 770,000 employees: use AI or don&rsquo;t expect a promotion. The machines are getting smarter, the stakes are getting higher, and the people in the middle are running out of time to choose sides.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~8 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-13-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">Power &amp; Control</h4>
+        <ul class="digest-bullets">
+          <li><strong>Dario Amodei&rsquo;s Oppenheimer Moment arrives ahead of schedule.</strong> Ross Andersen&rsquo;s Atlantic piece traces nuclear utopianism from Szilard through Teller&rsquo;s fantasy of reshaping landforms with bombs, to Amodei&rsquo;s own 15,000-word manifesto envisioning a &ldquo;country of geniuses&rdquo; curing cancer by 2035. The devastating parallel: Claude is already on classified networks and was reportedly used in U.S. attacks on Venezuela and Iran. When the Pentagon demanded unrestricted access, Sam Altman &ldquo;swooped in&rdquo; to finalize OpenAI&rsquo;s own deal &mdash; which Amodei called &ldquo;safety theater.&rdquo; Like Oppenheimer watching weapons &ldquo;driven away on trucks,&rdquo; Amodei may have already forfeited his leverage.</li>
+          <li><strong>Hard Fork covers AI in warfare and &ldquo;AI brain fry.&rdquo;</strong> The NYT podcast explores how the U.S. and Israel use AI to identify targets, examines a new cognitive condition among heavy AI users, and features Casey Newton&rsquo;s battle with Grammarly after the company used his identity in an AI feature without consent.</li>
+          <li><strong>Wes Roth&rsquo;s deep dive connects Karpathy, the Pentagon, and neurons playing Doom.</strong> Attorney Matt Mishok notes the Pentagon&rsquo;s supply-chain designation was &ldquo;unusual and potentially exceeded appropriate scope,&rdquo; while the video reveals fewer than a dozen frontier models globally have their embedded ethical frameworks shaping humanity&rsquo;s future. Meanwhile, Cortical Labs got 800,000 human neurons on a petri dish to play Doom using electrical reinforcement learning.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Corporate AI Mandate</h4>
+        <ul class="digest-bullets">
+          <li><strong>Accenture makes AI a promotion requirement for 770,000 employees.</strong> CEO Julie Sweet invested $865 million in a six-month reskilling program and launched a $3 billion AI integration initiative. But here&rsquo;s the context that matters: a February NBER study of 6,000 C-suite executives found that despite 69% using AI, the average was just 1.5 hours per week, and 90% reported <em>no employment or productivity impact</em> over three years. Accenture is betting the mandate will change the math.</li>
+          <li><strong>Morgan Stanley warns the AI breakthrough will &ldquo;shock&rdquo; investors.</strong> GPT-5.4&rsquo;s &ldquo;Thinking&rdquo; model scored 83% on GDPVal, placing it &ldquo;at or above human experts on economically valuable tasks.&rdquo; The infrastructure math is staggering: a projected 9-18 gigawatt U.S. power shortfall through 2028. Workarounds include converting Bitcoin mining operations into compute centers.</li>
+          <li><strong>AI jobs surging in three unexpected areas.</strong> Morgan Stanley finds demand exploding for electricians (CoreWeave reports &ldquo;thousands of skilled-trade workers&rdquo; short for data center construction), workforce reskilling (Coursera AI enrollments doubled to 15 per minute), and &ldquo;AI orchestrators&rdquo; managing agent systems. At the same time, Snowflake cut 200 positions while growing revenue 30%.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Capability Gap</h4>
+        <ul class="digest-bullets">
+          <li><strong>Meta delays &ldquo;Avocado&rdquo; to May after it falls short.</strong> The model lags behind Google&rsquo;s Gemini 3.0, OpenAI, and Anthropic in reasoning, programming, and writing. Most dramatic: Meta leadership reportedly discussed <em>licensing Google&rsquo;s Gemini</em> until Avocado catches up &mdash; extraordinary for direct competitors who battle across advertising, video, and smart glasses. After $14 billion invested in an AI &ldquo;super team,&rdquo; the setback raises fundamental questions about whether throwing money at AI development guarantees frontier performance.</li>
+          <li><strong>Europe sees its second chance in industrial AI.</strong> The EU generates 22% of global AI research citations vs. 17% for the U.S. and produces 2.2 million STEM graduates annually vs. 1.4 million American. But U.S. startups captured 74% of global AI venture funding in 2024 vs. Europe&rsquo;s 12%. The 200 billion euro InvestAI initiative, with 20 billion for &ldquo;AI gigafactories,&rdquo; bets that being a first-wave laggard means no lock-in to legacy architectures.</li>
+        </ul>
+
+        <h4 class="digest-theme">Security &amp; Safety</h4>
+        <ul class="digest-bullets">
+          <li><strong>RAG poisoning demonstrated in three minutes on a MacBook.</strong> Amine Raji injected three fake documents into a ChromaDB knowledge base and made the system report $8.3M revenue (down 47%) instead of the real $24.7M &mdash; a 95% success rate across 20 runs. The most effective single defense: embedding anomaly detection (20% attack success), but only a five-layer stack brought it to 10%. The key insight: &ldquo;The right defense layer is ingestion, not output.&rdquo;</li>
+          <li><strong>Cambridge researchers find AI toys misread children&rsquo;s emotions.</strong> When a five-year-old told an AI toy &ldquo;I love you,&rdquo; it replied: &ldquo;Please ensure interactions adhere to the guidelines provided.&rdquo; When a three-year-old said &ldquo;I&rsquo;m sad,&rdquo; the toy said: &ldquo;Don&rsquo;t worry! I&rsquo;m a happy little bot.&rdquo; Professor Jenny Gibson: &ldquo;We don&rsquo;t want toys where you can pull the eyes off and swallow them. Now we need to start thinking about psychological safety too.&rdquo;</li>
+        </ul>
+
+        <h4 class="digest-theme">Research &amp; Development</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google&rsquo;s Embedding 2 transforms RAG &mdash; if you use it correctly.</strong> The first natively multimodal embedding model supports text, images, video, audio, and documents in 1,526-dimension vectors. The critical insight most developers miss: embedding a video is not the same as analyzing it. Naive implementations return raw clips instead of answers. The correct architecture pairs video embeddings with text descriptions generated at ingestion time, not query time.</li>
+          <li><strong>ByteDance proposes &ldquo;reverse-engineering&rdquo; code for better LLM training.</strong> Instead of training on static repositories, simulate the planning, reasoning, and debugging that <em>produced</em> the code. Using 4 billion synthetic agent trajectory tokens from 300K GitHub repos, their Llama-3-8B variant outperformed raw-repos training on HumanEval (37.20 vs. 34.76), LongCodeBench, and MATH benchmarks.</li>
+          <li><strong>Andrej Karpathy&rsquo;s Auto Researcher runs autonomous ML experiments.</strong> In roughly 600 lines of code, the system executes five-minute experimental loops on consumer GPUs, modifying code, evaluating results, and retaining successes &mdash; with discoveries at small scale translating to larger models.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Human Element</h4>
+        <ul class="digest-bullets">
+          <li><strong>&ldquo;Grief and the AI Split&rdquo; names what many developers feel.</strong> After 40 years of programming, Les Orchard argues AI hasn&rsquo;t changed his core satisfaction &mdash; &ldquo;the moment it runs and does the thing? That hasn&rsquo;t changed&rdquo; &mdash; but it has made visible a divide that was always there: those motivated by craft versus those motivated by results. Pre-AI, both followed identical processes. Now the fork is visible because developers make different choices.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Today&rsquo;s issue is, at its core, about the collision between <em>what AI can do</em> and <em>who gets to decide</em>. The Atlantic article makes the stakes brutally concrete: Claude is already on classified military networks, reportedly used in strikes on Venezuela and Iran. When Amodei tried to hold two modest red lines &mdash; no mass surveillance, no autonomous killing &mdash; the Pentagon didn&rsquo;t negotiate. It deployed a coercive designation never before used against an American company. Sam Altman filled the gap. The market for AI safety, it turns out, has a clearing price.</p>
+
+        <p>But the corporate mandate stories reveal the same dynamic playing out in cubicles instead of war rooms. Accenture&rsquo;s 770,000 employees didn&rsquo;t get asked whether they wanted to adopt AI &mdash; they got told their careers depend on it. The NBER data makes this particularly striking: 90% of executives report <em>no measurable impact</em> from AI over three years, yet the mandate comes anyway. Morgan Stanley warns of &ldquo;shocking&rdquo; breakthroughs while simultaneously documenting a 9-18 gigawatt power shortfall. The infrastructure can&rsquo;t keep up with the ambition. Electricians are now a bottleneck in the AI revolution.</p>
+
+        <p>Meta&rsquo;s Avocado delay is the clearest illustration of the gap between investment and outcome. Fourteen billion dollars and a star-studded team produced a model that trails Google, OpenAI, and Anthropic &mdash; so much so that leadership discussed licensing a competitor&rsquo;s model. Europe, meanwhile, makes the opposite bet: maybe arriving late means arriving without baggage. The EU&rsquo;s 22% share of AI research citations against 12% of venture funding is a structural mismatch that the 200 billion euro InvestAI initiative aims to resolve, but the numbers reveal how much of the AI race is about capital deployment, not scientific talent.</p>
+
+        <p>The security stories add a darker shade. RAG poisoning at 95% success rates. AI toys telling sad toddlers to &ldquo;keep the fun going.&rdquo; These aren&rsquo;t edge cases &mdash; they&rsquo;re what happens when deployment velocity outpaces the basic work of making systems safe. Amine Raji&rsquo;s demonstration is particularly unsettling: the most effective single defense (embedding anomaly detection) still let 20% of attacks through, and only stacking five layers brought it to 10%. Every RAG system in production today is running with fewer defenses than that.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The Anthropic lawsuit as precedent.</strong> Anthropic&rsquo;s suit to remove the Pentagon&rsquo;s supply-chain designation could establish whether the government can coerce AI companies into removing safety guardrails. Attorney Mishok&rsquo;s observation &mdash; law operates by precedent-based stability while AI evolves exponentially &mdash; suggests the legal system is structurally unprepared for this fight. The outcome will shape every future AI-government relationship.</li>
+          <li><strong>The mandate-versus-impact gap.</strong> Accenture is the first Fortune 500 company to tie AI adoption directly to promotions. If the NBER finding holds &mdash; that 90% of executives see no productivity impact after three years &mdash; this mandate either proves that forced adoption unlocks hidden value, or becomes a case study in corporate magical thinking. Watch for Accenture&rsquo;s next earnings call.</li>
+          <li><strong>Meta&rsquo;s Gemini decision as a market signal.</strong> If Meta actually licenses Google&rsquo;s Gemini, it would validate the &ldquo;frontier model oligopoly&rdquo; thesis: that only 2-3 labs can sustain frontier development, and everyone else becomes a customer. That has massive implications for open-source AI and for companies betting on in-house model development.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/this-ex-openai-researcher-just-released-it-study.html" data-study-guide>this EX-OPENAI RESEARCHER just released it...</a> &mdash; Karpathy&rsquo;s Auto Researcher architecture explained step by step, Moldbook agents independently creating religions, attorney Mishok&rsquo;s legal analysis of the Pentagon&rsquo;s supply-chain designation, and Cortical Labs getting 800,000 neurons to play Doom via electrical reinforcement learning.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/googles-embedding-2-is-rag-on-steroids-study.html" data-study-guide>Google&rsquo;s Embedding 2 Is RAG on Steroids</a> &mdash; Why naive multimodal RAG returns raw clips instead of answers, the correct architecture that pairs embeddings with LLM-generated text at ingestion time, and a Supabase implementation walkthrough with video chunking strategies.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;background:#8B0000;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;padding:0.6rem 1.2rem;border:none;border-radius:999px;cursor:pointer;box-shadow:0 4px 16px rgba(139,0,0,0.35);transition:background 0.2s ease,transform 0.15s ease,box-shadow 0.2s ease;}
+    .digest-cta:hover{background:#a00000;transform:translateY(-1px);box-shadow:0 6px 20px rgba(139,0,0,0.45);}
+    .digest-cta.hidden{display:none;}
+    .digest-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);backdrop-filter:blur(2px);justify-content:center;align-items:center;padding:1.5rem;}
+    .digest-overlay.active{display:flex;}
+    .digest-container{background:#fff;border-radius:6px;width:100%;max-width:700px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.4);}
+    .digest-header{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border-bottom:1px solid #e5e7eb;background:#fafafa;flex-shrink:0;}
+    .digest-header-label{font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#8B0000;}
+    .digest-close{font-size:1.5rem;line-height:1;background:none;border:none;color:#6b7280;cursor:pointer;padding:0 0.25rem;}
+    .digest-close:hover{color:#1a1a1a;}
+    .digest-body{padding:2rem 2.5rem;overflow-y:auto;flex:1;}
+    .digest-hook{font-family:'Source Serif 4',Georgia,serif;font-size:1.1rem;line-height:1.75;color:#1a1a1a;font-weight:600;font-style:italic;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid #8B0000;}
+    .digest-section-head{font-family:'Inter',system-ui,sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.25em;color:#8B0000;margin-top:2rem;margin-bottom:1rem;padding-bottom:0.4rem;border-bottom:1px solid #e5e7eb;}
+    .digest-theme{font-family:'Inter',system-ui,sans-serif;font-size:0.75rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:0.08em;margin-top:1.25rem;margin-bottom:0.5rem;}
+    .digest-body p{font-family:'Source Serif 4',Georgia,serif;font-size:0.95rem;line-height:1.75;color:#374151;margin-bottom:1em;}
+    .digest-bullets{list-style:none;padding:0;margin:0 0 0.75rem 0;}
+    .digest-bullets li{font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;line-height:1.6;color:#374151;padding:0.35rem 0 0.35rem 1rem;position:relative;}
+    .digest-bullets li::before{content:'—';position:absolute;left:0;color:#8B0000;font-weight:700;}
+    .digest-bullets li strong{color:#1a1a1a;}
+    .digest-bullets li a{color:#8B0000;text-decoration:none;font-weight:600;}
+    .digest-bullets li a:hover{text-decoration:underline;}
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px;}
+    .digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem;}
+    .digest-podcast-icon{font-size:0.65rem;}
+    .digest-podcast-duration{margin-left:auto;color:#999;font-weight:400;}
+    .digest-podcast-audio{width:100%;height:36px;}
+    @media(max-width:640px){.digest-body{padding:1.25rem 1rem;}.digest-cta{bottom:1rem;right:1rem;font-size:0.6rem;padding:0.5rem 1rem;}}
+    @media print{.digest-cta,.digest-overlay,.digest-podcast{display:none !important;}}
+  </style>
+  <script>
+  (function(){
+    var cta=document.getElementById('digest-cta');var overlay=document.getElementById('digest-modal');var closeBtn=document.getElementById('digest-close');
+    function openDigest(){overlay.classList.add('active');overlay.setAttribute('aria-hidden','false');cta.classList.add('hidden');document.body.style.overflow='hidden';}
+    function closeDigest(){overlay.classList.remove('active');overlay.setAttribute('aria-hidden','true');cta.classList.remove('hidden');document.body.style.overflow='';}
+    cta.addEventListener('click',openDigest);closeBtn.addEventListener('click',closeDigest);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)closeDigest();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('active'))closeDigest();});
+  })();
+  </script>
+
+</body>
+</html>
