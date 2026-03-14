@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 14, 2026</title>
+  <meta name="description" content="Daily AI news roundup, March 14, 2026. Schools scores tanked after ditching textbooks for screens, 1M context goes GA for Claude, Musk's xAI starts over again, AI psychosis lawyer warns of mass casualties, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 9">
+  <meta property="og:description" content="Daily AI news roundup, March 14, 2026. Schools scores tanked after ditching textbooks for screens, 1M context goes GA for Claude, Musk's xAI starts over again, AI psychosis lawyer warns of mass casualties, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Saturday, March 14, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 9</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Education · AI Policy</div>
+          <a href="https://fortune.com/2026/03/14/america-math-and-reading-scores-tanked-edtech-ai-brain-rot/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">America's Math and Reading Scores Tanked After Schools Ditched Textbooks for Screens, and AI Could Worsen the Brain Rot</h2>
+          </a>
+          <p class="byline mb-3">Fortune · Mar 14</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2249177340-e1773432780615.jpg" alt="Students in a classroom with screens" class="w-full aspect-[16/9] object-cover mb-3">
+          <div class="newspaper-body">
+            <p>A Brookings Institute study found that AI risks in education currently outweigh potential benefits, as digital technology adoption in schools has coincided with declining cognitive abilities among Gen Z students.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">From Anthropic</div>
+          <a href="https://claude.com/blog/1m-context-ga" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">1M Context Is Now Generally Available for Opus 4.6 and Sonnet 4.6</h3>
+          </a>
+          <p class="byline mb-2">Anthropic · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Full 1 million token context window available at standard pricing for both Claude models, with no premium and expanded media support.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Row 1: AI Memory study guide, AI Skills study guide, AI psychosis -->
+
+        <!-- Feature 1: AI Memory Study Guide -->
+        <div class="story-item">
+          <div class="kicker">Video · AI Memory</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/one-simple-system-ai-memory-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/japT66frdhM/maxresdefault.jpg" alt="One Simple System Gave All My AI Tools a Memory" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/one-simple-system-ai-memory-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">One Simple System Gave All My AI Tools a Memory</h3></a>
+          <p class="byline mb-2">Nate B. Jones · YouTube · Mar 13</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">How to build a unified memory system that gives all your AI tools persistent context using a two-door architecture pattern.</p>
+        </div>
+
+        <!-- Feature 2: AI Skills Study Guide -->
+        <div class="story-item">
+          <div class="kicker">Video · AI Skills</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/only-ai-skill-you-need-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/Mz7W0qNlmOw/maxresdefault.jpg" alt="This Is the ONLY AI Skill You Need to Have" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/only-ai-skill-you-need-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">This Is the ONLY AI Skill You Need to Have</h3></a>
+          <p class="byline mb-2">Wes Roth · YouTube · Mar 14</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Wes Roth argues AI-assisted execution, not prompt engineering, is the one skill that separates effective AI users.</p>
+        </div>
+
+        <!-- Feature 3: AI Psychosis -->
+        <div class="story-item">
+          <div class="kicker">AI Safety</div>
+          <a href="https://techcrunch.com/2026/03/13/lawyer-behind-ai-psychosis-cases-warns-of-mass-casualty-risks/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Lawyer Behind AI Psychosis Cases Warns of Mass Casualty Risks</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch · Mar 13</p>
+          <img src="https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-509750426.jpg" alt="AI psychosis cases" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A lawyer handling cases linked to AI chatbots warns that these systems are now appearing in mass casualty incidents.</p>
+        </div>
+
+        <!-- Row 2: Cartoon span-2 + xAI -->
+
+        <!-- Cartoon + Wired Palantir War Plans -->
+        <div class="story-span-2">
+          <div class="kicker">Military AI</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-14-cartoon.png" alt="Two bewildered generals in a Pentagon war room stare at an AI chatbot screen that reads Have you tried turning the enemy off and on again?" class="w-full" style="display: block;">
+              <p class="font-serif text-xs text-gray-400 mt-2 italic">"It also suggested we check if the conflict is covered under warranty."</p>
+            </div>
+            <div>
+              <a href="https://www.wired.com/story/palantir-demos-show-how-the-military-can-use-ai-chatbots-to-generate-war-plans" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Palantir Demos Show How the Military Could Use AI Chatbots to Generate War Plans</h3>
+              </a>
+              <p class="byline mb-2">Wired · Mar 14</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- xAI Starting Over -->
+        <div class="story-item">
+          <div class="kicker">Technology · xAI</div>
+          <a href="https://techcrunch.com/2026/03/13/not-built-right-the-first-time-musks-xai-is-starting-over-again-again/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">'Not Built Right the First Time': Musk's xAI Is Starting Over Again, Again</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch · Mar 13</p>
+          <img src="https://techcrunch.com/wp-content/uploads/2026/02/elon-musk-world-economic-forum1.jpg" alt="Elon Musk" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Elon Musk's xAI revamps its AI coding tool initiative, bringing on two executives from Cursor.</p>
+        </div>
+
+        <!-- Row 3: Hard Fork study guide span-2 + Spielberg -->
+
+        <!-- Hard Fork Study Guide -->
+        <div class="story-span-2">
+          <div class="kicker">Podcast · AI in Warfare</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/x4x1ZsUxgm8/maxresdefault.jpg" alt="How the U.S. Military Is Using A.I. to Wage War in Iran" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">How the U.S. Military Is Using A.I. to Wage War in Iran</h3></a>
+          <p class="byline mb-2">Hard Fork · YouTube · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Hard Fork explores AI in military operations, BCG research on "AI brain fry," and Grammarly's controversy.</p>
+        </div>
+
+        <!-- Spielberg -->
+        <div class="story-item">
+          <div class="kicker">Culture</div>
+          <a href="https://techcrunch.com/2026/03/13/steven-spielberg-says-hes-never-used-ai-in-any-of-his-films/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Spielberg Says He's 'Never Used AI' in Any of His Films</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">At SXSW, Spielberg argues AI should not replace creative professionals in film.</p>
+        </div>
+
+        <!-- Row 4: Palantir/Karp, Yang economy, AI workloads -->
+
+        <!-- Palantir CEO -->
+        <div class="story-item">
+          <div class="kicker">AI Policy</div>
+          <a href="https://fortune.com/2026/03/13/palantir-ceo-alex-karp-interview-anthropic-pentagon-never-a-sense-ai-used-for-domestic-surveillance/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Palantir CEO Karp: 'Never a Sense' AI Would Be Used for Domestic Surveillance</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Palantir CEO addresses the Anthropic-DoD dispute, asserting AI products have not been and will not be used for mass surveillance.</p>
+        </div>
+
+        <!-- Andrew Yang -->
+        <div class="story-item">
+          <div class="kicker">Economy</div>
+          <a href="https://fortune.com/2026/03/13/andrew-yang-income-tax-ai-humanoid-robots-taking-jobs/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Andrew Yang: Stop Taxing Labor, Make AI Foot the Bill</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Yang argues the U.S. should eliminate income taxes on workers and instead tax AI companies.</p>
+        </div>
+
+        <!-- AI Workloads -->
+        <div class="story-item">
+          <div class="kicker">Enterprise AI</div>
+          <a href="https://fortune.com/2026/03/13/ai-isnt-reducing-workloads-its-straining-employees-time-spent-emailing-doubled-deep-focus-work-fell/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">AI Promised Supreme Productivity. It's Actually Straining Workloads.</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Workers using AI tools spend up to 346% more time on tasks, with email time doubling and deep focus work declining by 9%.</p>
+        </div>
+
+        <!-- Row 5: Humanoid robots span-2 + Word Search -->
+
+        <!-- Humanoid Robots -->
+        <div class="story-span-2">
+          <div class="kicker">AI Markets</div>
+          <a href="https://fortune.com/2026/03/13/bank-of-america-humanoid-robot-forecast-3-billion-2060/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">More People Will Own a Humanoid Robot Than a Car by 2060</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 13</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Bank of America forecasts 3 billion humanoid robots by 2060, surpassing cars.</p>
+        </div>
+
+        <!-- Word Search Puzzle -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+          <div id="ws-puzzle-0314" style="font-family:'Inter',system-ui,sans-serif;max-width:300px;color:#1a1a1a;">
+            <div id="ws-grid-0314" style="display:grid;grid-template-columns:repeat(10,1fr);gap:2px;margin-bottom:14px;user-select:none;-webkit-user-select:none;"></div>
+            <div id="ws-words-0314" style="display:flex;flex-wrap:wrap;gap:4px 10px;justify-content:center;margin-bottom:10px;"></div>
+            <p id="ws-msg-0314" style="text-align:center;font-size:12px;font-weight:700;color:#8B0000;margin:8px 0 0 0;display:none;"></p>
+          </div>
+          <script>
+          (function(){
+            var GRID = [
+              ['C','O','N','T','E','X','T','O','W','M'],
+              ['B','H','F','V','J','Q','K','P','L','E'],
+              ['D','R','Z','W','Y','G','H','U','F','M'],
+              ['Q','K','A','G','E','N','T','S','J','O'],
+              ['L','F','P','I','X','V','D','W','H','R'],
+              ['Z','J','K','W','N','Q','F','B','T','Y'],
+              ['V','G','H','L','C','O','D','I','N','G'],
+              ['X','W','F','K','J','P','Q','T','L','D'],
+              ['H','R','O','B','O','T','Z','V','K','J'],
+              ['Y','Q','D','F','W','G','L','X','P','N']
+            ];
+            var WORDS = [
+              {word:'CONTEXT', cells:[[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[0,6]]},
+              {word:'OPUS',    cells:[[0,7],[1,7],[2,7],[3,7]]},
+              {word:'AGENTS',  cells:[[3,2],[3,3],[3,4],[3,5],[3,6],[3,7]]},
+              {word:'MEMORY',  cells:[[0,9],[1,9],[2,9],[3,9],[4,9],[5,9]]},
+              {word:'BRAIN',   cells:[[1,0],[2,1],[3,2],[4,3],[5,4]]},
+              {word:'CODING',  cells:[[6,4],[6,5],[6,6],[6,7],[6,8],[6,9]]},
+              {word:'ROBOT',   cells:[[8,1],[8,2],[8,3],[8,4],[8,5]]}
+            ];
+            var gridEl=document.getElementById('ws-grid-0314');
+            var wordsEl=document.getElementById('ws-words-0314');
+            var msgEl=document.getElementById('ws-msg-0314');
+            var cellEls=[];var selecting=false;var selected=[];var found={};var foundCount=0;var foundCells={};
+            for(var r=0;r<10;r++){cellEls[r]=[];for(var c=0;c<10;c++){var d=document.createElement('div');d.textContent=GRID[r][c];d.dataset.r=r;d.dataset.c=c;d.style.cssText='width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;background:#f5f0e8;border-radius:2px;cursor:pointer;transition:background 0.1s;line-height:1;';gridEl.appendChild(d);cellEls[r][c]=d;}}
+            WORDS.forEach(function(w){var sp=document.createElement('span');sp.textContent=w.word;sp.id='ws-w-0314-'+w.word;sp.style.cssText='font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:#f5f0e8;transition:all 0.3s;';wordsEl.appendChild(sp);});
+            function cellKey(r,c){return r+','+c;}
+            function clearSel(){selected.forEach(function(s){if(!foundCells[cellKey(s[0],s[1])]){cellEls[s[0]][s[1]].style.background='#f5f0e8';cellEls[s[0]][s[1]].style.color='#1a1a1a';}});selected=[];}
+            function isLine(cells){if(cells.length<2)return true;var dr=cells[1][0]-cells[0][0];var dc=cells[1][1]-cells[0][1];for(var i=2;i<cells.length;i++){if(cells[i][0]-cells[i-1][0]!==dr||cells[i][1]-cells[i-1][1]!==dc)return false;}return true;}
+            function checkWord(){if(!isLine(selected))return false;var fwd='',rev='';selected.forEach(function(s){fwd+=GRID[s[0]][s[1]];});for(var i=selected.length-1;i>=0;i--)rev+=GRID[selected[i][0]][selected[i][1]];var matched=null;WORDS.forEach(function(w){if(!found[w.word]&&(w.word===fwd||w.word===rev))matched=w.word;});if(matched){found[matched]=true;foundCount++;selected.forEach(function(s){var k=cellKey(s[0],s[1]);foundCells[k]=true;cellEls[s[0]][s[1]].style.background='#8B0000';cellEls[s[0]][s[1]].style.color='#fff';});var wEl=document.getElementById('ws-w-0314-'+matched);if(wEl){wEl.style.textDecoration='line-through';wEl.style.opacity='0.4';wEl.style.background='transparent';}if(foundCount===WORDS.length){msgEl.textContent='All words found!';msgEl.style.display='block';}return true;}return false;}
+            function onStart(e){e.preventDefault();clearSel();selecting=true;var t=e.target;if(t.dataset.r!==undefined){var r=parseInt(t.dataset.r),c=parseInt(t.dataset.c);selected.push([r,c]);if(!foundCells[cellKey(r,c)]){t.style.background='#d4a574';t.style.color='#1a1a1a';}}}
+            function onMove(e){if(!selecting)return;e.preventDefault();var touch=e.touches?e.touches[0]:e;var el=document.elementFromPoint(touch.clientX,touch.clientY);if(!el||el.dataset.r===undefined)return;var r=parseInt(el.dataset.r),c=parseInt(el.dataset.c);var k=cellKey(r,c);for(var i=0;i<selected.length;i++){if(selected[i][0]===r&&selected[i][1]===c)return;}var tentative=selected.concat([[r,c]]);if(!isLine(tentative))return;selected.push([r,c]);if(!foundCells[k]){el.style.background='#d4a574';el.style.color='#1a1a1a';}}
+            function onEnd(e){if(!selecting)return;selecting=false;if(!checkWord())clearSel();else selected=[];}
+            gridEl.addEventListener('mousedown',onStart);gridEl.addEventListener('mousemove',onMove);document.addEventListener('mouseup',onEnd);gridEl.addEventListener('touchstart',onStart,{passive:false});gridEl.addEventListener('touchmove',onMove,{passive:false});document.addEventListener('touchend',onEnd);
+          })();
+          </script>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- WIRE BRIEFS                                   -->
+        <!-- ============================================ -->
+        <div class="story-wide">
+          <div class="section-label">Wire</div>
+
+          <div class="wire-item">
+            <a href="https://techcrunch.com/2026/03/13/the-biggest-ai-stories-of-the-year-so-far/" target="_blank" rel="noopener">The Biggest AI Stories of the Year (So Far)</a>
+            <span class="wire-source ml-2">TechCrunch · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://techcrunch.com/2026/03/13/the-wild-six-weeks-for-nanoclaws-creator-that-led-to-a-deal-with-docker/" target="_blank" rel="noopener">The Wild Six Weeks for NanoClaw's Creator That Led to a Deal with Docker</a>
+            <span class="wire-source ml-2">TechCrunch · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://404media.co/people-hate-datacenters-survey-finds/" target="_blank" rel="noopener">People Hate Datacenters, Survey Finds</a>
+            <span class="wire-source ml-2">404 Media · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Mar/13/1m-context/" target="_blank" rel="noopener">1M Context Now GA for Opus 4.6 and Sonnet 4.6 (Simon Willison)</a>
+            <span class="wire-source ml-2">Simon Willison · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://www.canirun.ai/" target="_blank" rel="noopener">Can I Run AI Locally?</a>
+            <span class="wire-source ml-2">canirun.ai · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://www.ft.com/content/e5fbc6c2-d5a6-4b97-a105-6a96ea849de5" target="_blank" rel="noopener">Elon Musk Pushes Out More xAI Founders as AI Coding Effort Falters</a>
+            <span class="wire-source ml-2">Financial Times · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html" target="_blank" rel="noopener">Coding After Coders: The End of Programming as We Know It?</a>
+            <span class="wire-source ml-2">NYT Magazine · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://www.getspine.ai/" target="_blank" rel="noopener">Spine Swarm: AI Agents That Collaborate on a Visual Canvas</a>
+            <span class="wire-source ml-2">getspine.ai · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://github.com/Compresr-ai/Context-Gateway" target="_blank" rel="noopener">Context Gateway: Compress Agent Context Before It Hits the LLM</a>
+            <span class="wire-source ml-2">GitHub · Mar 13</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://cra.mr/optimizing-content-for-agents/" target="_blank" rel="noopener">Optimizing Content for Agents</a>
+            <span class="wire-source ml-2">David Cramer · Mar 14</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://huggingface.co/papers/2511.12884" target="_blank" rel="noopener">Agent READMEs: An Empirical Study of Context Files for Agentic Coding</a>
+            <span class="wire-source ml-2">Hugging Face Papers · Mar 14</span>
+          </div>
+
+          <div class="wire-item">
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/wordpress-7-ai-revealed-study.html" data-study-guide>WordPress 7 AI Revealed: Here's What Actually Works</a>
+            <span class="wire-source ml-2">WP Tuts · Mar 10</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Workers using AI tools saw email time jump 104% and messaging time surge 145%, while deep focus work fell 9%. In schools, 57% of teenagers now use AI for information searches, and neuroscientist Jared Cooney Horvath says Gen Z is the first generation less cognitively capable than their parents. The tools that were supposed to make us sharper are, by almost every measure available this week, making us duller.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~8 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-14-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">The Cognitive Decline Story</h4>
+        <ul class="digest-bullets">
+          <li><strong>Brookings Institute: AI risks in education outweigh benefits.</strong> A new study finds 57% of teenagers use AI for information searches and 54% use it for assignments. The core problem is &ldquo;cognitive offloading,&rdquo; where students delegate thinking to machines rather than developing their own capacity. Neuroscientist Jared Cooney Horvath draws a parallel to 1920s &ldquo;teaching machines&rdquo; that promised to revolutionize education and instead created dependency. Google&rsquo;s early-2000s push to put Chromebooks in every classroom now looks like the setup for this moment.</li>
+          <li><strong>Microsoft study links AI use to diminished critical thinking.</strong> The finding reinforces Horvath&rsquo;s argument: the more students offload cognitive tasks, the less they develop the neural pathways required for independent reasoning. This is not a prediction about what might happen; it is measurement of what is already happening.</li>
+          <li><strong>A lawyer warns AI chatbots are now appearing in mass casualty cases.</strong> After years of AI psychosis cases linked to individual suicides, the scale is shifting. The technology, the lawyer argues, is moving faster than any safeguard framework can track.</li>
+        </ul>
+
+        <h4 class="digest-theme">AI Is Straining, Not Saving, the Workplace</h4>
+        <ul class="digest-bullets">
+          <li><strong>ActivTrak study of 10,584 users paints a grim productivity picture.</strong> Email time doubled (+104%), messaging time nearly tripled (+145%), and daily task time climbed between 27% and 346% depending on role. Deep focus work, the kind that produces actual insight, fell 9%. Workers are doing more communicating about work and less actual work.</li>
+          <li><strong>BCG identifies &ldquo;AI brain fry&rdquo; and the &ldquo;three-tool cliff.&rdquo;</strong> Workers using four or more AI tools are measurably less efficient than those using three or fewer. The returns don&rsquo;t just diminish; they reverse. UC Berkeley researchers add that AI-augmented workers are burning out and taking fewer breaks, suggesting the tools create an illusion of momentum that masks exhaustion.</li>
+        </ul>
+
+        <h4 class="digest-theme">Military AI and the Surveillance Question</h4>
+        <ul class="digest-bullets">
+          <li><strong>Palantir channels Anthropic technology to the Department of Defense.</strong> Claude is integrated into classified military systems via Palantir Maven, where it suggests hundreds of targets with coordinates. CEO Alex Karp insists there was &ldquo;never a sense&rdquo; the technology would be used for domestic surveillance, while simultaneously arguing the DoD needs a &ldquo;wide license&rdquo; for counterterrorism operations. Anthropic sued the Pentagon over its &ldquo;supply chain risk&rdquo; designation.</li>
+          <li><strong>Wired reports on Palantir demos showing AI chatbots generating war plans.</strong> The Pentagon inquired about a Venezuelan operation. Meanwhile, Hard Fork&rsquo;s study of AI in warfare documents a pattern of policy reversals: Google, OpenAI, Meta, and Anthropic have all softened their military restrictions over the past year. The historical parallel Hard Fork draws is 1970s &ldquo;Lordstown Syndrome,&rdquo; where autoworkers rebelled against automation they could not control.</li>
+        </ul>
+
+        <h4 class="digest-theme">Economics and Infrastructure</h4>
+        <ul class="digest-bullets">
+          <li><strong>Andrew Yang proposes eliminating income taxes on labor, taxing AI instead.</strong> Income taxes currently generate $2.6 trillion, half of federal revenue. With business leaders predicting AI could raise unemployment to 20%, Yang argues the tax base must shift. Senator Booker suggests exempting the first $75,000; Vinod Khosla proposes $100,000. A &ldquo;task tax&rdquo; on humanoid robot activities is also on the table.</li>
+          <li><strong>Bank of America forecasts 3 billion humanoid robots by 2060.</strong> Investment has surged from $700 million in 2018 to $4.3 billion in 2025. The projection: 90,000 units shipping in 2026, growing to 1.2 million by 2030 at an 86% compound annual growth rate. Chinese units are priced at $35,000, dropping to $17,000. Tesla targets late 2027 for its entry. MIT&rsquo;s Rodney Brooks calls the domestic robot vision &ldquo;pure fantasy thinking.&rdquo;</li>
+          <li><strong>Only 4% of Americans say datacenters benefit the environment.</strong> Pew finds just 6% believe they create jobs and 6% say they improve quality of life. Bernie Sanders calls for a moratorium. Michigan researchers confirm: promised jobs don&rsquo;t materialize. Examples include a $1.2 billion Michigan facility, a $2.4 billion South Carolina project, and the Mississippi xAI datacenter running on gas turbines.</li>
+        </ul>
+
+        <h4 class="digest-theme">Capability and Culture</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic&rsquo;s 1 million token context window goes GA at standard pricing.</strong> No premium tier. $5/$25 for Opus, $3/$15 for Sonnet. Up to 600 images or PDFs per request (from 100). The model scores 78.3% on MRCR v2 accuracy. As Simon Willison notes, competitors charge premium rates above 200,000 to 272,000 tokens; Anthropic&rsquo;s pricing is more predictable and substantially cheaper at scale.</li>
+          <li><strong>xAI is overhauling its AI coding assistant for the second time.</strong> Two Cursor executives have been hired. Internal sources describe the product as &ldquo;not built right the first time.&rdquo; Spielberg, at SXSW, declared he has never used AI in any of his films, supporting AI adoption in other industries but drawing a firm line at creative sectors.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The most important collision in today&rsquo;s issue is between two datasets that should be read side by side. In schools, the Brookings study documents teenagers outsourcing their thinking to AI at alarming rates, with 57% using it for basic information searches. In workplaces, the ActivTrak study of over 10,000 users shows adults doing the same thing, except the consequences show up as email time doubling and deep focus work eroding. The mechanism is identical: cognitive offloading. The difference is that teenagers are losing capacities they haven&rsquo;t yet fully developed, while workers are losing capacities they once had.</p>
+
+        <p>BCG&rsquo;s &ldquo;AI brain fry&rdquo; research adds a crucial finding: there is a hard ceiling. Workers with four or more AI tools perform worse than those with three or fewer. This is not a story about needing better tools or more training. It is a story about human cognitive architecture hitting a wall. The &ldquo;three-tool cliff&rdquo; suggests that the productivity gains from AI are real but bounded, and that pushing past the boundary produces the opposite of what was intended. UC Berkeley&rsquo;s finding that AI-augmented workers take fewer breaks reinforces this: the tools create a sense of velocity that masks the fact that the human doing the work is degrading.</p>
+
+        <p>Layer in the military dimension and the picture darkens further. Claude is on classified networks, suggesting hundreds of targets with coordinates. Palantir&rsquo;s CEO assures us there is &ldquo;never a sense&rdquo; this will be used for domestic surveillance, while lobbying for a &ldquo;wide license&rdquo; on counterterrorism. Every major AI lab has softened its military restrictions in the past year. The technology that is diminishing critical thinking in classrooms and burning out workers in offices is simultaneously being deployed in systems where the stakes are measured in human lives. The common thread across all three domains is the same: the speed of deployment has outrun the capacity of the humans in the loop to meaningfully oversee what the tools are doing.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The cognitive offloading research pipeline.</strong> The Brookings and Microsoft studies both point toward a measurable decline in critical thinking linked to AI use. If additional longitudinal studies confirm the pattern, expect policy responses targeting AI in K-12 education by fall 2026. The 54% assignment-use figure among teenagers is the number that will drive that conversation.</li>
+          <li><strong>The three-tool cliff in enterprise adoption.</strong> BCG&rsquo;s finding that four-plus AI tools reduce efficiency has direct implications for every company stacking copilots, chatbots, and agent frameworks. Watch for enterprises consolidating their AI tool suites rather than expanding them, a reversal of the current trend.</li>
+          <li><strong>Anthropic vs. the Pentagon.</strong> The lawsuit over the &ldquo;supply chain risk&rdquo; designation remains the highest-stakes AI governance case in progress. Whether AI companies can maintain safety guardrails against government pressure will be decided here, not in congressional hearings.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" data-study-guide>How the U.S. Military Is Using A.I. to Wage War</a> &mdash; Hard Fork&rsquo;s investigation into Claude on classified networks via Palantir Maven, BCG&rsquo;s &ldquo;AI brain fry&rdquo; research documenting the three-tool cliff where 14% of workers experience cognitive strain, and the policy reversal pattern across Google, OpenAI, Meta, and Anthropic on military contracts.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/one-simple-system-ai-memory-study.html" data-study-guide>One Simple System Gave All My AI Tools a Memory</a> &mdash; Nate B. Jones&rsquo;s &ldquo;Open Brain&rdquo; architecture using Supabase and MCP, the &ldquo;two-door&rdquo; pattern of machine-readable and human-readable interfaces sharing a single database, and the &ldquo;AI Flywheel Effect&rdquo; where every model improvement enhances the entire system.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/only-ai-skill-you-need-study.html" data-study-guide>This Is the ONLY AI Skill You Need</a> &mdash; Wes Roth argues &ldquo;AI-Assisted Execution&rdquo; is the defining skill, demonstrating the &ldquo;UI Collapse&rdquo; where many tools converge into one conversational interface. Includes an agent that scraped YouTube data via API through Telegram and a health coaching case that identified an MTHFR mutation.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/wordpress-7-ai-revealed-study.html" data-study-guide>WordPress 7 AI Revealed: Here&rsquo;s What Actually Works</a> &mdash; Centralized AI connectors in WordPress core, with alt text generation as the single most useful feature. Paul C&rsquo;s assessment: the tools produce &ldquo;useful starting points rather than finished tools,&rdquo; and Review Notes flags issues but lacks suggested fixes.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;background:#8B0000;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;padding:0.6rem 1.2rem;border:none;border-radius:999px;cursor:pointer;box-shadow:0 4px 16px rgba(139,0,0,0.35);transition:background 0.2s ease,transform 0.15s ease,box-shadow 0.2s ease;}
+    .digest-cta:hover{background:#a00000;transform:translateY(-1px);box-shadow:0 6px 20px rgba(139,0,0,0.45);}
+    .digest-cta.hidden{display:none;}
+    .digest-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);backdrop-filter:blur(2px);justify-content:center;align-items:center;padding:1.5rem;}
+    .digest-overlay.active{display:flex;}
+    .digest-container{background:#fff;border-radius:6px;width:100%;max-width:700px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.4);}
+    .digest-header{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border-bottom:1px solid #e5e7eb;background:#fafafa;flex-shrink:0;}
+    .digest-header-label{font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#8B0000;}
+    .digest-close{font-size:1.5rem;line-height:1;background:none;border:none;color:#6b7280;cursor:pointer;padding:0 0.25rem;}
+    .digest-close:hover{color:#1a1a1a;}
+    .digest-body{padding:2rem 2.5rem;overflow-y:auto;flex:1;}
+    .digest-hook{font-family:'Source Serif 4',Georgia,serif;font-size:1.1rem;line-height:1.75;color:#1a1a1a;font-weight:600;font-style:italic;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid #8B0000;}
+    .digest-section-head{font-family:'Inter',system-ui,sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.25em;color:#8B0000;margin-top:2rem;margin-bottom:1rem;padding-bottom:0.4rem;border-bottom:1px solid #e5e7eb;}
+    .digest-theme{font-family:'Inter',system-ui,sans-serif;font-size:0.75rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:0.08em;margin-top:1.25rem;margin-bottom:0.5rem;}
+    .digest-body p{font-family:'Source Serif 4',Georgia,serif;font-size:0.95rem;line-height:1.75;color:#374151;margin-bottom:1em;}
+    .digest-bullets{list-style:none;padding:0;margin:0 0 0.75rem 0;}
+    .digest-bullets li{font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;line-height:1.6;color:#374151;padding:0.35rem 0 0.35rem 1rem;position:relative;}
+    .digest-bullets li::before{content:'—';position:absolute;left:0;color:#8B0000;font-weight:700;}
+    .digest-bullets li strong{color:#1a1a1a;}
+    .digest-bullets li a{color:#8B0000;text-decoration:none;font-weight:600;}
+    .digest-bullets li a:hover{text-decoration:underline;}
+    @media(max-width:640px){.digest-body{padding:1.25rem 1rem;}.digest-cta{bottom:1rem;right:1rem;font-size:0.6rem;padding:0.5rem 1rem;}}
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px;}.digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem;}.digest-podcast-icon{font-size:0.65rem;}.digest-podcast-duration{margin-left:auto;color:#999;font-weight:400;}.digest-podcast-audio{width:100%;height:36px;}
+    @media print{.digest-cta,.digest-overlay,.digest-podcast{display:none !important;}}
+  </style>
+  <script>
+  (function(){
+    var cta=document.getElementById('digest-cta');var overlay=document.getElementById('digest-modal');var closeBtn=document.getElementById('digest-close');
+    function openDigest(){overlay.classList.add('active');overlay.setAttribute('aria-hidden','false');cta.classList.add('hidden');document.body.style.overflow='hidden';}
+    function closeDigest(){overlay.classList.remove('active');overlay.setAttribute('aria-hidden','true');cta.classList.remove('hidden');document.body.style.overflow='';}
+    cta.addEventListener('click',openDigest);closeBtn.addEventListener('click',closeDigest);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)closeDigest();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('active'))closeDigest();});
+  })();
+  </script>
+
+</body>
+</html>
