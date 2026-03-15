@@ -174,7 +174,7 @@
     .masonry-flow {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
     }
     @media (min-width: 768px) {
       .masonry-flow {
@@ -427,34 +427,35 @@
           <p class="font-serif text-sm text-gray-600 leading-relaxed">Elon Musk's xAI revamps its AI coding tool initiative, bringing on two executives from Cursor.</p>
         </div>
 
-        <!-- Row 3: Hard Fork study guide span-2 + Spielberg -->
+        <!-- Row 3: Hard Fork (wide, side-by-side with thumbnail + text) -->
 
         <!-- Hard Fork Study Guide -->
-        <div class="story-span-2">
+        <div class="story-wide">
           <div class="kicker">Podcast · AI in Warfare</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
-            <img src="https://img.youtube.com/vi/x4x1ZsUxgm8/maxresdefault.jpg" alt="How the U.S. Military Is Using A.I. to Wage War in Iran" class="w-full aspect-video object-cover mb-3">
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
-          </a>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">How the U.S. Military Is Using A.I. to Wage War in Iran</h3></a>
-          <p class="byline mb-2">Hard Fork · YouTube · Mar 13</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Hard Fork explores AI in military operations, BCG research on "AI brain fry," and Grammarly's controversy.</p>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+              <img src="https://img.youtube.com/vi/x4x1ZsUxgm8/maxresdefault.jpg" alt="How the U.S. Military Is Using A.I. to Wage War in Iran" class="w-full aspect-video object-cover">
+              <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:8px 0 8px 14px;border-color:transparent transparent transparent #fff;margin-left:2px;"></div></div>
+            </a>
+            <div>
+              <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/us-military-ai-war-iran-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">How the U.S. Military Is Using A.I. to Wage War in Iran</h3></a>
+              <p class="byline mb-2">Hard Fork · YouTube · Mar 13</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">Hard Fork explores AI in military operations, BCG research on "AI brain fry," and Grammarly's controversy.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Spielberg -->
+        <!-- Row 4: Three columns. Spielberg + Palantir stacked, Yang, AI workloads + Humanoid robots stacked -->
+
+        <!-- Spielberg + Palantir/Karp stacked -->
         <div class="story-item">
           <div class="kicker">Culture</div>
           <a href="https://techcrunch.com/2026/03/13/steven-spielberg-says-hes-never-used-ai-in-any-of-his-films/" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Spielberg Says He's 'Never Used AI' in Any of His Films</h3>
           </a>
           <p class="byline mb-2">TechCrunch · Mar 13</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">At SXSW, Spielberg argues AI should not replace creative professionals in film.</p>
-        </div>
-
-        <!-- Row 4: Palantir/Karp, Yang economy, AI workloads -->
-
-        <!-- Palantir CEO -->
-        <div class="story-item">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">At SXSW, Spielberg argues AI should not replace creative professionals in film.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1rem;">
           <div class="kicker">AI Policy</div>
           <a href="https://fortune.com/2026/03/13/palantir-ceo-alex-karp-interview-anthropic-pentagon-never-a-sense-ai-used-for-domestic-surveillance/" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Palantir CEO Karp: 'Never a Sense' AI Would Be Used for Domestic Surveillance</h3>
@@ -463,14 +464,21 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">Palantir CEO addresses the Anthropic-DoD dispute, asserting AI products have not been and will not be used for mass surveillance.</p>
         </div>
 
-        <!-- Andrew Yang -->
+        <!-- Andrew Yang + Humanoid Robots stacked -->
         <div class="story-item">
           <div class="kicker">Economy</div>
           <a href="https://fortune.com/2026/03/13/andrew-yang-income-tax-ai-humanoid-robots-taking-jobs/" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-standard mb-1">Andrew Yang: Stop Taxing Labor, Make AI Foot the Bill</h3>
           </a>
           <p class="byline mb-2">Fortune · Mar 13</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Yang argues the U.S. should eliminate income taxes on workers and instead tax AI companies.</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Yang argues the U.S. should eliminate income taxes on workers and instead tax AI companies.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1rem;">
+          <div class="kicker">AI Markets</div>
+          <a href="https://fortune.com/2026/03/13/bank-of-america-humanoid-robot-forecast-3-billion-2060/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">More People Will Own a Humanoid Robot Than a Car by 2060</h3>
+          </a>
+          <p class="byline mb-2">Fortune · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Bank of America forecasts 3 billion humanoid robots by 2060, surpassing cars.</p>
         </div>
 
         <!-- AI Workloads -->
@@ -480,20 +488,11 @@
             <h3 class="headline-standard mb-1">AI Promised Supreme Productivity. It's Actually Straining Workloads.</h3>
           </a>
           <p class="byline mb-2">Fortune · Mar 13</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2261932069-e1773413012557.jpg" alt="AI workloads straining employees" class="w-full aspect-[16/9] object-cover mb-3">
           <p class="font-serif text-sm text-gray-500 leading-relaxed">Workers using AI tools spend up to 346% more time on tasks, with email time doubling and deep focus work declining by 9%.</p>
         </div>
 
-        <!-- Row 5: Humanoid robots span-2 + Word Search -->
-
-        <!-- Humanoid Robots -->
-        <div class="story-span-2">
-          <div class="kicker">AI Markets</div>
-          <a href="https://fortune.com/2026/03/13/bank-of-america-humanoid-robot-forecast-3-billion-2060/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-feature mb-2">More People Will Own a Humanoid Robot Than a Car by 2060</h3>
-          </a>
-          <p class="byline mb-2">Fortune · Mar 13</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">Bank of America forecasts 3 billion humanoid robots by 2060, surpassing cars.</p>
-        </div>
+        <!-- Row 5: Word Search + 2 promoted wire stories -->
 
         <!-- Word Search Puzzle -->
         <div class="story-item">
@@ -544,6 +543,26 @@
           </script>
         </div>
 
+        <!-- Promoted: Coding After Coders -->
+        <div class="story-item">
+          <div class="kicker">Future of Work</div>
+          <a href="https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Coding After Coders: The End of Programming as We Know It?</h3>
+          </a>
+          <p class="byline mb-2">NYT Magazine · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">The New York Times examines how AI coding assistants like Claude and ChatGPT are reshaping the programming profession and what comes next.</p>
+        </div>
+
+        <!-- Promoted: People Hate Datacenters -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure</div>
+          <a href="https://404media.co/people-hate-datacenters-survey-finds/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">People Hate Datacenters, Survey Finds</h3>
+          </a>
+          <p class="byline mb-2">404 Media · Mar 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Pew survey: only 4% say datacenters benefit the environment, 6% think they create jobs. Senator Sanders calls for a construction moratorium.</p>
+        </div>
+
         <!-- ============================================ -->
         <!-- WIRE BRIEFS                                   -->
         <!-- ============================================ -->
@@ -561,11 +580,6 @@
           </div>
 
           <div class="wire-item">
-            <a href="https://404media.co/people-hate-datacenters-survey-finds/" target="_blank" rel="noopener">People Hate Datacenters, Survey Finds</a>
-            <span class="wire-source ml-2">404 Media · Mar 13</span>
-          </div>
-
-          <div class="wire-item">
             <a href="https://simonwillison.net/2026/Mar/13/1m-context/" target="_blank" rel="noopener">1M Context Now GA for Opus 4.6 and Sonnet 4.6 (Simon Willison)</a>
             <span class="wire-source ml-2">Simon Willison · Mar 13</span>
           </div>
@@ -578,11 +592,6 @@
           <div class="wire-item">
             <a href="https://www.ft.com/content/e5fbc6c2-d5a6-4b97-a105-6a96ea849de5" target="_blank" rel="noopener">Elon Musk Pushes Out More xAI Founders as AI Coding Effort Falters</a>
             <span class="wire-source ml-2">Financial Times · Mar 13</span>
-          </div>
-
-          <div class="wire-item">
-            <a href="https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html" target="_blank" rel="noopener">Coding After Coders: The End of Programming as We Know It?</a>
-            <span class="wire-source ml-2">NYT Magazine · Mar 13</span>
           </div>
 
           <div class="wire-item">
