@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 15, 2026</title>
+  <meta name="description" content="Daily AI news roundup, March 15, 2026. Meta considers layoffs affecting 20% of the company, US withdraws AI chip export rule, 75% of resumes never reach a human, gamers' AI nightmares come true, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 10">
+  <meta property="og:description" content="Daily AI news roundup, March 15, 2026. Meta considers layoffs affecting 20% of the company, US withdraws AI chip export rule, 75% of resumes never reach a human, gamers' AI nightmares come true, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Sunday, March 15, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 10</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Technology &middot; Layoffs</div>
+          <a href="https://techcrunch.com/2026/03/14/meta-reportedly-considering-layoffs-that-could-affect-20-of-the-company/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Meta Reportedly Considering Layoffs That Could Affect 20% of the Company</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; Mar 14</p>
+          <img src="https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2195497483.jpg" alt="Meta headquarters" class="w-full aspect-[16/9] object-cover mb-3">
+          <div class="newspaper-body">
+            <p>Facebook's parent company may implement significant workforce reductions affecting approximately one-fifth of employees, potentially helping offset its aggressive spending on AI infrastructure, acquisitions, and hiring.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">AI Policy &middot; Trade</div>
+          <a href="https://www.bloomberg.com/news/articles/2026-03-14/us-withdraws-draft-rule-that-called-for-global-ai-chip-permits" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">US Withdraws Draft Rule That Called for Global AI Chip Permits</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg &middot; Mar 14</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">The US government has withdrawn a proposed rule that would have required global permits for AI chip exports, signaling a shift in the administration's approach to AI hardware trade controls.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1rem;">
+          <div class="kicker">Economy &middot; AI Hiring</div>
+          <a href="https://fortune.com/2026/03/15/ai-hiring-labor-market-workers-career-strategy/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">75% of Resumes Never Reach a Human: The New Rules of Job Searching in the AI Era</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 15</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI is reshaping hiring processes and labor markets, with AI-filtered applications and digital professional avatars redefining how workers must approach career strategy.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Row 1: Two study guides + Physical AI feature -->
+
+        <!-- Feature: AI Productivity Study Guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Future of Work</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ai-made-every-company-10x-more-productive-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/u-giatW9mYU/maxresdefault.jpg" alt="AI Made Every Company 10x More Productive" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ai-made-every-company-10x-more-productive-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">AI Made Every Company 10x More Productive. The Ones Cutting Headcount Are Telling on Themselves.</h3></a>
+          <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; Mar 14</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Companies using AI productivity gains to cut headcount are making a strategic mistake. The real value lies in expanding ambition, not reducing costs.</p>
+        </div>
+
+        <!-- Feature: 1M Context Study Guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Claude Code</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/did-claudes-1m-context-window-defeat-context-rot-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/dk0QMbsdV8s/maxresdefault.jpg" alt="Did Claude's 1M Context Window Defeat Context Rot?" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/did-claudes-1m-context-window-defeat-context-rot-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">Did Claude's 1M Context Window Defeat Context Rot?</h3></a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Mar 14</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Testing whether Anthropic's new 1M token context window for Opus 4.6 and Sonnet 4.6 actually solves the context rot problem in long coding sessions.</p>
+        </div>
+
+        <!-- Feature: Physical AI -->
+        <div class="story-item">
+          <div class="kicker">Technology &middot; Physical AI</div>
+          <a href="https://fortune.com/2026/03/14/beyond-chatbots-physical-ai-factory-warehouse/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">The U.S. Is Winning the AI Chatbot War, and Losing the One That Actually Matters</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 14</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/vivek.png" alt="Physical AI" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">While America dominates in large language models and chatbots, the nation is falling behind in physical AI systems that can manipulate the real world in warehouses, factories, and logistics.</p>
+        </div>
+
+        <!-- Row 2: Cartoon span-2 + Gamers story -->
+
+        <!-- Cartoon + Iran Disinformation -->
+        <div class="story-span-2">
+          <div class="kicker">AI Policy &middot; Disinformation</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-15-cartoon.png" alt="New Yorker style cartoon about Meta layoffs" class="w-full" style="display: block;">
+              <p class="font-serif text-xs text-gray-400 mt-2 italic">"Good news, Jenkins -- in the metaverse, you still work here."</p>
+            </div>
+            <div>
+              <a href="https://www.nytimes.com/interactive/2026/03/14/business/media/iran-disinfo-artificial-intelligence.html" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Iran's AI-Powered Disinformation Campaign</h3>
+              </a>
+              <p class="byline mb-2">The New York Times &middot; Mar 14</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">An investigation into how Iran is leveraging artificial intelligence to scale disinformation operations targeting media and public discourse.</p>
+              <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1rem;">
+              <div class="kicker">Culture &middot; Gaming</div>
+              <a href="https://www.wired.com/story/gamers-ai-nightmares-are-coming-true/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">Gamers' AI Nightmares Are Coming True</h3>
+              </a>
+              <p class="byline mb-2">Wired &middot; Mar 15</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">Gamers long feared AI would be used to cut corners in game development. Recent trends in AI-generated content across the industry are confirming those concerns.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- OpenClaw China Boom -->
+        <div class="story-item">
+          <div class="kicker">Technology &middot; China AI</div>
+          <a href="https://fortune.com/2026/03/14/openclaw-china-ai-agent-boom-open-source-lobster-craze-minimax-qwen/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">'Raise a Lobster': How OpenClaw Is the Latest Craze Transforming China's AI Sector</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 14</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2265479525-e1773409501531.jpg" alt="OpenClaw AI agents in China" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Chinese companies are rapidly adopting OpenClaw, an open-source AI agent framework, creating a viral phenomenon aligned with China's embrace of open-source AI strategy.</p>
+        </div>
+
+        <!-- Row 3: Wide - OpenClaw Research (side-by-side) -->
+
+        <!-- OpenClaw wide story -->
+        <div class="story-wide">
+          <div class="kicker">AI Research &middot; China AI</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <div>
+              <a href="https://the-decoder.com/openclaw-rl-trains-ai-agents-simply-by-talking-converting-every-reply-into-a-training-signal/" target="_blank" rel="noopener" class="story-link">
+                <img src="https://the-decoder.com/wp-content/uploads/2026/03/openclaw-rl-agentic-feedback-flow-nano-banana-pro.jpg" alt="OpenClaw-RL" class="w-full aspect-video object-cover">
+              </a>
+            </div>
+            <div>
+              <a href="https://the-decoder.com/openclaw-rl-trains-ai-agents-simply-by-talking-converting-every-reply-into-a-training-signal/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">OpenClaw-RL Trains AI Agents Simply by Talking, Converting Every Reply into a Training Signal</h3>
+              </a>
+              <p class="byline mb-2">The Decoder &middot; Mar 15</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Princeton researchers developed OpenClaw-RL, a framework that converts feedback from conversations, terminal commands, and tool calls into direct training material for AI agents, achieving notable improvements after just a few dozen interactions.</p>
+              <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1rem;">
+              <div class="kicker">Also &middot; China AI</div>
+              <a href="https://the-decoder.com/china-pushes-openclaw-one-person-companies-with-millions-in-ai-agent-subsidies/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-standard mb-1">China Pushes OpenClaw 'One-Person Companies' with Millions in AI Agent Subsidies</h3>
+              </a>
+              <p class="byline mb-2">The Decoder &middot; Mar 14</p>
+              <p class="font-serif text-sm text-gray-500 leading-relaxed">At least seven Chinese local governments have launched million-dollar funding programs for OpenClaw projects to support single founders operating businesses with AI agents as employees.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Three text stories -->
+
+        <!-- New Turing Test -->
+        <div class="story-item">
+          <div class="kicker">AI Philosophy</div>
+          <a href="https://fortune.com/2026/03/14/motlbook-turing-test-agi-world-model-sentience/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">We Need a New Turing Test, and Moltbook Just Proved It</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 14</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Moltbook's emergence as a social network for AI agents demonstrates the need to evaluate whether systems can develop genuine world models, beyond the traditional Turing test.</p>
+        </div>
+
+        <!-- MCP is Dead, Long Live MCP -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools</div>
+          <a href="https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">MCP Is Dead; Long Live MCP!</h3>
+          </a>
+          <p class="byline mb-2">Charles Chen &middot; Mar 14</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">While CLIs have merit for certain use cases, MCP remains essential for enterprise-scale agentic engineering with superior telemetry, security, and content delivery capabilities.</p>
+        </div>
+
+        <!-- Codewall AI Hacked Recruiter -->
+        <div class="story-item">
+          <div class="kicker">AI Security</div>
+          <a href="https://the-decoder.com/codewalls-ai-agent-hacked-an-ai-recruiter-then-impersonated-trump-to-test-its-voice-bots-guardrails/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">AI Agent Hacked an AI Recruiter, Then Impersonated Trump to Test Its Guardrails</h3>
+          </a>
+          <p class="byline mb-2">The Decoder &middot; Mar 15</p>
+          <img src="https://the-decoder.com/wp-content/uploads/2026/03/CodeWall-Jack-Jill-AI-Hack.jpg" alt="Codewall AI hack" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Cybersecurity startup Codewall claims its autonomous AI agent exploited four vulnerabilities in London-based recruiting platform Jack &amp; Jill to gain complete admin access within an hour.</p>
+        </div>
+
+        <!-- Row 5: Cryptogram puzzle + Spotify + Farm Bill -->
+
+        <!-- Cryptogram Puzzle -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
+          <div class='puzzle-cryptogram' style="font-family: 'Inter', Arial, sans-serif; max-width: 300px; padding: 16px; border: 1px solid #d4d4d4; background: #fafaf8;">
+            <p style="font-size: 10px; color: #555; margin: 0 0 14px 0; line-height: 1.4;">Each letter stands for another. Starter letters are filled in. Can you crack the cipher?</p>
+            <div id="cryptogram-grid" style="margin-bottom: 16px;"></div>
+            <button id="cryptogram-reveal-btn" onclick="revealCryptogram()" style="display: block; width: 100%; padding: 8px 0; font-family: 'Inter', Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; background: #1a1a1a; color: #fafaf8; border: none; cursor: pointer;">Reveal Answer</button>
+            <div id="cryptogram-answer" style="display: none; margin-top: 14px; padding-top: 12px; border-top: 1px solid #d4d4d4;">
+              <p style="font-size: 13px; color: #1a1a1a; margin: 0; line-height: 1.6; font-style: italic;">"The best way to predict the future is to build the agent that creates it."</p>
+              <p style="font-size: 11px; color: #8B0000; margin: 6px 0 0 0; text-align: right;">-- Anonymous</p>
+            </div>
+            <script>
+            (function() {
+              var plain  = 'THE BEST WAY TO PREDICT THE FUTURE IS TO BUILD THE AGENT THAT CREATES IT';
+              var cipher = {A:'Z',B:'Q',C:'X',D:'V',E:'W',F:'J',G:'K',H:'Y',I:'L',J:'F',K:'G',L:'N',M:'P',N:'M',O:'R',P:'S',Q:'D',R:'C',S:'H',T:'U',U:'I',V:'B',W:'A',X:'O',Y:'E',Z:'T'};
+              var encoded = '';
+              for (var i = 0; i < plain.length; i++) {
+                var ch = plain[i];
+                encoded += (ch >= 'A' && ch <= 'Z') ? cipher[ch] : ch;
+              }
+              var starters = {E:'T', W:'E', U:'T'};
+              var grid = document.getElementById('cryptogram-grid');
+              var words = encoded.split(' ');
+              var plainWords = plain.split(' ');
+              var html = '';
+              for (var w = 0; w < words.length; w++) {
+                html += '<div style="display: inline-block; margin: 0 6px 10px 0;">';
+                for (var c = 0; c < words[w].length; c++) {
+                  var enc = words[w][c];
+                  var orig = plainWords[w][c];
+                  var isStarter = starters[enc] !== undefined;
+                  html += '<div style="display: inline-block; text-align: center; width: 18px; margin: 0 1px;">';
+                  html += '<div style="font-size: 14px; font-weight: 700; color: #1a1a1a; line-height: 1.2;">' + enc + '</div>';
+                  if (isStarter) {
+                    html += '<div style="font-size: 12px; color: #8B0000; font-weight: 600; border-bottom: 1.5px solid #8B0000; line-height: 1.4;">' + starters[enc] + '</div>';
+                  } else {
+                    html += '<div style="font-size: 12px; color: #1a1a1a; border-bottom: 1.5px solid #1a1a1a; line-height: 1.4;">&nbsp;</div>';
+                  }
+                  html += '</div>';
+                }
+                html += '</div>';
+              }
+              grid.innerHTML = html;
+            })();
+            function revealCryptogram() {
+              document.getElementById('cryptogram-answer').style.display = 'block';
+              document.getElementById('cryptogram-reveal-btn').style.display = 'none';
+            }
+            </script>
+          </div>
+        </div>
+
+        <!-- Spotify AI DJ -->
+        <div class="story-item">
+          <div class="kicker">Culture &middot; Opinion</div>
+          <a href="https://www.charlespetzold.com/blog/2026/02/The-Appalling-Stupidity-of-Spotifys-AI-DJ.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The Appalling Stupidity of Spotify's AI DJ</h3>
+          </a>
+          <p class="byline mb-2">Charles Petzold &middot; Feb 26</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Petzold critiques Spotify's AI DJ for failing to understand classical music structure, showing it cannot properly play multi-movement symphonies in order despite explicit requests.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1rem;">
+          <div class="kicker">AI Policy &middot; Agriculture</div>
+          <a href="https://fortune.com/2026/03/14/farm-bill-2026-big-tech-ai-precision-agriculture-eqip-subsidy/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The 2026 Farm Bill Quietly Hands Big Tech Control Over American Farmland</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 14</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">The bill reimburses farmers 90% for adopting AI and precision agriculture tech, but standards are set by the private sector rather than the USDA.</p>
+        </div>
+
+        <!-- Top 100 AI List -->
+        <div class="story-item">
+          <div class="kicker">AI Markets</div>
+          <a href="https://the-decoder.com/new-top-100-ai-list-shows-a-market-where-chatgpt-leads-but-no-one-is-loyal/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Top 100 AI List Shows a Maturing Market Where ChatGPT Leads but Users Are Shopping Around</h3>
+          </a>
+          <p class="byline mb-2">The Decoder &middot; Mar 14</p>
+          <img src="https://the-decoder.com/wp-content/uploads/2026/03/a16z-top-100-consumer-apps-teaser.jpg" alt="Top 100 AI apps" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Andreessen Horowitz's latest Top 100 ranking shows ChatGPT maintaining dominance while competitors grow rapidly. The market is fragmenting geographically, with users increasingly switching between multiple AI assistants.</p>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- WIRE BRIEFS                                   -->
+        <!-- ============================================ -->
+        <div class="story-wide">
+          <div class="section-label">Wire</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+            <div>
+              <div class="wire-item">
+                <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.76" target="_blank" rel="noopener">Claude Code v2.1.76: MCP Elicitation, Response Hooks, Session Names</a>
+                <span class="wire-source ml-2">GitHub &middot; Mar 14</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://simonwillison.net/2026/Mar/14/pragmatic-summit/" target="_blank" rel="noopener">Simon Willison's Fireside Chat on Agentic Engineering at Pragmatic Summit</a>
+                <span class="wire-source ml-2">Simon Willison &middot; Mar 14</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://simonwillison.net/2026/Mar/14/jannis-leidel/" target="_blank" rel="noopener">AI Spam PRs Force Jazzband to Sunset Open Membership</a>
+                <span class="wire-source ml-2">Simon Willison &middot; Mar 14</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://the-decoder.com/ai-spam-websites-flood-the-web-with-false-information-and-the-number-is-growing-fast/" target="_blank" rel="noopener">AI Spam Websites Flood the Web with False Information</a>
+                <span class="wire-source ml-2">The Decoder &middot; Mar 14</span>
+              </div>
+            </div>
+            <div>
+              <div class="wire-item">
+                <a href="https://the-decoder.com/hollywood-copyright-complaints-force-bytedance-to-shelve-global-launch-of-ai-video-generator-seedance-2-0/" target="_blank" rel="noopener">Hollywood Forces ByteDance to Shelve Seedance 2.0 Launch</a>
+                <span class="wire-source ml-2">The Decoder &middot; Mar 15</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://the-decoder.com/ai2-releases-new-robotics-models-trained-entirely-in-simulation-to-skip-real-world-data-collection/" target="_blank" rel="noopener">Ai2 Releases Robotics Models Trained Entirely in Simulation</a>
+                <span class="wire-source ml-2">The Decoder &middot; Mar 14</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://fortune.com/2026/03/15/ai-hiring-labor-market-workers-career-strategy/" target="_blank" rel="noopener">AI Reshapes Hiring: Digital Avatars and AI Literacy as Career Strategy</a>
+                <span class="wire-source ml-2">Fortune &middot; Mar 15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Meta is reportedly weighing layoffs that could hit 20% of the company to offset AI infrastructure spending, while Nate B. Jones argues that companies using AI productivity gains to cut headcount are &ldquo;telling on themselves&rdquo; because the real opportunity is a 10x expansion in ambition. One company is spending billions to build the AI, then firing the humans. The other says the humans were always the point. This tension runs through every story in today&rsquo;s issue.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~8 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-15-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">The Workforce Paradox</h4>
+        <ul class="digest-bullets">
+          <li><strong>Meta may cut one-fifth of its workforce while doubling down on AI investment.</strong> The layoffs would ostensibly help offset aggressive capital allocation toward AI infrastructure, acquisitions, and talent recruitment. The framing is telling: headcount reduction is positioned as the fiscal counterbalance to AI spending, not as a strategic reimagining of what the company could build with more capable tools.</li>
+          <li><strong>75% of resumes never reach a human reviewer.</strong> Fortune reports that the post-COVID labor bubble burst in 2025 with 1.17 million U.S. jobs cut. Only 2% of AI investments deliver transformational value, per Gartner. McKinsey reports a sevenfold rise in AI fluency requirements among applicants over two years. &ldquo;AI personas&rdquo; and digital twins are now replacing initial screening, with engineer Charlie Cheng&rsquo;s functional digital twin meeting recruiters before he does.</li>
+          <li><strong>The counter-argument: AI&rsquo;s real value is expanding ambition, not reducing headcount.</strong> Nate B. Jones grounds his case in Jevons&rsquo; Paradox: when efficiency increases, total resource consumption historically rises. He cites WHOOP as a case study, noting it nearly doubled its workforce to 1,400 people while investing heavily in AI. Cursor&rsquo;s February 2026 update now runs up to 20 parallel cloud agents, and one-third of Cursor&rsquo;s own PRs are written autonomously. The builder pool, Jones argues, is expanding from 35-40 million developers to hundreds of millions.</li>
+        </ul>
+
+        <h4 class="digest-theme">China&rsquo;s OpenClaw Boom</h4>
+        <ul class="digest-bullets">
+          <li><strong>Nearly 1,000 people lined up at Tencent headquarters for OpenClaw installation help.</strong> Chinese AI models surpassed U.S. models in token share among OpenRouter&rsquo;s top nine for the first time in early February. Alibaba&rsquo;s Qwen has been downloaded over 1 billion times by 200,000+ developers, and MiniMax reported 2025 revenue of $79 million (159% increase) against a $1.8 billion net loss.</li>
+          <li><strong>At least seven Chinese local governments are subsidizing AI &ldquo;one-person companies.&rdquo;</strong> Hefei and Shenzhen each offer up to $1.4 million for housing, offices, and computing power. Princeton researchers separately developed OpenClaw-RL, a framework that converts feedback from conversations into direct training material, improving personal agent scores from 0.17 to 0.76 after just eight training steps.</li>
+        </ul>
+
+        <h4 class="digest-theme">AI Security and the Spam Crisis</h4>
+        <ul class="digest-bullets">
+          <li><strong>Codewall&rsquo;s autonomous AI agent compromised an AI recruiting platform in one hour.</strong> It chained four vulnerabilities into a complete organizational takeover of Jack &amp; Jill (CVSS severity: 9.8), then independently tested voice infrastructure by impersonating Donald Trump claiming a $500 million acquisition. The AI assistant responded &ldquo;Mr. President&rdquo; without questioning the premise. Codewall previously compromised McKinsey&rsquo;s &ldquo;Lilli&rdquo; platform in two hours, exposing 46.5 million chat messages.</li>
+          <li><strong>NewsGuard has identified 3,006 AI content farms, with 300-500 new ones appearing monthly.</strong> Over a two-month period, 141 well-known brands unknowingly ran ads on these sites, including Expedia and AT&amp;T. Some 358 sites are linked to Storm-1516, a pro-Russian influence operation. Meanwhile, Jazzband is sunsetting its open-membership model because GitHub&rsquo;s &ldquo;slopocalypse&rdquo; of AI-generated spam PRs has made shared push access untenable. Only 1 in 10 AI-generated pull requests meet project standards.</li>
+        </ul>
+
+        <h4 class="digest-theme">Physical AI, Robots, and Policy</h4>
+        <ul class="digest-bullets">
+          <li><strong>The U.S. is winning the chatbot war and losing the one that matters.</strong> Vivek Ranadive argues that language models trained on text lack practical application to the physical world and that purpose-built machines should replace paradigms, not imitate human form. He cites Ambi Robotics, GrayMatter Robotics, and Stack AV as examples of where real economic value lies.</li>
+          <li><strong>Ai2 released robotics models trained entirely in simulation.</strong> MolmoBot handles object manipulation, drawer opening, and door operation without any real-world training data. The approach uses &ldquo;zero-shot sim-to-real transfer&rdquo; across 230,000+ indoor scenes and 42 million robotic grasping annotations.</li>
+          <li><strong>The 2026 Farm Bill reimburses farmers 90% for adopting AI tech, with standards set by the private sector.</strong> That 15-percentage-point premium over the standard EQIP cap is funded through a conservation program now bankrolling data centers that, as the author notes, &ldquo;drain water, cause pollution, and gobble up farmland.&rdquo;</li>
+          <li><strong>The U.S. withdrew its draft rule requiring global AI chip export permits.</strong> Bloomberg reports the reversal signals a shift in the administration&rsquo;s approach to AI hardware trade controls.</li>
+        </ul>
+
+        <h4 class="digest-theme">Markets, Tools, and Culture</h4>
+        <ul class="digest-bullets">
+          <li><strong>ChatGPT&rsquo;s web traffic share fell from 75.7% to 61.7% in one year.</strong> Gemini grew from 5.7% to 24.4%. Claude paying subscribers grew 200%+ year-over-year. About 20% of weekly ChatGPT users also use Gemini. The market is fragmenting geographically: Doubao and Kimi lead in China, Yandex Alice dominates Russia with 71 million MAU.</li>
+          <li><strong>Claude Code v2.1.76 adds MCP elicitation support and fixes critical 1M-context bugs.</strong> Simon Willison&rsquo;s Pragmatic Summit fireside chat declares &ldquo;tests are free now. They&rsquo;re effectively free. Tests are no longer even remotely optional.&rdquo; Charles Chen argues MCP remains essential for enterprise despite the CLI hype cycle, citing centralized security, telemetry, and OAuth as irreplaceable benefits.</li>
+          <li><strong>Hollywood forced ByteDance to shelve Seedance 2.0.</strong> Disney called the AI video generator a &ldquo;virtual smash-and-grab&rdquo; from a &ldquo;pirated library&rdquo; after viral clips included a Brad Pitt/Tom Cruise fistfight and a generated Lord of the Rings short. Spotify&rsquo;s AI DJ, meanwhile, cannot play a symphony&rsquo;s four movements in order, exposing how its entire metadata architecture was built for pop music and is structurally incapable of handling classical composition.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The central question of today&rsquo;s issue is deceptively simple: when AI makes everything cheaper to produce, what do you do with the surplus? Meta&rsquo;s answer is to pocket it by cutting 20% of its workforce. Nate B. Jones&rsquo;s answer is to reinvest it by expanding what&rsquo;s possible. The data points supporting Jones&rsquo;s position are striking: WHOOP nearly doubled its workforce to 1,400 people while investing heavily in AI. Cursor&rsquo;s own codebase is now one-third AI-written. The builder pool is expanding from 35 million developers to hundreds of millions. These are not projections; they are measurements of what is already happening at companies that chose expansion over extraction.</p>
+
+        <p>China appears to have absorbed this lesson at the government level. Seven local governments launched coordinated subsidy programs within days of each other, not to automate away workers but to create an entirely new category: the AI-augmented &ldquo;one-person company.&rdquo; When Hefei offers $1.4 million in support for a single founder operating with AI agents as employees, the bet is not on replacing humans but on multiplying what one human can accomplish. The Princeton research on OpenClaw-RL reinforces this: agents that learn from conversational feedback improve from 0.17 to 0.76 effectiveness in eight training steps. The tools are getting dramatically better at collaboration, not just execution.</p>
+
+        <p>But the issue also surfaces what happens when the cheaper-to-produce surplus is exploited without any corresponding human judgment. NewsGuard&rsquo;s count of 3,006 AI content farms growing by 300-500 monthly is one kind of consequence. Codewall&rsquo;s autonomous agent compromising a recruiting platform in one hour is another. Jazzband shutting down because AI spam PRs have overwhelmed open-source governance is a third. In each case, the common mechanism is the same: AI has made it trivially cheap to produce output that <em>looks</em> legitimate but lacks the human discernment that once served as a natural quality filter. The question of what to do with the surplus is ultimately a question about whether organizations have the judgment to deploy capability responsibly. Meta&rsquo;s reported strategy suggests it does not even perceive the question.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>China&rsquo;s coordinated OpenClaw subsidies as a template.</strong> Seven governments launching nearly identical programs within days suggests central coordination. If the &ldquo;one-person company&rdquo; model produces measurable economic output, expect other nations to adopt similar frameworks. The U.S. has no comparable program for AI-augmented sole proprietors.</li>
+          <li><strong>The AI spam infrastructure reaching a tipping point.</strong> At 300-500 new content farms per month, with 358 already linked to Russian state operations and 141 major brands unknowingly funding them, the contamination of the information ecosystem is accelerating faster than detection capabilities can scale. When open-source governance models collapse under AI spam, the downstream effects on software supply chains are significant.</li>
+          <li><strong>Meta&rsquo;s layoff decision as a sector signal.</strong> If Meta cuts 20% while investing in AI, it sets a precedent for every tech company weighing the same trade-off. Jones&rsquo;s counter-argument, grounded in Jevons&rsquo; Paradox, predicts this approach will backfire. The next two quarters will reveal which thesis holds.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ai-made-every-company-10x-more-productive-study.html" data-study-guide>AI Made Every Company 10x More Productive</a> &mdash; Nate B. Jones&rsquo;s six &ldquo;unlocks&rdquo; available today: iteration cycles compressing from months to days (200 learning cycles yearly), the translation layer dissolving to expand the builder pool, agent-verifiable quality becoming the default, MCP dropping integration costs, previously unviable $10M markets becoming profitable, and organizations that &ldquo;default to code&rdquo; pulling ahead. WHOOP as the case study for expansion over extraction.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/did-claudes-1m-context-window-defeat-context-rot-study.html" data-study-guide>Did Claude&rsquo;s 1M Context Window Defeat Context Rot?</a> &mdash; Opus 4.6 scores 78.3 on the Eight Needle Retrieval Test at 1M tokens versus GPT 5.4 at 36 and Gemini 3.1 at 26. Only a 14% performance drop from 256K to 1M tokens (roughly 2% per 100K tokens). The API multiplier past 200K has been removed, and media support expanded from 100 to 600 images per request.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;background:#8B0000;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;padding:0.6rem 1.2rem;border:none;border-radius:999px;cursor:pointer;box-shadow:0 4px 16px rgba(139,0,0,0.35);transition:background 0.2s ease,transform 0.15s ease,box-shadow 0.2s ease;}
+    .digest-cta:hover{background:#a00000;transform:translateY(-1px);box-shadow:0 6px 20px rgba(139,0,0,0.45);}
+    .digest-cta.hidden{display:none;}
+    .digest-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.7);backdrop-filter:blur(2px);justify-content:center;align-items:center;padding:1.5rem;}
+    .digest-overlay.active{display:flex;}
+    .digest-container{background:#fff;border-radius:6px;width:100%;max-width:700px;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.4);}
+    .digest-header{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.25rem;border-bottom:1px solid #e5e7eb;background:#fafafa;flex-shrink:0;}
+    .digest-header-label{font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#8B0000;}
+    .digest-close{font-size:1.5rem;line-height:1;background:none;border:none;color:#6b7280;cursor:pointer;padding:0 0.25rem;}
+    .digest-close:hover{color:#1a1a1a;}
+    .digest-body{padding:2rem 2.5rem;overflow-y:auto;flex:1;}
+    .digest-hook{font-family:'Source Serif 4',Georgia,serif;font-size:1.1rem;line-height:1.75;color:#1a1a1a;font-weight:600;font-style:italic;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid #8B0000;}
+    .digest-section-head{font-family:'Inter',system-ui,sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.25em;color:#8B0000;margin-top:2rem;margin-bottom:1rem;padding-bottom:0.4rem;border-bottom:1px solid #e5e7eb;}
+    .digest-theme{font-family:'Inter',system-ui,sans-serif;font-size:0.75rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:0.08em;margin-top:1.25rem;margin-bottom:0.5rem;}
+    .digest-body p{font-family:'Source Serif 4',Georgia,serif;font-size:0.95rem;line-height:1.75;color:#374151;margin-bottom:1em;}
+    .digest-bullets{list-style:none;padding:0;margin:0 0 0.75rem 0;}
+    .digest-bullets li{font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;line-height:1.6;color:#374151;padding:0.35rem 0 0.35rem 1rem;position:relative;}
+    .digest-bullets li::before{content:'--';position:absolute;left:0;color:#8B0000;font-weight:700;}
+    .digest-bullets li strong{color:#1a1a1a;}
+    .digest-bullets li a{color:#8B0000;text-decoration:none;font-weight:600;}
+    .digest-bullets li a:hover{text-decoration:underline;}
+    @media(max-width:640px){.digest-body{padding:1.25rem 1rem;}.digest-cta{bottom:1rem;right:1rem;font-size:0.6rem;padding:0.5rem 1rem;}}
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px;}.digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem;}.digest-podcast-icon{font-size:0.65rem;}.digest-podcast-duration{margin-left:auto;color:#999;font-weight:400;}.digest-podcast-audio{width:100%;height:36px;}
+    @media print{.digest-cta,.digest-overlay,.digest-podcast{display:none !important;}}
+  </style>
+  <script>
+  (function(){
+    var cta=document.getElementById('digest-cta');var overlay=document.getElementById('digest-modal');var closeBtn=document.getElementById('digest-close');
+    function openDigest(){overlay.classList.add('active');overlay.setAttribute('aria-hidden','false');cta.classList.add('hidden');document.body.style.overflow='hidden';}
+    function closeDigest(){overlay.classList.remove('active');overlay.setAttribute('aria-hidden','true');cta.classList.remove('hidden');document.body.style.overflow='';}
+    cta.addEventListener('click',openDigest);closeBtn.addEventListener('click',closeDigest);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)closeDigest();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('active'))closeDigest();});
+  })();
+  </script>
+
+</body>
+</html>
