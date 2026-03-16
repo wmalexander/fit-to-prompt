@@ -449,7 +449,7 @@
         </div>
 
         <div class="story-wide">
-          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 items-start">
+          <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 items-start">
             <div>
               <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
               <style>
@@ -471,9 +471,9 @@
 .xw-check:hover{background:#8B0000}
 .xw-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:4px;min-height:1em}
               </style>
-              <div class="xw-wrap" id="xw-mini">
-                <div class="xw-grid" id="xw-grid"></div>
-                <div class="xw-clues">
+              <div class="xw-wrap" id="xw-mini" style="max-width:none;display:grid;grid-template-columns:220px 1fr;grid-template-rows:auto auto;gap:0 1rem;align-items:start;">
+                <div class="xw-grid" id="xw-grid" style="grid-column:1;grid-row:1/3;"></div>
+                <div class="xw-clues" style="grid-column:2;grid-row:1;">
                   <strong>Across</strong>
                   <ol>
                     <li><span class="clue-num">1.</span> What Altman concedes alone won't reach AGI</li>
@@ -486,8 +486,8 @@
                     <li><span class="clue-num">2.</span> What Karpathy "vibe ___" in his labor analysis</li>
                   </ol>
                 </div>
-                <button class="xw-check" onclick="checkXW()">Check</button>
-                <div class="xw-msg" id="xw-msg"></div>
+                <div style="grid-column:2;grid-row:2;"><button class="xw-check" onclick="checkXW()">Check</button>
+                <div class="xw-msg" id="xw-msg"></div></div>
               </div>
               <script>
 (function(){
