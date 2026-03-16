@@ -448,9 +448,11 @@
           <p class="byline mb-2">Julian Goldie Agency &middot; YouTube &middot; Mar 10</p>
         </div>
 
-        <div class="story-item">
-          <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
-          <style>
+        <div class="story-span-2">
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 items-start">
+            <div>
+              <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+              <style>
 .xw-wrap{max-width:300px;font-family:'Inter',system-ui,sans-serif}
 .xw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:0.75rem;max-width:220px}
 .xw-cell{position:relative;aspect-ratio:1;border:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:center}
@@ -468,26 +470,26 @@
 .xw-check{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;background:#1a1a1a;color:#f8f8f8;border:none;padding:4px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:background 0.15s}
 .xw-check:hover{background:#8B0000}
 .xw-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:4px;min-height:1em}
-          </style>
-          <div class="xw-wrap" id="xw-mini">
-            <div class="xw-grid" id="xw-grid"></div>
-            <div class="xw-clues">
-              <strong>Across</strong>
-              <ol>
-                <li><span class="clue-num">1.</span> What Altman concedes alone won't reach AGI</li>
-                <li><span class="clue-num">3.</span> Skilled, like a fine-tuned model</li>
-                <li><span class="clue-num">4.</span> What every model trains on</li>
-              </ol>
-              <strong>Down</strong>
-              <ol>
-                <li><span class="clue-num">1.</span> What an AI does to your input</li>
-                <li><span class="clue-num">2.</span> What Karpathy "vibe ___" in his labor analysis</li>
-              </ol>
-            </div>
-            <button class="xw-check" onclick="checkXW()">Check</button>
-            <div class="xw-msg" id="xw-msg"></div>
-          </div>
-          <script>
+              </style>
+              <div class="xw-wrap" id="xw-mini">
+                <div class="xw-grid" id="xw-grid"></div>
+                <div class="xw-clues">
+                  <strong>Across</strong>
+                  <ol>
+                    <li><span class="clue-num">1.</span> What Altman concedes alone won't reach AGI</li>
+                    <li><span class="clue-num">3.</span> Skilled, like a fine-tuned model</li>
+                    <li><span class="clue-num">4.</span> What every model trains on</li>
+                  </ol>
+                  <strong>Down</strong>
+                  <ol>
+                    <li><span class="clue-num">1.</span> What an AI does to your input</li>
+                    <li><span class="clue-num">2.</span> What Karpathy "vibe ___" in his labor analysis</li>
+                  </ol>
+                </div>
+                <button class="xw-check" onclick="checkXW()">Check</button>
+                <div class="xw-msg" id="xw-msg"></div>
+              </div>
+              <script>
 (function(){
   var A=['S','C','A','L','E','C','O','#','#','#','A','D','E','P','T','N','E','#','#','#','#','D','A','T','A'];
   var N={0:'1',1:'2',10:'3',21:'4'};
@@ -495,21 +497,22 @@
   for(var i=0;i<25;i++){var c=document.createElement('div');c.className='xw-cell'+(A[i]==='#'?' black':'');if(A[i]!=='#'){if(N[i]){var n=document.createElement('span');n.className='xw-num';n.textContent=N[i];c.appendChild(n)}var inp=document.createElement('input');inp.maxLength=1;inp.setAttribute('data-idx',i);inp.addEventListener('input',function(){this.value=this.value.replace(/[^a-zA-Z]/g,'').toUpperCase();if(this.value){var idx=parseInt(this.getAttribute('data-idx'));for(var j=0;j<inputs.length;j++){if(inputs[j].idx>idx){inputs[j].el.focus();break}}}});c.appendChild(inp);inputs.push({idx:i,el:inp,cell:c})}g.appendChild(c)}
   window.checkXW=function(){var ok=true,filled=true;inputs.forEach(function(o){var v=o.el.value.toUpperCase();o.cell.classList.remove('correct','wrong');if(!v){filled=false;return}if(v===A[o.idx])o.cell.classList.add('correct');else{o.cell.classList.add('wrong');ok=false}});var m=document.getElementById('xw-msg');if(!filled)m.textContent='Fill in all squares first.';else if(ok)m.textContent='Solved! You know your AI.';else m.textContent='Some letters are off. Keep going.'};
 })();
-          </script>
+              </script>
+            </div>
+            <div>
+              <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+                <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+                <div class="flex flex-col gap-3">
+                  <input type="email" name="email" placeholder="Your email address" required>
+                  <button type="submit">Subscribe</button>
+                </div>
+                <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+              </form>
+            </div>
+          </div>
         </div>
 
       </div>
-    </section>
-
-    <section class="subscribe-section my-8">
-      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
-        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <input type="email" name="email" placeholder="Your email address" required>
-          <button type="submit">Subscribe</button>
-        </div>
-        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
-      </form>
     </section>
 
     <hr class="rule-double my-6">
