@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 17, 2026</title>
+  <meta name="description" content="Daily AI news roundup, March 17, 2026. CEO uses ChatGPT to void $250M contract and loses in court, NVIDIA GTC unveils new chips, witness caught using AI smartglasses in court, Mistral Small 4 launches, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 12">
+  <meta property="og:description" content="Daily AI news roundup, March 17, 2026. CEO uses ChatGPT to void $250M contract and loses in court, NVIDIA GTC unveils new chips, witness caught using AI smartglasses in court, Mistral Small 4 launches, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Tuesday, March 17, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 12</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Technology &middot; AI in Court</div>
+          <a href="https://www.404media.co/ceo-ignores-lawyers-asks-chatgpt-how-to-void-250-million-contract-loses-terribly-in-court/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">CEO Asks ChatGPT How to Void $250M Contract, Loses Terribly in Court</h2>
+          </a>
+          <p class="byline mb-3">404 Media &middot; Mar 16</p>
+          <div class="newspaper-body">
+            <p>Krafton's CEO consulted ChatGPT to devise a corporate takeover strategy aimed at avoiding a $250 million bonus payment to Unknown Worlds Entertainment. A judge ordered the reinstatement of the studio head after the scheme failed spectacularly in court.</p>
+          </div>
+        </div>
+        <div>
+          <img src="https://www.404media.co/content/images/size/w1200/2026/03/CleanShot-2026-03-16-at-15.39.04@2x.png" alt="CEO Asks ChatGPT How to Void $250M Contract, Loses Terribly in Court" class="w-full aspect-[16/9] object-cover mb-3" style="border-radius:4px;">
+        </div>
+      </div>
+    </section>
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY FLOW -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- NVIDIA GTC -->
+        <div class="story-item">
+          <div class="kicker">Technology &middot; NVIDIA GTC</div>
+          <a href="https://www.nytimes.com/2026/03/16/technology/nvidia-gtc-ai-chips-huang.html?unlocked_article_code=1.T1A.goxB.XKQipzu7h4uf&smid=nytcore-ios-share" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Nvidia GTC: Jensen Huang Unveils Next-Generation AI Chips</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 17</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Coverage of Nvidia's GTC conference, where Jensen Huang unveiled the company's latest AI chip developments and vision for the future of computing and AI infrastructure.</p>
+        </div>
+
+        <!-- xAI Lawsuit -->
+        <div class="story-item">
+          <div class="kicker">AI Safety &middot; Legal</div>
+          <a href="https://techcrunch.com/2026/03/16/elon-musks-xai-faces-child-porn-lawsuit-from-minors-grok-allegedly-undressed/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Elon Musk's xAI Faces Child Porn Lawsuit From Minors Grok Allegedly Undressed</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Mar 16</p>
+          <img src="https://techcrunch.com/wp-content/uploads/2026/03/grok-getty.jpg" alt="xAI Faces Child Porn Lawsuit From Minors Grok Allegedly Undressed" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Three minors have filed a lawsuit against xAI, alleging that the Grok chatbot created sexually explicit deepfakes of their real images without consent.</p>
+        </div>
+
+        <!-- Smartglasses + Warren/Pentagon stacked -->
+        <div class="story-item">
+          <div class="kicker">AI in Court</div>
+          <a href="https://www.404media.co/witness-caught-using-smartglasses-in-court-blames-it-all-on-chatgpt/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Witness Caught Using Smartglasses in Court Blames It All on ChatGPT</h3>
+          </a>
+          <p class="byline mb-2">404 Media &middot; Mar 16</p>
+          <img src="https://www.404media.co/content/images/2026/03/Royal_Court2-1.jpg" alt="Witness Caught Using Smartglasses in Court Blames It All on ChatGPT" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A judge in London dismissed witness testimony after discovering the man was receiving real-time coaching through smartglasses.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:1rem 0;">
+          <div class="kicker">AI Policy &middot; National Security</div>
+          <a href="https://techcrunch.com/2026/03/16/warren-presses-pentagon-over-decision-to-grant-xai-access-to-classified-networks/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Warren Presses Pentagon Over Decision to Grant xAI Access to Classified Networks</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Senator Elizabeth Warren questioned the Pentagon's decision to grant xAI access to classified networks, citing concerns about Grok's harmful outputs and national security risks.</p>
+        </div>
+
+        <!-- Study Guide: Claude Code Wiped 2.5 Years -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; AI Safety</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-wiped-2-5-years-of-data-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/8lwnJZy4cO0/maxresdefault.jpg" alt="Claude Code Wiped 2.5 Years of Data" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-wiped-2-5-years-of-data-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">Claude Code Wiped 2.5 Years of Data</h3></a>
+          <p class="byline mb-2">Nate B Jones &middot; YouTube &middot; Mar 16</p>
+        </div>
+
+        <!-- Cartoon + Subscribe (story-span-2) -->
+        <div class="story-span-2">
+          <div class="kicker">Technology</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-17-cartoon.png" alt="Newsletter cartoon" class="w-full" style="display: block;">
+              <p class="font-serif text-sm text-gray-500 italic mt-2">"I asked ChatGPT how to get out of the contract and it said just stop paying."</p>
+            </div>
+            <div>
+              <div class="kicker">Copyright &middot; Legal</div>
+              <a href="https://techcrunch.com/2026/03/16/merriam-webster-openai-encyclopedia-brittanica-lawsuit/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">The Dictionary Sues OpenAI</h3>
+              </a>
+              <p class="byline mb-2">TechCrunch &middot; Mar 16</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed mb-4">Encyclopedia Britannica and Merriam-Webster have filed a lawsuit against OpenAI, claiming the company violated copyright by using nearly 100,000 articles for LLM training.</p>
+              <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:0.75rem;">
+              <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+                <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <input type="email" name="email" placeholder="Your email address" required>
+                  <button type="submit">Subscribe</button>
+                </div>
+                <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Study Guide: 2000+ Hours Claude Code -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Developer Tools</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ive-used-claude-code-for-2000-hours-heres-how-i-build-anything-with-it-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/nxHKBq5ZU9U/maxresdefault.jpg" alt="I've Used Claude Code for 2,000+ Hours" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ive-used-claude-code-for-2000-hours-heres-how-i-build-anything-with-it-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">I've Used Claude Code for 2,000+ Hours. Here's How I Build Anything With It.</h3></a>
+          <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Mar 16</p>
+        </div>
+
+        <!-- Study Guide: The Library Meta-Skill -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Claude Code</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-library-meta-skill-how-i-distribute-private-skills-agents-and-prompts-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/_vpNQ6IwP9w/maxresdefault.jpg" alt="The Library Meta-Skill" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-library-meta-skill-how-i-distribute-private-skills-agents-and-prompts-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">The Library Meta-Skill: How I Distribute Private Skills, Agents, and Prompts</h3></a>
+          <p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Mar 16</p>
+        </div>
+
+        <!-- Study Guide: NEMOCLAW -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Enterprise AI</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/nemoclaw-nvidia-is-going-all-in-on-openclaw-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/quLuf3PFT2M/maxresdefault.jpg" alt="NEMOCLAW: NVIDIA All In on OpenClaw" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          </a>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/nemoclaw-nvidia-is-going-all-in-on-openclaw-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">NEMOCLAW: NVIDIA Is Going All In on OpenClaw</h3></a>
+          <p class="byline mb-2">Wes Roth &middot; YouTube &middot; Mar 17</p>
+        </div>
+
+        <!-- Standard article stories -->
+        <div class="story-item">
+          <div class="kicker">AI Policy</div>
+          <a href="https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/03/16/white-house-house-gop-prepare-block-state-ai-laws/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">White House Prepares to Block State AI Laws</h3>
+          </a>
+          <p class="byline mb-2">The Washington Post &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">The White House and House Republicans are preparing efforts to preempt state-level AI legislation, seeking to establish federal control over AI regulation.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">Economy &middot; AI Impact</div>
+          <a href="https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Jobs Most Affected by AI Automation</h3>
+          </a>
+          <p class="byline mb-2">The Washington Post &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">An interactive analysis of which jobs are most affected by AI and automation.</p>
+        </div>
+
+        <!-- Stacked study guides (3 in one story-item) -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Claude Code</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/10-minute-masterclass-claude-code-skills-study.html" class="story-link" data-study-guide>
+            <h3 class="headline-standard mb-1">10 Minute Masterclass: Claude Code Skills</h3>
+          </a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Mar 16</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">Video &middot; Web Design</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-nano-banana-just-changed-web-design-study.html" class="story-link" data-study-guide>
+            <h3 class="headline-standard mb-1">Claude Code + Nano Banana Just Changed Web Design</h3>
+          </a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Mar 16</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">Video &middot; Cloud Development</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/your-computer-doesnt-matter-anymore-claude-code-ssh-study.html" class="story-link" data-study-guide>
+            <h3 class="headline-standard mb-1">Your Computer Doesn't Matter Anymore: Claude Code SSH</h3>
+          </a>
+          <p class="byline mb-2">Leon van Zyl &middot; YouTube &middot; Mar 16</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">AI Models</div>
+          <a href="https://mistral.ai/news/mistral-small-4" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Introducing Mistral Small 4</h3>
+          </a>
+          <p class="byline mb-2">Mistral AI &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A unified 119B parameter model combining reasoning, multimodal, and coding capabilities with configurable reasoning effort and Apache 2.0 licensing.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">Enterprise AI &middot; Security</div>
+          <a href="https://techcrunch.com/2026/03/16/nvidias-version-of-openclaw-could-solve-its-biggest-problem-security/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">NVIDIA's NemoClaw Could Solve OpenClaw's Biggest Problem: Security</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Nvidia announced NemoClaw, an open enterprise AI agent platform built on the viral OpenClaw framework, designed to address security concerns.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">Creator Tools</div>
+          <a href="https://techcrunch.com/2026/03/16/picsart-now-allows-creators-to-hire-ai-assistants-through-agent-marketplace/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Picsart Allows Creators to 'Hire' AI Assistants Through Agent Marketplace</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Picsart has launched an AI agent marketplace enabling creators to access specialized AI assistants.</p>
+        </div>
+
+        <div class="story-item">
+          <div class="kicker">AI &middot; Research</div>
+          <a href="https://www.404media.co/chatgpt-loneliness-study-college-students-random-strangers-texting/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Texting a Random Stranger Better for Loneliness Than Talking to a Chatbot</h3>
+          </a>
+          <p class="byline mb-2">404 Media &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">College students who texted random peers experienced significantly greater reductions in loneliness compared to those who interacted with ChatGPT-based chatbots.</p>
+        </div>
+
+        <!-- Scramble/Puzzle + Wire (story-wide) -->
+        <div class="story-wide">
+          <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 items-start">
+            <div>
+              <div class="section-label" style="margin-bottom:0.75rem;">Scramble</div>
+              <div id="scramble-puzzle" style="font-family: 'Inter', Arial, sans-serif; max-width: 300px; background: #faf8f5; border: 2px solid #1a1a1a; padding: 16px;">
+                <style>
+                  #scramble-puzzle * { box-sizing: border-box; margin: 0; padding: 0; }
+                  #scramble-puzzle .header { text-align: center; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 14px; }
+                  #scramble-puzzle .header h2 { font-size: 22px; font-weight: 800; color: #1a1a1a; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+                  #scramble-puzzle .header .sub { font-size: 10px; color: #666; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+                  #scramble-puzzle .clue-row { margin-bottom: 12px; }
+                  #scramble-puzzle .clue-num { font-size: 11px; font-weight: 700; color: #8B0000; margin-bottom: 3px; }
+                  #scramble-puzzle .scrambled { font-size: 20px; font-weight: 700; letter-spacing: 6px; color: #1a1a1a; text-align: center; margin-bottom: 6px; font-family: 'Courier New', monospace; }
+                  #scramble-puzzle .scrambled .hl { display: inline-block; width: 26px; height: 26px; line-height: 26px; border: 2px solid #8B0000; border-radius: 50%; color: #8B0000; text-align: center; letter-spacing: 0; }
+                  #scramble-puzzle .hint { font-size: 10px; color: #555; font-style: italic; text-align: center; margin-bottom: 4px; }
+                  #scramble-puzzle .answer-input { width: 100%; padding: 6px 8px; font-size: 14px; font-family: 'Courier New', monospace; letter-spacing: 3px; text-transform: uppercase; border: 1.5px solid #ccc; text-align: center; background: #fff; }
+                  #scramble-puzzle .answer-input:focus { outline: none; border-color: #8B0000; }
+                  #scramble-puzzle .answer-input.correct { background: #e6f4ea; border-color: #059669; }
+                  #scramble-puzzle .answer-input.wrong { background: #fde8e8; border-color: #dc2626; }
+                  #scramble-puzzle .bonus-section { border-top: 2px solid #1a1a1a; margin-top: 14px; padding-top: 12px; text-align: center; }
+                  #scramble-puzzle .bonus-label { font-size: 11px; font-weight: 700; color: #8B0000; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+                  #scramble-puzzle .bonus-hint { font-size: 11px; color: #555; font-style: italic; margin-bottom: 8px; }
+                  #scramble-puzzle .bonus-slots { display: flex; justify-content: center; gap: 6px; margin-bottom: 8px; }
+                  #scramble-puzzle .bonus-letter-box { width: 36px; height: 36px; border: 2px solid #8B0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: #8B0000; font-family: 'Courier New', monospace; background: #fff; }
+                  #scramble-puzzle .bonus-input { width: 140px; padding: 6px 8px; font-size: 16px; font-family: 'Courier New', monospace; letter-spacing: 5px; text-transform: uppercase; border: 1.5px solid #ccc; text-align: center; background: #fff; margin: 0 auto; display: block; }
+                  #scramble-puzzle .bonus-input:focus { outline: none; border-color: #8B0000; }
+                  #scramble-puzzle .bonus-input.correct { background: #e6f4ea; border-color: #059669; }
+                  #scramble-puzzle .bonus-input.wrong { background: #fde8e8; border-color: #dc2626; }
+                  #scramble-puzzle .btn-row { display: flex; gap: 8px; margin-top: 14px; }
+                  #scramble-puzzle .btn { flex: 1; padding: 8px 0; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1.5px solid #1a1a1a; cursor: pointer; font-family: 'Inter', Arial, sans-serif; }
+                  #scramble-puzzle .btn-check { background: #1a1a1a; color: #faf8f5; }
+                  #scramble-puzzle .btn-check:hover { background: #333; }
+                  #scramble-puzzle .btn-reveal { background: #faf8f5; color: #1a1a1a; }
+                  #scramble-puzzle .btn-reveal:hover { background: #eee; }
+                  #scramble-puzzle .result-msg { text-align: center; font-size: 12px; font-weight: 600; margin-top: 8px; min-height: 16px; }
+                </style>
+                <div class="header">
+                  <h2>Scramble</h2>
+                  <div class="sub">Unscramble each word, then solve the bonus</div>
+                </div>
+                <div class="clue-row">
+                  <div class="clue-num">1. From: Mistral launches new ___</div>
+                  <div class="scrambled">D O M <span class="hl">L</span> E</div>
+                  <input class="answer-input" data-answer="MODEL" maxlength="5" placeholder="5 letters">
+                </div>
+                <div class="clue-row">
+                  <div class="clue-num">2. From: Witness caught using ___glasses</div>
+                  <div class="scrambled">T <span class="hl">A</span> R M S</div>
+                  <input class="answer-input" data-answer="SMART" maxlength="5" placeholder="5 letters">
+                </div>
+                <div class="clue-row">
+                  <div class="clue-num">3. From: xAI faces ___ over Grok</div>
+                  <div class="scrambled">T <span class="hl">W</span> I S U L A</div>
+                  <input class="answer-input" data-answer="LAWSUIT" maxlength="7" placeholder="7 letters">
+                </div>
+                <div class="clue-row">
+                  <div class="clue-num">4. From: Jensen Huang unveils new ___</div>
+                  <div class="scrambled">P I H C <span class="hl">S</span></div>
+                  <input class="answer-input" data-answer="CHIPS" maxlength="5" placeholder="5 letters">
+                </div>
+                <div class="bonus-section">
+                  <div class="bonus-label">Bonus Word</div>
+                  <div class="bonus-hint">The circled letters unscramble into:</div>
+                  <div class="bonus-hint">"The White House wants to block state AI ____"</div>
+                  <div class="bonus-slots">
+                    <div class="bonus-letter-box">L</div>
+                    <div class="bonus-letter-box">A</div>
+                    <div class="bonus-letter-box">W</div>
+                    <div class="bonus-letter-box">S</div>
+                  </div>
+                  <input class="bonus-input" id="bonus-answer" data-answer="LAWS" maxlength="4" placeholder="4 letters">
+                </div>
+                <div class="btn-row">
+                  <button class="btn btn-check" onclick="checkScramble()">Check</button>
+                  <button class="btn btn-reveal" onclick="revealScramble()">Reveal</button>
+                </div>
+                <div class="result-msg" id="scramble-msg"></div>
+                <script>
+                  function checkScramble() {
+                    var inputs = document.querySelectorAll('#scramble-puzzle .answer-input');
+                    var allCorrect = true;
+                    inputs.forEach(function(inp) {
+                      var val = inp.value.trim().toUpperCase();
+                      if (val === inp.getAttribute('data-answer')) {
+                        inp.className = 'answer-input correct';
+                      } else {
+                        inp.className = 'answer-input wrong';
+                        allCorrect = false;
+                      }
+                    });
+                    var bonus = document.getElementById('bonus-answer');
+                    var bval = bonus.value.trim().toUpperCase();
+                    if (bval === bonus.getAttribute('data-answer')) {
+                      bonus.className = 'bonus-input correct';
+                    } else {
+                      bonus.className = 'bonus-input wrong';
+                      allCorrect = false;
+                    }
+                    var msg = document.getElementById('scramble-msg');
+                    if (allCorrect) {
+                      msg.style.color = '#059669';
+                      msg.textContent = 'All correct! Nice work.';
+                    } else {
+                      msg.style.color = '#8B0000';
+                      msg.textContent = 'Some answers need another look.';
+                    }
+                  }
+                  function revealScramble() {
+                    var inputs = document.querySelectorAll('#scramble-puzzle .answer-input');
+                    inputs.forEach(function(inp) {
+                      inp.value = inp.getAttribute('data-answer');
+                      inp.className = 'answer-input correct';
+                    });
+                    var bonus = document.getElementById('bonus-answer');
+                    bonus.value = bonus.getAttribute('data-answer');
+                    bonus.className = 'bonus-input correct';
+                    var msg = document.getElementById('scramble-msg');
+                    msg.style.color = '#555';
+                    msg.textContent = 'Answers revealed.';
+                  }
+                </script>
+              </div>
+            </div>
+            <div>
+              <div class="section-label" style="margin-bottom:0.5rem;">Wire</div>
+              <div class="wire-item">
+                <a href="https://mistral.ai/news/mistral-ai-and-nvidia-partner-to-accelerate-open-frontier-models" target="_blank" rel="noopener">Mistral AI Partners with NVIDIA to Accelerate Open Frontier Models</a>
+                <span class="wire-source ml-2">Mistral AI &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://mistral.ai/news/leanstral" target="_blank" rel="noopener">Leanstral: Open-Source Foundation for Trustworthy Vibe-Coding</a>
+                <span class="wire-source ml-2">Mistral AI &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://huggingface.co/blog/nvidia/physical-ai-for-healthcare-robotics" target="_blank" rel="noopener">Healthcare Robotics Dataset and Foundational Physical AI Models</a>
+                <span class="wire-source ml-2">Hugging Face / NVIDIA &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://simonwillison.net/2026/Mar/16/mistral-small-4/" target="_blank" rel="noopener">Simon Willison on Mistral Small 4</a>
+                <span class="wire-source ml-2">Simon Willison &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://simonwillison.net/2026/Mar/16/codex-subagents/" target="_blank" rel="noopener">Use Subagents and Custom Agents in Codex</a>
+                <span class="wire-source ml-2">Simon Willison &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://simonwillison.net/2026/Mar/16/coding-agents-for-data-analysis/" target="_blank" rel="noopener">Coding Agents for Data Analysis (NICAR Workshop)</a>
+                <span class="wire-source ml-2">Simon Willison &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://www.cognitiverevolution.ai/ai-scouting-report-the-good-bad-weird-the-law-ai-certificate-program-by-lexlab-uc-law-sf/" target="_blank" rel="noopener">AI Scouting Report: The Good, Bad, and Weird</a>
+                <span class="wire-source ml-2">Cognitive Revolution &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://techcrunch.com/2026/03/16/memories-ai-is-building-the-visual-memory-layer-for-wearables-and-robotics/" target="_blank" rel="noopener">Memories AI Builds Visual Memory Layer for Wearables</a>
+                <span class="wire-source ml-2">TechCrunch &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://techcrunch.com/2026/03/16/nvidias-dlss-5-uses-generative-ai-to-boost-photo-realism-in-video-games-with-ambitions-beyond-gaming/" target="_blank" rel="noopener">NVIDIA's DLSS 5 Uses Generative AI for Photorealism</a>
+                <span class="wire-source ml-2">TechCrunch &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://venturebeat.com/technology/nvidia-launches-enterprise-ai-agent-platform-with-adobe-salesforce-sap-among" target="_blank" rel="noopener">NVIDIA Launches Enterprise AI Agent Platform</a>
+                <span class="wire-source ml-2">VentureBeat &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://www.bloomberg.com/news/newsletters/2026-03-16/adobe-faces-ai-threat-ceo-transition-with-faith-customers-will-pay" target="_blank" rel="noopener">Adobe Faces AI Threat, CEO Transition</a>
+                <span class="wire-source ml-2">Bloomberg &middot; Mar 16</span>
+              </div>
+              <div class="wire-item">
+                <a href="https://fortune.com/2026/03/16/ai-is-reviving-tech-sectors-that-vcs-had-all-but-forgotten/" target="_blank" rel="noopener">AI Is Reviving Tech Sectors VCs Had Forgotten</a>
+                <span class="wire-source ml-2">Fortune &middot; Mar 16</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <hr class="rule-double my-6">
+    <section class="subscribe-section mb-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue delivered free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">A CEO asked ChatGPT how to avoid paying a $250 million bonus. The chatbot obliged. A Delaware judge did not. That single story contains the entire tension of this moment in AI: the tools are powerful enough to act on, but not wise enough to trust without systems around them.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-17-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">AI in the Courtroom</h4>
+        <p>Three stories today put AI squarely in front of judges, and in every case, the humans who leaned on AI without guardrails lost. Krafton CEO Chang Byung-gyu turned to ChatGPT for a corporate strategy to void the $250 million earnout owed to Unknown Worlds Entertainment, the studio behind Subnautica. Court records show the AI-generated plan involved orchestrating a "takeover" and removing the studio's founder. A Delaware judge saw through it, ordered reinstatement, and cited the CEO's reliance on a chatbot to "contrive" the scheme. Meanwhile in London, Laimonas Jakstys wore smartglasses in an insolvency court to receive real-time coaching during testimony. An interpreter heard voices; the judge spotted his phone broadcasting. Call logs revealed incoming calls from a contact labeled "abra kadabra." When confronted, Jakstys blamed "ChatGPT." The judge discarded his entire testimony, finding him "untruthful." And in a third legal front, three minors have sued xAI alleging that Grok generated sexually explicit deepfakes from their real photographs, seeking class action status. Senator Elizabeth Warren separately questioned the Pentagon's decision to grant xAI access to classified networks, citing Grok's harmful outputs as a national security risk.</p>
+
+        <h4 class="digest-theme">The NVIDIA Pivot</h4>
+        <p>Jensen Huang used GTC to reframe NVIDIA's role in the AI economy. His keynote declared that "every company needs an OpenClaw strategy," positioning OpenClaw as "the operating system for personal AI" and framing a transition from SaaS to what he calls AaaS (Agents as a Service). The enterprise play is NemoClaw, NVIDIA's wrapper for OpenClaw that adds three capabilities: privacy controls with policy-based data routing, security guardrails via sandboxing (through the open-source OpenShell runtime), and local model support via NemoTron. The key architectural idea is a "privacy router" that sends sensitive data to local models and non-sensitive queries to cloud endpoints. NVIDIA is positioning itself as the "Switzerland of AI," providing infrastructure without picking model winners. The GTC announcements also included DLSS 5 and an enterprise AI platform built with Adobe, Salesforce, and SAP.</p>
+
+        <h4 class="digest-theme">The Model Wars Heat Up</h4>
+        <p>Mistral dropped Small 4: 119 billion parameters with only 6 billion active, using a mixture-of-experts architecture with 128 experts. It ships Apache 2.0, supports 256k context, runs 40% faster than Small 3 with 3x the throughput, and includes a configurable reasoning_effort parameter. Mistral claims it matches "GPT-OSS 120B" with outputs 3.5 to 4 times shorter. On the research side, Leanstral became the first open-source 6B-parameter code agent for the Lean 4 proof assistant. At pass@2 it scores 26.3 on FLTEval versus Claude Sonnet's 23.7, but costs $36 instead of $549. Both models are Apache 2.0. In legal news affecting training data, Merriam-Webster and Britannica filed a joint lawsuit against OpenAI claiming unauthorized use of roughly 100,000 articles. And Simon Willison wrote about OpenAI's Codex subagents, which use TOML-based configuration for custom agent behavior, signaling that even cloud-hosted agents are developing the same "skills and rules" patterns we see in local tools like Claude Code.</p>
+
+        <h4 class="digest-theme">Claude Code Grows Up</h4>
+        <p>Seven study guides today document an emerging discipline around agent management. The headline story, "Claude Code Wiped 2.5 Years of Data," distills five hard-won skills: git save points before every agentic session, context window management (agents begin to forget around message 30), rules files kept under 200 lines, blast radius control, and knowing which questions agents will never think to ask. The author argues that "the wall between vibe coding and agent management is made of management habits." Separately, the WISC Framework (Write, Isolate, Select, Compress), drawn from 2,000+ hours of Claude Code usage, makes the case that "80% of bad output is a context management problem, not a model problem," and that sub-agents show "90%+ improvement in outcomes." The Library Meta-Skill introduces a YAML reference system for distributing private skills across codebases, describing it as a "purely agentic application with no traditional code," with 46 global skills and an evolution path from base agent through orchestrator agents to dedicated devices. The Skills Masterclass frames skills as "text-based prompts" analogous to smartphone apps, each kept to a lightweight ~100-word index. And practical tutorials cover SSH-based remote Claude Code (turning your local machine into a thin client), plus a Nano Banana web design pipeline from image generation through video conversion to deployment.</p>
+
+        <h4 class="digest-theme">The Human Cost</h4>
+        <p>A University of British Columbia study of 300 first-semester students found that texting random human peers for two weeks reduced loneliness by about 9%, while ChatGPT interactions achieved only about 2%, equivalent to journaling. Dr. Dunigan Folk called chatbot interaction "social junk food." A separate 12-month longitudinal study found that higher chatbot usage actually correlated with increased future loneliness. On the economic front, the Washington Post published an interactive analysis of jobs most vulnerable to AI automation, while the White House and House GOP are preparing to preempt state-level AI legislation entirely. And the venture capital picture is complicated: PitchBook data shows healthtech jumped to $678 million across 23 deals (double the prior average), cybersecurity hit a record $643.1 million with average valuations of $273.4 million, and Function Health raised $300 million at a $2.5 billion valuation. VCs are deploying what Fortune calls a "narrower but sharper playbook" focused on "AI-native systems."</p>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+        <p>The thread connecting today's 31 stories is this: AI has crossed from "impressive demo" to "consequential actor," and the systems wrapping AI now matter more than the AI itself. A CEO trusted ChatGPT for legal strategy and lost $250 million. A witness used AI smartglasses for coached testimony and had everything thrown out. These are not failures of the underlying models. They are failures of the systems, or total lack of systems, surrounding deployment.</p>
+        <p>Look at the other side of the ledger. NemoClaw wraps OpenClaw with privacy routing, sandboxing, and policy enforcement. The WISC framework wraps Claude Code with context management discipline. The Library Meta-Skill wraps agentic capabilities in distributable, version-controlled YAML files. In every case, the value is not in the raw model output but in the scaffolding that channels it toward useful, safe, and accountable outcomes.</p>
+        <p>Even the loneliness study fits this pattern. ChatGPT can simulate conversation, but without the surrounding social system (reciprocity, vulnerability, shared stakes), it produces "social junk food." The wrapper matters. The infrastructure matters. The raw capability, deployed without structure, is not just less effective. It is actively harmful.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <p>We are watching the infrastructure layer of the agent economy being built in real time. NVIDIA is positioning itself as the neutral plumbing provider: OpenClaw as the runtime, NemoClaw as the enterprise security wrapper, NemoTron for local inference. Mistral is going full open-source with Apache 2.0 at 119 billion parameters. The VC money is flowing into AI-native verticals, not AI itself, but healthcare, cybersecurity, and enterprise SaaS rebuilt with AI at the core. This is the classic platform shift pattern: first the capability emerges, then the infrastructure to make it safe and scalable, then the applications that actually change how people work.</p>
+        <p>But the courtroom stories reveal what happens when people skip the infrastructure step and go straight from capability to deployment. The CEO who asked ChatGPT for corporate strategy got a plausible answer and acted on it without legal review, institutional checks, or even basic skepticism. The witness who wore AI smartglasses to court treated the technology as a cheat code rather than a tool requiring its own governance. The gap between "AI can do this" and "AI should do this, in this context, with these safeguards" is where all the value and all the risk concentrates right now.</p>
+        <p>The practitioners building with Claude Code every day seem to understand this intuitively. The WISC framework, the Library Meta-Skill, the emphasis on rules files and blast radius control: these are all infrastructure. They are the governance layer for agentic work, built by people who learned the hard way what happens when you skip it.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The Delaware ruling's ripple effects.</strong> If courts begin routinely scrutinizing AI-assisted corporate decisions, expect compliance teams to develop formal policies around executive use of AI for strategic advice. The precedent here is significant.</li>
+          <li><strong>NemoClaw adoption signals.</strong> NVIDIA's "Switzerland" positioning only works if enterprises trust the privacy router to correctly classify sensitive versus non-sensitive data. Watch for early adoption case studies and, inevitably, the first misrouting incident.</li>
+          <li><strong>The state AI law preemption fight.</strong> If the White House and House GOP succeed in blocking state-level AI legislation, the regulatory landscape shifts dramatically. State attorneys general have been the most active AI enforcement actors so far.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-wiped-2-5-years-of-data-study.html" data-study-guide>Claude Code Wiped 2.5 Years of Data</a> &mdash; Five agent management skills distilled from a catastrophic data loss: git save points, context window limits, lean rules files, blast radius control, and the questions agents never ask.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/ive-used-claude-code-for-2000-hours-heres-how-i-build-anything-with-it-study.html" data-study-guide>I've Used Claude Code for 2,000+ Hours (WISC Framework)</a> &mdash; The Write, Isolate, Select, Compress framework for context management, arguing that 80% of bad AI output is a context problem, not a model problem.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-library-meta-skill-how-i-distribute-private-skills-agents-and-prompts-study.html" data-study-guide>The Library Meta-Skill</a> &mdash; A YAML-based system for distributing private skills and prompts across codebases, with 46 global skills and an evolution roadmap from single agent to orchestrator.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/10-minute-masterclass-claude-code-skills-study.html" data-study-guide>10-Minute Masterclass: Claude Code Skills</a> &mdash; Skills as lightweight text-based prompts with three trigger types: natural language, explicit mention, and slash commands. Includes the Skill Creator benchmarking tool.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/nemoclaw-nvidia-is-going-all-in-on-openclaw-study.html" data-study-guide>NEMOCLAW: NVIDIA Is Going All In on OpenClaw</a> &mdash; Deep analysis of NVIDIA's enterprise security wrapper: privacy routing, OpenShell sandboxing, and the strategic play to become AI infrastructure's neutral provider.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-nano-banana-just-changed-web-design-study.html" data-study-guide>Claude Code + Nano Banana: Web Design Pipeline</a> &mdash; End-to-end workflow from AI image generation through video conversion (Kling 3.0/Veo 3.1) to Claude Code build and Vercel deployment.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/your-computer-doesnt-matter-anymore-claude-code-ssh-study.html" data-study-guide>Your Computer Doesn't Matter Anymore (Claude Code SSH)</a> &mdash; Run Claude Code on a remote VPS, turning your local machine into a thin client for always-on, multi-device agentic development.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
