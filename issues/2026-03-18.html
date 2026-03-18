@@ -243,6 +243,12 @@
         <span>Issue No. 13</span>
       </div>
       <hr class="rule-double">
+      <div style="display:flex;justify-content:center;align-items:center;gap:1.5rem;padding:0.5rem 0;font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;letter-spacing:0.05em;color:#6b7280;">
+        <a href="#" onclick="event.preventDefault();document.getElementById('digest-modal').classList.add('active');document.getElementById('digest-modal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';" style="color:#8B0000;text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">&#10022; The Big Picture: Today's Stories Analyzed</a>
+        <span style="color:#d1d5db;">|</span>
+        <a href="#" onclick="event.preventDefault();document.getElementById('digest-modal').classList.add('active');document.getElementById('digest-modal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(function(){var a=document.querySelector('.digest-podcast-audio');if(a)a.play();},300);" style="color:#8B0000;text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;">&#9654; Listen to the Podcast</a>
+      </div>
+      <hr class="rule-double">
     </header>
 
     <!-- LEAD STORY -->
@@ -331,7 +337,6 @@
           <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
             <div style="text-align: center;">
               <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-18-cartoon.png" alt="Newsletter cartoon" class="w-full" style="display: block;">
-              <p class="font-serif text-sm text-gray-500 italic mt-2">"We still love each other, we just disagree on whether it counts as betrayal when I invest fifty billion with your ex."</p>
             </div>
             <div>
               <div class="kicker">Enterprise AI &middot; Security</div>
@@ -339,16 +344,7 @@
                 <h3 class="headline-feature mb-2">NVIDIA Open-Sources 'OpenShell': A Secure Runtime for AI Agents</h3>
               </a>
               <p class="byline mb-2">MarkTechPost &middot; Mar 18</p>
-              <p class="font-serif text-sm text-gray-600 leading-relaxed mb-4">NVIDIA has open-sourced OpenShell, a dedicated runtime environment designed to address security vulnerabilities in autonomous AI agents by providing isolated, sandboxed execution capabilities.</p>
-              <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:0.75rem;">
-              <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
-                <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                  <input type="email" name="email" placeholder="Your email address" required>
-                  <button type="submit">Subscribe</button>
-                </div>
-                <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
-              </form>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">NVIDIA has open-sourced OpenShell, a dedicated runtime environment designed to address security vulnerabilities in autonomous AI agents by providing isolated, sandboxed execution capabilities.</p>
             </div>
           </div>
         </div>
@@ -363,23 +359,6 @@
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/amazon-is-regretting-ai-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">Amazon Is Regretting AI</h3></a>
           <p class="byline mb-2">Mo Bitar &middot; YouTube &middot; Mar 13</p>
           <p class="font-serif text-sm text-gray-600 leading-relaxed">The Kiro production deletion incident, cascading retail outages, the layoff paradox, and the growing gap between AI hype and reliable execution.</p>
-        </div>
-
-        <!-- Standard: arXiv + Tencent -->
-        <div class="story-item">
-          <div class="kicker">Research &middot; Cognitive Science</div>
-          <a href="https://arxiv.org/abs/2603.15381" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Why AI Systems Don't Learn and What to Do About It</h3>
-          </a>
-          <p class="byline mb-2">arXiv &middot; Dupoux, LeCun, Malik &middot; Mar 16</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">A cognitive science framework for autonomous AI learning, arguing current systems need to combine passive observation with active behavior learning controlled by meta-level signals.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">Business &middot; China</div>
-          <a href="https://www.bloomberg.com/news/articles/2026-03-18/tencent-s-sales-rise-13-in-boost-for-broader-ai-ambitions" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Tencent's Sales Rise 13% in Boost for Broader AI Ambitions</h3>
-          </a>
-          <p class="byline mb-2">Bloomberg &middot; Mar 18</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Quarterly revenue growth provides momentum for the Chinese tech giant's expanding push into artificial intelligence.</p>
         </div>
 
         <!-- Bottom section: Puzzle | Stacked stories | Wire -->
@@ -540,8 +519,22 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">AI agents hitting authentication walls, CAPTCHAs, and KYC flows that still require human intervention.</p>
           </div>
 
-          <!-- Right column: Wire -->
+          <!-- Right column: Stories + Wire -->
           <div>
+          <div class="kicker">Research &middot; Cognitive Science</div>
+          <a href="https://arxiv.org/abs/2603.15381" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Why AI Systems Don't Learn and What to Do About It</h3>
+          </a>
+          <p class="byline mb-2">arXiv &middot; Dupoux, LeCun, Malik &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A cognitive science framework for autonomous AI learning, arguing current systems need to combine passive observation with active behavior learning controlled by meta-level signals.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">Business &middot; China</div>
+          <a href="https://www.bloomberg.com/news/articles/2026-03-18/tencent-s-sales-rise-13-in-boost-for-broader-ai-ambitions" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Tencent's Sales Rise 13% in Boost for Broader AI Ambitions</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg &middot; Mar 18</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Quarterly revenue growth provides momentum for the Chinese tech giant's expanding push into artificial intelligence.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
           <div class="section-label" style="margin-bottom:0.5rem;">Wire</div>
           <div class="wire-item">
             <a href="https://podcast.emerj.com/how-digital-workers-are-changing-industrial-performance-with-somya-kapoor-of-ifs-loops" target="_blank" rel="noopener">How Digital Workers Are Changing Industrial Performance</a>
