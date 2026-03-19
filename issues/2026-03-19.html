@@ -237,6 +237,17 @@
         <span>Issue No. 14</span>
       </div>
       <hr class="rule-double">
+      <div style="display:flex;justify-content:center;align-items:center;gap:1rem;padding:0.5rem 0;font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;letter-spacing:0.05em;color:#6b7280;">
+        <a href="#" onclick="event.preventDefault();document.getElementById('digest-modal').classList.add('active');document.getElementById('digest-modal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';" style="color:#8B0000;text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">&#10022; The Big Picture</a>
+        <span style="color:#d1d5db;">|</span>
+        <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:1;min-width:0;">
+          <span style="color:#8B0000;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">&#9654; Podcast</span>
+          <audio controls preload="none" style="height:28px;flex-shrink:1;min-width:150px;max-width:280px;">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-19-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+      <hr class="rule-double">
     </header>
 
     <!-- LEAD STORY -->
@@ -325,6 +336,13 @@
           </a>
           <p class="byline mb-2">Anthropic &middot; Mar 18</p>
           <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic analyzed interviews with 80,508 Claude users across 159 countries in 70 languages about their hopes, concerns, and actual experiences with AI. The study reveals what real users want from AI technology, beyond the industry narrative.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">AI Safety &middot; Standards</div>
+          <a href="https://fortune.com/2026/03/19/ul-solutions-new-standard-ceo-jennifer-scanlon/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">UL Solutions Rolls Out First AI Certification Standard: 'Innovation Without Safety Is Failure'</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">The $3 billion safety science company issued UL 3115, evaluating whether AI products are safe and well-governed with human oversight throughout their lifecycle.</p>
         </div>
 
         <!-- Cartoon + Pokemon Go -- span 2 -->
@@ -357,24 +375,16 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">How to run Claude Code entirely on your local machine using Ollama and open-source models, completely free and fully private.</p>
         </div>
 
-        <!-- OpenAI Pricing -->
+        <!-- Agent SDK Demo -->
         <div class="story-item">
-          <div class="kicker">OpenAI &middot; Business</div>
-          <a href="https://www.businessinsider.com/openai-may-drop-unlimited-chatgpt-plans-exec-says-2026-3" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">OpenAI Is Rethinking ChatGPT Pricing: 'Unlimited' Plans May Not Last</h3>
+          <div class="kicker">Video &middot; Agent SDK</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/insane-claude-agent-sdk-demo-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/dzvwAnwDUZo/maxresdefault.jpg" alt="Insane Claude Agent SDK Demo" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">Insane Claude Agent SDK Demo</h3>
           </a>
-          <p class="byline mb-2">Business Insider &middot; Mar 17</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">ChatGPT's head called the subscription model "accidental" and said pricing will "significantly evolve." OpenAI is exploring usage-based pricing as AI compute costs surge.</p>
-        </div>
-
-        <!-- UL Solutions safety standard -->
-        <div class="story-item">
-          <div class="kicker">AI Safety &middot; Standards</div>
-          <a href="https://fortune.com/2026/03/19/ul-solutions-new-standard-ceo-jennifer-scanlon/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">UL Solutions Rolls Out First AI Certification Standard: 'Innovation Without Safety Is Failure'</h3>
-          </a>
-          <p class="byline mb-2">Fortune &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">The $3 billion safety science company issued UL 3115, evaluating whether AI products are safe and well-governed with human oversight throughout their lifecycle.</p>
+          <p class="byline mb-2">DesignCourse &middot; YouTube &middot; Mar 17</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A voice-controlled AI pool trainer powered by Claude Agent SDK with real-time feature coding and ElevenLabs voice synthesis.</p>
         </div>
 
         <!-- AI Slop Renaissance study guide -->
@@ -389,26 +399,6 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">An animated essay arguing the flood of AI-generated content is not creative doom but the early tremor of a coming human renaissance.</p>
         </div>
 
-        <!-- Copilot Health -->
-        <div class="story-item">
-          <div class="kicker">Health &middot; Privacy</div>
-          <a href="https://www.nytimes.com/2026/03/12/technology/personaltech/microsoft-copilot-health-ai-chatbots.html" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">A.I. Chatbots Want Your Health Records. Tread Carefully.</h3>
-          </a>
-          <p class="byline mb-2">The New York Times &middot; Mar 12</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft launched Copilot Health, a portal that lets users upload medical records and wearable data for AI-powered analysis. Privacy experts urge caution.</p>
-        </div>
-
-        <!-- AI Computer Use -->
-        <div class="story-item">
-          <div class="kicker">Technology &middot; Computer Use</div>
-          <a href="https://myoid.com/ai-can-use-your-computer-now/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">AI Can Use Your Computer Now. Here's What That Actually Means.</h3>
-          </a>
-          <p class="byline mb-2">Myoid &middot; Mar 16</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">GPT-5.4 became the first model with native computer use, scoring 75% on OSWorld-Verified, exceeding the 72.4% human expert baseline.</p>
-        </div>
-
         <!-- Before You Adapt study guide -->
         <div class="story-item">
           <div class="kicker">Video &middot; Creative AI</div>
@@ -421,18 +411,24 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">Filmmaker Andreas Hem confronts AI's growing presence in creative work, arguing authenticity and human effort cannot be replicated.</p>
         </div>
 
-        <!-- Three-column row: videos + wire + puzzle -->
+        <!-- Three-column row: stories + wire + puzzle -->
         <div class="story-wide">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <!-- Left: Agent SDK + Remote Control -->
+          <!-- Left: Computer Use + OpenAI Pricing + Remote Control -->
           <div>
-          <div class="kicker">Video &middot; Agent SDK</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/insane-claude-agent-sdk-demo-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
-            <img src="https://img.youtube.com/vi/dzvwAnwDUZo/maxresdefault.jpg" alt="Insane Claude Agent SDK Demo" class="w-full aspect-video object-cover mb-3">
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
-            <h3 class="headline-standard mb-1">Insane Claude Agent SDK Demo</h3>
+          <div class="kicker">Technology &middot; Computer Use</div>
+          <a href="https://myoid.com/ai-can-use-your-computer-now/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">AI Can Use Your Computer Now. Here's What That Actually Means.</h3>
           </a>
-          <p class="byline mb-2">YouTube &middot; Mar 17</p>
+          <p class="byline mb-2">Myoid &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">GPT-5.4 became the first model with native computer use, scoring 75% on OSWorld-Verified, exceeding the 72.4% human expert baseline.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">OpenAI &middot; Business</div>
+          <a href="https://www.businessinsider.com/openai-may-drop-unlimited-chatgpt-plans-exec-says-2026-3" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">OpenAI Is Rethinking ChatGPT Pricing: 'Unlimited' Plans May Not Last</h3>
+          </a>
+          <p class="byline mb-2">Business Insider &middot; Mar 17</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">ChatGPT's head called the subscription model "accidental" and said pricing will "significantly evolve."</p>
           <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
           <div class="kicker">Video &middot; Claude Code</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/using-claude-code-remote-control-study.html" class="story-link" data-study-guide>
@@ -442,8 +438,15 @@
           <p class="font-serif text-sm text-gray-500 leading-relaxed">A hands-on demo of controlling Claude Code remotely from any device via QR code pairing.</p>
           </div>
 
-          <!-- Middle: SSH + Library + Wire -->
+          <!-- Middle: Copilot Health + SSH + Library + Wire -->
           <div>
+          <div class="kicker">Health &middot; Privacy</div>
+          <a href="https://www.nytimes.com/2026/03/12/technology/personaltech/microsoft-copilot-health-ai-chatbots.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">A.I. Chatbots Want Your Health Records. Tread Carefully.</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 12</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft launched Copilot Health, a portal that lets users upload medical records and wearable data for AI-powered analysis. Privacy experts urge caution.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
           <div class="kicker">Video &middot; Claude Code SSH</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/your-computer-doesnt-matter-anymore-claude-code-ssh-study.html" class="story-link" data-study-guide>
             <h3 class="headline-standard mb-1">Your Computer Doesn't Matter Anymore: Claude Code SSH</h3>
