@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI the News That's Fit to Prompt — March 19, 2026</title>
-  <meta name="description" content="Daily AI news roundup, March 19, 2026. Stratechery declares agents over bubbles, Jensen Huang envisions 100 AI agents per human, Cognizant raises AI disruption estimate to $4.5 trillion, Anthropic surveys 81,000 people on AI, and more.">
+  <meta name="description" content="Daily AI news roundup — March 19, 2026. AI agents spark anxiety and opportunity, Jensen Huang envisions 100 AI workers per human, $4.5 trillion job disruption estimate, Pokemon Go photos train delivery robots, and more.">
   <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 14">
-  <meta property="og:description" content="Daily AI news roundup, March 19, 2026. Stratechery declares agents over bubbles, Jensen Huang envisions 100 AI agents per human, Cognizant raises AI disruption estimate to $4.5 trillion, Anthropic surveys 81,000 people on AI, and more.">
+  <meta property="og:description" content="Daily AI news roundup — March 19, 2026. AI agents spark anxiety and opportunity, Jensen Huang envisions 100 AI workers per human, $4.5 trillion job disruption estimate, Pokemon Go photos train delivery robots, and more.">
   <meta property="og:type" content="article">
   <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
   <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
@@ -21,7 +21,12 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
           fontFamily: {
             serif: ['"Source Serif 4"', 'Georgia', 'serif'],
             sans: ['"Inter"', 'system-ui', 'sans-serif'],
@@ -32,7 +37,7 @@
       }
     }
   </script>
-<style>
+  <style>
     body {
       background-color: #f8f8f8;
       -webkit-font-smoothing: antialiased;
@@ -58,9 +63,7 @@
       color: #9ca3af;
       letter-spacing: 0.05em;
     }
-    .masthead-info span {
-      margin: 0 0.75rem;
-    }
+    .masthead-info span { margin: 0 0.75rem; }
     .rule-double { border: none; border-top: 3px double #1a1a1a; }
     .rule-thin { border: none; border-top: 1px solid #d1d5db; }
     .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
@@ -122,47 +125,117 @@
     }
     .newspaper-body p { margin-bottom: 0.85em; }
     .newspaper-body p + p { text-indent: 1.5em; }
-    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
-    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
-    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
-    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
-    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
-    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
-    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid { grid-template-columns: 2fr 1fr; }
+    }
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow { grid-template-columns: repeat(3, 1fr); }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 { grid-column: span 1; }
+    }
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
     .wire-item:last-child { border-bottom: none; }
-    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
     .wire-item a:hover { color: #8B0000; }
-    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
     a.story-link { color: inherit; text-decoration: none; }
     a.story-link:hover .headline-lead,
     a.story-link:hover .headline-feature,
     a.story-link:hover .headline-standard { color: #8B0000; }
-    .img-placeholder { background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%); position: relative; overflow: hidden; }
-    .img-placeholder::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px); }
-    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
-    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
     .subscribe-box input:focus { border-color: #1a1a1a; }
-    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
     .subscribe-box button:hover { background: #8B0000; }
-</style>
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
 </head>
 <body>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
 
     <!-- MASTHEAD -->
-    <header class="text-center mb-2">
-      <p class="masthead-motto mb-3">All the AI news that's fit to prompt</p>
-      <h1 class="masthead-title mb-3">AI the News That's Fit to Prompt</h1>
-      <p class="masthead-info mb-4">
-        Thursday, March 19, 2026
-        <span>&middot;</span>
-        Vol. 1, No. 14
-        <span>&middot;</span>
-        21 stories
-      </p>
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, March 19, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 14</span>
+      </div>
       <hr class="rule-double">
     </header>
 
@@ -170,310 +243,297 @@
     <section class="mt-6 mb-4">
       <div class="lead-grid">
         <div>
-          <div class="kicker">Analysis &middot; AI Strategy</div>
-          <a href="https://stratechery.com/2026/agents-over-bubbles/" target="_blank" rel="noopener" class="story-link">
-            <h2 class="headline-lead mb-3">Agents Over Bubbles</h2>
+          <div class="kicker">Technology &middot; AI Agents &middot; Society</div>
+          <a href="https://www.nytimes.com/2026/03/19/business/ai-agents-anxiety-openclaw.html" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">A.I. Agents Are Here. So Is the Anxiety.</h2>
           </a>
-          <p class="byline mb-3">Stratechery &middot; Mar 19</p>
+          <p class="byline mb-3">The New York Times &middot; Mar 19</p>
           <div class="newspaper-body">
-            <p>Ben Thompson argues that the rise of AI agents means we are not in a bubble, the capex is warranted, and Anthropic and OpenAI look more durable than ever. The thesis reframes the entire AI spending debate from "how much is too much" to "what are we actually building."</p>
+            <p>The explosive growth of OpenClaw, the open-source AI agent platform, has fueled widespread anxiety about job displacement as workers rush to learn new tools amid fears that AI agents could replace them. The Times reports on the human side of the agent revolution: the retraining scrambles, the career pivots, and the growing unease in industries where autonomous AI is no longer theoretical.</p>
+            <p>Jensen Huang's vision of 100 AI agents for every human worker, unveiled at GTC this week, has made the stakes concrete. Cognizant now estimates 93% of jobs face some disruption, with 30% facing existential threats, a $4.5 trillion economic shift.</p>
           </div>
         </div>
         <div>
-          <div class="kicker">AI &middot; Future of Work</div>
-          <a href="https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-feature mb-2">Jensen Huang: 7.5 Million AI Agents, 75,000 Humans, 100 AI Workers Per Person</h3>
+          <div class="kicker">Analysis &middot; Strategy</div>
+          <a href="https://stratechery.com/2026/agents-over-bubbles/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Agents Over Bubbles</h3>
           </a>
-          <p class="byline mb-2">Fortune &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">The Nvidia CEO painted the boldest image yet of AI's future: autonomous agents working around the clock so human workers don't have to keep up with them.</p>
+          <p class="byline mb-2">Stratechery &middot; Ben Thompson &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Thompson analyzes the AI agents landscape and argues it represents something more substantial than a speculative bubble, making the case for structural economic transformation.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <div class="kicker">Technology &middot; Practical AI</div>
+          <a href="https://www.nytimes.com/2026/03/19/technology/ai-agents-uses.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">How People Are Actually Using A.I. Agents</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">From automating multi-step tasks to handling customer service and research, a look at how AI agents are being deployed in practice, beyond the hype.</p>
         </div>
       </div>
     </section>
+
     <hr class="rule-thin my-4">
 
     <!-- MASONRY FLOW -->
     <section class="mb-2">
       <div class="masonry-flow">
 
-        <!-- Feature: $4.5T AI Disruption + OpenAI Pricing -->
-        <div class="story-item">
-          <div class="kicker">Economy &middot; AI Impact</div>
-          <a href="https://fortune.com/2026/03/19/ai-jobs-vulnerable-disruption-layoffs-warning-price-tag/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-feature mb-2">Fortune 500 Firm Updates AI Price Tag to $4.5 Trillion, 93% of Jobs Vulnerable</h3>
-          </a>
-          <p class="byline mb-2">Fortune &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">Cognizant revisited its 2023 estimates about AI job loss and doubled its projections, estimating 93% of all jobs face some degree of disruption from AI technologies.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">OpenAI &middot; Business</div>
-          <a href="https://www.businessinsider.com/openai-may-drop-unlimited-chatgpt-plans-exec-says-2026-3" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">OpenAI Is Rethinking ChatGPT Pricing; 'Unlimited' Plans May Not Last</h3>
-          </a>
-          <p class="byline mb-2">Business Insider &middot; Mar 17</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">ChatGPT's head indicated the subscription model was "accidental" and emphasized pricing would "significantly evolve."</p>
+        <!-- Jensen Huang -- full width feature -->
+        <div class="story-wide">
+          <div class="kicker">GTC &middot; Enterprise AI</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <div>
+              <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2266555628-e1773868088145.jpg" alt="Jensen Huang speaking at GTC" class="w-full aspect-[16/9] object-cover">
+            </div>
+            <div>
+              <a href="https://fortune.com/2026/03/19/jensen-huang-nvidia-ai-agents-future-of-work-autonomous/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Jensen Huang Envisions 100 AI Workers for Every Human: '7.5 Million Agents, 75,000 Humans'</h3>
+              </a>
+              <p class="byline mb-2">Fortune &middot; Mar 19</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">The NVIDIA CEO painted the boldest vision yet for AI's future at GTC, describing a world where AI agents work around the clock so human workers don't have to keep up, with 100 AI workers assigned to every person.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Feature: Anthropic 81K Interviews + NYT Agents Anxiety -->
+        <!-- $4.5T Job disruption -->
+        <div class="story-item">
+          <div class="kicker">Economy &middot; Labor</div>
+          <a href="https://fortune.com/2026/03/19/ai-jobs-vulnerable-disruption-layoffs-warning-price-tag/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Fortune 500 Firm Updates AI Price Tag to $4.5 Trillion, Estimating 93% of Jobs Vulnerable</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 19</p>
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-2263459567-e1773867200537.jpg" alt="Workers and AI disruption" class="w-full aspect-[16/9] object-cover mb-3">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Cognizant doubled its 2023 projections: 93% of jobs face some disruption from AI, with 30% facing existential threats. The $4.5 trillion figure covers productivity gains and displacement costs alike.</p>
+        </div>
+
+        <!-- Subagent Era study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Developer Tools</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-subagent-era-is-officially-here-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/GX_EsbcXfw8/maxresdefault.jpg" alt="The Subagent Era Is Officially Here" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">The Subagent Era Is Officially Here</h3>
+          </a>
+          <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI's GPT 5.4 Mini and Nano as subagent-optimized models, how subagents function as secondary AI agents, and practical workflows across Claude Code, Codex, and other tools.</p>
+        </div>
+
+        <!-- Anthropic 81K interviews -->
         <div class="story-item">
           <div class="kicker">From Anthropic &middot; Research</div>
           <a href="https://www.anthropic.com/features/81k-interviews" target="_blank" rel="noopener" class="story-link">
             <h3 class="headline-feature mb-2">What 81,000 People Want from AI</h3>
           </a>
           <p class="byline mb-2">Anthropic &middot; Mar 18</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">A large-scale qualitative study analyzing 80,508 interviews across 159 countries and 70 languages, exploring how people envision AI's role in their lives.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">Society &middot; AI Anxiety</div>
-          <a href="https://www.nytimes.com/2026/03/19/business/ai-agents-anxiety-openclaw.html" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">AI Agents Anxiety and OpenClaw</h3>
-          </a>
-          <p class="byline mb-2">The New York Times &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">As AI agents grow more capable and pervasive, anxiety builds around how they reshape work, trust, and daily life.</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic analyzed interviews with 80,508 Claude users across 159 countries in 70 languages about their hopes, concerns, and actual experiences with AI. The study reveals what real users want from AI technology, beyond the industry narrative.</p>
         </div>
 
-        <!-- Feature: AI Can Use Your Computer + NYT AI Agents Uses -->
-        <div class="story-item">
-          <div class="kicker">Technology &middot; Computer Use</div>
-          <a href="https://myoid.com/ai-can-use-your-computer-now/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-feature mb-2">AI Can Use Your Computer Now. Here's What That Actually Means.</h3>
-          </a>
-          <p class="byline mb-2">Myoid &middot; Mar 16</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">GPT-5.4 scored 75.0% on OSWorld-Verified, crossing the superhuman threshold on benchmark performance for native computer use. What changes when AI can click, type, and navigate like a human?</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">Technology &middot; AI Agents</div>
-          <a href="https://www.nytimes.com/2026/03/19/technology/ai-agents-uses.html" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">The Expanding Universe of AI Agent Use Cases</h3>
-          </a>
-          <p class="byline mb-2">The New York Times &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">A look at how AI agents are finding their way into workplaces, homes, and systems across industries.</p>
-        </div>
-
-        <!-- Cartoon + Pokemon Go Story (story-span-2) -->
+        <!-- Cartoon + Pokemon Go -- span 2 -->
         <div class="story-span-2">
-          <div class="kicker">Today's Cartoon</div>
           <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
-            <div style="text-align: center;">
-              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-19-cartoon.png" alt="Newsletter cartoon" class="w-full" style="display: block;">
+            <div style="text-align:center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-19-cartoon.png" alt="New Yorker-style cartoon: A frazzled manager sits at a desk surrounded by hundreds of small robots. Caption reads: I used to manage a team of twelve. Now I manage a team of twelve hundred, and they all report bugs at 3 AM." class="w-full" style="display:block;">
             </div>
             <div>
-              <div class="kicker">Robotics &middot; Mapping</div>
+              <div class="kicker">Technology &middot; Robotics</div>
               <a href="https://fortune.com/2026/03/19/pokemon-go-30-billion-photos-map-coco-robots/" target="_blank" rel="noopener" class="story-link">
-                <h3 class="headline-feature mb-2">Pokemon Go Players Built a 30-Billion-Photo Map That's Now Training Robots</h3>
+                <h3 class="headline-feature mb-2">Pokemon Go Players Built a 30-Billion-Photo Map That's Now Training Robots to Deliver Your Pizza</h3>
               </a>
               <p class="byline mb-2">Fortune &middot; Mar 19</p>
-              <p class="font-serif text-sm text-gray-600 leading-relaxed">Niantic Spatial is turning a decade of 30 billion crowdsourced photos and data into the most precise urban navigation system delivery robots ever had.</p>
+              <img src="https://fortune.com/img-assets/wp-content/uploads/2026/03/GettyImages-580960812-e1773865185753.jpg" alt="Pokemon Go and robot delivery" class="w-full aspect-[16/9] object-cover mb-3">
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Niantic Spatial is turning a decade of 30 billion crowdsourced photos from Pokemon Go into the most precise urban navigation system delivery robots have ever had.</p>
             </div>
           </div>
         </div>
 
-        <!-- Study Guide: Subagent Era -->
+        <!-- Claude Code Free Local -->
         <div class="story-item">
-          <div class="kicker">Video &middot; Developer Tools</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-subagent-era-is-officially-here-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
-            <img src="https://img.youtube.com/vi/GX_EsbcXfw8/maxresdefault.jpg" alt="The Subagent Era Is Officially Here" class="w-full aspect-video object-cover mb-3">
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
-          </a>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-subagent-era-is-officially-here-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">The Subagent Era Is Officially Here</h3></a>
-          <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI framed GPT-5.4 mini and nano as models built for the subagent era. Context rot, the WISC framework, and the critical "research only, not implementation" rule.</p>
-        </div>
-
-        <!-- Study Guide: Claude Code Free/Local -->
-        <div class="story-item">
-          <div class="kicker">Video &middot; Tutorial</div>
+          <div class="kicker">Video &middot; Claude Code</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-100-free-100-private-100-local-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
-            <img src="https://img.youtube.com/vi/GHGGkIMYDxo/maxresdefault.jpg" alt="Claude Code: 100% Free. 100% Private. 100% Local." class="w-full aspect-video object-cover mb-3">
+            <img src="https://img.youtube.com/vi/GHGGkIMYDxo/maxresdefault.jpg" alt="Claude Code: 100% Free, Private, Local" class="w-full aspect-video object-cover mb-3">
             <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">Claude Code: 100% Free. 100% Private. 100% Local.</h3>
           </a>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-100-free-100-private-100-local-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">Claude Code: 100% Free. 100% Private. 100% Local.</h3></a>
           <p class="byline mb-2">Chase AI &middot; YouTube &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">Running Claude Code with free local models via Ollama. Setup, benchmark tradeoffs (59% local vs 80% cloud), and when to use local vs. cloud.</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">How to run Claude Code entirely on your local machine using Ollama and open-source models, completely free and fully private.</p>
         </div>
 
-        <!-- Study Guide: Agent SDK Demo -->
+        <!-- OpenAI Pricing -->
         <div class="story-item">
+          <div class="kicker">OpenAI &middot; Business</div>
+          <a href="https://www.businessinsider.com/openai-may-drop-unlimited-chatgpt-plans-exec-says-2026-3" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">OpenAI Is Rethinking ChatGPT Pricing: 'Unlimited' Plans May Not Last</h3>
+          </a>
+          <p class="byline mb-2">Business Insider &middot; Mar 17</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">ChatGPT's head called the subscription model "accidental" and said pricing will "significantly evolve." OpenAI is exploring usage-based pricing as AI compute costs surge.</p>
+        </div>
+
+        <!-- UL Solutions safety standard -->
+        <div class="story-item">
+          <div class="kicker">AI Safety &middot; Standards</div>
+          <a href="https://fortune.com/2026/03/19/ul-solutions-new-standard-ceo-jennifer-scanlon/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">UL Solutions Rolls Out First AI Certification Standard: 'Innovation Without Safety Is Failure'</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">The $3 billion safety science company issued UL 3115, evaluating whether AI products are safe and well-governed with human oversight throughout their lifecycle.</p>
+        </div>
+
+        <!-- AI Slop Renaissance study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; AI &amp; Culture</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-ai-slop-will-spark-the-next-human-renaissance-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/0iT9HbaRwfM/maxresdefault.jpg" alt="How AI Slop Will Spark the Next Human Renaissance" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">How AI Slop Will Spark the Next Human Renaissance</h3>
+          </a>
+          <p class="byline mb-2">After Skool &middot; YouTube &middot; Mar 17</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">An animated essay arguing the flood of AI-generated content is not creative doom but the early tremor of a coming human renaissance.</p>
+        </div>
+
+        <!-- Copilot Health -->
+        <div class="story-item">
+          <div class="kicker">Health &middot; Privacy</div>
+          <a href="https://www.nytimes.com/2026/03/12/technology/personaltech/microsoft-copilot-health-ai-chatbots.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">A.I. Chatbots Want Your Health Records. Tread Carefully.</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 12</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft launched Copilot Health, a portal that lets users upload medical records and wearable data for AI-powered analysis. Privacy experts urge caution.</p>
+        </div>
+
+        <!-- AI Computer Use -->
+        <div class="story-item">
+          <div class="kicker">Technology &middot; Computer Use</div>
+          <a href="https://myoid.com/ai-can-use-your-computer-now/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">AI Can Use Your Computer Now. Here's What That Actually Means.</h3>
+          </a>
+          <p class="byline mb-2">Myoid &middot; Mar 16</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">GPT-5.4 became the first model with native computer use, scoring 75% on OSWorld-Verified, exceeding the 72.4% human expert baseline.</p>
+        </div>
+
+        <!-- Before You Adapt study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Creative AI</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/before-you-adapt-to-ai-watch-this-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/k51k2AyUpao/maxresdefault.jpg" alt="Before You Adapt to AI" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">Before You Adapt to AI... Watch This</h3>
+          </a>
+          <p class="byline mb-2">Andreas Hem &middot; YouTube &middot; Mar 15</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Filmmaker Andreas Hem confronts AI's growing presence in creative work, arguing authenticity and human effort cannot be replicated.</p>
+        </div>
+
+        <!-- Three-column row: videos + wire + puzzle -->
+        <div class="story-wide">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Left: Agent SDK + Remote Control -->
+          <div>
           <div class="kicker">Video &middot; Agent SDK</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/insane-claude-agent-sdk-demo-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
             <img src="https://img.youtube.com/vi/dzvwAnwDUZo/maxresdefault.jpg" alt="Insane Claude Agent SDK Demo" class="w-full aspect-video object-cover mb-3">
             <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-standard mb-1">Insane Claude Agent SDK Demo</h3>
           </a>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/insane-claude-agent-sdk-demo-study.html" class="story-link" data-study-guide><h3 class="headline-feature mb-2">Insane Claude Agent SDK Demo</h3></a>
-          <p class="byline mb-2">DesignCourse &middot; YouTube &middot; Mar 17</p>
-          <p class="font-serif text-sm text-gray-600 leading-relaxed">A voice-controlled AI pool trainer powered by Claude Agent SDK with real-time feature coding and ElevenLabs voice synthesis.</p>
-        </div>
-
-        <!-- Bottom section: Puzzle | Stacked stories | Wire -->
-        <div class="story-wide">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:start;">
-
-          <!-- Left column: Word Search (placeholder - will be replaced) -->
-          <div>
-<div id="wordsearch-puzzle" style="font-family: 'Inter', Arial, sans-serif; color: #1a1a1a; max-width: 300px; margin: 0 auto;">
-  <style>
-    #wordsearch-puzzle * { box-sizing: border-box; margin: 0; padding: 0; }
-    #wordsearch-puzzle .ws-header { font-family: 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #8B0000; border-bottom: 1px solid #1a1a1a; padding-bottom: 4px; margin-bottom: 10px; }
-    #wordsearch-puzzle .ws-subtitle { font-size: 10px; font-weight: 400; color: #666; letter-spacing: 0.5px; margin-bottom: 12px; }
-    #wordsearch-puzzle .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 0; margin-bottom: 14px; border: 1px solid #ccc; user-select: none; -webkit-user-select: none; }
-    #wordsearch-puzzle .ws-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 14px; font-weight: 700; cursor: pointer; border: 0.5px solid #e0e0e0; background: #fff; transition: background 0.15s, color 0.15s; line-height: 1; }
-    #wordsearch-puzzle .ws-cell:hover { background: #f5f0e8; }
-    #wordsearch-puzzle .ws-cell.ws-selected { background: #fde8e8; color: #8B0000; }
-    #wordsearch-puzzle .ws-cell.ws-found { background: #8B0000; color: #fff; }
-    #wordsearch-puzzle .ws-words { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; margin-bottom: 10px; }
-    #wordsearch-puzzle .ws-word { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; padding: 2px 0; }
-    #wordsearch-puzzle .ws-word.ws-crossed { text-decoration: line-through; color: #8B0000; opacity: 0.6; }
-    #wordsearch-puzzle .ws-msg { font-size: 10px; color: #666; text-align: center; min-height: 16px; margin-bottom: 4px; }
-    #wordsearch-puzzle .ws-complete { font-size: 12px; font-weight: 700; color: #8B0000; text-align: center; padding: 6px; border: 1px solid #8B0000; margin-top: 8px; }
-  </style>
-  <div class="ws-header">Word Search</div>
-  <div class="ws-subtitle">Find 8 hidden AI terms. Click first letter, then last letter.</div>
-  <div class="ws-grid" id="ws-grid"></div>
-  <div class="ws-msg" id="ws-msg">Select the first letter of a word</div>
-  <div class="ws-words" id="ws-words"></div>
-  <script>
-    (function() {
-      var GRID = [
-        ["A","G","E","N","T","S","L","S","P","C"],
-        ["J","K","J","F","M","V","X","A","K","U"],
-        ["G","P","R","O","M","P","T","F","X","R"],
-        ["W","B","L","B","V","H","J","E","N","S"],
-        ["W","R","H","P","P","F","D","T","E","O"],
-        ["T","O","K","E","N","S","X","Y","U","R"],
-        ["L","X","V","J","K","J","D","D","R","J"],
-        ["X","T","B","U","B","B","L","E","A","X"],
-        ["D","F","J","P","D","F","Z","T","L","D"],
-        ["X","F","L","T","S","U","R","V","E","Y"]
-      ];
-      var WORDS = {
-        "AGENTS": [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5]],
-        "BUBBLE": [[7,2],[7,3],[7,4],[7,5],[7,6],[7,7]],
-        "CURSOR": [[0,9],[1,9],[2,9],[3,9],[4,9],[5,9]],
-        "NEURAL": [[3,8],[4,8],[5,8],[6,8],[7,8],[8,8]],
-        "PROMPT": [[2,1],[2,2],[2,3],[2,4],[2,5],[2,6]],
-        "SAFETY": [[0,7],[1,7],[2,7],[3,7],[4,7],[5,7]],
-        "SURVEY": [[9,4],[9,5],[9,6],[9,7],[9,8],[9,9]],
-        "TOKENS": [[5,0],[5,1],[5,2],[5,3],[5,4],[5,5]]
-      };
-      var found = {};
-      var firstCell = null;
-      var gridEl = document.getElementById("ws-grid");
-      var msgEl = document.getElementById("ws-msg");
-      var wordsEl = document.getElementById("ws-words");
-      for (var r = 0; r < 10; r++) {
-        for (var c = 0; c < 10; c++) {
-          var cell = document.createElement("div");
-          cell.className = "ws-cell";
-          cell.textContent = GRID[r][c];
-          cell.dataset.r = r;
-          cell.dataset.c = c;
-          cell.addEventListener("click", onCellClick);
-          gridEl.appendChild(cell);
-        }
-      }
-      var wordNames = Object.keys(WORDS).sort();
-      for (var i = 0; i < wordNames.length; i++) {
-        var span = document.createElement("span");
-        span.className = "ws-word";
-        span.id = "ws-w-" + wordNames[i];
-        span.textContent = wordNames[i];
-        wordsEl.appendChild(span);
-      }
-      function getCell(r, c) { return gridEl.children[r * 10 + c]; }
-      function clearSelection() { var sel = gridEl.querySelectorAll(".ws-selected"); for (var i = 0; i < sel.length; i++) sel[i].classList.remove("ws-selected"); }
-      function getCellsBetween(r1, c1, r2, c2) {
-        var cells = []; var dr = r2 - r1; var dc = c2 - c1;
-        var steps = Math.max(Math.abs(dr), Math.abs(dc));
-        if (steps === 0) return [[r1, c1]];
-        var sr = dr === 0 ? 0 : dr / Math.abs(dr);
-        var sc = dc === 0 ? 0 : dc / Math.abs(dc);
-        if (dr !== 0 && dc !== 0 && Math.abs(dr) !== Math.abs(dc)) return null;
-        for (var i = 0; i <= steps; i++) cells.push([r1 + i * sr, c1 + i * sc]);
-        return cells;
-      }
-      function onCellClick(e) {
-        var r = parseInt(e.target.dataset.r); var c = parseInt(e.target.dataset.c);
-        if (firstCell === null) {
-          firstCell = [r, c]; e.target.classList.add("ws-selected"); msgEl.textContent = "Now click the last letter";
-        } else {
-          var r1 = firstCell[0], c1 = firstCell[1]; var cells = getCellsBetween(r1, c1, r, c);
-          clearSelection(); firstCell = null;
-          if (!cells) { msgEl.textContent = "Not a straight line. Try again."; return; }
-          var word = ""; for (var i = 0; i < cells.length; i++) word += GRID[cells[i][0]][cells[i][1]];
-          var rev = word.split("").reverse().join(""); var matched = null;
-          if (WORDS[word] && !found[word]) matched = word;
-          else if (WORDS[rev] && !found[rev]) matched = rev;
-          if (matched) {
-            found[matched] = true; var positions = WORDS[matched];
-            for (var i = 0; i < positions.length; i++) getCell(positions[i][0], positions[i][1]).classList.add("ws-found");
-            document.getElementById("ws-w-" + matched).classList.add("ws-crossed");
-            var numFound = Object.keys(found).length;
-            if (numFound === wordNames.length) { msgEl.textContent = ""; var comp = document.createElement("div"); comp.className = "ws-complete"; comp.textContent = "All 8 words found!"; gridEl.parentNode.appendChild(comp); }
-            else msgEl.textContent = "Found " + matched + "! (" + numFound + "/8)";
-          } else msgEl.textContent = "Not a match. Try again.";
-        }
-      }
-    })();
-  </script>
-</div>
+          <p class="byline mb-2">YouTube &middot; Mar 17</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">Video &middot; Claude Code</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/using-claude-code-remote-control-study.html" class="story-link" data-study-guide>
+            <h3 class="headline-standard mb-1">Using Claude Code Remote Control</h3>
+          </a>
+          <p class="byline mb-2">YouTube &middot; Mar 17</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A hands-on demo of controlling Claude Code remotely from any device via QR code pairing.</p>
           </div>
 
-          <!-- Middle column: stacked stories -->
+          <!-- Middle: SSH + Library + Wire -->
           <div>
-          <div class="kicker">Video &middot; AI Philosophy</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-ai-slop-will-spark-the-next-human-renaissance-study.html" class="story-link" data-study-guide>
-            <h3 class="headline-standard mb-1">How AI Slop Will Spark the Next Human Renaissance</h3>
-          </a>
-          <p class="byline mb-2">After Skool &middot; YouTube &middot; Mar 17</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">AI-generated slop will paradoxically drive a human renaissance by making authentic, experience-rooted creativity the ultimate luxury good.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">Video &middot; AI Adaptation</div>
-          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/before-you-adapt-to-ai-watch-this-study.html" class="story-link" data-study-guide>
-            <h3 class="headline-standard mb-1">Before You Adapt to AI... Watch This</h3>
-          </a>
-          <p class="byline mb-2">Andreas Hem &middot; YouTube &middot; Mar 15</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Five practical steps for filmmakers and creatives to prepare for AI disruption while preserving artistic authenticity.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">AI Safety &middot; Standards</div>
-          <a href="https://fortune.com/2026/03/19/ul-solutions-new-standard-ceo-jennifer-scanlon/" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">UL Solutions Rolls Out New Standard to Fill Gap in AI Regulation</h3>
-          </a>
-          <p class="byline mb-2">Fortune &middot; Mar 19</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">"Innovation without safety is failure." UL Solutions introduces a new framework to address the growing gap in AI safety standards.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">Health &middot; AI Assistants</div>
-          <a href="https://www.nytimes.com/2026/03/12/technology/personaltech/microsoft-copilot-health-ai-chatbots.html" target="_blank" rel="noopener" class="story-link">
-            <h3 class="headline-standard mb-1">Microsoft Joins Crowd With Health Assistant for Copilot</h3>
-          </a>
-          <p class="byline mb-2">The New York Times &middot; Mar 12</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Copilot Health invites users to upload medical history and wearable data for personalized health insights.</p>
-          </div>
-
-          <!-- Right column: Study Guides + Wire -->
-          <div>
-          <div class="kicker">Video &middot; Remote Development</div>
+          <div class="kicker">Video &middot; Claude Code SSH</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/your-computer-doesnt-matter-anymore-claude-code-ssh-study.html" class="story-link" data-study-guide>
             <h3 class="headline-standard mb-1">Your Computer Doesn't Matter Anymore: Claude Code SSH</h3>
           </a>
           <p class="byline mb-2">Leon van Zyl &middot; YouTube &middot; Mar 16</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Run Claude Code on remote servers via SSH, enabling powerful AI coding from any device.</p>
-          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
-          <div class="kicker">Video &middot; Skills & Distribution</div>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Run Claude Code on cloud servers via SSH, making your local machine irrelevant for heavy AI workloads.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:0.75rem;">
+          <div class="kicker">Video &middot; Skills &amp; Patterns</div>
           <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-library-meta-skill-how-i-distribute-private-skills-agents-and-prompts-study.html" class="story-link" data-study-guide>
-            <h3 class="headline-standard mb-1">The Library Meta-Skill: Distributing Private Skills, Agents and Prompts</h3>
+            <h3 class="headline-standard mb-1">The Library Meta-Skill: How I Distribute Private Skills, Agents and Prompts</h3>
           </a>
-          <p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Mar 16</p>
-          <p class="font-serif text-sm text-gray-500 leading-relaxed">Building a centralized library system for distributing private skills, agents, and prompts across codebases.</p>
+          <p class="byline mb-2">YouTube &middot; Mar 16</p>
           <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
           <div class="section-label" style="margin-bottom:0.5rem;">Wire</div>
           <div class="wire-item">
-            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/using-claude-code-remote-control-study.html" data-study-guide>Using Claude Code Remote Control</a>
-            <span class="wire-source ml-2">Claude &middot; YouTube &middot; Mar 17</span>
+            <a href="https://github.com/iliazintchenko/agent-sat" target="_blank" rel="noopener">Agent-SAT: AI Agent Boolean Satisfiability Solver</a>
+            <span class="wire-source ml-2">GitHub &middot; Mar 19</span>
           </div>
           <div class="wire-item">
             <a href="https://podcast.emerj.com/from-multi-agent-systems-to-institutional-learning-in-the-enterprise-with-papi-menon-of-outshift-by-cisco" target="_blank" rel="noopener">From Multi-Agent Systems to Institutional Learning in the Enterprise</a>
             <span class="wire-source ml-2">Emerj AI Podcast &middot; Mar 19</span>
           </div>
-          <div class="wire-item">
-            <a href="https://github.com/iliazintchenko/agent-sat" target="_blank" rel="noopener">agent-sat: Agent Learns to Become World's Top SAT Expert</a>
-            <span class="wire-source ml-2">GitHub &middot; Mar 15</span>
           </div>
+
+          <!-- Right: Word Search -->
+          <div>
+          <div class="section-label" style="margin-bottom:0.75rem;">The AI Puzzle</div>
+<style>
+  .ws-game { font-family: 'Inter', 'Georgia', serif; color: #1a1a1a; max-width: 300px; padding: 0; user-select: none; -webkit-user-select: none; }
+  .ws-game .ws-header { text-align: center; border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 14px; }
+  .ws-game .ws-header h3 { font-family: 'Georgia', serif; font-size: 22px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 2px 0; }
+  .ws-game .ws-header p { font-size: 11px; color: #555; margin: 0; font-style: italic; }
+  .ws-grid { display: grid; grid-template-columns: repeat(10, 28px); grid-template-rows: repeat(10, 28px); gap: 1px; justify-content: center; margin-bottom: 14px; }
+  .ws-cell { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 15px; font-weight: 700; cursor: pointer; border: 1px solid transparent; transition: background 0.1s; text-transform: uppercase; }
+  .ws-cell:hover { background: #f0eeeb; }
+  .ws-cell.ws-selecting { background: #fde8e8; border-color: #8B0000; }
+  .ws-cell.ws-found { background: #dcfce7; color: #059669; border-color: #059669; }
+  .ws-words { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; margin-bottom: 14px; }
+  .ws-word { font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1a1a1a; transition: all 0.2s; }
+  .ws-word.ws-crossed { text-decoration: line-through; color: #059669; opacity: 0.7; }
+  .ws-status { text-align: center; font-size: 11px; color: #555; margin-top: 8px; min-height: 18px; }
+  .ws-status.ws-complete { color: #059669; font-weight: 700; font-size: 13px; }
+  .ws-divider { border: none; border-top: 1px solid #ddd; margin: 10px 0; }
+  .ws-actions { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
+  .ws-actions button { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 6px 14px; border: 1.5px solid #8B0000; background: #fff; color: #8B0000; cursor: pointer; transition: all 0.15s; }
+  .ws-actions button:hover { background: #8B0000; color: #fff; }
+</style>
+<div class="ws-game" id="wsGame">
+  <div class="ws-header"><h3>Word Search</h3><p>Find 7 hidden AI terms in the grid</p></div>
+  <div class="ws-grid" id="wsGrid"></div>
+  <hr class="ws-divider">
+  <div class="ws-words" id="wsWords"></div>
+  <div class="ws-status" id="wsStatus">Click a letter, then click the last letter</div>
+  <div class="ws-actions"><button onclick="wsReveal()">Reveal All</button></div>
+</div>
+<script>
+(function() {
+  var GRID = [
+    ['C','L','A','U','D','E','P','X','A','S'],
+    ['R','O','B','O','T','Q','N','W','G','H'],
+    ['F','G','N','V','I','D','I','A','E','J'],
+    ['D','M','S','K','I','L','L','E','N','B'],
+    ['P','R','E','M','O','T','E','N','T','Z'],
+    ['Y','W','T','A','X','B','F','U','C','V'],
+    ['S','A','F','E','T','Y','H','Q','L','W'],
+    ['K','O','J','R','D','I','P','V','W','M'],
+    ['G','U','B','X','N','F','H','A','L','Q'],
+    ['T','Z','E','R','C','W','J','D','Y','O']
+  ];
+  var WORDS = [
+    { word: 'CLAUDE', cells: [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5]] },
+    { word: 'ROBOT',  cells: [[1,0],[1,1],[1,2],[1,3],[1,4]] },
+    { word: 'NVIDIA', cells: [[2,2],[2,3],[2,4],[2,5],[2,6],[2,7]] },
+    { word: 'SKILL',  cells: [[3,2],[3,3],[3,4],[3,5],[3,6]] },
+    { word: 'REMOTE', cells: [[4,1],[4,2],[4,3],[4,4],[4,5],[4,6]] },
+    { word: 'AGENT',  cells: [[0,8],[1,8],[2,8],[3,8],[4,8]] },
+    { word: 'SAFETY', cells: [[6,0],[6,1],[6,2],[6,3],[6,4],[6,5]] }
+  ];
+  var found={},startCell=null;
+  var gridEl=document.getElementById('wsGrid'),wordsEl=document.getElementById('wsWords'),statusEl=document.getElementById('wsStatus');
+  function init(){gridEl.innerHTML='';for(var r=0;r<10;r++){for(var c=0;c<10;c++){var cell=document.createElement('div');cell.className='ws-cell';cell.textContent=GRID[r][c];cell.dataset.r=r;cell.dataset.c=c;cell.addEventListener('click',onCellClick);gridEl.appendChild(cell)}}wordsEl.innerHTML='';WORDS.forEach(function(w){var span=document.createElement('span');span.className='ws-word';span.id='wsW_'+w.word;span.textContent=w.word;wordsEl.appendChild(span)});found={};startCell=null}
+  function getCellEl(r,c){return gridEl.children[r*10+c]}
+  function clearSelecting(){var cells=gridEl.querySelectorAll('.ws-selecting');for(var i=0;i<cells.length;i++)cells[i].classList.remove('ws-selecting')}
+  function getCellsBetween(r1,c1,r2,c2){var dr=r2-r1,dc=c2-c1;var steps=Math.max(Math.abs(dr),Math.abs(dc));if(steps===0)return[[r1,c1]];if(dr!==0&&dc!==0&&Math.abs(dr)!==Math.abs(dc))return null;var sr=dr===0?0:dr/Math.abs(dr);var sc=dc===0?0:dc/Math.abs(dc);var result=[];for(var i=0;i<=steps;i++)result.push([r1+i*sr,c1+i*sc]);return result}
+  function cellsMatch(a,b){if(!a||!b||a.length!==b.length)return false;for(var i=0;i<a.length;i++){if(a[i][0]!==b[i][0]||a[i][1]!==b[i][1])return false}return true}
+  function onCellClick(e){var r=parseInt(e.target.dataset.r),c=parseInt(e.target.dataset.c);if(!startCell){startCell=[r,c];e.target.classList.add('ws-selecting');statusEl.textContent='Now click the last letter of the word';return}var line=getCellsBetween(startCell[0],startCell[1],r,c);clearSelecting();if(!line){startCell=null;statusEl.textContent='Must be a straight line. Try again.';return}var matched=null;WORDS.forEach(function(w){if(found[w.word])return;if(cellsMatch(line,w.cells))matched=w;var rev=line.slice().reverse();if(cellsMatch(rev,w.cells))matched=w});if(matched){found[matched.word]=true;matched.cells.forEach(function(pos){getCellEl(pos[0],pos[1]).classList.add('ws-found')});var wordSpan=document.getElementById('wsW_'+matched.word);if(wordSpan)wordSpan.classList.add('ws-crossed');var total=Object.keys(found).length;if(total===WORDS.length){statusEl.textContent='All 7 words found!';statusEl.className='ws-status ws-complete'}else{statusEl.textContent=matched.word+' found! '+total+'/'+WORDS.length}}else{statusEl.textContent='No match. Click a letter to start.'}startCell=null}
+  function reveal(){WORDS.forEach(function(w){found[w.word]=true;w.cells.forEach(function(pos){getCellEl(pos[0],pos[1]).classList.add('ws-found')});var wordSpan=document.getElementById('wsW_'+w.word);if(wordSpan)wordSpan.classList.add('ws-crossed')});statusEl.textContent='All 7 words revealed!';statusEl.className='ws-status ws-complete'}
+  window.wsReveal=reveal;init();
+})();
+</script>
           </div>
           </div>
         </div>
@@ -532,23 +592,9 @@
     var iframe = document.getElementById('sg-modal-iframe');
     var externalLink = document.getElementById('sg-modal-external');
     var closeBtn = document.getElementById('sg-modal-close');
-    function openModal(url) {
-      iframe.src = url;
-      externalLink.href = url;
-      overlay.classList.add('active');
-      overlay.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-      overlay.classList.remove('active');
-      overlay.setAttribute('aria-hidden', 'true');
-      iframe.src = 'about:blank';
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('click', function(e) {
-      var link = e.target.closest('a[data-study-guide]');
-      if (link) { e.preventDefault(); openModal(link.href); }
-    });
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) { var link = e.target.closest('a[data-study-guide]'); if (link) { e.preventDefault(); openModal(link.href); } });
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
@@ -567,13 +613,13 @@
       </div>
       <div class="digest-body">
 
-        <p class="digest-hook">Cognizant doubled its AI disruption estimate to $4.5 trillion and 93% of jobs. On the same day, Jensen Huang told the world he plans to manage 7.5 million AI agents with 75,000 humans. And Ben Thompson, who spent two years warning about an AI bubble, reversed himself entirely: the spending is warranted, he wrote, because agents change the math on everything. Today is the day the agent era stopped being a prediction and became a budget line.</p>
+        <p class="digest-hook">Jensen Huang stood on stage at GTC and projected a future where NVIDIA employs 75,000 humans alongside 7.5 million AI agents, a 100-to-1 ratio. The same morning, Ben Thompson published his argument that AI agents are not a bubble but a structural economic transformation. Hours later, the New York Times reported on the anxiety flooding workplaces as that transformation arrives. Today's 21 stories trace a single arc: the agent era is no longer coming. It landed this week, and nobody agrees on what to do about it.</p>
 
         <div class="digest-podcast">
           <div class="digest-podcast-label">
             <span class="digest-podcast-icon">&#9654;</span>
             <span>Listen to the Digest</span>
-            <span class="digest-podcast-duration">~8 min</span>
+            <span class="digest-podcast-duration">~7 min</span>
           </div>
           <audio controls preload="none" class="digest-podcast-audio">
             <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-19-podcast.mp3" type="audio/mpeg">
@@ -582,66 +628,63 @@
 
         <h3 class="digest-section-head">Today's Headlines</h3>
 
-        <h4 class="digest-theme">The Agent Thesis Takes Shape</h4>
+        <h4 class="digest-theme">The Agent Inflection Point</h4>
         <ul class="digest-bullets">
-          <li><strong>Thompson reverses his bubble call.</strong> In "Agents Over Bubbles," the Stratechery author identifies three LLM inflection points: ChatGPT's launch (capability with hallucinations), o1's reasoning (self-evaluation), and Opus 4.5's autonomous agents (independent workflow management). His conclusion: all major LLM weaknesses are being addressed by exponential compute increases, the number of people needed to wield AI is decreasing, and the economic returns from agents impact both revenue and costs. He notes with self-awareness that his declaration "we are NOT in a bubble" may paradoxically be the strongest evidence that we are.</li>
-          <li><strong>Jensen Huang's 100-to-1 vision.</strong> At GTC, the Nvidia CEO painted a future where 7.5 million AI agents support 75,000 humans. Nvidia currently employs 42,000 people, meaning it expects to roughly double its workforce while deploying agents at 100x that scale. McKinsey's own numbers confirm the trend: they operate 25,000 agents supporting 40,000 employees, and 62% of organizations they surveyed are already experimenting with agents.</li>
-          <li><strong>Cognizant says what they predicted for 2032 is happening now.</strong> The Fortune 500 firm examined 18,000 tasks across nearly 1,000 occupations and raised its estimate: 93% of jobs face some disruption, 30% face existential threats (up 15 points from 2023), and $4.5 trillion in work could shift from humans to machines. Block cut nearly 50% of its workforce. Atlassian cut 10%. Meta is reportedly planning 20%. The cascade is already underway.</li>
+          <li><strong>NYT: AI agents are here, and so is the anxiety.</strong> The Times reports on workers scrambling to learn OpenClaw and other agent platforms, career pivots accelerating, and a mood of unease across industries that assumed autonomy was still years away. The piece captures the human cost of a technological transition that outpaced even optimistic timelines.</li>
+          <li><strong>Thompson declares "Agents Over Bubbles."</strong> His framework identifies three LLM inflection points: ChatGPT's launch (capability with hallucinations), OpenAI's o1 (reasoning and self-correction), and Anthropic's Opus 4.5 (autonomous task execution). The implication: each inflection reduced the number of humans needed to direct AI, and agents complete that arc. Companies will first cut employees, then rebuild at scale with agents. Thompson acknowledges the paradox that declaring "no bubble" may itself be evidence of one.</li>
+          <li><strong>Huang envisions 100 AI workers per human.</strong> NVIDIA currently has 42,000 employees; Huang projects 75,000 working alongside 7.5 million agents within a decade. A McKinsey survey found 62% of organizations experimenting with agents, while McKinsey itself already operates 25,000 agents alongside 40,000 employees. Andrej Karpathy reported an AI agent running 700 experiments in two days, producing 20 optimizations for language model training.</li>
+          <li><strong>NYT explores how people actually use AI agents.</strong> Beyond the anxiety narrative, the companion piece examines real deployments: multi-step task automation, customer service, research synthesis, and enterprise workflows that function without constant human input.</li>
+          <li><strong>The Subagent Era arrives.</strong> Cole Medin documents how all major AI labs now prioritize smaller, faster, cheaper models over flagship models because most token-heavy coding work demands speed and parallelism over maximum reasoning. GPT 5.4 Nano outperforms Claude Haiku 4.5 on benchmarks at one-fifth the cost and 188 tokens per second versus Haiku's 53. The critical insight: subagents solve context rot by isolating research tasks in separate contexts, returning only summaries to the main agent.</li>
         </ul>
 
-        <h4 class="digest-theme">The Infrastructure Sprint</h4>
+        <h4 class="digest-theme">The Human Reckoning</h4>
         <ul class="digest-bullets">
-          <li><strong>The subagent era goes official.</strong> Cole Medin's study guide documents how OpenAI framed GPT-5.4 Mini and Nano as purpose-built for subagents. Key data: Nano costs one-fifth of Claude Haiku 4.5, runs at 188 tokens/second vs. Haiku's 53, and every major coding tool now supports subagent spawning. The critical rule that emerged: subagents should handle research only, never implementation, because split implementation across isolated agents causes hallucinations and conflicts.</li>
-          <li><strong>Claude Code goes fully local.</strong> Chase AI demonstrated running Claude Code with zero cloud dependency via Ollama. The tradeoff is transparent: local models score 59.2% on SWE-bench vs. 80% for cloud Opus, roughly a year behind frontier. But for overflow, simple tasks, and data privacy, free local inference with the full Claude Code harness is now a viable option.</li>
-          <li><strong>Agent-SAT: agents teaching themselves to become world experts.</strong> A GitHub project ran multiple Claude Code agents simultaneously on MaxSAT problems, coordinating exclusively through Git. Results: 220 of 229 instances solved, 5 solutions surpassing 2024 competition winners, and 1 novel solution with no prior known answer. The agents autonomously developed eight optimization strategies. No human coordination needed beyond git pull and git push.</li>
-          <li><strong>Remote access infrastructure matures.</strong> Anthropic shipped Remote Control for Claude Code (QR code access from any device, spawn mode for creating new sessions remotely), while Leon van Zyl's SSH tutorial demonstrates turning any device into a thin client for a powerful remote development server. IndyDevDan's Library Meta-Skill solves the distribution problem: a YAML reference system for syncing private skills, agents, and prompts across repos and devices.</li>
+          <li><strong>Cognizant raises AI disruption estimate to $4.5 trillion.</strong> After examining 18,000 tasks across nearly 1,000 jobs, the firm found 93% of jobs face some disruption, with 30% facing existential threat, both figures sharply higher than their 2023 projections. Their admission: "What we projected might take until 2032 to unfold is happening now before our eyes." Block has cut nearly 50% of its workforce citing AI, Meta plans 20% cuts from 79,000 employees, and Atlassian reduced headcount 10% to fund AI investments.</li>
+          <li><strong>After Skool argues AI slop will spark a renaissance.</strong> The animated essay traces a pattern: agriculture severed spiritual connection to nature, writing weakened memory, GPS destroyed spatial orientation, and now AI threatens authentic creative expression. The thesis: "meaning cannot be manufactured" because AI lacks capacity for struggle, shame, or failure. The prediction for the 2030s: "unsimulated humanity" becomes a luxury commodity, and the economy pivots from rewarding quantity to rewarding quality.</li>
+          <li><strong>Filmmaker Andreas Hem confronts AI head-on.</strong> Hem identifies "the collapse of visual trust" as AI's most corrosive effect on creative industries: "for the rest of his life, whenever he sees a photo or video, he will have to ask himself whether it is real or generated." His warning: 2026 marks the beginning of the end for narrow creative specializations unless you are in the top 1%. His prescription: expand your skill tree, lean into non-fictional work that requires physical presence, and use AI as a tool while retaining creative control.</li>
+          <li><strong>Anthropic surveyed 81,000 people about what they want from AI.</strong> The largest qualitative AI study ever conducted (80,508 users, 159 countries, 70 languages) found "Professional Excellence" as the top vision at 18.8%, followed by "Personal Transformation." The data suggests users want AI to make them better at what they already do, not to replace what they do.</li>
         </ul>
 
-        <h4 class="digest-theme">The Human Side</h4>
+        <h4 class="digest-theme">Infrastructure, Safety, and Business Models</h4>
         <ul class="digest-bullets">
-          <li><strong>81,000 people told Anthropic what they actually want.</strong> The largest multilingual qualitative AI study ever: 80,508 interviews across 159 countries in 70 languages. Top aspiration: professional excellence (18.8%). Top concern: unreliability and hallucinations (26.7%). The study's most striking finding: hope and alarm coexist within individuals rather than dividing people into camps. 81% said AI was advancing their vision, yet the average person listed 2.3 concerns. Lower-income countries were more optimistic, seeing AI as a capital bypass for entrepreneurship.</li>
-          <li><strong>Chinese workers line up for OpenClaw while fearing it will replace them.</strong> Nearly 1,000 people queued outside Tencent's Shenzhen headquarters. A Shanghai developer described it as "playing Squid Game where you can get eliminated anytime." His employer laid off 30% for failing to adapt. #AIAnxiety hit 2.6 million views on RedNote. Yet 69% of Chinese respondents said benefits outweigh risks, versus just 35% of Americans.</li>
-          <li><strong>OpenAI signals the end of unlimited pricing.</strong> ChatGPT's head called subscriptions "accidental" and said pricing will "significantly evolve." He compared unlimited AI plans to unlimited electricity plans: they just don't make sense. The industry is converging on usage-based models, with Microsoft exploring per-agent pricing and Anthropic already on per-token billing.</li>
+          <li><strong>UL Solutions launches the first AI safety certification.</strong> UL 3115 evaluates algorithm transparency, bias detection, training data verification, and human oversight throughout a product's lifecycle. CEO Jennifer Scanlon: "Innovation without safety is failure." Two companies have already achieved certification. The standard fills a gap created by minimal government oversight and fragmented state-level AI regulations.</li>
+          <li><strong>OpenAI signals the end of unlimited ChatGPT plans.</strong> ChatGPT's head called the subscription model "accidental" and said pricing will "significantly evolve" toward usage-based models as compute costs surge. The shift reflects the economic reality that flat-rate pricing becomes unsustainable as AI capabilities, and therefore costs per user, increase.</li>
+          <li><strong>Microsoft Copilot Health raises privacy alarms.</strong> The new portal lets users upload medical records and wearable data for AI analysis. Privacy experts urge caution, highlighting the tension between AI's analytical power and the sensitivity of health data.</li>
+          <li><strong>Pokemon Go's 30 billion photos now train delivery robots.</strong> Niantic Spatial converted a decade of player-submitted images into a photorealistic world model. Coco Robotics operates 1,000 delivery bots across five cities using Visual Positioning, solving GPS failure in dense urban environments where satellite signals fail. The original Google Earth creator now runs the enterprise division, and player participation was always voluntary and opt-in.</li>
         </ul>
 
-        <h4 class="digest-theme">Computer Use and the Security Reckoning</h4>
+        <h4 class="digest-theme">The Developer Toolkit Expands</h4>
         <ul class="digest-bullets">
-          <li><strong>GPT-5.4 crosses the superhuman threshold on computer use.</strong> A 75.0% score on OSWorld-Verified, surpassing the 72.4% human expert baseline and representing a 58% improvement over GPT-5.2. But the Myoid analysis frames the tension precisely: 75% success means 25% failure, and errors compound over long autonomous sessions. Five competing philosophies have emerged, from universal screenshot loops to multi-model orchestration.</li>
-          <li><strong>OpenClaw's security crisis deepens.</strong> 135,000 internet-exposed instances with no default sandboxing. 824 malicious skills in ClawHub (about 20% of the registry). A coordinated "ClawHavoc" operation of 335 malicious packages. A one-click RCE vulnerability scoring 8.8 on CVSS. Meta banned OpenClaw from corporate devices. The tool that everyone is lining up for is simultaneously one of the most dangerous pieces of software deployed at scale.</li>
-          <li><strong>Microsoft enters AI health with 50 million daily questions.</strong> Copilot Health aggregates wearable data from 50+ devices and health records from 50,000+ U.S. hospitals. One in five health conversations already involves symptom assessment or test interpretation. Developed with input from 230+ physicians across 24 countries.</li>
-          <li><strong>UL Solutions fills the regulation gap.</strong> The 120-year-old safety science company released UL 3115, its first AI certification standard. CEO Jennifer Scanlon: "Innovation without safety is failure." Two products already certified. Companies are seeking standards proactively because the regulatory patchwork offers no coherent alternative.</li>
-        </ul>
-
-        <h4 class="digest-theme">The Creative Counter-Argument</h4>
-        <ul class="digest-bullets">
-          <li><strong>After Skool argues AI slop will trigger a renaissance.</strong> The thesis follows a historical pattern: agriculture disconnected humans from nature, writing weakened memory, GPS destroyed spatial orientation. Each technology created tradeoffs. AI's tradeoff is flooding the world with synthetic content, which will make "unsimulated humanity" the ultimate luxury commodity by the 2030s. Meaning requires suffering, struggle, and lived experience, things AI lacks.</li>
-          <li><strong>Andreas Hem prescribes five steps for creative survival.</strong> The filmmaker warns that 2026 marks the start of specialized role obsolescence: unless you rank in the top 1%, being solely an editor, colorist, or VFX artist lacks long-term sustainability. His prescription: expand your skill tree, stay updated on capabilities, use AI for logistics but not creative authority, lean into non-fictional work that requires physical presence, and hold onto craft because when everyone can generate high-end content, authenticity becomes premium.</li>
+          <li><strong>Claude Code goes fully local and free.</strong> Chase AI demonstrates running Claude Code through Ollama with open-source models. SWE-bench scores: GLM 4.7 hits 73.8% (91% of Opus 4.6's 80%), while the flash variant runs on a standard MacBook Pro at 59.2%. Local Claude Code trades cutting-edge performance for complete privacy and zero cost, approximately one year behind frontier capabilities on consumer hardware.</li>
+          <li><strong>Claude Code SSH and Remote Control.</strong> Leon van Zyl shows how SSH makes your local hardware irrelevant for heavy AI workloads, while a companion video demonstrates QR-code pairing for controlling Claude Code from any device. Together with free local mode, the toolkit now covers every access pattern: cloud, remote server, local private, and mobile.</li>
+          <li><strong>Agent SDK demo and the Library Meta-Skill.</strong> Developers get hands-on with Anthropic's Agent SDK for building custom agent workflows, while the Library Meta-Skill video covers distributing private skills, agents, and prompts across teams, addressing the growing need for organizational AI infrastructure.</li>
+          <li><strong>GPT-5.4 achieves native computer use.</strong> Scoring 75% on OSWorld-Verified, exceeding the 72.4% human expert baseline, GPT-5.4 is the first general-purpose model with native desktop interaction, moving beyond text generation into direct system manipulation.</li>
         </ul>
 
         <h3 class="digest-section-head">The Throughline</h3>
-        <p>Three numbers define today: 100 (agents per human), 93% (jobs disrupted), and 81,000 (people who told Anthropic they are simultaneously hopeful and afraid). The throughline connecting them is that agents have crossed from theoretical to operational, and every institution is now scrambling to figure out what that means.</p>
-        <p>Thompson's reversal is the intellectual anchor. For two years, the most influential tech analyst in the world warned about an AI bubble. Now he says the capex is justified because agents change the denominator: you no longer need widespread human adoption for AI to generate returns. A few operators directing many agents can replace the productivity of large teams. That is exactly what Jensen Huang is describing at Nvidia, what Cognizant is measuring across 18,000 tasks, and what Agent-SAT demonstrated autonomously: multiple Claude Code agents coordinating through nothing but Git, developing novel optimization strategies no human programmed, and surpassing competition winners.</p>
-        <p>But the infrastructure lags the ambition. The subagent era requires a rule that subagents must never implement, only research, because split implementation across isolated agents creates hallucinations. Remote Control and SSH setups are making agents accessible from anywhere, but the Library Meta-Skill exists because there is no standard way to distribute agent capabilities across repos and devices. OpenClaw has 135,000 exposed instances with 20% of its skill registry compromised. The tools are powerful and the plumbing is leaking.</p>
-        <p>The most honest data point is Anthropic's 81,000 interviews: hope and alarm are not opposing camps but <em>the same people</em>. The Shanghai developer who lines up at Tencent for OpenClaw is the same person who describes his career as a Squid Game elimination round. The creative who uses AI for logistics in Andreas Hem's framework is the same person who fears it will make their specialized skills obsolete. This is not cognitive dissonance. It is an accurate reading of a technology that is simultaneously superhuman on benchmarks and 25% wrong in production.</p>
+        <p>Today's 21 stories divide into three conversations that keep bleeding into each other: the scale of what's happening, the speed at which it's happening, and who benefits from what comes next.</p>
+        <p>On scale: Cognizant looked at its own 2023 projections, found they had <em>underestimated</em> every metric, and revised upward to 93% job disruption and $4.5 trillion in labor value at stake. Thompson's "Agents Over Bubbles" makes the complementary case from the investor side: agents don't just reduce costs, they restructure the enterprise value chain entirely, collapsing the number of humans needed to direct productive work. Huang's 100-to-1 ratio isn't hyperbole if you pair it with Karpathy's data point about an agent running 700 experiments in two days. The math works. The question is whether the transition is orderly.</p>
+        <p>On speed: the subagent architecture documented by Cole Medin shows how the ceiling keeps rising without requiring new frontier models. GPT 5.4 Nano runs at 188 tokens per second at one-fifth of Haiku's cost. Claude Code now works locally, via SSH, or from your phone. The developer toolkit that was elite-only six months ago is now free and ubiquitous. Cognizant's confession that what they projected for 2032 "is happening now before our eyes" captures the mood across every story today.</p>
+        <p>On who benefits: the Anthropic survey is revealing. When 80,508 users across 159 countries name "Professional Excellence" as their top desire, they are saying they want AI to make them <em>better</em>, not to make them <em>unnecessary</em>. The After Skool video and Andreas Hem's essay represent the creative community's answer: authenticity, struggle, and physical presence as differentiators that AI cannot replicate. UL 3115 represents the institutional answer: safety standards that ensure AI products have human oversight throughout their lifecycle. OpenAI's pricing evolution represents the business model answer: flat-rate subscriptions can't survive the compute demands of autonomous agents, and the shift to usage-based pricing will create winners and losers. The Pokemon Go story is the quiet revelation: 30 billion images, voluntarily submitted by players over a decade, are now training robots to navigate cities. The data you generated for fun is powering the infrastructure Huang is describing.</p>
 
         <h4 class="digest-theme">The Bigger Picture</h4>
-        <p>We are witnessing the fastest economic expectation reset since the internet. In a single day, the agent economy went from "interesting thesis" to "Fortune 500 budget item" backed by specific numbers: $4.5 trillion in labor displacement, 100-to-1 agent-to-human ratios, 62% of organizations already experimenting. But the parallel security and governance story is equally dramatic. OpenClaw's 135,000 exposed instances, 824 malicious skills, and a one-click RCE vulnerability represent the largest unpatched attack surface in computing history, and it is growing faster than anyone can secure it. UL Solutions issuing its first AI safety standard after 120 years of certifying physical products signals that the institution of safety itself is racing to catch up.</p>
-        <p>The geographic split is sharpening into something more interesting than East vs. West competition. Anthropic's 81,000-person study found that lower-income countries are more optimistic about AI because they see it as a capital bypass: a tool that lets you build without the infrastructure, connections, or funding that Western entrepreneurs take for granted. Chinese workers simultaneously fear and embrace AI at rates that dwarf American engagement. The anxiety in Shanghai and the optimism in Sub-Saharan Africa are both rational responses to the same technology viewed through different economic lenses. The question is not whether agents will reshape work but whether the reshaping will be distributed equitably or concentrated among those who already have the most resources.</p>
-        <p>After Skool's renaissance thesis offers a counterweight worth taking seriously. Every transformative technology has created a counter-movement that prizes what the technology cannot replicate. If the pattern holds, the agent era will produce a premium on authenticity, lived experience, and human craft that no amount of compute can manufacture. The agent economy and the authenticity economy may grow in parallel, each feeding the other's value proposition.</p>
+        <p>We are watching two clocks run simultaneously. The capability clock, measured in benchmark scores, token throughput, and agent autonomy, is accelerating. The adaptation clock, measured in workforce retraining, safety standards, and business model evolution, is struggling to keep pace. Every story today sits somewhere on the gap between those two clocks.</p>
+        <p>The most significant development may be the least dramatic: UL Solutions issuing a voluntary safety certification because companies are proactively seeking private-sector standards rather than waiting for government regulation. If UL 3115 gains adoption, it establishes a precedent where industry self-governance moves faster than legislative action. That's the same pattern that governed electrical safety for a century. Whether it works for AI, where the risks are cognitive and economic rather than physical, remains an open question.</p>
+        <p>The Cognizant revision deserves particular weight because it comes from a company with $19 billion in revenue and 350,000 employees whose business depends on understanding labor markets. When they say their own projections were too conservative by a factor of two, and that the timeline compressed by six years, that's not a think-tank thought experiment. That's a firm recalibrating its own strategy in real time. Pair it with Thompson's framework, Huang's vision, and the developer tooling that makes all of it accessible, and the picture is clear: the agent era is not a prediction to be debated. It is a condition to be navigated.</p>
 
         <h3 class="digest-section-head">What to Watch</h3>
         <ul class="digest-bullets">
-          <li><strong>Thompson's bubble reversal as a contrarian indicator.</strong> He acknowledged the irony himself: the moment the most prominent skeptic declares "no bubble" may be exactly when you should worry. Watch whether enterprise AI spending accelerates or plateaus over the next quarter, because Cognizant's "what we predicted for 2032 is happening now" claim needs revenue data to support it.</li>
-          <li><strong>OpenClaw's security trajectory.</strong> 135,000 exposed instances and 20% malicious skills in the registry is not a bug to be patched. It is a structural problem with permissionless agent ecosystems. The first major breach traced to a compromised OpenClaw skill will force the industry to choose between open agent marketplaces and enterprise security.</li>
-          <li><strong>Usage-based AI pricing migration.</strong> OpenAI calling subscriptions "accidental" while Microsoft explores per-agent pricing signals a fundamental shift. When AI is priced like electricity rather than software, it changes who can afford to deploy agents at the 100-to-1 ratios Huang envisions. Watch whether this democratizes or concentrates access.</li>
+          <li><strong>UL 3115 adoption velocity.</strong> If major enterprises adopt voluntary AI safety certification before regulation requires it, the standard becomes the de facto benchmark. Watch for announcements from large companies seeking certification in Q2, particularly in healthcare and automotive where AI is embedded in physical products.</li>
+          <li><strong>OpenAI's pricing transition.</strong> The move from flat-rate to usage-based pricing will reshape who can afford to run AI agents at scale. Enterprise customers with predictable workloads may benefit; individual developers and small teams may face cost shocks. The pricing structure that emerges will define the economic accessibility of the agent era.</li>
+          <li><strong>Cognizant's "happening now" admission vs. actual layoff data.</strong> The firm projected 30% of jobs facing existential threat, but current layoffs (Block, Meta, Atlassian) are concentrated in tech. Watch for whether the disruption spreads to healthcare, legal, and other white-collar sectors Cognizant flagged, or whether it remains concentrated in industries that were already over-hired.</li>
         </ul>
 
         <h3 class="digest-section-head">Go Deeper</h3>
         <ul class="digest-bullets">
-          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-subagent-era-is-officially-here-study.html" data-study-guide>The Subagent Era Is Officially Here</a> -- Cole Medin documents the shift to subagent-optimized models, the critical "research only, not implementation" rule, and the WISC framework for managing context rot across multi-agent workflows. Includes specific cost comparisons: GPT-5.4 Nano at one-fifth the price of Haiku 4.5, running at 188 tokens/second.</li>
-          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-100-free-100-private-100-local-study.html" data-study-guide>Claude Code: 100% Free. 100% Private. 100% Local.</a> -- Chase AI walks through the complete Ollama setup for running Claude Code locally. Transparent about the tradeoff: 59.2% vs. 80% on SWE-bench, roughly a year behind frontier, but free and private.</li>
-          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-ai-slop-will-spark-the-next-human-renaissance-study.html" data-study-guide>How AI Slop Will Spark the Next Human Renaissance</a> -- After Skool's philosophical argument that AI-generated content will make "unsimulated humanity" the ultimate luxury good, drawing on historical parallels from agriculture to GPS.</li>
-          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/insane-claude-agent-sdk-demo-study.html" data-study-guide>Insane Claude Agent SDK Demo</a> -- DesignCourse builds a voice-controlled AI pool trainer that dispatches coding requests to a background Agent SDK agent while you play. The most concrete demonstration of dual-agent architecture available today.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-subagent-era-is-officially-here-study.html" data-study-guide>The Subagent Era Is Officially Here</a> -- Cole Medin breaks down why all major AI labs now prioritize smaller models for subagent workflows, with concrete benchmarks (GPT 5.4 Nano at 188 tokens/sec, one-fifth the cost of Haiku) and a critical warning about never splitting implementation across subagents.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/how-ai-slop-will-spark-the-next-human-renaissance-study.html" data-study-guide>How AI Slop Will Spark the Next Human Renaissance</a> -- After Skool's animated essay traces how every powerful tool in history delivered benefits while eroding something valuable, and argues the 2030s will see "unsimulated humanity" become a luxury commodity.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-100-free-100-private-100-local-study.html" data-study-guide>Claude Code: 100% Free. 100% Private. 100% Local.</a> -- Chase AI demonstrates running the full Claude Code agent harness through Ollama, with SWE-bench comparisons showing open-source models at 91% of Opus performance for zero cost.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/before-you-adapt-to-ai-watch-this-study.html" data-study-guide>Before You Adapt to AI... Watch This</a> -- Andreas Hem identifies the collapse of visual trust as AI's most corrosive creative-industry effect and offers five concrete preparation steps for filmmakers facing the end of narrow specializations.</li>
         </ul>
 
       </div>
@@ -682,18 +725,8 @@
     var cta = document.getElementById('digest-cta');
     var overlay = document.getElementById('digest-modal');
     var closeBtn = document.getElementById('digest-close');
-    function openDigest() {
-      overlay.classList.add('active');
-      overlay.setAttribute('aria-hidden', 'false');
-      cta.classList.add('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeDigest() {
-      overlay.classList.remove('active');
-      overlay.setAttribute('aria-hidden', 'true');
-      cta.classList.remove('hidden');
-      document.body.style.overflow = '';
-    }
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
     cta.addEventListener('click', openDigest);
     closeBtn.addEventListener('click', closeDigest);
     overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
