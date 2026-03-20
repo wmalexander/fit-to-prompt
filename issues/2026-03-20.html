@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt &mdash; March 20, 2026</title>
+  <meta name="description" content="Daily AI news roundup &mdash; March 20, 2026. OpenAI plans a desktop superapp, Jeff Bezos raises $100B for AI manufacturing, Nvidia CEO says AI adoption will be gradual, Anthropic settles with the FSF, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt &mdash; Issue No. 15">
+  <meta property="og:description" content="Daily AI news roundup &mdash; March 20, 2026. OpenAI plans a desktop superapp, Jeff Bezos raises $100B for AI manufacturing, Nvidia CEO says AI adoption will be gradual, Anthropic settles with the FSF, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, March 20, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 15</span>
+      </div>
+      <hr class="rule-double">
+      <div style="display:flex;justify-content:center;align-items:center;gap:1rem;padding:0.5rem 0;font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;letter-spacing:0.05em;color:#6b7280;">
+        <a href="#" onclick="event.preventDefault();document.getElementById('digest-modal').classList.add('active');document.getElementById('digest-modal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';" style="color:#8B0000;text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">&#10022; The Big Picture</a>
+        <span style="color:#d1d5db;">|</span>
+        <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:1;min-width:0;">
+          <span style="color:#8B0000;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">&#9654; Podcast</span>
+          <audio controls preload="none" style="height:28px;flex-shrink:1;min-width:150px;max-width:280px;">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-20-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Technology &middot; OpenAI &middot; Strategy</div>
+          <a href="https://www.theverge.com/ai-artificial-intelligence/897778/openai-chatgpt-codex-atlas-browser-superapp" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">OpenAI Is Planning a Desktop 'Superapp'</h2>
+          </a>
+          <p class="byline mb-3">The Verge &middot; Mar 20</p>
+          <div class="newspaper-body">
+            <p>OpenAI is working on a desktop "superapp" that merges its ChatGPT app, the Codex AI coding app, and its AI-powered Atlas browser into one unified application, The Wall Street Journal reports. The move signals OpenAI's ambition to become the central platform for AI-powered work.</p>
+            <p>The consolidation comes as OpenAI faces internal criticism for product sprawl, with the company recently declaring a "code red" over having too many projects running simultaneously. The superapp would streamline their offerings into a single entry point for consumers and developers alike.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Business &middot; Manufacturing &middot; AI</div>
+          <a href="https://www.thestar.com.my/tech/tech-news/2026/03/20/jeff-bezos-aims-to-raise-100-billion-to-buy-revamp-manufacturing-firms-with-ai-wsj-reports" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Jeff Bezos Aims to Raise $100 Billion to Buy, Revamp Manufacturing Firms with AI</h3>
+          </a>
+          <p class="byline mb-2">The Star &middot; WSJ &middot; Mar 20</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Amazon founder Jeff Bezos is pursuing early-stage discussions to establish a $100 billion fund for acquiring manufacturing companies and leveraging AI to accelerate automation.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <div class="kicker">Economy &middot; Labor &middot; AI</div>
+          <a href="https://fortune.com/article/nvidia-jensen-huang-ai-jobs-robot-apparel-gradual-disruption/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Nvidia CEO: AI Adoption Will Be Gradual, But We May All End Up Making Robot Clothing</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Mar 20</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Jensen Huang says routine-heavy positions face the greatest disruption risk, but suggests new industries like robot apparel manufacturing could emerge as AI adoption accelerates.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY FLOW -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Stitch 2.0 study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Web Design &middot; Claude Code</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-stitch-2-web-design-god-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/qqcpiDXPCvY/maxresdefault.jpg" alt="Claude Code + Stitch 2.0 = Web Design GOD" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">Claude Code + Stitch 2.0 = Web Design GOD</h3>
+          </a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Mar 20</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">How Google's free Stitch 2.0 design tool (Gemini 3.1) complements Claude Code by handling visual design iteration, with auto-generated design systems and export-to-code pipelines.</p>
+        </div>
+
+        <!-- They Lied study guide -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; AI Critique</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/they-lied-to-us-about-ai-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/z2guHaoY2_Y/maxresdefault.jpg" alt="They Lied to Us About AI" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">They Lied to Us About AI</h3>
+          </a>
+          <p class="byline mb-2">Mo Bitar &middot; YouTube &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Mo Bitar's sharp critique of the AI industry: OpenAI's dysfunction, the METR study showing AI made developers 19% slower, and why the AGI narrative is a bait-and-switch.</p>
+        </div>
+
+        <!-- Anthropic Pentagon -->
+        <div class="story-item">
+          <div class="kicker">Technology &middot; Defense</div>
+          <a href="https://www.nytimes.com/2026/03/18/technology/silicon-valley-anthropic-pentagon.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Silicon Valley, Anthropic, and the Pentagon</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 18</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">The Times examines the evolving relationship between Anthropic and the Defense Department, as AI companies navigate the tension between safety commitments and government contracts.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:0.75rem 0;">
+          <div class="kicker">Technology &middot; Defense</div>
+          <a href="https://www.nytimes.com/2026/03/18/technology/silicon-valley-war-defense-tech.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Silicon Valley's Growing Role in War and Defense Tech</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 18</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">An examination of how Silicon Valley is increasingly intertwined with military applications and defense technology development.</p>
+        </div>
+
+        <!-- Cartoon + SkyPilot Autoresearch -- span 2 -->
+        <div class="story-span-2">
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align:center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-20-cartoon.png" alt="New Yorker-style cartoon of a software developer sitting at a desk with two monitors -- one showing an AI chat conversation, the other showing unchanged code. A coworker leans over the cubicle wall looking bemused." class="w-full" style="display:block;">
+            </div>
+            <div>
+              <div class="kicker">Research &middot; AI Agents</div>
+              <a href="https://blog.skypilot.co/scaling-autoresearch/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Scaling Karpathy's Autoresearch: What Happens When the Agent Gets a GPU Cluster</h3>
+              </a>
+              <p class="byline mb-2">SkyPilot Blog &middot; Mar 20</p>
+              <img src="https://blog.skypilot.co/scaling-autoresearch/assets/banner.png" alt="SkyPilot Autoresearch" class="w-full aspect-[16/9] object-cover mb-3">
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">A Claude Code agent given 16 GPUs ran roughly 910 experiments over 8 hours, achieving a 2.87% improvement in validation loss. Parallel search enables factorial grid testing rather than sequential hill-climbing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FSF Settlement -->
+        <div class="story-item">
+          <div class="kicker">Open Source &middot; Legal</div>
+          <a href="https://www.fsf.org/blogs/licensing/2026-anthropic-settlement" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">The FSF Settles with Anthropic Over AI Training Data</h3>
+          </a>
+          <p class="byline mb-2">Free Software Foundation &middot; Mar 13</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">The FSF received a copyright settlement involving Anthropic's use of books for training large language models, urging AI developers to share training data and source code freely with users.</p>
+        </div>
+
+        <!-- Claude Code Channels -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools &middot; Claude Code</div>
+          <a href="https://code.claude.com/docs/en/channels" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Claude Code Channels: Push Events into a Running Session</h3>
+          </a>
+          <p class="byline mb-2">Claude Code Docs &middot; Mar 20</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">New channels feature lets you push messages, alerts, and webhooks into a running Claude Code session from an MCP server. Supports Telegram and Discord integrations during research preview.</p>
+        </div>
+
+        <!-- Zuckerberg Metaverse -->
+        <div class="story-item">
+          <div class="kicker">Technology &middot; VR &middot; Metaverse</div>
+          <a href="https://www.nytimes.com/2026/03/19/technology/mark-zuckerbergs-metaverse-vr-horizon-worlds.html" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-2">Mark Zuckerberg's Metaverse VR Horizon Worlds</h3>
+          </a>
+          <p class="byline mb-2">The New York Times &middot; Mar 19</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">The latest on Zuckerberg's metaverse ambitions and the state of VR adoption in Horizon Worlds.</p>
+        </div>
+
+        <!-- Three-column row: stories + wire + puzzle -->
+        <div class="story-wide">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Left: KittenTTS + MetaClaw -->
+          <div>
+          <div class="section-label" style="margin-bottom:0.5rem;">Wire</div>
+          <div class="wire-item">
+            <a href="https://github.com/KittenML/KittenTTS" target="_blank" rel="noopener">KittenTTS: Lightweight Open-Source Text-to-Speech on CPU</a>
+            <span class="wire-source ml-2">GitHub &middot; Mar 20</span>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/papers/2603.17187" target="_blank" rel="noopener">MetaClaw: An Agent That Meta-Learns and Evolves in the Wild</a>
+            <span class="wire-source ml-2">arXiv &middot; Mar 20</span>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/papers/2603.10165" target="_blank" rel="noopener">OpenClaw-RL: Train Any Agent Simply by Talking</a>
+            <span class="wire-source ml-2">arXiv &middot; Mar 20</span>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/papers/2603.08127" target="_blank" rel="noopener">EvoScientist: Multi-Agent AI for End-to-End Scientific Discovery</a>
+            <span class="wire-source ml-2">arXiv &middot; Mar 20</span>
+          </div>
+          </div>
+
+          <!-- Middle: empty spacer for balance -->
+          <div></div>
+
+          <!-- Right: Cryptogram Puzzle -->
+          <div>
+          <div class="section-label" style="margin-bottom:0.75rem;">The AI Puzzle</div>
+<div style="font-family: 'Inter', system-ui, sans-serif; max-width: 320px; background: #faf9f6; border: 1px solid #d4d0c8; padding: 16px;">
+  <div style="border-bottom: 2px solid #1a1a1a; margin-bottom: 12px; padding-bottom: 6px;">
+    <h3 style="font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #1a1a1a; margin: 0;">Cryptogram</h3>
+    <p style="font-size: 10px; color: #666; margin: 4px 0 0 0; font-style: italic;">Decode the AI quote</p>
+  </div>
+  <div id="crypt-puzzle-area" style="margin-bottom: 12px;"></div>
+  <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+    <button id="crypt-check-btn" style="flex: 1; padding: 8px 0; font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: #1a1a1a; color: #faf9f6; border: none; cursor: pointer;">Check</button>
+    <button id="crypt-reveal-btn" style="flex: 1; padding: 8px 0; font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: #8B0000; color: #faf9f6; border: none; cursor: pointer;">Reveal</button>
+  </div>
+  <p id="crypt-msg" style="font-size: 11px; color: #666; margin: 0; min-height: 16px; text-align: center;"></p>
+  <script>
+    (function() {
+      var quote = "WE INVENTED A VERY FAST BULLSHIT GENERATOR AND CALLED IT AI";
+      var cipher = {A:'Q',B:'Z',C:'X',D:'W',E:'V',F:'U',G:'T',H:'S',I:'R',J:'P',K:'O',L:'N',M:'M',N:'L',O:'K',P:'J',Q:'I',R:'H',S:'G',T:'F',U:'D',V:'C',W:'B',X:'Y',Y:'A',Z:'E'};
+      var reverse = {};
+      for (var k in cipher) reverse[cipher[k]] = k;
+      var encoded = "";
+      for (var i = 0; i < quote.length; i++) {
+        var ch = quote[i];
+        encoded += cipher[ch] || ch;
+      }
+      var starters = {'V':'E','F':'T','Q':'A'};
+      var area = document.getElementById("crypt-puzzle-area");
+      var words = encoded.split(" ");
+      var origWords = quote.split(" ");
+      var inputEls = [];
+      words.forEach(function(word, wi) {
+        var wordDiv = document.createElement("div");
+        wordDiv.style.cssText = "display:inline-flex;gap:2px;margin:0 6px 10px 0;vertical-align:top;";
+        for (var ci = 0; ci < word.length; ci++) {
+          var encChar = word[ci];
+          var origChar = origWords[wi][ci];
+          var cell = document.createElement("div");
+          cell.style.cssText = "display:flex;flex-direction:column;align-items:center;width:22px;";
+          var top = document.createElement("div");
+          top.style.cssText = "font-size:13px;font-weight:700;color:#1a1a1a;height:18px;line-height:18px;";
+          top.textContent = encChar;
+          cell.appendChild(top);
+          if (/[A-Z]/.test(encChar)) {
+            var isStarter = starters.hasOwnProperty(encChar);
+            var inp = document.createElement("input");
+            inp.type = "text";
+            inp.maxLength = 1;
+            inp.setAttribute("data-enc", encChar);
+            inp.setAttribute("data-ans", origChar);
+            inp.style.cssText = "width:22px;height:22px;text-align:center;font-family:'Inter',system-ui,sans-serif;font-size:13px;font-weight:600;border:none;border-bottom:2px solid #1a1a1a;background:transparent;padding:0;text-transform:uppercase;color:#1a1a1a;outline:none;";
+            if (isStarter) {
+              inp.value = starters[encChar];
+              inp.readOnly = true;
+              inp.style.color = "#8B0000";
+              inp.style.fontWeight = "800";
+            }
+            inp.addEventListener("input", function(e) {
+              var v = e.target.value.toUpperCase();
+              e.target.value = v;
+              if (v && e.target.getAttribute("data-enc")) {
+                var enc = e.target.getAttribute("data-enc");
+                var all = document.querySelectorAll('#crypt-puzzle-area input[data-enc="'+enc+'"]');
+                for (var j = 0; j < all.length; j++) {
+                  if (all[j] !== e.target && !all[j].readOnly) all[j].value = v;
+                }
+              }
+              if (v) {
+                var next = e.target.parentElement.nextElementSibling;
+                if (!next) {
+                  var nw = e.target.parentElement.parentElement.nextElementSibling;
+                  if (nw) next = nw.firstElementChild;
+                }
+                while (next) {
+                  var ni = next.querySelector("input");
+                  if (ni && !ni.readOnly && !ni.value) { ni.focus(); return; }
+                  next = next.nextElementSibling;
+                  if (!next) {
+                    var nw2 = next ? null : (ni ? ni.parentElement.parentElement.nextElementSibling : null);
+                    break;
+                  }
+                }
+              }
+            });
+            inputEls.push(inp);
+            cell.appendChild(inp);
+          }
+          wordDiv.appendChild(cell);
+        }
+        area.appendChild(wordDiv);
+      });
+      document.getElementById("crypt-check-btn").addEventListener("click", function() {
+        var correct = 0, total = 0, wrong = 0;
+        inputEls.forEach(function(inp) {
+          if (inp.readOnly) return;
+          total++;
+          var ans = inp.getAttribute("data-ans");
+          inp.style.borderBottomColor = "#1a1a1a";
+          inp.style.background = "transparent";
+          if (inp.value.toUpperCase() === ans) {
+            correct++;
+            inp.style.background = "rgba(34,139,34,0.12)";
+            inp.style.borderBottomColor = "#228B22";
+          } else if (inp.value) {
+            wrong++;
+            inp.style.background = "rgba(139,0,0,0.1)";
+            inp.style.borderBottomColor = "#8B0000";
+          }
+        });
+        var msg = document.getElementById("crypt-msg");
+        if (wrong === 0 && correct === total) {
+          msg.textContent = "Solved! Well done.";
+          msg.style.color = "#228B22";
+          msg.style.fontWeight = "700";
+        } else {
+          msg.textContent = correct + " correct, " + wrong + " wrong, " + (total - correct - wrong) + " blank";
+          msg.style.color = "#666";
+          msg.style.fontWeight = "400";
+        }
+      });
+      document.getElementById("crypt-reveal-btn").addEventListener("click", function() {
+        inputEls.forEach(function(inp) {
+          inp.value = inp.getAttribute("data-ans");
+          inp.style.background = "rgba(139,0,0,0.08)";
+          inp.style.borderBottomColor = "#8B0000";
+          inp.style.color = "#8B0000";
+          inp.readOnly = true;
+        });
+        var msg = document.getElementById("crypt-msg");
+        msg.textContent = "Answer revealed.";
+        msg.style.color = "#8B0000";
+        msg.style.fontWeight = "700";
+      });
+    })();
+  </script>
+</div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <hr class="rule-double my-6">
+    <section class="subscribe-section mb-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue delivered free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) { var link = e.target.closest('a[data-study-guide]'); if (link) { e.preventDefault(); openModal(link.href); } });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">OpenAI just admitted its multi-product strategy was a mistake, calling it "side quests" and racing to merge everything into one app. The same week, Jeff Bezos moved to raise $100 billion to buy and automate manufacturing companies with AI, a Claude Code agent ran 910 research experiments in eight hours for $300, and the Free Software Foundation settled a copyright case that could reshape how AI training data is governed. Today's 15 stories map the distance between where the industry says AI is heading and what it can actually do right now.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-20-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Consolidation Pivot</h4>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI abandons its multi-product strategy for a "superapp."</strong> Fidji Simo told the company "we cannot miss this moment because we are distracted by side quests." Greg Brockman is leading the overhaul, merging ChatGPT, Codex, and the Atlas browser into one desktop application. Past launches had mixed results: Sora hit #1 on the App Store but usage flatlined, and an agent mode reportedly lost 75% of users. The mobile ChatGPT app will remain standalone.</li>
+          <li><strong>Jeff Bezos aims to raise $100 billion for AI manufacturing.</strong> The Wall Street Journal reports Bezos is in early-stage discussions to assemble one of the largest private investment funds ever, targeting manufacturing companies for AI-driven automation. The scale signals enormous confidence that AI can transform physical production, not just software.</li>
+          <li><strong>Nvidia's Jensen Huang pushes back on sudden job loss predictions.</strong> "If your job is just to chop vegetables, Cuisinart's gonna replace you," Huang told Rogan, arguing that most jobs involve complex tasks AI can only partially handle. He predicts a "robot apparel industry" where people design clothing for robots. An MIT study cited in the piece says AI can adequately perform work representing 12% of U.S. jobs, affecting 151 million workers and over $1 trillion in wages.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Real Capability Check</h4>
+        <ul class="digest-bullets">
+          <li><strong>Mo Bitar: "They lied to us about AI."</strong> In a viral video, Bitar cites the METR randomized controlled study showing AI made 16 senior developers <em>19% slower</em> on real codebases. His core argument: 41% of code is now AI-generated but no one is going faster because someone still has to review it all. His sharpest line: "We invented a very fast bullshit generator, called it AI long enough to raise $300 billion, and when people started asking why it was generating bullshit, we said the real thing is coming later."</li>
+          <li><strong>A Claude Code agent ran 910 experiments on 16 GPUs for under $300.</strong> SkyPilot gave Claude Code access to a cluster and it ran Karpathy's Autoresearch for 8 hours, achieving a 2.87% validation improvement. The agent independently discovered hardware performance differences between H100s and H200s, developed a tiered testing approach, and shifted from sequential hill-climbing to factorial grid searches. Cost: $9 for Claude API, $200 for H100 compute, $60 for H200 compute.</li>
+          <li><strong>Stitch 2.0 + Claude Code = a free web design workflow.</strong> Chase AI demonstrates how Google's Stitch 2.0 (powered by Gemini 3.1) fills the front-end design gap that coding agents consistently struggle with. The tool generates design systems, handles visual iteration through screenshots, and exports directly to Claude Code for implementation.</li>
+        </ul>
+
+        <h4 class="digest-theme">Governance, Legal, and Infrastructure</h4>
+        <ul class="digest-bullets">
+          <li><strong>The FSF settles with Anthropic over AI training data.</strong> The Bartz v. Anthropic case alleged copyright infringement from downloading Library Genesis and Pirate Library Mirror datasets. The court ruled that using books to <em>train</em> LLMs is fair use, but left unresolved whether the initial <em>downloading</em> was legal. The FSF's position: AI developers should provide training inputs, models, configuration, and source code freely to users. Among the works in Anthropic's training data: "Free as in Freedom" by Sam Williams, published under the GNU Free Documentation License.</li>
+          <li><strong>Claude Code introduces channels.</strong> A new feature lets MCP servers push real-time events (messages, alerts, webhooks) into a running Claude Code session. Currently supports Telegram and Discord. Security uses sender allowlists with pairing codes, and Team/Enterprise plans require admin opt-in.</li>
+          <li><strong>Silicon Valley's defense entanglement deepens.</strong> Two NYT pieces examine the growing ties between Anthropic and the Pentagon, and Silicon Valley's broader role in defense technology. The tension between AI safety commitments and government contracts remains unresolved.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Research Frontier</h4>
+        <ul class="digest-bullets">
+          <li><strong>MetaClaw: agents that improve themselves through use.</strong> A continual meta-learning framework lets deployed agents evolve without local GPU access, using failure analysis for immediate skill injection and opportunistic RL during user-idle windows. On MetaClaw-Bench, it advances Kimi-K2.5 from 21.4% to 40.6% accuracy, nearly matching GPT-5.2's baseline.</li>
+          <li><strong>OpenClaw-RL: train any agent by talking to it.</strong> Every agent interaction (conversation, terminal output, GUI state change) becomes a learning signal. Combined with hindsight-guided distillation, personalization scores jump from 0.17 to 0.81 after just 16 update steps.</li>
+          <li><strong>EvoScientist: multi-agent AI for end-to-end scientific discovery.</strong> All 6 papers submitted to ICAIS 2025 were accepted (conference acceptance rate: 31.71%), including one Best Paper Award. The system uses Gemini-2.5-Pro for ideation and Claude-4.5-Haiku for code generation.</li>
+          <li><strong>KittenTTS: CPU-only text-to-speech in 25 MB.</strong> An open-source TTS library running ONNX models as small as 15M parameters, delivering 8 voices at 24 kHz without requiring a GPU. Apache 2.0 license.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+        <p>Today's stories divide into two competing narratives about where AI actually stands, and neither side is entirely right.</p>
+        <p>On one hand, the capability signals are real and accelerating. A Claude Code agent autonomously ran 910 research experiments, discovered hardware performance differences nobody told it about, and shifted its own methodology from sequential testing to factorial grid searches, all for $300. EvoScientist's papers were accepted at a real conference. OpenClaw-RL's agents improve just by being used. These are not marketing demos. They are published results with reproducible numbers.</p>
+        <p>On the other hand, the METR study found AI made senior developers 19% <em>slower</em>. OpenAI, the company that raised more capital than anyone, just admitted its own product strategy was failing and solved the problem with "a lady with a PowerPoint and some bad news," as Bitar put it. The gap between what AI can do in controlled research settings and what it delivers in production workplaces is wider than the industry acknowledges.</p>
+        <p>The Bezos fund is the most telling signal. $100 billion to buy and automate manufacturing companies is not a bet on software productivity. It's a bet that AI works best when you control the entire environment: the factory, the processes, the data. That's a fundamentally different thesis than "AI will make knowledge workers 10x more productive," which is the claim both OpenAI and Anthropic are selling. The SkyPilot experiment supports this: Claude Code excelled when given a controlled cluster with clear metrics. The METR study shows what happens when you drop AI into the messy reality of existing codebases with real humans.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <p>We are watching a market that has raised hundreds of billions of dollars begin to sort itself into tiers. At the top: infrastructure players like Nvidia and hyperscalers like Bezos, who bet on the physical layer where AI's advantages are measurable and controllable. In the middle: platform companies like OpenAI and Anthropic, which are now competing on developer experience and enterprise integration rather than raw model capability. At the bottom: the gap between what these platforms promise and what individual workers actually experience when they use the tools.</p>
+        <p>The FSF settlement introduces a third dimension. The court ruled that training on copyrighted material is fair use, but the question of how that training data was <em>obtained</em> remains legally unresolved. If future rulings restrict how companies acquire training data, the cost of building competitive models could rise dramatically, further consolidating the market toward companies with the deepest pockets. The FSF's demand that AI developers share their complete systems freely is philosophically compelling and practically unlikely, but it establishes a pole in the debate that won't disappear.</p>
+        <p>OpenAI's superapp pivot is perhaps the most significant strategic signal. By consolidating everything into one app, they are implicitly admitting that the era of standalone AI products is ending before it really began. The future they are building toward is AI as infrastructure: embedded in one tool that handles everything, not a menu of separate applications. Whether that vision is right or whether it is another "side quest" remains an open question.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI's superapp execution timeline.</strong> The consolidation will happen "in stages," starting with Codex enhancements. Watch for whether this focus actually improves the product or whether it becomes another reorg that consumes internal bandwidth. Anthropic's response matters too: will they stay focused on coding and enterprise, or will they feel competitive pressure to broaden?</li>
+          <li><strong>The Bezos fund's first acquisitions.</strong> If a $100B fund starts buying manufacturers, it will test whether AI-driven automation works at scale in physical environments. The companies targeted and the timelines for AI integration will reveal whether this is a decade-long thesis or an immediate play.</li>
+          <li><strong>Self-improving agent research moving to production.</strong> MetaClaw and OpenClaw-RL both demonstrate agents that get better through use. If these architectures reach production deployments, the dynamics of AI adoption change fundamentally: the tool improves without the user doing anything different. Watch for real-world deployment announcements.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-stitch-2-web-design-god-study.html" data-study-guide>Claude Code + Stitch 2.0 = Web Design GOD</a> -- Chase AI walks through combining Google's free Stitch 2.0 with Claude Code: screenshot-driven iteration, auto-generated design systems, variant generation, live mode, and the complete export-to-Claude-Code pipeline for building production-quality front ends.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/they-lied-to-us-about-ai-study.html" data-study-guide>They Lied to Us About AI</a> -- Mo Bitar's 7-minute takedown of the AI industry's central narrative, citing the METR study's 19% slowdown finding, dissecting the AGI bait-and-switch, and arguing that company-specific work requiring deep judgment and institutional context is inherently AI-proof.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
