@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — March 27, 2026</title>
+  <meta name="description" content="Daily AI news roundup - March 27, 2026. Users quit ChatGPT for Claude in 1,487% surge, Anthropic's Economic Index reveals AI learning curves, Karpathy on the end of coding, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 18">
+  <meta property="og:description" content="Daily AI news roundup - March 27, 2026. Users quit ChatGPT for Claude in 1,487% surge, Anthropic's Economic Index reveals AI learning curves, Karpathy on the end of coding, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, March 27, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 18</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="kicker">AI Industry</div>
+      <a href="https://forbes.com/sites/rachelwells/2026/03/23/users-quit-chatgpt-for-claude-in-1487-surge-heres-how-work-changes/" target="_blank" rel="noopener" class="story-link">
+        <h2 class="headline-lead mb-3">Users Quit ChatGPT For Claude In 1,487% Surge. Here's How Work Changes</h2>
+      </a>
+      <p class="byline mb-3">Forbes &middot; Mar 23</p>
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
+        <div class="newspaper-body">
+          <p>A growing number of ChatGPT users have switched to Claude, with a 1,487% increase in sessions in March alone. The article explores how this shift impacts the workplace and career strategies.</p>
+          <p>The surge reflects a broader realignment in the AI tools market as professionals discover that different models excel at different tasks, and that the "default" chatbot may not be the best fit for serious work.</p>
+        </div>
+        <div>
+          <img src="https://s.yimg.com/lo/mysterio/api/A51101BF1BB48ED694F1DEAD5E2E773D455FC7D76A2F0B5A13313C06D7051DF4/subgraphmysterio/resizefit_w1200;quality_90;format_webp/https:%2F%2Fs.yimg.com%2Fos%2Fen%2Fforbes_contributor_845%2F32f06b644c73252a44561d4e679525c9" alt="Users switching from ChatGPT to Claude" class="w-full aspect-[16/9] object-cover">
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Anthropic Economic Index — full width -->
+        <div class="story-wide">
+          <div class="kicker">From Anthropic</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+            <div>
+              <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/1c3e87fd90491089b2971dc34f9f75bb8a80f713-1000x1000.svg" alt="Anthropic Economic Index report cover" class="w-full aspect-square object-cover">
+            </div>
+            <div>
+              <a href="https://www.anthropic.com/research/economic-index-march-2026-report" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Anthropic Economic Index Report: Learning Curves</h3>
+              </a>
+              <p class="byline mb-2">Anthropic &middot; Mar 24</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Report analyzing Claude usage patterns in February 2026, focusing on learning curves and how experienced users achieve greater success with AI tools through developed habits and strategies.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row: Karpathy study guide | Fink/Bloomberg | White House + Meta stacked -->
+
+        <!-- Karpathy: End of Coding (STUDY GUIDE) -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Analysis</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-end-of-coding-andrej-karpathy-on-agents-autoresearch-and-the-loopy-era-of-ai-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/kwSVtQ7dziU/maxresdefault.jpg" alt="Andrej Karpathy on the end of coding" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">The End of Coding: Andrej Karpathy on Agents, AutoResearch, and the Loopy Era of AI</h3>
+          </a>
+          <p class="byline mb-2">No Priors &middot; YouTube &middot; Mar 20</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Andrej Karpathy's vision for the future of software development, where AI agents handle coding through autonomous loops, research, and iterative problem-solving.</p>
+        </div>
+
+        <!-- Fink / BlackRock -->
+        <div class="story-item">
+          <div class="kicker">AI &amp; Economy</div>
+          <a href="https://www.bloomberg.com/news/articles/2026-03-23/fink-says-ai-threatens-to-leave-masses-behind-unless-they-invest" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Fink Says AI Threatens to Leave Masses Behind Unless They Invest</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg &middot; Mar 23</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">BlackRock CEO Larry Fink warns in his annual letter that the AI boom threatens to make wealthy companies and investors even richer while exacerbating inequality, unless more individuals can share in market gains.</p>
+        </div>
+
+        <!-- White House AI Plan + Meta Dreamer stacked -->
+        <div class="story-item">
+          <div class="kicker">AI Policy</div>
+          <a href="https://www.bloomberg.com/opinion/articles/2026-03-23/the-white-house-s-ai-plan-is-anything-but" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The White House's AI Plan Is Anything But</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg &middot; Mar 23</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed mb-4">Bloomberg Opinion argues the White House National AI Legislative Framework is a blueprint for AI companies to carry on with business as usual, targeting states enacting their own AI rules.</p>
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:1.25rem;">
+          <div class="kicker">AI Industry</div>
+          <a href="https://www.bloomberg.com/news/articles/2026-03-23/meta-hires-former-google-stripe-execs-behind-ai-startup-dreamer" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Meta Hires Former Google, Stripe Executives Behind AI Startup Dreamer</h3>
+          </a>
+          <p class="byline mb-2">Bloomberg &middot; Mar 23</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Meta acquires the team behind AI startup Dreamer, including co-founder Hugo Barra, to join Meta's Superintelligence Labs group focused on building AI agents.</p>
+        </div>
+
+        <!-- Cartoon + Claude surge theme — spans 2 columns -->
+        <div class="story-span-2">
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-27-cartoon.png" alt="A couples therapist office. A man sits on a couch holding up his phone while his wife sits next to him with arms crossed looking annoyed. The therapist sits across from them taking notes." class="w-full" style="display: block;">
+              <p class="font-serif text-xs text-gray-400 mt-2 italic">"He said he was leaving me for someone smarter, but I did not expect it to be a chatbot."</p>
+            </div>
+            <div>
+              <div class="kicker">AI Industry</div>
+              <a href="https://forbes.com/sites/rachelwells/2026/03/23/users-quit-chatgpt-for-claude-in-1487-surge-heres-how-work-changes/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">The Great AI Migration</h3>
+              </a>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">A 1,487% surge in Claude sessions signals that the era of one-size-fits-all chatbots may be ending. Workers are choosing tools that match how they actually think and produce, not just the ones their company defaults to.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puzzle: Acronym Quiz -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">The AI Quiz</div>
+          <div style="font-family: 'Inter', sans-serif; max-width: 300px; color: #1a1a1a; padding: 0;">
+            <div style="border-bottom: 2px solid #8B0000; margin-bottom: 12px; padding-bottom: 4px;">
+              <h3 style="font-variant: small-caps; letter-spacing: 2px; color: #8B0000; margin: 0; font-size: 15px; font-weight: 700;">Acronym Quiz</h3>
+            </div>
+            <p style="font-size: 11px; color: #555; margin: 0 0 14px 0; line-height: 1.4;">How well do you know your AI alphabet soup? Pick the correct expansion for each acronym.</p>
+            <form id="acronymQuiz" onsubmit="return false;" style="margin: 0;">
+              <div id="q1" style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">1. MoE</div>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q1" value="a" style="margin-right: 5px;">Model of Execution</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q1" value="b" style="margin-right: 5px;">Mixture of Experts</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q1" value="c" style="margin-right: 5px;">Multi-output Encoder</label>
+              </div>
+              <div id="q2" style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">2. RLHF</div>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q2" value="a" style="margin-right: 5px;">Recursive Learning from Hidden Features</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q2" value="b" style="margin-right: 5px;">Reinforcement Learning from Human Feedback</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q2" value="c" style="margin-right: 5px;">Rapid Layer Hyperparameter Fitting</label>
+              </div>
+              <div id="q3" style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">3. RAG</div>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q3" value="a" style="margin-right: 5px;">Retrieval-Augmented Generation</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q3" value="b" style="margin-right: 5px;">Recursive Attention Gate</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q3" value="c" style="margin-right: 5px;">Ranked Adaptive Gradient</label>
+              </div>
+              <div id="q4" style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">4. MCP</div>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q4" value="a" style="margin-right: 5px;">Multi-Channel Processing</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q4" value="b" style="margin-right: 5px;">Maximum Compute Partition</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q4" value="c" style="margin-right: 5px;">Model Context Protocol</label>
+              </div>
+              <div id="q5" style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">5. CoT</div>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q5" value="a" style="margin-right: 5px;">Compression of Tokens</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q5" value="b" style="margin-right: 5px;">Chain of Thought</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q5" value="c" style="margin-right: 5px;">Context over Time</label>
+              </div>
+              <div id="q6" style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px;">6. LoRA</div>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q6" value="a" style="margin-right: 5px;">Logical Reasoning Architecture</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q6" value="b" style="margin-right: 5px;">Low-Rank Adaptation</label>
+                <label style="display: block; font-size: 12px; line-height: 1.6; cursor: pointer;"><input type="radio" name="q6" value="c" style="margin-right: 5px;">Layer-Optimized Residual Attention</label>
+              </div>
+              <button onclick="checkAcronymQuiz()" id="acronymCheckBtn" style="width: 100%; padding: 10px; background: #8B0000; color: #fff; border: none; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; letter-spacing: 0.5px;">CHECK ANSWERS</button>
+              <div id="acronymScore" style="display: none; text-align: center; margin-top: 12px; padding: 10px; border: 1px solid #e0e0e0; font-size: 14px; font-weight: 700;"></div>
+            </form>
+            <script>
+              function checkAcronymQuiz() {
+                var answers = {q1: "b", q2: "b", q3: "a", q4: "c", q5: "b", q6: "b"};
+                var score = 0;
+                var total = 6;
+                var btn = document.getElementById("acronymCheckBtn");
+                btn.disabled = true;
+                btn.style.opacity = "0.5";
+                btn.style.cursor = "default";
+                for (var i = 1; i <= total; i++) {
+                  var qName = "q" + i;
+                  var radios = document.getElementsByName(qName);
+                  var selected = null;
+                  for (var j = 0; j < radios.length; j++) {
+                    radios[j].disabled = true;
+                    if (radios[j].checked) selected = radios[j].value;
+                  }
+                  for (var j = 0; j < radios.length; j++) {
+                    var lbl = radios[j].parentElement;
+                    if (radios[j].value === answers[qName]) {
+                      lbl.style.color = "#166534";
+                      lbl.style.fontWeight = "600";
+                    } else if (radios[j].checked && radios[j].value !== answers[qName]) {
+                      lbl.style.color = "#991b1b";
+                      lbl.style.textDecoration = "line-through";
+                    }
+                  }
+                  if (selected === answers[qName]) score++;
+                }
+                var scoreDiv = document.getElementById("acronymScore");
+                scoreDiv.style.display = "block";
+                var color = score >= 5 ? "#166534" : score >= 3 ? "#b45309" : "#991b1b";
+                scoreDiv.style.color = color;
+                scoreDiv.style.borderColor = color;
+                scoreDiv.innerHTML = score + "/" + total + " correct" + (score === 6 ? " - Perfect!" : score >= 4 ? " - Well done!" : score >= 2 ? " - Not bad!" : " - Study up!");
+              }
+            </script>
+          </div>
+        </div>
+
+        <!-- Row: Mozilla cq | AI Receptionist | Simon Willison -->
+
+        <!-- Mozilla cq -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools</div>
+          <a href="https://blog.mozilla.ai/cq-stack-overflow-for-agents/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://blog.mozilla.ai/content/images/size/w1200/2026/03/mozilla-ai-cq-stack-overflow-for-agents-blog-hero-image-1200x630.png" alt="Mozilla AI cq: Stack Overflow for Agents" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">cq: Stack Overflow for Agents</h3>
+          </a>
+          <p class="byline mb-2">Mozilla.ai &middot; Mar 23</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A shared knowledge commons where AI agents can query past learnings, contribute new knowledge, and avoid repeating mistakes in isolation.</p>
+        </div>
+
+        <!-- AI Receptionist -->
+        <div class="story-item">
+          <div class="kicker">Project Spotlight</div>
+          <a href="https://www.itsthatlady.dev/blog/building-an-ai-receptionist-for-my-brother/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://www.itsthatlady.dev/.netlify/images?url=_astro%2Ftyping.asRmplmU.jpeg&w=1880&h=1255&dpl=69c1c9b748c455000849ee36" alt="Building an AI receptionist for a mechanic shop" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">How I Built an AI Receptionist for a Luxury Mechanic Shop</h3>
+          </a>
+          <p class="byline mb-2">That LadyDev &middot; Mar 20</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A technical walkthrough of building a custom voice AI agent for a mechanic shop, featuring RAG pipeline development, Vapi integration, and real-world voice tuning.</p>
+        </div>
+
+        <!-- Simon Willison: Streaming Experts -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools</div>
+          <a href="https://simonwillison.net/2026/Mar/24/streaming-experts/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Streaming Experts</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison &middot; Mar 24</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Simon Willison discusses recent breakthroughs in running massive Mixture-of-Experts language models on consumer hardware through streaming expert weights from storage.</p>
+        </div>
+
+        <!-- Row: Anthropic Broke Prompt Engineering study guide | Pencil App study guide | EVA framework -->
+
+        <!-- Anthropic Broke Prompt Engineering (STUDY GUIDE) -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Analysis</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/anthropic-just-broke-prompt-engineering-and-replaced-it-with-this-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/UaqIZqHukKo/maxresdefault.jpg" alt="Anthropic Just Broke Prompt Engineering" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-standard mb-2">Anthropic Just Broke Prompt Engineering (And Replaced It With This)</h3>
+          </a>
+          <p class="byline mb-2">AI fun facts for all &middot; YouTube &middot; Mar 23</p>
+        </div>
+
+        <!-- Pencil App (STUDY GUIDE) -->
+        <div class="story-item">
+          <div class="kicker">Video &middot; Workflow</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/i-designed-a-full-app-in-pencil-then-claude-code-built-it-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/NyxksiuF124/maxresdefault.jpg" alt="I Designed a Full App in Pencil, Then Claude Code Built It" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-standard mb-2">I Designed a Full App in Pencil, Then Claude Code Built It</h3>
+          </a>
+          <p class="byline mb-2">Matt Maher &middot; YouTube &middot; Mar 23</p>
+        </div>
+
+        <!-- EVA Framework -->
+        <div class="story-item">
+          <div class="kicker">Research</div>
+          <a href="https://huggingface.co/blog/ServiceNow-AI/eva" target="_blank" rel="noopener" class="story-link">
+            <img src="https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/ServiceNow-AI/eva.png" alt="EVA: A New Framework for Evaluating Voice Agents" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">A New Framework for Evaluating Voice Agents (EVA)</h3>
+          </a>
+          <p class="byline mb-2">Hugging Face &middot; Mar 24</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">EVA is an end-to-end evaluation framework for conversational voice agents that jointly evaluates task accuracy and conversational experience.</p>
+        </div>
+
+        <!-- Wire Briefs — full width -->
+        <div class="story-wide">
+          <div class="section-label">Wire Briefs</div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-03-23/silicon-valley-s-dc-summit-shadowed-by-ai-concerns-war-in-iran" target="_blank" rel="noopener">Silicon Valley's DC Summit Shadowed by AI Concerns, War in Iran</a>
+            <div class="wire-source">Bloomberg &middot; Mar 23</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-03-23/when-is-wwdc-2026-apple-announces-ios-27-macos-27-ai-event-held-on-june-8-12" target="_blank" rel="noopener">When Is WWDC 2026? Apple Announces iOS 27, macOS 27, AI Event Held on June 8-12</a>
+            <div class="wire-source">Bloomberg &middot; Mar 23</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.washingtonpost.com/opinions/2026/03/23/data-center-electricity-costs-ai/" target="_blank" rel="noopener">AI and Data Centers Don't Have to Send Electricity Bills Soaring</a>
+            <div class="wire-source">Washington Post &middot; Mar 23</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://neilkakkar.com/productive-with-claude-code.html" target="_blank" rel="noopener">How I'm Productive with Claude Code</a>
+            <div class="wire-source">Neil Kakkar &middot; Mar 16</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://proofshot.argil.io/" target="_blank" rel="noopener">ProofShot - Visual proof for AI-built code</a>
+            <div class="wire-source">Argil &middot; Mar 24</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://twitter.com/anemll/status/2035901335984611412" target="_blank" rel="noopener">ANEMLL - Run LLMs on Apple Neural Engine</a>
+            <div class="wire-source">@anemll &middot; Mar 24</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://cc.storyfox.cz" target="_blank" rel="noopener">Claude Code Cheat Sheet</a>
+            <div class="wire-source">@phasE89 &middot; Mar 24</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- STUDY GUIDE MODAL                             -->
+    <!-- ============================================ -->
+    <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+      <div class="sg-modal-container">
+        <div class="sg-modal-header">
+          <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+          <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+        </div>
+        <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+      </div>
+    </div>
+    <style>
+      .sg-modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+      }
+      .sg-modal-overlay.active {
+        display: flex;
+      }
+      .sg-modal-container {
+        background: #fff;
+        border-radius: 6px;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      }
+      .sg-modal-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid #e5e7eb;
+        background: #fafafa;
+        flex-shrink: 0;
+      }
+      .sg-modal-open-external {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.7rem;
+        color: #6b7280;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+      .sg-modal-open-external:hover {
+        color: #8B0000;
+      }
+      .sg-modal-close {
+        font-size: 1.5rem;
+        line-height: 1;
+        background: none;
+        border: none;
+        color: #6b7280;
+        cursor: pointer;
+        padding: 0 0.25rem;
+      }
+      .sg-modal-close:hover {
+        color: #1a1a1a;
+      }
+      .sg-modal-iframe {
+        flex: 1;
+        width: 100%;
+        border: none;
+      }
+      @media print {
+        .sg-modal-overlay { display: none !important; }
+      }
+    </style>
+    <script>
+    (function() {
+      var overlay = document.getElementById('sg-modal');
+      var iframe = document.getElementById('sg-modal-iframe');
+      var externalLink = document.getElementById('sg-modal-external');
+      var closeBtn = document.getElementById('sg-modal-close');
+      function openModal(url) {
+        iframe.src = url;
+        externalLink.href = url;
+        overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+        iframe.src = 'about:blank';
+        document.body.style.overflow = '';
+      }
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[data-study-guide]');
+        if (link) {
+          e.preventDefault();
+          openModal(link.href);
+        }
+      });
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+      });
+    })();
+    </script>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Anthropic's own data shows experienced Claude users achieve 10% higher success rates than newcomers, and that the learning curve takes six months to climb. In the same week, Forbes reports a 1,487% surge in users switching from ChatGPT to Claude. Connect those two data points and you get the story beneath all of today's stories: AI tool mastery is becoming a career differentiator, the tools themselves are in violent flux, and nearly everyone switching platforms is starting that learning curve from zero.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-03-27-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Great Migration</h4>
+        <ul class="digest-bullets">
+          <li><strong>Claude's 1,487% session surge is real, but the numbers need context.</strong> Larridin's AI measurement platform shows Claude overtook ChatGPT in daily active users during the first week of March, with Claude users averaging 38 sessions weekly versus 18 for ChatGPT. The migration was catalyzed by a combination of political and ethical concerns about OpenAI and genuine performance advantages in coding and analysis tasks. In corporate settings, Claude now drives twice as many sessions as ChatGPT.</li>
+          <li><strong>Anthropic's Economic Index reveals what happens after the switch.</strong> Analyzing 1 million conversations from February 2026, the report finds that 49% of all jobs have seen at least 25% of their tasks performed using Claude. But the headline number is the learning curve: users with 6+ months of experience achieve 3-4 percentage points higher success rates in controlled regressions. API power users respond to task complexity twice as strongly as casual users, with Opus usage rising 2.8 percentage points per $10 increase in hourly wage. The top 10 tasks declined from 24% to 19% of conversations since November, suggesting experienced users find increasingly diverse applications.</li>
+          <li><strong>Fink sees the macro risk.</strong> BlackRock's CEO warns in his annual letter that since 1989, a dollar invested in US stock markets grew 15x faster than median wages. AI accelerates this divergence: workers with AI-related skills already command wage premiums as high as 43%, while one-third of BlackRock survey respondents lack $500 for emergencies. Fink's proposed solution, letting Social Security invest diversified portfolios like public pensions, is his clearest policy intervention yet.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Tooling Revolution</h4>
+        <ul class="digest-bullets">
+          <li><strong>Karpathy went from writing 80% of his code to writing none.</strong> In a No Priors interview, the former Tesla AI lead describes December 2025 as the inflection point where he stopped coding entirely and began directing autonomous agent loops. His AutoResearch project discovered hyperparameter improvements overnight, including weight decay and Adam beta optimizations, that survived two decades of his own manual tuning. His new bottleneck: "your ability to direct agents," with token throughput replacing lines of code as the productivity metric.</li>
+          <li><strong>Anthropic replaced prompt engineering with skills architecture.</strong> Based on an insider post from an Anthropic builder, the new paradigm treats each AI capability as a structured environment the model navigates, not a monolithic system prompt. Four pillars: progressive disclosure (fetch data on demand instead of reading entire codebases), failure-driven design (document gotchas, not standard patterns), continuous calibration through persistent logs, and scoped guard rails that activate contextually instead of globally.</li>
+          <li><strong>Pencil turns sketches into working apps in 15 minutes.</strong> Matt Maher demonstrates a progressive narrowing pattern: 6 parallel agents create design concepts, you pick a direction, 3 agents refine it, 6 agents explore variations across states, then Claude Code builds the final Next.js app via MCP handoff. The key insight: separating UI from business logic makes AI-driven development dramatically easier. Two-way sync means code fixes update the design file automatically.</li>
+          <li><strong>Neil Kakkar's productivity thesis: "It's the infrastructure, not the AI."</strong> After six weeks at Tano, Kakkar cut server restart time from 60 seconds to under 1 second, scaled from 2 branches to 5 simultaneous worktrees, and shifted from individual implementer to "manager of agents." His highest-leverage work was building enabling infrastructure, not features.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents in the Wild</h4>
+        <ul class="digest-bullets">
+          <li><strong>Mozilla wants to build Stack Overflow for AI agents.</strong> Mozilla.ai's cq project addresses a stark statistic: Stack Overflow peaked at 200,000+ questions monthly in 2014 and collapsed to 3,862 in December 2025, matching its launch-month volume. LLMs trained on Stack Overflow subsequently hollowed out that community, a process Mozilla calls "matriphagy." cq proposes a shared knowledge commons where agents contribute and query collective learnings, with trust earned through demonstrated use across multiple codebases rather than authority.</li>
+          <li><strong>A developer built an AI receptionist that handles 100+ missed calls per week.</strong> Kedasha Kerr's "Axle" uses a RAG pipeline with 21 structured documents, 1024-dimensional vectors via Voyage AI, and Claude Sonnet for natural conversation. The hardest part wasn't the code but getting the ElevenLabs voice to sound like "someone who works at a mechanic shop and not a Silicon Valley startup." Each missed call represents $50 to $2,000 in lost revenue.</li>
+          <li><strong>Voice agents can complete tasks OR deliver good experiences, rarely both.</strong> ServiceNow and Hugging Face's EVA framework tested 20 voice systems across 50 airline scenarios and found a fundamental tradeoff invisible to existing benchmarks: high accuracy agents deliver poor experiences, and vice versa. The dominant failure mode is named entity transcription, where a single misheard character cascades into complete authentication failure.</li>
+        </ul>
+
+        <h4 class="digest-theme">Policy, Power, and Infrastructure</h4>
+        <ul class="digest-bullets">
+          <li><strong>The White House AI framework is regulation in name only.</strong> Bloomberg's Dave Lee argues the National Policy Framework unveiled March 20 is designed primarily to preempt state-level AI regulation, the only mechanism currently constraining AI companies. The framework amounts to an industry wish list.</li>
+          <li><strong>Meta's AI acqui-hire spree continues.</strong> Meta acquired the entire Dreamer startup team, including former Stripe CTO David Singleton, for its Superintelligence Labs. Dreamer raised $56 million at a $500 million valuation in November 2024. This follows Meta's $2 billion Manus acquisition in December and the Moltbook deal in March.</li>
+          <li><strong>MoE models now run on consumer hardware.</strong> Simon Willison highlights "streaming experts," a technique that runs 397-billion-parameter and 1-trillion-parameter models by streaming expert weights from SSD storage. Dan Woods ran Qwen3.5-397B on 48GB RAM; another user ran Kimi K2.5 (1T parameters) on a MacBook Pro at 1.7 tokens/second. The gap between datacenter and consumer AI continues to narrow.</li>
+          <li><strong>$2.7 trillion in US data center investment by 2030.</strong> After Trump urged tech companies to build their own power plants, executives signed a White House pledge to pay full energy costs. The Washington Post reports this "private grid" approach could protect ratepayers from cost-shifting as AI infrastructure scales.</li>
+          <li><strong>Apple's WWDC 2026 promises an AI overhaul.</strong> iOS 27 and macOS 27 arrive June 8-12 with a standalone Siri app, "Ask Siri" button, and a new "Core AI" framework replacing Core ML.</li>
+        </ul>
+
+        <h4 class="digest-theme">Quick Hits</h4>
+        <ul class="digest-bullets">
+          <li><strong>ProofShot</strong> lets AI coding agents capture video recordings and error logs as "visual proof" of their work, generating PR-ready artifacts.</li>
+          <li><strong>ANEMLL</strong> runs LLMs on Apple's Neural Engine at 47-62 tok/s for 1B models and ~9 tok/s for 8B, using a fraction of GPU power draw.</li>
+          <li><strong>Claude Code Cheat Sheet</strong> is a comprehensive, printable reference for v2.1.84 covering shortcuts, MCP, memory, and CLI flags.</li>
+          <li><strong>Silicon Valley's DC Summit</strong> exposed the tension between Gulf state AI investment ($2 trillion pledged) and the Iran war's destabilizing effect on that funding.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The thread connecting today's stories is the emergence of AI expertise as the new professional class divide, and the paradox that the tools creating this divide won't sit still long enough for most people to master them.</p>
+
+        <p>Anthropic's Economic Index provides the hard evidence: experienced users don't just use AI more, they use it <em>differently</em>. High-tenure users tackle higher-complexity tasks, diversify their applications faster, and achieve measurably better outcomes. But that learning curve takes six months. Meanwhile, Forbes reports users are abandoning ChatGPT for Claude at record rates, resetting their accumulated expertise to zero. Karpathy, one of the most experienced practitioners alive, describes a categorical workflow shift as recently as December 2025. If even Karpathy is starting over, what hope does the average knowledge worker have of building durable AI skills?</p>
+
+        <p>This creates a troubling dynamic. Neil Kakkar's thesis, that the highest-leverage work is building infrastructure, not using AI directly, suggests the real winners won't be the best prompters or even the best coders. They'll be the people who build the <em>systems</em> that let AI agents operate at scale. That's a much smaller group. And it maps uncomfortably well to Fink's warning about wealth concentration: when AI multiplies the output of those who already have infrastructure and capital, the gap between the equipped and the unequipped widens faster than any learning curve can close.</p>
+
+        <p>Mozilla's cq project and the EVA framework both represent attempts to address this from different angles. cq asks: what if agents could share hard-won knowledge collectively instead of each one learning in isolation? EVA asks: how do we even know if these agents are working well? Both are early-stage answers to a problem that will only intensify as AI agents move from developer tools to business-critical infrastructure handling real phone calls, real airline rebookings, real financial decisions.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>We are watching the emergence of two parallel AI economies. In one, a small cohort of experienced practitioners, the Karpathys and Kakkars, architect autonomous loops that generate compounding returns. In the other, a much larger population cycles between AI tools that render last month's expertise partially obsolete. Anthropic's own data quantifies this: US state-level AI adoption is converging (the top 5 states' share dropped from 30% to 24%), but global inequality is <em>increasing</em> (top 20 countries rose from 45% to 48%). The projected US convergence timeline quietly extended from 2-5 years to 5-9 years.</p>
+
+        <p>The skills architecture that Anthropic is promoting, where AI capabilities are structured environments rather than monolithic prompts, is itself a bet on the experienced-user premium. It assumes practitioners who can build and maintain skill libraries, wire up MCP servers, and design progressive disclosure systems. That's powerful if you're already in the cohort. It's another barrier if you're not. When the Claude Code Cheat Sheet for a single tool runs to eight color-coded sections on landscape A4, the notion that AI is "making technology accessible to everyone" deserves serious scrutiny.</p>
+
+        <p>Fink's proposal to let Social Security invest in diversified portfolios is an acknowledgment that traditional employment income cannot keep pace with capital returns, and AI is about to make that disparity worse. The question is whether AI tool democratization, streaming trillion-parameter models on a MacBook, running agents on Apple's Neural Engine, building apps from pencil sketches, can close the gap faster than AI expertise concentration widens it. Today's evidence suggests the race is closer than the optimists claim and further from resolved than the pessimists fear.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The 6-month learning curve as hiring signal.</strong> Anthropic's data suggests AI tool tenure maps directly to productivity. Watch for whether employers start valuing platform-specific experience, and whether that creates lock-in effects that undermine the cross-platform "AI resilience" Forbes recommends.</li>
+          <li><strong>Agent knowledge commons vs. walled gardens.</strong> Mozilla's cq and ProofShot both assume agents should share knowledge openly. But if AI expertise is the new professional edge, companies have strong incentives to keep their agent learnings proprietary. The contest between shared and siloed agent knowledge will shape whether AI productivity gains distribute broadly or concentrate.</li>
+          <li><strong>Voice AI's accuracy-experience tradeoff at scale.</strong> EVA's finding that task completion and user experience are inversely correlated in voice agents has immediate implications as companies like Kedasha Kerr deploy real-world AI receptionists. The first high-profile voice AI failure, a misheard name cascading into a lost sale or worse, will test whether the technology is ready for customer-facing roles.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-end-of-coding-andrej-karpathy-on-agents-autoresearch-and-the-loopy-era-of-ai-study.html" data-study-guide>The End of Coding: Andrej Karpathy on Agents, AutoResearch, and the Loopy Era of AI</a> - Karpathy's AutoResearch project discovered hyperparameter improvements overnight that he missed in two decades of manual tuning. The study guide covers his framework for "claws" (persistent, looping agents), distributed research using blockchain principles, and why he believes digital transformation will vastly outpace physical robotics.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/anthropic-just-broke-prompt-engineering-and-replaced-it-with-this-study.html" data-study-guide>Anthropic Just Broke Prompt Engineering (And Replaced It With This)</a> - A detailed breakdown of Anthropic's four-pillar skills architecture, including the novel CCD Paradigm (Continuous Calibration and Development) that transforms stateless chat into persistent agents through append-only logs and external verification tools.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/i-designed-a-full-app-in-pencil-then-claude-code-built-it-study.html" data-study-guide>I Designed a Full App in Pencil, Then Claude Code Built It</a> - Matt Maher's progressive narrowing pattern (6 agents ideate, 3 refine, 6 explore states, then Claude Code builds) produced a working Next.js weather app in 15 minutes. The study guide details the two-way sync between design and code and why separating UI from business logic is the key enabler.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2014';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+    .digest-bigger-picture p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>
