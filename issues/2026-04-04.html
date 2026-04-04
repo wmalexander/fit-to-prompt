@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt -- April 4, 2026</title>
+  <meta name="description" content="Daily AI news roundup -- April 4, 2026. Claude Code finds a Linux kernel vulnerability hidden for 23 years, Yale economist argues AGI won't bother automating most jobs, Anthropic cracks down on OpenClaw after privilege escalation CVE, Netflix drops VOID model, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt -- Issue No. 22">
+  <meta property="og:description" content="Daily AI news roundup -- April 4, 2026. Claude Code finds a Linux kernel vulnerability hidden for 23 years, Yale economist argues AGI won't bother automating most jobs, Anthropic cracks down on OpenClaw after privilege escalation CVE, Netflix drops VOID model, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); gap: 1rem 1.25rem; } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); gap: 1rem 1.25rem; } }
+    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+<div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+<!-- MASTHEAD -->
+<header class="text-center mb-0">
+  <hr class="rule-accent mb-3">
+  <p class="masthead-motto mb-2">Your daily AI news digest</p>
+  <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+  <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+    <span>Vol. I</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Saturday, April 4, 2026</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Issue No. 22</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>8 Stories</span>
+  </div>
+  <hr class="rule-double">
+</header>
+
+<!-- LEAD STORY -->
+<section class="mt-6 mb-4">
+  <div class="lead-grid">
+    <div>
+      <div class="kicker">AI Security</div>
+      <a href="https://mtlynch.io/claude-code-found-linux-vulnerability/" target="_blank" rel="noopener" class="story-link">
+        <h2 class="headline-lead mb-3">Claude Code Found a Linux Vulnerability Hidden for 23 Years</h2>
+      </a>
+      <p class="byline mb-3">mtlynch.io &middot; Apr 3</p>
+      <div class="newspaper-body">
+        <p>Nicholas Carlini, a research scientist at Anthropic, reported at the [un]prompted AI security conference that he used Claude Code to find multiple remotely exploitable security vulnerabilities in the Linux kernel, including one that sat undiscovered for 23 years.</p>
+        <p>The finding underscores a growing role for AI in offensive and defensive cybersecurity, where large language models can systematically scan massive codebases for subtle flaws that human reviewers have overlooked for decades.</p>
+      </div>
+    </div>
+    <div>
+      <div class="kicker">Workforce &middot; Economy</div>
+      <a href="https://fortune.com/2026/04/04/ai-jobs-future-not-important-enough-to-be-automated-yale/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-standard mb-2">A Yale Economist Says AGI Won't Automate Most Jobs, Because They're Not Worth the Trouble</h3>
+      </a>
+      <p class="byline mb-2">Fortune &middot; Apr 4</p>
+      <img src="https://fortune.com/img-assets/wp-content/uploads/2026/04/GettyImages-2184627874-e1775229963755.jpg" alt="AI and jobs" class="w-full aspect-[16/9] object-cover mb-3">
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Pascual Restrepo's new NBER paper argues it's not about what AI can do. It's about what AI will bother doing, and most human work doesn't make the cut.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule-thin my-4">
+
+<!-- MASONRY FLOW -->
+<section class="mb-2">
+  <div class="masonry-flow">
+
+    <!-- OpenClaw crackdown + CVE -- full width -->
+    <div class="story-wide">
+      <div class="kicker">AI Industry &middot; Security</div>
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+        <div>
+          <a href="https://news.ycombinator.com/item?id=47633396" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Anthropic Blocks OpenClaw From Claude Code Subscriptions After Critical Vulnerability Surfaces</h3>
+          </a>
+          <p class="byline mb-2">Hacker News &middot; Apr 4</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic announced that Claude subscription holders can no longer use their token limits with third-party tools like OpenClaw, citing capacity constraints and outsized strain on their systems. The move comes days after a CVSS 8.6 privilege escalation vulnerability (<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33579" target="_blank" rel="noopener" style="color:#8B0000;">CVE-2026-33579</a>) was disclosed in OpenClaw's device pairing system, which allowed unprivileged callers to approve admin-level access requests.</p>
+        </div>
+        <div>
+          <div style="background:#1a1a1a;padding:1.5rem;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:160px;">
+            <div style="font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:#dc2626;margin-bottom:0.5rem;">CVE-2026-33579</div>
+            <div style="font-family:'Inter',sans-serif;font-size:2rem;font-weight:900;color:#fff;letter-spacing:-0.02em;">CVSS 8.6</div>
+            <div style="font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.25rem;">High &middot; Privilege Escalation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Netflix VOID model -->
+    <div class="story-item">
+      <div class="kicker">AI Models &middot; Open Source</div>
+      <a href="https://www.reddit.com/r/LocalLLaMA/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">Netflix Drops First Public Model on Hugging Face: VOID (Video Object and Interaction Deletion)</h3>
+      </a>
+      <p class="byline mb-2">Reddit r/LocalLLaMA &middot; Apr 4</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Netflix released VOID, their first public AI model, on Hugging Face. The model handles video object and interaction deletion, generating major buzz in the local LLM community with over 1,400 upvotes. The release signals Netflix's first move into the open-source AI space.</p>
+    </div>
+
+    <!-- Mintlify virtual filesystem -->
+    <div class="story-item">
+      <div class="kicker">Developer Tools</div>
+      <a href="https://www.mintlify.com/blog/how-we-built-a-virtual-filesystem-for-our-assistant" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">How Mintlify Built a Virtual Filesystem for Their AI Assistant</h3>
+      </a>
+      <p class="byline mb-2">Mintlify &middot; Mar 24</p>
+      <img src="https://www.mintlify.com/images/featured/how-we-built-a-virtual-filesystem-for-our-assistant.png" alt="Mintlify virtual filesystem" class="w-full aspect-[16/9] object-cover mb-3">
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Mintlify replaced expensive sandboxes with ChromaFs, a virtual filesystem over Chroma, to give their docs AI assistant the ability to explore documentation like a developer would.</p>
+    </div>
+
+    <!-- Self-distillation paper -->
+    <div class="story-item">
+      <div class="kicker">Research &middot; Code Generation</div>
+      <a href="https://arxiv.org/abs/2604.01193" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-standard mb-2">Embarrassingly Simple Self-Distillation Improves Code Generation</h3>
+      </a>
+      <p class="byline mb-2">arXiv &middot; Apr 1</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Can a large language model improve at code generation using only its own raw outputs, without a verifier, a teacher model, or reinforcement learning? Researchers answer in the affirmative with simple self-distillation (SSD), a method that requires no external supervision.</p>
+    </div>
+
+    <!-- Cartoon + Fortune story -- span 2 -->
+    <div class="story-span-2">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+        <div style="text-align: center;">
+          <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-04-cartoon.png" alt="New Yorker-style cartoon: A robot interviewer asks a nervous human applicant, Tell me, what makes you think you can do this job better than a machine that can also do this job? A sign on the wall reads WE ARE HIRING HUMANS." class="w-full" style="display: block;">
+        </div>
+        <div>
+          <div class="kicker">Developer Tools &middot; Infrastructure</div>
+          <a href="https://simonwillison.net/2026/Apr/4/kyle-daigle/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">GitHub COO: 1 Billion Commits in 2025, Actions Usage Quadruples</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison &middot; Apr 4</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Kyle Daigle, GitHub's COO, shared new platform growth statistics: one billion commits in 2025, with GitHub Actions expanding from 500 million to 2.1 billion minutes weekly. The numbers paint a picture of developer activity accelerating alongside AI-assisted coding tools.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scramble Puzzle -->
+    <div class="story-item">
+      <div class="section-label" style="margin-bottom:0.75rem;">Scramble</div>
+      <style>
+        .scramble-container{font-family:'Inter',system-ui,sans-serif;font-size:0.8rem;color:#374151}
+        .scramble-word{display:flex;gap:3px;margin-bottom:0.5rem;align-items:center}
+        .scramble-word .letter-box{width:28px;height:28px;border:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;text-transform:uppercase}
+        .scramble-word .letter-box input{width:100%;height:100%;border:none;background:transparent;text-align:center;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;color:#1a1a1a;text-transform:uppercase;outline:none;padding:0}
+        .scramble-word .letter-box input:focus{background:#fff8dc}
+        .scramble-word .letter-box.correct input{color:#059669}
+        .scramble-word .letter-box.wrong input{color:#dc2626}
+        .scramble-word .hl{color:#8B0000;font-weight:800}
+        .scramble-clue{font-size:0.65rem;color:#6b7280;margin-bottom:0.75rem;line-height:1.4}
+        .scramble-given{font-family:'Inter',sans-serif;font-size:1rem;font-weight:800;letter-spacing:4px;color:#1a1a1a;margin-bottom:0.25rem}
+        .scramble-bonus-label{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#8B0000;margin-top:1rem;margin-bottom:0.35rem}
+        .scramble-bonus-clue{font-size:0.65rem;color:#6b7280;margin-bottom:0.5rem}
+        .scramble-check{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;background:#1a1a1a;color:#f8f8f8;border:none;padding:4px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:background 0.15s;margin-top:0.5rem}
+        .scramble-check:hover{background:#8B0000}
+        .scramble-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:4px;min-height:1em}
+      </style>
+      <div class="scramble-container">
+        <div>
+          <div class="scramble-given">N <span class="hl">I</span> X U L</div>
+          <div class="scramble-clue">OS where a 23-year-old vulnerability was hiding</div>
+          <div class="scramble-word" data-answer="LINUX" data-hl="1">
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+          </div>
+        </div>
+        <div>
+          <div class="scramble-given">L N <span class="hl">R</span> E K E</div>
+          <div class="scramble-clue">Core of an operating system</div>
+          <div class="scramble-word" data-answer="KERNEL" data-hl="2">
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+          </div>
+        </div>
+        <div>
+          <div class="scramble-given">D U L C E <span class="hl">A</span></div>
+          <div class="scramble-clue">Anthropic's AI that found the bug</div>
+          <div class="scramble-word" data-answer="CLAUDE" data-hl="2">
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+          </div>
+        </div>
+        <div>
+          <div class="scramble-given">L E <span class="hl">D</span> O M</div>
+          <div class="scramble-clue">What Netflix just dropped on Hugging Face</div>
+          <div class="scramble-word" data-answer="MODEL" data-hl="2">
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+            <div class="letter-box"><input maxlength="1"></div>
+          </div>
+        </div>
+        <div class="scramble-bonus-label">Bonus Word</div>
+        <div class="scramble-bonus-clue">Storage array, or what hackers do to your data (4 letters)</div>
+        <div class="scramble-word" data-answer="RAID" data-bonus="true">
+          <div class="letter-box"><input maxlength="1"></div>
+          <div class="letter-box"><input maxlength="1"></div>
+          <div class="letter-box"><input maxlength="1"></div>
+          <div class="letter-box"><input maxlength="1"></div>
+        </div>
+        <button class="scramble-check" onclick="checkScramble()">Check</button>
+        <div class="scramble-msg" id="scramble-msg"></div>
+      </div>
+      <script>
+      (function(){
+        var words=document.querySelectorAll('.scramble-word');
+        words.forEach(function(w){
+          var inputs=w.querySelectorAll('input');
+          inputs.forEach(function(inp,i){
+            inp.addEventListener('input',function(){
+              this.value=this.value.toUpperCase();
+              this.parentElement.classList.remove('correct','wrong');
+              if(this.value&&i<inputs.length-1)inputs[i+1].focus();
+            });
+            inp.addEventListener('keydown',function(e){
+              if(e.key==='Backspace'&&!this.value&&i>0){
+                inputs[i-1].focus();
+                inputs[i-1].value='';
+                inputs[i-1].parentElement.classList.remove('correct','wrong');
+              }
+            });
+          });
+        });
+        window.checkScramble=function(){
+          var correct=0,total=words.length;
+          words.forEach(function(w){
+            var answer=w.dataset.answer;
+            var inputs=w.querySelectorAll('input');
+            var guess='';
+            inputs.forEach(function(inp){guess+=inp.value.toUpperCase();});
+            if(guess===answer){
+              correct++;
+              inputs.forEach(function(inp){inp.parentElement.classList.add('correct');inp.parentElement.classList.remove('wrong');});
+            } else if(guess.length===answer.length){
+              inputs.forEach(function(inp){inp.parentElement.classList.add('wrong');inp.parentElement.classList.remove('correct');});
+            }
+          });
+          var msg=document.getElementById('scramble-msg');
+          if(correct===total)msg.textContent='All correct! You nailed it.';
+          else msg.textContent=correct+' of '+total+' correct.';
+        };
+      })();
+      </script>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBSCRIBE CTA -->
+<section class="subscribe-section my-8">
+  <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+    <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </div>
+    <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+  </form>
+</section>
+
+<hr class="rule-double my-6">
+
+<!-- FOOTER -->
+<footer class="text-center pb-8">
+  <hr class="rule-thin mb-6">
+  <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+  <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+  <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+  <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+</footer>
+
+</div>
+
+<!-- THE BIG PICTURE -- Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">An Anthropic researcher pointed Claude Code at the Linux kernel and it found a remotely exploitable heap buffer overflow that had been hiding in the NFS driver since March 2003. Five vulnerabilities total, with "hundreds of crashes" still awaiting validation. The same week, Anthropic cut off OpenClaw users from subscription billing after a CVSS 8.6 privilege escalation CVE surfaced in the tool's device pairing system, a Yale economist argued that AGI won't bother automating most human work because it's not economically worth the trouble, and Netflix quietly released its first open-source AI model. Today's issue is about who controls the tools that find the flaws, who decides which flaws get fixed, and the strange economics of a world where AI labor is simultaneously too powerful and too expensive to deploy everywhere.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-04-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">AI Finds What Humans Missed</h4>
+        <ul class="digest-bullets">
+          <li><strong>Claude Code Finds 23-Year-Old Linux Kernel Vulnerability</strong> - Nicholas Carlini used a simple automated script that pointed Claude Opus 4.6 at individual kernel source files, framing the task as a capture-the-flag competition. The primary finding: a heap buffer overflow in the NFSv4.0 LOCK replay cache where a 1,056-byte denial response overflows into a 112-byte buffer, leaking approximately 944 bytes of kernel heap memory over the network. Five total vulnerabilities were reported and fixed, including an io_uring out-of-bounds read and ksmbd use-after-free bugs. Carlini's assessment: "We now have a number of remotely exploitable heap buffer overflows in the Linux kernel. I have never found one of these in my life before. This is very, very, very hard to do." The bottleneck is no longer discovery but verification and responsible disclosure.</li>
+          <li><strong>Self-Distillation Improves Code Generation</strong> - Researchers showed that Qwen3-30B-Instruct improved from 42.4% to 55.3% pass@1 on LiveCodeBench v6 using only its own outputs for training, with no verifier, no teacher model, and no reinforcement learning. The method resolves what the authors call a "precision-exploration conflict in LLM decoding," selectively suppressing unhelpful token distributions while maintaining beneficial diversity. The gains concentrated on harder problems, suggesting self-improvement scales where it matters most.</li>
+        </ul>
+
+        <h4 class="digest-theme">Platform Control and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Blocks OpenClaw After Critical CVE</strong> - Anthropic emailed subscribers that third-party harnesses like OpenClaw can no longer use subscription token limits, citing "outsized strain" on systems. The timing is notable: CVE-2026-33579 (CVSS 8.6) disclosed days earlier revealed that OpenClaw's device pairing system allowed unprivileged users to approve admin-level access requests through missing scope validation. One HN commenter called OpenClaw "a walking attack surface." The competitive dimension is impossible to ignore: OpenAI owns OpenClaw. Anthropic offered a one-time credit and up to 30% discount on token bundles, but community sentiment ran negative, with critics noting that Claude Code's own /loop and scheduled tasks enable similar automated usage patterns. Anthropic's estimated revenue run rate: $19 billion, up from $1 billion at the start of 2025.</li>
+          <li><strong>GitHub's Commit Volume Is Exploding</strong> - GitHub saw 1 billion commits in all of 2025, but the current pace is 275 million commits per week, projecting to roughly 14 billion commits annually if sustained. That's a 14x year-over-year increase. GitHub Actions usage quadrupled from 500 million minutes per week in 2023 to 2.1 billion minutes now. The numbers suggest AI-assisted coding isn't just changing how developers write code; it's changing how much code gets written.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Economics of Automation</h4>
+        <ul class="digest-bullets">
+          <li><strong>Yale Economist: Most Jobs "Not Worth" Automating</strong> - Pascual Restrepo's NBER paper "We Won't Be Missed" divides work into "bottleneck work" (energy, infrastructure, science, defense) and "supplementary work" (hospitality, arts, customer support). AGI will automate bottleneck roles using compute resources but ignore supplementary work as economically inefficient to replace. The striking claim: total human brain computing capacity equals roughly 10^18 flops, while future computational resources could reach 10^54 flops, making human labor "economically marginal." In post-AGI economies, labor's share of GDP converges to zero, with most income accruing to compute owners. Surviving jobs persist not because humans are better, but because replicating them computationally is not justified. The paper cites current data showing construction electricians earning $81,800 annually (a 32% premium) on data center projects.</li>
+        </ul>
+
+        <h4 class="digest-theme">Building Smarter Infrastructure</h4>
+        <ul class="digest-bullets">
+          <li><strong>Mintlify's ChromaFs: From 46 Seconds to 100 Milliseconds</strong> - Mintlify replaced expensive sandboxed environments for their AI assistant with ChromaFs, a virtual filesystem that intercepts UNIX commands and translates them into database queries. The results: P90 boot time dropped from 46 seconds to 100 milliseconds, annual infrastructure cost fell from $70,000 to effectively zero marginal cost, and the system now handles 30,000+ daily conversations across hundreds of thousands of users. The architecture uses Chroma for coarse file filtering, Redis for bulk prefetching, and lazy S3 pointers for large OpenAPI specs.</li>
+          <li><strong>Netflix Drops VOID on Hugging Face</strong> - Netflix released their first public AI model, VOID (Video Object and Interaction Deletion), generating over 1,400 upvotes on r/LocalLLaMA. The model handles removing objects and interactions from video, a practical tool for content production workflows. The release marks Netflix's first contribution to the open-source AI ecosystem.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The thread connecting every story in today's issue is the <em>asymmetry between what AI can find and what institutions are prepared to handle</em>. Carlini's Linux kernel work is the clearest example: Claude Code discovered five serious vulnerabilities including a remotely exploitable 23-year-old heap overflow, but the bottleneck isn't discovery anymore. It's the human process of verification, responsible disclosure, and patching. He has "hundreds of crashes" waiting in a queue. The tool is faster than the system built to receive its output.</p>
+
+        <p>The same asymmetry appears in the OpenClaw story, but running in the opposite direction. CVE-2026-33579 revealed a privilege escalation flaw with a CVSS 8.6 rating, and Anthropic responded by cutting off subscription access for all OpenClaw users. The security fix existed (upgrade to version 2026.3.28), but Anthropic's response went beyond the CVE, restricting an entire category of third-party tooling. The HN community noticed the competitive angle immediately: OpenAI owns OpenClaw. Whether the crackdown was driven by legitimate security concerns, capacity management, or competitive positioning, the effect is the same. Platform owners can redefine the terms of access unilaterally. One day your workflow runs on subscription billing; the next day you need pay-as-you-go.</p>
+
+        <p>Restrepo's paper reframes this asymmetry at the economic level. His "bottleneck versus supplementary" distinction implies that AI won't replace <em>most</em> workers, not because it can't, but because the economic return doesn't justify the compute. The surviving jobs, hospitality, arts, live performance, persist because automation costs exceed the value of the work. But his own numbers contain a darker implication: labor's share of GDP converging to zero means that even if jobs persist, their economic power doesn't. You keep your job, but the economy is structured around compute ownership, not labor contribution. The $81,800 construction electricians wiring data centers are building the infrastructure that makes their own labor economically marginal.</p>
+
+        <p>GitHub's 14x increase in annual commit volume and Mintlify's 460x improvement in boot time both point to the same conclusion: the tools are getting dramatically faster, cheaper, and more capable. But the institutions, security processes, labor markets, platform governance, licensing frameworks, are not scaling at the same rate. The gap between tool velocity and institutional readiness is today's real story.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>We're watching a shift from AI as an assistant to AI as an autonomous agent, and the infrastructure isn't ready. When Carlini points Claude Code at kernel source files and walks away, that's not assisted coding. That's autonomous security research at a scale no human team could match. When OpenClaw runs continuously on a user's behalf, consuming tokens at rates that break subscription economics, that's not a chatbot. That's an autonomous agent with its own resource footprint. Anthropic's response, cutting off subscription access, is a platform owner grappling with the reality that autonomous AI agents behave differently than human users, and pricing models built for human interaction patterns don't survive first contact with agents running 24/7.</p>
+
+        <p>The self-distillation paper adds a subtler dimension. If models can meaningfully improve at code generation using only their own outputs, with no external supervision or verifier, then the loop between AI capability and AI deployment tightens. Today's 30% improvement on hard coding problems becomes tomorrow's baseline. Combined with GitHub's commit explosion (14 billion projected annual commits, most presumably AI-assisted), the picture is of a system that's accelerating its own capability while the governance structures lag further behind. Restrepo's economic framework suggests this acceleration has a natural endpoint: compute becomes the primary factor of production, labor becomes supplementary, and the question isn't whether AI takes your job but whether your job's economic value justifies the compute cost of replacing you.</p>
+
+        <p>The uncomfortable pattern across all of today's stories is that the people and institutions most affected have the least visibility into the decisions being made. Linux users didn't know about a 23-year-old kernel vulnerability. OpenClaw users didn't know their access would be cut until the email arrived. And if Restrepo is right, most workers won't know their jobs have become "supplementary" until the GDP data confirms it. The tools move first. The understanding follows.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>AI security research velocity versus disclosure infrastructure.</strong> Carlini's "hundreds of crashes" queue is a leading indicator. If AI tools can find vulnerabilities faster than the CVE/patch process can handle them, the security community will need fundamentally new disclosure frameworks. Watch whether other AI labs launch similar automated kernel auditing programs, and whether the Linux Foundation responds with AI-specific vulnerability triage processes.</li>
+          <li><strong>Platform restrictions on autonomous agents.</strong> Anthropic's OpenClaw crackdown is likely the first of many. As AI agents consume resources at non-human rates, every SaaS platform will face the same pricing mismatch. Watch for similar restrictions from OpenAI, Google, and others, and whether a new pricing paradigm emerges for agent-versus-human usage patterns.</li>
+          <li><strong>The labor share data.</strong> Restrepo's prediction that labor's share of GDP converges to zero is testable. Watch Q2 and Q3 productivity data alongside hiring numbers, particularly in the "bottleneck" categories he identifies (energy, infrastructure, defense). If productivity surges while employment stagnates in those sectors, his framework gains real predictive power.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
