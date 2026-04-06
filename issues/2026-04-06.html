@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt -- April 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup -- April 6, 2026. Microsoft classifies Copilot as entertainment-only, Japan deploys physical AI robots to fill labor gaps, AI writing ethics debate heats up, agents outpace org review processes, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt -- Issue No. 23">
+  <meta property="og:description" content="Daily AI news roundup -- April 6, 2026. Microsoft classifies Copilot as entertainment-only, Japan deploys physical AI robots to fill labor gaps, AI writing ethics debate heats up, agents outpace org review processes, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .img-placeholder { background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%); position: relative; overflow: hidden; }
+    .img-placeholder::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px); }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+<!-- MASTHEAD -->
+<header class="text-center mb-0">
+  <hr class="rule-accent mb-3">
+  <p class="masthead-motto mb-2">Your daily AI news digest</p>
+  <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+  <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+    <span>Vol. I</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Monday, April 6, 2026</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Issue No. 23</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>20 Stories</span>
+  </div>
+  <hr class="rule-double">
+</header>
+
+<!-- LEAD STORY -->
+<section class="mt-6 mb-4">
+  <div class="lead-grid">
+    <div>
+      <div class="kicker">AI Policy &middot; Technology</div>
+      <a href="https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/" target="_blank" rel="noopener" class="story-link">
+        <h2 class="headline-lead mb-3">Copilot Is 'For Entertainment Purposes Only,' According to Microsoft's Terms of Service</h2>
+      </a>
+      <p class="byline mb-3">TechCrunch &middot; Apr 5</p>
+      <div class="newspaper-body">
+        <p>Microsoft's terms of service classify its Copilot AI assistant as software intended for "entertainment purposes only," a legal classification that effectively disclaims liability for any advice, code, or output the tool generates for the millions of enterprise and consumer users who rely on it daily.</p>
+        <p>The revelation raises uncomfortable questions about the gap between how AI companies market their products and the legal protections they quietly build into their terms of use, particularly as businesses integrate these tools into critical workflows.</p>
+      </div>
+    </div>
+    <div>
+      <div class="kicker">Video &middot; Strategy</div>
+      <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/your-agent-produces-at-100x-your-org-reviews-at-3x-thats-the-problem-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+        <img src="https://img.youtube.com/vi/kVPVmz0qJvY/maxresdefault.jpg" alt="Your Agent Produces at 100x" class="w-full aspect-video object-cover mb-3">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+        <h3 class="headline-standard mb-2">Your Agent Produces at 100x. Your Org Reviews at 3x. That's the Problem.</h3>
+      </a>
+      <p class="byline mb-2">Nate B Jones &middot; YouTube &middot; Apr 5</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Jones argues that AI agents expose organizational bottlenecks: agents produce at 100x speed but orgs review at 3x, requiring clarity of intent, clean data, and fundamental process redesign.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule-thin my-4">
+
+<!-- MASONRY FLOW -->
+<section class="mb-2">
+  <div class="masonry-flow">
+
+    <!-- Japan physical AI -- full width -->
+    <div class="story-wide">
+      <div class="kicker">Physical AI &middot; Robotics</div>
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+        <div>
+          <a href="https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">In Japan, the Robot Isn't Coming for Your Job; It's Filling the One Nobody Wants</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 5</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Japan is accelerating the deployment of physical AI systems from experimental pilots into real-world operations. Driven by severe labor shortages rather than workforce displacement concerns, the country is proving that embodied AI can fill roles in manufacturing, elder care, and logistics that humans increasingly refuse to take.</p>
+        </div>
+        <div>
+          <img src="https://techcrunch.com/wp-content/uploads/2022/09/GettyImages-965917342.jpg" alt="Robot in Japanese factory" class="w-full aspect-[16/9] object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- WashPost AI writing ethics -->
+    <div class="story-item">
+      <div class="kicker">Opinion &middot; Ethics</div>
+      <a href="https://www.washingtonpost.com/opinions/2026/04/05/artificial-intelligence-chatbot-writing-ethics/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">The Ethics of AI-Generated Writing Are No Longer Hypothetical</h3>
+      </a>
+      <p class="byline mb-2">Washington Post &middot; Apr 5</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">An opinion piece exploring the ethical dimensions of AI chatbot-generated writing and its implications for authorship, creative integrity, and the blurred line between human and machine expression in an age when most readers cannot tell the difference.</p>
+    </div>
+
+    <!-- CNBC virtual try-on -->
+    <div class="story-item">
+      <div class="kicker">AI Business &middot; Retail</div>
+      <a href="https://www.cnbc.com/2026/04/05/ai-retail-start-ups-virtual-try-on-tech-margins.html" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">AI Retail Startups Bet on Virtual Try-On Tech to Boost Margins</h3>
+      </a>
+      <p class="byline mb-2">CNBC &middot; Apr 5</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Retail startups are leveraging AI-powered virtual try-on technology to cut return rates and improve profit margins in e-commerce, signaling a shift from gimmick to core business strategy.</p>
+    </div>
+
+    <!-- Claude Cowork study guide -->
+    <div class="story-item">
+      <div class="kicker">Video &middot; Workflow</div>
+      <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/i-asked-claude-cowork-about-my-email-it-became-a-running-system-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+        <img src="https://img.youtube.com/vi/HEq7vYw-hx4/maxresdefault.jpg" alt="Claude Cowork email system" class="w-full aspect-video object-cover mb-3">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+        <h3 class="headline-standard mb-2">I Asked Claude Cowork About My Email. It Became a Running System</h3>
+      </a>
+      <p class="byline mb-2">Matt Maher &middot; YouTube &middot; Apr 5</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Matt Maher demonstrates how Claude Cowork can transform a simple email question into a fully automated running system, showcasing practical AI workflow automation without writing a single line of code.</p>
+    </div>
+
+    <!-- Cartoon + SpaceX orbital data centers -- spans 2 columns -->
+    <div class="story-span-2">
+      <div class="kicker">Infrastructure &middot; Space</div>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+        <div style="text-align: center;">
+          <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-06-cartoon.png" alt="New Yorker-style cartoon: A conference room where a man presents an enormous AI OUTPUT flowchart while a tiny APPROVAL PROCESS sticky note sits by a trash can. Caption: It wrote the entire codebase in six minutes. We should have the approval back by Q3." class="w-full" style="display: block;">
+        </div>
+        <div>
+          <a href="https://techcrunch.com/2026/04/05/can-orbital-data-centers-help-justify-a-massive-valuation-for-spacex/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Can Orbital Data Centers Help Justify a Massive Valuation for SpaceX?</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 5</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">TechCrunch's Equity podcast debates whether space-based data centers could support SpaceX's substantial company valuation, examining Elon Musk's vision for orbital AI infrastructure and the engineering challenges that stand in the way.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Building with AI (Willison link) -->
+    <div class="story-item">
+      <div class="kicker">Developer Tools &middot; AI Coding</div>
+      <a href="https://simonwillison.net/2026/Apr/5/building-with-ai/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-standard mb-2">Eight Years of Wanting, Three Months of Building With AI</h3>
+      </a>
+      <p class="byline mb-2">Simon Willison &middot; Apr 5</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Lalit Maganti spent eight years contemplating and three months building syntaqlite with AI assistance. Simon Willison highlights both the benefits and significant pitfalls of using AI agents for software development, particularly regarding architectural decisions.</p>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:1rem 0;">
+      <a href="https://lalitm.com/post/building-syntaqlite-ai/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-standard mb-1">The Original: Building Syntaqlite With AI</h3>
+      </a>
+      <p class="byline mb-2">Lalit Maganti &middot; Apr 6</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Maganti's firsthand account of building a high-quality SQLite developer tool in three months using AI coding agents, and where AI created as many challenges as it solved.</p>
+    </div>
+
+    <!-- Running Gemma 4 locally -->
+    <div class="story-item">
+      <div class="kicker">Developer Tools &middot; Local AI</div>
+      <a href="https://ai.georgeliu.com/p/running-google-gemma-4-locally-with" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-standard mb-2">Running Google Gemma 4 Locally With LM Studio's New Headless CLI &amp; Claude Code</h3>
+      </a>
+      <p class="byline mb-2">George Liu &middot; Apr 6</p>
+      <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0321dea-0461-40ae-82da-babbd6fa108e_985x402.png" alt="Gemma 4 running locally" class="w-full aspect-[16/9] object-cover mb-3">
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">A guide to setting up Gemma 4 26B for local inference on macOS using LM Studio 0.4.0's new llmster and lms CLI tools, with integration into Claude Code for hybrid local/cloud workflows.</p>
+    </div>
+
+    <!-- Acronym Quiz puzzle -->
+    <div class="story-item">
+      <div class="section-label" style="margin-bottom:0.75rem;">Acronym Quiz</div>
+      <div style="font-family:'Inter',sans-serif;color:#1a1a1a;">
+        <p style="font-size:12px;line-height:1.5;margin:0 0 14px;color:#444;">Test your AI vocabulary. What does each acronym stand for?</p>
+        <form id="aq-form" onsubmit="return false;" style="margin:0;">
+          <div id="aq-questions" style="display:flex;flex-direction:column;gap:14px;"></div>
+          <button id="aq-submit" onclick="aqScore()" style="display:block;width:100%;margin-top:16px;padding:9px 0;background:#8B0000;color:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;cursor:pointer;">Submit</button>
+          <div id="aq-result" style="display:none;margin-top:12px;padding:10px;border:1px solid #1a1a1a;text-align:center;">
+            <span style="font-size:20px;font-weight:800;color:#8B0000;" id="aq-score-num"></span>
+            <span style="font-size:12px;color:#444;"> / 6 correct</span>
+          </div>
+        </form>
+      </div>
+      <script>
+      (function(){
+        var qs=[
+          {q:"RAG",a:["Retrieval-Augmented Generation","Recursive Attention Gate","Rapid Algorithm Grouping"],c:0},
+          {q:"RLHF",a:["Reinforcement Learning from Human Feedback","Recurrent Latent Hidden Features","Regularized Linear Heuristic Framework"],c:0},
+          {q:"LoRA",a:["Layered Optimization for Recursive Architectures","Low-Rank Adaptation","Logarithmic Rank Approximation"],c:1},
+          {q:"MoE",a:["Model of Embeddings","Multi-output Encoder","Mixture of Experts"],c:2},
+          {q:"CoT",a:["Chain of Thought","Cascade of Tokens","Compression of Tensors"],c:0},
+          {q:"DPO",a:["Deep Proximal Optimization","Distributed Parallel Operations","Direct Preference Optimization"],c:2}
+        ];
+        var wrap=document.getElementById("aq-questions");
+        qs.forEach(function(item,i){
+          var d=document.createElement("div");
+          d.style.cssText="padding-bottom:12px;"+(i<qs.length-1?"border-bottom:1px dotted #ccc;":"");
+          var h='<div style="font-size:16px;font-weight:800;letter-spacing:0.04em;margin-bottom:6px;">'+item.q+'</div>';
+          item.a.forEach(function(opt,j){
+            h+='<label style="display:block;font-size:11.5px;line-height:1.4;padding:3px 0;cursor:pointer;color:#333;">'
+              +'<input type="radio" name="aq'+i+'" value="'+j+'" style="margin-right:6px;accent-color:#8B0000;"> '
+              +opt+'</label>';
+          });
+          d.innerHTML=h;
+          wrap.appendChild(d);
+        });
+        window.aqScore=function(){
+          var score=0;
+          var answered=true;
+          qs.forEach(function(item,i){
+            var sel=document.querySelector('input[name="aq'+i+'"]:checked');
+            if(!sel){answered=false;return;}
+            var labels=document.querySelectorAll('input[name="aq'+i+'"]');
+            labels.forEach(function(r,j){
+              var lbl=r.parentElement;
+              lbl.style.fontWeight="normal";
+              lbl.style.color="#333";
+              if(j===item.c){lbl.style.color="#166534";lbl.style.fontWeight="700";}
+              if(parseInt(r.value)!==item.c&&r.checked){lbl.style.color="#8B0000";lbl.style.textDecoration="line-through";}
+              r.disabled=true;
+            });
+            if(parseInt(sel.value)===item.c) score++;
+          });
+          if(!answered){alert("Answer all six questions first!");return;}
+          document.getElementById("aq-submit").style.display="none";
+          var rd=document.getElementById("aq-result");
+          rd.style.display="block";
+          document.getElementById("aq-score-num").textContent=score;
+        };
+      })();
+      </script>
+    </div>
+
+    <!-- Google AI Edge Gallery -- spans 2 columns -->
+    <div class="story-span-2">
+      <div class="kicker">Google AI &middot; On-Device</div>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+        <div style="background:linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:160px;text-align:center;">
+          <div style="font-family:'Inter',sans-serif;font-weight:300;font-size:0.7rem;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:0.5rem;">Google</div>
+          <div style="font-family:'Inter',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;letter-spacing:-0.02em;">AI Edge Gallery</div>
+          <div style="font-family:'Inter',sans-serif;font-weight:400;font-size:0.65rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.25rem;">On-Device LLMs</div>
+        </div>
+        <div>
+          <a href="https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Google AI Edge Gallery: Run Gemma 4 Models Locally on Your Phone</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison &middot; Apr 6</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Google's new iPhone app runs Gemma 4 models entirely on-device, featuring image analysis, audio transcription, and interactive tool-calling demonstrations. No cloud, no API keys, no data leaving your phone.</p>
+          <div style="margin-top:0.75rem;">
+            <a href="https://apps.apple.com/nl/app/google-ai-edge-gallery/id6749645337" target="_blank" rel="noopener" style="font-family:'Inter',sans-serif;font-size:0.7rem;color:#8B0000;text-decoration:none;font-weight:600;">Download on the App Store &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wire briefs section -->
+    <div class="story-wide">
+      <div class="section-label">Wire Briefs</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6">
+        <div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Apr/6/cleanup-claude-code-paste/" target="_blank" rel="noopener">Cleanup Claude Code Paste: A Tool to Strip Formatting Artifacts From Terminal Output</a>
+            <div class="wire-source">Simon Willison &middot; Apr 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Apr/6/datasette-ports-2/" target="_blank" rel="noopener">Datasette-Ports 0.2: Find Running Instances Without Installing Datasette</a>
+            <div class="wire-source">Simon Willison &middot; Apr 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Apr/5/syntaqlite/" target="_blank" rel="noopener">Syntaqlite Playground: SQL Validation and Parsing in Your Browser via WASM</a>
+            <div class="wire-source">Simon Willison &middot; Apr 5</div>
+          </div>
+        </div>
+        <div>
+          <div class="wire-item">
+            <a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener">Caveman: Claude Code Skill That Cuts Token Usage ~75% With Terse Language</a>
+            <div class="wire-source">GitHub &middot; 2.9k stars &middot; Apr 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://github.com/fikrikarim/parlor" target="_blank" rel="noopener">Parlor: On-Device Real-Time Multimodal AI for Voice and Vision Conversations</a>
+            <div class="wire-source">GitHub &middot; 473 stars &middot; Apr 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://github.com/kessler/gemma-gem" target="_blank" rel="noopener">Gemma-Gem: Personal AI Assistant Running Gemma 4 Entirely in the Browser via WebGPU</a>
+            <div class="wire-source">GitHub &middot; 221 stars &middot; Apr 6</div>
+          </div>
+        </div>
+        <div>
+          <div class="wire-item">
+            <a href="https://github.com/arman-bd/guppylm" target="_blank" rel="noopener">GuppyLM: A Tiny 9M-Parameter Language Model Trained to Think Like a Fish</a>
+            <div class="wire-source">GitHub &middot; 987 stars &middot; Apr 6</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://github.com/mohshomis/modo" target="_blank" rel="noopener">Modo: Open-Source AI IDE That Plans Before It Codes</a>
+            <div class="wire-source">GitHub &middot; 77 stars &middot; Apr 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBSCRIBE CTA -->
+<section class="subscribe-section my-8">
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+    method="post"
+    target="popupwindow"
+    class="subscribe-box"
+  >
+    <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </div>
+    <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+  </form>
+</section>
+
+<hr class="rule-double my-6">
+
+<!-- FOOTER -->
+<footer class="text-center pb-8">
+  <hr class="rule-thin mb-6">
+  <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+  <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+  <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+  <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+</footer>
+
+  </div>
+
+<!-- STUDY GUIDE MODAL -->
+<div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+  <div class="sg-modal-container">
+    <div class="sg-modal-header">
+      <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+      <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+    </div>
+    <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+  </div>
+</div>
+<style>
+  .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+  .sg-modal-overlay.active { display: flex; }
+  .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+  .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+  .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+  .sg-modal-open-external:hover { color: #8B0000; }
+  .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+  .sg-modal-close:hover { color: #1a1a1a; }
+  .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+  @media print { .sg-modal-overlay { display: none !important; } }
+</style>
+<script>
+(function() {
+  var overlay = document.getElementById('sg-modal');
+  var iframe = document.getElementById('sg-modal-iframe');
+  var externalLink = document.getElementById('sg-modal-external');
+  var closeBtn = document.getElementById('sg-modal-close');
+  function openModal(url) {
+    iframe.src = url;
+    externalLink.href = url;
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    iframe.src = 'about:blank';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[data-study-guide]');
+    if (link) {
+      e.preventDefault();
+      openModal(link.href);
+    }
+  });
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+  });
+})();
+</script>
+
+<!-- THE BIG PICTURE -- Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Microsoft tells millions of enterprise users to trust Copilot with their work, then buries "for entertainment purposes only" in the terms of service. Across the Pacific, Japan is deploying robots not to replace workers but to fill jobs nobody wants. A $14,000 voice agent looked functional on day one but collapsed by month two because nobody mapped the actual process first. And a developer spent eight years thinking about a project, then built it in three months with AI, only to throw away the entire first month's work. Today's issue is about the gap between what AI tools promise and what organizations are actually prepared to handle.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-06-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Trust Gap</h4>
+        <ul class="digest-bullets">
+          <li><strong>Microsoft's Copilot: Entertainment Only</strong> - Microsoft aggressively markets Copilot as a productivity powerhouse deeply integrated into Office 365, while its terms of service simultaneously classify the tool as "for entertainment purposes only." This isn't just legal fine print. It's a structural disclaimer that effectively absolves Microsoft of liability for any advice, code, or output Copilot generates. The gap between marketing and legal language is becoming an industry pattern: companies sell AI as indispensable while quietly hedging that nothing it produces should be trusted.</li>
+          <li><strong>Washington Post: AI Writing Ethics Hit the Newsroom</strong> - A Washington Post opinion contributor describes asking a chatbot to compile social media analysis, only to receive results "riddled with hallucinations, unnecessary apologies, and search results that missed the mark entirely." The piece argues that AI's promise as a journalistic tool collides with its current inability to produce reliably accurate outputs, and that transparent disclosure of AI use in newsrooms is no longer optional.</li>
+        </ul>
+
+        <h4 class="digest-theme">AI Meets the Physical World</h4>
+        <ul class="digest-bullets">
+          <li><strong>Japan's Robots Fill the Jobs Nobody Wants</strong> - Japan is transitioning physical AI from pilot projects into sustained deployment across manufacturing, elder care, and logistics, driven by demographic decline so severe that the country simply cannot fill positions with human workers. The narrative is fundamentally different from Western automation anxiety: these robots aren't displacing workers, they're filling roles that have been vacant for years. Salesforce Ventures, Global Brain, and Woven Capital (Toyota's investment arm) have all backed the sector, signaling that this is no longer experimental.</li>
+          <li><strong>Virtual Try-On Tech Becomes a Margin Play</strong> - CNBC reports that ASOS achieved a 160 basis point reduction in returns by partnering with deep-tech startup AIUTA on virtual try-on technology. Catches, another AI startup in the space, projects a 10% conversion increase and 20-to-30x ROI for brand partners. What was once a gimmick is becoming core retail infrastructure, with Amazon, Adobe, and Google all developing competing solutions.</li>
+          <li><strong>Orbital Data Centers: SpaceX's Valuation Play</strong> - TechCrunch's Equity podcast debates whether Elon Musk's vision for space-based data centers, with their unlimited solar power, natural cooling, and zero land constraints, could generate enough revenue to justify SpaceX's valuation. The engineering challenges remain enormous, but the terrestrial data center industry is running into genuine physical limits.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents vs. Organizations</h4>
+        <ul class="digest-bullets">
+          <li><strong>The 100x Production, 3x Review Problem</strong> - Nate B Jones presents a concrete case study: a $14,000 voice agent that looked functional but created scattered, unstructured data with no schema, making funnel measurement impossible by month two. His core framework: agents don't solve organizational problems, they <em>expose</em> them. Jones offers five commandments for deployment, audit before automating (including tribal knowledge), fix data first, redesign the org for throughput, build observability on day one, and scope authority deliberately. The most striking insight: when ad creative scales from 20 to 2,000 pieces, humans shift from execution to system design and quality management, a fundamentally different skill set that nobody is training for.</li>
+          <li><strong>Claude Cowork: From Email Question to Running System</strong> - Matt Maher's demonstration of building a scheduled email dashboard in Claude Cowork surfaces a deeper principle: the most common AI prompting mistake is over-specifying implementation details instead of describing desired outcomes. His system processed 13 emails out of 123 in its first run, and the dashboard design went through seven rounds of iterative agent-team refinement. The concept of "personal software," tools built for exactly one person where changes happen conversationally, challenges every assumption in traditional software development.</li>
+        </ul>
+
+        <h4 class="digest-theme">Building With AI (and Rebuilding After)</h4>
+        <ul class="digest-bullets">
+          <li><strong>Eight Years of Wanting, Three Months of Building</strong> - Lalit Maganti's account of building syntaqlite is the most honest assessment of AI-assisted development published this year. AI overcame eight years of paralysis by "converting abstract concerns into concrete problems," but the first month of "vibe-coding" produced 500+ tests and completely unsustainable architecture that had to be discarded. His critical distinction: AI excels where correctness is objectively verifiable (code compiles, tests pass) but fails at architectural decisions where no such metric exists. The successful rebuild treated AI as "autocomplete on steroids" with human ownership of all decisions. Simon Willison highlights the "uncomfortable parallel between using AI coding tools and playing slot machines."</li>
+          <li><strong>Gemma 4 at 51 Tokens/Second on a Laptop</strong> - George Liu achieves 51 tokens/second running Gemma 4 26B locally on a MacBook Pro M4 Pro with 48GB, using LM Studio 0.4.0's new headless CLI. The Q4_K_M quantization occupies 17.99GB, scaling to 37.48GB at 256K context. Key finding: speculative decoding caused a 54% slowdown with MoE models, and the system showed real memory pressure at 48GB with 27.49GB swap used during testing. He provides a shell function for routing Claude Code through the local server, enabling hybrid local/cloud workflows.</li>
+          <li><strong>Google AI Edge Gallery</strong> - Simon Willison calls it "a terrible name, really great app." Google's official iPhone app runs Gemma 4 models entirely on-device, with the E2B variant requiring a 2.54GB download and delivering "fast and genuinely useful" performance. The app includes eight interactive tool-calling demo widgets, though Willison notes the tool-calling demo "froze the app when I tried to add a follow-up prompt." This is the first time a local model vendor has released an official iPhone app for on-device inference.</li>
+        </ul>
+
+        <h4 class="digest-theme">Open Source Roundup</h4>
+        <ul class="digest-bullets">
+          <li><strong>Caveman</strong> (2,900 stars) reduces Claude Code token usage by ~75% by making the AI speak in terse, caveman-style language while preserving technical accuracy. <strong>GuppyLM</strong> (999 stars) is a 9M-parameter model trained to talk like a pet fish, designed as an educational tool that demystifies LLM training in a 5-minute Colab notebook. <strong>Parlor</strong> (484 stars) enables real-time multimodal voice and vision conversations running entirely on-device using Gemma 4 E2B, with ~2.5-3 second end-to-end latency on an M3 Pro. <strong>Gemma-Gem</strong> (225 stars) is a Chrome extension running Gemma 4 entirely via WebGPU with native DOM tools. <strong>Modo</strong> (79 stars) is an open-source AI IDE that introduces spec-driven development where prompts become structured requirements before code generation.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The thread connecting every story in today's issue is the <em>gap between AI capability and institutional readiness</em>. Microsoft can build Copilot into every Office product on earth, but its own lawyers won't let it be classified as anything more than entertainment. Japan can deploy physical robots in factories, but only because demographic collapse left no alternative, not because the regulatory and cultural frameworks were ready. Nate B Jones's $14,000 voice agent could handle calls at superhuman speed, but the org had no schema, no observability, and no plan for what happens when output scales 100x while review capacity stays at 3x.</p>
+
+        <p>Lalit Maganti's syntaqlite story crystallizes this at the individual level. AI let him build in three months what he'd contemplated for eight years. But the first month's work, 500+ tests, a functioning prototype, all of it was architecturally unsound. AI is exceptional at implementation where there's an objective correctness metric. It's actively dangerous at design decisions where no such metric exists. The slot machine parallel Willison highlights is real: the tool keeps producing outputs that <em>look</em> right, and the human keeps pulling the lever, and fatigue compounds the judgment errors until you're rebuilding from scratch.</p>
+
+        <p>The same pattern plays out at the infrastructure layer. George Liu can run Gemma 4 locally at 51 tokens/second, but 48GB of RAM isn't enough, swapping 27.49GB to disk during testing. Google ships an iPhone app that runs models on-device, but tool-calling freezes the app. Caveman cuts Claude Code token costs by 75%, but only by stripping the natural language interface that's supposed to be the whole point of LLMs. Every solution introduces its own constraint. The tools are ready. The environments they run in are not.</p>
+
+        <p>What makes this moment distinctive is that the gap isn't closing. It's widening. Microsoft's terms of service are getting more conservative while its marketing gets more aggressive. Japan's labor shortage is deepening while its robot deployments are expanding. The open-source AI ecosystem is shipping faster while the organizational capacity to evaluate, integrate, and maintain these tools remains roughly constant. The tools accelerate. The institutions don't.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>We're entering a phase where AI's most significant impact isn't the technology itself but the institutional stress tests it creates. Microsoft's "entertainment only" classification isn't a bug in legal drafting. It's a signal that the liability frameworks for AI-generated output don't exist yet, and companies know it. Rather than wait for regulators to define the rules, they're preemptively disclaiming responsibility while maximizing adoption. This is rational behavior for individual companies and deeply irrational for the system as a whole: millions of professionals are building workflows around tools whose own makers won't vouch for their reliability.</p>
+
+        <p>Japan offers the most instructive counterexample. Instead of debating whether AI will take jobs, Japan deployed robots into roles that were already empty. The question wasn't "should we automate?" but "can we function without automation?" This isn't just a demographic story. It's a preview of how AI adoption actually happens at scale: not through top-down strategic transformation, but through the quiet pressure of operational necessity. The organizations that adopt AI fastest won't be the ones with the best AI strategies. They'll be the ones with no other choice.</p>
+
+        <p>Meanwhile, the developer ecosystem is producing a striking split. On one side, tools like Gemma-Gem and Google's AI Edge Gallery are pushing inference entirely to the edge, no cloud, no API keys, no data leaving the device. On the other, Caveman's success (2,900 stars for a tool that makes AI talk like a caveman) reveals that current AI infrastructure is too expensive for sustained professional use without aggressive optimization. When the most popular Claude Code community plugin exists to make the tool <em>talk less</em>, the economic model has a problem. The next twelve months will determine whether the industry solves this through cheaper models, better infrastructure, or, more likely, by shifting costs to users through the kind of terms-of-service maneuvering Microsoft just demonstrated.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The liability question for AI-generated output.</strong> Microsoft's "entertainment only" classification is a placeholder. Watch for the first major lawsuit where a company's AI-generated output causes measurable harm and the terms of service defense gets tested in court. The ruling will define the legal framework for every AI product on the market.</li>
+          <li><strong>Japan's deployment data as a leading indicator.</strong> Japan is the only major economy deploying physical AI at scale in response to genuine labor shortages rather than cost optimization. Watch for productivity and quality metrics from the sectors receiving robots, particularly elder care and manufacturing, as these will be the first real-world benchmarks for sustained AI-human collaboration.</li>
+          <li><strong>The org redesign problem.</strong> Jones's framework, that agents expose rather than solve organizational weakness, is about to collide with enterprise adoption at scale. Watch for Q2 enterprise AI deployment reports: if companies report "pilot fatigue" or "month 2-3 failures," his diagnosis is correct and the bottleneck isn't the technology but the review and governance layer surrounding it.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/your-agent-produces-at-100x-your-org-reviews-at-3x-thats-the-problem-study.html" data-study-guide>Your Agent Produces at 100x. Your Org Reviews at 3x.</a> - Jones's five commandments for agent deployment are concrete and immediately actionable. The $14,000 voice agent case study alone is worth the read, illustrating exactly how a seemingly functional system collapses when nobody maps the actual data flow. The "mini-me fallacy" framework, where orgs try to make agents replicate individual contributors instead of building dedicated agent pipelines, explains most enterprise AI deployment failures.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/i-asked-claude-cowork-about-my-email-it-became-a-running-system-study.html" data-study-guide>I Asked Claude Cowork About My Email. It Became a Running System</a> - Maher's concept of "personal software," tools built for exactly one person where breakage is fixed conversationally, challenges fundamental assumptions about software development. The agent-team design approach (UX designer, developer, and reviewer agents iterating in parallel) is a practical workflow pattern worth stealing, and his distinction between automation and collaboration reframes how to think about AI tool adoption.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
