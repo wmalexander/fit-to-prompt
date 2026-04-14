@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - April 14, 2026</title>
+  <meta name="description" content="Daily AI news roundup - April 14, 2026. Ben Thompson on Mythos compute economics, Stanford AI Index reveals insider-public disconnect, vibe coding horror story exposes patient data, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 26">
+  <meta property="og:description" content="Daily AI news roundup - April 14, 2026. Ben Thompson on Mythos compute economics, Stanford AI Index reveals insider-public disconnect, vibe coding horror story exposes patient data, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- ============================================ -->
+    <!-- MASTHEAD                                      -->
+    <!-- ============================================ -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Tuesday, April 14, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 26</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>22 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- ============================================ -->
+    <!-- LEAD STORY                                    -->
+    <!-- ============================================ -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Analysis</div>
+          <a href="https://stratechery.com/2026/mythos-muse-and-the-opportunity-cost-of-compute/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Mythos, Muse, and the Opportunity Cost of Compute</h2>
+          </a>
+          <p class="byline mb-3">Stratechery &middot; Apr 13</p>
+          <div class="newspaper-body">
+            <p>Ben Thompson examines how AI models like Anthropic's Mythos and Meta's Muse represent a fundamental shift from marginal cost economics to opportunity cost constraints, reshaping competitive dynamics across the tech industry.</p>
+            <p>The analysis argues that the real bottleneck is no longer building better models but deciding where to spend finite compute, turning AI leadership into a capital allocation problem rather than a pure engineering challenge.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Video &middot; Developer Tools</div>
+          <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-7-levels-of-claude-code-and-rag-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/kQu5pWKS8GA/maxresdefault.jpg" alt="The 7 Levels of Claude Code and RAG" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-standard mb-2">The 7 Levels of Claude Code &amp; RAG</h3>
+          </a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Apr 14</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">A comprehensive roadmap from automemory and CLAUDE.md through naive RAG, graph RAG, and production agentic multimodal RAG pipelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- ============================================ -->
+    <!-- MASONRY FLOW                                  -->
+    <!-- ============================================ -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Stanford + MIT Tech Review span-2 -->
+        <div class="story-span-2">
+          <div class="kicker">AI Research &middot; Society</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <a href="https://techcrunch.com/2026/04/13/stanford-report-highlights-growing-disconnect-between-ai-insiders-and-everyone-else/" target="_blank" rel="noopener" class="story-link">
+                <img src="https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-2153474303-e.jpg?w=1024" alt="Stanford AI Index Report" class="w-full aspect-[16/9] object-cover mb-3">
+                <h3 class="headline-feature mb-2">Stanford Report Highlights Growing Disconnect Between AI Insiders and Everyone Else</h3>
+              </a>
+              <p class="byline mb-2">TechCrunch &middot; Apr 13</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Stanford's latest AI Index Report reveals a widening gap between AI experts and the general public, with the public expressing significant concerns about job losses, healthcare impacts, and economic effects of artificial intelligence.</p>
+            </div>
+            <div>
+              <a href="https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/" target="_blank" rel="noopener" class="story-link">
+                <img src="https://wp.technologyreview.com/wp-content/uploads/2026/04/state-ai-report_top.jpg" alt="AI Index charts" class="w-full aspect-[16/9] object-cover mb-3">
+                <h3 class="headline-feature mb-2">Want to Understand the Current State of AI? Check Out These Charts.</h3>
+              </a>
+              <p class="byline mb-2">MIT Technology Review &middot; Apr 13</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Stanford's 2026 AI Index reveals that AI development continues advancing rapidly, with models matching human expert performance on several benchmarks and adoption rates exceeding those of personal computers and the internet.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vibe coding horror story -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools &middot; Security</div>
+          <a href="https://www.tobru.ch/an-ai-vibe-coding-horror-story/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://www.tobru.ch/content/images/size/w1000/2026/03/volodymyr-dobrovolskyy-KrYbarbAx5s-unsplash.jpg" alt="AI vibe coding horror story" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-feature mb-2">An AI Vibe Coding Horror Story</h3>
+          </a>
+          <p class="byline mb-2">tobru.ch &middot; Apr 14</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A real-world security incident where a medical professional built a patient management system using AI coding agents, resulting in severe data exposure and privacy violations. A cautionary tale about vibe coding without technical understanding.</p>
+        </div>
+
+        <!-- 404 Media phone farm -->
+        <div class="story-item">
+          <div class="kicker">Security &middot; Culture</div>
+          <a href="https://www.404media.co/hacker-compromises-a16z-backed-phone-farm-tries-to-post-memes-calling-a16z-the-antichrist/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/04/a16z-meme-collage.png" alt="a16z phone farm hack" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-feature mb-2">Hacker Compromises a16z-Backed Phone Farm, Tries to Post Memes Calling a16z the 'Antichrist'</h3>
+          </a>
+          <p class="byline mb-2">404 Media &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A hacker breached Doublespeed, an a16z-funded startup operating AI-generated influencer accounts on TikTok, and attempted to post anti-VC memes. This marks the second security breach at the company, which uses phone farms to flood social media with inauthentic content.</p>
+        </div>
+
+        <!-- Gary Marcus -->
+        <div class="story-item">
+          <div class="kicker">AI Safety &middot; Evaluation</div>
+          <a href="https://garymarcus.substack.com/p/claude-mythos-evaluated" target="_blank" rel="noopener" class="story-link">
+            <img src="https://substackcdn.com/image/fetch/w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fpbs.substack.com%2Fmedia%2FHFybTUVWQAA-Gm8.jpg" alt="Claude Mythos evaluated" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-feature mb-2">Claude Mythos, Evaluated</h3>
+          </a>
+          <p class="byline mb-2">Marcus on AI &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Gary Marcus analyzes the UK AI Security Institute's evaluation of Claude Mythos Preview, concluding it poses real cybersecurity risks despite being less catastrophic than some feared, particularly regarding autonomous compromise of weakly-defended systems.</p>
+        </div>
+
+        <!-- Cartoon + Distributed systems span-2 -->
+        <div class="story-span-2">
+          <div class="kicker">AI Engineering</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-14-cartoon.png" alt="A developer sitting at a desk proudly gestures at his monitor showing a polished app interface, while through the office window behind him a massive building made of tangled spaghetti noodles is collapsing with stick figures running away. His boss stands in the doorway looking horrified." class="w-full" style="display: block;">
+            </div>
+            <div>
+              <a href="https://kirancodes.me/posts/log-distributed-llms.html" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">Multi-agentic Software Development Is a Distributed Systems Problem (AGI Can't Save You)</h3>
+              </a>
+              <p class="byline mb-2">Kiran Gopinathan &middot; Apr 14</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Argues that multi-agent LLM systems face fundamental coordination challenges rooted in distributed systems theory, and that impossibility results like the FLP theorem are invariant to model capability. More intelligence won't fix consensus.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zvi Political Violence -->
+        <div class="story-item">
+          <div class="kicker">Opinion &middot; AI Safety</div>
+          <a href="https://thezvi.substack.com/p/political-violence-is-never-acceptable" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Political Violence Is Never Acceptable</h3>
+          </a>
+          <p class="byline mb-2">Don't Worry About the Vase &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">An essay condemning violent attacks on Sam Altman while discussing rhetoric standards for AI safety advocates and pushback against attempts to suppress legitimate concerns about existential risk.</p>
+        </div>
+
+        <!-- OpenAI buys Hiro -->
+        <div class="story-item">
+          <div class="kicker">Acquisitions</div>
+          <a href="https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2024/12/GettyImages-2021258442.jpg?w=1024" alt="OpenAI acquires Hiro" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">OpenAI Has Bought AI Personal Finance Startup Hiro</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI acquired personal finance startup Hiro Finance in an acquihire. Hiro is shutting down operations and the team is joining OpenAI, signaling further expansion into consumer financial tools.</p>
+        </div>
+
+        <!-- Microsoft OpenClaw agent -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools &middot; Enterprise</div>
+          <a href="https://techcrunch.com/2026/04/13/microsoft-is-working-on-yet-another-openclaw-like-agent/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/04/Windows-Claw.png?w=1024" alt="Microsoft OpenClaw agent" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">Microsoft Is Working on Yet Another OpenClaw-Like Agent</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft is developing OpenClaw-inspired agent features integrated into Microsoft 365 Copilot, targeting enterprise customers with enhanced security controls compared to the open-source version.</p>
+        </div>
+
+        <!-- Vercel IPO -->
+        <div class="story-item">
+          <div class="kicker">Business &middot; Infrastructure</div>
+          <a href="https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/04/Vercel-founder-Guillermo-Rauch.jpg?resize=1200,800" alt="Guillermo Rauch, Vercel CEO" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">Vercel CEO Signals IPO Readiness as AI Agents Fuel Revenue Surge</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Vercel's annual recurring revenue surged from $100 million in early 2024 to $340 million by February 2026, driven by AI-generated apps and agents. CEO Guillermo Rauch indicated the company is ready for an IPO.</p>
+        </div>
+
+        <!-- Orbital compute -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure &middot; Space</div>
+          <a href="https://techcrunch.com/2026/04/13/the-largest-orbital-compute-cluster-is-open-for-business/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/04/KEPLER-T1-.jpg?w=800" alt="Kepler orbital compute cluster" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">The Largest Orbital Compute Cluster Is Open for Business</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Kepler Communications launched the largest orbital compute cluster with 40 Nvidia Orin processors across 10 satellites, announcing Sophia Space as its newest customer for space-based data processing.</p>
+        </div>
+
+        <!-- CoreWeave funding -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure &middot; Funding</div>
+          <a href="https://fortune.com/2026/04/13/tens-billions-days-coreweave-shows-how-aggressively-ai-infrastructure-being-funded/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://fortune.com/img-assets/wp-content/uploads/2026/04/GettyImages-2224672346.jpg" alt="CoreWeave data center" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-standard mb-1">Tens of Billions in Days: CoreWeave Shows How Aggressively AI Infrastructure Is Being Funded</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">CoreWeave, an Nvidia-backed GPU cloud startup, secured over $21 billion in commitments from Meta along with multiple debt instruments within days, illustrating the aggressive capital strategies financing the AI infrastructure race.</p>
+        </div>
+
+        <!-- Wire briefs column A -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">On the Wire</div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Apr/13/steve-yegge/" target="_blank" rel="noopener">Steve Yegge Claims Google's AI Adoption Mirrors John Deere; Googlers Push Back</a>
+            <div class="wire-source">Simon Willison &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/opinion/articles/2026-04-13/anthropic-sets-the-right-ai-standard-with-mythos" target="_blank" rel="noopener">Anthropic Sets the Right AI Standard With Mythos</a>
+            <div class="wire-source">Bloomberg Opinion &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/newsletters/2026-04-13/you-don-t-hear-much-about-the-ai-overbuild-anymore" target="_blank" rel="noopener">You Don't Hear Much About the AI Overbuild Anymore</a>
+            <div class="wire-source">Bloomberg &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-04-13/oracle-agrees-to-buy-power-from-bloom-for-ai-data-centers" target="_blank" rel="noopener">Oracle Agrees to Buy Power From Bloom for AI Data Centers</a>
+            <div class="wire-source">Bloomberg &middot; Apr 13</div>
+          </div>
+        </div>
+
+        <!-- Crossword Puzzle -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+          <style>
+            .xw-wrap{font-family:'Inter',sans-serif;color:#1a1a1a;max-width:300px}
+            .xw-grid{display:inline-grid;grid-template-columns:repeat(5,28px);grid-template-rows:repeat(5,28px);gap:1px;background:#1a1a1a;border:2px solid #1a1a1a;margin-bottom:0.6rem}
+            .xw-cell{position:relative;background:#fff;display:flex;align-items:center;justify-content:center}
+            .xw-cell.black{background:#1a1a1a}
+            .xw-cell input{width:100%;height:100%;border:none;outline:none;text-align:center;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;text-transform:uppercase;padding:0;background:transparent;color:#1a1a1a;caret-color:#8B0000}
+            .xw-cell input:focus{background:#fffde6}
+            .xw-num{position:absolute;top:1px;left:2px;font-size:7px;font-weight:700;line-height:1;color:#1a1a1a;pointer-events:none;z-index:1}
+            .xw-clues{font-size:11px;line-height:1.55;margin-top:0.25rem}
+            .xw-clues strong{color:#8B0000;font-size:10px;text-transform:uppercase;letter-spacing:0.05em}
+            .xw-clues ol{list-style:none;margin:0 0 0.4rem 0;padding:0}
+            .xw-clues li{margin-bottom:2px}
+            .xw-clues li span.cnum{font-weight:700;margin-right:3px}
+            .xw-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:4px 14px;border:1.5px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer;border-radius:2px;margin-top:0.3rem;transition:background 0.15s,color 0.15s}
+            .xw-btn:hover{background:#1a1a1a;color:#fff}
+            .xw-msg{font-size:11px;font-weight:600;margin-left:8px;opacity:0;transition:opacity 0.3s}
+            .xw-cell.correct input{color:#059669}
+            .xw-cell.wrong input{color:#8B0000}
+          </style>
+          <div class="xw-wrap">
+            <div class="xw-grid" id="xwGrid"></div>
+            <div class="xw-clues">
+              <strong>Across</strong>
+              <ol>
+                <li><span class="cnum">1.</span> Unit of AI text that costs millions to process</li>
+                <li><span class="cnum">3.</span> OpenClaw's autonomous AI worker type</li>
+                <li><span class="cnum">4.</span> Orbital data center compute units</li>
+              </ol>
+              <strong>Down</strong>
+              <ol>
+                <li><span class="cnum">1.</span> Feed a dataset to a neural network</li>
+                <li><span class="cnum">2.</span> What study guides help you take</li>
+              </ol>
+            </div>
+            <div style="display:flex;align-items:center">
+              <button class="xw-btn" onclick="checkXW()">Check</button>
+              <span class="xw-msg" id="xwMsg"></span>
+            </div>
+          </div>
+          <script>
+          (function(){
+            var S=[
+              ['T','O','K','E','N'],
+              ['R','','','','O'],
+              ['A','G','E','N','T'],
+              ['I','','','','E'],
+              ['N','O','D','E','S']
+            ];
+            var nums={'0-0':'1','0-4':'2','2-0':'3','4-0':'4'};
+            var g=document.getElementById('xwGrid');
+            for(var r=0;r<5;r++){
+              for(var c=0;c<5;c++){
+                var d=document.createElement('div');
+                d.className='xw-cell'+(S[r][c]===''?' black':'');
+                if(S[r][c]!==''){
+                  var n=nums[r+'-'+c];
+                  if(n) d.innerHTML='<span class="xw-num">'+n+'</span>';
+                  var inp=document.createElement('input');
+                  inp.maxLength=1;
+                  inp.dataset.r=r;
+                  inp.dataset.c=c;
+                  inp.setAttribute('autocomplete','off');
+                  inp.setAttribute('autocorrect','off');
+                  inp.setAttribute('spellcheck','false');
+                  inp.addEventListener('input',function(){
+                    this.value=this.value.toUpperCase().replace(/[^A-Z]/g,'');
+                    this.parentNode.classList.remove('correct','wrong');
+                    if(this.value){
+                      var cells=g.querySelectorAll('input');
+                      var idx=Array.prototype.indexOf.call(cells,this);
+                      if(idx<cells.length-1) cells[idx+1].focus();
+                    }
+                  });
+                  inp.addEventListener('keydown',function(e){
+                    if(e.key==='Backspace'&&!this.value){
+                      var cells=g.querySelectorAll('input');
+                      var idx=Array.prototype.indexOf.call(cells,this);
+                      if(idx>0){cells[idx-1].focus();cells[idx-1].value='';}
+                    }
+                  });
+                  d.appendChild(inp);
+                }
+                g.appendChild(d);
+              }
+            }
+            window.checkXW=function(){
+              var all=true,any=false;
+              g.querySelectorAll('input').forEach(function(inp){
+                var r=parseInt(inp.dataset.r),c=parseInt(inp.dataset.c);
+                inp.parentNode.classList.remove('correct','wrong');
+                if(inp.value){
+                  any=true;
+                  if(inp.value.toUpperCase()===S[r][c]) inp.parentNode.classList.add('correct');
+                  else{inp.parentNode.classList.add('wrong');all=false;}
+                }else{all=false;}
+              });
+              var m=document.getElementById('xwMsg');
+              if(!any){m.textContent='';m.style.opacity='0';return;}
+              m.style.opacity='1';
+              if(all){m.textContent='Solved!';m.style.color='#059669';}
+              else{m.textContent='Keep going...';m.style.color='#8B0000';}
+            };
+          })();
+          </script>
+        </div>
+
+        <!-- Wire briefs column B -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">More on the Wire</div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/videos/2026-04-13/are-large-language-models-hitting-a-ceiling-video" target="_blank" rel="noopener">Are Large Language Models Hitting a Ceiling?</a>
+            <div class="wire-source">Bloomberg Video &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/audio/2026-04-13/bloomberg-tech-regulators-fear-new-era-of-cyber-risk-podcast" target="_blank" rel="noopener">Bloomberg Tech: Regulators Warn of New Era of Cyber Risk From AI</a>
+            <div class="wire-source">Bloomberg Podcast &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://introspective-diffusion.github.io/" target="_blank" rel="noopener">I-DLM: First Diffusion Language Model to Match Autoregressive Quality With 3x Throughput</a>
+            <div class="wire-source">Together AI / UIUC / Stanford &middot; Apr 14</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://ndaybench.winfunc.com" target="_blank" rel="noopener">N-Day-Bench: Measuring AI Vulnerability Discovery on Post-Cutoff CVEs</a>
+            <div class="wire-source">Winfunc Research &middot; Apr 14</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE -- Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Seventy-three percent of AI experts believe their technology will create jobs. Twenty-three percent of the public agrees. That 50-point gap, freshly quantified in Stanford's 2026 AI Index, is the number that hangs over every other story today: a $35 billion CoreWeave commitment, a doctor's patient data leaked by a vibe-coded app within 30 minutes, a hacker mocking a16z through its own phone farm, and Ben Thompson arguing that compute scarcity has quietly rewritten the economics of the entire tech industry. What the experts see as an infrastructure boom, the public sees as a gamble with their livelihoods. Today's issue is about whether the distance between those two views is growing or closing.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-14-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Compute Economics Shift</h4>
+        <ul class="digest-bullets">
+          <li><strong>Ben Thompson Rewrites Aggregation Theory for the GPU Era</strong> -- Stratechery's central argument is that AI has replaced near-zero marginal costs with zero-sum opportunity costs: every GPU cycle spent serving one customer is a cycle denied to another. Microsoft could have hit 40%+ Azure growth by reallocating GPU capacity but chose higher-margin Copilot products instead. Anthropic restricted Mythos access while users complained about Claude degradation. Thompson identifies Meta as structurally advantaged because it has no enterprise/cloud conflict, and names Chinese labs (DeepSeek, Moonshot, MiniMax) as having conducted over 16 million exchanges through 24,000 fraudulent Claude accounts for capability distillation.</li>
+          <li><strong>CoreWeave Raises $35 Billion in Days</strong> -- The Nvidia-backed GPU cloud startup secured a $21B Meta deal (2027-2032), $3.5B in convertible notes, and an $8.5B delayed draw facility at investment-grade rates. Morningstar analyst Luke Yang warns that even a 100-200 basis point increase in interest burden "can completely break the business model," a pointed reminder that this infrastructure boom is financed on leverage.</li>
+          <li><strong>Orbital Compute Goes Live</strong> -- Kepler Communications launched 10 satellites carrying 40 Nvidia Orin processors linked by laser, claiming GPUs in orbit run at 100% utilization versus 10% on Earth. A Wisconsin city has already banned new data centers, highlighting the land-use pressures making space-based compute less fanciful than it sounds.</li>
+          <li><strong>Oracle Buys 2.8 GW of Fuel-Cell Power From Bloom</strong> -- Oracle contracted up to 2.8 gigawatts from Bloom Energy for AI data centers, another sign that the infrastructure race has shifted from "do we need this capacity" to "where do we find the electricity."</li>
+        </ul>
+
+        <h4 class="digest-theme">The Perception Gap</h4>
+        <ul class="digest-bullets">
+          <li><strong>Stanford's AI Index Quantifies the Expert-Public Divide</strong> -- The numbers are stark across every dimension: 69% of experts see AI's economic impact positively versus 21% of the public (48-point gap); 84% of experts are optimistic about medical care versus 44% of the public. Meanwhile, real employment data shows software developers aged 22-25 have seen employment decline nearly 20% since 2022. Over 50% of the global population now uses AI, faster adoption than personal computers or the internet, yet only 10% of Americans say they are more excited than concerned.</li>
+          <li><strong>Political Violence Enters the AI Debate</strong> -- Two attacks on Sam Altman in three days (a Molotov cocktail on April 10 and a negligent discharge on April 13), plus reported threats against Gary Marcus. Zvi Mowshowitz condemns all AI-related violence while drawing a careful line between legitimate safety rhetoric and incitement, predicting that within years, AI violence will stem from economic disruption rather than existential risk concerns.</li>
+        </ul>
+
+        <h4 class="digest-theme">Security in the Agent Era</h4>
+        <ul class="digest-bullets">
+          <li><strong>A Vibe-Coded Medical App Leaked Patient Data in 30 Minutes</strong> -- A doctor used AI agents to build a patient management system and deployed it publicly. All access control logic lived in client-side JavaScript. Patient data sat on US servers without a Data Processing Agreement. Audio recordings were automatically sent to multiple AI companies without patient consent. The security tester achieved full read/write access to all records within half an hour. The author's conclusion: "Anyone just vibing away clearly won't give us a happy future."</li>
+          <li><strong>Gary Marcus Parses the Mythos Evaluation</strong> -- The UK AI Security Institute found Mythos is "the first model to complete an AISI cyber range end-to-end," a significant jump from 2023 when top models could barely handle beginner tasks. But Marcus frames the real danger as less about frontier model capabilities and more about the proliferation of agent-written vulnerable code, an argument the vibe coding story makes concrete.</li>
+          <li><strong>N-Day-Bench Ranks Frontier Models on Post-Cutoff Vulnerability Discovery</strong> -- GPT-5.4 leads at 83.93, followed by GLM-5.1 (80.13), Claude Opus 4.6 (79.95), and Kimi-K2.5 (77.18). Only 47 of 1,000 advisories passed the benchmark's strict filters, suggesting it measures genuine discovery capability rather than pattern matching.</li>
+          <li><strong>Hacker Breaches a16z-Backed Phone Farm</strong> -- Doublespeed, funded through Andreessen Horowitz's Speedrun accelerator, operates physical phone farms to run fake AI-generated TikTok influencers. A hacker claimed to exfiltrate 47MB of data and dump 413 phones, the second breach in six months. The conflict of interest: Marc Andreessen sits on Meta's board, and Meta prohibits inauthentic behavior.</li>
+        </ul>
+
+        <h4 class="digest-theme">Building the Agent Stack</h4>
+        <ul class="digest-bullets">
+          <li><strong>Microsoft Ships Its Third Agent Product in Four Months</strong> -- An OpenClaw-inspired agent integrated into M365 Copilot joins Copilot Cowork (March 2026, powered by "Work IQ") and Copilot Tasks (February 2026). Expected at Build in June, reflecting an aggressive but somewhat fragmented approach to the agent space.</li>
+          <li><strong>Vercel Says 30% of Its Apps Now Come From Agents, Not Humans</strong> -- ARR surged from $100M to $340M in two years. CEO Guillermo Rauch: "The total addressable market of infrastructure has now grown, and it simply has no ceiling." The company signals IPO readiness at a $9.3B valuation.</li>
+          <li><strong>OpenAI Acquires Hiro Finance</strong> -- The acquihire of a 10-person personal finance startup marks OpenAI's second financial app acquisition, signaling a deliberate push to embed financial planning into ChatGPT rather than building from scratch.</li>
+          <li><strong>Diffusion Models Match Autoregressive Quality for the First Time</strong> -- I-DLM from Together AI achieves 2.9-4.1x throughput over comparable models while scoring 69.6 on AIME-24 versus LLaDA-2.1-mini's 43.3. The 32B variant outperforms the 100B LLaDA-2.1-flash. If inference economics shift this dramatically, competitive dynamics follow.</li>
+          <li><strong>Multi-Agent Coding Hits a Mathematical Wall</strong> -- Kiran Gopinathan applies classical impossibility results (FLP, Byzantine Generals) to argue that smarter models cannot escape fundamental distributed consensus constraints. His prescription: formal coordination protocols, not bigger models.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The most revealing tension in today's issue is between <em>speed of building</em> and <em>capacity for verification</em>. Ben Thompson describes it at the macro level: compute scarcity forces trillion-dollar companies to choose where to allocate finite resources, transforming AI leadership from an engineering problem into a capital allocation problem. The Stanford Index reveals it at the social level: the people building AI and the people affected by it occupy different realities about what comes next. And the vibe coding horror story makes it visceral at the individual level: a medical professional built a functional-looking app that had zero real security, because AI tools make it trivially easy to produce things that <em>look</em> finished.</p>
+
+        <p>What connects Stratechery's compute opportunity costs, the Stanford perception gap, and a doctor's leaking patient app is a shared structural problem: the systems we're building outpace our ability to evaluate them. Gopinathan's distributed systems paper puts a mathematical floor under this intuition. The FLP impossibility theorem doesn't care how smart your agents are. Consensus in asynchronous systems with potential failures is provably hard, and adding intelligence doesn't change the proof. When Vercel reports that 30% of its deployed applications come from AI agents rather than human developers, and Microsoft ships its third agent product in four months, the coordination challenge isn't hypothetical.</p>
+
+        <p>The N-Day-Bench results add a disquieting footnote: the same models that can't reliably coordinate with each other <em>can</em> reliably find vulnerabilities in real software. GPT-5.4 scores 84 on post-cutoff vulnerability discovery while the industry still can't keep client-side JavaScript from being the only thing between a database and the open internet. The tools for breaking things are advancing faster than the tools for building them safely.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>We are watching an industry bifurcate. On one track: CoreWeave raises $35 billion, Oracle contracts 2.8 gigawatts of fuel-cell power, and Kepler puts compute in orbit. The infrastructure buildout is real, funded at a scale that makes the fiber-optic boom of the late 1990s look cautious. On the other track: a 48-point gap between expert and public sentiment on AI's economic impact, a 20% employment decline for junior developers, and two violent attacks on an AI CEO in three days. These are not separate stories. They are the same story told from different altitudes.</p>
+
+        <p>Thompson's opportunity cost framing is the clearest articulation yet of why this moment differs from previous tech cycles. When Google, Microsoft, and Anthropic must decide which customers get GPU time, they are making allocation decisions that ripple through the entire economy. Meta's structural advantage, Thompson argues, comes from not having to make that choice, because advertising revenue subsidizes consumer AI with no competing enterprise claims. If he's right, the competitive landscape isn't shaped by who builds the best model but by who has the fewest internal conflicts over how to deploy it.</p>
+
+        <p>The Stanford data suggests that as AI capabilities accelerate, public trust isn't keeping pace. Only 31% of Americans trust the government to regulate AI effectively, compared to 81% in Singapore. One hundred and fifty AI-related bills passed in US state legislatures last year, a record, but 41% of Americans still say federal regulation is too insufficient. The perception gap matters because it shapes the political environment in which all of this infrastructure investment must operate. A $35 billion bet on GPU clouds is only as durable as the regulatory framework that permits it.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+
+        <ul class="digest-bullets">
+          <li><strong>The junior developer employment signal.</strong> Stanford reports a nearly 20% decline for developers aged 22-25 since 2022. If this trend accelerates through 2026, the perception gap isn't a misunderstanding; the public is reading their own labor market correctly. Watch Q2 hiring data closely.</li>
+          <li><strong>Diffusion model inference economics.</strong> I-DLM's 3-4x throughput improvement at matching quality could reshape which companies can afford to serve which customers. If Thompson is right that compute allocation is the new competitive moat, any technology that changes the denominator of that equation changes everything above it.</li>
+          <li><strong>Vibe coding liability.</strong> The Swiss patient data incident is unlikely to be the last. As more non-developers ship AI-generated code into regulated environments (healthcare, finance, education), expect the first major class-action lawsuit against an AI coding tool to test where responsibility lies.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-7-levels-of-claude-code-and-rag-study.html" data-study-guide>The 7 Levels of Claude Code &amp; RAG</a> -- Chase AI's structured escalation framework from automemory basics through graph RAG and agentic multimodal pipelines, with specific benchmarks showing naive RAG delivers roughly 25% accuracy while LightRAG exceeds 68%. The core argument: start simple, escalate only when the current level proves insufficient.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2014';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
