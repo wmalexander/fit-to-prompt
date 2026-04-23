@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - April 23, 2026</title>
+  <meta name="description" content="Daily AI news roundup - April 23, 2026. Anthropic publishes 81,000-user economic survey, Google drops Gemma 4, OpenAI launches Workspace Agents in ChatGPT, Google Cloud Next announcements, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 28">
+  <meta property="og:description" content="Daily AI news roundup - April 23, 2026. Anthropic publishes 81,000-user economic survey, Google drops Gemma 4, OpenAI launches Workspace Agents in ChatGPT, Google Cloud Next announcements, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, April 23, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 28</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Economics</div>
+          <a href="https://www.anthropic.com/research/81k-economics" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">What 81,000 People Told Us About the Economics of AI</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; Apr 22</p>
+          <div class="newspaper-body">
+            <p>Anthropic's survey of 81,000 Claude users reveals that workers in AI-exposed roles express the sharpest displacement concerns, even while reporting the largest productivity gains from the same tools.</p>
+            <p>The gains cluster in two places: task expansion (taking on work that was previously out of reach) and speed. The tension between "this makes me better" and "this makes me replaceable" is running through the same people at the same time.</p>
+          </div>
+        </div>
+        <div>
+          <a href="https://www.anthropic.com/research/81k-economics" target="_blank" rel="noopener" class="story-link">
+            <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/60d39963d844bc1104a780c762c540c9ba1baefe-1000x1000.svg" alt="Anthropic Economic Index" class="w-full aspect-[4/3] object-cover" style="background:#f1f1f1;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: Agentic OS study guide + Gemma 4 -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Video &middot; Claude Code</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-agentic-os-unstoppable-study/claude-code-agentic-os-unstoppable-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/rFGlJ4oIlhw/maxresdefault.jpg" alt="Claude Code Agentic OS" class="w-full aspect-video object-cover mb-3">
+          <div style="position:absolute;top:33%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Claude Code Agentic OS = UNSTOPPABLE</h3>
+        </a>
+        <p class="byline mb-2">Chase AI &middot; YouTube &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Chase AI argues the gap between what Claude Code can do and what the average user pulls out of it keeps growing. His answer: a four-layer Agentic OS covering memory, a skill fleet, automations, and a dashboard to orchestrate them all.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemma-4_blog_keyword_header-dark.width-200.format-webp.webp" alt="Gemma 4" class="w-full aspect-video object-cover mb-3" style="background:#1a1a1a;">
+          <h3 class="headline-feature mb-2">Gemma 4: Byte for Byte, the Most Capable Open Models</h3>
+        </a>
+        <p class="byline mb-2">Google &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google released Gemma 4 under an Apache 2.0 license across four sizes, pitching it as its most intelligent open model yet with advanced reasoning and agentic workflow support. A separate Hugging Face write-up details a Gemma 4 VLA running on NVIDIA's Jetson Orin Nano Super, where the model autonomously decides when to use the webcam.</p>
+      </div>
+    </section>
+
+    <!-- FEATURE ROW: Worktrees study guide + Workspace Agents -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Video &middot; Workflow</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/parallel-claude-code-git-worktrees-ship-study/parallel-claude-code-git-worktrees-ship-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/pfPi04pIfaw/maxresdefault.jpg" alt="Parallel Claude Code + Git Worktrees" class="w-full aspect-video object-cover mb-3">
+          <div style="position:absolute;top:33%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Parallel Claude Code + Git Worktrees: This Setup Will Change How You Ship</h3>
+        </a>
+        <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cole Medin walks through his daily playbook for running 3-10 Claude Code agents in parallel with git worktrees. His claim: better prompts alone stopped being the bottleneck; the real step-change is workflow, not context engineering.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">From OpenAI</div>
+        <a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Introducing Workspace Agents in ChatGPT</h3>
+        </a>
+        <p class="byline mb-2">OpenAI &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI is bringing autonomous task execution directly into team workflows with Workspace Agents in ChatGPT. The bet is that agents live where the rest of the work already happens, not in a separate app you have to remember to open.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: Google Cloud Next + Stratechery -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Infrastructure</div>
+        <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cloud-next-2026-sundar-pichai/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Cloud_Next_Header.width-200.format-webp.webp" alt="Cloud Next 2026" class="w-full aspect-video object-cover mb-3" style="background:#1a1a1a;">
+          <h3 class="headline-standard mb-1">Cloud Next '26: Momentum and Innovation at Google Scale</h3>
+        </a>
+        <p class="byline mb-2">Google &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Sundar Pichai laid out Google Cloud's agentic roadmap at Cloud Next 2026, headlined by eighth-generation TPUs and an enterprise AI agent platform aimed at scaling agentic operations inside customer organizations.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Opinion</div>
+        <a href="https://stratechery.com/2026/john-ternus-and-apples-hardware-defined-future-spacexai-and-cursor/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">John Ternus and Apple's Hardware-Defined Future, SpaceXAI and Cursor</h3>
+        </a>
+        <p class="byline mb-2">Stratechery &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Ben Thompson reads John Ternus's elevation as Apple signaling that hardware, not AI model quality, will define its future. In that frame, he argues the SpaceX-Cursor deal becomes coherent rather than strange: vertically integrated compute plus the IDE layer, aimed at a different stack.</p>
+      </div>
+    </section>
+
+    <!-- CARTOON + Economic Index survey -->
+    <section class="flex-row">
+      <div class="story-block" style="text-align:center;">
+        <div class="kicker" style="text-align:left;">Editorial Cartoon</div>
+        <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-23-cartoon.png" alt="A tired developer at a desk surrounded by ten laptops all running different Claude Code sessions. A coworker looks in, confused. Caption: 'Ten Claude Codes in parallel. Each one thinks it's the only one.'" class="w-full" style="display:block;">
+      </div>
+      <div class="story-block">
+        <div class="kicker">From Anthropic</div>
+        <a href="https://www.anthropic.com/research/economic-index-survey-announcement" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Announcing the Anthropic Economic Index Survey</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic's Economic Research team is launching a monthly survey to capture qualitative data about how people experience AI's economic impact, the companion program to the 81,000-user dataset published today.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: DeepMind partnerships + Microsoft AutoAdapt -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">From Google</div>
+        <a href="https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Partnering With Industry Leaders to Accelerate AI Transformation</h3>
+        </a>
+        <p class="byline mb-2">Google DeepMind &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Only 25% of organizations have moved AI into production at scale. Google DeepMind is enlisting Accenture, Bain, BCG, Deloitte, and McKinsey to close the gap with early model access and industry-specific deployments.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">From Microsoft</div>
+        <a href="https://www.microsoft.com/en-us/research/blog/autoadapt-automated-domain-adaptation-for-large-language-models/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">AutoAdapt: Automated Domain Adaptation for Large Language Models</h3>
+        </a>
+        <p class="byline mb-2">Microsoft Research &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft Research introduces AutoAdapt, a framework that automates planning, strategy selection, and hyperparameter tuning for adapting LLMs to specialized domains under real deployment constraints.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: Apple ICLR + Gemma on NVIDIA -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">From Apple</div>
+        <a href="https://machinelearning.apple.com/research/iclr-2026" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Apple Machine Learning Research at ICLR 2026</h3>
+        </a>
+        <p class="byline mb-2">Apple ML Research &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Apple's ICLR 2026 slate spans recurrent networks, state space models, unified multimodal AI, 3D scene generation, and protein folding. A visible stake in the "foundational research still matters" camp.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://huggingface.co/blog/nvidia/gemma4" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Gemma 4 VLA Demo on NVIDIA Jetson Orin Nano Super</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Apr 22</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">A hands-on guide to running Gemma 4 as a multimodal conversational agent on NVIDIA's Jetson Orin Nano Super. Parakeet STT plus Kokoro TTS plus llama.cpp with CUDA acceleration; the model decides on its own when to consult the webcam.</p>
+      </div>
+    </section>
+
+    <!-- PUZZLE: AI Acronym Quiz -->
+    <section class="flex-row" style="grid-template-columns: 1fr;">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">AI Acronym Quiz</div>
+        <style>
+          .aq-wrap{font-family:'Inter',sans-serif;color:#1a1a1a;max-width:560px}
+          .aq-intro{font-size:11px;line-height:1.55;color:#374151;margin-bottom:0.8rem}
+          .aq-intro strong{color:#8B0000;text-transform:uppercase;letter-spacing:0.05em;font-size:10px}
+          .aq-q{margin-bottom:0.9rem;padding-bottom:0.6rem;border-bottom:1px dashed #e5e7eb}
+          .aq-q-label{font-weight:700;font-size:13px;color:#1a1a1a;margin-bottom:0.35rem;font-family:'Courier New',monospace;letter-spacing:0.05em}
+          .aq-opt{display:block;font-size:12px;color:#374151;padding:3px 0;cursor:pointer}
+          .aq-opt input{margin-right:6px}
+          .aq-opt.correct{color:#059669;font-weight:600}
+          .aq-opt.wrong{color:#8B0000;text-decoration:line-through}
+          .aq-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:4px 14px;border:1.5px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer;border-radius:2px;margin-top:0.6rem;transition:background 0.15s,color 0.15s}
+          .aq-btn:hover{background:#1a1a1a;color:#fff}
+          .aq-score{font-size:12px;font-weight:700;margin-left:10px;color:#8B0000}
+        </style>
+        <div class="aq-wrap">
+          <p class="aq-intro"><strong>Guess the acronym</strong> &mdash; pick the correct expansion for each. AI and adjacent.</p>
+          <div class="aq-q" data-answer="a">
+            <div class="aq-q-label">1. TPU</div>
+            <label class="aq-opt"><input type="radio" name="q1" value="a"> Tensor Processing Unit</label>
+            <label class="aq-opt"><input type="radio" name="q1" value="b"> Transformer Prediction Unit</label>
+            <label class="aq-opt"><input type="radio" name="q1" value="c"> Training Pipeline Utility</label>
+          </div>
+          <div class="aq-q" data-answer="b">
+            <div class="aq-q-label">2. VLA</div>
+            <label class="aq-opt"><input type="radio" name="q2" value="a"> Vector Language Accelerator</label>
+            <label class="aq-opt"><input type="radio" name="q2" value="b"> Vision-Language-Action model</label>
+            <label class="aq-opt"><input type="radio" name="q2" value="c"> Variable Latent Attention</label>
+          </div>
+          <div class="aq-q" data-answer="c">
+            <div class="aq-q-label">3. ICLR</div>
+            <label class="aq-opt"><input type="radio" name="q3" value="a"> Intl. Conference on Language Research</label>
+            <label class="aq-opt"><input type="radio" name="q3" value="b"> Intl. Consortium for LLM Regulation</label>
+            <label class="aq-opt"><input type="radio" name="q3" value="c"> Intl. Conference on Learning Representations</label>
+          </div>
+          <div class="aq-q" data-answer="b">
+            <div class="aq-q-label">4. STT</div>
+            <label class="aq-opt"><input type="radio" name="q4" value="a"> Synthetic Token Training</label>
+            <label class="aq-opt"><input type="radio" name="q4" value="b"> Speech-To-Text</label>
+            <label class="aq-opt"><input type="radio" name="q4" value="c"> System Trace Timestamp</label>
+          </div>
+          <div class="aq-q" data-answer="a">
+            <div class="aq-q-label">5. AISI</div>
+            <label class="aq-opt"><input type="radio" name="q5" value="a"> AI Security Institute</label>
+            <label class="aq-opt"><input type="radio" name="q5" value="b"> Artificial Intelligence Standards Initiative</label>
+            <label class="aq-opt"><input type="radio" name="q5" value="c"> Autonomous Inference Service Interface</label>
+          </div>
+          <div class="aq-q" data-answer="c">
+            <div class="aq-q-label">6. IDE</div>
+            <label class="aq-opt"><input type="radio" name="q6" value="a"> Inference Deployment Engine</label>
+            <label class="aq-opt"><input type="radio" name="q6" value="b"> Integrated Data Exporter</label>
+            <label class="aq-opt"><input type="radio" name="q6" value="c"> Integrated Development Environment</label>
+          </div>
+          <div>
+            <button class="aq-btn" onclick="checkAQ()">Check Answers</button>
+            <span class="aq-score" id="aqScore"></span>
+          </div>
+        </div>
+        <script>
+        window.checkAQ=function(){
+          var qs=document.querySelectorAll('.aq-q');
+          var correct=0,total=qs.length;
+          qs.forEach(function(q){
+            var ans=q.dataset.answer;
+            var opts=q.querySelectorAll('.aq-opt');
+            opts.forEach(function(o){o.classList.remove('correct','wrong');});
+            var sel=q.querySelector('input[type=radio]:checked');
+            if(!sel) return;
+            var label=sel.closest('.aq-opt');
+            if(sel.value===ans){label.classList.add('correct');correct++;}
+            else{label.classList.add('wrong');
+              opts.forEach(function(o){var inp=o.querySelector('input');if(inp.value===ans)o.classList.add('correct');});
+            }
+          });
+          document.getElementById('aqScore').textContent=correct+' / '+total;
+        };
+        </script>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) { var link = e.target.closest('a[data-study-guide]'); if (link) { e.preventDefault(); openModal(link.href); } });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Anthropic asked 81,000 Claude users how AI is changing their work, and the answer is the emotional paradox of this moment: the same people reporting the biggest productivity gains are also the ones most worried about being displaced. On the same day, OpenAI shipped Workspace Agents for ChatGPT teams, Google DeepMind partnered with the Big Five consultancies to push AI into production (noting only 25% of organizations have done so at scale), and Google released Gemma 4 as Apache 2.0. The tools are arriving faster than the workforce can metabolize them. That gap is the story.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-23-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Economics of AI, In The Users' Own Words</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic: What 81,000 People Told Us About the Economics of AI</strong> — Anthropic's largest-ever user study surveyed 81,000 Claude users about how AI is changing their work. The headline finding is a paradox: workers in AI-exposed roles report the largest productivity gains (concentrated in task expansion and speed) while also expressing the strongest displacement concerns. Gains are clustered in doing more work, not in shrinking headcount, but the anxiety is landing well before the pink slips. The emotional center of today's news.</li>
+          <li><strong>Anthropic Launches the Economic Index Survey</strong> — A new monthly qualitative survey designed to track how AI use is changing over time, not just at a single snapshot. Anthropic is building an instrument to watch this curve, which is itself a signal about how little the field actually knows about where the productivity gains and losses are accruing.</li>
+        </ul>
+
+        <h4 class="digest-theme">Enterprise AI Goes From Pilot To Production</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google DeepMind Partners With the Big Five Consultancies</strong> — DeepMind named Accenture, Bain, BCG, Deloitte, and McKinsey as partners to accelerate enterprise AI transformation. The headline number in the post: only 25% of organizations have moved AI into production at scale. Three out of four are still stuck in pilot. The partnership is a direct response to that gap: labs build the capability, consultancies do the organizational plumbing.</li>
+          <li><strong>OpenAI Launches Workspace Agents in ChatGPT</strong> — Autonomous task execution inside team workflows. This is OpenAI moving from "chat assistant" to "agent that does work inside your company's operating environment," squarely in the productivity lane the 81K survey is measuring.</li>
+          <li><strong>Google Cloud Next '26: 8th-Gen TPUs and Enterprise Agent Platform</strong> — Sundar Pichai used the Cloud Next keynote to announce 8th-generation TPUs and a new enterprise AI agent platform. Google is positioning the full stack (chips, models, agents) as the enterprise answer, timed to the same week the DeepMind consultancy partnership made the go-to-market move explicit.</li>
+        </ul>
+
+        <h4 class="digest-theme">Open Models and The Research Frontier</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google Releases Gemma 4 (Apache 2.0)</strong> — "Byte for byte, the most capable open models." Four sizes, an Apache 2.0 license, and an explicit pitch toward agentic workflows. The open-weight release is the counterweight to the enterprise bundle pitched at Cloud Next: the same week Google is selling the closed stack, it's seeding the open one.</li>
+          <li><strong>Hugging Face: Gemma 4 VLA on Jetson Orin Nano Super</strong> — A demo of local multimodal conversational AI running on NVIDIA's edge board. Gemma 4 doesn't just run in the cloud; the Jetson demo is a signal that capable multimodal models now fit on hardware a developer can hold in their hand.</li>
+          <li><strong>Microsoft Research: AutoAdapt</strong> — Automated domain adaptation for LLMs, automating the planning, strategy, and hyperparameter tuning that used to require an ML team. The "who can customize a model" question gets a new answer when the adaptation pipeline itself is automated.</li>
+          <li><strong>Apple at ICLR 2026</strong> — Apple ML Research summarized its ICLR contributions across recurrent networks, state-space models, unified multimodal architectures, 3D scenes, and protein folding. A reminder that Apple's AI bet is quieter but broad.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Developer Side: Agentic OS and Parallel Agents</h4>
+        <ul class="digest-bullets">
+          <li><strong>Chase: Claude Code Agentic OS = UNSTOPPABLE</strong> — A four-layer architecture (memory, skill fleet, automations, dashboard) that turns Claude Code from a single-shot assistant into a standing operating system. This is the developer-side mirror of the Workspace Agents announcement: the same idea (autonomous agents embedded in workflow) expressed in the coding stack.</li>
+          <li><strong>Cole Medin: Parallel Claude Code + Git Worktrees</strong> — Running 3-10 Claude Code agents in parallel using git worktrees. The practical embodiment of where "task expansion and speed" in the 81K survey actually comes from for developers: more agents, more branches, more work in flight at once.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Business Frame</h4>
+        <ul class="digest-bullets">
+          <li><strong>Ben Thompson: Apple's Hardware-Defined Future, SpaceXAI and Cursor</strong> — Thompson argues Apple's strategy elevates hardware as the primary differentiator now that software capability is commoditizing through foundation models. In that frame, the reported SpaceX-Cursor deal makes sense: when model access plus compute is the moat, integrating an IDE into that stack is a vertical move, not a horizontal one.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Three stories today are really one story. Anthropic's 81,000-user survey tells us what AI-exposed workers are feeling: more productive, more anxious, at the same time. DeepMind's consultancy partnership tells us why: three out of four organizations haven't actually moved AI into production at scale, so the productivity gains are happening in pockets while the displacement anxiety is universalizing. And OpenAI's Workspace Agents, plus Google's enterprise agent platform at Cloud Next, tell us what's about to hit those organizations next. The "only 25% in production" number is a lagging indicator. Workspace Agents and the Big Five consultancy partnership are how that number starts moving.</p>
+
+        <p>The developer-side stories rhyme with the enterprise ones. Chase's Claude Code Agentic OS and Cole Medin's parallel worktrees demo are what "task expansion and speed" looks like when you zoom in on one worker's terminal. Three to ten agents in flight, each on its own branch, coordinated by a memory layer and a skill fleet. The 81K survey's finding that gains concentrate in task expansion is not abstract: it's literally what a developer running parallel agents experiences. The same worker is also the one most likely to wonder, honestly, which of those agents could have been them.</p>
+
+        <p>Gemma 4 and the Jetson Nano demo draw the other axis. The enterprise story is about closed, bundled capability delivered through consultancy relationships. The open-weight story is about the same capability becoming something a single developer can download, run on a dev board, and integrate into their own stack. Both are true at the same time, and the gap between them is where the labor market anxiety in the 81K survey actually lives. If capable agents are available at both ends (hyperscaler bundle and open-weight download) the question isn't whether they'll reshape work. It's how fast, and on whose terms.</p>
+
+        <p>Ben Thompson's Apple piece sits quietly at the side of this picture, but it belongs here. If Thompson is right that hardware is where durable differentiation lives when software capability commoditizes, then Cloud Next's 8th-gen TPU announcement and the rumored SpaceX-Cursor-Colossus deal are two expressions of the same logic. The model layer is fungible. The silicon, the IDE, and the compute cluster are not. That has implications for where the economic value of AI ends up lodging, and by extension, who benefits from the productivity gains the 81K survey is measuring.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>The consistent message across today's stories is that the infrastructure for autonomous work is shipping faster than organizations can absorb it. Workspace Agents, Google's enterprise agent platform, Claude Code Agentic OS, parallel worktrees, AutoAdapt, Gemma 4 on a Jetson board: these are not separate product launches, they're the same wave arriving at different altitudes. What ties them together is that every one of them shifts work from "human does task, tool assists" to "agent does task, human supervises." The 81,000 people Anthropic surveyed are the first generation of workers living inside that shift.</p>
+
+        <p>The 25% production figure is the number to stare at. If three quarters of organizations are still running pilots while the agent tooling matures every week, the backlog of unabsorbed capability is getting larger, not smaller. The DeepMind consultancy partnership is a bet that the bottleneck is organizational, not technical. That's almost certainly right. But the workers expressing displacement concerns in the 81K survey are reading a different signal: once the organizational bottleneck clears, the tooling on the other side is a lot more capable than the tooling that exists today.</p>
+
+        <p>What responsible leadership looks like in this window is telling people the truth about both halves of the paradox. The productivity gains are real. The displacement concerns are real. The honest answer to "will this take my job" is not "no," it's "it depends on how your organization decides to spend the gains." That decision is happening right now, in every one of the 75% of organizations that hasn't yet moved AI into production at scale. Today's stories are the leading edge of those decisions.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Does the 25% production-at-scale number move in Q3?</strong> DeepMind's Big Five consultancy partnership is timed to accelerate that curve. If the number jumps meaningfully by the next Economic Index Survey, expect a visible step-change in both productivity claims and displacement anxiety in the data. If it doesn't move, the bottleneck isn't consulting capacity, it's something deeper.</li>
+          <li><strong>How fast does Gemma 4 get deployed on the edge?</strong> The Jetson Orin Nano Super demo is a preview of multimodal agents on hardware a developer can own outright. If capable open-weight agents run locally by summer, the enterprise-platform narrative gets a real competitor, and the economics of "who can afford capable AI" shifts again.</li>
+          <li><strong>Will the next Economic Index Survey show gains concentrating or diffusing?</strong> Anthropic's survey found productivity gains concentrated in task expansion and speed. The open question is whether those gains stay concentrated in AI-exposed roles or start diffusing across the workforce as Workspace Agents and similar products roll out. That diffusion curve will shape the politics of AI for the next five years.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-code-agentic-os-unstoppable-study/claude-code-agentic-os-unstoppable-study.html" data-study-guide>Claude Code Agentic OS = UNSTOPPABLE</a> — Chase walks through a four-layer architecture (memory, skill fleet, automations, dashboard) that turns Claude Code from a single-shot coding assistant into a standing operating system for the developer. This is the concrete developer-side expression of the same "autonomous agent in the workflow" idea that OpenAI's Workspace Agents and Google's enterprise agent platform are pitching at the organizational level.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/parallel-claude-code-git-worktrees-ship-study/parallel-claude-code-git-worktrees-ship-study.html" data-study-guide>Parallel Claude Code + Git Worktrees</a> — Cole Medin demonstrates running 3 to 10 Claude Code agents in parallel using git worktrees, each on its own branch. When the 81K Economic Index survey talks about productivity gains concentrated in task expansion and speed, this is what that looks like in practice for a working developer.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
