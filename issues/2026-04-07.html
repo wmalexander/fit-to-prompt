@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt -- April 7, 2026</title>
+  <meta name="description" content="Daily AI news roundup -- April 7, 2026. Anthropic expands compute with Google and Broadcom, The New Yorker probes whether Sam Altman can be trusted, Claude Code ships vim visual mode and a unified /usage command, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt -- Issue No. 23b">
+  <meta property="og:description" content="Daily AI news roundup -- April 7, 2026. Anthropic expands compute with Google and Broadcom, The New Yorker probes whether Sam Altman can be trusted, Claude Code ships vim visual mode and a unified /usage command, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; font-family: 'Inter', monospace; user-select: none; }
+    .ws-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; color: #1a1a1a; background: #f3f3f3; cursor: pointer; border: 1px solid #e5e5e5; }
+    .ws-cell.found { background: #8B0000; color: #fff; border-color: #8B0000; }
+    .ws-word-list { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: #374151; display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 10px; }
+    .ws-word-list span { padding: 2px 4px; }
+    .ws-word-list span.done { color: #8B0000; text-decoration: line-through; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+<!-- MASTHEAD -->
+<header class="text-center mb-0">
+  <hr class="rule-accent mb-3">
+  <p class="masthead-motto mb-2">Your daily AI news digest</p>
+  <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+  <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+    <span>Vol. I</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Tuesday, April 7, 2026</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Issue No. 23b</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>10 Stories</span>
+  </div>
+  <hr class="rule-double">
+</header>
+
+<!-- LEAD STORY -->
+<section class="mt-6 mb-4">
+  <div class="lead-grid">
+    <div>
+      <div class="kicker">Infrastructure &middot; Compute</div>
+      <a href="https://anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener" class="story-link">
+        <h2 class="headline-lead mb-3">Anthropic Locks In Multi-Gigawatt TPU Deal With Google and Broadcom as Revenue Hits $30B Run-Rate</h2>
+      </a>
+      <p class="byline mb-3">Anthropic &middot; Apr 6</p>
+      <div class="newspaper-body">
+        <p>Anthropic announced a multi-year expansion of its partnership with Google and Broadcom to secure multiple gigawatts of next-generation TPU capacity beginning in 2027. The company cites Claude's frontier model roadmap and what it calls "extraordinary" customer demand, with run-rate revenue now exceeding $30 billion.</p>
+        <p>The deal is a clear signal that compute, not model architecture, is the binding constraint on the next generation of AI. Google becomes both a major investor and a strategic supplier, deepening a relationship that already blurred the line between customer, competitor, and partner.</p>
+      </div>
+    </div>
+    <div>
+      <div class="kicker">Video &middot; Analysis</div>
+      <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-just-changed-overnight-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+        <img src="https://img.youtube.com/vi/U_8QyUvl-J4/maxresdefault.jpg" alt="Claude just changed overnight" class="w-full aspect-video object-cover mb-3">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+        <h3 class="headline-standard mb-2">Claude Just Changed Overnight</h3>
+      </a>
+      <p class="byline mb-2">Wes Roth &middot; YouTube &middot; Apr 7</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Wes Roth walks through the latest round of Claude updates, unpacking what the changes mean for day-to-day users, how the shift lines up with Anthropic's broader compute push, and where Claude now sits relative to GPT and Gemini.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule-thin my-4">
+
+<!-- MASONRY FLOW -->
+<section class="mb-2">
+  <div class="masonry-flow">
+
+    <!-- New Yorker Altman profile -- full width -->
+    <div class="story-wide">
+      <div class="kicker">Profile &middot; Governance</div>
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+        <div>
+          <a href="https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Sam Altman May Control Our Future. Can He Be Trusted?</h3>
+          </a>
+          <p class="byline mb-2">The New Yorker &middot; Apr 6</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Ronan Farrow and Andrew Marantz draw on new interviews and closely guarded documents to examine the persistent doubts surrounding OpenAI's CEO. The piece probes Altman's credibility and judgment as he steers an organization whose decisions increasingly set the trajectory of the entire industry.</p>
+        </div>
+        <div>
+          <img src="https://media.newyorker.com/photos/69cd326ac6ea0f4558d6e181/16:9/w_1280,c_limit/r47927.jpg" alt="Sam Altman profile image" class="w-full aspect-[16/9] object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- Cartoon + Claude Code CHANGELOG -- spans 2 columns -->
+    <div class="story-span-2">
+      <div class="kicker">Developer Tools &middot; Claude Code</div>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+        <div style="text-align: center;">
+          <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-07-cartoon.png" alt="New Yorker-style cartoon: Tech executives in a boardroom puzzling over a tangled Anthropic-Google-Broadcom TPU deal. Caption: He says he's our new compute partner, our competitor, and our customer. I told him to pick a lane." class="w-full" style="display: block;">
+        </div>
+        <div>
+          <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Claude Code Adds Vim Visual Modes, Unified /usage Command, and Custom Themes</h3>
+          </a>
+          <p class="byline mb-2">GitHub &middot; anthropics/claude-code &middot; Apr 7</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">The latest Claude Code releases land vim visual modes, merge /cost and /stats into a new /usage command, add user-created themes, let MCP tools be invoked from hooks, and fix several OAuth and MCP auth edge cases. A 67% speedup on /resume for large sessions and smoother fullscreen scrolling round out the update.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chase AI video study guide -->
+    <div class="story-item">
+      <div class="kicker">Video &middot; Workflow</div>
+      <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/did-claude-code-just-get-plan-mode-2-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+        <img src="https://img.youtube.com/vi/eEYbwJWVQtQ/maxresdefault.jpg" alt="Did Claude Code Just Get Plan Mode 2.0?" class="w-full aspect-video object-cover mb-3">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+        <h3 class="headline-standard mb-2">Did Claude Code Just Get Plan Mode 2.0?</h3>
+      </a>
+      <p class="byline mb-2">Chase AI &middot; YouTube &middot; Apr 7</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">A hands-on walkthrough of the latest Claude Code planning behavior, showing how the tool now structures multi-step work, surfaces intent before execution, and what changes for developers who had wired up their own plan-mode workarounds.</p>
+    </div>
+
+    <!-- Mediapost WSJ/Fortune AI -->
+    <div class="story-item">
+      <div class="kicker">Media &middot; Newsroom AI</div>
+      <a href="https://www.mediapost.com/publications/article/414130/wall-street-journal-eic-praises-fortunes-use.html" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">WSJ's Editor-in-Chief Holds Up Fortune as the Model for Newsroom AI</h3>
+      </a>
+      <p class="byline mb-2">MediaPost &middot; Apr 7</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Emma Tucker publicly commended Fortune's transparent approach to deploying AI-generated content in its newsroom, calling the strategy unique among major publications and telling her own staff to study the initiative. The moment signals a shift from quiet experimentation to open acknowledgement inside legacy media.</p>
+    </div>
+
+    <!-- Freestyle -->
+    <div class="story-item">
+      <div class="kicker">Developer Tools &middot; Agent Infrastructure</div>
+      <a href="https://www.freestyle.sh/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">Freestyle Pitches Full Linux VMs for Coding Agents With Sub-600ms Cold Starts</h3>
+      </a>
+      <p class="byline mb-2">Freestyle &middot; Apr 7</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Freestyle is building sandboxes and infrastructure specifically for running coding agents at scale, offering full Linux VMs with sub-600ms startup, live forking, persistent storage, Git integration, webhooks, and deployment primitives. The pitch: AI agents need real compute, not just tool-call shims.</p>
+    </div>
+
+    <!-- Hippo memory -->
+    <div class="story-item">
+      <div class="kicker">Open Source &middot; Agent Memory</div>
+      <a href="https://github.com/kitfunso/hippo-memory" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">Hippo-Memory: Biologically-Inspired Long-Term Memory for Claude Code, Cursor, and Codex</h3>
+      </a>
+      <p class="byline mb-2">GitHub &middot; kitfunso/hippo-memory &middot; Apr 7</p>
+      <p class="font-serif text-sm text-gray-500 leading-relaxed">Hippo models memory decay, retrieval strengthening, and consolidation so agents actually retain lessons across sessions. Zero runtime dependencies, a shared git-friendly SQLite store with markdown mirrors, and drop-in support across Claude Code, Cursor, and Codex.</p>
+    </div>
+
+    <!-- Word Search puzzle -->
+    <div class="story-item">
+      <div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+      <div style="font-family:'Inter',sans-serif;color:#1a1a1a;">
+        <p style="font-size:12px;line-height:1.5;margin:0 0 10px;color:#444;">Find the 8 AI terms hidden in the grid (horizontal or vertical). Click letters to mark them.</p>
+        <div id="ws-grid" class="ws-grid"></div>
+        <div class="ws-word-list" id="ws-words"></div>
+      </div>
+      <script>
+      (function(){
+        var rows = [
+          "QTPUCOMPUTE",
+          "CLAUDESBFKP",
+          "XAGENTGITCR",
+          "MEMORYREWOO",
+          "PTBROADCOMM",
+          "OPENAIABNPP",
+          "NXGEMMADEET",
+          "TOKENZQWTHN",
+          "PLANMODELRO",
+          "GOOGLEVXEPA"
+        ];
+        // Trim to 10 columns
+        rows = rows.map(function(r){ return r.substring(0,10); });
+        var words = ["TPU","CLAUDE","AGENT","MEMORY","BROADCOM","OPENAI","GEMMA","TOKEN"];
+        var grid = document.getElementById('ws-grid');
+        var cells = [];
+        for (var r=0;r<10;r++){
+          for (var c=0;c<10;c++){
+            var d = document.createElement('div');
+            d.className = 'ws-cell';
+            d.textContent = rows[r][c] || 'X';
+            d.dataset.r=r; d.dataset.c=c;
+            d.addEventListener('click', toggle);
+            grid.appendChild(d);
+            cells.push(d);
+          }
+        }
+        var wl = document.getElementById('ws-words');
+        words.forEach(function(w){
+          var s = document.createElement('span');
+          s.textContent = w;
+          s.id = 'ws-w-' + w;
+          wl.appendChild(s);
+        });
+        function toggle(e){
+          e.currentTarget.classList.toggle('found');
+          checkWords();
+        }
+        function checkWords(){
+          // Build 2D grid of selected letters (or '.' if not)
+          var sel = [];
+          for (var r=0;r<10;r++){ sel.push([]); for (var c=0;c<10;c++){ sel[r].push(null); } }
+          cells.forEach(function(cell){
+            if (cell.classList.contains('found')){
+              sel[+cell.dataset.r][+cell.dataset.c] = cell.textContent;
+            }
+          });
+          words.forEach(function(w){
+            var found = false;
+            for (var r=0;r<10 && !found;r++){
+              for (var c=0;c<=10-w.length && !found;c++){
+                var ok=true; for (var i=0;i<w.length;i++){ if (sel[r][c+i] !== w[i]){ ok=false; break; } } if (ok) found=true;
+              }
+            }
+            for (var c=0;c<10 && !found;c++){
+              for (var r=0;r<=10-w.length && !found;r++){
+                var ok=true; for (var i=0;i<w.length;i++){ if (sel[r+i][c] !== w[i]){ ok=false; break; } } if (ok) found=true;
+              }
+            }
+            var span = document.getElementById('ws-w-'+w);
+            if (span) span.classList.toggle('done', found);
+          });
+        }
+      })();
+      </script>
+    </div>
+
+    <!-- Wire briefs section -->
+    <div class="story-wide">
+      <div class="section-label">Wire Briefs</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+        <div>
+          <div class="wire-item">
+            <a href="https://openai.com/index/openai-safety-fellowship/" target="_blank" rel="noopener">OpenAI Launches Safety Fellowship to Pull External Researchers Into Alignment Work</a>
+            <div class="wire-source">OpenAI &middot; Apr 6</div>
+          </div>
+        </div>
+        <div>
+          <div class="wire-item">
+            <a href="https://openai.com/index/ai-progress-and-recommendations/" target="_blank" rel="noopener">OpenAI Publishes "AI Progress and Recommendations" Outlining Its Policy and Governance Asks</a>
+            <div class="wire-source">OpenAI &middot; Apr 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBSCRIBE CTA -->
+<section class="subscribe-section my-8">
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+    method="post"
+    target="popupwindow"
+    class="subscribe-box"
+  >
+    <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </div>
+    <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+  </form>
+</section>
+
+<hr class="rule-double my-6">
+
+<!-- FOOTER -->
+<footer class="text-center pb-8">
+  <hr class="rule-thin mb-6">
+  <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+  <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+  <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+  <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+</footer>
+
+  </div>
+
+<!-- STUDY GUIDE MODAL -->
+<div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+  <div class="sg-modal-container">
+    <div class="sg-modal-header">
+      <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+      <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+    </div>
+    <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+  </div>
+</div>
+<style>
+  .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+  .sg-modal-overlay.active { display: flex; }
+  .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+  .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+  .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+  .sg-modal-open-external:hover { color: #8B0000; }
+  .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+  .sg-modal-close:hover { color: #1a1a1a; }
+  .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+  @media print { .sg-modal-overlay { display: none !important; } }
+</style>
+<script>
+(function() {
+  var overlay = document.getElementById('sg-modal');
+  var iframe = document.getElementById('sg-modal-iframe');
+  var externalLink = document.getElementById('sg-modal-external');
+  var closeBtn = document.getElementById('sg-modal-close');
+  function openModal(url) {
+    iframe.src = url;
+    externalLink.href = url;
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    iframe.src = 'about:blank';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[data-study-guide]');
+    if (link) {
+      e.preventDefault();
+      openModal(link.href);
+    }
+  });
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+  });
+})();
+</script>
+
+<!-- THE BIG PICTURE -- Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic, with a $30 billion run-rate, just locked in multi-gigawatt TPU capacity from Google and Broadcom that won't even come online until 2027, and still frames it as urgent. The same day, The New Yorker publishes a long profile asking whether Sam Altman, who is effectively steering the most influential AI company on earth, can be trusted at all. Underneath both stories is the same uncomfortable fact: the people making multi-year bets on compute and governance are asking us to trust them on faith, because nobody has the leverage to demand anything else.</p>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">Compute and the Power Question</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic, Google, and Broadcom go all-in on TPUs.</strong> Anthropic confirmed a multi-year expansion that secures multiple gigawatts of next-generation TPU capacity starting in 2027. The company pinned the deal to Claude's frontier roadmap and "extraordinary" demand, disclosing run-rate revenue above $30 billion. Google is simultaneously Anthropic's investor, supplier, and cloud rival, a three-way entanglement that would have been unthinkable two years ago.</li>
+        </ul>
+
+        <h4 class="digest-theme">Governance and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>"Sam Altman May Control Our Future. Can He Be Trusted?"</strong> Ronan Farrow and Andrew Marantz revisit the persistent credibility questions around OpenAI's CEO, drawing on new interviews and internal documents. The piece lands at a moment when OpenAI is simultaneously pushing safety-fellowship programs and publishing its own policy recommendations, making Altman's personal credibility a proxy for the whole company's.</li>
+          <li><strong>OpenAI Safety Fellowship.</strong> OpenAI announced a new external-researcher fellowship aimed at expanding its safety and alignment bench, explicitly pitched as deepening collaboration with outside experts.</li>
+          <li><strong>OpenAI's "AI Progress and Recommendations."</strong> A companion post lays out OpenAI's view of where capabilities are heading and the policy asks it would like governments and industry to adopt. Published alongside the fellowship, the two releases read as a coordinated effort to reshape the conversation right as the New Yorker profile drops.</li>
+        </ul>
+
+        <h4 class="digest-theme">Claude Code Keeps Shipping</h4>
+        <ul class="digest-bullets">
+          <li><strong>Vim visual modes, unified /usage, custom themes.</strong> Recent Claude Code releases (through 2.1.118) added vim visual modes, merged /cost and /stats into a single /usage command, introduced user-defined themes, let MCP tools be invoked from hooks, and closed several OAuth and MCP auth edge cases. Earlier entries landed a 67% speedup on /resume for large sessions, smoother fullscreen scrolling, thinking-progress indicators, and improved plugin dependency resolution.</li>
+          <li><strong>"Claude Just Changed Overnight" (Wes Roth).</strong> Roth frames the latest round of Claude changes as a step-change rather than a patch, connecting the model-side updates to Anthropic's compute expansion and arguing that Claude's positioning against GPT and Gemini is shifting faster than most users have noticed.</li>
+          <li><strong>"Did Claude Code Just Get Plan Mode 2.0?" (Chase AI).</strong> A hands-on walkthrough of how the planner now structures multi-step work and surfaces intent before execution, obsoleting several community workarounds that developers had wired up around the older plan behavior.</li>
+        </ul>
+
+        <h4 class="digest-theme">Media and the Messy Middle</h4>
+        <ul class="digest-bullets">
+          <li><strong>WSJ holds up Fortune as the newsroom-AI model.</strong> Editor-in-Chief Emma Tucker publicly commended Fortune's transparent approach to deploying AI-generated content and told her own staff to study it. This is a legacy-media EIC explicitly endorsing another publication's AI playbook, a rare move that only makes sense if newsrooms have concluded the "wait and see" posture is no longer tenable.</li>
+        </ul>
+
+        <h4 class="digest-theme">Infrastructure for Agents</h4>
+        <ul class="digest-bullets">
+          <li><strong>Freestyle.</strong> A sandbox and infrastructure platform built specifically for coding agents at scale, offering full Linux VMs with sub-600ms cold starts, live forking, persistent storage, Git integration, webhooks, and deployment primitives. The pitch is that agents need real compute, not just tool-call shims.</li>
+          <li><strong>Hippo-Memory.</strong> A biologically-inspired memory system implementing decay, retrieval strengthening, and consolidation, so agents actually retain lessons across sessions. Zero runtime dependencies, a git-friendly SQLite store with markdown mirrors, and drop-in support for Claude Code, Cursor, and Codex.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Today's stories sit along a single axis: <em>who gets to decide, and on what evidence</em>. Anthropic is asking customers, regulators, and the public to trust that locking in multi-gigawatt TPU capacity through 2027 (with Google and Broadcom as both partner and rival) is the right use of capital at a $30B run-rate. OpenAI is asking the same audience to trust that a safety fellowship and a policy document add up to meaningful governance, right as The New Yorker publishes a piece whose headline question is "can he be trusted?" These are not unrelated asks. They are the same ask, laundered through different institutional forms.</p>
+
+        <p>The developer-tools layer tells the same story in miniature. Claude Code keeps shipping, vim visual modes, a unified /usage command, custom themes, faster /resume, and Wes Roth's "Claude just changed overnight" framing captures something real: the tool is evolving fast enough that yesterday's muscle memory is already stale. Chase AI's plan-mode walkthrough is downstream of the same phenomenon. Community workarounds that existed for months are now obsolete because the upstream shipped past them. The pattern rewards teams plugged into the Discord and punishes anyone who tried to build durable abstractions.</p>
+
+        <p>The infrastructure releases, Freestyle and Hippo-Memory, are the practical response. If agents are going to produce at a different cadence than organizations can absorb, you need substrates that treat agents as first-class citizens: real VMs with sub-600ms cold starts, memory systems that model decay and consolidation, storage that survives a session. These are not cosmetic libraries. They are an acknowledgement that the last two years of "just wrap it in a prompt" infrastructure has hit its limits.</p>
+
+        <p>What ties it all together is the asymmetry between the speed of deployment and the speed of scrutiny. Anthropic is booking 2027 compute today. Claude Code is shipping user-visible changes fast enough to reset habits. Fortune is deploying AI-generated content in a legacy newsroom with the WSJ's EIC holding it up as the template. Each of these is a bet that the window for acting faster than the oversight layer is still open, and that the payoff from acting now outweighs the cost of whatever scrutiny lands later.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>Zoom out and today's stories look like an inflection. The compute-capacity conversation has moved from "can we get GPUs this year?" to "which five-year TPU allocation do we sign in 2027?" That is a qualitative shift. Infrastructure commitments of this size demand revenue stories that extend far past today's enterprise adoption curves. Anthropic, OpenAI, and Google are each implicitly forecasting a world where AI usage grows so dramatically that the binding constraint is silicon, not software. The Broadcom deal is both evidence for that forecast and a self-fulfilling mechanism that makes it more likely to come true.</p>
+
+        <p>Against that capital backdrop, the governance conversation is running on a different timescale. The New Yorker piece, OpenAI's safety fellowship, and OpenAI's own progress-and-recommendations post are all trying to answer the same question: if trust in individual founders is the weak link, what institutional forms can carry the weight instead? Today's answer is unsatisfying, fellowships, position papers, and long-form journalism, none of which have the leverage to change a multi-year TPU commitment. The gap between what the capital layer is committing to and what the governance layer can scrutinize has never been wider.</p>
+
+        <p>The developer-tools and agent-infrastructure stories, Claude Code's cadence, Freestyle's VMs, Hippo-Memory's consolidation model, are the ground-level evidence that the industry is quietly rewiring itself around the assumption that AI agents will be doing a meaningful share of real work in production by the time those 2027 TPUs come online. The question is not whether the substrate gets built. It's whether the institutions around it catch up in time to have any say in how it's used.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Whether Google's dual role as Anthropic partner and competitor draws antitrust attention.</strong> A multi-gigawatt TPU supply agreement with a major investor and product rival is exactly the kind of structure that gets flagged once compute becomes publicly visible as a strategic asset, not just a line item.</li>
+          <li><strong>How OpenAI's governance output is received.</strong> The safety fellowship and the recommendations post are the most concrete institutional moves OpenAI has made in months. If independent researchers and policy shops respond skeptically, expect the Altman-credibility conversation from The New Yorker to become the default frame.</li>
+          <li><strong>Agent infrastructure adoption curves.</strong> Freestyle and Hippo-Memory are bets that the next layer of AI tooling looks less like "wrap an API" and more like "give the agent its own machine and its own memory." Watch the star counts and production case studies over the next 90 days.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/claude-just-changed-overnight-study.html" data-study-guide>Claude Just Changed Overnight</a> - Wes Roth's framing is useful even if you think you are keeping up. He connects the user-visible changes to the infrastructure story Anthropic just told with Google and Broadcom, which is the right lens for deciding which of your workflows to revisit.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/did-claude-code-just-get-plan-mode-2-study.html" data-study-guide>Did Claude Code Just Get Plan Mode 2.0?</a> - A concrete walkthrough of how Claude Code now structures multi-step work. If you built your own plan-mode workarounds, this is the fastest way to figure out which of them are now obsolete.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
