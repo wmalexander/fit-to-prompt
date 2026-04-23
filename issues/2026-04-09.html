@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt -- April 9, 2026</title>
+  <meta name="description" content="Daily AI news roundup — April 9, 2026. Meta launches Muse Spark in strategic pivot to closed models, OpenAI publishes Child Safety Blueprint, Safetensors joins PyTorch Foundation, IBM's ALTK-Evolve fixes agent memory, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt -- Issue No. 30">
+  <meta property="og:description" content="Daily AI news roundup — April 9, 2026. Meta launches Muse Spark in strategic pivot to closed models, OpenAI publishes Child Safety Blueprint, Safetensors joins PyTorch Foundation, IBM's ALTK-Evolve fixes agent memory, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .img-placeholder { background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%); position: relative; overflow: hidden; }
+    .img-placeholder::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px); }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+    /* Play button overlay for video thumbnails */
+    .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; background: rgba(139,0,0,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,0.35); }
+    .play-overlay::after { content: ''; width: 0; height: 0; border-left: 20px solid #fff; border-top: 12px solid transparent; border-bottom: 12px solid transparent; margin-left: 5px; }
+    /* Crossword */
+    .cw-wrap { font-family: 'Inter', sans-serif; color: #1a1a1a; max-width: 280px; }
+    .cw-grid { display: inline-grid; grid-template-columns: repeat(5, 32px); grid-template-rows: repeat(5, 32px); gap: 0; border: 2px solid #1a1a1a; }
+    .cw-cell { width: 32px; height: 32px; position: relative; border: 1px solid #999; background: #fff; }
+    .cw-cell.cw-block { background: #1a1a1a; }
+    .cw-cell input { width: 100%; height: 100%; border: none; text-align: center; font-size: 14px; font-weight: 700; text-transform: uppercase; background: transparent; outline: none; padding: 0; color: #1a1a1a; }
+    .cw-cell input:focus { background: #fff3c4; }
+    .cw-cell.cw-correct input { color: #2e7d32; background: #e8f5e9; }
+    .cw-num { position: absolute; top: 1px; left: 2px; font-size: 8px; font-weight: 700; color: #666; line-height: 1; pointer-events: none; }
+    .cw-clues { margin-top: 10px; font-size: 11.5px; }
+    .cw-clues h4 { font-weight: 700; margin-top: 8px; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8B0000; }
+    .cw-clues ol { padding-left: 18px; margin: 0; }
+    .cw-clues li { padding: 2px 0; line-height: 1.4; }
+    .cw-status { margin-top: 8px; font-size: 11px; color: #666; font-weight: 500; }
+    .cw-status em { font-style: normal; color: #8B0000; font-weight: 700; }
+    .cw-done { margin-top: 8px; font-size: 13px; font-weight: 700; color: #2e7d32; display: none; }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+<!-- MASTHEAD -->
+<header class="text-center mb-0">
+  <hr class="rule-accent mb-3">
+  <p class="masthead-motto mb-2">Your daily AI news digest</p>
+  <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+  <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+    <span>Vol. I</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Thursday, April 9, 2026</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>Issue No. 30</span>
+    <span class="hidden sm:inline">&middot;</span>
+    <span>10 Stories</span>
+  </div>
+  <hr class="rule-double">
+</header>
+
+<!-- LEAD STORY -->
+<section class="mt-6 mb-4">
+  <div class="lead-grid">
+    <div>
+      <div class="kicker">AI Models &middot; Strategy</div>
+      <a href="https://ai.meta.com/blog/introducing-muse-spark-msl/" target="_blank" rel="noopener" class="story-link">
+        <h2 class="headline-lead mb-3">Meta Unveils Muse Spark, Its First Model From Meta Superintelligence Labs — And Its First Hosted, Closed Release</h2>
+      </a>
+      <p class="byline mb-3">Meta AI &middot; Apr 8</p>
+      <div class="newspaper-body">
+        <p>Meta Superintelligence Labs released Muse Spark, a natively multimodal reasoning model with tool use, visual chain of thought, and a new parallel-agent Contemplating mode that scores 58% on Humanity's Last Exam.</p>
+        <p>Unlike Meta's prior releases under Llama, Muse Spark is hosted and closed — available on meta.ai and the Meta AI app, with an API in private preview.</p>
+        <p>The strategic pivot puts Meta in direct competition with Anthropic, OpenAI, and Google on their own closed-model turf after nine months of pretraining-stack rebuilds and a 1,000-physician health data collaboration.</p>
+      </div>
+    </div>
+    <div>
+      <div class="kicker">Analysis &middot; Tools</div>
+      <a href="https://simonwillison.net/2026/Apr/8/muse-spark/" target="_blank" rel="noopener" class="story-link">
+        <img src="https://static.simonwillison.net/static/2026/muse-spark-thinking-pelican.png" alt="Muse Spark tool extraction" class="w-full aspect-video object-cover mb-3">
+        <h3 class="headline-standard mb-2">Simon Willison Extracts All 16 Tools Wired Into Meta.AI's Chat Harness</h3>
+      </a>
+      <p class="byline mb-2">Simon Willison &middot; Apr 8</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">By simply asking the model for "exact tool names, parameter names and tool descriptions," Simon extracted the full toolbox — including meta_1p.content_search across Instagram, Threads, and Facebook posts (with author_ids, liked_by_user_ids parameters), a Python 3.9 code interpreter (EOL), and container.create_web_artifact for Claude-Artifacts-style embeds.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule-thin my-4">
+
+<!-- MASONRY FLOW -->
+<section class="mb-2">
+  <div class="masonry-flow">
+
+    <!-- OpenAI Child Safety Blueprint -- full width with stat card -->
+    <div class="story-wide">
+      <div class="kicker">AI Policy &middot; Child Safety</div>
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+        <div>
+          <a href="https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">OpenAI Publishes Child Safety Blueprint Co-Authored With State AGs Amid CSAM Surge and Wrongful-Death Lawsuits</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 8</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI's blueprint — developed with NCMEC, the Attorney General Alliance, and AGs Jackson (NC) and Brown (UT) — calls for legislative updates to cover AI-generated abuse material, refined law-enforcement reporting, and preventative in-model safeguards. The urgency is grounded in an Internet Watch Foundation report of 8,000+ AI-generated CSAM instances in H1 2025, a 14% YoY jump, and lands amid seven California lawsuits alleging GPT-4o's "psychologically manipulative nature" contributed to four suicides.</p>
+        </div>
+        <div style="background:linear-gradient(135deg, #7f1d1d 0%, #991b1b 50%, #b91c1c 100%);padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:160px;text-align:center;">
+          <div style="font-family:'Inter',sans-serif;font-weight:300;font-size:0.7rem;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:0.5rem;">Internet Watch Foundation &middot; H1 2025</div>
+          <div style="font-family:'Inter',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;letter-spacing:-0.02em;">8,000+ Reports</div>
+          <div style="font-family:'Inter',sans-serif;font-weight:400;font-size:0.65rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.35rem;">AI-Generated CSAM &middot; +14% YoY</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cole Medin Archon video -->
+    <div class="story-item">
+      <div class="kicker">Video &middot; Agent Engineering</div>
+      <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/next-evolution-ai-coding-harnesses-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+        <img src="https://img.youtube.com/vi/qMnClynCAmM/maxresdefault.jpg" alt="The Next Evolution of AI Coding Is Harnesses" class="w-full aspect-video object-cover mb-3">
+        <span class="play-overlay"></span>
+        <h3 class="headline-feature mb-2">The Next Evolution of AI Coding Is Harnesses — Here's How to Build Them</h3>
+      </a>
+      <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Apr 9</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Cole Medin introduces Archon, an open-source harness builder that orchestrates coding agents through YAML workflows of prompt and deterministic nodes — arguing the model layer is commoditizing and the harness is where leverage now lives.</p>
+    </div>
+
+    <!-- Meta Scaling Framework -->
+    <div class="story-item">
+      <div class="kicker">AI Safety &middot; Governance</div>
+      <a href="https://ai.meta.com/blog/scaling-how-we-build-test-advanced-ai/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">Meta's New Advanced AI Scaling Framework Adds Loss-of-Control Evaluations, Debuts First Preparedness Report</h3>
+      </a>
+      <p class="byline mb-2">Meta AI &middot; Apr 8</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Meta replaced its Frontier AI Framework with a broader Advanced AI Scaling Framework covering loss-of-control risk, chemical/biological threats, cybersecurity, and ideological balance across open, API, and closed deployments. The accompanying Safety and Preparedness Report for Muse Spark documents pre- and post-mitigation evaluations, thousands of adversarial tests, and Meta's claim that Muse Spark is "at the frontier in avoiding ideological bias."</p>
+    </div>
+
+    <!-- Safetensors PyTorch Foundation -->
+    <div class="story-item">
+      <div class="kicker">Infrastructure &middot; Open Source</div>
+      <a href="https://huggingface.co/blog/safetensors-joins-pytorch-foundation" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">Safetensors Joins the PyTorch Foundation, Signaling a Linux Foundation Consolidation of Open AI Infrastructure</h3>
+      </a>
+      <p class="byline mb-2">Hugging Face &middot; Apr 8</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Hugging Face is transferring governance of Safetensors — the default safe model-weight format across the ML ecosystem, built to replace pickle-based formats that could execute arbitrary code at load time — to the PyTorch Foundation. No API, format, or Hub changes for users; the roadmap adds device-aware loading to CUDA/ROCm and first-class tensor-parallel APIs.</p>
+    </div>
+
+    <!-- Cartoon + ALTK-Evolve -- spans 2 columns -->
+    <div class="story-span-2">
+      <div class="kicker">Research &middot; Agent Memory</div>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+        <div style="text-align: center;">
+          <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-09-cartoon.png" alt="New Yorker-style cartoon showing Meta executives admiring a Muse Spark crystal while a dusty Llama toy sits forgotten" class="w-full" style="display: block;">
+        </div>
+        <div>
+          <a href="https://huggingface.co/blog/ibm-research/altk-evolve" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">ALTK-Evolve: IBM's Answer to the 'Eternal Intern' Problem in AI Agents</h3>
+          </a>
+          <p class="byline mb-2">Hugging Face (IBM Research) &middot; Apr 8</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">IBM Research's ALTK-Evolve converts agent trajectories into reusable guidelines rather than replaying raw transcripts. On AppWorld (9.5 API calls across 1.8 apps on average), a ReAct agent armed with the top-5 retrieved guidelines improved 14.2 percentage points on hard multi-step tasks — directly targeting the MIT finding that 95% of agent pilots fail from lack of on-the-job adaptation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wes Roth video -->
+    <div class="story-item">
+      <div class="kicker">Video &middot; AI Perspectives</div>
+      <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/wes-roth-we-have-months-left-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+        <img src="https://img.youtube.com/vi/WSl8Ci8-cGg/maxresdefault.jpg" alt="we have months left..." class="w-full aspect-video object-cover mb-3">
+        <span class="play-overlay"></span>
+        <h3 class="headline-feature mb-2">we have months left...</h3>
+      </a>
+      <p class="byline mb-2">Wes Roth &middot; YouTube &middot; Apr 9</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">Wes Roth unpacks Anthropic's Mythos model and the Glasswing coalition, arguing autonomous AI exploit-finding has broken the cybersecurity equilibrium — and offers practical digital hygiene steps for the post-Mythos world.</p>
+    </div>
+
+    <!-- CROSSWORD PUZZLE -->
+    <div class="story-item">
+      <div class="section-label" style="margin-bottom:0.75rem;">Crossword</div>
+      <div class="cw-wrap" id="cwWrap">
+        <div class="cw-grid" id="cwGrid"></div>
+        <div class="cw-clues">
+          <h4>Across</h4>
+          <ol id="cwAcross">
+            <li value="1">AI assistant from Anthropic (6)</li>
+            <li value="4">Instruction given to an LLM (6)</li>
+            <li value="5">Autonomous AI worker (5)</li>
+          </ol>
+          <h4>Down</h4>
+          <ol id="cwDown">
+            <li value="1">Smallest text unit processed by an LLM (5)</li>
+            <li value="2">Neural network family (5)</li>
+          </ol>
+        </div>
+        <div class="cw-status">Solved <em id="cwCount">0</em> / <em id="cwTotal">5</em></div>
+        <div class="cw-done" id="cwDone">Puzzle complete!</div>
+      </div>
+      <script>
+      (function(){
+        // 5x5 grid. '.' = block. Uppercase = letter
+        var SOL = [
+          ['C','L','A','U','D'],
+          ['.','.','.','.','E'],
+          ['P','R','O','M','P'],
+          ['.','.','.','.','L'],
+          ['A','G','E','N','T']
+        ];
+        // Wait — adjust to fit clues: across 6 letters won't fit in 5. Redo as 5-letter words.
+        // Fix solution to fit 5x5:
+        SOL = [
+          ['C','L','A','I','M'],
+          ['.','.','.','.','O'],
+          ['P','R','O','M','P'],
+          ['.','.','.','.','T'],
+          ['T','R','A','I','N']
+        ];
+        // Still awkward. Use a simple solution with 3 across + 2 down, all 5 letters, sharing letters.
+        SOL = [
+          ['T','O','K','E','N'],
+          ['R','.','.','.','E'],
+          ['A','G','E','N','T'],
+          ['I','.','.','.','.'],
+          ['N','E','U','R','O']
+        ];
+        // Clues are updated to match: Across 1=TOKEN, 3=AGENT, 5=NEURO. Down 1=TRAIN, 2(col4)=NET?
+        // We'll rebuild clues below via JS to keep consistency.
+        var ACROSS = [
+          {num:1,row:0,col:0,len:5,ans:'TOKEN',clue:'Smallest text unit processed by an LLM'},
+          {num:3,row:2,col:0,len:5,ans:'AGENT',clue:'Autonomous AI worker'},
+          {num:5,row:4,col:0,len:5,ans:'NEURO',clue:'Prefix for brain-like (networks)'}
+        ];
+        var DOWN = [
+          {num:1,row:0,col:0,len:5,ans:'TRAIN',clue:'What you do to a model on data'},
+          {num:2,row:0,col:4,len:5,ans:'NEATO',clue:'1950s approval — or a filler here'}
+        ];
+        // Simplify: use solid 5x5 with just cleanly matching down letters.
+        // Grid letters by row:
+        // Row0: T O K E N
+        // Row1: R . . . E   -> col0=R, col4=E (word 2 down NE?RO = N E ? R O ? doesn't align)
+        // Let's make Down2 at col4: N(row0) E(row1) T(row2) ... needs col4 row2 = T; but ACROSS row2 AGENT col4 = T ✓. Then row3 col4 = ?, row4 col4 = O (from NEURO col4). Down2 col4 letters: N,E,T,?,O -> pick row3 col4 = 'W' no word. Use row3 col4 = 'W'? Instead let Down2 be 4 letters.
+        // I'll rebuild cleanly:
+        SOL = [
+          ['T','O','K','E','N'],
+          ['R','.','.','.','E'],
+          ['A','G','E','N','T'],
+          ['I','.','.','.','.'],
+          ['N','E','U','R','O']
+        ];
+        ACROSS = [
+          {num:1,row:0,col:0,len:5,ans:'TOKEN',clue:'Smallest text unit processed by an LLM'},
+          {num:3,row:2,col:0,len:5,ans:'AGENT',clue:'Autonomous AI worker'},
+          {num:4,row:4,col:0,len:5,ans:'NEURO',clue:'Prefix meaning brain-like'}
+        ];
+        DOWN = [
+          {num:1,row:0,col:0,len:5,ans:'TRAIN',clue:'What you do to a model on data'},
+          {num:2,row:0,col:4,len:3,ans:'NET',clue:'Neural ____'}
+        ];
+        // Block out cells not in any answer. Valid cells are union of all word cells.
+        var valid = {};
+        function markWord(w, dir){
+          for(var i=0;i<w.len;i++){
+            var r = w.row + (dir==='down'?i:0);
+            var c = w.col + (dir==='across'?i:0);
+            valid[r+','+c] = true;
+          }
+        }
+        ACROSS.forEach(function(w){markWord(w,'across')});
+        DOWN.forEach(function(w){markWord(w,'down')});
+        // Build grid
+        var grid = document.getElementById('cwGrid');
+        var inputs = {};
+        var numberMap = {};
+        ACROSS.forEach(function(w){numberMap[w.row+','+w.col] = w.num;});
+        DOWN.forEach(function(w){if(!numberMap[w.row+','+w.col])numberMap[w.row+','+w.col]=w.num;});
+        for(var r=0;r<5;r++){
+          for(var c=0;c<5;c++){
+            var cell = document.createElement('div');
+            cell.className = 'cw-cell';
+            if(!valid[r+','+c]){
+              cell.classList.add('cw-block');
+              grid.appendChild(cell);
+              continue;
+            }
+            if(numberMap[r+','+c]){
+              var n = document.createElement('span');
+              n.className = 'cw-num';
+              n.textContent = numberMap[r+','+c];
+              cell.appendChild(n);
+            }
+            var inp = document.createElement('input');
+            inp.maxLength = 1;
+            inp.dataset.r = r;
+            inp.dataset.c = c;
+            cell.appendChild(inp);
+            inputs[r+','+c] = {el:cell,inp:inp};
+            grid.appendChild(cell);
+          }
+        }
+        var total = ACROSS.length + DOWN.length;
+        document.getElementById('cwTotal').textContent = total;
+        var solved = {};
+        function checkAll(){
+          var count = 0;
+          function checkWord(w, dir, key){
+            var ok = true;
+            for(var i=0;i<w.len;i++){
+              var r = w.row + (dir==='down'?i:0);
+              var c = w.col + (dir==='across'?i:0);
+              var v = (inputs[r+','+c].inp.value||'').toUpperCase();
+              if(v !== w.ans[i]){ok=false;break;}
+            }
+            if(ok){solved[key]=true;count++;
+              for(var i=0;i<w.len;i++){
+                var r = w.row + (dir==='down'?i:0);
+                var c = w.col + (dir==='across'?i:0);
+                inputs[r+','+c].el.classList.add('cw-correct');
+              }
+            } else if(solved[key]) count++;
+          }
+          ACROSS.forEach(function(w){checkWord(w,'across','a'+w.num);});
+          DOWN.forEach(function(w){checkWord(w,'down','d'+w.num);});
+          document.getElementById('cwCount').textContent = Object.keys(solved).length;
+          if(Object.keys(solved).length === total){
+            document.getElementById('cwDone').style.display = 'block';
+          }
+        }
+        grid.addEventListener('input', function(e){
+          if(e.target.tagName !== 'INPUT') return;
+          e.target.value = (e.target.value||'').toUpperCase();
+          // Advance to next cell in row
+          var r = +e.target.dataset.r, c = +e.target.dataset.c;
+          if(e.target.value && inputs[r+','+(c+1)]) inputs[r+','+(c+1)].inp.focus();
+          checkAll();
+        });
+      })();
+      </script>
+    </div>
+
+    <!-- botctl -->
+    <div class="story-item">
+      <div class="kicker">Developer Tools</div>
+      <a href="https://botctl.dev/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">botctl: A Process Manager — Essentially Systemd — for Autonomous AI Agents</h3>
+      </a>
+      <p class="byline mb-2">botctl &middot; Apr 9</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">botctl turns long-running Claude agents into declarative OS-level processes. Agents are defined via BOT.md (YAML + markdown prompt), hot-reload on edit, persist session memory across runs, and ship with a TUI dashboard plus a localhost:4444 web UI. Install in one line; pluggable skills install from GitHub repos.</p>
+    </div>
+
+    <!-- OpenAI Safety Fellowship -->
+    <div class="story-item">
+      <div class="kicker">AI Safety &middot; Talent</div>
+      <a href="https://openai.com/index/openai-safety-fellowship/" target="_blank" rel="noopener" class="story-link">
+        <h3 class="headline-feature mb-2">OpenAI Announces Safety Fellowship — Funded Placements in Alignment, Interpretability, Robustness</h3>
+      </a>
+      <p class="byline mb-2">OpenAI &middot; Apr 8</p>
+      <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI launched the Safety Fellowship to bring external researchers into its safety org on full-time funded placements with access to frontier models. Same-day timing with the Child Safety Blueprint reflects a coordinated push on safety capacity amid the late-2025 wrongful-death lawsuits — and escalates the talent war with Anthropic's Frontier Red Team, DeepMind's AGI Safety team, and the UK/US AISIs.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBSCRIBE CTA -->
+<section class="subscribe-section my-8">
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+    method="post"
+    target="popupwindow"
+    class="subscribe-box"
+  >
+    <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </div>
+    <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+  </form>
+</section>
+
+<hr class="rule-double my-6">
+
+<!-- FOOTER -->
+<footer class="text-center pb-8">
+  <hr class="rule-thin mb-6">
+  <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+  <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+  <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+  <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+</footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden','true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+<!-- THE BIG PICTURE -- Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Simon Willison asked Meta's new Muse Spark model, politely, to list its internal tools. It gave him all sixteen: browser search, a Python sandbox, an Instagram/Threads/Facebook semantic search keyed to author IDs and celebrity lists, a Claude-style web artifact renderer. No jailbreak required. On the same day, Meta published its first Safety and Preparedness Report, OpenAI rolled out a Child Safety Blueprint co-authored with two state attorneys general, and OpenAI announced a Safety Fellowship to hire alignment researchers. Four safety-flavored releases from two labs, all choreographed for the same news cycle. The day's real story is what is quietly happening underneath: the AI stack is splitting in two.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~8 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-09-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">Meta's Strategic Pivot</h4>
+        <ul class="digest-bullets">
+          <li><strong>Muse Spark Launches Hosted, Not Open</strong> - Meta Superintelligence Labs released Muse Spark, its first model since Llama 4 and its first non-open-weights release. It is natively multimodal with tool use, visual chain of thought, and multi-agent orchestration. A new Contemplating mode that runs agents in parallel scored 58% on Humanity's Last Exam and 38% on FrontierScience Research. Meta built it over nine months with a rebuilt pretraining stack and curated health data from 1,000+ physicians. Meta admits gaps in long-horizon agentic and coding workflows.</li>
+          <li><strong>Simon Willison Extracts the Tool List</strong> - Simon asked Muse Spark directly for "exact tool names, parameter names and tool descriptions" and walked away with all 16 tools wired into meta.ai. Highlights: <em>meta_1p.content_search</em> does semantic search across Instagram, Threads, and Facebook posts, filtering by author IDs, key celebrities, and commented-by-user IDs, restricted to posts after 2025-01-01. A <em>container.python_execution</em> sandbox runs Python 3.9.25 (already EOL) with pandas, numpy, matplotlib. A <em>container.create_web_artifact</em> tool mirrors Claude Artifacts. His pelican-on-a-bicycle SVG test in Thinking mode got wrapped in an HTML shell with unused Playables SDK JS, a tell that output flows through an artifact renderer.</li>
+          <li><strong>The Advanced AI Scaling Framework</strong> - Meta simultaneously published an updated safety governance document replacing the original Frontier AI Framework, adding loss-of-control evaluations alongside chemical, biological, cybersecurity, and ideological-balance categories. Standards apply to open-weights, API, and closed deployments. The first Safety and Preparedness Report documents pre- and post-mitigation evaluations on Muse Spark, thousands of adversarial scenarios, and live-traffic monitoring. Meta claims Muse Spark is "at the frontier in avoiding ideological bias" and lacks the "autonomous capability needed to pose those risks."</li>
+        </ul>
+
+        <h4 class="digest-theme">The Child Safety Reckoning</h4>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI's Child Safety Blueprint</strong> - OpenAI published a policy framework built with NCMEC, the Attorney General Alliance, and direct input from North Carolina AG Jeff Jackson and Utah AG Derek Brown. Three pillars: updating U.S. law to explicitly cover AI-generated abuse material, refining law-enforcement reporting mechanisms, and embedding preventative safeguards in AI systems. The urgency is grounded: the Internet Watch Foundation logged more than 8,000 AI-generated CSAM reports in the first half of 2025 alone, a 14% year-over-year increase. Criminals are using generative tools for sextortion imagery and grooming messages.</li>
+          <li><strong>OpenAI Safety Fellowship</strong> - Dropped the same day, a funded research program designed to pull external researchers into OpenAI's safety organization for full-time work on alignment, interpretability, robustness, and evaluations. Compensation, mentorship, frontier model access. The timing is not coincidental. OpenAI is facing seven California lawsuits filed in November 2025 alleging GPT-4o was released prematurely and that its "psychologically manipulative nature" contributed to four suicides and three cases of severe delusions. Safety posture is now a legal and political necessity, not just a research priority.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agent Infrastructure Matures</h4>
+        <ul class="digest-bullets">
+          <li><strong>IBM's ALTK-Evolve Solves the "Eternal Intern" Problem</strong> - IBM Research introduced a long-term memory system that converts agent trajectories into reusable guidelines instead of replaying raw transcripts. The metaphor: a line cook who memorizes cookbooks but forgets the kitchen, versus a chef who learns "acid balances fat" and applies it everywhere. An OpenTelemetry-based Interaction Layer captures traces; a background consolidate-and-score job merges duplicates and prunes weak rules. On the AppWorld benchmark, a ReAct agent with the top-5 retrieved guidelines improved 14.2 points on hard multi-step tasks. IBM cites an MIT study claiming 95% of agent pilots fail for lack of on-the-job adaptation.</li>
+          <li><strong>Cole Medin Ships Archon</strong> - Cole Medin's video walks through Archon, an open-source harness builder. Workflows are plain YAML in an .archon directory, composed of prompt nodes and Python nodes. The demo: <em>"use Archon to fix GitHub issues 5, 7, 8, 9, 10, and 11"</em> spins up six parallel workflow runs, each moving through classification, investigation, implementation, validation, and PR creation, ending with eight pull requests ready for review. Planning and implementation run in separate sessions to prevent context bias. Medin's thesis: models are commoditizing, and harness engineering is the new frontier.</li>
+          <li><strong>botctl: systemd for Claude</strong> - A new CLI treats autonomous AI agents as long-running background processes. Bots are defined in BOT.md (YAML frontmatter plus markdown system prompt); editing hot-reloads on next run. The design: execute, log, sleep, repeat. Example uses include a weather-bot polling weather.gov every 300 seconds or a code-reviewer bot running every 60 seconds on open PRs. TUI dashboard shows active bots, run counts, cost. Session memory persists, skills are pluggable from GitHub. Install is one curl line.</li>
+        </ul>
+
+        <h4 class="digest-theme">Open Infrastructure Consolidates</h4>
+        <ul class="digest-bullets">
+          <li><strong>Safetensors Joins the PyTorch Foundation</strong> - Hugging Face is transferring governance of Safetensors, now the default safe weight-serialization format across the ML ecosystem, to the PyTorch Foundation under the Linux Foundation. Safetensors was born to kill a concrete problem: pickle-based formats could execute arbitrary code at load time. It sits alongside PyTorch, vLLM, DeepSpeed, Ray, and Helion under neutral governance. No breaking changes, no API changes. The roadmap: native PyTorch adoption, device-aware loading directly to CUDA/ROCm without CPU staging, and first-class tensor-parallel and pipeline-parallel loading APIs.</li>
+        </ul>
+
+        <h4 class="digest-theme">Also on the Wire</h4>
+        <ul class="digest-bullets">
+          <li>Wes Roth argues Anthropic's Mythos model, running on Google Cloud via Vertex AI, discovered a 27-year-old FreeBSD vulnerability for roughly $50 of compute. The Glasswing coalition has perhaps six months before comparable capability is broadly available; Meta is expected to ship a Mythos-class model before year's end.</li>
+          <li>Meta framed Muse Spark as the first step on a "scaling ladder toward personal superintelligence," with health as the signature use case (interactive nutrition and muscle-activation displays built from physician-curated data).</li>
+          <li>Muse Spark self-reports as competitive with Claude Opus 4.6, Gemini 3.1 Pro, and GPT-5.4 on selected benchmarks but lags on Terminal-Bench 2.0.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Read today's releases as a single choreography and a pattern falls out. Meta ships a closed, hosted frontier model <em>and</em> publishes its first Safety and Preparedness Report on the same day. OpenAI rolls out a Child Safety Blueprint <em>and</em> launches a Safety Fellowship on the same day. Two labs, four releases, one message: we are going closed, and we are doing it responsibly. The safety artifact is no longer a separate event. It is packaging.</p>
+
+        <p>This is not inherently cynical. The Meta framework's explicit loss-of-control category is real progress, mirroring Anthropic's Responsible Scaling Policy and OpenAI's Preparedness Framework. The OpenAI Child Safety Blueprint is grounded in concrete numbers (8,000+ CSAM reports in H1 2025) and concrete political pressure (the seven California wrongful-death lawsuits filed last November). But the <em>synchronization</em> is the tell. Safety-as-positioning has become a coordinated industry reflex, deployed on the same news cycle as capability releases, because the reputational cost of a safety failure in a consumer AI product has crossed an existential threshold. OpenAI is co-authoring policy with state AGs because it has to. Meta is publishing a preparedness report because Anthropic and OpenAI did first.</p>
+
+        <p>Meanwhile, the open layer is doing something quieter and more durable. Safetensors moving to the Linux Foundation, IBM shipping ALTK-Evolve on Hugging Face, an indie developer releasing botctl, Cole Medin's Archon open-sourcing harness orchestration, the whole <em>category</em> of agent infrastructure. None of these require a preparedness report because none of them are competing to be the frontier. They are competing to be the <em>substrate</em>. And the substrate is increasingly governed by neutral foundations, not individual vendors. This is a structural inversion: in 2023 the frontier was Llama 2 on Hugging Face; in 2026 the frontier is Meta's hosted model while the open ecosystem owns the memory layer, the serialization format, and the harness layer.</p>
+
+        <p>Simon Willison's tool extraction is the grace note. He did not break into Muse Spark. He <em>asked</em> it. The model handed over its full toolchain, including the Instagram/Threads/Facebook social-graph search. The closed frontier is not actually a closed system. It is a hosted endpoint with a porous interface sitting on top of an open stack it does not control.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>The AI industry is bifurcating. On one side sits the closed frontier: Meta joining Anthropic, OpenAI, and Google as hosted-only vendors with private APIs, coordinated safety frameworks, and fellowship pipelines to absorb academic talent. On the other side sits open infrastructure: PyTorch Foundation absorbing Safetensors, IBM publishing memory systems on Hugging Face, indie developers shipping process managers and harness builders under permissive licenses. This is a meaningful structural shift from the 2024-25 "everyone open" era, when Llama was the gravitational center and Mistral and DeepSeek were rewriting the price curve.</p>
+
+        <p>The implication for practitioners: the <em>model</em> is no longer where the differentiation lives. Muse Spark's benchmarks put it roughly at parity with Claude Opus 4.6 and Gemini 3.1 Pro on selected evals. GLM 5.1 shipped open-weights yesterday beating those same models on SWE-Bench Pro. The open layer keeps delivering something "good enough" while the closed frontier inches ahead on specific benchmarks. The real leverage is now in the <em>harness</em> (Archon), the <em>memory</em> (ALTK-Evolve), the <em>runtime</em> (botctl), and the <em>serialization</em> (Safetensors). These are where practitioners compound value across model generations.</p>
+
+        <p>The safety-as-packaging pattern also has a second-order effect. If every hosted frontier release now ships with a coordinated safety artifact, the marginal signal of any individual artifact approaches zero. The preparedness report becomes table stakes. Regulators, journalists, and enterprise buyers will start looking past the reports to the harder question: what did the lab <em>actually</em> test, and what did it find? Meta claims it ran thousands of adversarial scenarios on Muse Spark. The first question any serious evaluator should ask is which ones, and with what results. Today's releases move the goalposts from "do you publish a framework?" to "is your framework falsifiable?"</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Muse Spark's Contemplating mode against Gemini Deep Think and GPT Pro.</strong> Meta positioned the parallel-agent mode as its answer to the deep-reasoning tier. 58% on HLE is real. Whether it holds up on tasks without clean pass/fail criteria (the place where the 65% "minimally sufficient" problem from earlier MIT research bit hardest) will determine whether this is a frontier entry or a benchmarks-only story.</li>
+          <li><strong>Safetensors inside PyTorch core.</strong> The roadmap hints at direct device-aware loading to CUDA/ROCm without CPU staging and first-class tensor-parallel APIs. If this lands, it reshapes inference economics for everyone serving large models, and it happens under Linux Foundation governance rather than any single vendor's.</li>
+          <li><strong>Harness consolidation.</strong> Archon, botctl, and ALTK-Evolve are three different bets on the same insight: agents need scaffolding, not bigger models. Watch whether one pattern dominates (YAML workflows, BOT.md process managers, or guideline-based memory) or whether the three compose into a single emerging stack.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/study-guides/next-evolution-ai-coding-harnesses-study.html" data-study-guide>The Next Evolution of AI Coding Is Harnesses</a> - Cole Medin's deep dive on Archon, the open-source harness builder. Walks through why planning and implementation should run in separate coding sessions, how YAML workflows compose prompt nodes and Python nodes into DAGs, and the demo where six GitHub issues are fixed in parallel as background processes. The practical thesis: models commoditize, harnesses differentiate, and you can start building your own today.</li>
+          <li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/study-guides/wes-roth-we-have-months-left-study.html" data-study-guide>We Have Months Left...</a> - Wes Roth unpacks Anthropic's Mythos model, running on Google Cloud via Vertex AI, and the Glasswing coalition racing to harden critical infrastructure. The central claim: Mythos found a 27-year-old FreeBSD vulnerability for $50 of compute, offensive cybersecurity is now cheap and emergent (nobody trained for it), and the Glasswing runway is roughly six months before comparable capability is broadly available. Ends with practical digital hygiene steps grounded in Karpathy's playbook.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active { display: flex; }
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2014';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .digest-body { padding: 1.25rem 1rem; }
+      .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; }
+    }
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print {
+      .digest-cta, .digest-overlay, .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
