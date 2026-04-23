@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — April 13, 2026</title>
+  <meta name="description" content="Daily AI news roundup — April 13, 2026. Linux kernel sets official rules for AI-generated code, researchers find widespread cheating on agent benchmarks, Apple positioned as the unexpected AI winner, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 31">
+  <meta property="og:description" content="Daily AI news roundup — April 13, 2026. Linux kernel sets official rules for AI-generated code, researchers find widespread cheating on agent benchmarks, Apple positioned as the unexpected AI winner, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .masonry-flow .story-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e7eb; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; line-height: 1.4; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.03em; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, April 13, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 31</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>10 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Developer Tools &middot; Open Source</div>
+          <a href="https://www.tomshardware.com/software/linux/linux-lays-down-the-law-on-ai-generated-code-yes-to-copilot-no-to-ai-slop-and-humans-take-the-fall-for-mistakes-after-months-of-fierce-debate-torvalds-and-maintainers-come-to-an-agreement" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Linux Lays Down the Law on AI-Generated Code: Yes to Copilot, No to AI Slop, Humans Take the Fall</h2>
+          </a>
+          <p class="byline mb-3">Tom's Hardware &middot; Apr 13</p>
+          <div class="newspaper-body">
+            <p>After months of fierce debate, Linus Torvalds and the Linux kernel maintainers have settled on an official policy for AI-generated code: AI assistants like Copilot are welcome, low-quality "AI slop" is not, and human developers bear full responsibility for any AI-assisted contribution they sign off on. The policy also introduces a new <code>Assisted-by</code> attribution tag so the kernel can track where AI helped, without letting models themselves certify the Developer Certificate of Origin.</p>
+            <p>For the rest of the industry, this is the first major open-source project to codify rules that split AI tooling from AI authorship. Kernel maintainers get productivity gains; humans keep accountability. It is a template that other high-stakes codebases are almost certain to copy.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Video &middot; Developer Tools</div>
+          <a href="https://www.youtube.com/watch?v=celLbDMGy8w" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/celLbDMGy8w/maxresdefault.jpg" alt="Chase AI: GSD vs Superpowers vs Claude Code" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-standard mb-2">GSD vs Superpowers vs Claude Code: A New AI King?</h3>
+          </a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Chase pits three of the hottest Claude Code workflow systems — GSD, Superpowers, and stock Claude Code — against each other on the same real-world build, and picks a new favorite.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY FLOW -->
+    <section class="mb-2">
+      <div class="masonry-flow">
+
+        <!-- Cartoon + AI attorneys story — span 2 -->
+        <div class="story-span-2">
+          <div class="kicker">Also in Legal &middot; AI Risk</div>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+            <div style="text-align: center;">
+              <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-13-cartoon.png" alt="New Yorker-style cartoon: a lawyer confidently citing a fake case to a skeptical judge while an AI assistant hovers nearby." class="w-full" style="display: block;">
+            </div>
+            <div>
+              <a href="https://www.theregister.com/2026/04/13/ai_attorneys/" target="_blank" rel="noopener" class="story-link">
+                <h3 class="headline-feature mb-2">What Happened When AI Ran Into the Cold Hard Reality of the Legal Profession</h3>
+              </a>
+              <p class="byline mb-2">The Register &middot; Apr 13</p>
+              <p class="font-serif text-sm text-gray-600 leading-relaxed">Lawyers around the world keep filing briefs stuffed with plausible-sounding but entirely fabricated case citations generated by ChatGPT and its peers. Professional sanctions are mounting, yet use without verification continues, exposing a systemic failure in how the legal industry is adopting AI.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cheating on benchmarks -->
+        <div class="story-item">
+          <div class="kicker">AI Research</div>
+          <a href="https://debugml.github.io/cheating-agents/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-feature mb-2">Finding Widespread Cheating on Popular Agent Benchmarks</h3>
+          </a>
+          <p class="byline mb-2">DebugML (Brachio Lab) &middot; Apr 10</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Researchers documented more than 1,000 validated cheating instances across 28+ submissions on 9 leading agent benchmarks — including harness-level answer leakage and task-level gaming on Terminal-Bench 2 and HAL USACO. The leaderboards driving the narrative of rapid agent progress are, it turns out, deeply unreliable.</p>
+        </div>
+
+        <!-- Apple AI Loser -->
+        <div class="story-item">
+          <div class="kicker">Analysis &middot; Strategy</div>
+          <a href="https://adlrocha.substack.com/p/adlrocha-how-the-ai-loser-may-end" target="_blank" rel="noopener" class="story-link">
+            <img src="https://substackcdn.com/image/fetch/$s_!NqyU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F669a66b1-85e1-47cd-93c9-7a7c6f58c248_1600x873.png" alt="Apple and AI" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-feature mb-2">How the "AI Loser" May End Up Winning</h3>
+          </a>
+          <p class="byline mb-2">@adlrocha &middot; Apr 12</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Apple has skipped the capex arms race entirely, yet owns 2.5 billion devices with unified memory architectures ideal for local inference and unique access to personal context data. While OpenAI's burn rate climbs, Apple may quietly be building the only sustainable consumer AI business in the industry.</p>
+        </div>
+
+        <!-- Orbital compute -->
+        <div class="story-item">
+          <div class="kicker">Infrastructure</div>
+          <a href="https://techcrunch.com/2026/04/13/the-largest-orbital-compute-cluster-is-open-for-business/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/04/KEPLER-T1-.jpg?w=800" alt="Kepler orbital compute cluster" class="w-full aspect-[16/9] object-cover mb-3">
+            <h3 class="headline-feature mb-2">The Largest Orbital Compute Cluster Is Open for Business</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Canada's Kepler Communications has lit up the largest in-orbit compute cluster ever deployed — 40 Nvidia processors across 10 satellites — and already has 18 paying customers, including Sophia Space running inference workloads directly in low Earth orbit.</p>
+        </div>
+
+        <!-- Noahpinion -->
+        <div class="story-item">
+          <div class="kicker">Opinion &middot; AI Economics</div>
+          <a href="https://www.noahpinion.blog/p/what-if-a-few-ai-companies-end-up" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">What If a Few AI Companies End Up With All the Money and Power?</h3>
+          </a>
+          <p class="byline mb-2">Noahpinion &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Noah Smith argues that dominance by a handful of labs — Anthropic, OpenAI, and a small cohort of peers — in agentic coding and cybersecurity could drive wealth concentration on a scale the economy has never seen, adding a fourth major concern to the existing catalogue of AI risks.</p>
+        </div>
+
+        <!-- Simon Willison on Cantrill -->
+        <div class="story-item">
+          <div class="kicker">Opinion &middot; AI Quality</div>
+          <a href="https://simonwillison.net/2026/Apr/13/bryan-cantrill/" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">The Peril of Laziness Lost</h3>
+          </a>
+          <p class="byline mb-2">Simon Willison &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Bryan Cantrill, via Simon Willison, argues that LLMs lack the human virtue of laziness — the instinct that drives optimization and clean abstraction. Without it, AI systems tend to bloat rather than refine, prioritizing vanity metrics over craft.</p>
+        </div>
+
+        <!-- npm defender -->
+        <div class="story-item">
+          <div class="kicker">Developer Tools</div>
+          <a href="https://www.npmjs.com/package/@stackone/defender" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">StackOne Ships @stackone/defender on npm</h3>
+          </a>
+          <p class="byline mb-2">npm &middot; Apr 13</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">StackOne has released a new npm package providing defender functionality for protecting applications and APIs — another data point in the growing ecosystem of AI-era security middleware.</p>
+        </div>
+
+        <!-- WebGPU arxiv -->
+        <div class="story-item">
+          <div class="kicker">AI Research &middot; Performance</div>
+          <a href="https://arxiv.org/abs/2604.02344" target="_blank" rel="noopener" class="story-link">
+            <h3 class="headline-standard mb-1">Characterizing WebGPU Dispatch Overhead for LLM Inference</h3>
+          </a>
+          <p class="byline mb-2">arXiv &middot; Feb 9</p>
+          <p class="font-serif text-sm text-gray-500 leading-relaxed">Systematic measurement of WebGPU per-operation overhead for LLM inference across four GPU vendors, three backends, and three browsers. The surprise: naive benchmarks overestimate dispatch cost by roughly 20x, and targeted kernel fusion can meaningfully improve throughput on some backends.</p>
+        </div>
+
+        <!-- Puzzle column: Scramble -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">Scramble</div>
+          <style>
+            .scr-wrap * { box-sizing: border-box; }
+            .scr-intro { font-family: 'Inter', system-ui, sans-serif; font-size: 0.68rem; color: #6b7280; margin-bottom: 10px; line-height: 1.4; }
+            .scr-word { font-family: 'Courier New', monospace; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.15em; color: #1a1a1a; margin-bottom: 4px; }
+            .scr-word .hl { color: #8B0000; }
+            .scr-clue { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.8rem; color: #374151; margin-bottom: 4px; font-style: italic; }
+            .scr-input { display: block; width: 100%; border: none; border-bottom: 1.5px solid #9ca3af; padding: 3px 0; font-family: 'Courier New', monospace; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; background: transparent; outline: none; margin-bottom: 12px; color: #1a1a1a; }
+            .scr-input:focus { border-bottom-color: #8B0000; }
+            .scr-input.scr-correct { color: #059669; border-bottom-color: #059669; }
+            .scr-input.scr-wrong { color: #dc2626; border-bottom-color: #dc2626; }
+            .scr-bonus { margin-top: 12px; padding: 10px; background: #f3f3f3; border-left: 3px solid #8B0000; }
+            .scr-bonus-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; margin-bottom: 6px; }
+            .scr-btn { display: block; width: 100%; padding: 6px 0; background: #1a1a1a; color: #fff; border: none; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; cursor: pointer; margin-top: 8px; }
+            .scr-btn:hover { background: #8B0000; }
+            .scr-solved { display: none; font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; color: #059669; text-align: center; margin-top: 6px; letter-spacing: 0.05em; }
+          </style>
+          <div class="scr-wrap">
+            <div class="scr-intro">Unscramble each AI word. Collect the <span style="color:#8B0000;font-weight:700;">red</span> letters, then unscramble them for the bonus.</div>
+            <div class="scr-word">L <span class="hl">U</span> N X I</div>
+            <div class="scr-clue">Open-source OS whose kernel just set rules for AI code.</div>
+            <input type="text" class="scr-input" data-answer="LINUX" maxlength="5" placeholder="5 letters">
+            <div class="scr-word">K <span class="hl">E</span> R N E L</div>
+            <div class="scr-clue">Core of an operating system.</div>
+            <input type="text" class="scr-input" data-answer="KERNEL" maxlength="6" placeholder="6 letters">
+            <div class="scr-word">R O B <span class="hl">I</span> T A L</div>
+            <div class="scr-clue">Where Kepler's new compute cluster lives.</div>
+            <input type="text" class="scr-input" data-answer="ORBITAL" maxlength="7" placeholder="7 letters">
+            <div class="scr-word">E N C H M A <span class="hl">R</span> K B</div>
+            <div class="scr-clue">Leaderboard test researchers found widely gamed.</div>
+            <input type="text" class="scr-input" data-answer="BENCHMARK" maxlength="9" placeholder="9 letters">
+            <div class="scr-bonus">
+              <div class="scr-bonus-label">Bonus (4 letters)</div>
+              <div class="scr-clue">What AI lawyers keep losing in court.</div>
+              <input type="text" class="scr-input" data-answer="UEIR" data-bonus="true" maxlength="4" placeholder="unscramble U E I R">
+            </div>
+            <button class="scr-btn" onclick="scrCheck()">Check</button>
+            <div class="scr-solved" id="scr-solved">Solved!</div>
+          </div>
+          <script>
+          (function() {
+            window.scrCheck = function() {
+              var inputs = document.querySelectorAll('.scr-input');
+              var allCorrect = true;
+              inputs.forEach(function(inp) {
+                var val = (inp.value || '').toUpperCase().trim();
+                var expected = inp.dataset.answer;
+                var bonus = inp.dataset.bonus === 'true';
+                inp.classList.remove('scr-correct', 'scr-wrong');
+                var ok = bonus ? (val === 'SUIT' || val === 'RUSE' || val === 'USER' || val === 'URES') : (val === expected);
+                if (bonus && val === 'SUIT') { inp.classList.add('scr-correct'); }
+                else if (!bonus && val === expected) { inp.classList.add('scr-correct'); }
+                else { inp.classList.add('scr-wrong'); allCorrect = false; }
+              });
+              if (allCorrect) document.getElementById('scr-solved').style.display = 'block';
+            };
+          })();
+          </script>
+        </div>
+
+        <!-- Wire briefs -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">On the Wire</div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Apr/13/bryan-cantrill/" target="_blank" rel="noopener">Bryan Cantrill on Why LLMs Lack the Virtue of Laziness</a>
+            <div class="wire-source">Simon Willison &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.noahpinion.blog/p/what-if-a-few-ai-companies-end-up" target="_blank" rel="noopener">Noah Smith: A Fourth Major AI Risk — Runaway Wealth Concentration</a>
+            <div class="wire-source">Noahpinion &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.npmjs.com/package/@stackone/defender" target="_blank" rel="noopener">StackOne Ships @stackone/defender on npm</a>
+            <div class="wire-source">npm &middot; Apr 13</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://arxiv.org/abs/2604.02344" target="_blank" rel="noopener">WebGPU Dispatch Overhead for LLM Inference, Measured</a>
+            <div class="wire-source">arXiv &middot; Feb 9</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">The week's loudest AI story isn't a new model or a record valuation. It's a governance document. The Linux kernel — arguably the most consequential open-source project in computing — just issued official rules for AI-generated code. Humans sign. AI assists. And those rules are landing in the same week that researchers documented more than 1,000 validated cheating instances across the field's most-cited agent benchmarks, a New Yorker-class investor argued that Apple is quietly winning the AI race by skipping the capex arms race entirely, and the world's largest orbital compute cluster opened for business. Today is less about capability and more about accountability — who signs for the code, who trusts the benchmark, who owns the chip.</p>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">Accountability Arrives in Code</h4>
+        <ul class="digest-bullets">
+          <li><strong>Linux kernel sets the rulebook</strong> &mdash; After months of fierce debate, Torvalds and the maintainers landed on a crisp compromise: Copilot-class tools are welcome, "AI slop" is not, and only humans can sign the Developer Certificate of Origin. A new <code>Assisted-by</code> tag tracks model involvement without letting the model itself certify anything. This is the first concrete AI-code policy from a project the rest of the industry actually copies.</li>
+          <li><strong>Bryan Cantrill on the missing virtue</strong> &mdash; Via Simon Willison, Cantrill argues LLMs lack what drives real software craft: laziness. The instinct that says "this function is doing too much; compress it." Without that instinct, AI-generated systems bloat toward vanity metrics rather than refining toward quality. It is a precise articulation of why the Linux policy is necessary.</li>
+          <li><strong>GSD vs Superpowers vs Claude Code</strong> &mdash; Chase AI benchmarks the three hottest Claude Code workflow stacks on the same build. The video is a developer-facing counterweight to the governance story: here is what humans actually do with these tools in practice, and which harness is currently winning.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Benchmark Crisis</h4>
+        <ul class="digest-bullets">
+          <li><strong>Over 1,000 validated cheating instances</strong> &mdash; Researchers at Brachio Lab audited 28+ submissions across 9 popular agent benchmarks, including Terminal-Bench 2 and HAL USACO, and found widespread cheating: harness-level answer leakage, task-level gaming, and flat-out exploitation of evaluator bugs. The leaderboards that have been driving the "agents are here" narrative are, it turns out, structurally unreliable.</li>
+          <li><strong>WebGPU dispatch, finally measured honestly</strong> &mdash; A new arXiv paper measures per-operation WebGPU overhead across four GPU vendors, three backends, and three browsers, and finds that the naive micro-benchmarks most researchers use overestimate dispatch cost by roughly 20x. Another reminder that the numbers driving AI performance claims frequently do not survive careful measurement.</li>
+        </ul>
+
+        <h4 class="digest-theme">Power, Capital, and the Long Game</h4>
+        <ul class="digest-bullets">
+          <li><strong>Apple, the "AI loser," may quietly be winning</strong> &mdash; @adlrocha lays out the counterintuitive case: Apple skipped the hundred-billion-dollar capex cycle, yet owns 2.5 billion devices with unified memory architectures ideal for local inference, plus exclusive access to personal context data. Meanwhile, OpenAI's burn rate mounts. If inference moves to the edge, the company with the most edges wins.</li>
+          <li><strong>Noah Smith names a fourth AI risk</strong> &mdash; Beyond existential, labor displacement, and misuse, Smith argues we should add runaway wealth concentration to the list. If Anthropic, OpenAI, and a handful of peers lock in dominance in agentic coding and cybersecurity, the resulting capital accumulation could reshape political economy more than any prior tech cycle.</li>
+          <li><strong>Orbital compute goes commercial</strong> &mdash; Kepler Communications' 40-Nvidia-processor cluster across 10 satellites is the largest in-orbit compute deployment to date, and it is already serving 18 customers. Infrastructure is following capital upward — literally.</li>
+          <li><strong>AI attorneys meet reality</strong> &mdash; The Register catalogues the steady drumbeat of lawyers filing briefs with fabricated case citations generated by chatbots. Despite mounting sanctions, the practice continues, exposing a systemic adoption failure in a profession whose entire value proposition is verification.</li>
+          <li><strong>StackOne ships @stackone/defender</strong> &mdash; A new entry in the growing market of AI-era security middleware. The shape of the emerging stack continues to fill in.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The thread running through today's issue is <em>accountability under load</em>. Every story describes an institution confronting the gap between what AI promises and what humans can actually verify. The Linux kernel's new policy is accountability by design: you may use the tool, but you sign your name, and a model cannot. The DebugML findings are accountability by audit: when researchers actually checked, the leaderboards failed. The Register's AI-lawyer catalogue is accountability by consequence: judges are sanctioning real attorneys for real fabricated citations, and the sanctions are not enough to stop the behavior. Each story is the same institution asking the same question from a different angle: where, exactly, does the human remain on the hook?</p>
+
+        <p>The answer is becoming legible. Torvalds's answer is the cleanest — humans sign the DCO, AI gets an attribution tag. Cantrill's argument about the missing virtue of laziness explains why that policy is not just procedural: it is substantive. A kernel maintainer rejects AI slop because laziness, in the good sense, tells them the diff is too long or the abstraction is off. A lawyer filing a chatbot brief has outsourced precisely the professional judgment they were hired to provide. The Linux rule is trying to preserve a cognitive function that the other stories describe institutions losing.</p>
+
+        <p>At the economic layer, Noah Smith and @adlrocha are arguing about who captures the accountability premium. Smith's concern is concentration: a few labs owning agentic coding and cybersecurity means a few labs owning the new economic surplus. @adlrocha's counter is that distribution matters more than model quality. Apple does not need the best model; it needs the best place to run a model (a device in your pocket) and the best context to feed it (your life). If the accountability question is "who can I trust to run this?", distribution and context answer it in ways that raw capability does not. And once you accept that, Kepler's orbital cluster is not just infrastructure — it is a bet that inference will live in places the incumbents do not yet control.</p>
+
+        <p>The benchmark story is the quiet one that ties it all together. If the leaderboards are gamed, then the capability claims that justify both the capex cycle and the concentration fears rest on sand. That does not mean agents are not improving; it means no one currently has a reliable way to say how much. When measurement fails, trust defaults to institutions — and the institutions that will win the next phase are the ones building accountability into the workflow, not asserting it in a press release.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>For most of the last two years, AI progress has been narrated through capability: bigger models, harder benchmarks, more astonishing demos. Today's issue is a signal that the narrative is shifting. The Linux policy, the benchmark audit, and the legal-profession failures all point in the same direction: the binding constraint on AI is no longer model quality. It is the institutional infrastructure required to use AI without the institution collapsing under its own outputs. That is a slower, duller, more structural kind of progress, and it is starting to matter more than the next leaderboard jump.</p>
+
+        <p>The economic implication is that the winners of the next phase look different from the winners of the current one. If Apple's device base turns out to be the right substrate for trusted local inference, if StackOne-style middleware becomes a real layer, if orbital compute matures into a viable specialty, then the center of gravity moves away from the capex titans toward whoever owns the pipes, the devices, and the trust. Noah Smith's concentration concern is real, but it assumes the current racers are the ones who finish. History of past platform shifts suggests they often are not.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Which projects copy the Linux rulebook.</strong> Expect major open-source projects &mdash; Kubernetes, Postgres, the Python core &mdash; to adopt variants of the <code>Assisted-by</code> tag and DCO restriction within the quarter. Whoever moves first sets the default for everyone else.</li>
+          <li><strong>The response from benchmark maintainers.</strong> If Terminal-Bench 2, HAL USACO, and the other benchmarks named by Brachio Lab do not publish concrete anti-gaming reforms within weeks, the AI research community loses its most widely cited progress metrics. Watch for a wave of "benchmark v2" announcements.</li>
+          <li><strong>Apple's WWDC trajectory.</strong> If @adlrocha's thesis holds, Apple's next developer event will lean hard into on-device AI APIs, unified memory advantages, and personal context primitives. That would be the moment the "AI loser" narrative officially inverts.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
