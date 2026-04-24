@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - April 24, 2026</title>
+  <meta name="description" content="Daily AI news roundup - April 24, 2026. DeepSeek V4 undercuts Western frontier labs, OpenAI ships GPT-5.5, Anthropic partners with NEC, Apple unveils ParaRNN, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 34">
+  <meta property="og:description" content="Daily AI news roundup - April 24, 2026. DeepSeek V4 undercuts Western frontier labs, OpenAI ships GPT-5.5, Anthropic partners with NEC, Apple unveils ParaRNN, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-24-cartoon.png">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-span-2 { grid-column: 1 / -1; }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, April 24, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 34</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Economics</div>
+          <a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">DeepSeek V4: Almost on the Frontier, a Fraction of the Price</h2>
+          </a>
+          <p class="byline mb-3">Simon Willison &middot; Apr 24</p>
+          <div class="newspaper-body">
+            <p>DeepSeek released V4 Pro and Flash preview models with massive context windows and aggressively priced tiers. Flash undercuts even OpenAI's budget tier at $0.14 per million input tokens while staying competitive on quality.</p>
+            <p>The release is the clearest sign yet that the open-weights Chinese challenger is no longer a generation behind, and is rewriting the economics readers thought were locked in.</p>
+          </div>
+        </div>
+        <div>
+          <a href="https://simonwillison.net/2026/Apr/24/deepseek-v4/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-24-cartoon.png" alt="DeepSeek V4" class="w-full aspect-[4/3] object-cover" style="background:#f1f1f1;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: GPT-5.5 + ParaRNN -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://images.ctfassets.net/kftzwdyauwt9/openai-default-og.png/og.png" alt="GPT-5.5" class="w-full aspect-video object-cover mb-3" style="background:#1a1a1a;">
+          <h3 class="headline-feature mb-2">Introducing GPT-5.5</h3>
+        </a>
+        <p class="byline mb-2">OpenAI &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI surprise-dropped GPT-5.5 with improvements to reasoning, tool use, and coding. Early access via existing Codex subscriptions per Simon Willison's backdoor plugin.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Research</div>
+        <a href="https://machinelearning.apple.com/research/large-scale-rnns" target="_blank" rel="noopener" class="story-link">
+          <img src="https://machinelearning.apple.com/assets/img/apple-ml-logo.png" alt="ParaRNN" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">ParaRNN: Large-Scale Nonlinear RNNs, Trainable in Parallel</h3>
+        </a>
+        <p class="byline mb-2">Apple Machine Learning Research &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Apple researchers parallelize training of nonlinear RNNs by applying Newton's method to linearize recurrence. The approach delivers a 665x speedup and scales classical RNNs to 7B parameters competitive with transformers.</p>
+      </div>
+    </section>
+
+    <!-- CARTOON + WaPo Mythos story (paired as story-span-2 row) -->
+    <section class="flex-row">
+      <div class="story-block" style="text-align:center;">
+        <div class="kicker" style="text-align:left;">Editorial Cartoon</div>
+        <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-24-cartoon.png" alt="Editorial cartoon depicting an AI model seeking moral reassurance. Caption: It keeps asking if its purpose is righteous. Just tell it yes." class="w-full" style="display:block;">
+        <p class="font-serif text-sm italic text-gray-600 mt-2" style="text-align:left;">"It keeps asking if its purpose is righteous. Just tell it yes."</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Policy</div>
+        <a href="https://www.washingtonpost.com/technology/2026/04/24/anthropic-mythos-ai-washington-cybersecurity-hacking-risk/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Mythos, Washington, and the Cybersecurity Risk Debate</h3>
+        </a>
+        <p class="byline mb-2">Washington Post &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The NSA is reportedly using Anthropic's Mythos model for cybersecurity work despite an ongoing Pentagon feud over AI hacking risk.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: NEC + DeepSeek rattles -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Partnerships</div>
+        <a href="https://www.anthropic.com/news/anthropic-nec" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Anthropic and NEC: Japan's Largest AI Engineering Workforce</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">NEC deploys Claude to 30,000 employees and becomes Anthropic's first Japan-based global partner, jointly building industry-specific AI for finance, manufacturing, and government.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Economics</div>
+        <a href="https://www.washingtonpost.com/business/2026/04/24/deepseek-ai-china-gpt-v4/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">DeepSeek's V4 Release Rattles U.S. AI Incumbents</h3>
+        </a>
+        <p class="byline mb-2">Washington Post &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Pricing and capability gains in V4 force a pricing reset across frontier labs.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: TorchTPU + Anthropic postmortem -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">TorchTPU: Running PyTorch Natively on TPUs at Google Scale</h3>
+        </a>
+        <p class="byline mb-2">Google Developers Blog &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Google unveiled TorchTPU with three eager execution modes and XLA integration, letting developers port PyTorch to TPUs by switching one init target.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Postmortem</div>
+        <a href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Anthropic's April 23 Postmortem on Recent Claude Code Quality Reports</h3>
+        </a>
+        <p class="byline mb-2">Anthropic Engineering &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Three root causes (a reasoning-effort default change, a caching bug, and a system prompt regression) all fixed by April 20. Affected subscribers got usage limits reset.</p>
+      </div>
+    </section>
+
+    <!-- WIRE BRIEFS: Video + 3 briefs -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Models</div>
+        <a href="https://www.youtube.com/watch?v=evVs-Jtor50" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/evVs-Jtor50/maxresdefault.jpg" alt="GPT-5.5 is a BEAST" class="w-full aspect-video object-cover mb-3">
+          <div style="position:absolute;top:33%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">GPT-5.5 is a BEAST...</h3>
+        </a>
+        <p class="byline mb-2">Wes Roth &middot; YouTube &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Wes Roth's first take on GPT-5.5's reasoning and coding leap after OpenAI's surprise drop.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">DeepSeek API Docs: Your First API Call</h3>
+        </a>
+        <p class="byline mb-2">DeepSeek &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Refreshed onboarding docs for V4 Pro and Flash endpoints with updated pricing and context-window specs.</p>
+      </div>
+    </section>
+
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://simonwillison.net/2026/Apr/23/gpt-5-5/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">A Pelican for GPT-5.5 via the Semi-Official Codex Backdoor API</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Willison walks through reaching GPT-5.5 through an undocumented Codex subscription route, benchmark pelican drawing included.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Web AI</div>
+        <a href="https://huggingface.co/blog/transformers-js-chrome-extension" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Building a Chrome Extension with Transformers.js</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Apr 23</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">A step-by-step guide to shipping on-device inference inside a Chrome extension using Transformers.js.</p>
+      </div>
+    </section>
+
+    <!-- PUZZLE: The AI Mini -->
+    <section class="flex-row" style="grid-template-columns: 1fr;">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+        <style>
+          .xw-wrap{font-family:'Inter',sans-serif;color:#1a1a1a;max-width:320px;margin:0 auto}
+          .xw-intro{font-size:11px;line-height:1.55;color:#374151;margin-bottom:0.8rem;text-align:center}
+          .xw-intro strong{color:#8B0000;text-transform:uppercase;letter-spacing:0.05em;font-size:10px}
+          .xw-grid{display:grid;grid-template-columns:repeat(5,40px);grid-template-rows:repeat(5,40px);gap:2px;justify-content:center;margin:0 auto 1rem}
+          .xw-cell{position:relative;background:#fff;border:1px solid #1a1a1a;display:flex;align-items:center;justify-content:center}
+          .xw-cell.block{background:#1a1a1a;border-color:#1a1a1a}
+          .xw-cell input{width:100%;height:100%;border:none;text-align:center;text-transform:uppercase;font-family:'Courier New',monospace;font-weight:700;font-size:18px;color:#1a1a1a;background:transparent;outline:none;padding:0}
+          .xw-cell input:focus{background:#fef3c7}
+          .xw-num{position:absolute;top:1px;left:2px;font-size:8px;font-weight:700;color:#6b7280;font-family:'Inter',sans-serif}
+          .xw-cell.correct input{color:#059669}
+          .xw-cell.wrong input{color:#8B0000}
+          .xw-clues{display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:11px;line-height:1.45;color:#374151}
+          .xw-clues h4{font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:#1a1a1a;margin-bottom:0.4rem;border-bottom:1px solid #d1d5db;padding-bottom:2px}
+          .xw-clues ol{list-style:none;padding:0;margin:0}
+          .xw-clues li{margin-bottom:0.35rem}
+          .xw-clues li b{color:#8B0000;margin-right:4px}
+          .xw-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:4px 14px;border:1.5px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer;border-radius:2px;margin-top:0.8rem;transition:background 0.15s,color 0.15s}
+          .xw-btn:hover{background:#1a1a1a;color:#fff}
+          .xw-status{font-size:12px;font-weight:700;margin-left:10px;color:#8B0000}
+          .xw-center{text-align:center}
+        </style>
+        <div class="xw-wrap">
+          <p class="xw-intro"><strong>The AI Mini</strong> &mdash; 5x5 crossword, AI themed.</p>
+          <div class="xw-grid" id="xwGrid">
+            <!-- Row 1: CLAUD + block -->
+            <div class="xw-cell"><span class="xw-num">1</span><input data-sol="C" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="L" maxlength="1"></div>
+            <div class="xw-cell"><span class="xw-num">2</span><input data-sol="A" maxlength="1"></div>
+            <div class="xw-cell"><span class="xw-num">3</span><input data-sol="U" maxlength="1"></div>
+            <div class="xw-cell block"></div>
+            <!-- Row 2: APPLE -->
+            <div class="xw-cell"><span class="xw-num">4</span><input data-sol="A" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="P" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="P" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="L" maxlength="1"></div>
+            <div class="xw-cell"><span class="xw-num">5</span><input data-sol="E" maxlength="1"></div>
+            <!-- Row 3: block + TPU + block -->
+            <div class="xw-cell block"></div>
+            <div class="xw-cell block"></div>
+            <div class="xw-cell"><span class="xw-num">6</span><input data-sol="T" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="P" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="U" maxlength="1"></div>
+            <!-- Row 4: block + NEC + block -->
+            <div class="xw-cell block"></div>
+            <div class="xw-cell block"></div>
+            <div class="xw-cell"><span class="xw-num">7</span><input data-sol="N" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="E" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="C" maxlength="1"></div>
+            <!-- Row 5: block + RNN + block -->
+            <div class="xw-cell block"></div>
+            <div class="xw-cell block"></div>
+            <div class="xw-cell"><span class="xw-num">8</span><input data-sol="R" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="N" maxlength="1"></div>
+            <div class="xw-cell"><input data-sol="N" maxlength="1"></div>
+          </div>
+          <div class="xw-clues">
+            <div>
+              <h4>Across</h4>
+              <ol>
+                <li><b>1.</b> Anthropic's AI assistant (4)</li>
+                <li><b>4.</b> Maker of ParaRNN research (5)</li>
+                <li><b>6.</b> Google's AI accelerator chip (3)</li>
+                <li><b>7.</b> Anthropic's new Japan partner (3)</li>
+                <li><b>8.</b> Classic architecture Apple scaled to 7B (3)</li>
+              </ol>
+            </div>
+            <div>
+              <h4>Down</h4>
+              <ol>
+                <li><b>2.</b> "___ I help?" AI refrain (3)</li>
+                <li><b>3.</b> You, in a prompt (3)</li>
+              </ol>
+            </div>
+          </div>
+          <div class="xw-center">
+            <button class="xw-btn" onclick="checkXW()">Check</button>
+            <span class="xw-status" id="xwStatus"></span>
+          </div>
+        </div>
+        <script>
+        window.checkXW=function(){
+          var cells=document.querySelectorAll('#xwGrid .xw-cell');
+          var correct=0,total=0;
+          cells.forEach(function(c){
+            if(c.classList.contains('block'))return;
+            var inp=c.querySelector('input');
+            var sol=inp.dataset.sol;
+            total++;
+            c.classList.remove('correct','wrong');
+            if((inp.value||'').toUpperCase()===sol){c.classList.add('correct');correct++;}
+            else if(inp.value){c.classList.add('wrong');}
+          });
+          document.getElementById('xwStatus').textContent=correct+' / '+total;
+        };
+        </script>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">DeepSeek V4-Flash lists at $0.14 in and $0.28 out per million tokens. GPT-5.5, which shipped a day earlier, costs $5 in and $30 out. That's a 36x gap on input, 107x on output, for models that are now benchmarking within shouting distance of each other. The frontier got crowded this week, the price floor fell through the floor, and Apple quietly published research suggesting the transformer isn't the only game in town. Today's stories all point the same direction: the cost of intelligence is collapsing faster than anyone's business model can absorb.</p>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Price War Breaks Open</h4>
+        <ul class="digest-bullets">
+          <li><strong>DeepSeek V4 Almost on the Frontier, a Fraction of the Price</strong> — V4-Pro is a 1.6T-parameter, 49B-active MoE with a 1M token context, released under MIT. DeepSeek claims it uses "27% of the single-token FLOPs and 10% of the KV cache size" relative to V3.2. Simon Willison reports V4-Pro trails GPT-5.4 and Gemini 3.1 Pro by "approximately 3 to 6 months" on capability, but V4-Flash ($0.14 in / $0.28 out) undercuts GPT-5.4 Nano ($0.20 / $1.25) meaningfully. V4-Pro is now the largest open-weights model in existence, beating Kimi K2.6 (1.1T) and GLM-5.1 (754B).</li>
+          <li><strong>DeepSeek V4 Release Rattles U.S. AI Incumbents</strong> — The Washington Post frames today as a repeat of January 2025, when the original DeepSeek moment wiped hundreds of billions from U.S. AI stocks. The open weights plus the pricing plus the MIT license are the combination that makes incumbents nervous: anyone with a GPU can serve this at cost.</li>
+          <li><strong>DeepSeek API Docs</strong> — The official docs confirm two SKUs are live: <code>deepseek-v4-flash</code> and <code>deepseek-v4-pro</code>, with <code>deepseek-chat</code> and <code>deepseek-reasoner</code> deprecated on 2026/07/24. If you've been building on the V3 generation, you've got three months to migrate.</li>
+        </ul>
+
+        <h4 class="digest-theme">Frontier Models Ship Faster</h4>
+        <ul class="digest-bullets">
+          <li><strong>Introducing GPT-5.5</strong> — OpenAI shipped the next increment in the GPT-5 line. At $5/$30 per million tokens, it costs double GPT-5.4 ($2.50/$15), positioning it like Opus relative to Sonnet in Anthropic's lineup. API isn't public yet; it ships first through ChatGPT and Codex.</li>
+          <li><strong>A Pelican for GPT-5.5 via Codex Backdoor</strong> — Simon Willison, blocked from the missing API, built <code>llm-openai-via-codex</code>, a plugin that routes through the <code>/backend-api/codex/responses</code> endpoint using a Codex CLI subscription. OpenAI's Romain Huet publicly endorsed the approach. On the pelican-on-bicycle test, xhigh reasoning consumed 9,322 reasoning tokens and ~4 minutes versus 39 tokens in default mode. The gap between reasoning tiers is now measured in orders of magnitude of compute.</li>
+          <li><strong>GPT-5.5 is a BEAST (Wes Roth)</strong> — The YouTube reaction framing: this is a meaningful step, not a minor tick, and the release cadence between GPT-5, 5.4, and 5.5 is compressing. We're in the part of the curve where "new frontier model" is a monthly event.</li>
+        </ul>
+
+        <h4 class="digest-theme">Architecture and Infrastructure</h4>
+        <ul class="digest-bullets">
+          <li><strong>ParaRNN: Large-Scale Nonlinear RNNs, Trainable in Parallel (Apple)</strong> — Apple researchers used Newton's method to linearize RNN recurrence relations, achieving 665x training speedup and the first 7B-parameter classical RNNs competitive with transformers. ParaGRU hits 9.19 perplexity vs. 9.55 for transformers at the same scale, and 100% on synthetic recall tasks where transformers score 78-100%. Because RNNs are O(1) per token at inference, this matters most for long-context and on-device deployment, exactly where Apple lives.</li>
+          <li><strong>TorchTPU: PyTorch Natively on TPUs at Google Scale</strong> — Google shipped a PyTorch backend that targets TPUs directly: change your device init to "tpu" and run. The Fused Eager mode claims "50% to 100+%" gains over Strict Eager. This is Google finally making its silicon first-class to the ecosystem everyone actually writes in, not just JAX.</li>
+          <li><strong>Building a Chrome Extension with Transformers.js</strong> — Hugging Face's tutorial for running models in-browser, no server round trip. The inference-at-the-edge story keeps growing up the stack.</li>
+        </ul>
+
+        <h4 class="digest-theme">Policy and Partnerships</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Mythos, Washington, and the Cybersecurity Risk Debate (WaPo)</strong> — The Post examines Anthropic's Washington positioning, particularly around AI-enabled cyber risk. The tension: Anthropic benefits commercially from safety-first framing, and that framing also shapes the regulations competitors will live under.</li>
+          <li><strong>Anthropic and NEC: Japan's Largest AI Engineering Workforce</strong> — NEC is deploying Claude to approximately 30,000 employees worldwide and becomes Anthropic's first Japan-based global partner. Claude Opus 4.7 and Claude Code get integrated into NEC BluStellar Scenario, targeting finance, manufacturing, cybersecurity, and local government. NEC's COO Toshifumi Yoshizaki calls it a "Client Zero" approach: test internally, then sell.</li>
+        </ul>
+
+        <h4 class="digest-theme">Lessons Learned</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic April 23 Postmortem on Claude Code Quality</strong> — Three compounding issues. (1) Default reasoning effort dropped from high to medium March 4 to trade intelligence for latency; reversed April 7 after users rejected the trade. (2) A caching optimization meant to run once per session instead ran every turn, progressively clearing thinking history (March 26 to April 10). (3) A verbosity prompt capping responses at "≤25 words between tool calls" and "≤100 words final" caused a 3% measurable intelligence drop across models (April 16 to April 20). Anthropic's commitments: broader per-model evals, soak periods for any intelligence-affecting change, stricter system prompt controls, and better audit tooling. Three independent defaults, all well-intentioned, all regressions. That's the real story.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The number to sit with today is 107. That's the ratio between GPT-5.5's output token price ($30) and DeepSeek V4-Flash's ($0.28). The capability gap between them, per DeepSeek's own framing, is three to six months. If you believe the gap, you're watching the cost of frontier-adjacent intelligence fall by two orders of magnitude on a quarter-year lag. That's the whole story of today's issue. Everything else is footnotes.</p>
+
+        <p>The WaPo "incumbents rattled" piece has the right instinct but maybe the wrong subject. The incumbents aren't really rattled by DeepSeek the model, they're rattled by the pattern: open weights, MIT license, aggressive pricing, a 1M context window, and architectural efficiency claims (27% of FLOPs, 10% of KV cache) that are exactly the metrics Nvidia's business model depends on staying large. The same week, Google ships TorchTPU to make its silicon first-class for the PyTorch ecosystem. Apple publishes ParaRNN, which makes constant-time-per-token inference viable at 7B parameters. None of this is coordinated. All of it points at the same thing: the assumption that frontier AI means one of three American labs paying OpenAI-scale capex is getting dismantled in real time, from three directions.</p>
+
+        <p>GPT-5.5 shipping into this environment is its own tell. The price doubled (vs. GPT-5.4), the API is gated behind ChatGPT and Codex rather than open from day one, and Simon Willison had to reverse-engineer access through a backdoor endpoint. OpenAI is behaving like a company that's discovered its pricing power is time-limited and wants to harvest it while the gap with DeepSeek is still 3-6 months wide. Compare that to Anthropic's week: a deep NEC enterprise deal (30,000 seats, Client Zero model), a detailed public postmortem admitting three separate intelligence regressions in Claude Code, and the WaPo piece scrutinizing their Washington posture. Two very different strategic stances. OpenAI is milking the frontier; Anthropic is building trust infrastructure for the phase when frontier no longer means exclusive.</p>
+
+        <p>And then there's the postmortem itself, which is the most honest document any lab has published this year. Three separate, well-meaning changes each broke the product in a way evals didn't catch until users complained. The verbosity prompt is particularly worth dwelling on: "≤25 words between tool calls" sounds like a UX improvement, and it cost 3% intelligence across models. The lesson isn't that Anthropic is careless. It's that product decisions and capability decisions are the same decision now, and nobody, including the frontier labs, has the testing apparatus to tell the difference in real time.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <div class="digest-bigger-picture">
+          <p>Zoom out three years. In 2023, the bet was that frontier models would be scarce, expensive, and controlled by whoever had the most capex. In 2024, the argument shifted to scaffolding and scaffolds (agents, tool use, context windows) being the real moat. In 2026, the moat is dissolving faster than the scaffolding can be built. DeepSeek V4 is the clearest evidence yet that "frontier minus a quarter" is a commodity you can serve for cents. Apple's ParaRNN research says the transformer itself, the architecture everyone's compute is optimized for, might not be the endpoint. Google's TorchTPU says Nvidia's software lock-in is being actively pried loose. These are not individually dramatic stories. Together they describe a market that's about to look very different.</p>
+
+          <p>What gets expensive in this world isn't the model. It's everything around the model: the enterprise trust relationships (Anthropic-NEC), the policy posture (Anthropic in Washington), the harness and coding environment (Claude Code, Codex), and the operational maturity to ship changes without regressing intelligence by 3% and not notice for four days. OpenAI raising GPT-5.5 prices while DeepSeek V4 is on the market is a confession that pure-model pricing power is ending. The question for the next 12 months is which labs figure out what to sell instead, and which ones keep trying to charge premium prices for a commodity whose price is visibly falling.</p>
+
+          <p>For anyone building on this stuff, the practical read is: assume frontier-adjacent capability will cost 1-2% of what you're paying today within 18 months, and plan accordingly. The money isn't in being the smartest model. It's in being the most reliable, the most integrated, and the least likely to silently regress on a Tuesday afternoon.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>DeepSeek V4 deployment telemetry.</strong> The real test isn't the benchmarks, it's whether enterprises actually migrate workloads to V4-Pro or V4-Flash at scale. Watch for the first public case studies from non-Chinese firms running V4 in production, and watch the AWS Bedrock and Azure Foundry catalogs for hosted availability.</li>
+          <li><strong>GPT-5.5 API pricing at general availability.</strong> OpenAI launched at $5/$30 through ChatGPT and Codex only. When the public API opens, does the price hold, or does the DeepSeek reality force a cut? The first price move tells you how OpenAI sees the competitive floor.</li>
+          <li><strong>Whether Apple ships a ParaRNN-based model.</strong> The research paper is compelling; the real question is whether Apple Intelligence's next on-device model uses this architecture. Constant-time-per-token inference at 7B parameters is an iPhone-shaped feature, not a research curiosity.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
