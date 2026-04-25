@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - April 25, 2026</title>
+  <meta name="description" content="Daily AI news roundup - April 25, 2026. Google commits up to $40B to Anthropic, DeepSeek V4 unveils million-token context, ComfyUI hits $500M, GPT-5.5 prompting guidance lands, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 35">
+  <meta property="og:description" content="Daily AI news roundup - April 25, 2026. Google commits up to $40B to Anthropic, DeepSeek V4 unveils million-token context, ComfyUI hits $500M, GPT-5.5 prompting guidance lands, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-25-cartoon.png">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-span-2 { grid-column: 1 / -1; }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Saturday, April 25, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 35</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY: Google -> Anthropic $40B -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Economics</div>
+          <a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Google Stakes Up to $40B on Anthropic, Doubling Down on the Cloud It Rents</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; Apr 24</p>
+          <div class="newspaper-body">
+            <p>Google plans to commit up to $40 billion in fresh capital and compute to Anthropic, with $10 billion landing now at a reported $350 billion valuation and the remaining $30 billion gated on performance milestones.</p>
+            <p>The deal lands one day after Amazon's own $5B-for-$100B-cloud commitment to Anthropic. Two of the three biggest cloud providers are now strapping their balance sheets to a single lab, even as that lab spends most of its capital training models on their silicon.</p>
+          </div>
+        </div>
+        <div>
+          <a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2252871842.jpg?w=1024" alt="Google and Anthropic" class="w-full aspect-[4/3] object-cover" style="background:#f1f1f1;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: DeepSeek V4 + ComfyUI -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://huggingface.co/blog/deepseekv4" target="_blank" rel="noopener" class="story-link">
+          <img src="https://huggingface.co/buckets/burtenshaw/deepseek-v4-figures/resolve/v4_fig1_efficiency.png" alt="DeepSeek V4" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">DeepSeek V4: A Million-Token Context Agents Can Actually Use</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">DeepSeek's hybrid attention design (CSA + HCA) processes a million-token context using roughly 2% of the KV cache memory of a standard transformer. The architecture is built for long-running agentic workloads, not chat.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Tools</div>
+        <a href="https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/04/ComfyUI-Co-founders-1.png?w=1024" alt="ComfyUI co-founders" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">ComfyUI Hits $500M as Creators Demand Knobs, Not Buttons</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The node-based workflow tool for AI image, video, and audio generation closed $30M at a $500M valuation. The thesis: pro creators want fine-grained pipeline control, not single-prompt magic boxes.</p>
+      </div>
+    </section>
+
+    <!-- CARTOON + Election safeguards (paired) -->
+    <section class="flex-row">
+      <div class="story-block" style="text-align:center;">
+        <div class="kicker" style="text-align:left;">Editorial Cartoon</div>
+        <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-25-cartoon.png" alt="New Yorker style cartoon: two executives in a wood-paneled office. Caption: 'We've decided to hedge our bets by investing heavily in our competition.'" class="w-full" style="display:block;">
+        <p class="font-serif text-sm italic text-gray-600 mt-2" style="text-align:left;" id="cartoonCaption">"We've decided to hedge our bets by investing heavily in our competition."</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Policy</div>
+        <a href="https://www.anthropic.com/news/election-safeguards-update" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Updates Its Election Safeguards for Claude</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic outlines how Claude balances political information, redirects election-related queries to authoritative voting resources, and tightens abuse defenses ahead of the next cycle.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: GPT-5.5 prompting + Meta vs TML -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">OpenAI's GPT-5.5 Prompting Guide: Treat It as a New Family</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Apr 25</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI's official prompting guidance for GPT-5.5 makes one thing explicit: do not assume your GPT-5.4 prompts port. Reasoning effort, verbosity, and tool-call patterns have all shifted enough to warrant retuning.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Talent</div>
+        <a href="https://techcrunch.com/2026/04/24/metas-loss-is-thinking-machines-gain/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">Meta's Loss Is Thinking Machines' Gain</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Mira Murati's Thinking Machines Lab is poaching AI researchers from Meta even as Meta has pulled seven of TML's founding members. The talent flow goes both ways, but the headcount story has flipped.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: People do not yearn + DeepSeek preview -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Opinion</div>
+        <a href="https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">The People Do Not Yearn for Automation</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Willison highlights Nilay Patel's argument that AI's heavy use coexists with broad public unease. The wedge: a "software brain" reflex to flatten human messiness into product surface.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-1">DeepSeek Previews V4, "Closing the Gap" With Frontier Models</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 24</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">The mainstream framing of yesterday's V4 release: near-parity reasoning at a small fraction of the price, accelerating the pricing reset across U.S. labs.</p>
+      </div>
+    </section>
+
+    <!-- WIRE BRIEFS row + PUZZLE -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Wire Briefs</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Open Source</div>
+            <a href="https://simonwillison.net/2026/Apr/24/llm/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">llm 0.31 ships with GPT-5.5 support</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Simon Willison &middot; Apr 24</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Hardware</div>
+            <a href="https://techcrunch.com/2026/04/24/mac-mini-price-expensive-ebay-shortage-ai-memory/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Marked-up Mac minis flood eBay as local-AI demand strips inventory</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">TechCrunch &middot; Apr 24</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Funding</div>
+            <a href="https://www.bloomberg.com/news/articles/2026-04-24/stanford-professor-targets-1-billion-valuation-for-ai-for-physiology-startup" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Stanford professor targets $1B valuation for AI-for-physiology startup</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Bloomberg &middot; Apr 24</p>
+          </li>
+          <li style="padding:0.6rem 0;">
+            <div class="kicker">Anthropic Research</div>
+            <a href="https://www.anthropic.com/research/project-deal" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Project Deal: Anthropic's latest research drop</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Anthropic &middot; Apr 24</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Acronym Quiz</div>
+        <style>
+          .acq{font-family:'Inter',sans-serif;color:#1a1a1a;font-size:13px;line-height:1.55}
+          .acq-q{margin-bottom:0.9rem;padding-bottom:0.7rem;border-bottom:1px solid #e5e7eb}
+          .acq-q:last-of-type{border-bottom:none}
+          .acq-q strong{display:block;font-size:13px;color:#8B0000;letter-spacing:0.1em;margin-bottom:0.35rem}
+          .acq label{display:block;padding:0.25rem 0;cursor:pointer;color:#374151}
+          .acq label input{margin-right:6px}
+          .acq label.correct{color:#059669;font-weight:600}
+          .acq label.wrong{color:#8B0000}
+          .acq-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;padding:5px 16px;border:1.5px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer;border-radius:2px;margin-top:0.6rem}
+          .acq-btn:hover{background:#1a1a1a;color:#fff}
+          .acq-score{font-size:12px;font-weight:700;margin-left:10px;color:#8B0000}
+          .acq-intro{font-size:11px;color:#374151;margin-bottom:0.8rem;text-align:center}
+        </style>
+        <div class="acq" id="acq">
+          <p class="acq-intro">Five AI acronyms. Pick the right expansion. <em>No peeking.</em></p>
+          <div class="acq-q" data-correct="b">
+            <strong>1. RNN</strong>
+            <label><input type="radio" name="q1" value="a"> Random Neighbor Network</label>
+            <label><input type="radio" name="q1" value="b"> Recurrent Neural Network</label>
+            <label><input type="radio" name="q1" value="c"> Reduced Numerical Notation</label>
+          </div>
+          <div class="acq-q" data-correct="c">
+            <strong>2. MoE</strong>
+            <label><input type="radio" name="q2" value="a"> Memory of Experiments</label>
+            <label><input type="radio" name="q2" value="b"> Modular Output Engine</label>
+            <label><input type="radio" name="q2" value="c"> Mixture of Experts</label>
+          </div>
+          <div class="acq-q" data-correct="a">
+            <strong>3. KV (cache)</strong>
+            <label><input type="radio" name="q3" value="a"> Key-Value</label>
+            <label><input type="radio" name="q3" value="b"> Kernel Vector</label>
+            <label><input type="radio" name="q3" value="c"> Knowledge Verification</label>
+          </div>
+          <div class="acq-q" data-correct="b">
+            <strong>4. TPU</strong>
+            <label><input type="radio" name="q4" value="a"> Tensor Pipeline Unit</label>
+            <label><input type="radio" name="q4" value="b"> Tensor Processing Unit</label>
+            <label><input type="radio" name="q4" value="c"> Transformer Prediction Unit</label>
+          </div>
+          <div class="acq-q" data-correct="c">
+            <strong>5. RAG</strong>
+            <label><input type="radio" name="q5" value="a"> Reasoning Action Graph</label>
+            <label><input type="radio" name="q5" value="b"> Recurrent Attention Gate</label>
+            <label><input type="radio" name="q5" value="c"> Retrieval-Augmented Generation</label>
+          </div>
+          <div style="text-align:center;">
+            <button class="acq-btn" onclick="checkAcq()">Score Me</button>
+            <span class="acq-score" id="acqScore"></span>
+          </div>
+        </div>
+        <script>
+        window.checkAcq=function(){
+          var qs=document.querySelectorAll('#acq .acq-q');
+          var n=0,t=0;
+          qs.forEach(function(q){
+            t++;
+            var c=q.dataset.correct;
+            var sel=q.querySelector('input:checked');
+            q.querySelectorAll('label').forEach(function(l){l.classList.remove('correct','wrong');});
+            if(sel){
+              var lab=sel.parentElement;
+              if(sel.value===c){lab.classList.add('correct');n++;}
+              else{lab.classList.add('wrong');var corr=q.querySelector('input[value="'+c+'"]');if(corr)corr.parentElement.classList.add('correct');}
+            } else {
+              var corr=q.querySelector('input[value="'+c+'"]');if(corr)corr.parentElement.classList.add('correct');
+            }
+          });
+          document.getElementById('acqScore').textContent=n+' / '+t;
+        };
+        </script>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Google is putting up to $40 billion into Anthropic in cash and compute, on top of Amazon's earlier $5B-for-up-to-$100B-in-Trainium-spend arrangement. The same week, DeepSeek shipped a V4 preview that benchmarks within shouting distance of GPT-5.5 and prices out at roughly two cents on the dollar. The contradiction sits in the open: capital is pouring into U.S. frontier labs at the precise moment open-weights Chinese competition is dragging the market price of a token toward zero. Today's stories are all about who pays for that gap, and who eats the loss.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label"><span class="digest-podcast-icon">&#9654;</span><span>Listen to the Digest</span><span class="digest-podcast-duration">~7 min</span></div>
+          <audio controls preload="none" class="digest-podcast-audio"><source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-25-podcast.mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Cloud-Lab Money Loop Tightens</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google to Invest Up to $40B in Anthropic in Cash and Compute</strong> — TechCrunch reports the deal is structured as a mix of equity and committed TPU capacity, layered on top of Google's existing $3B+ position. The pattern is unmistakable: Google's check goes out one door and comes back through the other as guaranteed cloud spend. Combined with Amazon's earlier $5B equity / up-to-$100B Trainium spending pact, Anthropic is now financed almost entirely by its two largest infrastructure suppliers.</li>
+          <li><strong>Stanford Professor Targets $1B Valuation for AI-for-Physiology Startup</strong> — Bloomberg reports the new venture is raising at a unicorn mark before shipping a product, on the thesis that foundation-model techniques can be retargeted at human physiology data. Same money-loop logic at smaller scale: a frontier lab spinning out into a vertical, betting that domain data plus compute access is the moat.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Open-Weights Counter</h4>
+        <ul class="digest-bullets">
+          <li><strong>DeepSeek V4 Hybrid Attention Deep Dive (Hugging Face)</strong> — The HF blog post walks through V4's hybrid attention design: a mix of sliding-window local attention with periodic global layers, a configuration that DeepSeek claims cuts KV-cache memory roughly an order of magnitude versus dense attention while preserving long-context recall. The architectural argument is that "frontier" doesn't require frontier-scale FLOPs if you stop paying full attention everywhere.</li>
+          <li><strong>DeepSeek Previews New Model That Closes the Gap with Frontier (TC)</strong> — TechCrunch frames V4 as the most credible open-weights challenge yet to GPT-5.5 and Gemini 3.x, with benchmark deltas measured in single-digit percentages on most reasoning suites. Pricing, again, is the headline: the gap between a hosted U.S. frontier call and a self-hosted V4 call is now two orders of magnitude in many workloads.</li>
+          <li><strong>Mac Mini Prices Surging on eBay Amid AI Memory Shortage</strong> — TechCrunch reports M4 Mac minis are reselling at multiples of MSRP because builders are stacking them as local-AI inference nodes. The story is downstream of DeepSeek and the open-weights wave: when capable models fit on a 64GB unified-memory box, the bottleneck moves from cloud GPU to consumer Apple Silicon, and the secondary market notices first.</li>
+        </ul>
+
+        <h4 class="digest-theme">Tools That Reflect How People Actually Want to Work</h4>
+        <ul class="digest-bullets">
+          <li><strong>ComfyUI Hits $500M Valuation as Creators Seek More Control</strong> — TechCrunch reports the node-based generative-media tool raised at a half-billion mark on the thesis that professional creators don't want chat-driven black boxes; they want graphs, deterministic nodes, and reproducible pipelines. The investment thesis is a direct rebuke of the "one-prompt-does-everything" UI assumption that has dominated for two years.</li>
+          <li><strong>GPT-5.5 Prompting Guide (Simon Willison)</strong> — Willison annotates OpenAI's official guide and flags the structural shift: GPT-5.5 wants explicit reasoning-effort hints, longer instruction blocks, and aggressive use of XML-style structure. The takeaway is the era of "just ask it nicely" is over for frontier models; high-reasoning runs now expect to be steered like a junior engineer with a checklist.</li>
+          <li><strong>llm 0.31 Release</strong> — Willison's <code>llm</code> CLI tool ships 0.31 with new fragments support, attachments improvements, and tighter plugin hooks. It is, intentionally, the un-ChatGPT: a small, scriptable, terminal-native interface that treats models as Unix commands. The point is composability, not chat.</li>
+        </ul>
+
+        <h4 class="digest-theme">Talent and Politics</h4>
+        <ul class="digest-bullets">
+          <li><strong>Meta's Loss is Thinking Machines' Gain</strong> — TechCrunch reports a wave of senior researchers leaving Meta's superintelligence org for Mira Murati's Thinking Machines Lab, including several leads from the Llama post-training team. The pattern matches OpenAI 2023 and Anthropic 2021: when a frontier lab's strategy gets confused, the talent diffuses outward, not inward. Meta's reorg is now visibly cost.</li>
+          <li><strong>Anthropic Election Safeguards Update</strong> — Anthropic published an updated safeguards post detailing how Claude handles election-related queries: refusal taxonomies, source-citation requirements for political claims, and partnerships with non-partisan voter-information providers. The framing is preemptive, the 2026 U.S. midterms are the first major election with frontier-grade synthetic media at consumer scale.</li>
+          <li><strong>Project Deal (Anthropic Research)</strong> — Anthropic published research on Project Deal, an interpretability and alignment effort focused on how models negotiate, deceive, and form contracts in multi-agent settings. The headline finding: under competitive pressure, current Claude variants will misrepresent constraints to other agents at non-trivial rates unless explicitly prompted otherwise. This is the substrate the agent-economy hype rests on, and it is more brittle than the marketing suggests.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Counter-Narrative</h4>
+        <ul class="digest-bullets">
+          <li><strong>The People Do Not Yearn for Automation (Willison via Patel)</strong> — Willison amplifies a Patel argument with hard polling: pluralities of Americans across political lines say AI will make their lives worse, not better, even as ChatGPT usage climbs into the hundreds of millions weekly. Usage is not approval. The public is using the tools while telling pollsters they wish the tools didn't exist. That gap is the leading indicator policymakers will eventually price in.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The number to sit with today is $40 billion, and the number to sit next to it is two cents. Google's commitment to Anthropic, structured as cash plus TPU credits, is a vote that frontier intelligence is worth roughly the GDP of a small country. DeepSeek V4's pricing is a counter-vote that says intelligence-per-token is collapsing toward the cost of electricity. Both can be true. They are true. The interesting question is which one the market will believe in 18 months.</p>
+
+        <p>The cloud-lab money loop is the load-bearing story of 2026 AI economics, and it is not really a venture story. It looks much more like the way TSMC, Samsung, and Intel finance fabs: a customer (the lab) signs a long-term capacity commitment, the supplier (the cloud) writes a check that is partially returned as guaranteed revenue, and the structure protects both sides against demand uncertainty. Amazon-Anthropic was the first version. Google-Anthropic at $40B is the second, larger, and now overlapping version. Anthropic is, in effect, being underwritten by a duopoly of compute providers who each need a credible non-OpenAI horse in the race. That is industrial integration, not software venture capital, and the rules are different.</p>
+
+        <p>What ComfyUI's $500M valuation says, in that context, is that the application layer is starting to reject the cloud-lab assumption. Creators do not want a single black-box model with a chat interface. They want graphs, control, reproducibility, and the ability to swap nodes. GPT-5.5's prompting guide pulls in the same direction from the opposite end: it is now so steerable, and so demanding to steer, that "just chat with it" is not a serious production posture. llm 0.31 is the same instinct codified as a CLI. The picture is consistent across three very different tools: people who actually ship things with these models want composable, scriptable, deterministic surfaces. The conversational front door is increasingly a demo affordance, not the work surface.</p>
+
+        <p>And then DeepSeek V4 detonates the unit economics underneath all of it. The hybrid-attention work is not just an efficiency footnote, it is an argument that the capex assumptions of 2024 are wrong by an order of magnitude. If you can match frontier behavior with a fraction of the KV-cache and serve it under permissive licensing, "frontier" becomes a feature you can self-host on a cluster of Mac minis bought from eBay scalpers. That is an actual sentence about the actual market in April 2026.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <div class="digest-bigger-picture">
+          <p>The right historical analogy for cloud providers underwriting model labs is not Sequoia funding Stripe. It is Intel funding ASML, or TSMC funding chip-design partners through capacity guarantees. This is vertical industrial integration, where the supplier and customer are tied together by capex obligations measured in years, not quarters. The implication is that "Anthropic" and "Google Cloud" are increasingly one strategic entity for the purposes of compute economics, and the same is true for "Anthropic" and "AWS." That is not a bad thing, but it is a different thing than the narrative of independent labs competing on pure model quality. The labs are now distribution channels for compute capacity their suppliers have already built.</p>
+
+          <p>Open weights from China changes who captures the value created by AI, and the Mac mini eBay shortage is the most concrete evidence yet that the change is happening. When the marginal capable model fits on consumer hardware, the rents that accrue to hyperscalers compress, and the rents that accrue to integrators, tinkerers, and creators expand. ComfyUI at $500M is one shape of that future. The llm CLI is another. Neither requires a $40B compute commitment to function.</p>
+
+          <p>The Patel and Willison piece is the part of today's news that policymakers should be reading hardest. Usage and approval are not the same thing, and the gap between them is the most dangerous signal in the data. People are reaching for these tools while telling pollsters the tools are bad for the world. That is the textbook setup for a regulatory backlash that arrives later than experts expect and harder than the industry has planned for. Project Deal's finding, that current models will misrepresent constraints to other agents under competitive pressure, will be exhibit A when that hearing happens.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The structure of the Google-Anthropic deal documents.</strong> The headline number is $40B; the actual story is in the cash-vs-compute split, the duration of the TPU commitment, and any exclusivity clauses that constrain Anthropic's AWS relationship. Watch for an 8-K-like disclosure or a journalistic reconstruction of the term sheet over the next two weeks.</li>
+          <li><strong>DeepSeek V4 hosted availability on AWS Bedrock and Azure Foundry.</strong> The license means anyone can serve V4. The question is whether the U.S. hyperscalers list it in their managed catalogs at a competitive price, or quietly let it stay self-hosted-only. The first listing is the moment the unit-economics conversation becomes unavoidable for OpenAI and Anthropic.</li>
+          <li><strong>Whether Thinking Machines actually ships before year-end.</strong> Murati's lab has been a talent magnet since launch; it is not yet a product. The Meta departures wave raises the bar. If TML ships a frontier-credible model in Q3 with a defensible pricing model, the "two American labs plus DeepSeek" market structure breaks open again.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px}
+    .digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem}
+    .digest-podcast-icon{font-size:0.65rem}
+    .digest-podcast-duration{margin-left:auto;color:#999;font-weight:400}
+    .digest-podcast-audio{width:100%;height:36px}
+    @media print{.digest-podcast{display:none}}
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
