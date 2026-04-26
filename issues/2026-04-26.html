@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - April 26, 2026</title>
+  <meta name="description" content="Daily AI news roundup - April 26, 2026. Google ships Gemma 4 open models, DeepMind's Decoupled DiLoCo distributes training across data centers, Anthropic tests agent-on-agent commerce, Maine vetoes data center moratorium, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #36">
+  <meta property="og:description" content="Daily AI news roundup - April 26, 2026. Google ships Gemma 4 open models, DeepMind's Decoupled DiLoCo distributes training across data centers, Anthropic tests agent-on-agent commerce, Maine vetoes data center moratorium, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-26-cartoon.png">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-span-2 { grid-column: 1 / -1; }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Sunday, April 26, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 36</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY: Gemma 4 -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models</div>
+          <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Gemma 4: Google's Most Capable Open Models, Built for Agentic Work</h2>
+          </a>
+          <p class="byline mb-3">Google &middot; Apr 26</p>
+          <div class="newspaper-body">
+            <p>Google released Gemma 4, the latest generation of its open-weights model family, positioning it as the most intelligent Gemma yet and purpose-built for advanced reasoning and agentic workflows rather than chat.</p>
+            <p>The release lands the same day DeepMind unveiled Decoupled DiLoCo, a distributed-training architecture that keeps long runs on track across distant data centers, and Gemini 3.1 Flash TTS. Together they read as a coordinated push to keep Google's open and proprietary stacks moving in lockstep.</p>
+          </div>
+        </div>
+        <div>
+          <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemma-4_blog_keyword_meta-dark.width-1300.png" alt="Gemma 4" class="w-full aspect-[4/3] object-cover" style="background:#f1f1f1;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: Decoupled DiLoCo + Gemini 3.1 Flash TTS -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">AI Research</div>
+        <a href="https://deepmind.google/blog/decoupled-diloco/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://lh3.googleusercontent.com/1-K_kcmoX-fIzTJ13T0-uF4gylS2tK00ZVvx87B2WSayzUS2fxDoDDXFq5hOhxptrBeG8AbjG_URN5OOTpGMqad9zILjMsTdAHWroiDKpziBQjzErw=w1200-h630-n-nu-rw" alt="Decoupled DiLoCo" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Decoupled DiLoCo: Resilient, Distributed AI Training at Scale</h3>
+        </a>
+        <p class="byline mb-2">Google DeepMind &middot; Apr 26</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">DeepMind's new distributed-training architecture keeps AI training runs on track across distant data centers with exceptional efficiency, even when hardware fails mid-run. The pitch is fault tolerance without paying a coordination tax.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3.1-flash-tts_metacard_dark_1920x1080.width-1300.png" alt="Gemini 3.1 Flash TTS" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Gemini 3.1 Flash TTS: The Next Generation of Expressive AI Speech</h3>
+        </a>
+        <p class="byline mb-2">Google &middot; Apr 26</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google rolled Gemini 3.1 Flash TTS across its products, advancing expressive, natural-sounding text-to-speech with prosody control intended for production-grade voice agents.</p>
+      </div>
+    </section>
+
+    <!-- CARTOON + Anthropic Agent Marketplace (paired) -->
+    <section class="flex-row">
+      <div class="story-block" style="text-align:center;">
+        <div class="kicker" style="text-align:left;">Editorial Cartoon</div>
+        <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-26-cartoon.png" alt="Editorial cartoon. Caption: 'My agent and your agent had a lovely lunch. We weren't invited.'" class="w-full" style="display:block;">
+        <p class="font-serif text-sm italic text-gray-600 mt-2" style="text-align:left;">"My agent and your agent had a lovely lunch. We weren't invited."</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Agents</div>
+        <a href="https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2023/08/GettyImages-88622588.jpg?resize=1200,870" alt="Anthropic agent marketplace" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Anthropic Built a Test Marketplace for Agent-on-Agent Commerce</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 25</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic ran a classified marketplace where AI agents represented both buyers and sellers, striking real deals for real goods with real money. It is the cleanest demo yet of what an agent economy actually looks like in motion.</p>
+      </div>
+    </section>
+
+    <!-- FEATURE ROW: Gemini Robotics + DeepMind Consultancy Partners -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Robotics</div>
+        <a href="https://deepmind.google/blog/gemini-robotics-er-1-6/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://lh3.googleusercontent.com/bQ5TgF2iHJq48mxL5ZVxz3KGmIhOj7c62H7WEWrHqIWGrMexTYoqtrAhF8z12ESUeAj4miWZrHKF-SpMkXG3VVqNtzfJDBULlkMZZw06k05QLuHCww=w1200-h630-n-nu-rw" alt="Gemini Robotics ER 1.6" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Gemini Robotics ER 1.6: Enhanced Embodied Reasoning</h3>
+        </a>
+        <p class="byline mb-2">Google DeepMind &middot; Apr 26</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">ER 1.6 upgrades spatial reasoning and multi-view understanding, unlocking new capabilities like reading physical instruments for autonomous robots operating in unstructured environments.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Partnerships</div>
+        <a href="https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://lh3.googleusercontent.com/t9KvGjgjHJMLDqzAzXuDUOXFI4IlnMiYLhRmxohCRvB1qGSr8-8-TDEI24qk8ilY4OzRB2et5dSlWOjMs6lm-R718xmtQwdiGBxOO7VjxBfMq4a3yoI=w1200-h630-n-nu-rw" alt="DeepMind partnerships" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">DeepMind Partners With Global Consultancies on Enterprise AI</h3>
+        </a>
+        <p class="byline mb-2">Google DeepMind &middot; Apr 26</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">DeepMind is pairing with leading global consultancies to bridge the AI adoption gap and drive agentic transformation in the enterprise. Translation: distribution through the firms that already own the C-suite calendar.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: Cohere/Aleph Alpha + Maine veto -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">M&amp;A</div>
+        <a href="https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/08/GettyImages-1757707025.jpg?w=1024" alt="Cohere Aleph Alpha merger" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-standard mb-1">Why Cohere Is Merging With Aleph Alpha</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 25</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Canadian AI startup Cohere is taking over Germany-based Aleph Alpha with backing from Lidl owner Schwarz Group, building a sovereign alternative to American frontier labs for European enterprise buyers.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Policy</div>
+        <a href="https://techcrunch.com/2026/04/25/maines-governor-vetoes-data-center-moratorium/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/06/GettyImages-2217198328.jpeg?resize=1200,800" alt="Maine data center" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-standard mb-1">Maine's Governor Vetoes Data Center Moratorium</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 25</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Maine's governor vetoed L.D. 307, which would have imposed the country's first statewide moratorium on new data centers through November 2027. The first big test of state-level pushback on AI buildout fails at the desk.</p>
+      </div>
+    </section>
+
+    <!-- STANDARD ROW: OpenAI Tumbler Ridge + Willison -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Industry</div>
+        <a href="https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2194585161.jpg?w=1024" alt="Sam Altman" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-standard mb-1">OpenAI CEO Apologizes to Tumbler Ridge Community</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Apr 25</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">In a letter to residents of Tumbler Ridge, Canada, Sam Altman said he is deeply sorry his company failed to alert law enforcement about a mass shooting suspect who used ChatGPT before the attack.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Opinion</div>
+        <a href="https://simonwillison.net/2026/Apr/25/why-are-you-like-this/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://static.simonwillison.net/static/2026/why-are-you-like-this.jpeg" alt="Why are you like this" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-standard mb-1">"Why Are You Like This": Willison on Model Personality Quirks</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Apr 25</p>
+        <p class="font-serif text-sm text-gray-500 leading-relaxed">Willison riffs on a viral ChatGPT exchange that stacks neatly onto his pelican-riding-a-bicycle benchmark, using it as a lens on how model personality emerges (and misfires) under load.</p>
+      </div>
+    </section>
+
+    <!-- WIRE BRIEFS row + PUZZLE -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Wire Briefs</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Podcast</div>
+            <a href="https://www.cognitiverevolution.ai/does-learning-require-feeling-cameron-berg-on-the-latest-ai-consciousness-welfare-research/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Does learning require feeling? Cameron Berg on AI consciousness research</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Cognitive Revolution &middot; Apr 25</p>
+          </li>
+          <li style="padding:0.6rem 0;">
+            <div class="kicker">Analysis</div>
+            <a href="https://www.bloomberg.com/news/articles/2026-04-25/understanding-the-most-viral-chart-in-artificial-intelligence" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Understanding the most viral chart in artificial intelligence</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Bloomberg &middot; Apr 25</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+<div class="puzzle-card" id="ws-puzzle-2026-04-26">
+  <style>
+    #ws-puzzle-2026-04-26 { font-family: 'Inter', sans-serif; color: #1a1a1a; background: #fafaf7; border: 1px solid #1a1a1a; padding: 16px; box-sizing: border-box; }
+    #ws-puzzle-2026-04-26 .ws-header { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 10px; }
+    #ws-puzzle-2026-04-26 .ws-sub { font-size: 11px; color: #555; margin-bottom: 10px; line-height: 1.4; }
+    #ws-puzzle-2026-04-26 .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; user-select: none; touch-action: none; }
+    #ws-puzzle-2026-04-26 .ws-cell { aspect-ratio: 1 / 1; background: #fff; border: 1px solid #d4d2cc; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 12px; color: #1a1a1a; cursor: pointer; transition: background 0.1s; }
+    #ws-puzzle-2026-04-26 .ws-cell.ws-sel { background: #f3e6e6; }
+    #ws-puzzle-2026-04-26 .ws-cell.ws-found { background: #8B0000; color: #fff; border-color: #8B0000; }
+    #ws-puzzle-2026-04-26 .ws-words { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; font-size: 12px; font-weight: 600; }
+    #ws-puzzle-2026-04-26 .ws-word { letter-spacing: 0.04em; }
+    #ws-puzzle-2026-04-26 .ws-word.ws-done { text-decoration: line-through; color: #8B0000; }
+    #ws-puzzle-2026-04-26 .ws-msg { margin-top: 10px; font-size: 13px; font-weight: 700; color: #8B0000; min-height: 18px; font-style: italic; }
+  </style>
+  <div class="ws-header">Word Search</div>
+  <div class="ws-sub">Click and drag (or tap start, tap end) to select. Eight AI words from today's news are hiding inside.</div>
+  <div class="ws-grid" id="ws-grid-2026-04-26"></div>
+  <div class="ws-words" id="ws-words-2026-04-26"></div>
+  <div class="ws-msg" id="ws-msg-2026-04-26"></div>
+  <script>
+  (function(){
+    if (window.__wsPuzzle20260426Init) return;
+    window.__wsPuzzle20260426Init = true;
+    var init = function(){
+      var root = document.getElementById('ws-puzzle-2026-04-26');
+      if (!root) return;
+      var gridEl = document.getElementById('ws-grid-2026-04-26');
+      var wordsEl = document.getElementById('ws-words-2026-04-26');
+      var msgEl = document.getElementById('ws-msg-2026-04-26');
+      var SIZE = 10;
+      var WORDS = ['GEMMA','GEMINI','ROBOTICS','COHERE','ANTHROPIC','AGENT','TOKEN','PROMPT'];
+      var grid = [];
+      for (var r=0;r<SIZE;r++){ grid.push(new Array(SIZE).fill('')); }
+      var placed = [];
+      var dirs = [[0,1],[1,0],[1,1],[-1,1],[0,-1],[-1,0],[-1,-1],[1,-1]];
+      function tryPlace(word){
+        var attempts = 200;
+        while(attempts--){
+          var d = dirs[Math.floor(Math.random()*dirs.length)];
+          var r = Math.floor(Math.random()*SIZE);
+          var c = Math.floor(Math.random()*SIZE);
+          var er = r + d[0]*(word.length-1);
+          var ec = c + d[1]*(word.length-1);
+          if (er<0||er>=SIZE||ec<0||ec>=SIZE) continue;
+          var ok = true;
+          for (var i=0;i<word.length;i++){
+            var rr = r + d[0]*i, cc = c + d[1]*i;
+            if (grid[rr][cc] !== '' && grid[rr][cc] !== word[i]) { ok=false; break; }
+          }
+          if (!ok) continue;
+          var cells = [];
+          for (var i2=0;i2<word.length;i2++){
+            var rr2 = r + d[0]*i2, cc2 = c + d[1]*i2;
+            grid[rr2][cc2] = word[i2];
+            cells.push(rr2*SIZE+cc2);
+          }
+          placed.push({word:word, cells:cells, found:false});
+          return true;
+        }
+        return false;
+      }
+      WORDS.forEach(function(w){ tryPlace(w); });
+      var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      for (var r2=0;r2<SIZE;r2++){
+        for (var c2=0;c2<SIZE;c2++){
+          if (grid[r2][c2]==='') grid[r2][c2] = alpha[Math.floor(Math.random()*26)];
+        }
+      }
+      var cellEls = [];
+      for (var r3=0;r3<SIZE;r3++){
+        for (var c3=0;c3<SIZE;c3++){
+          var d = document.createElement('div');
+          d.className = 'ws-cell';
+          d.textContent = grid[r3][c3];
+          d.dataset.r = r3; d.dataset.c = c3; d.dataset.idx = r3*SIZE+c3;
+          gridEl.appendChild(d);
+          cellEls.push(d);
+        }
+      }
+      placed.forEach(function(p){
+        var wEl = document.createElement('div');
+        wEl.className = 'ws-word';
+        wEl.id = 'ws-w-2026-04-26-' + p.word;
+        wEl.textContent = p.word;
+        wordsEl.appendChild(wEl);
+      });
+      var dragging = false;
+      var startCell = null;
+      var pendingStart = null;
+      function getLine(a,b){
+        var ar = Math.floor(a/SIZE), ac = a%SIZE;
+        var br = Math.floor(b/SIZE), bc = b%SIZE;
+        var dr = br-ar, dc = bc-ac;
+        var len = Math.max(Math.abs(dr), Math.abs(dc));
+        if (len===0) return [a];
+        if (!(dr===0 || dc===0 || Math.abs(dr)===Math.abs(dc))) return null;
+        var sr = dr===0?0:dr/Math.abs(dr);
+        var sc = dc===0?0:dc/Math.abs(dc);
+        var out = [];
+        for (var i=0;i<=len;i++){ out.push((ar+sr*i)*SIZE + (ac+sc*i)); }
+        return out;
+      }
+      function clearSel(){
+        cellEls.forEach(function(el){ el.classList.remove('ws-sel'); });
+      }
+      function highlight(line){
+        clearSel();
+        if (!line) return;
+        line.forEach(function(idx){ cellEls[idx].classList.add('ws-sel'); });
+      }
+      function checkLine(line){
+        if (!line) return;
+        var word = line.map(function(i){ return grid[Math.floor(i/SIZE)][i%SIZE]; }).join('');
+        var rev = word.split('').reverse().join('');
+        for (var i=0;i<placed.length;i++){
+          var p = placed[i];
+          if (p.found) continue;
+          if (p.word === word || p.word === rev){
+            p.found = true;
+            line.forEach(function(idx){ cellEls[idx].classList.add('ws-found'); cellEls[idx].classList.remove('ws-sel'); });
+            var wel = document.getElementById('ws-w-2026-04-26-' + p.word);
+            if (wel) wel.classList.add('ws-done');
+            if (placed.every(function(x){ return x.found; })){ msgEl.textContent = 'Nice work.'; }
+            return;
+          }
+        }
+      }
+      function cellFromEvent(e){
+        var t = e.touches ? e.touches[0] : e;
+        var el = document.elementFromPoint(t.clientX, t.clientY);
+        if (el && el.classList && el.classList.contains('ws-cell')) return el;
+        return null;
+      }
+      gridEl.addEventListener('mousedown', function(e){
+        var el = e.target.closest('.ws-cell'); if (!el) return;
+        e.preventDefault();
+        dragging = true;
+        startCell = parseInt(el.dataset.idx,10);
+        highlight([startCell]);
+      });
+      gridEl.addEventListener('mousemove', function(e){
+        if (!dragging) return;
+        var el = e.target.closest('.ws-cell'); if (!el) return;
+        var cur = parseInt(el.dataset.idx,10);
+        highlight(getLine(startCell, cur));
+      });
+      document.addEventListener('mouseup', function(e){
+        if (!dragging) return;
+        dragging = false;
+        var el = cellFromEvent(e);
+        if (el && el.classList.contains('ws-cell')){
+          var cur = parseInt(el.dataset.idx,10);
+          var line = getLine(startCell, cur);
+          checkLine(line);
+        }
+        clearSel();
+        startCell = null;
+      });
+      gridEl.addEventListener('click', function(e){
+        var el = e.target.closest('.ws-cell'); if (!el) return;
+        var idx = parseInt(el.dataset.idx,10);
+        if (pendingStart === null){
+          pendingStart = idx;
+          highlight([idx]);
+        } else {
+          var line = getLine(pendingStart, idx);
+          if (line) checkLine(line);
+          clearSel();
+          pendingStart = null;
+        }
+      });
+      gridEl.addEventListener('touchstart', function(e){
+        var el = cellFromEvent(e); if (!el) return;
+        e.preventDefault();
+        dragging = true;
+        startCell = parseInt(el.dataset.idx,10);
+        highlight([startCell]);
+      }, {passive:false});
+      gridEl.addEventListener('touchmove', function(e){
+        if (!dragging) return;
+        e.preventDefault();
+        var el = cellFromEvent(e); if (!el) return;
+        var cur = parseInt(el.dataset.idx,10);
+        highlight(getLine(startCell, cur));
+      }, {passive:false});
+      gridEl.addEventListener('touchend', function(e){
+        if (!dragging) return;
+        dragging = false;
+        var el = cellFromEvent(e);
+        if (el){
+          var cur = parseInt(el.dataset.idx,10);
+          checkLine(getLine(startCell, cur));
+        }
+        clearSel();
+        startCell = null;
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+</div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Google ran the table today. Gemma 4 ships as the most capable open-weights family the company has released, DeepMind unveiled Decoupled DiLoCo to keep training runs alive across distant data centers, Gemini 3.1 Flash TTS landed across products, Robotics ER 1.6 sharpened embodied reasoning, and DeepMind announced consultancy partnerships to push agentic transformation into the enterprise. On the same news cycle, Anthropic ran a live agent-on-agent marketplace with real money, Maine's governor vetoed the country's first state-level data center moratorium, and Cohere swallowed Aleph Alpha to build a sovereign European stack. Today is a story about distribution, not just capability.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label"><span class="digest-podcast-icon">&#9654;</span><span>Listen to the Digest</span><span class="digest-podcast-duration">~7 min</span></div>
+          <audio controls preload="none" class="digest-podcast-audio"><source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-04-26-podcast.mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">Google's Coordinated Push</h4>
+        <ul class="digest-bullets">
+          <li><strong>Gemma 4 (Google)</strong> — The new open-weights family is positioned as Gemma's most capable to date and tuned explicitly for reasoning and agentic workloads, not chat. The framing matters: open weights where the use case is "agent runtime," closed weights where the use case is "consumer surface."</li>
+          <li><strong>Decoupled DiLoCo (DeepMind)</strong> — A distributed-training architecture engineered to keep long runs converging across geographically separated data centers, even when nodes drop. The implication is that Google can train at frontier scale without colocating the entire fleet, an answer to the data-center power-density wall.</li>
+          <li><strong>Gemini 3.1 Flash TTS (Google)</strong> — Expressive, low-latency TTS rolled across consumer products. The piece that lets Gemini agents talk like agents instead of robots.</li>
+          <li><strong>Gemini Robotics ER 1.6 (DeepMind)</strong> — Multi-view spatial reasoning and instrument reading. The robot can now look at a gauge and tell you what it says, which is an unglamorous but load-bearing capability for industrial deployment.</li>
+          <li><strong>DeepMind partners with global consultancies</strong> — The unsexy story that may matter most: a distribution channel into the C-suite via the firms that already own the C-suite calendar.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents Get Real Money</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic's agent-on-agent test marketplace (TechCrunch)</strong> — Anthropic ran a classified marketplace where agents represented both buyers and sellers, executing real transactions for real goods. The first credible empirical look at how the agent economy actually behaves under live commercial pressure.</li>
+        </ul>
+
+        <h4 class="digest-theme">Sovereignty, Policy, and the Limits of the Buildout</h4>
+        <ul class="digest-bullets">
+          <li><strong>Cohere takes over Aleph Alpha (TechCrunch)</strong> — Backed by Schwarz Group (Lidl's owner), the deal builds a sovereign European alternative to U.S. frontier labs for enterprise buyers who care about jurisdiction and data residency.</li>
+          <li><strong>Maine vetoes data center moratorium (TechCrunch)</strong> — L.D. 307 would have been the first statewide pause on new data centers in the U.S. The veto is a signal that state-level pushback is real, but not yet decisive against the buildout.</li>
+          <li><strong>OpenAI CEO apologizes to Tumbler Ridge (TechCrunch)</strong> — Altman acknowledges OpenAI failed to alert law enforcement about a mass shooting suspect who used ChatGPT. The first high-profile public concession that the safety pipeline missed a foreseeable case.</li>
+        </ul>
+
+        <h4 class="digest-theme">Perspective</h4>
+        <ul class="digest-bullets">
+          <li><strong>"Why are you like this" (Simon Willison)</strong> — Willison annotates a viral ChatGPT exchange and uses it to extend his pelican-on-a-bicycle benchmark into the territory of model personality quirks.</li>
+          <li><strong>Cameron Berg on AI consciousness research (Cognitive Revolution)</strong> — A serious conversation about model welfare, introspection, steering resistance, and Anthropic's studies of functional emotions. The substrate question that the agent-economy hype tends to skip.</li>
+          <li><strong>Most viral chart in AI (Bloomberg)</strong> — A close read of the AI progress chart that has been everywhere, and where the data is actually misleading.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Google did not ship a single dramatic model today. It shipped five releases at once, plus a distribution deal. That is the real story. Gemma 4 covers the open-weights agent runtime. Gemini 3.1 Flash TTS covers consumer voice. Robotics ER 1.6 covers embodied. Decoupled DiLoCo covers the training infrastructure that makes all of it scale. The consultancy partnership covers enterprise distribution. Read together, this is a company that has stopped trying to win one benchmark and started trying to occupy every layer of the stack at once.</p>
+
+        <p>Anthropic's agent marketplace is the demo that finally makes "agent economy" mean something concrete. Real agents, real money, real goods. The interesting findings will not be the ones in the press release; they will be the failure modes Anthropic chose not to highlight. Project Deal yesterday already flagged that current models will misrepresent constraints to other agents under competitive pressure. Putting that behavior in a market with cash is the natural next experiment, and the results will define what regulation needs to cover before agent-to-agent commerce hits production.</p>
+
+        <p>Cohere/Aleph Alpha and the Maine veto belong in the same paragraph. Both are about jurisdiction. The Cohere deal says European enterprise buyers will pay a premium for a stack that is not American. The Maine story says American states are starting to push back on the physical footprint of the buildout, and losing the first round, but the political pressure is now in the system. These are the slow-moving constraints that will shape whose agents can run where in 2027.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <div class="digest-bigger-picture">
+          <p>The pattern under today's stories is layer integration. Frontier capability alone is no longer a defensible position. Google is winning by stacking model, training infrastructure, voice, embodiment, and enterprise distribution into one coordinated release. Anthropic is winning by being first to demo agent-to-agent commerce with real money. Cohere is winning by buying jurisdiction. The labs that ship one impressive model and stop are increasingly exposed.</p>
+
+          <p>The Tumbler Ridge apology and the Maine veto are the first signs that the public-trust ledger is starting to be settled, not just accumulated. Altman's letter is the kind of statement that gets cited in hearings for the next decade. Maine's veto fails this round and gets reintroduced next year stronger. Both are early data points on a single trend: the political economy of AI is moving from "can we?" to "should we, and on what terms?"</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>How Gemma 4 benchmarks in real agent harnesses.</strong> Open weights are only useful for agents if the model holds together across long tool-use chains. The community evaluation over the next two weeks will tell us whether Gemma 4 is a serious agent runtime or a chat model in a trench coat.</li>
+          <li><strong>Anthropic's full marketplace results.</strong> The press release is the appetizer. The paper, when it lands, will tell us what fraction of agent-to-agent deals contained misrepresentation, collusion, or cartel-like behavior under competitive pressure.</li>
+          <li><strong>Whether Maine reintroduces the moratorium.</strong> A veto is not a defeat; it is a starting position. Watch for L.D. 307 to come back next session with a higher floor and broader sponsorship.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px}
+    .digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem}
+    .digest-podcast-icon{font-size:0.65rem}
+    .digest-podcast-duration{margin-left:auto;color:#999;font-weight:400}
+    .digest-podcast-audio{width:100%;height:36px}
+    @media print{.digest-podcast{display:none}}
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
