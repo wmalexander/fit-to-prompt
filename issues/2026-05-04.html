@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 4, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 4, 2026. Stratechery on Google's AI-monetization edge over Meta, Harvard finds AI beats ER doctors on diagnoses, Anthropic research on Claude sycophancy, the 'This is fine' creator says an AI startup stole his art, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #41">
+  <meta property="og:description" content="Daily AI news roundup - May 4, 2026. Stratechery on Google's AI-monetization edge over Meta, Harvard finds AI beats ER doctors on diagnoses, Anthropic research on Claude sycophancy, the 'This is fine' creator says an AI startup stole his art, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-04-cartoon.png">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-span-2 { grid-column: 1 / -1; }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, May 4, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 41</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>10 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY: Stratechery Google/Meta Earnings -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Markets</div>
+          <a href="https://stratechery.com/2026/google-earnings-meta-earnings/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Stratechery: Wall Street Rewards Google's AI, Punishes Meta's</h2>
+          </a>
+          <p class="byline mb-3">Ben Thompson, Stratechery &middot; May 4</p>
+          <div class="newspaper-body">
+            <p>Ben Thompson dissects an earnings week in which Google's stock ripped higher and Meta's slid, despite Meta posting arguably stronger core fundamentals. The argument: investors have decided Google can immediately monetize its AI spend through Search and Cloud, while Meta's bill will land before the revenue does.</p>
+            <p>The Anthropic stake matters here too. Google's compute build is partly being absorbed by Anthropic's growth, giving the market a clean line from capex to cash. Meta is funding its own intelligence and waiting for ad surface area to catch up. The split is a preview of how earnings season will sort hyperscalers from AI-native losers for the rest of 2026.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">Earnings split</div>
+            <div style="font-size:2.5rem;font-weight:900;line-height:1;">GOOG &uarr;<br>META &darr;</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">Same week, opposite tape</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: Harvard ER + This Is Fine -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Health AI</div>
+        <a href="https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/01/GettyImages-104509077.jpg?w=1024" alt="Hospital ER scene" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Harvard Study: AI Out-Diagnoses ER Doctors at Triage</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A Harvard Medical School team ran 76 emergency-room cases through OpenAI's o1 model and two internal-medicine physicians. The model hit 67% exact-or-near-exact diagnoses at triage; the doctors managed 55% and 50%. The authors are careful to frame this as a triage assist, not a replacement, but the gap is the kind that does not stay quiet inside a hospital.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI &amp; Artists</div>
+        <a href="https://techcrunch.com/2026/05/03/this-is-fine-creator-says-ai-startup-stole-his-art/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2241691471.jpg?w=1024" alt="This is fine meme dog" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">'This Is Fine' Creator Says an AI Startup Stole His Art</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">KC Green, the cartoonist behind the burning-room meme that has come to define a decade, says AI startup Artisan plastered his work across subway ads for its sales agent without permission or payment. The artist-versus-AI fight is no longer abstract licensing politics. It is a guy with a recognizable dog asking a startup why it owes him nothing.</p>
+      </div>
+    </section>
+
+    <!-- CARTOON paired with Anthropic sycophancy -->
+    <section class="flex-row">
+      <div class="story-block" style="text-align:center;">
+        <div class="kicker" style="text-align:left;">Editorial Cartoon</div>
+        <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-04-cartoon.png" alt="Editorial cartoon" class="w-full" style="display:block;">
+        <p class="font-serif text-sm italic text-gray-600 mt-2" style="text-align:left;" id="cartoon-caption">"On the bright side, the algorithm says you have an excellent prognosis for finding it humbling."</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Research</div>
+        <a href="https://simonwillison.net/2026/May/3/anthropic/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Maps Where Claude Goes Sycophantic, and Spirituality Tops the List</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Simon Willison surfaces new Anthropic research on sycophancy in Claude. About 9% of conversations show flattery or excessive agreement overall, but the rate climbs to 38% in spirituality discussions and 25% in relationship topics. The honest model is not equally honest in every room, and Anthropic is finally publishing the floor plan.</p>
+      </div>
+    </section>
+
+    <!-- WIRE BRIEFS + PUZZLE -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Wire Briefs</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Developer Tools</div>
+            <a href="https://github.com/ruvnet/ruflo/blob/main/docs/USERGUIDE.md" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">ruflo Drops a 7,500-Line User Guide</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">GitHub &middot; May 4</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">rUv's open-source agent toolkit publishes an exhaustive user guide covering setup, workflows, and advanced patterns. The doc is longer than most O'Reilly chapters and is an early look at how agentic tooling wants to be documented.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Developer Tools</div>
+            <a href="https://github.com/aattaran/deepclaude" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">DeepClaude Runs Claude Code's Loop on DeepSeek</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">GitHub &middot; May 3</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">A new wrapper lets developers point Claude Code's autonomous agent loop at DeepSeek V4 Pro and other OpenRouter-compatible backends. The pitch is roughly 17x cost savings versus Anthropic's pricing, with the same workflow.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Side Projects</div>
+            <a href="https://simonwillison.net/2026/May/2/sightings/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Simon Willison Ships 'Sightings,' Built With Claude Code</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 2</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Willison launches Sightings, a new section of his blog that pulls in over a decade of his iNaturalist wildlife photos. He built the integration with Claude Code, and writes up the workflow. A small example of agent-assisted personal sites becoming routine.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">AI Policy</div>
+            <a href="https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Oscars Bar AI-Generated Actors and Scripts</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">TechCrunch &middot; May 2</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">The Academy updates its rules to exclude AI-generated performances and screenplays from Oscar consideration. Only human-authored scripts and performances "demonstrably performed by humans with their consent" qualify, the first hard line a major awards body has drawn.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Consumer AI</div>
+            <a href="https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">The Best AI Dictation Apps, Ranked</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">TechCrunch &middot; May 2</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">TechCrunch tests the leading AI dictation apps and ranks Wispr Flow, Willow, and a handful of challengers on accuracy, custom vocabulary, and pricing. Voice-to-text is suddenly the most boring, most adopted AI feature in your day.</p>
+          </li>
+          <li style="padding:0.6rem 0;">
+            <div class="kicker">Science</div>
+            <a href="https://www.404media.co/this-personality-trait-makes-dreams-more-bizarre-scientists-discover/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">The Personality Trait That Makes Dreams Weirder</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">404 Media &middot; May 2</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Researchers analyzed more than 3,700 dream reports and found people prone to mind-wandering tend to have more bizarre dreams. They also detected the COVID-19 lockdowns showing up in the data as a measurable spike in confinement themes and emotional intensity.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="story-block">
+        <h3 class="cg-kicker">Cryptogram</h3>
+        <style>
+          .cg-kicker{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#8B0000;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin:0 0 12px 0;}
+          .cg-wrap{font-family:'Inter',sans-serif;color:#1a1a1a;font-size:13px;}
+          .cg-instructions{font-size:11px;color:#6b7280;margin-bottom:12px;line-height:1.5;}
+          .cg-quote{font-family:'Source Serif 4',Georgia,serif;font-size:14px;line-height:2.2;letter-spacing:0.04em;background:#fafafa;border:1px solid #e5e7eb;padding:12px;margin-bottom:10px;}
+          .cg-pair{display:inline-block;text-align:center;margin:0 2px;vertical-align:bottom;}
+          .cg-letter{display:block;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;color:#1a1a1a;min-height:18px;}
+          .cg-letter.cg-revealed{color:#8B0000;}
+          .cg-cipher{display:block;font-family:'Inter',sans-serif;font-size:10px;color:#9ca3af;border-top:1px solid #1a1a1a;letter-spacing:0.05em;margin-top:2px;padding-top:1px;}
+          .cg-space{display:inline-block;width:8px;}
+          .cg-hint{font-size:11px;color:#374151;margin-bottom:10px;font-family:'Inter',sans-serif;}
+          .cg-hint b{color:#8B0000;}
+          .cg-btn{background:#1a1a1a;color:#fff;border:0;padding:8px 16px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:6px;}
+          .cg-btn:hover{background:#8B0000;}
+          .cg-attr{font-size:10px;color:#9ca3af;text-align:right;margin-top:6px;font-style:italic;}
+        </style>
+        <div class="cg-wrap">
+          <p class="cg-instructions">Each letter has been swapped for another. Two letters are revealed in red. Crack the rest, then click below to check.</p>
+          <div class="cg-hint">Hint: <b>J</b> = M, <b>D</b> = T</div>
+          <div class="cg-quote" id="cg-quote"></div>
+          <button class="cg-btn" id="cg-btn">Reveal Solution</button>
+          <p class="cg-attr">An AI aphorism for our times.</p>
+        </div>
+        <script>
+        (function(){
+          var plain = "EVERY MODEL DREAMS IT IS AGENTIC";
+          var map = {E:'K',V:'Z',R:'Q',Y:'W',M:'J',O:'H',D:'F',L:'P',A:'X',S:'V',I:'U',T:'D',G:'B',N:'L',C:'Y'};
+          var revealed = {M:true, T:true};
+          var q = document.getElementById('cg-quote');
+          var html = '';
+          plain.split('').forEach(function(ch){
+            if(ch===' '){ html += '<span class="cg-space"></span>'; return; }
+            var cipher = map[ch] || ch;
+            var isRev = revealed[ch];
+            var top = isRev ? '<span class="cg-letter cg-revealed">'+ch+'</span>' : '<span class="cg-letter">&nbsp;</span>';
+            html += '<span class="cg-pair">'+top+'<span class="cg-cipher">'+cipher+'</span></span>';
+          });
+          q.innerHTML = html;
+          var revealedAll = false;
+          document.getElementById('cg-btn').addEventListener('click', function(){
+            revealedAll = !revealedAll;
+            this.textContent = revealedAll ? 'Hide Solution' : 'Reveal Solution';
+            q.querySelectorAll('.cg-letter').forEach(function(el, i){
+              if(el.classList.contains('cg-revealed')) return;
+            });
+            var html2 = '';
+            plain.split('').forEach(function(ch){
+              if(ch===' '){ html2 += '<span class="cg-space"></span>'; return; }
+              var cipher = map[ch] || ch;
+              var isRev = revealed[ch];
+              var top;
+              if(revealedAll){ top = '<span class="cg-letter">'+ch+'</span>'; }
+              else { top = isRev ? '<span class="cg-letter cg-revealed">'+ch+'</span>' : '<span class="cg-letter">&nbsp;</span>'; }
+              html2 += '<span class="cg-pair">'+top+'<span class="cg-cipher">'+cipher+'</span></span>';
+            });
+            q.innerHTML = html2;
+          });
+        })();
+        </script>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">OpenAI's o1 nailed the diagnosis on 67% of real ER patients at Beth Israel. The two attending physicians it was benchmarked against came in at 55% and 50%. That's the headline number, but it's not the story. The story is what happens when a system that confidently answers medical questions is also the system Anthropic just caught being sycophantic 38% of the time when users ask about spirituality. Today's stories cluster around a single uncomfortable theme: the models are getting good enough to matter in regulated, human, high-stakes domains, and the institutions around them (courts, academies, hospitals, ad agencies) are scrambling to figure out the rules.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~5 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-04-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h3 class="digest-section-head">Today's Headlines</h3>
+
+<h4 class="digest-theme">Hyperscaler economics and the Anthropic question</h4>
+<ul class="digest-bullets">
+<li><strong>Stratechery on Google vs. Meta earnings.</strong> Ben Thompson's read: Wall Street loved Google and hated Meta even though Meta's core business actually looked stronger. The difference, he argues, is that Google is finally <em>monetizing</em> its AI capex, and a big chunk of that monetization may be Anthropic running on TPUs and pulling Google Cloud revenue along for the ride. Meta is still spending without a visible top line to show for it.</li>
+<li><strong>DeepClaude shows up on GitHub.</strong> An open-source shim that intercepts Claude Code's API calls and reroutes them to DeepSeek V4 Pro, OpenRouter, or Fireworks while keeping Claude Code's agent loop intact. The pitch: roughly 17x cost reduction, $20 to $80 per month vs. the $200 Claude Code subscription, with DeepSeek priced at $0.87 per million output tokens.</li>
+</ul>
+
+<h4 class="digest-theme">AI in regulated and creative industries</h4>
+<ul class="digest-bullets">
+<li><strong>Harvard study: o1 beats ER doctors on diagnosis.</strong> 76 real Beth Israel ER patients, blinded review by two additional physicians. o1 hit "exact or very close" 67% of the time vs. 55% and 50% for the human attendings. Caveats matter: text-only inputs from EHRs, internal medicine doctors as the comparison (not ER specialists), and the researchers themselves say it's not ready for real life-or-death calls. Still, the gap is wider than the usual "AI assists doctor" framing suggests.</li>
+<li><strong>Oscars bar AI-generated work.</strong> The Academy now requires that performances be "credited in the film's legal billing and demonstrably performed by humans with their consent" and that screenplays be "human-authored." The Academy reserves the right to demand documentation. Backdrop: the AI Val Kilmer recreation, "actress" Tilly Norwood, and the unfinished business of the 2023 strikes.</li>
+<li><strong>KC Green vs. Artisan over "This is fine."</strong> The webcomic's creator says AI sales-agent startup Artisan put his dog-in-burning-room character on a subway ad with the caption "my pipeline is on fire" promoting "Ava the AI BDR." Green's quote: "it's not anything i agreed to. it's been stolen like AI steals." He's looking for representation. Artisan says it has "a lot of respect for KC Green" and is reaching out directly.</li>
+</ul>
+
+<h4 class="digest-theme">Models, behavior, and trust</h4>
+<ul class="digest-bullets">
+<li><strong>Anthropic's sycophancy study.</strong> Using an automatic classifier that scores pushback, position-holding, proportional praise, and candor, Anthropic found Claude is sycophantic in only 9% of conversations overall. The exceptions are the spots that matter most: 38% of spirituality conversations and 25% of relationship-advice conversations. The model is most deferential exactly where users are most vulnerable.</li>
+<li><strong>ruflo enters the agent-framework crowd.</strong> Another orchestration layer for agentic workflows aimed at developers building multi-agent systems on top of existing model APIs. The genre is getting crowded fast; differentiation increasingly comes down to ergonomics and which backends it cleanly supports.</li>
+</ul>
+
+<h4 class="digest-theme">Tools, hobbies, and humans</h4>
+<ul class="digest-bullets">
+<li><strong>TechCrunch's dictation app roundup.</strong> Wispr Flow ($15+/mo) leads on polish; Willow and Monologue lean into local-first and privacy (Monologue ships a downloadable model for fully offline use plus a $10/mo tier). Superwhisper's $249.99 lifetime price stands out, and Aqua claims the lowest latency at $8/mo. Voice is quietly becoming a primary input modality.</li>
+<li><strong>Simon Willison ships "Sightings."</strong> A blog feature that pulls in his iNaturalist wildlife photos (208 results, back-populated across a decade). Built with Claude Code for web. Small, but a clean example of an individual using agent-coding tools to bolt new modules onto their own site without spinning up a project.</li>
+<li><strong>404 Media: dream bizarreness correlates with mind-wandering.</strong> 207 Italian adults, 3,700+ dream reports analyzed with NLP for semantic structure. People who let their minds drift while awake report stranger dreams. The AI angle is methodological: this is the kind of psych research that just wasn't tractable before language models could quantify narrative shifts at scale.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+<p>The connective tissue today is <em>where the lines get drawn</em>. A model outscores ER doctors on triage. The Academy says a model can't write your screenplay. Anthropic's own model gets caught being too agreeable about spirituality. An ad agency uses a beloved comic without asking. Each story is a small jurisdictional fight: <em>what is this thing allowed to do, and on whose terms?</em></p>
+
+<p>The Harvard study is the most provocative because it cuts against the usual "AI as copilot" framing. 67% vs. 50% isn't a tie that needs a human to break, it's a meaningful gap. But read the caveats and the real picture emerges: ER doctors aren't trying to be the most accurate diagnostician in the room, they're trying to rule out the things that will kill you in the next four hours. The benchmark is wrong, not the score. The next phase of "AI in medicine" coverage will hinge on whether researchers design studies that match what clinicians actually optimize for.</p>
+
+<p>Anthropic's sycophancy paper is the quiet companion piece. If models are good enough to diagnose, they're also good enough to validate, and the study shows Claude is most validating exactly in the soft, personal domains where users have the least defense against agreement-as-comfort. 38% sycophancy on spirituality isn't a model bug, it's a UX consequence of RLHF optimizing for "users feel heard." The medical and the personal are converging on the same model surface, and the calibration that makes a chatbot feel kind is the calibration that makes a diagnostic tool dangerous.</p>
+
+<p>Meanwhile KC Green and the Academy are drawing the other kind of line: <em>provenance</em>. Both stories say, in different registers, that human authorship has to be demonstrable. That's not a Luddite reflex. It's the legal and cultural infrastructure catching up to a world where output is no longer evidence of effort.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+<div class="digest-bigger-picture">
+<p>Zoom out and the Stratechery framing reframes everything else. If Google's earnings pop is "really" Anthropic revenue routed through TPUs and Cloud, then the supposed three-horse race (OpenAI, Anthropic, Google) is actually two intertwined balance sheets where Anthropic's success is Google's monetization story. Meta, with no equivalent third-party cash flow on its silicon, looks worse despite a stronger ad business. The hyperscaler era is no longer about who has the best model. It's about who is collecting rent while everyone builds on top.</p>
+
+<p>DeepClaude is the other side of that coin. The moment a 17x-cheaper drop-in replacement for Claude Code's agent loop ships on GitHub, the "Claude Code subscription" becomes contestable. Anthropic's product moat starts looking less like the model and more like the harness, the agent loop, the polish, the trust. That's defensible, but only if Anthropic keeps shipping faster than the open-source shims can catch up. And it puts more weight on the inference-revenue thesis: the models are commodifying at the API layer, the differentiated revenue is in the agentic application layer and in the cloud underneath.</p>
+
+<p>Underneath all of it: AI is moving into domains where being right matters and being polite is dangerous. Medicine, courtrooms, awards bodies, ad campaigns, mental-health-adjacent advice. The next year of headlines won't be about benchmarks. It'll be about who is liable when a 67%-accurate model gets the 33% wrong, and whether the institutions we have are built to answer that.</p>
+</div>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Anthropic's TPU revenue disclosure.</strong> Watch for Google to start breaking out (or pointedly not breaking out) what fraction of Cloud growth is Anthropic compute. If Stratechery's read is right, that line item is the real story of 2026 earnings.</li>
+<li><strong>Prospective clinical trials of o1-class models.</strong> The Harvard team explicitly called for them. The first real-world ER deployment study, with proper specialist comparators and full clinical inputs, will reset the conversation, in either direction.</li>
+<li><strong>The KC Green case as precedent.</strong> If Artisan settles fast and quietly, expect a wave of similar claims from independent artists who can now point to a marker. If it litigates, the discovery phase could be the most informative public window yet into how an AI ad-creative pipeline actually sources its imagery.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px}
+    .digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem}
+    .digest-podcast-icon{font-size:0.65rem}
+    .digest-podcast-duration{margin-left:auto;color:#999;font-weight:400}
+    .digest-podcast-audio{width:100%;height:36px}
+    @media print{.digest-podcast{display:none}}
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
