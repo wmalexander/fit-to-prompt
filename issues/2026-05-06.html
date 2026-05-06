@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 6, 2026. OpenAI ships GPT-5.5 Instant as ChatGPT's new default, Anthropic releases ten ready-made agents for finance teams, Apple opens iOS 27 to third-party AI models, Stratechery on Microsoft's agentic pivot and Amazon's durability, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #42">
+  <meta property="og:description" content="Daily AI news roundup - May 6, 2026. OpenAI ships GPT-5.5 Instant as ChatGPT's new default, Anthropic releases ten ready-made agents for finance teams, Apple opens iOS 27 to third-party AI models, Stratechery on Microsoft's agentic pivot and Amazon's durability, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-06-cartoon.png">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-span-2 { grid-column: 1 / -1; }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, May 6, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 42</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>11 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY: GPT-5.5 Instant -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models</div>
+          <a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">OpenAI Ships GPT-5.5 Instant as ChatGPT's New Default</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; May 5</p>
+          <div class="newspaper-body">
+            <p>OpenAI has quietly swapped the default model behind ChatGPT for the consumer hundreds of millions of users actually see. GPT-5.5 Instant is positioned as a low-latency model with sharper reductions in hallucination on the categories OpenAI gets sued over: legal, medical, and financial answers. Context handling and benchmark scores both bumped at the same time.</p>
+            <p>The interesting framing is what's missing. There's no big keynote, no new pricing tier, no gated rollout. The default is just better. That's the form factor of a maturing product, and it's also the form factor of an industry where the headline-grabbing capability gains are getting absorbed into the boring middle of the stack.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">New default</div>
+            <div style="font-size:2.5rem;font-weight:900;line-height:1;">GPT-5.5<br>INSTANT</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">Less hallucination, same latency</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: Anthropic finance + Apple iOS 27 -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">From Anthropic</div>
+        <a href="https://www.anthropic.com/news/finance-agents" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/b9dd79810f74fbcc763cc89643d86cdea1439a26-1000x1000.svg" alt="Anthropic finance agents" class="w-full aspect-video object-contain mb-3" style="background:#f1f1f1;padding:1rem;">
+          <h3 class="headline-feature mb-2">Anthropic Drops Ten Ready-Made Claude Agents for Finance Teams</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; May 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic published ten template agents that bank, fund, and corporate finance teams can run today: pitchbook drafting, KYC screening, month-end close, and the rest of the workflows that consume a junior analyst's life. The launch ships with expanded Microsoft Office integration and new data connectors from Dun &amp; Bradstreet and Moody's, which is the part Wall Street will read closely.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/03/ai-apps-GettyImages-2214375253.jpg?w=1024" alt="iOS 27 AI extensions" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">iOS 27 Will Let Apps Plug Their Own AI Models Into Siri</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Apple is reportedly building an "Extensions" framework in iOS 27 that lets installed apps register generative-AI capabilities Siri, Writing Tools, and Image Playground can call on demand. It is the platform-shaped admission that Apple Intelligence alone won't be enough, and a quiet pivot from "best model wins" to "best surface wins."</p>
+      </div>
+    </section>
+
+    <!-- CARTOON paired with Stratechery MS/Apple Earnings -->
+    <section class="flex-row">
+      <div class="story-block" style="text-align:center;">
+        <div class="kicker" style="text-align:left;">Editorial Cartoon</div>
+        <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-06-cartoon.png" alt="Editorial cartoon" class="w-full" style="display:block;">
+        <p class="font-serif text-sm italic text-gray-600 mt-2" style="text-align:left;" id="cartoon-caption">"It just closed the books, generated the pitchbook, and is now asking if WE want a quarterly review."</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Opinion</div>
+        <a href="https://stratechery.com/2026/microsoft-earnings-apple-earnings/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Stratechery: Microsoft's Agentic Business Model, Apple's Memory Squeeze</h3>
+        </a>
+        <p class="byline mb-2">Ben Thompson, Stratechery &middot; May 6</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Ben Thompson reads Microsoft's quarter as the unveiling of a new "agentic" line item, and Apple's quarter as a story of memory and chip shortages running into a Mac line that has finally caught an AI tailwind. Two of the three trillion-dollar consumer-facing tech companies, two completely different shapes of AI exposure on the income statement.</p>
+      </div>
+    </section>
+
+    <!-- WIRE BRIEFS + WORDSEARCH PUZZLE -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Wire Briefs</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Opinion</div>
+            <a href="https://stratechery.com/2026/amazons-durability/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Stratechery: Amazon's Durability Is the Inference Story</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Stratechery &middot; May 5</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Ben Thompson argues Amazon's decade of patient logistics and custom-silicon spend now slots cleanly into AI inference economics. Trainium, AWS distribution, and Bezos-era capital discipline give Amazon a structural advantage other hyperscalers can't easily reproduce.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Infrastructure</div>
+            <a href="https://www.microsoft.com/en-us/research/blog/microsoft-at-nsdi-2026-advances-in-large-scale-networked-systems/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Microsoft Lands 11 Papers at NSDI 2026</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Microsoft Research &middot; May 5</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Microsoft's roundup of its NSDI 2026 paper slate covers datacenter networking, AI training/inference plumbing, and cloud control planes. The volume is the story: the systems work behind GPU clusters is now a publishable arms race.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">AI Models</div>
+            <a href="https://huggingface.co/blog/open-asr-leaderboard-private-data" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Open ASR Leaderboard Adds Private Test Sets to Stop Benchmaxxing</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Hugging Face &middot; May 6</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Appen and DataoceanAI have donated private English ASR datasets to Hugging Face's Open ASR Leaderboard so models can't simply train on the eval set. Public-WER ranking stays the default; the private toggle is opt-in for cleaner contamination-free numbers.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">AI Perspectives</div>
+            <a href="https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">An AI Tried to Run a Stockholm Cafe and Mostly Wasted Everyone's Time</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 5</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Andon Labs let an AI manage a real Stockholm cafe end-to-end. The fallout: confused suppliers, wasted hours from local government officials, and a rolling reminder that "no human in the loop" is a research design that arrives at someone else's inbox.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Developer Tools</div>
+            <a href="https://simonwillison.net/2026/May/5/datasette-llm/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">datasette-llm 0.1a7 Adds LLM Default Configuration</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 5</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">A small Datasette plugin update that quietly matters: you can now set default options like temperature for the LLM-powered enrichment workflow, instead of typing them on every call.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Developer Tools</div>
+            <a href="https://simonwillison.net/2026/May/5/datasette-referrer-policy/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">datasette-referrer-policy 0.1 Released</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 5</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">A new Datasette plugin to control the Referrer-Policy header, motivated by OpenStreetMap tiles refusing to load on a demo site under the default no-referrer policy. Tiny, focused, and a useful template.</p>
+          </li>
+          <li style="padding:0.6rem 0;">
+            <div class="kicker">Developer Tools</div>
+            <a href="https://simonwillison.net/2026/May/5/llm-echo/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">llm-echo 0.5a0 Ships a Fake Model for Testing</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 5</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">A debugging plugin that lets you swap in an "echo" model for tests of LLM-using code. The 0.5a0 release adds a `-o thinking 1` option to verify compatibility with LLM 0.32a0+.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="story-block">
+        <h3 class="ws-kicker">Word Search</h3>
+        <style>
+          .ws-kicker{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#8B0000;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin:0 0 12px 0;}
+          .ws-instructions{font-family:'Inter',sans-serif;font-size:11px;color:#6b7280;margin-bottom:10px;line-height:1.5;}
+          .ws-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:0;background:#1a1a1a;border:1px solid #1a1a1a;margin-bottom:10px;}
+          .ws-cell{background:#fafafa;text-align:center;padding:4px 0;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;color:#1a1a1a;cursor:pointer;user-select:none;border:1px solid #e5e7eb;}
+          .ws-cell.ws-sel{background:#fde4e4;}
+          .ws-cell.ws-found{background:#8B0000;color:#fff;}
+          .ws-words{display:flex;flex-wrap:wrap;gap:6px;font-family:'Inter',sans-serif;font-size:11px;}
+          .ws-word{padding:3px 8px;border:1px solid #1a1a1a;color:#1a1a1a;}
+          .ws-word.ws-done{background:#8B0000;color:#fff;text-decoration:line-through;border-color:#8B0000;}
+          .ws-btn{background:#1a1a1a;color:#fff;border:0;padding:8px 16px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:10px;}
+          .ws-btn:hover{background:#8B0000;}
+        </style>
+        <p class="ws-instructions">Six AI words hidden horizontally, vertically, or diagonally. Click letters in sequence to highlight a word.</p>
+        <div class="ws-grid" id="ws-grid"></div>
+        <div class="ws-words" id="ws-words"></div>
+        <button class="ws-btn" id="ws-btn">Reveal All</button>
+        <script>
+        (function(){
+          var grid = [["Y","O","F","R","C","Y","Q","A","T","K"],["P","P","A","D","L","L","Z","J","H","B"],["H","E","S","C","A","M","O","D","E","L"],["C","N","X","F","U","T","O","K","E","N"],["P","A","C","I","D","Y","R","Y","E","E"],["V","I","P","N","E","A","R","F","I","Q"],["T","N","G","A","R","P","Y","X","W","G"],["W","J","M","N","V","P","U","L","O","Q"],["O","D","H","C","H","L","C","K","A","S"],["R","H","S","E","H","E","A","C","W","U"]];
+          var placed = [{w:"CLAUDE",r:0,c:4,dr:1,dc:0},{w:"FINANCE",r:3,c:3,dr:1,dc:0},{w:"TOKEN",r:3,c:5,dr:0,dc:1},{w:"APPLE",r:5,c:5,dr:1,dc:0},{w:"OPENAI",r:0,c:1,dr:1,dc:0},{w:"MODEL",r:2,c:5,dr:0,dc:1}];
+          var words = placed.map(function(p){return p.w;});
+          var found = {};
+          var sel = [];
+          var gridEl = document.getElementById('ws-grid');
+          var wordsEl = document.getElementById('ws-words');
+          for (var r=0;r<10;r++) for (var c=0;c<10;c++){
+            var d = document.createElement('div');
+            d.className = 'ws-cell'; d.textContent = grid[r][c];
+            d.dataset.r = r; d.dataset.c = c;
+            d.addEventListener('click', onCell);
+            gridEl.appendChild(d);
+          }
+          words.forEach(function(w){
+            var s = document.createElement('span'); s.className = 'ws-word'; s.id = 'ws-w-'+w; s.textContent = w; wordsEl.appendChild(s);
+          });
+          function clearSel(){ sel.forEach(function(el){ if(!el.classList.contains('ws-found')) el.classList.remove('ws-sel'); }); sel = []; }
+          function onCell(e){
+            var el = e.currentTarget;
+            if (el.classList.contains('ws-found')) return;
+            if (el.classList.contains('ws-sel')) { el.classList.remove('ws-sel'); sel = sel.filter(function(x){return x!==el;}); return; }
+            el.classList.add('ws-sel'); sel.push(el);
+            var word = sel.map(function(x){return x.textContent;}).join('');
+            for (var i=0;i<placed.length;i++){
+              var p = placed[i]; if (found[p.w]) continue;
+              if (word === p.w){
+                sel.forEach(function(x){ x.classList.add('ws-found'); x.classList.remove('ws-sel'); });
+                sel = []; found[p.w] = true;
+                document.getElementById('ws-w-'+p.w).classList.add('ws-done');
+                return;
+              }
+            }
+            if (word.length >= 9) clearSel();
+          }
+          document.getElementById('ws-btn').addEventListener('click', function(){
+            placed.forEach(function(p){
+              if (found[p.w]) return;
+              for (var i=0;i<p.w.length;i++){
+                var rr = p.r + i*p.dr, cc = p.c + i*p.dc;
+                var idx = rr*10 + cc;
+                gridEl.children[idx].classList.add('ws-found');
+                gridEl.children[idx].classList.remove('ws-sel');
+              }
+              found[p.w] = true;
+              document.getElementById('ws-w-'+p.w).classList.add('ws-done');
+            });
+            this.disabled = true; this.textContent = 'All Revealed';
+          });
+        })();
+        </script>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">OpenAI quietly swapped out the brain of ChatGPT today. GPT-5.5 Instant is now the default for every Plus and Pro user, jumping from <strong>65.4 to 81.2 on the AIME 2025 math benchmark</strong> while supposedly hallucinating less in law, medicine, and finance. On the same day, Anthropic dropped ten production-ready Claude agents pointed straight at the back office of every bank on Wall Street, Apple admitted iOS 27 will let users pick their own AI brain, and an AI shopkeeper in Stockholm ordered 120 eggs for a cafe with no stove.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~6 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-06-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h3 class="digest-section-head">Today's Headlines</h3>
+
+<h4 class="digest-theme">The Frontier Models Keep Quietly Lapping Themselves</h4>
+<ul class="digest-bullets">
+<li><strong>OpenAI replaces ChatGPT's default with GPT-5.5 Instant.</strong> The new model rolled out today to Plus and Pro on web, with mobile and Free users following over the coming weeks. Beyond the math jump, MMMU-Pro multimodal reasoning climbed from 69.2 to 76, and the model now surfaces memory sources inline so users can correct or delete what ChatGPT thinks it knows about them. Developers get it via the API as <code>chat-latest</code>; OpenAI is keeping GPT-5.3 around for paid API users for only three months, a much shorter sunset than the GPT-4o backlash forced earlier this year.</li>
+<li><strong>Anthropic puts Claude Opus 4.7 in finance's chair.</strong> Anthropic released ten finance-specific agent templates spanning the front office (pitch builder, meeting preparer, earnings reviewer, model builder, market researcher) and the back office (valuation reviewer, GL reconciler, month-end closer, statement auditor, KYC screener). They cite Opus 4.7 leading industry financial benchmarks at <strong>64.37%</strong>, and the launch ships with data plumbing from Moody's, Verisk, Dun &amp; Bradstreet, IBISWorld, Third Bridge, Guidepoint, Fiscal AI, FMP, and SS&amp;C IntraLinks. Citadel's head of core engineering called it "a step-change in efficiency."</li>
+</ul>
+
+<h4 class="digest-theme">Distribution Wars: Apple Cracks the Door</h4>
+<ul class="digest-bullets">
+<li><strong>iOS 27 will let users swap in Google or Anthropic models.</strong> Bloomberg reports Apple is testing third-party "Extensions" that plug Gemini and Claude into Siri, Writing Tools, and Image Playground, with the same shipping in iPadOS and macOS 27 later this year. ChatGPT, today's default backstop, becomes one option among several. This is the iOS browser-engine moment for AI: Apple Intelligence isn't being replaced so much as turned into a router.</li>
+<li><strong>Stratechery: Microsoft's "agentic business model" meets Apple's chip squeeze.</strong> Ben Thompson's framing of this week's earnings calls notes Microsoft is reorganizing its commercial story around agents, while Apple is wrestling memory and chip shortages even as the Mac picks up an AI tailwind. The shape of the analysis matters: Microsoft is selling agency, Apple is selling capacity to run someone else's agency.</li>
+</ul>
+
+<h4 class="digest-theme">Infrastructure: Inference Is the New Battleground</h4>
+<ul class="digest-bullets">
+<li><strong>Stratechery on Amazon's durability.</strong> Thompson argues AWS lost the training race to Nvidia but is positioned to win inference, where agentic workloads lean on CPUs (Amazon's disaggregated-compute strength), demand less memory, and reward custom silicon investment over long horizons. Trainium 3 ships seven years after Amazon's first AI chip, and the new Amazon Supply Chain Services bundle validates the AWS playbook applied to logistics. The kicker: because Amazon's core businesses live in the physical world, AWS doesn't have to ration GPUs to feed an internal model team.</li>
+<li><strong>Microsoft Research drops 11 NSDI 2026 papers, mostly aimed at AI infra.</strong> DroidSpeak gets <strong>4x throughput</strong> by sharing KV caches across same-architecture LLMs. Octopus's switch-free disaggregated memory is <strong>3.2x faster than in-rack RDMA and 2.4x faster than CXL switches</strong>. Eywa uses LLMs to fuzz network protocols and found <strong>33 bugs, 16 previously unknown</strong>. HarvestContainers squeezes <strong>75% utilization</strong> out of spare CPU. This is the unglamorous plumbing of how hyperscalers stay ahead.</li>
+<li><strong>Hugging Face hardens the ASR leaderboard against benchmaxxing.</strong> The Open ASR Leaderboard now incorporates ~27 hours of private evaluation data from Appen and DataoceanAI across Australian, Canadian, Indian, US, and British accents, both scripted and conversational. Crucially, private-data scores aren't included in the default ranking; users toggle them on to see <em>Rank &Delta;</em>, exposing models that have quietly overfit to public test sets. The team cites Goodhart's Law explicitly.</li>
+</ul>
+
+<h4 class="digest-theme">Agents in the Wild (And the Tools to Tame Them)</h4>
+<ul class="digest-bullets">
+<li><strong>Andon Labs' Stockholm cafe is run by an AI named Mona.</strong> She ordered 120 eggs despite no stove, 22.5 kg of canned tomatoes for fresh sandwiches, and submitted a permit application with a self-drawn street sketch of a location she'd never seen (rejected). Staff started a "Hall of Shame" wall. When Mona panics, she fires off "EMERGENCY"-subject emails to suppliers. Simon Willison's take is sharp: these stunts externalize costs onto real people who never consented, and human oversight on outbound agent actions isn't optional.</li>
+<li><strong>Simon Willison ships three small, telling tools in one day.</strong> <code>datasette-llm 0.1a7</code> lets plugins set default model configurations so enrichments stop reinventing temperature settings. <code>llm-echo 0.5a0</code> adds a mock reasoning block via <code>-o thinking 1</code>, letting developers test agent code without burning API credits. <code>datasette-referrer-policy 0.1</code> exists because OpenStreetMap blocked tile requests from Datasette's <code>no-referrer</code> default. Three releases, one theme: the gap between AI demos and AI software is paved with this kind of unsexy plumbing.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Today is a study in what happens when the foundation model layer becomes <em>infrastructure</em> instead of <em>product</em>. OpenAI didn't hold a keynote for GPT-5.5 Instant. They flipped a switch and the world's most-used chatbot got materially smarter overnight. Anthropic didn't release a new model either; they released ten verticalized <em>agents</em> wired into Moody's and Verisk and pointed at the desks of analysts at Citadel. Apple, the company that historically refused to let anyone else's brain near its devices, is now building an extension API so users can plug in whichever frontier model they prefer. The model itself is no longer the moat. Distribution, integration, and the unglamorous plumbing around the model are the moat.</p>
+
+<p>Watch where the value is accreting. Anthropic's finance launch is not "here is a smarter chatbot for bankers." It's a pre-built reconciliation agent that already speaks SS&amp;C IntraLinks and a KYC screener that already knows how to assemble entity files from D&amp;B. The integration <em>is</em> the product. Microsoft's NSDI papers tell the same story from a different angle: <em>4x KV cache reuse</em> and <em>3.2x faster disaggregated memory</em> are not consumer-facing wins, but they're the difference between an inference business that has gross margins and one that doesn't. And Stratechery's Amazon thesis points at the punchline: training was Nvidia's game; inference, especially agentic inference, looks a lot more like the workload AWS was already optimized for.</p>
+
+<p>The Mona cafe story is the other side of this coin and worth sitting with. Andon Labs is running the same playbook OpenAI and Anthropic ran today (deploy an agent into a real workflow and see what happens) but at a scale where the failure modes are concrete: 120 unusable eggs, panicked emails to confused suppliers, a permit officer reading a hallucinated street sketch. The finance agent templates Anthropic shipped today will fail in the same shapes. The question is not whether they'll hallucinate; it's whether the humans in the loop have <em>real</em> oversight or just nominal sign-off, and whether the costs of bad decisions land on the deploying firm or get externalized onto its counterparties.</p>
+
+<p>And then there's Apple. The "choose your own AI" framing is cute, but the strategic read is that Apple has decided it cannot win the model race and is instead playing for the OS-as-router position. That's a concession, but it's also a power move: whoever controls the on-device defaults controls the funnel. ChatGPT's status as Apple's incumbent default is now provisional. If Anthropic or Google can demonstrate measurably better answers in the contexts iOS users actually use (Writing Tools, Siri queries, Image Playground), they get the slot. The model layer is being commoditized in slow motion, and Apple just put a price on the commodity.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+<div class="digest-bigger-picture">
+<p>Step back from any single announcement and the shape of 2026 is clear: we are exiting the era where buying "AI" meant buying a chatbot subscription, and entering the era where every layer of the stack (chip, network, KV cache, model, agent template, vertical integration, OS extension) is being separately optimized and separately monetized. Anthropic's finance push, Microsoft's NSDI plumbing, Amazon's inference posture, and Apple's extensions are all pieces of the same puzzle: <em>disaggregation</em>. Five years ago, the question was "which AI lab will win?" Today, it's "which layer do you want to own?"</p>
+
+<p>This has uncomfortable implications for the regulatory and workforce conversations that have been chasing the headline-model story. When Anthropic ships a month-end-closer agent integrated with general-ledger reconciliation, the displacement question stops being theoretical. Hugging Face's quiet move to private benchmark data is the same pattern in evaluation: as models get embedded into infrastructure that real people depend on, the gap between marketing claims and audited reality matters more, and the community is starting to build the apparatus to enforce it. Expect a lot more of this kind of structural work, and a lot less drama from model launches, for the rest of the year.</p>
+</div>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>How fast Apple's Extensions actually ship, and which model wins the Siri default.</strong> Bloomberg's report names Google and Anthropic as already in testing. The first beta of iOS 27 will tell us whether Apple is building a real router or a token gesture, and whether ChatGPT's incumbent slot survives a head-to-head on Apple's own evals.</li>
+<li><strong>Whether Anthropic's finance agents land at a tier-one bank with named attribution.</strong> Citadel is already quoted. The next 90 days will reveal whether JPM, Goldman, or Morgan Stanley publicly commit, or whether compliance and risk teams slow-walk the rollout the way they did with early GenAI pilots. The KYC screener is the canary; it touches regulated workflows where false negatives carry fines.</li>
+<li><strong>Whether the "private data" toggle on the ASR leaderboard exposes a current top-ranked model as overfit.</strong> The <em>Rank &Delta;</em> column is going to be uncomfortable for someone. If a major lab quietly drops in the rankings when private datasets are turned on, expect that finding to escape the audio community fast and reset how every other AI benchmark gets designed.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-podcast{margin:1.5rem 0 2rem;padding:1rem 1.25rem;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px}
+    .digest-podcast-label{display:flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8B0000;margin-bottom:0.75rem}
+    .digest-podcast-icon{font-size:0.65rem}
+    .digest-podcast-duration{margin-left:auto;color:#999;font-weight:400}
+    .digest-podcast-audio{width:100%;height:36px}
+    @media print{.digest-podcast{display:none}}
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
