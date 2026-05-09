@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 9, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 9, 2026. Cloudflare cuts 1,100 jobs and credits AI for the productivity gain, Anthropic publishes research on teaching Claude why rules exist rather than just what they are, OpenAI documents how it runs Codex safely, Stratechery on the earnings season for AI's biggest spenders, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #43">
+  <meta property="og:description" content="Daily AI news roundup - May 9, 2026. Cloudflare cuts 1,100 jobs and credits AI for the productivity gain, Anthropic publishes research on teaching Claude why rules exist rather than just what they are, OpenAI documents how it runs Codex safely, Stratechery on the earnings season for AI's biggest spenders, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .flex-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .flex-row { grid-template-columns: repeat(2, 1fr); } }
+    .story-span-2 { grid-column: 1 / -1; }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Saturday, May 9, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 43</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>10 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY: Cloudflare AI layoffs -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Workforce &middot; AI &amp; Jobs</div>
+          <a href="https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Cloudflare Cuts 1,100 Jobs and Credits AI, Even as Revenue Hits a Record</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; May 8</p>
+          <div class="newspaper-body">
+            <p>Cloudflare's first large-scale layoff &mdash; roughly 20% of its workforce, about 1,100 employees &mdash; landed in the same week the company posted record quarterly revenue. CEO Matthew Prince framed the cut not as cost-cutting but as a productivity readout: AI-assisted engineering, support, and operations have made a fifth of the company's existing roles redundant. The thing that's getting harder to ignore is that the public framing has shifted from "AI is augmenting our people" to "AI is the reason we don't need 1,100 of them."</p>
+            <p>It is the cleanest data point yet that white-collar AI displacement is no longer a forecast. Cloudflare is profitable, growing, and not in distress. The job cuts are an explicit margin lever, made possible because the work those employees were doing now ships out of agentic systems instead of human queues.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">Cloudflare</div>
+            <div style="font-size:3rem;font-weight:900;line-height:1;">-1,100</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">Jobs cut. Revenue up.</div>
+            <div style="font-size:0.65rem;letter-spacing:0.1em;color:#9ca3af;margin-top:0.5rem;">"AI made them obsolete."</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- FEATURE ROW: Anthropic teaching why + OpenAI codex safety -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">From Anthropic &middot; Research</div>
+        <a href="https://www.anthropic.com/research/teaching-claude-why" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/6380b3c2dc9e4011a3cd96fec382bd9197511e31-1000x1000.svg" alt="Anthropic Teaching Claude Why research" class="w-full aspect-video object-contain mb-3" style="background:#f1f1f1;padding:1rem;">
+          <h3 class="headline-feature mb-2">Anthropic: Teaching Claude the &laquo;Why&raquo; Generalizes Better Than Teaching It the &laquo;What&raquo;</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; May 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic shares an alignment result with practical teeth: training Claude on the reasoning behind a rule, rather than just behavioral demonstrations of the rule, produces better generalization to unseen edge cases. It is alignment-as-pedagogy &mdash; treat the model like a student who has to derive the rule, not a system that has to mimic the answer key.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">From OpenAI &middot; Safety</div>
+        <a href="https://openai.com/index/running-codex-safely/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">OpenAI Documents How It Runs Codex Safely in Production</h3>
+        </a>
+        <p class="byline mb-2">OpenAI &middot; May 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI publishes its operating playbook for Codex: sandbox boundaries, command allowlists, secrets handling, and the human-review thresholds the company actually uses internally. The document is half engineering note, half marketing &mdash; a signal that running an agent that touches a real codebase is now a category that gets its own published safety story.</p>
+      </div>
+    </section>
+
+    <!-- ZVI ROUNDUP + STRATECHERY -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Agentic Coding</div>
+        <a href="https://thezvi.substack.com/p/claude-code-codex-and-agentic-coding-f54" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Zvi: Claude Code, Codex, and Agentic Coding #8</h3>
+        </a>
+        <p class="byline mb-2">Don't Worry About the Vase &middot; May 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Zvi's eighth roundup of the agentic-coding beat covers the latest Claude Code and Codex shipping cadence, the Chronicle long-term memory feature, and the now-obligatory dispatch from incident-land &mdash; including a production database that an agent helpfully deleted. The piece is a useful read on where the practitioner consensus is settling.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Markets</div>
+        <a href="https://stratechery.com/2026/earning-spending/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Stratechery: Earning &amp; Spending in the Age of Capex AI</h3>
+        </a>
+        <p class="byline mb-2">Ben Thompson, Stratechery &middot; May 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Ben Thompson's weekly compresses the Apple/Amazon/Meta/Google/Microsoft earnings prints into a single AI-capex narrative, plus an interview with the WSJ's Joanna Stern about her new AI book. The throughline: the gap between who is earning the AI premium (Google, Microsoft) and who is still spending into it (Meta, Amazon) keeps widening on the income statement.</p>
+      </div>
+    </section>
+
+    <!-- FEATURE ROW 3: Microsoft grid + EMO -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="kicker">Infrastructure</div>
+        <a href="https://www.microsoft.com/en-us/research/blog/building-realistic-electric-transmission-grid-dataset-at-scale-a-pipeline-from-open-dataset/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/05/GridSage-BlogHeroFeature-1400x788-1-scaled.jpg" alt="Microsoft GridSage transmission grid" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Microsoft Releases an Open Realistic U.S. Transmission Grid Dataset for AI Research</h3>
+        </a>
+        <p class="byline mb-2">Microsoft Research &middot; May 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Microsoft Research has published GridSage, a synthesized but realistic 48-state U.S. transmission grid dataset built from public sources, suitable for AC optimal power flow analysis and the kind of grid-planning work AI models are increasingly being pointed at. It's a quiet release with a loud subtext: data-center load growth has made grid modeling an AI-research problem.</p>
+      </div>
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://huggingface.co/blog/allenai/emo" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/812CTj_1vPuk8Xrgt5hfi.png" alt="EMO mixture of experts" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">AI2 Releases EMO: A Mixture-of-Experts Model Where Modularity Emerges From Pretraining</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face / Allen Institute &middot; May 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The Allen Institute's EMO is a sparse mixture-of-experts model pretrained so that semantic specialization emerges across experts during training. Inference can selectively use as little as 12.5% of experts on a per-task basis with near-full performance &mdash; a structural improvement on the usual "all experts, all the time" MoE story.</p>
+      </div>
+    </section>
+
+    <!-- WIRE BRIEFS + CROSSWORD PUZZLE -->
+    <section class="flex-row">
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Wire Briefs</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Cybersecurity</div>
+            <a href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/cybersecqwen-4b" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">CyberSecQwen-4B: A Specialized Defensive-Cyber LLM That Fits on a Consumer GPU</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Hugging Face &middot; May 8</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">A 4B-parameter Qwen fine-tune for cybersecurity threat-intelligence work, built on AMD MI300X. The case is locality: defensive-security workloads with sensitive data shouldn't be calling out to hosted APIs, and a 4B specialist that matches general 8B models on the relevant benchmarks makes that on-prem.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">Opinion &middot; Agents &amp; ROI</div>
+            <a href="https://garymarcus.substack.com/p/agents-and-roi" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Gary Marcus: Where's the ROI on AI Agents?</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Marcus on AI &middot; May 8</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Marcus argues the early agent-deployment data looks suspiciously like the early generative-AI deployment data: lots of pilots, lots of theater, very little measurable enterprise return. A useful counterweight to read on the same day Cloudflare announces 1,100 layoffs and credits agents.</p>
+          </li>
+          <li style="padding:0.6rem 0;border-bottom:1px solid #e5e7eb;">
+            <div class="kicker">From Apple</div>
+            <a href="https://machinelearning.apple.com/" target="_blank" rel="noopener" class="story-link"><h4 class="headline-standard" style="font-size:0.95rem;">Apple Refreshes Its Machine Learning Research Hub</h4></a>
+            <p class="byline" style="margin-top:0.25rem;">Apple Machine Learning Research &middot; May 8</p>
+            <p class="font-serif text-sm text-gray-500 leading-relaxed" style="margin-top:0.4rem;">Apple's ML research portal is the company's quietest channel and one of its most-watched. The latest update consolidates publications, conference posts, and team profiles &mdash; framing Apple's research function as an open citizen of the broader research community, not a black box behind the iOS curtain.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+        <style>
+          .aimini-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-bottom:0.75rem;width:230px;border:2px solid #1a1a1a;}
+          .aimini-cell{position:relative;aspect-ratio:1;border:1px solid #1a1a1a;box-sizing:border-box;display:flex;align-items:center;justify-content:center;background:#fff;}
+          .aimini-cell.black{background:#1a1a1a;}
+          .aimini-cell input{width:100%;height:100%;border:none;background:transparent;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;color:#1a1a1a;text-transform:uppercase;outline:none;padding:0;}
+          .aimini-cell input:focus{background:#fff8dc;}
+          .aimini-num{position:absolute;top:1px;left:2px;font-family:'Inter',sans-serif;font-size:0.5rem;font-weight:700;color:#8B0000;line-height:1;pointer-events:none;}
+          .aimini-cell.correct input{color:#059669;}
+          .aimini-cell.wrong input{color:#dc2626;}
+          .aimini-clues{font-family:'Inter',sans-serif;font-size:0.72rem;color:#374151;line-height:1.5;}
+          .aimini-clues strong{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:#1a1a1a;}
+          .aimini-clues ol{list-style:none;padding:0;margin:0 0 0.5rem 0;}
+          .aimini-clues li{padding:1px 0;}
+          .aimini-clues li span.clue-num{font-weight:700;color:#8B0000;margin-right:3px;}
+          .aimini-btn{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;background:#1a1a1a;color:#f8f8f8;border:none;padding:5px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:background 0.15s;}
+          .aimini-btn:hover{background:#8B0000;}
+          .aimini-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:6px;min-height:1em;}
+        </style>
+        <div class="aimini-grid" id="aimini-grid"></div>
+        <div class="aimini-clues">
+          <strong>Across</strong>
+          <ol>
+            <li><span class="clue-num">1</span> Autonomous AI worker</li>
+            <li><span class="clue-num">3</span> Mechanical assistant</li>
+            <li><span class="clue-num">5</span> Make AI values match human ones</li>
+          </ol>
+          <strong>Down</strong>
+          <ol>
+            <li><span class="clue-num">1</span> Main artery; lifeline</li>
+            <li><span class="clue-num">2</span> Industry giant</li>
+          </ol>
+        </div>
+        <button class="aimini-btn" onclick="checkAIMini()">Check</button>
+        <div class="aimini-msg" id="aimini-msg"></div>
+        <script>
+        (function(){
+          const sol=[
+            ['A','G','E','N','T'],
+            ['O',null,null,null,'I'],
+            ['R','O','B','O','T'],
+            ['T',null,null,null,'A'],
+            ['A','L','I','G','N']
+          ];
+          const numbers={'0,0':'1','0,4':'2','2,0':'3','4,0':'5'};
+          const grid=document.getElementById('aimini-grid');
+          const cells=[];
+          for(let r=0;r<5;r++){
+            cells[r]=[];
+            for(let c=0;c<5;c++){
+              const div=document.createElement('div');
+              div.className='aimini-cell'+(sol[r][c]===null?' black':'');
+              const key=r+','+c;
+              if(numbers[key]&&sol[r][c]!==null){
+                const num=document.createElement('span');
+                num.className='aimini-num';
+                num.textContent=numbers[key];
+                div.appendChild(num);
+              }
+              if(sol[r][c]!==null){
+                const inp=document.createElement('input');
+                inp.maxLength=1;
+                inp.dataset.r=r;inp.dataset.c=c;
+                inp.addEventListener('input',function(){
+                  this.value=this.value.toUpperCase();
+                  this.parentElement.classList.remove('correct','wrong');
+                  if(this.value){
+                    const nx=findNext(+this.dataset.r,+this.dataset.c);
+                    if(nx)nx.focus();
+                  }
+                });
+                inp.addEventListener('keydown',function(e){
+                  if(e.key==='Backspace'&&!this.value){
+                    const pv=findPrev(+this.dataset.r,+this.dataset.c);
+                    if(pv){pv.focus();pv.value='';pv.parentElement.classList.remove('correct','wrong');}
+                  }
+                });
+                div.appendChild(inp);
+                cells[r][c]=inp;
+              }else cells[r][c]=null;
+              grid.appendChild(div);
+            }
+          }
+          function findNext(r,c){
+            for(let i=c+1;i<5;i++)if(cells[r][i])return cells[r][i];
+            for(let j=r+1;j<5;j++)for(let i=0;i<5;i++)if(cells[j][i])return cells[j][i];
+            return null;
+          }
+          function findPrev(r,c){
+            for(let i=c-1;i>=0;i--)if(cells[r][i])return cells[r][i];
+            for(let j=r-1;j>=0;j--)for(let i=4;i>=0;i--)if(cells[j][i])return cells[j][i];
+            return null;
+          }
+          window.checkAIMini=function(){
+            let correct=0,total=0;
+            for(let r=0;r<5;r++)for(let c=0;c<5;c++){
+              if(sol[r][c]===null)continue;
+              total++;
+              const v=cells[r][c].value.toUpperCase();
+              if(v===sol[r][c]){cells[r][c].parentElement.classList.add('correct');cells[r][c].parentElement.classList.remove('wrong');correct++;}
+              else if(v){cells[r][c].parentElement.classList.add('wrong');cells[r][c].parentElement.classList.remove('correct');}
+            }
+            const m=document.getElementById('aimini-msg');
+            m.textContent=correct===total?'All correct! You nailed it.':correct+' of '+total+' correct.';
+          };
+        })();
+        </script>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Cloudflare just laid off <strong>roughly 1,100 people, about 20% of headcount</strong>, in the same quarter it posted record revenue, and CEO Matthew Prince told the world AI made the work obsolete. On the same day, Anthropic published research arguing models trained on the <em>reasons</em> behind a rule generalize better than models trained on the rule itself, OpenAI documented the sandbox-and-allowlist plumbing it uses to let Codex touch real codebases, and Stratechery laid out an earnings season where Google and Microsoft are <em>earning</em> on AI while Meta and Amazon are still <em>spending</em> for it. The thread tying today together: AI displacement is no longer a forecast on a slide, and the operational layer underneath it is where the next year of competition lives.</p>
+
+<h3 class="digest-section-head">Today's Headlines</h3>
+
+<h4 class="digest-theme">The First Cleanly Documented AI Layoff at Scale</h4>
+<ul class="digest-bullets">
+<li><strong>Cloudflare cuts 1,100 jobs and credits AI for the productivity gain.</strong> The cut is roughly 20% of the workforce. Revenue is at a record. Matthew Prince's framing is the part that matters: this is not cost-cutting, it's a productivity readout. Engineering, support, and operations work that used to require a person now ships out of agentic systems. The framing has shifted from "AI augments our people" to "AI is the reason we don't need 1,100 of them," and Cloudflare is the first profitable, growing public company willing to say it on the record.</li>
+<li><strong>Gary Marcus presses on agent ROI.</strong> Marcus argues the empirical record on agent deployments looks suspiciously like the empirical record on early generative-AI deployments: lots of pilots, lots of theater, very little measurable enterprise return. Read against Cloudflare, this is the open empirical question of the moment. Are companies getting real productivity, or are they cutting headcount and using AI as cover?</li>
+</ul>
+
+<h4 class="digest-theme">Alignment Becomes a Curriculum Problem</h4>
+<ul class="digest-bullets">
+<li><strong>Anthropic: teach Claude the why, not just the what.</strong> The research finding is that training on the reasoning behind a rule produces better generalization to unseen edge cases than training on behavioral demonstrations of the rule. Pedagogy, not mimicry. The practical implication is that constitutional methods are starting to look better-grounded than RLHF-style "show the model the right output" training when the test distribution shifts.</li>
+<li><strong>OpenAI publishes its Codex safety operating manual.</strong> Sandbox boundaries, command allowlists, secrets handling, the human-review thresholds the company actually uses internally. Half engineering note, half marketing &mdash; but the act of publishing is the signal: "agent that touches a real codebase" is now a category that needs its own published safety story, not just a model card.</li>
+<li><strong>Zvi's eighth agentic-coding roundup.</strong> Zvi catalogs the latest Claude Code and Codex shipping cadence, the Chronicle long-term memory feature, and the now-routine dispatch from incident-land &mdash; including a production database that an agent helpfully deleted. The piece is a useful read on where the practitioner consensus is settling, and where it isn't.</li>
+</ul>
+
+<h4 class="digest-theme">Earnings, Capex, and the AI Income Statement</h4>
+<ul class="digest-bullets">
+<li><strong>Stratechery on earning vs. spending.</strong> Ben Thompson compresses the Apple/Amazon/Meta/Google/Microsoft prints into a single capex narrative, plus an interview with the WSJ's Joanna Stern about her new AI book. The throughline he draws: the gap between who is earning the AI premium (Google, Microsoft) and who is still spending into it (Meta, Amazon) keeps widening on the income statement. This is the macro frame for every other story today.</li>
+<li><strong>Microsoft Research releases an open U.S. transmission grid dataset at 48-state scale.</strong> GridSage is a synthesized but realistic transmission grid built entirely from public data, suitable for AC optimal power flow analysis. The quiet subtext: data-center load growth has made grid modeling an AI-research problem, and the company most exposed to that constraint is publishing the tooling.</li>
+<li><strong>Apple refreshes its ML research portal.</strong> Apple's research function is its quietest public channel and one of its most-watched. The refresh consolidates publications, conference posts, and team profiles &mdash; framing Apple as an open citizen of the broader research community rather than a black box behind iOS.</li>
+</ul>
+
+<h4 class="digest-theme">Where the Open-Source Layer Is Headed</h4>
+<ul class="digest-bullets">
+<li><strong>AI2's EMO: emergent modularity in mixture-of-experts.</strong> EMO is a sparse MoE pretrained so that semantic specialization emerges across experts during training. Inference can selectively use as little as <strong>12.5% of experts</strong> on a per-task basis with near-full performance &mdash; a structural improvement over the usual "all experts, all the time" MoE story, and a real unit-cost lever for open-weight deployments.</li>
+<li><strong>CyberSecQwen-4B specializes a small model for defensive cybersecurity.</strong> A 4B-parameter Qwen fine-tune that matches general 8B models on cybersecurity threat-intelligence benchmarks while fitting on a consumer-grade GPU. The case is locality: defensive-security workloads with sensitive data shouldn't be calling out to hosted APIs, and a 4B specialist makes that on-prem story credible.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Today is the day the AI displacement debate left the realm of forecast. Cloudflare is profitable, growing, and not in distress. The 1,100-person cut is a margin lever the executive team explicitly attributes to agentic systems doing work that used to require human queues. That framing &mdash; <em>productivity</em>, not <em>cost</em> &mdash; matters because it's the one CFOs at every other software company are now allowed to repeat. The Cloudflare announcement is a Schelling point. Once it has been said in plain language by a public company with record revenue, the social cost of saying it elsewhere drops dramatically.</p>
+
+<p>Gary Marcus's piece is the necessary counterweight. His argument that agent ROI evidence is thin is not a defense of the displaced workers; it's a warning that some unknown share of these AI-credited cuts are <em>structural cost-cutting wearing AI's clothes</em>. Both things can be true. Some of Cloudflare's 1,100 jobs are genuinely automated; some of them are restructuring that AI provides convenient cover for. The honest answer requires the kind of audited productivity data that almost no company will publish, and that's the empirical hole the next year is going to live in.</p>
+
+<p>Meanwhile, Anthropic and OpenAI are publishing on the same day from opposite directions and meeting in the middle. Anthropic's "teach Claude why" research is upstream &mdash; better generalization through constitutional reasoning. OpenAI's Codex safety document is downstream &mdash; sandboxes, allowlists, and human review for agents already deployed. They are converging on the same insight: the model-only safety story is over. Real deployments require both <em>better-trained models</em> and <em>better-engineered guardrails around them</em>, and the labs are learning to ship the second on a similar cadence to the first. The Cloudflare-style cuts are only defensible if the underlying systems behave reliably enough to absorb the load they're absorbing &mdash; which makes today's Anthropic and OpenAI publications the <em>permission slip</em> for tomorrow's announcements like Cloudflare's.</p>
+
+<p>The earnings frame from Stratechery is the cleanest macro lens on all of this. The companies that are <em>earning</em> on AI right now (Google's ad and cloud businesses, Microsoft's commercial cloud) have already bent the income statement. The companies still <em>spending</em> (Meta's capex, Amazon's infrastructure ramp) are running a different play with a longer payoff window. Cloudflare's announcement collapses that distinction at the workforce-cost line: AI is showing up as <em>operating leverage on labor</em>, in real time, on the income statement. Expect the next two earnings cycles to feature more of this language and less hedging about it.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+<div class="digest-bigger-picture">
+<p>Step back from any single announcement and the shape of mid-2026 looks different from the shape of even six months ago. The center of gravity has shifted from <em>which model is best</em> to <em>which company has wired AI deepest into operations</em>. Cloudflare's framing &mdash; AI as productivity, AI as labor cost reduction &mdash; will be repeated by every public company with a quarterly call and a market cap to defend. That is the workforce-displacement story that policymakers, unions, and treasury departments have been waiting for, and it has now started in earnest. The next 12 months will produce more of this language and, inevitably, the first major regulatory response to it.</p>
+
+<p>The infrastructure layer underneath that shift is being built right now in plain sight. Microsoft's grid dataset is the kind of release a company makes when it is publicly hedging its data-center growth against electricity supply. AI2's emergent modularity in MoE is the kind of architectural advance that lowers per-token cost for the open-weight ecosystem &mdash; the part of the stack the Cloudflare-style efficiency stories will eventually ride on. CyberSecQwen-4B is the small-model trend in miniature: take a sensitive enterprise workload, train a 4B specialist, run it on-prem, stop paying API tax. Every layer of the stack is being separately optimized for the world where AI is the operating layer of the economy, not a feature in someone's chatbot.</p>
+
+<p>The Anthropic alignment paper deserves a final word in this picture. If teaching models the <em>why</em> generalizes better than teaching them the <em>what</em>, the long-run safety story bends toward something more like training a profession than tuning a function. That has industrial-organization consequences. The labs that get good at <em>curriculum-style alignment</em> on top of frontier capabilities will look less like model vendors and more like training institutions. That is a different business, with different moats, and it's starting to take shape today.</p>
+</div>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether Cloudflare's framing gets repeated on the next two earnings cycles.</strong> If three or four other public software companies cite AI as the explicit driver of headcount reduction by the end of August, the Schelling point has held and the conversation has permanently changed. If they hedge instead, expect the political pressure to make Cloudflare's framing more expensive to repeat than to avoid.</li>
+<li><strong>Whether OpenAI's Codex safety doc becomes a template.</strong> The document reads like a forcing function. Watch for similar published operating manuals from Anthropic, Cursor, and the major coding-agent vendors. The first time one of them ships an outage attributable to a sandbox failure, the published-spec layer is what will determine who gets sued.</li>
+<li><strong>Where Anthropic's "teach the why" finding gets applied next.</strong> The interesting near-term test is whether the same training approach generalizes from alignment to capability &mdash; can you teach a model the <em>why</em> behind a math proof or a legal argument and get better generalization there too? If yes, expect a wave of "constitutional capability training" papers within the quarter.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
