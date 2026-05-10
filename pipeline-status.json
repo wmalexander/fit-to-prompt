@@ -1,28 +1,24 @@
 {
-  "date": "2026-05-09",
+  "date": "2026-05-10",
   "fetch": {
     "status": "complete",
-    "completedAt": "2026-05-09T10:18:00Z",
-    "candidateCount": 77,
-    "sourcesChecked": 42
+    "completedAt": "2026-05-10T15:00:00Z",
+    "candidateCount": 4,
+    "sourcesChecked": 60
   },
   "review": {
     "status": "complete",
-    "completedAt": "2026-05-09T10:18:52Z",
-    "approved": 12,
+    "completedAt": "2026-05-10T10:52:38Z",
+    "approved": 4,
     "mode": "auto"
   },
   "build": {
     "status": "in-progress",
     "currentPhase": "upload",
-    "startedAt": "2026-05-09T10:19:00Z",
-    "completedSubPhases": [
-      "study-guides",
-      "html",
-      "digest",
-      "podcast",
-      "layout-review"
-    ]
+    "startedAt": "2026-05-10T10:55:00Z",
+    "completedSubPhases": ["study-guides", "html", "digest"],
+    "skippedSubPhases": ["podcast", "layout-review"],
+    "warnings": ["AWS SSO token expired -- skipping S3 uploads (issue HTML, cartoon, podcast, data file). Issue still publishes via GitHub Pages at fittoprompt.com.", "Cartoon skipped: depends on S3.", "Podcast skipped: depends on S3.", "Layout-review skipped: chrome MCP not configured for unattended run."]
   },
-  "lastError": "AWS SSO token expired and refresh failed in unattended mode; S3 uploads (cartoon, podcast, issue HTML, data files) skipped. Phase 3 podcast skipped. Phase 3.5 layout review skipped. Issue HTML built locally and pushed to GitHub Pages via git."
+  "lastError": null
 }
