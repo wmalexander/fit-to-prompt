@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 15, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 15, 2026. Anthropic and the Gates Foundation commit $200M to AI for global health, AI models crack Apple's hardened security and the first AI-built zero-day appears in the wild, Ontario auditors find medical AI scribes fabricate patient facts, Richard Socher raises $650M to build self-improving AI, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #48">
+  <meta property="og:description" content="Daily AI news roundup - May 15, 2026. Anthropic and the Gates Foundation commit $200M to AI for global health, AI models crack Apple's hardened security and the first AI-built zero-day appears in the wild, Ontario auditors find medical AI scribes fabricate patient facts, Richard Socher raises $650M to build self-improving AI, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .story-span-2 { grid-column: span 1; }
+    @media (min-width: 1024px) { .story-span-2 { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, May 15, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 48</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI for Good &middot; Anthropic</div>
+          <a href="https://www.anthropic.com/news/gates-foundation-partnership" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Anthropic and the Gates Foundation Put $200M Behind AI for Global Health</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; May 14</p>
+          <div class="newspaper-body">
+            <p>Anthropic is committing $200 million in grant funding and technical support, alongside the Gates Foundation, to apply frontier models to global health, life sciences, education, and economic mobility over the next four years. The framing is deliberately not a product launch: it is a bet that the highest-leverage use of a frontier lab's surplus capability is not another consumer feature but disease surveillance, drug discovery, and learning systems in places that have never been the AI industry's market.</p>
+            <p>It is also a positioning move. In a week dominated by lawsuits, talent flight, and AI systems caught fabricating medical records, Anthropic is spending real money to define what "beneficial AI" looks like in operational terms rather than mission-statement ones. The interesting question is whether a four-year, philanthropically-anchored deployment can survive contact with the same reliability problems that, elsewhere in today's issue, are burning institutions that moved faster.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">The Commitment</div>
+            <div style="font-size:2.4rem;font-weight:900;line-height:1.1;">$200M</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">4 years</div>
+            <div style="font-size:0.65rem;letter-spacing:0.1em;color:#9ca3af;margin-top:0.5rem;">Health &middot; Life Sciences &middot; Education</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY: Features, Standards, Puzzle, Wire -->
+    <div class="masonry-flow">
+
+      <!-- FEATURE 1: AI hacking video -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Cybersecurity</div>
+        <a href="https://www.youtube.com/watch?v=a8EfFGeY9S8" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/a8EfFGeY9S8/maxresdefault.jpg" alt="Wes Roth on AI-driven hacking" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">"Everyone Just Got Hacked": AI Cracks Apple's Defenses, First AI-Built Zero-Day Hits the Wild</h3>
+        </a>
+        <p class="byline mb-2">Wes Roth &middot; YouTube &middot; May 15</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Wes Roth walks through a week that security researchers had warned about: an AI system (Claude Mythos) was used to find a way into Apple's notoriously hard-to-crack stack, and Google says it stopped the first zero-day exploit built in the wild by an AI. Google Threat Intelligence's John Hultquist puts it bluntly: "the era of AI-driven vulnerability exploitation is already here," and it is no longer just the most recognizable names that are exposed.</p>
+      </div>
+
+      <!-- FEATURE 2: Recursive Superintelligence -->
+      <div class="story-block">
+        <div class="kicker">Startups &middot; AGI</div>
+        <a href="https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2157738833.jpg?w=1024" alt="Richard Socher's Recursive Superintelligence" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Richard Socher Raises $650M to Build AI That Improves Itself</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Richard Socher's new venture, Recursive Superintelligence, has raised $650 million to build an AI capable of autonomously researching and improving itself indefinitely while shipping commercial products to fund the loop. It is the purest expression yet of the recursive-self-improvement thesis as a fundable company rather than a thought experiment, and a test of whether "AI that builds itself" is a research direction or a pitch deck.</p>
+      </div>
+
+      <!-- FEATURE 3: Ontario AI scribes -->
+      <div class="story-block">
+        <div class="kicker">Healthcare &middot; The Register</div>
+        <a href="https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771" target="_blank" rel="noopener" class="story-link">
+          <img src="https://image.theregister.com/5240624.jpg" alt="AI medical scribe accuracy audit" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Ontario Auditors: Doctors' AI Note-Takers Routinely Blow Basic Facts</h3>
+        </a>
+        <p class="byline mb-2">The Register &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Ontario auditors found that AI Scribe systems approved for healthcare providers routinely missed critical details, inserted incorrect information, and fabricated content never discussed in patient-doctor conversations. In one finding, 60% of evaluated systems mixed up prescribed drugs in patient notes. It is the sharpest counterweight in today's issue to the optimistic AI-for-health framing of the lead.</p>
+      </div>
+
+      <!-- FEATURE 4: Musk v Altman jury -->
+      <div class="story-block">
+        <div class="kicker">Legal &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/IMG_4131-rotated-e1778782502209.jpg?w=1024" alt="Musk vs Altman trial" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">What the Jury Will Actually Decide in Musk v. Altman</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A California jury is now deliberating over OpenAI's future in Elon Musk's lawsuit against the co-founders and Microsoft. The case turns on whether the defendants violated charitable-trust commitments tied to Musk's early donations, the question that has shadowed OpenAI's for-profit conversion from the start.</p>
+      </div>
+
+      <!-- STANDARD: Trillion Dollar Agentic (video) -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Strategy</div>
+        <a href="https://www.youtube.com/watch?v=jwtpMSRAPAQ" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/jwtpMSRAPAQ/maxresdefault.jpg" alt="Nate B Jones on agentic workflows" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">The Trillion-Dollar Agentic Workflow Opportunity Is Here</h3>
+        </a>
+        <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nate B. Jones argues the agent-implementation "war" is not really about model quality. It is about who captures the workflow layer, and he traces a private-equity-style deployment model in which finance, hyperscalers, and enterprises converge on owning agentic workflows rather than renting them. The framing reads less like hype and more like a roll-up thesis.</p>
+      </div>
+
+      <!-- STANDARD: Codex on phone -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; OpenAI</div>
+        <a href="https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">OpenAI Brings Codex to Your Phone</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI has folded its Codex coding tool into the ChatGPT mobile app, letting developers monitor and steer coding workflows from iOS and Android while away from the desk. It is a small feature with a large implication: the agent loop is being designed to run without you sitting in front of it.</p>
+      </div>
+
+      <!-- STANDARD: OpenAI v Apple legal -->
+      <div class="story-block">
+        <div class="kicker">Legal &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">OpenAI Reportedly Weighs Legal Action Against Apple</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI has reportedly engaged outside counsel to explore breach-of-contract options against Apple after the 2024 ChatGPT integration failed to deliver the subscriber growth and platform prominence it expected. The subtext: distribution partnerships with platform owners keep ending in disappointment for the model layer.</p>
+      </div>
+
+      <!-- STANDARD: SpaceXAI staff bleed -->
+      <div class="story-block">
+        <div class="kicker">Talent &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Musk's SpaceXAI Has Been Bleeding Staff Since the Merger</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">More than 50 researchers and engineers have left Musk's rebranded SpaceXAI since February, with Meta and Thinking Machines Lab picking up the departing talent and raising questions about the company's commitment to frontier models, the same strategic incoherence Stratechery flagged earlier this week.</p>
+      </div>
+
+      <!-- STANDARD: Matt Maher CARE (video) -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Model Behavior</div>
+        <a href="https://www.youtube.com/watch?v=O3ALG38xEDU" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/O3ALG38xEDU/maxresdefault.jpg" alt="Matt Maher on the CARE benchmark" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">The Thing GPT and Claude Quietly Drop in Every Conversation</h3>
+        </a>
+        <p class="byline mb-2">Matt Maher &middot; YouTube &middot; May 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Matt Maher builds a benchmark he calls CARE to test whether models preserve the <em>why</em> behind your request, not just the features, as they plan and rewrite. The intent, he argues, is the part that silently disappears, and his results include a surprising showing from Sonnet.</p>
+      </div>
+
+      <!-- PUZZLE: Crossword Mini -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+        <style>
+          .xw-wrap{font-family:'Inter',sans-serif;}
+          .xw-intro{font-size:0.78rem;color:#374151;margin-bottom:0.75rem;line-height:1.5;}
+          .xw-grid{display:grid;grid-template-columns:repeat(5,2rem);grid-gap:2px;margin-bottom:0.85rem;}
+          .xw-cell{width:2rem;height:2rem;position:relative;}
+          .xw-cell.block{background:#1a1a1a;}
+          .xw-cell input{width:100%;height:100%;text-align:center;text-transform:uppercase;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:700;color:#1a1a1a;border:1px solid #1a1a1a;background:#fff;outline:none;padding:0;}
+          .xw-cell input:focus{background:#fde68a;}
+          .xw-cell .num{position:absolute;top:0;left:1px;font-size:0.5rem;font-weight:700;color:#8B0000;line-height:1;pointer-events:none;}
+          .xw-clues{font-size:0.74rem;color:#374151;line-height:1.5;}
+          .xw-clues b{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#8B0000;display:block;margin:0.5rem 0 0.25rem;}
+          .xw-clues div{margin-bottom:0.2rem;}
+          .xw-btn{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;padding:0.4rem 0.9rem;border:1px solid #1a1a1a;background:#fff;color:#1a1a1a;cursor:pointer;margin:0.75rem 0.5rem 0 0;}
+          .xw-btn:hover{background:#1a1a1a;color:#fff;}
+          .xw-msg{font-family:'Inter',sans-serif;font-size:0.72rem;color:#6b7280;margin-top:0.5rem;min-height:1em;}
+          .xw-msg.win{color:#065f46;font-weight:600;}
+        </style>
+        <div class="xw-wrap">
+          <p class="xw-intro">A 5&times;5 AI-themed mini. Black squares are blocked. Fill the grid, then hit Check.</p>
+          <div class="xw-grid" id="xw-grid"></div>
+          <div class="xw-clues">
+            <b>Across</b>
+            <div><strong>1.</strong> Autonomous AI that takes actions on your behalf</div>
+            <div><strong>4.</strong> The trained network at the core of an LLM</div>
+            <div><strong>6.</strong> The basic unit of text an LLM processes</div>
+            <b>Down</b>
+            <div><strong>1.</strong> Concede or acknowledge, as a chatbot owning its error</div>
+            <div><strong>2.</strong> An eagle's gripping claw</div>
+          </div>
+          <button class="xw-btn" id="xw-check">Check</button>
+          <button class="xw-btn" id="xw-reveal">Reveal</button>
+          <div class="xw-msg" id="xw-msg"></div>
+        </div>
+        <script>
+        (function(){
+          var sol=[
+            ['A','G','E','N','T'],
+            ['D','#','#','#','A'],
+            ['M','O','D','E','L'],
+            ['I','#','#','#','O'],
+            ['T','O','K','E','N']
+          ];
+          var nums={'0-0':1,'0-4':2,'2-0':4,'4-0':6};
+          var grid=document.getElementById('xw-grid');
+          var cells=[];
+          for(var r=0;r<5;r++){ cells[r]=[];
+            for(var c=0;c<5;c++){
+              var cell=document.createElement('div'); cell.className='xw-cell';
+              if(sol[r][c]==='#'){ cell.className='xw-cell block'; }
+              else {
+                var inp=document.createElement('input'); inp.maxLength=1;
+                inp.dataset.sol=sol[r][c];
+                inp.addEventListener('input',function(){ this.value=(this.value||'').toUpperCase(); });
+                var key=r+'-'+c;
+                if(nums[key]){ var n=document.createElement('span'); n.className='num'; n.textContent=nums[key]; cell.appendChild(n); }
+                cell.appendChild(inp); cells[r][c]=inp;
+              }
+              grid.appendChild(cell);
+            }
+          }
+          var msg=document.getElementById('xw-msg');
+          document.getElementById('xw-check').addEventListener('click',function(){
+            var wrong=0,blank=0;
+            for(var r=0;r<5;r++)for(var c=0;c<5;c++){ var i=cells[r][c]; if(!i)continue;
+              if(!i.value)blank++; else if(i.value.toUpperCase()!==i.dataset.sol)wrong++; }
+            if(blank===0&&wrong===0){ msg.textContent='Solved. AGENT / MODEL / TOKEN / ADMIT / TALON.'; msg.classList.add('win'); }
+            else if(wrong===0){ msg.textContent=blank+' square'+(blank===1?'':'s')+' still blank.'; msg.classList.remove('win'); }
+            else { msg.textContent=wrong+' wrong, '+blank+' blank.'; msg.classList.remove('win'); }
+          });
+          document.getElementById('xw-reveal').addEventListener('click',function(){
+            for(var r=0;r<5;r++)for(var c=0;c<5;c++){ var i=cells[r][c]; if(i)i.value=i.dataset.sol; }
+            msg.textContent='Revealed. AGENT / MODEL / TOKEN / ADMIT / TALON.'; msg.classList.add('win');
+          });
+        })();
+        </script>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Engineering &middot; Simon Willison</div>
+            <a href="https://simonwillison.net/2026/May/14/not-so-locked-in/" target="_blank" rel="noopener" class="story-link">
+              <h4>Simon Willison: "Not So Locked In Any More"</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 14</p>
+            <p>Willison argues language-choice lock-in is weakening: a company rewrote its iPhone and Android apps in React Native while keeping a clean path back to native. With models able to port code between stacks, the cost of betting on the wrong language keeps falling.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Research &middot; The Wire</div>
+            <a href="https://twitter.com/tdietterich/status/2055000956144935055" target="_blank" rel="noopener" class="story-link">
+              <h4>Thomas Dietterich Weighs In on AI/ML</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Thomas Dietterich &middot; X &middot; May 14</p>
+            <p>A widely-shared post from the veteran machine-learning researcher, circulating today alongside the week's reliability stories. (Full text behind X's login wall.)</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Roundup &middot; The Wire</div>
+            <a href="../index.html" class="story-link">
+              <h4>The Reliability Beat, Read Together</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fit to Prompt &middot; May 15</p>
+            <p>Ontario's AI-scribe audit and the AI-driven exploitation story are the same story from two ends: capable models deployed into high-stakes workflows faster than their failure modes are understood. Read against today's $200M health bet, the tension defines the issue.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Strategy &middot; The Wire</div>
+            <a href="https://techcrunch.com/2026/05/14/elon-musks-spacexai-has-been-bleeding-staff-since-its-merger/" target="_blank" rel="noopener" class="story-link">
+              <h4>The Musk-AI Incoherence Keeps Compounding</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">TechCrunch &middot; May 14</p>
+            <p>Staff attrition at SpaceXAI plus the Musk v. Altman jury, read alongside this week's Stratechery argument, suggests the market is repricing what Musk's overlapping AI empire is actually worth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Two researchers and an AI model broke into Apple's most hardened platform, macOS 26.4.1 on M5 silicon with memory integrity enforcement turned on, in five days, then drove a 55-page report to Cupertino on paper. The same week, Google said it stopped the world's first AI-assisted mass exploitation event, and Anthropic put $200 million behind using these same models to fight disease. Today's issue is the gap between those two sentences: AI is now capable enough to be genuinely dangerous and genuinely useful at the same time, and the institutions deploying it are not keeping pace with either.</p>
+
+<h4 class="digest-theme">The Reliability and Security Reckoning</h4>
+<ul class="digest-bullets">
+<li><strong>AI cracked Apple in five days.</strong> Per Wes Roth's breakdown, the model known as Mythos, working alongside two human researchers, found an exploit chain against a target Apple and Google security veterans had spent over a decade hardening. The point is not that the AI did it autonomously, it explicitly did not, but that it collapsed a decade of defensive work into a five-day human-plus-model effort. Ex-Google researcher Michael Zaleski reviewed and validated the work. Google's John Hultquist: "the era of AI-driven vulnerability exploitation is already here."</li>
+<li><strong>Medical AI is fabricating patient facts.</strong> Ontario auditors found approved AI Scribe systems routinely missed critical details, inserted incorrect information, and invented content never discussed in the room. Roughly 60% of evaluated systems mixed up prescribed drugs in patient notes. This is the same capability frontier as the Apple break, pointed at healthcare with far less scrutiny.</li>
+<li><strong>Anthropic and the Gates Foundation commit $200M.</strong> A four-year commitment of grant funding and technical support targeting global health, life sciences, education, and economic mobility. The deliberate counter-programming to a brutal news week: a frontier lab spending real money to operationalize "beneficial AI" rather than asserting it.</li>
+</ul>
+
+<h4 class="digest-theme">The Business of Agents</h4>
+<ul class="digest-bullets">
+<li><strong>The trillion-dollar number is about completed workflows.</strong> Nate B. Jones argues the value is not in better models but in getting an agent to 100% of an entire workflow, a genuinely new phenomenon. His thesis: struggling SaaS companies ("they all taste like chicken") have no answer, so they turn to finance, and private equity is there with the capital, producing a PE-driven agentic deployment model measured in trillions.</li>
+<li><strong>Codex moves to the phone.</strong> OpenAI folded Codex into the ChatGPT mobile app so developers can supervise coding agents from anywhere. A small feature that encodes the same assumption as Jones's thesis: the agent runs the workflow, the human checks in.</li>
+<li><strong>Intent is the thing models drop.</strong> Matt Maher's CARE benchmark tests whether a model carries the <em>why</em> behind a request through planning and rewriting. For a year the biggest models scored around 50%; recently GPT-5.5 and Opus-47 maxed it, while Sonnet produced a surprising result. Capability on intent-preservation is rising exactly as we hand agents whole workflows.</li>
+</ul>
+
+<h4 class="digest-theme">The Musk Overhang</h4>
+<ul class="digest-bullets">
+<li><strong>Musk v. Altman goes to the jury.</strong> A California jury is deliberating whether OpenAI's founders and Microsoft violated charitable-trust commitments tied to Musk's early donations, the unresolved question under OpenAI's for-profit conversion.</li>
+<li><strong>SpaceXAI is bleeding talent.</strong> 50+ researchers and engineers gone since the February merger, absorbed by Meta and Thinking Machines Lab, compounding the strategic-incoherence read on Musk's overlapping AI empire.</li>
+<li><strong>OpenAI weighs suing Apple.</strong> Outside counsel reportedly engaged over the underwhelming 2024 ChatGPT integration, another platform partnership ending in disappointment for the model layer.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>The single most important fact today is the Apple break, and not for the reason it will be headlined. The story is being told as "AI hacked Apple," but the operative detail is that it took two skilled humans plus a model five days against a target that absorbed more than a decade of elite defensive engineering. That is not autonomy. It is leverage. The same shape recurs in Jones's agentic-workflow thesis (humans plus agents capturing whole workflows) and in Maher's CARE results (models now carrying intent that they used to lose halfway through a plan). The capability story this week is consistent across security, enterprise software, and model behavior: the human-plus-model unit is now strong enough to compress work that institutions implicitly assumed was protected by its sheer difficulty.</p>
+
+<p>Set the Ontario audit against the Apple break and you get the real tension of the issue. The same class of system that can find an exploit chain in a memory-integrity-enforced kernel is, in a less scrutinized deployment, inventing drug names in patient charts. The difference is not the model. It is the surrounding rigor: red-team validation and an ex-Google reviewer on one side, procurement checkboxes on the other. Capability is now broadly distributed; competence in deploying it is not. That is the gap institutions keep falling into, and it is widening because the capability frontier is moving faster than the deployment discipline around it.</p>
+
+<p>This is the context that makes the Anthropic-Gates commitment more than PR. $200 million over four years, anchored to a foundation with deep operational experience in low-resource health systems, is a bet that beneficial AI is a deployment-discipline problem, not a model problem. Whether it works will be judged on exactly the axis the Ontario audit exposes: not "is the model good," but "did the system around it catch the failure before it reached a patient." The lead and the healthcare story are the same story, four years apart in maturity.</p>
+
+<p>The Musk cluster is the financial weather behind all of it. A jury deliberating OpenAI's charitable-trust origins, talent draining out of SpaceXAI, OpenAI lawyering up against Apple: the model layer keeps discovering that capability does not confer durable position. Distribution partners disappoint, talent is portable, and governance questions never fully closed keep resurfacing. Jones's answer, that value accrues to whoever owns the completed workflow rather than the model, looks more correct each week the litigation and attrition pile up.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>Step back and the week describes a single transition: AI has crossed from "impressive on benchmarks" to "consequential in the world," and our institutions have not crossed with it. Five days to break a decade-hardened platform, 60% of medical scribes mangling prescriptions, agents credibly valued in the trillions because they can finish a whole workflow, these are not separate stories. They are the same capability arriving simultaneously in offense, in care, and in commerce, with wildly different amounts of surrounding rigor. The defining variable of the next year is not model quality. It is the competence of the system wrapped around the model.</p>
+
+<p>That reframes what the AI industry's most valuable activity actually is. It is not training the next frontier model, several labs can now do that. It is building the deployment discipline, the red teams, the validators, the procurement standards, the human-in-the-loop architecture, that decides whether a given capability lands like the Apple red-team (validated, reported responsibly, driven to Cupertino on paper) or like the Ontario scribes (shipped into clinics, fabricating facts, caught only by an auditor). Anthropic and the Gates Foundation are, in effect, trying to fund the first pattern at scale. The open question is whether anyone is funding it fast enough relative to how quickly the capability itself is diffusing into hands with no red team at all.</p>
+
+<p>The Musk overhang is the reminder that the market is still mispricing where durable value sits. Litigation over a 2015 donation, talent walking out of a merged AI unit, a model-layer company contemplating suing its own distribution partner: each is evidence that owning a model is not owning a position. If Jones is right that the trillion-dollar prize is the completed workflow, then the next year's winners are the ones who pair capability with the deployment rigor to be trusted with an entire process, and the losers are the ones who keep treating a benchmark score as a moat.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Apple's response and patch timeline.</strong> Watch whether Apple confirms the exploit class and how fast it patches M5 / macOS 26.4.x. The gap between the five-day break and the fix is the real measure of who the asymmetry now favors.</li>
+<li><strong>Whether any regulator acts on the Ontario findings.</strong> A 60%-drug-error rate in approved medical AI is the kind of number that either triggers a procurement-standard overhaul or gets absorbed as acceptable. Which one happens tells you whether deployment discipline is catching up.</li>
+<li><strong>The Musk v. Altman verdict.</strong> A finding either way reprices not just OpenAI but the legal durability of every lab's structure. Read it alongside the SpaceXAI attrition as one signal about the model layer's footing.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
