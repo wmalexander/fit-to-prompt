@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 20, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 20, 2026. Google declares ten-blue-link Search over and unveils Gemini 3.5 Flash, Spark, Omni, Antigravity 2.0 and a Street View-powered Genie at I/O 2026; Andrej Karpathy joins Anthropic's pre-training team; KPMG embeds Claude across 276,000 employees; Simon Willison digs into the new Flash pricing; and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #50">
+  <meta property="og:description" content="Daily AI news roundup - May 20, 2026. Google declares ten-blue-link Search over and unveils Gemini 3.5 Flash, Spark, Omni, Antigravity 2.0 and a Street View-powered Genie at I/O 2026; Andrej Karpathy joins Anthropic's pre-training team; KPMG embeds Claude across 276,000 employees; Simon Willison digs into the new Flash pricing; and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .story-span-2 { grid-column: span 1; }
+    @media (min-width: 1024px) { .story-span-2 { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, May 20, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 50</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">I/O 2026 &middot; TechCrunch</div>
+          <a href="https://techcrunch.com/2026/05/19/google-search-as-you-know-it-is-over/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Google Search As You Know It Is Over</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; May 19</p>
+          <div class="newspaper-body">
+            <p>At I/O 2026, Google declared the ten-blue-links era finished and replaced it with an AI-first stack: a conversational search box, generative UI that builds custom interactive answers on the fly, and "information agents" that sit in the background tracking the web for you. AI Overviews already serve more than 2.5 billion users a month and conversational search has crossed a billion, so this is not a pilot, it is the new default.</p>
+            <p>Search head Liz Reid said the agents can "map out a monitoring plan for you, including the tools and the data it needs to access," and Sundar Pichai framed the goal as bringing "frontier models to as many people as possible" at lower cost. Read alongside today's avalanche of Gemini 3.5 Flash, Spark, Omni and Antigravity 2.0 news, the message is consistent: Google is repotting its entire consumer surface into an agent runtime, and the publisher web is collateral damage.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">I/O 2026</div>
+            <div style="font-size:2.4rem;font-weight:900;line-height:1.1;">2.5B+</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">Monthly AI Overview users</div>
+            <div style="font-size:0.65rem;letter-spacing:0.1em;color:#9ca3af;margin-top:0.5rem;">Conversational &middot; Agentic &middot; Generative UI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY: Features, Standards, Cartoon, Puzzle -->
+    <div class="masonry-flow">
+
+      <!-- CARTOON + companion story (span 2): Karpathy -->
+      <div class="story-block story-span-2">
+        <div>
+          <div class="kicker">Cartoon &middot; The Fit to Prompt</div>
+          <img src="https://fittoprompt.com/issues/assets/2026-05-20-cartoon.png" alt="New Yorker style cartoon: a frazzled office worker swarmed by dozens of little floating AI agents" class="w-full object-cover mb-3" style="background:#f1f1f1;border:1px solid #e5e7eb;">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed" style="font-style:italic;">"I asked for one agent to help with email. Twenty-three of them showed up and now they're forming a union."</p>
+        </div>
+        <div>
+          <div class="kicker">Talent &middot; TechCrunch</div>
+          <a href="https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-1321808956.jpg?w=1024" alt="Andrej Karpathy" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+            <h3 class="headline-feature mb-2">Karpathy Joins Anthropic's Pre-Training Team</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; May 19</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Andrej Karpathy, OpenAI co-founder and former head of Tesla Autopilot, has joined Anthropic on Nick Joseph's pre-training team and will stand up a group using Claude to accelerate pre-training research itself. The hire bets that the next leg of frontier work is won less by raw compute than by AI-assisted research loops, and lands the same week Google is repointing all of Search at agents.</p>
+        </div>
+      </div>
+
+      <!-- FEATURE: Gemini 3.5 Flash (TechCrunch) -->
+      <div class="story-block">
+        <div class="kicker">AI Models &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/IMG_1192.jpg?w=1024" alt="Gemini 3.5 Flash at I/O 2026" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Gemini 3.5 Flash: Google Bets the Next Wave on Agents, Not Chatbots</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google unveiled Gemini 3.5 Flash as its strongest coding and agentic model, running "4x faster than other frontier models" (12x in an optimized variant) and, per DeepMind's chief technologist, beating Gemini 3.1 Pro on "nearly all the benchmarks." It is the engine powering Search's new agents, Spark, and Antigravity 2.0, with Pro handling planning while Flash executes subtasks autonomously for hours.</p>
+      </div>
+
+      <!-- FEATURE: Gemini Omni -->
+      <div class="story-block">
+        <div class="kicker">Generative Media &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/19/googles-gemini-omni-turns-images-audio-and-text-into-video-and-thats-just-the-start/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/Google-Omni-Flash.png?w=1024" alt="Gemini Omni Flash" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Gemini Omni Turns Anything Into Video</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Gemini Omni Flash, the first model in a new multimodal family, can spin images, audio, and text into 10-second video clips with what Google demoed as a claymation protein-folding explainer rendered from a single prompt. Google is wiring it into the Gemini app, YouTube Shorts, and Flow, with SynthID watermarking on every output and a dedicated avatar onboarding flow to gate likeness generation.</p>
+      </div>
+
+      <!-- FEATURE: KPMG -->
+      <div class="story-block">
+        <div class="kicker">Enterprise &middot; Anthropic</div>
+        <a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">KPMG Embeds Claude Across 276,000 Employees</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">KPMG is putting Claude into its Digital Gateway platform and rolling it out to more than 276,000 employees across 138 countries, with Anthropic naming the firm a preferred partner for private equity portfolio deployments. Tax vice chair Rema Serafi says building a new client-facing AI agent that "took weeks" now takes "minutes," and KPMG's own "Blaze" tooling uses Claude Code to modernize legacy systems.</p>
+      </div>
+
+      <!-- STANDARD: Gemini Spark -->
+      <div class="story-block">
+        <div class="kicker">Agents &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/spark.jpg?w=1024" alt="Gemini Spark assistant" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Gemini Spark: A 24/7 Agent Inside Gmail</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Spark is Google's answer to Claude Cowork and ChatGPT agent, running on dedicated Google Cloud VMs so it keeps working when you close your laptop. You email it through a dedicated Gmail address, track it via Android's Halo system, and Google Labs VP Josh Woodward pitches it as something that "can pull all the facts from your emails, your docs, your sheets, and slides and write the draft for you."</p>
+      </div>
+
+      <!-- STANDARD: Antigravity 2.0 -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/19/google-launches-antigravity-2-0-with-an-updated-desktop-app-and-cli-tool-at-io-2026/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/google-developer-antigravity.jpg" alt="Google Antigravity 2.0" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Antigravity 2.0 Brings a Desktop App and CLI</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google's coding-agent platform gets a desktop app, a terminal CLI, and an SDK for custom subagent workflows, with native voice commands and tight ties to AI Studio, Android, and Firebase. Google says Gemini 3.5 Flash was "co-developed using Antigravity" and is repricing tiers in the Anthropic/OpenAI pattern: a new $100 Ultra plan and a former $250 plan cut to $200 with 20x higher limits.</p>
+      </div>
+
+      <!-- STANDARD: Genie + Street View -->
+      <div class="story-block">
+        <div class="kicker">World Models &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/Genie-Street-View-NYC.png?w=1024" alt="Genie Street View NYC" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Genie Now Simulates Real Streets via Street View</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">DeepMind has wired 280 billion Street View images from 110 countries into Project Genie, letting users walk through any block with adjustable weather and rare scenarios. Waymo already uses Genie 3 to simulate "exceedingly rare events" like tornadoes for autonomy training, though demos still betray weak physics, a simulated woman "ran right through cacti and bushes" without collision.</p>
+      </div>
+
+      <!-- STANDARD: Simon Willison Flash pricing -->
+      <div class="story-block">
+        <div class="kicker">Pricing &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/19/gemini-35-flash/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Willison: Gemini 3.5 Flash Costs 3x What 3 Flash Did</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Willison flags the pricing news under the I/O hype: Gemini 3.5 Flash is "3x the price of 3 Flash Preview and 6x the price of 3.1 Flash-Lite," at $1.50 input / $9 output per million tokens, brushing up against 3.1 Pro. He notes the Artificial Analysis benchmark run cost $1,551.60 and reads it as all three frontier labs now "probing the price tolerance of their API customers."</p>
+      </div>
+
+      <!-- PUZZLE: Acronym Quiz -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Acronym Quiz</div>
+<div id="acronym-quiz-v1">
+<style>
+  #acronym-quiz-v1 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; max-width: 300px; padding: 4px 0; box-sizing: border-box; }
+  #acronym-quiz-v1 * { box-sizing: border-box; }
+  #acronym-quiz-v1 .aq-intro { font-size: 11.5px; color: #555; line-height: 1.5; margin-bottom: 14px; }
+  #acronym-quiz-v1 .aq-item { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dotted #d1d5db; }
+  #acronym-quiz-v1 .aq-item:last-of-type { border-bottom: none; }
+  #acronym-quiz-v1 .aq-letters { font-family: 'Courier New', monospace; font-size: 18px; font-weight: 700; letter-spacing: .18em; color: #8B0000; margin-bottom: 6px; }
+  #acronym-quiz-v1 .aq-opt { display: block; font-size: 12px; padding: 5px 8px; margin-bottom: 4px; border: 1.5px solid #ddd; border-radius: 4px; cursor: pointer; background: #fafafa; color: #1a1a1a; line-height: 1.35; transition: all .15s; }
+  #acronym-quiz-v1 .aq-opt:hover { border-color: #8B0000; background: #fff8f8; }
+  #acronym-quiz-v1 .aq-opt input { margin-right: 6px; }
+  #acronym-quiz-v1 .aq-opt.aq-correct { border-color: #059669; background: #f0fdf4; color: #065f46; }
+  #acronym-quiz-v1 .aq-opt.aq-wrong { border-color: #dc2626; background: #fef2f2; }
+  #acronym-quiz-v1 .aq-btn { margin-top: 8px; width: 100%; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 9px 10px; background: #8B0000; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+  #acronym-quiz-v1 .aq-btn:hover { background: #6b0000; }
+  #acronym-quiz-v1 .aq-score { display: none; margin-top: 12px; padding: 9px 10px; background: #f0fdf4; border: 1px solid #6ee7b7; border-radius: 6px; font-size: 12px; color: #065f46; font-weight: 600; text-align: center; line-height: 1.5; }
+</style>
+  <p class="aq-intro">Match each AI acronym to its meaning. Pick one per row, then Check.</p>
+  <div class="aq-item" data-answer="a">
+    <div class="aq-letters">MCP</div>
+    <label class="aq-opt"><input type="radio" name="q1" value="a">Model Context Protocol</label>
+    <label class="aq-opt"><input type="radio" name="q1" value="b">Multi-Cloud Pipeline</label>
+    <label class="aq-opt"><input type="radio" name="q1" value="c">Managed Compute Plane</label>
+  </div>
+  <div class="aq-item" data-answer="b">
+    <div class="aq-letters">SDK</div>
+    <label class="aq-opt"><input type="radio" name="q2" value="a">Synthetic Data Kernel</label>
+    <label class="aq-opt"><input type="radio" name="q2" value="b">Software Development Kit</label>
+    <label class="aq-opt"><input type="radio" name="q2" value="c">Secure Deployment Key</label>
+  </div>
+  <div class="aq-item" data-answer="c">
+    <div class="aq-letters">CBRN</div>
+    <label class="aq-opt"><input type="radio" name="q3" value="a">Cloud Backbone Routing Network</label>
+    <label class="aq-opt"><input type="radio" name="q3" value="b">Compute Budget Review Note</label>
+    <label class="aq-opt"><input type="radio" name="q3" value="c">Chemical, Biological, Radiological, Nuclear</label>
+  </div>
+  <div class="aq-item" data-answer="a">
+    <div class="aq-letters">LLM</div>
+    <label class="aq-opt"><input type="radio" name="q4" value="a">Large Language Model</label>
+    <label class="aq-opt"><input type="radio" name="q4" value="b">Long Latency Memory</label>
+    <label class="aq-opt"><input type="radio" name="q4" value="c">Logical Layer Map</label>
+  </div>
+  <div class="aq-item" data-answer="c">
+    <div class="aq-letters">CLI</div>
+    <label class="aq-opt"><input type="radio" name="q5" value="a">Cloud Language Interface</label>
+    <label class="aq-opt"><input type="radio" name="q5" value="b">Conversational Latent Inference</label>
+    <label class="aq-opt"><input type="radio" name="q5" value="c">Command-Line Interface</label>
+  </div>
+  <div class="aq-item" data-answer="b">
+    <div class="aq-letters">RAG</div>
+    <label class="aq-opt"><input type="radio" name="q6" value="a">Recurrent Attention Graph</label>
+    <label class="aq-opt"><input type="radio" name="q6" value="b">Retrieval-Augmented Generation</label>
+    <label class="aq-opt"><input type="radio" name="q6" value="c">Reinforced Agentic Grounding</label>
+  </div>
+  <button class="aq-btn" id="aq-check" type="button">Check</button>
+  <div class="aq-score" id="aq-score">Perfect. All six right.</div>
+<script>
+(function () {
+  var root = document.getElementById('acronym-quiz-v1');
+  var items = root.querySelectorAll('.aq-item');
+  var btn = document.getElementById('aq-check');
+  var score = document.getElementById('aq-score');
+  btn.addEventListener('click', function () {
+    var correct = 0;
+    items.forEach(function (item) {
+      var ans = item.getAttribute('data-answer');
+      var opts = item.querySelectorAll('.aq-opt');
+      opts.forEach(function (o) { o.classList.remove('aq-correct', 'aq-wrong'); });
+      var picked = item.querySelector('input[type=radio]:checked');
+      if (!picked) return;
+      var pickedOpt = picked.closest('.aq-opt');
+      if (picked.value === ans) { pickedOpt.classList.add('aq-correct'); correct++; }
+      else {
+        pickedOpt.classList.add('aq-wrong');
+        opts.forEach(function (o) {
+          var inp = o.querySelector('input');
+          if (inp && inp.value === ans) o.classList.add('aq-correct');
+        });
+      }
+    });
+    score.textContent = 'You got ' + correct + ' of 6.' + (correct === 6 ? ' Perfect.' : '');
+    score.style.display = 'block';
+  });
+})();
+</script>
+</div>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">AI Safety &middot; Anthropic</div>
+            <a href="https://www.anthropic.com/news/widening-conversation-ai" target="_blank" rel="noopener" class="story-link">
+              <h4>Anthropic Widens the AI Safety Conversation to Wisdom Traditions</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Anthropic &middot; May 19</p>
+            <p>Anthropic is convening scholars, clergy, and ethicists from more than 15 religious and cultural groups to inform Claude's "moral formation," and reports that giving Claude a tool to recall ethical commitments mid-task produced "markedly lower rates of misaligned behavior" in evaluations.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Opinion &middot; Stratechery</div>
+            <a href="https://stratechery.com/2026/shifting-alliances-in-a-changing-world/" target="_blank" rel="noopener" class="story-link">
+              <h4>Stratechery: Shifting Alliances in a Changing World</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Stratechery &middot; May 19</p>
+            <p>Ben Thompson's week-in-review revisits the split between "answer inference" and "agentic inference" compute, sees Anthropic's xAI compute deal as proof "markets actually work quite well," and warns that "upper hand" framings of US-China AI tend to be overblown.</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Editorial &middot; Stratechery</div>
+            <a href="https://stratechery.com/2026/personal-day-3/" target="_blank" rel="noopener" class="story-link">
+              <h4>Ben Thompson Takes a Personal Day</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Stratechery &middot; May 19</p>
+            <p>No Daily Update on Tuesday, a rare quiet beat on the same day Google reset Search and Anthropic hired Karpathy. The Stratechery page instead pitches the Plus bundle, a reminder that even the loudest news days do not actually require new takes.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Analysis &middot; The Wire</div>
+            <a href="../index.html" class="story-link">
+              <h4>I/O 2026: One Lab, Five Agentic Surfaces</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fit to Prompt &middot; May 20</p>
+            <p>Search, Spark, Antigravity, Omni, and Genie all shipped in a single keynote on Gemini 3.5 Flash. Read together, they are not five products but one runtime: Google rebuilding consumer, developer, and creator surfaces around long-running agents in one push.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Google used a single I/O keynote to declare the ten-blue-links era over, ship a new flagship model (Gemini 3.5 Flash) that costs three times its predecessor, wire a 24/7 agent into Gmail, point a world model at Street View's 280 billion images, and re-tier its developer plans, all on the same day Anthropic announced it had hired Andrej Karpathy onto its pre-training team and bolted Claude into every desk at KPMG. Two labs, two strategies, one underlying bet: the next round of AI competition is not about chatbots, it is about who owns the long-running agents that sit in front of your work, your search, and your codebase.</p>
+
+<h4 class="digest-theme">Search and the End of the Ten Blue Links</h4>
+<ul class="digest-bullets">
+<li><strong>Google declares the link era over.</strong> AI Overviews already serve 2.5B users a month and conversational search has crossed 1B. Liz Reid says new "information agents" will "map out a monitoring plan for you, including the tools and the data it needs to access," extending the 2003 Alerts product into a continuously running background process. Generative UI will assemble custom interactive answers, and users can spin up "mini apps" via natural language through Antigravity.</li>
+<li><strong>Publishers brace for another step down.</strong> Sundar Pichai framed the goal as bringing "frontier models to as many people as possible" at lower cost; the implicit cost is to anyone whose business model still depends on outbound clicks from Google.</li>
+</ul>
+
+<h4 class="digest-theme">The I/O Agent Stack</h4>
+<ul class="digest-bullets">
+<li><strong>Gemini 3.5 Flash is the engine.</strong> Google's DeepMind chief technologist said it "outperforms our latest frontier model, 3.1 Pro, on nearly all the benchmarks," runs "4x faster than other frontier models" (12x in an optimized variant), and is paired with a forthcoming 3.5 Pro that plans while Flash executes. Demos showed agents spawning subagents to build an operating system inside Antigravity.</li>
+<li><strong>Spark is the consumer agent.</strong> Built on 3.5 Flash and Antigravity's harness, Spark runs on dedicated Google Cloud VMs, accepts work via a dedicated Gmail address, and is tracked through Android's Halo system. Josh Woodward: it "can pull all the facts from your emails, your docs, your sheets, and slides and write the draft for you." Spark goes to AI Ultra subscribers next week.</li>
+<li><strong>Antigravity 2.0 is the developer surface.</strong> A new desktop app, CLI, voice control, and SDK for custom subagents, plus a pricing reset: a new $100 Ultra plan with 5x higher limits and the old $250 tier cut to $200 with 20x higher limits. Notably, Gemini 3.5 Flash was "co-developed using Antigravity."</li>
+<li><strong>Omni is the media engine.</strong> Gemini Omni Flash spins images, audio, and text into 10-second video with multimodal reasoning (a single text prompt produced a narrated claymation protein-folding short). SynthID watermarks every output; an avatar onboarding flow gates likeness use.</li>
+<li><strong>Genie sees the real world.</strong> Project Genie now ingests 280 billion Street View images from 110 countries to simulate real streets with weather and rare-event controls. Waymo already uses Genie 3 to train on tornado-grade events, though demos still betray weak physics (a simulated woman walks through cacti).</li>
+</ul>
+
+<h4 class="digest-theme">Anthropic's Quieter Counter</h4>
+<ul class="digest-bullets">
+<li><strong>Karpathy joins pre-training.</strong> The OpenAI co-founder and ex-Tesla AI lead is now on Nick Joseph's team and will stand up a group using Claude to accelerate pre-training research itself. The framing matters: Anthropic is betting AI-assisted research beats raw GPU count.</li>
+<li><strong>KPMG goes all-in on Claude.</strong> 276,000 employees across 138 countries get Claude access, Digital Gateway gets it baked in, and Anthropic is named preferred partner for PE portfolio rollouts. Vice chair Rema Serafi: building a client-facing tax agent went from "weeks" to "minutes." KPMG's Blaze tool uses Claude Code for legacy modernization.</li>
+<li><strong>Widening the conversation.</strong> Anthropic is convening 15+ wisdom-tradition groups to inform Claude's "moral formation," and reports that simply letting Claude recall ethical commitments mid-task produced "markedly lower rates of misaligned behavior" in evaluations, a small but striking interpretability result tucked inside a policy post.</li>
+</ul>
+
+<h4 class="digest-theme">Pricing, Politics, and Pauses</h4>
+<ul class="digest-bullets">
+<li><strong>Flash is no longer cheap.</strong> Simon Willison flags that Gemini 3.5 Flash is "3x the price of 3 Flash Preview and 6x the price of 3.1 Flash-Lite," at $1.50/M input and $9/M output, brushing 3.1 Pro pricing. One Artificial Analysis benchmark run cost $1,551.60. All three frontier labs are now "probing the price tolerance of their API customers."</li>
+<li><strong>Stratechery doubles up on context.</strong> Ben Thompson's "Shifting Alliances" connects the answer-vs-agentic compute split to Anthropic's xAI deal, calling it evidence "markets actually work quite well," and cautions that "upper hand" narratives in US-China AI tend to be overblown.</li>
+<li><strong>And a personal day.</strong> Thompson published no Daily Update on the loudest news day of the quarter, an inadvertent reminder that not every shift needs an instant take.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Strip the brand names off today's announcements and the architecture is the same shape on both sides. Google ships Search, Spark, Antigravity, Omni, and Genie as five surfaces, but the runtime under all of them is one model family (3.5 Flash now, 3.5 Pro soon) and one execution pattern, Pro plans, Flash acts, agents run for hours on cloud VMs you do not have to keep awake. Anthropic responds by buying the people who can compress that training loop further (Karpathy) and by colonizing the work surface from the other direction, dropping Claude into 276,000 KPMG seats and naming itself the default for PE portfolio rollouts. Different go-to-markets, identical thesis: the unit of value is no longer a model response, it is a persistent agent.</p>
+
+<p>That thesis explains the pricing news as much as the product news. Willison's note that 3.5 Flash costs 3x what 3 Flash did, and that one benchmark sweep ran past $1,500, is the inevitable other side of the same coin. If you are billing for a chat turn, you compete on price per token. If you are billing for an agent that runs for hours and touches your inbox, your code, your slides, you are billing for a job, and the labs have decided customers will tolerate it. The cheap-tokens era is ending in plain sight, and the I/O keynote is the price tag for the agents Google just gave you.</p>
+
+<p>The KPMG and Karpathy stories are the same story told in headcount. KPMG is interesting not because a large firm bought enterprise AI seats, but because the framing has flipped: Anthropic is now the platform that 276,000 professionals build agents on top of, and KPMG's Blaze tool is in essence a managed Claude Code service for legacy modernization. Karpathy moving to a pre-training team that will explicitly use Claude to accelerate Claude is the research-side mirror of that flip. The thing being scaled is no longer just the model, it is the human-plus-model loop, and both labs are now optimizing the loop.</p>
+
+<p>Anthropic's "widening the conversation" post is the soft footnote that may matter more than it looks. The empirical claim, that giving Claude a tool to recall ethical commitments mid-task lowered misaligned behavior, lands in an industry that just decided to give agents hours of autonomous runtime over your data. The race for surfaces and the race for agent self-restraint are now happening in parallel, and the second one is being underfunded by everyone except, on the evidence of today's posts, Anthropic.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>I/O 2026 is the moment Google stops hedging. For two years the company described AI Overviews as an enhancement to Search; today it described Search as something that no longer exists in the form anyone learned to use. That is a generational reset of the most lucrative product in consumer software, and Google is doing it on a model (3.5 Flash) it shipped to "billions" of free users the same morning. The bet is that owning the agent layer end-to-end (model, runtime, surface, distribution) is worth disrupting your own cash cow. The corollary is that the open web, which has spent twenty-five years tuned to Google's link economy, has just had its primary referrer announce that referral is no longer the default behavior.</p>
+
+<p>Step back further and the I/O stack plus Anthropic's plays sketch the shape of the next eighteen months. Compute is bifurcating into "answer inference" and "agentic inference," exactly as Thompson has been arguing, and the price curve confirms it: short, cheap turns get cheaper through commoditization while long, expensive agent runs get more expensive because customers will pay for the work, not the tokens. Enterprises will not stitch this together themselves. They will buy it as a bundle, which is why a KPMG-Anthropic alliance lands the same week as Google's everything-is-an-agent keynote. The platform layer is consolidating around two or three players, and the consulting layer is racing to be the integration partner before that window closes.</p>
+
+<p>For builders, the practical message is harsh and clear. Anything you ship that assumes a search-driven distribution model, a per-token cost basis, or a single-turn UX is now on borrowed time. The defensible designs are ones that treat the agent as the primary user (Economist-style structured content, MCP-friendly APIs) and the human as the supervisor (Spark's Halo trail, KPMG's judgment-plus-AI framing). The labs have decided where the next contest lives. The rest of the industry has roughly one product cycle to decide whether to build for that world or be optimized around by it.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether Search traffic actually falls off a cliff.</strong> AI Overviews and conversational search have been ramping for a year, but generative UI and information agents are a step change. Publisher analytics over the next 60 days will tell you how steep.</li>
+<li><strong>How Anthropic answers the I/O stack.</strong> Karpathy is a signal, not a product. The thing to watch is whether the next Claude release uses pre-training research that was itself accelerated by Claude, the first visible iteration of the loop Anthropic is now staffing for.</li>
+<li><strong>The price tolerance curve.</strong> If a 3x Flash hike sticks, expect OpenAI and Anthropic to follow within a quarter. If API customers revolt, expect a "Flash-Lite" reissue. Either way, the cheap-tokens era is over and the agent-runtime era is being priced in.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
