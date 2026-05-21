@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 21, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 21, 2026. Anthropic announces its first profitable quarter on projected $10.9B in Q2 revenue, SpaceX's S-1 reveals a $1.25B/month compute deal with Anthropic, Nvidia unveils Vera CPU for agentic AI in a new $200B market, Cole Medin breaks down Anthropic's agent harness playbook, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #51">
+  <meta property="og:description" content="Daily AI news roundup - May 21, 2026. Anthropic announces its first profitable quarter on projected $10.9B in Q2 revenue, SpaceX's S-1 reveals a $1.25B/month compute deal with Anthropic, Nvidia unveils Vera CPU for agentic AI in a new $200B market, Cole Medin breaks down Anthropic's agent harness playbook, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .story-span-2 { grid-column: span 1; }
+    @media (min-width: 1024px) { .story-span-2 { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, May 21, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 51</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Business &middot; TechCrunch</div>
+          <a href="https://techcrunch.com/2026/05/20/anthropic-says-its-about-to-have-its-first-profitable-quarter/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Anthropic Says Its First Profitable Quarter Is Here</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; May 20</p>
+          <div class="newspaper-body">
+            <p>Anthropic told investors that Q2 revenue will exceed $10.9 billion, more than double the prior quarter, and that the company expects "an operating profit for the first time." For a frontier lab that has spent every quarter of its existence in the red, that is a structural turn, not a one-time accounting blip. The company cautioned that profitability may not hold across the rest of the year as compute bills come due, but the trajectory is clear: Claude adoption is accelerating across consumer and enterprise faster than costs are climbing.</p>
+            <p>The disclosure landed the same day OpenAI signaled it is likely to file for an IPO, and the same day SpaceX's S-1 revealed that Anthropic alone is paying $1.25 billion a month for compute on COLOSSUS. Read together, those three facts redraw the AI economy from a story about losses to a story about which labs can convert capex into operating leverage. Anthropic just made the first credible claim that the answer is "us, and now."</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">Q2 2026</div>
+            <div style="font-size:2.4rem;font-weight:900;line-height:1.1;">$10.9B</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">Anthropic Q2 revenue forecast</div>
+            <div style="font-size:0.65rem;letter-spacing:0.1em;color:#9ca3af;margin-top:0.5rem;">Up from $4.7B prior quarter &middot; First operating profit</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY: Features, Standards, Cartoon, Puzzle -->
+    <div class="masonry-flow">
+
+      <!-- CARTOON + companion story (span 2): Microsoft Copilot -->
+      <div class="story-block story-span-2">
+        <div>
+          <div class="kicker">Cartoon &middot; The Fit to Prompt</div>
+          <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-21-cartoon.png" alt="A career counselor sits across from a worried young professional. On the wall, a framed poster shows 'FIVE-YEAR PLAN' and 'ONE-YEAR PLAN' crossed out, with 'THIS AFTERNOON' circled in red." class="w-full object-cover mb-3" style="background:#f1f1f1;border:1px solid #e5e7eb;">
+          <p class="font-serif text-sm text-gray-600 leading-relaxed" style="font-style:italic;">"Have you considered something more long-term, like Tuesday?"</p>
+        </div>
+        <div>
+          <div class="kicker">Strategy &middot; Fortune</div>
+          <a href="https://fortune.com/2026/05/21/microsoft-copilot-ai-openai-satya-nadella-gemini-claude/" target="_blank" rel="noopener" class="story-link">
+            <img src="https://fortune.com/img-assets/wp-content/uploads/2026/05/Microsoft-AI-CoPilot-vertical.jpg?format=webp&w=1440&q=100" alt="Microsoft Copilot strategy under Satya Nadella" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+            <h3 class="headline-feature mb-2">Microsoft Lost Its Way in the AI Race. Can Copilot Get It Back?</h3>
+          </a>
+          <p class="byline mb-2">Fortune &middot; May 21</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Microsoft stock fell 34% from October to March even as Azure AI revenue doubled, and fewer than 4.5% of Microsoft 365's 450 million users have adopted Copilot features. Satya Nadella is reorganizing around a model-agnostic stack, unifying consumer and enterprise Copilot teams and investing $5 billion in Anthropic to get Claude into the box. The company is projecting roughly $190 billion in 2026 infrastructure spending, more than 3x 2024, racing to hit gigawatt-scale training capacity before the OpenAI licensing agreement expires in 2032.</p>
+        </div>
+      </div>
+
+      <!-- FEATURE: SpaceX S-1 / Anthropic -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/20/spacex-s1/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">SpaceX S-1 Reveals $1.25B/Month Anthropic Compute Deal</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 20</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">SpaceX's IPO filing discloses that it now sells compute capacity, not just rockets and satellites, and that Anthropic is the marquee customer. The cloud services agreement gives Anthropic access to COLOSSUS and COLOSSUS II, with "the customer has agreed to pay us $1.25 billion per month" running through May 2029. Fees are reduced during a May-June 2026 ramp, and either party can terminate on 90 days' notice — a clause that quietly hands Elon Musk a non-trivial lever over a competitor of his own Grok.</p>
+      </div>
+
+      <!-- FEATURE: Jensen Huang Vera -->
+      <div class="story-block">
+        <div class="kicker">Chips &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Jensen Huang Says He's Found a 'Brand New' $200B Market for Nvidia</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 20</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">On the call backing Nvidia's record $81.6B quarter, Huang unveiled Vera, the company's "first CPU purpose-built for agentic AI." His argument: GPUs do the thinking, but the agents themselves run on CPUs executing tasks, and Vera is optimized for fast token processing. Nvidia has already sold $20B of standalone Vera CPUs this year, and Huang projects "billions of agents" needing CPU-powered tools — a $200B addressable market the company didn't have a year ago.</p>
+      </div>
+
+      <!-- FEATURE: Cole Medin Video Study Guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Engineering</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/cole-medin-agent-harness-large-codebases-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/efRIrLXoOVA/maxresdefault.jpg" alt="Cole Medin on Anthropic's agent harness playbook for large codebases" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Anthropic's Agent Harness Playbook for Large Codebases</h3>
+        </a>
+        <p class="byline mb-2">Cole Medin &middot; YouTube &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cole Medin walks through Anthropic's new agent-harness playbook for big codebases — Claude.md, hooks, subagents, MCP. The takeaway: in a large repo, the harness around the model matters more than the model itself.</p>
+      </div>
+
+      <!-- STANDARD: Texas AI Adoption -->
+      <div class="story-block">
+        <div class="kicker">Data &middot; Fortune</div>
+        <a href="https://fortune.com/2026/05/21/normal-people-using-ai-microsoft-diffusion-report/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/05/diffusion.png?format=webp&w=1440&q=100" alt="Microsoft U.S. AI Diffusion Report map" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Texas Outpaces California in AI Adoption; College Towns Lead the Country</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Microsoft's U.S. AI Diffusion Report tracked adoption across all 50 states and 3,100+ counties. Texas ranks fourth nationally at 35.4% user share, ahead of California (34.1%) and New York (32.9%); D.C. leads at 40.6%. College towns dominate the top of the list, with Williamsburg, Virginia hitting 73.7% adoption — higher than any Silicon Valley county. Metro areas average 33% adoption versus 16.2% in rural counties.</p>
+      </div>
+
+      <!-- STANDARD: xAI burned $6.4B -->
+      <div class="story-block">
+        <div class="kicker">Finance &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2259661359.jpg?w=1024" alt="xAI losses revealed in SpaceX S-1" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">xAI Burned $6.4B Last Year; SpaceX Filing Shows the Spending Is Far From Over</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 20</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">xAI's 2025 losses ballooned to $6.4B from $1.56B the year prior on just $3.2B in revenue, and capex hit a roughly $30.8B annualized run rate in early 2026. SpaceX plans to scale Grok to "multiple trillions of parameters," and aims to deploy orbital AI compute satellites starting in 2028. Inside the ecosystem, only 117M of 550M monthly active users actually engage with Grok's AI features — a thin engagement layer under an enormous capex stack.</p>
+      </div>
+
+      <!-- STANDARD: Nvidia $43B startup holdings -->
+      <div class="story-block">
+        <div class="kicker">Earnings &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Nvidia Posts Record Quarter, Reveals $43B in Startup Holdings</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 20</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">For the quarter ending April 26, Nvidia posted $81.6B in revenue, up 20% sequentially, including a record $75.2B from data centers. The board authorized an $80B share repurchase program. The eye-catching disclosure: non-marketable equity holdings nearly doubled from $22B to $43B between January and April. Huang flagged "quite significant" capacity coming online for Anthropic across 2026 and 2027.</p>
+      </div>
+
+      <!-- STANDARD: Gemini Spark -->
+      <div class="story-block">
+        <div class="kicker">Agents &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/20/google-io/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Willison: Gemini Spark Ships With Broad Data Access and Real Security Questions</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 20</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Willison recaps Google I/O with a sharper eye on the trade-offs: Gemini Spark integrates with Gmail, Calendar, Drive, Docs, Sheets, Slides, YouTube, and Maps, runs on "Gemini 3.5 Flash and Antigravity," and lives in isolated ephemeral VMs with encrypted credentials and DLP policies. He cautions that broad data access plus agentic execution is "a major potential security vulnerability," and notes Google is discontinuing the Apache-2.0 Gemini CLI on June 18, replacing it with a proprietary Antigravity CLI.</p>
+      </div>
+
+      <!-- PUZZLE: Word Search -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+        <div id="ws-v1">
+          <style>
+            #ws-v1 { font-family: 'Inter', sans-serif; max-width: 300px; color: #1a1a1a; }
+            #ws-v1 .ws-intro { font-size: 11.5px; color: #555; margin-bottom: 10px; line-height: 1.5; }
+            #ws-v1 .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 1px; background: #1a1a1a; border: 2px solid #1a1a1a; user-select: none; }
+            #ws-v1 .ws-cell { aspect-ratio: 1; background: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace; font-size: 13px; font-weight: 700; cursor: pointer; }
+            #ws-v1 .ws-cell.sel { background: #ffe9b3; }
+            #ws-v1 .ws-cell.found { background: #ffb3b3; color: #8B0000; }
+            #ws-v1 .ws-words { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 10px; font-family: 'Courier New', monospace; font-size: 11.5px; }
+            #ws-v1 .ws-word.done { text-decoration: line-through; color: #8B0000; }
+            #ws-v1 .ws-btn { margin-top: 10px; width: 100%; font-size: 12px; font-weight: 700; padding: 8px; background: #8B0000; color: #fff; border: none; border-radius: 4px; cursor: pointer; text-transform: uppercase; letter-spacing: .08em; }
+          </style>
+          <p class="ws-intro">Find 7 AI terms hidden in the grid. Click and drag, or click start then end.</p>
+          <div class="ws-grid" id="ws-grid"></div>
+          <div class="ws-words" id="ws-words"></div>
+          <button class="ws-btn" id="ws-reveal">Reveal All</button>
+          <script>
+          (function(){
+            var WORDS = ["CLAUDE","NVIDIA","VERA","ANTHROPIC","GROK","AGENT","TOKENS"];
+            var N=10, grid = Array.from({length:N},()=>Array(N).fill(""));
+            var placements = [];
+            function inBounds(r,c){return r>=0&&r<N&&c>=0&&c<N;}
+            function tryPlace(word){
+              var dirs=[[0,1],[1,0],[1,1],[-1,1]];
+              for(var t=0;t<200;t++){
+                var d=dirs[Math.floor(Math.random()*dirs.length)];
+                var r=Math.floor(Math.random()*N), c=Math.floor(Math.random()*N);
+                var ok=true, cells=[];
+                for(var i=0;i<word.length;i++){
+                  var rr=r+d[0]*i, cc=c+d[1]*i;
+                  if(!inBounds(rr,cc)){ok=false;break;}
+                  if(grid[rr][cc]&&grid[rr][cc]!==word[i]){ok=false;break;}
+                  cells.push([rr,cc]);
+                }
+                if(ok){
+                  cells.forEach((p,i)=>{grid[p[0]][p[1]]=word[i];});
+                  placements.push({word:word,cells:cells});
+                  return true;
+                }
+              }
+              return false;
+            }
+            WORDS.forEach(tryPlace);
+            for(var r=0;r<N;r++)for(var c=0;c<N;c++) if(!grid[r][c]) grid[r][c]=String.fromCharCode(65+Math.floor(Math.random()*26));
+            var gridEl=document.getElementById("ws-grid");
+            for(var r=0;r<N;r++)for(var c=0;c<N;c++){
+              var d=document.createElement("div"); d.className="ws-cell"; d.textContent=grid[r][c]; d.dataset.r=r; d.dataset.c=c;
+              gridEl.appendChild(d);
+            }
+            var wordsEl=document.getElementById("ws-words");
+            WORDS.forEach(function(w){ var s=document.createElement("span"); s.className="ws-word"; s.dataset.word=w; s.textContent=w; wordsEl.appendChild(s); });
+            var startCell=null;
+            gridEl.addEventListener("click",function(e){
+              var t=e.target.closest(".ws-cell"); if(!t) return;
+              if(!startCell){ startCell=t; t.classList.add("sel"); return; }
+              var r1=+startCell.dataset.r, c1=+startCell.dataset.c, r2=+t.dataset.r, c2=+t.dataset.c;
+              var dr=Math.sign(r2-r1), dc=Math.sign(c2-c1);
+              var len=Math.max(Math.abs(r2-r1),Math.abs(c2-c1))+1;
+              var cells=[]; for(var i=0;i<len;i++) cells.push([r1+dr*i,c1+dc*i]);
+              var word=cells.map(p=>grid[p[0]][p[1]]).join("");
+              var rev=word.split("").reverse().join("");
+              var match = WORDS.indexOf(word)>=0?word: (WORDS.indexOf(rev)>=0?rev:null);
+              document.querySelectorAll(".ws-cell.sel").forEach(c=>c.classList.remove("sel"));
+              if(match){
+                cells.forEach(p=>{ var el=gridEl.children[p[0]*N+p[1]]; el.classList.add("found"); });
+                var w=document.querySelector(".ws-word[data-word='"+match+"']"); if(w) w.classList.add("done");
+              }
+              startCell=null;
+            });
+            document.getElementById("ws-reveal").addEventListener("click",function(){
+              placements.forEach(function(p){
+                p.cells.forEach(function(c){ gridEl.children[c[0]*N+c[1]].classList.add("found"); });
+                var w=document.querySelector(".ws-word[data-word='"+p.word+"']"); if(w) w.classList.add("done");
+              });
+            });
+          })();
+          </script>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Workforce &middot; Fortune</div>
+            <a href="https://fortune.com/2026/05/21/sheryl-sandberg-gen-z-10-year-career-plan-is-dead-ai-entry-level-jobs-wipeout/" target="_blank" rel="noopener" class="story-link">
+              <h4>Sheryl Sandberg: The 10-Year Career Plan Is Dead</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fortune &middot; May 21</p>
+            <p>Sandberg told Brandeis graduates "if I had one, I would have missed the internet," arguing rigid decade-long career scripts no longer work. The WEF warns nearly half of global managers plan to replace workers with AI within four years. LinkedIn's Ryan Roslansky calls five-year plans "foolish."</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Tools &middot; Simon Willison</div>
+            <a href="https://simonwillison.net/2026/May/20/tokens-per-second/" target="_blank" rel="noopener" class="story-link">
+              <h4>How Fast Is 10 Tokens Per Second, Really?</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Simon Willison &middot; May 20</p>
+            <p>Mike Veerman built a single-file HTML web app that simulates LLM token output from 5 to 800 tokens per second. A useful gut-check tool for translating vendor benchmark slides into something you can actually feel.</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Opinion &middot; Stratechery</div>
+            <a href="https://stratechery.com/2026/google-i-o-world-models-i-o-spaghetti/" target="_blank" rel="noopener" class="story-link">
+              <h4>Ben Thompson: Google I/O, World Models, I/O Spaghetti</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Stratechery &middot; May 20</p>
+            <p>Thompson reviews Google I/O "for better and for worse," raising strategic questions about whether DeepMind's emphasis on world models serves Google's near-term commercial needs. The "I/O Spaghetti" framing: a broad AI surface area without coherent product structure.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Analysis &middot; The Wire</div>
+            <a href="../index.html" class="story-link">
+              <h4>Two Camps Form Around Anthropic's First Profit</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fit to Prompt &middot; May 21</p>
+            <p>Today's reports split cleanly into two camps: labs converting capex into revenue (Anthropic at $10.9B with operating profit) and labs still burning to catch up (xAI at $6.4B loss, Microsoft at $190B of 2026 capex). The bifurcation that mattered last year was model quality; the one that matters now is unit economics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Strip the rhetoric out of today's news and the AI economy comes into focus for the first time. Anthropic told investors Q2 revenue will more than double to $10.9 billion and deliver the company's first operating profit. SpaceX's S-1 filing revealed Anthropic is paying $1.25 billion a month to run on COLOSSUS. Nvidia banked $81.6 billion in a single quarter and called Vera, its new CPU for agents, a brand-new $200 billion market. For two years the question was whether AI could be a business. Today it is no longer a question, and the more interesting one is who can keep paying for it.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~9 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-21-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The Anthropic Inflection Point</h4>
+<ul class="digest-bullets">
+<li><strong>Revenue more than doubles, profit appears.</strong> Anthropic told investors Q2 will exceed $10.9 billion, up from roughly $4.7 billion the prior quarter, and expects "an operating profit for the first time." Management cautioned profitability may not hold across the rest of the year as compute costs climb, but the inflection is real.</li>
+<li><strong>The customer base is no longer just developers.</strong> Microsoft has invested $5 billion in Anthropic to put Claude inside Copilot. KPMG has rolled Claude to 276,000 employees across 138 countries (announced earlier in the week) and Anthropic is now the preferred partner for PE portfolio deployments.</li>
+<li><strong>The compute bill is enormous and now public.</strong> SpaceX's S-1 reveals Anthropic is paying $1.25 billion a month for compute across COLOSSUS and COLOSSUS II through May 2029, with reduced fees during a May-June 2026 ramp. Either party can terminate on 90 days' notice, an unusual lever that effectively gives Elon Musk a quarterly veto over a competitor of his own Grok.</li>
+<li><strong>OpenAI signals an IPO on the same day.</strong> The market timing is not subtle. The first lab to credibly demonstrate operating leverage just claimed the narrative oxygen, and OpenAI moved to remind everyone it is still the volume leader.</li>
+</ul>
+
+<h4 class="digest-theme">The Capex Mirror</h4>
+<ul class="digest-bullets">
+<li><strong>Nvidia banks the boom.</strong> Record $81.6 billion revenue for the quarter ending April 26, up 20% sequentially, including $75.2 billion from data centers alone. The board authorized an $80 billion share repurchase. Non-marketable equity holdings nearly doubled from $22 billion to $43 billion between January and April, an unprecedented bank of startup positions accumulated in four months.</li>
+<li><strong>xAI burns through the other side.</strong> SpaceX's filing revealed xAI lost $6.4 billion in 2025 on just $3.2 billion of revenue, up from $1.56 billion of losses the prior year. Capex hit a roughly $30.8 billion annualized run rate in early 2026. Only 117 million of 550 million ecosystem MAUs actually use Grok's AI features.</li>
+<li><strong>Microsoft retools for the chase.</strong> Stock down 34% from October to March even as Azure AI revenue doubled. Fewer than 4.5% of Microsoft 365's 450M users adopted Copilot. The fix: $190 billion of 2026 infrastructure spending (3x 2024), a model-agnostic Copilot reorg, and Claude licensed in alongside OpenAI before that contract expires in 2032.</li>
+</ul>
+
+<h4 class="digest-theme">Vera and the Second AI Chip</h4>
+<ul class="digest-bullets">
+<li><strong>Nvidia pivots to CPUs.</strong> Huang introduced Vera, the "first CPU purpose-built for agentic AI," and reframed the architecture: GPUs do the "thinking" (training and inference), but the agents themselves run on CPUs executing tasks, calling tools, walking workflows. Vera is optimized for fast token processing.</li>
+<li><strong>$20 billion sold YTD before the market knew it existed.</strong> Nvidia has already shipped $20 billion of standalone Vera CPUs in 2026. Huang projects "billions of agents" each needing their own CPU-powered runtime — a $200 billion total addressable market the company did not have a year ago.</li>
+<li><strong>The compute stack is bifurcating.</strong> "Answer inference" (short, cheap turns) is commoditizing on GPU clusters. "Agent runtime" (long-running, multi-tool workflows) is becoming its own market, and Nvidia just claimed the CPU side of it before anyone else even named the category.</li>
+</ul>
+
+<h4 class="digest-theme">I/O Hangover and the Security Gap</h4>
+<ul class="digest-bullets">
+<li><strong>Willison surfaces what the keynote glossed over.</strong> Gemini Spark runs on "Gemini 3.5 Flash and Antigravity," integrates with Gmail, Calendar, Drive, Docs, Sheets, Slides, YouTube, and Maps, and lives in isolated ephemeral VMs with encrypted credentials and DLP policies. He cautions the combination of broad data access and autonomous execution is "a major potential security vulnerability."</li>
+<li><strong>The open-source CLI gets sunset.</strong> Google is discontinuing the Apache-2.0 Gemini CLI on June 18 and replacing it with a proprietary Antigravity CLI. The agent runtime is increasingly closed, even at the lab that used to lead on open-source tooling.</li>
+<li><strong>Ben Thompson asks the strategy question.</strong> His "I/O Spaghetti" framing argues Google's AI surface area is broad but lacks coherent product structure, and questions whether DeepMind's emphasis on world models serves Google's near-term commercial needs. The implicit comparison: Anthropic ships fewer surfaces and just hit operating profit.</li>
+</ul>
+
+<h4 class="digest-theme">Workforce and Adoption</h4>
+<ul class="digest-bullets">
+<li><strong>Sandberg declares the career script dead.</strong> "If I had one, I would have missed the internet." The WEF warns nearly half of global managers plan to replace workers with AI within four years, with entry-level roles most exposed. LinkedIn's Roslansky and Asana's Rogers add their own variations of "ditch the 5-year plan."</li>
+<li><strong>Adoption is no longer a coastal story.</strong> Microsoft's U.S. AI Diffusion Report shows Texas at 35.4% adoption, ahead of California (34.1%). D.C. leads at 40.6%. Metro areas average 33%, rural 16.2%.</li>
+<li><strong>College towns are the real leaders.</strong> Williamsburg, Virginia (William & Mary) hits 73.7%, higher than any Silicon Valley county. Adoption is following education density, not tech-industry density.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>For the last two years, the AI story has been about promises. Promises about model capability, promises about future revenue, promises about jobs that would emerge or disappear. Today the story changed shape. Anthropic produced an actual revenue forecast in the eleven-digit range and claimed actual operating profit. SpaceX produced an actual S-1 with actual line items showing a $1.25 billion monthly check landing in its bank account from a single AI customer. Nvidia produced an actual $81.6 billion revenue print with an actual $80 billion buyback authorization. The numbers stopped being projections and started being facts, and the facts cluster into a coherent picture: there is now a working AI economy, and it has a small number of obvious winners.</p>
+
+<p>The capex side of that economy is the other half of the same picture. xAI lost $6.4 billion on $3.2 billion of revenue, a ratio that would be a death sentence in any other industry. Microsoft is committing $190 billion of 2026 infrastructure spend, more than triple 2024, to stay in the race for an agent runtime that fewer than 5% of its 365 users have adopted. Both companies are betting that scale of compute will eventually translate to scale of revenue, but Anthropic just demonstrated that the translation can happen at a smaller compute base if you have the right customers (Microsoft, KPMG, PE portfolios) and the right product surface (Claude inside someone else's workflow, not yet another consumer chatbot). The capex mirror is showing two very different reflections.</p>
+
+<p>The Vera announcement is the third leg of the same stool. Once the agent is the unit of value, you need two kinds of silicon: one optimized for the lab that trains the model, and one optimized for the customer that runs millions of agent steps a day. Nvidia just claimed both. The implication for everyone else is harsher than it looks. If the compute layer consolidates around one supplier on both sides, and the platform layer consolidates around two or three labs (Anthropic, OpenAI, Google), then the strategic question for every enterprise becomes: which bundle do I buy, and how fast do I have to commit before the choice closes?</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>The AI economy is now visible in real revenue and real profit, not just in narrative. That sounds like a small distinction. It is not. For two years the bear case on AI has rested on a single argument: that the gap between the cost of building these systems and the revenue they generate is structural and growing. Anthropic's $10.9 billion forecast with a first operating profit is the first datapoint that punctures that argument from inside the frontier labs themselves. Bears can still argue the profit will not hold, and Anthropic itself flagged that risk. But the bear case has shifted from "this might not be a real business" to "this might not be a durable business," which is a very different debate.</p>
+
+<p>The bifurcation of compute is now showing up in profit-and-loss statements, not just in conference keynotes. Thompson's split between "answer inference" and "agentic inference" was a strategic frame six months ago; today it is a Nvidia segment with a $200 billion TAM and $20 billion in actual sales. The cheap-tokens era for short conversational turns continues to commoditize, while the agent-runtime era for long, multi-tool workflows is being priced upward across the board. Anthropic's profitability and Google's $1.50/$9 per million Gemini Flash pricing are two angles on the same shift: the labs are no longer billing for a sentence, they are billing for a job.</p>
+
+<p>The next phase will be enterprise consolidation around two or three platforms, and the bidding is already in the open. Microsoft is putting $5 billion into Anthropic while running on OpenAI through 2032 (a textbook hedge). KPMG, EY, Accenture, and the rest of the consulting class are racing to be the integration layer that picks the winners for the Fortune 500. The college-town adoption data is the demand-side signal: the AI economy is not a coastal phenomenon any longer. It is a national one, and it is being absorbed faster outside the tech industry than inside it. The next eighteen months will be about who gets to be the default platform for that absorption, and today's news is the first round of votes being counted.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether Anthropic's profit holds past Q2.</strong> Management already telegraphed the risk: compute costs will rise as model size and agent runtime expand. If Q3 swings back to losses, the narrative resets. If it holds, Anthropic becomes the first frontier lab with durable operating leverage and the strategic balance tilts sharply.</li>
+<li><strong>Nvidia Vera adoption among hyperscalers.</strong> $20 billion sold YTD is a strong start, but the question is whether AWS, Azure, Google Cloud, and the neoclouds standardize on Vera or push back with their own ARM-based silicon. Watch CoreWeave, Oracle, and the Anthropic-SpaceX COLOSSUS rollout for the first real-world deployment data.</li>
+<li><strong>Gemini Spark security incidents.</strong> Willison flagged the obvious failure mode: an agent with broad data access running autonomously in a VM is one prompt-injection away from exfiltrating an entire workspace. The first public Spark incident, when (not if) it lands, will be the inflection point for enterprise procurement of consumer-grade agents.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/cole-medin-agent-harness-large-codebases-study.html" data-study-guide>Anthropic's Agent Harness Playbook for Large Codebases</a> — Cole Medin's walkthrough of the four pillars Anthropic now ships as the default agent harness for big codebases: Claude.md as the orientation document, hooks as the deterministic edges, subagents as the parallel work units, and MCP as the connective tissue to external systems. The takeaway is the one engineers keep relearning: in a large repo, the model alone cannot navigate the complexity, but the harness around the model — a small amount of context engineering plus a few well-placed automations — turns Claude into a reliable contributor. A useful companion to today's profit story, because the harness is exactly what makes the Anthropic-on-KPMG deployment work at 276,000-seat scale.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-podcast { display: none; } }
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
