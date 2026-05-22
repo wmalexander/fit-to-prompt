@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 22, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 22, 2026. Hark raises $700M Series A for a secretive universal AI interface, Microsoft Research unveils MagenticLite and Fara1.5 for small-model agents, Microsoft's Vega delivers zero-knowledge identity proofs in under 100ms, 404 Media reports on the deepfake crisis at Radnor High, Gary Marcus checks the math behind OpenAI and Anthropic's headline claims, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #52">
+  <meta property="og:description" content="Daily AI news roundup - May 22, 2026. Hark raises $700M Series A for a secretive universal AI interface, Microsoft Research unveils MagenticLite and Fara1.5 for small-model agents, Microsoft's Vega delivers zero-knowledge identity proofs in under 100ms, 404 Media reports on the deepfake crisis at Radnor High, Gary Marcus checks the math behind OpenAI and Anthropic's headline claims, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .story-span-2 { grid-column: span 1; }
+    @media (min-width: 1024px) { .story-span-2 { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, May 22, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 52</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>9 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Funding &middot; TechCrunch</div>
+          <a href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Hark Raises $700M Series A for Its 'Universal' AI Interface</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; May 21</p>
+          <div class="newspaper-body">
+            <p>Brett Adcock's new AI lab Hark closed a $700 million Series A to build multimodal foundation models and the hardware to run them, on the bet that today's chatbot-shaped products are temporary scaffolding for what an actual personal AI assistant will look like. The round lands with almost no public product detail and a pledge to ship first models "this summer." It is one of the largest Series A rounds in recent memory, and a marker of how investors are now willing to fund hardware-plus-model swings, not just API wrappers.</p>
+            <p>The story underneath the round is the broader shift in where AI value is migrating. Models commoditize, agents proliferate, and the next defensible layer may be the device and the interface that owns the user's attention. Hark is the third well-funded "personal AI hardware" bet in eighteen months. Whether the form factor turns out to be pin, glasses, watch, or something else, the capital is now in place to find out.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <div style="text-align:center;color:#f8f8f8;font-family:'Inter',sans-serif;padding:1.5rem;">
+            <div style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#8B0000;margin-bottom:1rem;">Series A &middot; 2026</div>
+            <div style="font-size:2.4rem;font-weight:900;line-height:1.1;">$700M</div>
+            <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#9ca3af;margin-top:1rem;">Hark &middot; first models due this summer</div>
+            <div style="font-size:0.65rem;letter-spacing:0.1em;color:#9ca3af;margin-top:0.5rem;">Multimodal models + dedicated AI hardware</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- FEATURE: MagenticLite / Fara1.5 -->
+      <div class="story-block">
+        <div class="kicker">Research &middot; Microsoft</div>
+        <a href="https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/05/MagenticLite-BlogHeroFeature-1400x788-1-scaled.jpg" alt="Microsoft Research MagenticLite agentic stack" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Microsoft Research Builds an Agent Stack Tuned for Small Models</h3>
+        </a>
+        <p class="byline mb-2">Microsoft Research &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Microsoft's AI Frontiers team released MagenticLite, an experimental agentic app aimed at small-model deployments, paired with MagenticBrain for orchestration and Fara1.5 for computer-use tasks. The system runs across browser and local file system workflows without leaning on a frontier API. The bet is that capable agents do not require a 400B-parameter ceiling, and that the next round of agent design will reward harness craft over raw model size.</p>
+      </div>
+
+      <!-- FEATURE: Microsoft Vega ZKP -->
+      <div class="story-block">
+        <div class="kicker">Identity &middot; Microsoft</div>
+        <a href="https://www.microsoft.com/en-us/research/blog/vega-zero-knowledge-proofs-for-digital-identity-in-the-age-of-ai/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/05/VEGA-BlogHeroFeature-1400x788-1-1024x576.jpg" alt="Vega zero-knowledge proofs for digital identity" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Vega: Zero-Knowledge Identity Proofs in Under 100ms on a Phone</h3>
+        </a>
+        <p class="byline mb-2">Microsoft Research &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Vega lets a user prove a fact from a government-issued credential ("over 21," "U.S. resident") without revealing the underlying credential. Proof generation runs in under 100 milliseconds on a mobile device with no trusted setup required. As AI agents start acting on behalf of users, "prove the claim, not the document" becomes the new bar for identity, and Vega is the most credible attempt yet at making that practical at consumer scale.</p>
+      </div>
+
+      <!-- FEATURE: 404 Media Deepfake -->
+      <div class="story-block">
+        <div class="kicker">Society &middot; 404 Media</div>
+        <a href="https://www.404media.co/radnor-high-school-pennsylvania-ai-deepfakes-child-sexual-abuse-material/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">How AI Deepfakes Tore a Pennsylvania High School Apart</h3>
+        </a>
+        <p class="byline mb-2">404 Media &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Five teen girls at Radnor Township High School were targeted with AI-generated child sexual abuse material produced by classmates. 404 Media reconstructs how the school administration, district attorney, and local police responded — and where the playbook broke down. The piece is the most detailed account yet of how a single off-the-shelf image model maps onto a real American high school, and it lands the same week Korean legislators advanced a strict watermark mandate.</p>
+      </div>
+
+      <!-- FEATURE: Simon Willison Datasette Agent -->
+      <div class="story-block">
+        <div class="kicker">Tools &middot; Engineering</div>
+        <a href="https://simonwillison.net/2026/May/21/datasette-agent/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Simon Willison Releases Datasette Agent for Conversational Data Querying</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Willison shipped the first public release of Datasette Agent, an extensible AI assistant that lets you query a Datasette instance in natural language and, with the right plugin, render charts on demand. The agent is open-source, plugin-extensible, and a deliberate counterpoint to the closed agent runtimes shipping out of Mountain View this month. It also doubles as a working reference for how to wire a real agent against a real database.</p>
+      </div>
+
+      <!-- STANDARD: Gary Marcus -->
+      <div class="story-block">
+        <div class="kicker">Critique &middot; Marcus on AI</div>
+        <a href="https://garymarcus.substack.com/p/checking-the-math-behind-openai-and" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Marcus Checks the Math Behind OpenAI and Anthropic's Latest Headlines</h3>
+        </a>
+        <p class="byline mb-2">Marcus on AI &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Gary Marcus pulls apart two of the week's biggest claims: OpenAI's reported breakthrough on the planar unit-distance problem and Anthropic's claim of imminent operating profit. He argues both are narrower than the headlines suggest — the math result is real but limited in scope, and the profit forecast depends on assumptions about compute cost trajectories that the company itself flagged as fragile. The piece is a useful corrective to a week of round-number narratives.</p>
+      </div>
+
+      <!-- STANDARD: Stratechery interview -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Stratechery</div>
+        <a href="https://stratechery.com/2026/an-interview-with-parallel-founder-parag-agarwal-about-valuing-content-on-the-agentic-web/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Ben Thompson: Parag Agarwal on Valuing Content in the Agentic Web</h3>
+        </a>
+        <p class="byline mb-2">Stratechery &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Thompson interviews former Twitter CEO and Parallel founder Parag Agarwal on the unsolved problem at the center of the agentic web: how does content get paid for when the consumer is no longer a human reading a page, but an agent extracting an answer? They cover proposed compensation models, the carryover from Twitter's monetization fights, and why the current ad-supported web stops working if agents become the dominant reader.</p>
+      </div>
+
+      <!-- STANDARD: Google AI agent ecosystem -->
+      <div class="story-block">
+        <div class="kicker">Strategy &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?w=1024" alt="Google AI agents pitch" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Google Is Pitching Consumers an AI Agent Ecosystem They May Not Want</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google's I/O reveal of information agents and Gemini Spark is gated behind a paid subscription, and TechCrunch argues the pitch fell flat because the demos never answered the basic consumer question: what does this do for me that I cannot already do? The piece reads less as a hit on Google and more as a temperature check on whether the "agentic web" is a developer story dressed up in consumer clothes.</p>
+      </div>
+
+      <!-- PUZZLE: Cryptogram -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
+        <div id="cg-v1">
+          <style>
+            #cg-v1 { font-family: 'Inter', sans-serif; max-width: 300px; color: #1a1a1a; }
+            #cg-v1 .cg-intro { font-size: 11.5px; color: #555; margin-bottom: 10px; line-height: 1.5; }
+            #cg-v1 .cg-quote { font-family: 'Courier New', monospace; font-size: 13px; line-height: 2.0; margin-bottom: 10px; background: #fafafa; border: 1px solid #e5e5e5; padding: 10px; border-radius: 4px; }
+            #cg-v1 .cg-row { display: inline-block; text-align: center; margin: 0 2px 6px; vertical-align: top; }
+            #cg-v1 .cg-cipher { font-weight: 700; color: #8B0000; display: block; font-size: 11px; }
+            #cg-v1 .cg-plain { display: block; border-bottom: 1px solid #1a1a1a; min-width: 14px; height: 16px; line-height: 16px; font-weight: 700; }
+            #cg-v1 .cg-plain.given { color: #1a1a1a; background: #ffe9b3; }
+            #cg-v1 .cg-plain.user { color: #1a1a1a; }
+            #cg-v1 .cg-plain.empty { color: transparent; }
+            #cg-v1 .cg-punct { display: inline-block; margin: 0 1px; font-family: 'Courier New', monospace; font-size: 13px; }
+            #cg-v1 .cg-attrib { font-size: 11px; color: #6b7280; margin-top: 4px; font-style: italic; }
+            #cg-v1 .cg-input-row { display: flex; gap: 6px; margin-top: 8px; align-items: center; }
+            #cg-v1 .cg-input-row input { flex: 1; padding: 5px; font-family: 'Courier New', monospace; font-size: 13px; border: 1px solid #ccc; border-radius: 3px; text-transform: uppercase; }
+            #cg-v1 .cg-btn { font-size: 11px; font-weight: 700; padding: 6px 10px; background: #1a1a1a; color: #fff; border: none; border-radius: 3px; cursor: pointer; text-transform: uppercase; letter-spacing: .06em; }
+            #cg-v1 .cg-reveal { width: 100%; margin-top: 8px; font-size: 12px; font-weight: 700; padding: 8px; background: #8B0000; color: #fff; border: none; border-radius: 4px; cursor: pointer; text-transform: uppercase; letter-spacing: .08em; }
+            #cg-v1 .cg-status { font-size: 11px; color: #059669; margin-top: 6px; font-weight: 600; min-height: 14px; }
+          </style>
+          <p class="cg-intro">Decode the quote. Two letters are filled in to start. Type a cipher letter and its plain letter in the boxes below.</p>
+          <div class="cg-quote" id="cg-quote"></div>
+          <div class="cg-attrib">&mdash; Andrej Karpathy</div>
+          <div class="cg-input-row">
+            <input id="cg-cipher" maxlength="1" placeholder="Cipher">
+            <span>=</span>
+            <input id="cg-plain" maxlength="1" placeholder="Plain">
+            <button class="cg-btn" id="cg-apply">Apply</button>
+          </div>
+          <div class="cg-status" id="cg-status"></div>
+          <button class="cg-reveal" id="cg-reveal">Reveal Answer</button>
+          <script>
+          (function(){
+            var QUOTE = "THE HOTTEST NEW PROGRAMMING LANGUAGE IS ENGLISH";
+            var KEY = {};
+            var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            var shuffled = letters.slice().sort(function(){return Math.random()-0.5;});
+            letters.forEach(function(L,i){ KEY[L] = shuffled[i] === L ? shuffled[(i+1)%26] : shuffled[i]; });
+            var GIVEN = {"E":true,"T":true};
+            var quoteEl = document.getElementById("cg-quote");
+            var solved = {};
+            Object.keys(GIVEN).forEach(function(L){ solved[KEY[L]] = L; });
+            function render(){
+              quoteEl.innerHTML = "";
+              QUOTE.split("").forEach(function(ch){
+                if(ch === " "){ quoteEl.appendChild(document.createTextNode(" ")); return; }
+                if(!/[A-Z]/.test(ch)){ var s=document.createElement("span"); s.className="cg-punct"; s.textContent=ch; quoteEl.appendChild(s); return; }
+                var cipher = KEY[ch];
+                var row = document.createElement("span"); row.className="cg-row";
+                var c = document.createElement("span"); c.className="cg-cipher"; c.textContent=cipher; row.appendChild(c);
+                var p = document.createElement("span"); p.className="cg-plain";
+                if(solved[cipher]){ p.textContent = solved[cipher]; p.classList.add(GIVEN[solved[cipher]] ? "given":"user"); }
+                else { p.textContent = "?"; p.classList.add("empty"); }
+                row.appendChild(p);
+                quoteEl.appendChild(row);
+              });
+            }
+            render();
+            document.getElementById("cg-apply").addEventListener("click", function(){
+              var ci = document.getElementById("cg-cipher").value.toUpperCase();
+              var pl = document.getElementById("cg-plain").value.toUpperCase();
+              if(!/[A-Z]/.test(ci) || !/[A-Z]/.test(pl)){ return; }
+              solved[ci] = pl;
+              document.getElementById("cg-cipher").value = "";
+              document.getElementById("cg-plain").value = "";
+              render();
+              var current = QUOTE.split("").filter(function(c){return /[A-Z]/.test(c);}).map(function(c){return solved[KEY[c]]||"?";}).join("");
+              var target = QUOTE.replace(/[^A-Z]/g,"");
+              var status = document.getElementById("cg-status");
+              if(current === target){ status.textContent = "Solved! Nice work."; status.style.color="#059669"; }
+              else { status.textContent = ""; }
+            });
+            document.getElementById("cg-reveal").addEventListener("click", function(){
+              Object.keys(KEY).forEach(function(L){ solved[KEY[L]] = L; });
+              render();
+              document.getElementById("cg-status").textContent = "Revealed.";
+              document.getElementById("cg-status").style.color="#8B0000";
+            });
+          })();
+          </script>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Search &middot; TechCrunch</div>
+            <a href="https://techcrunch.com/2026/05/21/six-search-engines-worth-trying-now-that-google-isnt-really-google-anymore/" target="_blank" rel="noopener" class="story-link">
+              <h4>Six Search Engines Worth Trying Now That Google Isn't Really Google</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">TechCrunch &middot; May 21</p>
+            <p>TechCrunch rounds up alternatives for users uncomfortable with Google's pivot to a conversational, AI-driven Search after I/O 2026 reframed the product around chat. The list spans Kagi, Brave, Mojeek, and a handful of others trying to keep ten blue links alive.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Analysis &middot; The Wire</div>
+            <a href="../index.html" class="story-link">
+              <h4>Three Stories, One Question: Who Owns the Agent's Attention?</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fit to Prompt &middot; May 22</p>
+            <p>Hark's $700M raise, Google's stumble pitching agents to consumers, and Parallel's content-valuation problem all circle the same unanswered question: when an agent does the work, who captures the value the user used to spend on attention? The week's quietest debate may be the most important.</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Engineering &middot; Microsoft</div>
+            <a href="https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/" target="_blank" rel="noopener" class="story-link">
+              <h4>Fara1.5 Targets Computer-Use Tasks on Small Models</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Microsoft Research &middot; May 21</p>
+            <p>The Fara1.5 release inside Microsoft's MagenticLite stack is the part to watch: it is a small-model computer-use agent tuned for browser and local file workflows, which is exactly the layer where most enterprise agent deployments break today.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Policy &middot; The Wire</div>
+            <a href="https://www.404media.co/radnor-high-school-pennsylvania-ai-deepfakes-child-sexual-abuse-material/" target="_blank" rel="noopener" class="story-link">
+              <h4>Radnor Case Becomes a Policy Touchstone</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fit to Prompt &middot; May 22</p>
+            <p>The 404 Media reconstruction is already circulating among state legislators drafting deepfake statutes. Expect Pennsylvania, New York, and at least one federal proposal to cite this case by name within the month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Yesterday the AI story was about labs cashing the first real profit checks. Today it is about where that profit gets spent next. Hark just raised $700 million to build new AI hardware. Microsoft Research dropped a small-model agent stack and a sub-100ms zero-knowledge identity proof. 404 Media published the most detailed reconstruction yet of what happens when an off-the-shelf image model collides with a public high school. The frontier kept moving; the consequences kept arriving.</p>
+
+<h4 class="digest-theme">The Next Layer of Capital</h4>
+<ul class="digest-bullets">
+<li><strong>Hark's $700M Series A is the new high-water mark for hardware-plus-model bets.</strong> Brett Adcock's lab disclosed almost no product detail and committed to ship first models "this summer." Investors are willing to fund swings at the device-and-interface layer even when the demos do not exist yet.</li>
+<li><strong>The pattern across recent rounds: AI value is migrating away from API endpoints.</strong> Three personal-AI-hardware bets in 18 months, all eight or nine figures. The thesis is that today's chatbot UIs are temporary scaffolding, and the next defensible layer is whatever owns the user's attention end-to-end.</li>
+<li><strong>Google's I/O agent push, by contrast, did not land with consumers.</strong> TechCrunch's read is that the Gemini Spark demos failed to answer the "what does it do for me?" question, and gating the experience behind a paid subscription made the gap worse. Capital is moving toward whoever solves it.</li>
+</ul>
+
+<h4 class="digest-theme">Small Models, Real Agents</h4>
+<ul class="digest-bullets">
+<li><strong>Microsoft Research released MagenticLite, MagenticBrain, and Fara1.5.</strong> The stack is explicitly tuned for small models — browser and local file workflows, no frontier API dependency. The bet is that the next round of agent design rewards harness craft over raw parameter count.</li>
+<li><strong>Fara1.5 is the piece to watch.</strong> A small computer-use model tuned for the workflows where enterprise agent deployments actually break: clicking around in a browser, reading and writing local files, calling tools. If it ships well, it pulls the agent runtime down a tier and out of OpenAI-and-Anthropic-only territory.</li>
+<li><strong>Simon Willison shipped Datasette Agent the same day.</strong> Open-source, plugin-extensible, queries a real database in natural language, renders charts. A deliberate counterpoint to the closed agent runtimes shipping out of Google and a working reference implementation for builders.</li>
+</ul>
+
+<h4 class="digest-theme">Identity Without Disclosure</h4>
+<ul class="digest-bullets">
+<li><strong>Vega delivers zero-knowledge identity proofs in under 100ms on a phone.</strong> Microsoft Research's system lets a user prove a fact from a government credential ("over 21," "U.S. resident") without revealing the credential itself. No trusted setup required.</li>
+<li><strong>This is the identity bar AI agents need.</strong> When agents act on behalf of users, "prove the claim, not the document" is the only model that scales. Today's OAuth-style consent flows leak the entire credential; Vega leaks none of it.</li>
+<li><strong>The 100ms number matters.</strong> Anything slower than that breaks the agentic flow. Microsoft just put a credible privacy-preserving identity primitive inside the latency budget of an agent loop, which is the kind of unsexy infrastructure that quietly becomes the standard.</li>
+</ul>
+
+<h4 class="digest-theme">The Consequence Layer</h4>
+<ul class="digest-bullets">
+<li><strong>404 Media's Radnor High reconstruction is the most detailed account yet of AI deepfake CSAM hitting a U.S. school.</strong> Five teen girls targeted, classmates as perpetrators, administration and DA scrambling to apply a playbook nobody has written. The piece names where the response broke down.</li>
+<li><strong>The case is already shaping policy.</strong> Pennsylvania and New York legislators are drafting deepfake statutes that draw on the Radnor facts; expect at least one federal proposal to cite it by name within the month. Korea's strict watermark mandate (covered earlier in the week) sits in the same news cycle.</li>
+<li><strong>Gary Marcus reminds the field to check its math.</strong> His pieces on OpenAI's planar unit-distance result and Anthropic's first-profit forecast argue both are narrower than the headlines made them sound. The corrective matters because the policy debate is moving on the headlines, not the footnotes.</li>
+</ul>
+
+<h4 class="digest-theme">Who Pays the Agent</h4>
+<ul class="digest-bullets">
+<li><strong>Ben Thompson interviewed Parallel founder Parag Agarwal on the unsolved problem at the center of the agentic web:</strong> how does content get paid for when the consumer is an agent extracting an answer, not a human reading a page?</li>
+<li><strong>TechCrunch's "six search engines" piece is the consumer-side view of the same shift.</strong> Google's Search reorg around chat broke the contract that funded the open web for two decades. Alternatives like Kagi, Brave, and Mojeek are trying to keep ten blue links alive — partly as a product, partly as a business model.</li>
+<li><strong>Hark's hardware bet is the third angle.</strong> If the agent owns the user's attention, the page-view economy disappears. Whoever owns the device that runs the agent owns the new monetization layer. That is the bet $700 million just bought into.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Yesterday's news was about the AI economy starting to throw off real cash. Today's news is about where that cash gets aimed. The answer, in three separate threads, is "down a layer." Hark is funding the hardware below the model. Microsoft is funding the small-model agent stack below the frontier API. Microsoft Research is funding the identity primitive below the consent flow. Every one of those bets is a wager that the high-margin layer has already moved past the frontier model, and that the durable franchises will live in the harness, the runtime, and the device.</p>
+
+<p>The flip side of that thesis is visible in the consumer reaction to Google. Gemini Spark, Antigravity, and the I/O agent demos are technically impressive, but TechCrunch's read of the consumer pitch is unsparing: the experience did not answer the basic question a consumer asks of a paid product. Gating it behind a subscription before the value is legible is a strategic miss, and it lands at the exact moment Hark and others are funding bets that route around the screen entirely. If your agent ecosystem is structurally a developer story dressed up in consumer clothes, capital will eventually find the team building the consumer story from scratch.</p>
+
+<p>And then there is the consequence layer that the technical stories rarely confront directly. 404 Media's Radnor account is what happens when the agent stack escapes the developer demo and arrives in a public school. The fact that the same week features both a $700M hardware round and a major-publication reconstruction of AI-generated CSAM is not a contradiction; it is the actual shape of the industry. The same primitives that build a useful agent build a hostile one, and the policy response is being drafted in real time on top of incidents that already happened. Marcus's "check the math" pieces are useful precisely because the headlines are now the inputs to those statutes, and the statutes outlast the news cycle.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>For the past three years the AI debate has been organized around model capability. That frame is exhausting itself. Hark's round, the MagenticLite stack, the Vega proof system, and even Willison's Datasette Agent are all signs that the field has stopped asking "how big is the model?" and started asking "what is the model embedded in?" The questions that will define the next phase — runtime ownership, hardware control, identity guarantees, content compensation — are infrastructure questions, not capability questions. They are also less photogenic. Expect the keynote-able news to slow even as the consequential news accelerates.</p>
+
+<p>The consumer adoption story is bifurcating in a similar way. Last week's I/O data and this week's Google-agent-skepticism piece show the same pattern: enterprises are absorbing AI faster than consumers are, and the consumer products that work are the ones that do not feel like AI products at all. The "agentic ecosystem" framing that Google leaned on at I/O reads as inside baseball when it lands in front of a typical user. That gap is the opportunity Hark, Adcock's prior labs, and at least three other well-funded hardware bets are trying to close. Whether any of them ship a product that justifies the round is the next eighteen months of the industry.</p>
+
+<p>And the social ledger is now non-trivial. The Radnor case is one incident; the Korean watermark mandate, the deepfake bills in U.S. state legislatures, and the slow drumbeat of school-level CSAM stories are the larger pattern. The frontier labs have to decide whether they want to lead on policy or get led, and the consumer hardware bets that are now flush with capital have to decide what their own deployment guardrails look like before their first product ships. The era when "we're an infrastructure provider" was an acceptable answer to those questions is closing fast.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Hark's first model release this summer.</strong> The pitch is a multimodal model plus dedicated hardware, but the $700M was committed without a public demo. Whatever ships will define whether this round is the start of a category or the most expensive learning experience of the year.</li>
+<li><strong>Whether Fara1.5 holds up on real computer-use tasks.</strong> Small-model agents have a long history of looking great in demos and breaking in the wild. If Microsoft can show Fara1.5 doing browser-and-file workflows reliably at a fraction of frontier-model cost, the agent-runtime market opens up dramatically.</li>
+<li><strong>State legislation citing the Radnor case.</strong> Pennsylvania, New York, and at least one federal deepfake bill are likely to surface text drawing on the 404 Media facts within the month. Watch for over-broad definitions of "AI-generated content" that sweep in legitimate creative tools.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
