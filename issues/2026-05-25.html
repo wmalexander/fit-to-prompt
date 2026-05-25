@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - May 25, 2026</title>
+  <meta name="description" content="Daily AI news roundup - May 25, 2026. Andrej Karpathy joins Anthropic, Simon Willison ships Datasette Agent 0.1a4, Nate B. Jones argues the AI boom is about to hit a wall, Epoch AI shows memory now accounts for 63% of AI chip cost, Google grapples with AI security in real time, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #53">
+  <meta property="og:description" content="Daily AI news roundup - May 25, 2026. Andrej Karpathy joins Anthropic, Simon Willison ships Datasette Agent 0.1a4, Nate B. Jones argues the AI boom is about to hit a wall, Epoch AI shows memory now accounts for 63% of AI chip cost, Google grapples with AI security in real time, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, May 25, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 53</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>12 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Industry &middot; Wes Roth</div>
+          <a href="https://www.youtube.com/watch?v=DGw2KKyXuYQ" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">The Real Reason Andrej Karpathy Joined Anthropic</h2>
+          </a>
+          <p class="byline mb-3">Wes Roth &middot; YouTube &middot; May 24</p>
+          <div class="newspaper-body">
+            <p>Andrej Karpathy, the founding OpenAI researcher who shaped much of the modern LLM training playbook and then spent the past two years building Eureka Labs as a one-person AI education project, is joining Anthropic. Wes Roth's video walks through the move and what it signals about where talent gravity is now strongest in the frontier-lab landscape. The short answer: Anthropic's safety-forward research culture, the room to publish, and a research agenda that explicitly courts the kind of interpretability work Karpathy has been gesturing toward in his own essays.</p>
+            <p>The hire matters because Karpathy is not a generic researcher; he is a one-person brand whose endorsements move developer attention. Anthropic gets a magnet for the next round of recruiting and a credible internal voice on training and architecture. OpenAI loses, again, on the perception axis even as it continues to outship on the product axis. The story underneath the story is that the field's top individual contributors increasingly choose the lab whose values they can live with, not the one with the highest comp ceiling.</p>
+          </div>
+        </div>
+        <div style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;">
+          <a href="https://www.youtube.com/watch?v=DGw2KKyXuYQ" target="_blank" rel="noopener" style="display:block;position:relative;width:100%;height:100%;">
+            <img src="https://img.youtube.com/vi/DGw2KKyXuYQ/maxresdefault.jpg" alt="The Real Reason Andrej Karpathy Joined Anthropic" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff;margin-left:4px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- FEATURE: Datasette Agent -->
+      <div class="story-block">
+        <div class="kicker">Tools &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/24/datasette-agent/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Simon Willison Ships Datasette Agent 0.1a4</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The latest alpha of Datasette Agent integrates with the new Datasette 1.0a30 release through a redesigned "Start a new agent chat" entry point in the Jump to menu. The hosted version at agent.datasette.io is now live behind GitHub authentication, giving builders a working reference for how to point an LLM agent at a real SQL database without rolling the runtime themselves.</p>
+      </div>
+
+      <!-- FEATURE: Nate B. Jones AI boom wall -->
+      <div class="story-block">
+        <div class="kicker">Analysis &middot; Nate B. Jones</div>
+        <a href="https://www.youtube.com/watch?v=Poyi6X7rOwY" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/Poyi6X7rOwY/maxresdefault.jpg" alt="Why the AI boom is about to hit a wall" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Why the AI Boom Is About to Hit a Wall</h3>
+        </a>
+        <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nate B. Jones argues the current AI capex cycle is running into industrial and business limits faster than the headlines suggest. Power, fab capacity, memory supply, and enterprise willingness to absorb six-figure agent pilots are all converging into a constraint set that the current valuation models do not yet price in. The framing pairs cleanly with this week's Epoch AI chip-cost data.</p>
+      </div>
+
+      <!-- FEATURE: Google AI security TechCrunch -->
+      <div class="story-block">
+        <div class="kicker">Security &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Everyone Is Navigating AI Security in Real Time, Even Google</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google Cloud COO Francis de Souza makes the case for security-from-the-start in enterprise AI rollouts, while Google itself is fielding scrutiny over API billing surprises and slow credential-revocation timelines. The piece is a useful temperature check on a hyperscaler asking its customers to do what it is still building the muscle to do itself.</p>
+      </div>
+
+      <!-- FEATURE: Epoch AI memory cost -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; Epoch AI</div>
+        <a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Memory Is Now Two-Thirds of AI Chip Component Cost</h3>
+        </a>
+        <p class="byline mb-2">Epoch AI &middot; May 21</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Epoch AI's latest data insight finds that high-bandwidth memory rose from a minority share to roughly 63% of total AI chip component spending between Q1 2024 and Q4 2025. Logic die costs stayed roughly flat, and packaging fell as a percentage of the whole. The chart reframes the supply story: the next AI bottleneck is HBM allocation, not GPU dies.</p>
+      </div>
+
+      <!-- FEATURE: Tina Huang AI Skills -->
+      <div class="story-block">
+        <div class="kicker">Education &middot; Tina Huang</div>
+        <a href="https://www.youtube.com/watch?v=tu4rU4YD1Jk" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/tu4rU4YD1Jk/maxresdefault.jpg" alt="Updated Essential AI Skills For 2026" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Updated Essential AI Skills for 2026</h3>
+        </a>
+        <p class="byline mb-2">Tina Huang &middot; YouTube &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Huang refreshes her widely-shared "essential AI skills" tour for the current tool landscape. The list has shifted from prompting basics toward agent orchestration, evaluation discipline, and the production skills that distinguish a working AI engineer from a power user. A useful sanity check for anyone scoping a 2026 AI learning plan.</p>
+      </div>
+
+      <!-- STANDARD: Datasette release -->
+      <div class="story-block">
+        <div class="kicker">Release &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/24/datasette/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Datasette 1.0a30 Adds a Customizable "Jump to" Menu</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The latest Datasette alpha introduces a Jump-to menu for fast search across databases, tables, and debug pages, plus a plugin hook that lets extensions register their own menu items. It is the structural change that makes Datasette Agent's chat entry point possible, and it is the kind of unsexy plumbing that quietly defines what a tool can do next.</p>
+      </div>
+
+      <!-- STANDARD: Armin Ronacher quote -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/24/armin-ronacher/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Armin Ronacher on the Rise of AI-Generated Bug Reports</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Willison quotes Flask creator Armin Ronacher on the unique frustration of receiving long, plausible, and largely useless AI-generated issue reports on open-source projects. Ronacher argues for a return to short, specific, human-authored bug reports with the actual observation and error included. It is the maintainer-side complaint that pairs with every "AI is great at coding" story.</p>
+      </div>
+
+      <!-- STANDARD: Amazon Bee wearable -->
+      <div class="story-block">
+        <div class="kicker">Hardware &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">A Hands-On With Amazon's Bee, the Always-Listening AI Wearable</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">TechCrunch tests Amazon's Bee, an AI wearable that records and transcribes the conversations around it for later recall. The reviewer finds genuine professional utility, and then immediately runs into the privacy concerns of a device that continuously uploads ambient audio to a cloud the user does not own. The product is shipping; the social contract for it is not.</p>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Research &middot; arXiv</div>
+            <a href="https://arxiv.org/abs/2605.06445" target="_blank" rel="noopener" class="story-link">
+              <h4>"Constraint Decay" Paper Documents How LLM Agents Fail at Backend Code</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">arXiv &middot; May 7</p>
+            <p>New research finds LLM coding agents lose roughly 30 percentage points in assertion pass rates as structural requirements accumulate, a phenomenon the authors call "constraint decay." The paper is the rare quantitative answer to the common practitioner complaint that agents do well on toy tasks and fold on real backends.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Tools &middot; Open Source</div>
+            <a href="https://esengine.github.io/DeepSeek-Reasonix/" target="_blank" rel="noopener" class="story-link">
+              <h4>Reasonix: A DeepSeek-Native Terminal Coding Agent</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">GitHub Pages &middot; May 24</p>
+            <p>Reasonix is a terminal-resident coding agent built around DeepSeek as the default model. The pitch is a Claude-Code-shaped workflow at a fraction of the per-token cost, and another data point that the open-weights stack is reaching parity on the agent harness as well as the model.</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Side Quest &middot; Simon Willison</div>
+            <a href="https://simonwillison.net/2026/May/24/usborne-mad-house/" target="_blank" rel="noopener" class="story-link">
+              <h4>Willison Rebuilds Usborne's 1980s "Mad House" Game in JavaScript</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Simon Willison's Weblog &middot; May 24</p>
+            <p>Inspired by the free PDF re-release of Usborne's "Creepy Computer Games" books, Willison ported the 1983 BASIC game Mad House to interactive JavaScript. It is the kind of weekend project that doubles as a tiny showcase for how an LLM-paired developer attacks a translation task end-to-end.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">Analysis &middot; The Wire</div>
+            <a href="../index.html" class="story-link">
+              <h4>Three Threads, One Question: Where Does the Next Margin Live?</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Fit to Prompt &middot; May 25</p>
+            <p>Karpathy joining Anthropic, Epoch AI's memory-share data, and Nate B. Jones's "wall" thesis all describe the same shift from a model-centric AI economy to an infrastructure-and-talent-centric one. The labs that win the next two years are the ones that lock in scarce HBM, scarce researchers, and scarce enterprise trust before the cycle turns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Andrej Karpathy left OpenAI two years ago to teach one-person AI courses out of Eureka Labs. This week he joined Anthropic. At the same moment, Epoch AI quietly published a chart showing that high-bandwidth memory now eats 63% of the dollar a buyer spends on an AI chip's components, up from roughly a third two years ago. Both stories are about the same shift: the scarce thing is no longer the model. It is the talent that knows how to push it forward, and the memory that lets it run.</p>
+
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~6 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-05-25-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The Talent Layer</h4>
+<ul class="digest-bullets">
+<li><strong>Karpathy joining Anthropic is the headline, but the underlying signal is talent gravity.</strong> A researcher whose endorsements move developer attention has chosen the lab whose research culture and publishing posture he can live with, over a former employer that still leads on raw product velocity. Anthropic now has a magnet for the next round of recruiting.</li>
+<li><strong>Wes Roth's read is that this is about interpretability and training pedagogy.</strong> Karpathy's last two years of essays gesture at exactly the agenda Anthropic publishes most aggressively on. The hire is less a surprise than a confirmation of where the most opinionated individual contributors are now choosing to land.</li>
+<li><strong>OpenAI loses on perception even when it wins on product cadence.</strong> The pattern of senior researchers exiting toward Anthropic and a handful of independent labs is now a multi-year trend, not a quarter's worth of noise.</li>
+</ul>
+
+<h4 class="digest-theme">The Memory Layer</h4>
+<ul class="digest-bullets">
+<li><strong>Epoch AI's component-cost chart is the most underappreciated AI data release of the month.</strong> HBM rose from a minority share of AI chip BOM in Q1 2024 to roughly 63% in Q4 2025. Logic die costs barely moved; packaging shrank as a share of the whole. The next AI bottleneck has a name and a SKU, and it is high-bandwidth memory.</li>
+<li><strong>That single chart reframes the capex story.</strong> The bottleneck is not GPUs or fabs. It is HBM allocation contracts and the handful of vendors who can produce it. The hyperscalers that locked in long-dated HBM supply in 2024 look different in 2026 than the ones that did not.</li>
+<li><strong>Nate B. Jones's "boom about to hit a wall" video lands the same week.</strong> His thesis: power, fab capacity, memory supply, and enterprise willingness to absorb six-figure agent pilots are converging into a constraint set that current valuation models do not yet price. The Epoch chart is one of the data points behind that argument.</li>
+</ul>
+
+<h4 class="digest-theme">Open-Source Agents Keep Shipping</h4>
+<ul class="digest-bullets">
+<li><strong>Simon Willison shipped Datasette 1.0a30 plus Datasette Agent 0.1a4 on the same day.</strong> The base release adds a customizable "Jump to" menu and a plugin hook; the agent uses that exact hook to register a "Start a new agent chat" entry point. A hosted instance at agent.datasette.io is live with GitHub auth.</li>
+<li><strong>Reasonix landed as a DeepSeek-native terminal coding agent.</strong> The pitch is a Claude-Code-shaped workflow at a fraction of the per-token cost. Another data point that the open-weights stack is reaching parity on the agent harness as well as the model.</li>
+<li><strong>And then arXiv 2605.06445 documented the real ceiling.</strong> "Constraint decay" — LLM coding agents lose ~30 percentage points in assertion pass rates as structural requirements accumulate. The paper is the rare quantitative confirmation that agents do well on toy tasks and fold on real backends, which is what every team running an agent pilot has been saying out loud.</li>
+</ul>
+
+<h4 class="digest-theme">The Maintainer Pushback</h4>
+<ul class="digest-bullets">
+<li><strong>Armin Ronacher, via Simon Willison, names what every open-source maintainer is now feeling:</strong> long, plausible, and useless AI-generated bug reports are degrading the quality of issue trackers. Ronacher's ask is a return to short, specific, human-authored reports with the actual observation and error attached.</li>
+<li><strong>Pair that with TechCrunch's piece on Google's AI security posture.</strong> Google Cloud's COO is publicly preaching security-from-the-start while Google itself is fielding billing-surprise and credential-revocation complaints. Both stories share a subtext: the AI tooling has shipped faster than the operational and social contracts around it.</li>
+<li><strong>Amazon's Bee wearable is the consumer-side version of the same gap.</strong> Genuinely useful for professionals, immediately uncomfortable as a privacy proposition. The product is shipping; the norms for living next to it are not.</li>
+</ul>
+
+<h4 class="digest-theme">For the Practitioner</h4>
+<ul class="digest-bullets">
+<li><strong>Tina Huang's updated 2026 skills list has shifted away from prompting basics</strong> toward agent orchestration, evaluation discipline, and the production skills that distinguish a working AI engineer from a power user. The 2024 version of this video would have been mostly about ChatGPT tricks; the 2026 version is mostly about harness craft.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Today's stories cluster around one observation: the scarce inputs to the AI economy have changed. Two years ago the scarce things were model weights and the GPUs to train them on. This week's news names a different scarcity stack — talent that can move the frontier, HBM that can run it, enterprise budgets that can absorb the pilots, and policy frameworks that can hold the deployments. Karpathy's move and the Epoch chart are the two cleanest data points, but every other story in the issue is downstream of the same shift.</p>
+
+<p>The Datasette releases and Reasonix are the optimistic side of the ledger. Small teams (or solo developers) are shipping open-source agents that match the workflow of closed runtimes, against a backdrop where the constraint decay paper says even the closed runtimes break in predictable ways once real structural requirements appear. That gap — between the demo and the deployed system — is now itself a researchable artifact, which means it is also a fixable one. The team that lowers constraint decay by ten points wins the next round.</p>
+
+<p>The pessimistic side is the maintainer-and-user pushback. Ronacher's complaint about AI-generated bug reports, the privacy ambivalence around Bee, and Google's own credential-revocation stumbles are all instances of a single pattern: the tooling outran the operating practice. The next twelve months of AI productization will look less like a capability race and more like an operational-maturity race, and the teams that win it will be the ones that take maintainer feedback as a signal, not a nuisance.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>For three years the AI industry has marketed itself as a story about model intelligence. The most informative news this week is about everything underneath the model: who builds it, what it runs on, who pays for the pilot, who maintains the open-source it gets pointed at, and who is liable when it gets something wrong. That set of questions does not photograph well in a launch keynote, which is part of why it is being underpriced.</p>
+
+<p>The talent gravity story (Karpathy to Anthropic) and the HBM story (Epoch's 63%) are early-warning indicators of the same structural shift. The next round of competitive differentiation is going to come from who you employ and what you can plug into a rack, not from whose benchmark number moved 3% this month. That is good news for the labs that have been quietly building research culture and supply contracts. It is bad news for the labs that have been building demos.</p>
+
+<p>And underneath both is the maintainer-and-citizen reaction. Ronacher's quote, the Bee privacy unease, and the constraint-decay paper are all signals that the industry's customers — both the technical ones and the human ones — are beginning to push back on the parts of the AI rollout that have been over-promised. The labs that hear the pushback as feedback will adjust faster than the ones that hear it as friction.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Anthropic's research output in the next six months.</strong> If Karpathy lands well, expect a noticeable uptick in interpretability and training-pedagogy publications. That is the visible signal that the hire is paying off internally.</li>
+<li><strong>HBM contract disclosures in Q3/Q4 earnings.</strong> The Epoch chart says HBM allocation is now the dominant input cost. Watch for hyperscalers naming their long-dated HBM supply terms, and for analysts pricing the disclosure gap between the ones that do and the ones that do not.</li>
+<li><strong>Follow-up work on constraint decay.</strong> If a credible team publishes a harness or training change that materially lowers the 30-point gap, the agent-runtime market opens up. If nobody does, expect the "agents in production" narrative to slow.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
