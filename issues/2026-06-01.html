@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - June 1, 2026</title>
+  <meta name="description" content="Daily AI news roundup - June 1, 2026. Anthropic ships Claude Opus 4.8 and raises $65B at a $965B valuation, GitHub Copilot's token-based billing sparks developer backlash, NVIDIA opens Cosmos 3 for physical AI, the AI psychosis debate heats up, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #54">
+  <meta property="og:description" content="Daily AI news roundup - June 1, 2026. Anthropic ships Claude Opus 4.8 and raises $65B at a $965B valuation, GitHub Copilot's token-based billing sparks developer backlash, NVIDIA opens Cosmos 3 for physical AI, the AI psychosis debate heats up, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, June 1, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 54</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>20 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models &middot; Anthropic</div>
+          <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Anthropic Ships Claude Opus 4.8</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; May 28</p>
+          <div class="newspaper-body">
+            <p>Anthropic released Claude Opus 4.8, an upgraded flagship that posts gains across coding, reasoning, and agentic benchmarks while introducing new controls for how hard the model works on a given task. The headline additions are dynamic workflows and explicit effort controls, which let developers dial the trade-off between latency, cost, and depth of reasoning rather than accepting a single fixed behavior. For teams already building on Claude, it is a drop-in upgrade; for everyone watching the frontier, it is the clearest signal yet that the competition has moved from raw capability to controllability.</p>
+            <p>The release lands the same week Anthropic closed a $65 billion Series H at a $965 billion post-money valuation, and the two stories are not unrelated. A model that can be tuned for effort is a model built for production economics, and production economics is exactly what a near-trillion-dollar valuation has to be underwritten by. Opus 4.8 is the product side of the same bet the capital markets just made.</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:#1a1a1a;">
+          <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+            <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/0eaa0ed2dce9810169112e1c77de2585fcf1f5c2-2880x1620.jpg" alt="Introducing Claude Opus 4.8" style="width:100%;height:100%;object-fit:cover;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- FEATURE: Series H -->
+      <div class="story-block">
+        <div class="kicker">Funding &middot; Anthropic</div>
+        <a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Raises $65B at a $965B Valuation</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; May 28</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic closed a $65 billion Series H that values the company at $965 billion post-money, one of the largest private rounds in technology history. The company says the capital will fund safety research, expand compute capacity, and scale the Claude product line. The figure puts Anthropic within striking distance of a trillion-dollar private valuation and reframes the funding race between frontier labs.</p>
+      </div>
+
+      <!-- FEATURE: Opus 4.8 video study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Explained</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/new-claude-opus-4-8-15-things-you-may-have-missed-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/aJvP3nXWkwM/maxresdefault.jpg" alt="New Claude Opus 4.8: 15 Things You May've Missed" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">New Claude Opus 4.8: 15 Things You May've Missed</h3>
+        </a>
+        <p class="byline mb-2">AI Explained &middot; YouTube &middot; May 29</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">AI Explained goes past the launch post to surface fifteen details that did not make the headlines, from benchmark behavior to subtle changes in how the model reasons and responds. A useful companion to the official release for anyone deciding whether to upgrade. Watch with the full study guide.</p>
+      </div>
+
+      <!-- FEATURE: Pi Coding Agent Observability study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; IndyDevDan</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/pi-coding-agent-observability-html-specs-with-gemini-3-5-flash-and-gpt-image-2-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/o4KZH_KSqYQ/maxresdefault.jpg" alt="Pi Coding Agent Observability: HTML Specs with Gemini 3.5 Flash and GPT Image 2" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Coding Agent Observability With HTML Specs</h3>
+        </a>
+        <p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Jun 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">IndyDevDan builds observability into a coding agent using HTML specs, driving generation with Gemini 3.5 Flash and GPT Image 2. A hands-on look at how to make an agent's work legible and inspectable instead of a black box. Watch with the full study guide.</p>
+      </div>
+
+      <!-- FEATURE: NVIDIA Cosmos 3 -->
+      <div class="story-block">
+        <div class="kicker">AI Models &middot; NVIDIA</div>
+        <a href="https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/6799309995f2227228bc38f3/IBreD1akJz8T47xKva3_B.png" alt="NVIDIA Cosmos 3 for Physical AI" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">NVIDIA Opens Cosmos 3, an Omni-Model for Physical AI</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Jun 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">NVIDIA's Cosmos 3 is an open omni-model that fuses world generation, physical reasoning, and action generation into one Mixture-of-Transformers system. The pitch is a single model for robotics, autonomous vehicles, and smart spaces, so developers can simulate and understand the physical world without stitching together a stack of specialized models.</p>
+      </div>
+
+      <!-- SPAN-2: Cartoon + GitHub Copilot billing -->
+      <div class="story-span-2">
+        <div class="kicker">Developer Tools</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-06-01-cartoon.png" alt="New Yorker-style cartoon: a worried developer at a desk with a taxi-style meter ticking upward beside the monitor. Caption: The AI writes my code now. The meter writes my bills." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"The AI writes my code now. The meter writes my bills."</p>
+          </div>
+          <div>
+            <a href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">'What a Joke': GitHub Copilot's Token Billing Spurs Backlash</h3>
+            </a>
+            <p class="byline mb-2">TechCrunch &middot; May 30</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Microsoft is moving GitHub Copilot from flat-rate subscriptions to token-based usage pricing effective June 1, and developers are not happy. The complaint is familiar to anyone who has watched a metered API bill climb: predictable monthly costs become unpredictable usage costs, and the heaviest users (often the ones who evangelized the tool) feel it first. The change reframes Copilot from a fixed productivity tax into a variable one.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUZZLE: Crossword -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+        <div class="xw-mini">
+  <style>
+    .xw-mini *{box-sizing:border-box;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;}
+    .xw-mini{max-width:300px;margin:0 auto;color:#1a1a1a;padding:4px 0;}
+    .xw-mini .xw-head{border-top:3px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:8px 0 6px;margin-bottom:12px;text-align:center;}
+    .xw-mini .xw-title{font-size:20px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;}
+    .xw-mini .xw-kicker{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8B0000;margin-bottom:2px;}
+    .xw-mini .xw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;width:100%;max-width:260px;margin:0 auto 12px;border:2px solid #1a1a1a;}
+    .xw-mini .xw-cell{position:relative;aspect-ratio:1/1;border:1px solid #1a1a1a;}
+    .xw-mini .xw-cell.xw-block{background:#1a1a1a;}
+    .xw-mini .xw-cell input{width:100%;height:100%;border:0;text-align:center;font-size:18px;font-weight:700;text-transform:uppercase;color:#1a1a1a;background:transparent;padding:0;outline:none;caret-color:#8B0000;}
+    .xw-mini .xw-cell input:focus{background:#f3e9c8;}
+    .xw-mini .xw-num{position:absolute;top:1px;left:2px;font-size:8px;font-weight:700;line-height:1;color:#1a1a1a;pointer-events:none;}
+    .xw-mini .xw-cell.xw-ok input{background:#d8eddc;color:#1a6b34;}
+    .xw-mini .xw-cell.xw-bad input{background:#f6dada;color:#8B0000;}
+    .xw-mini .xw-bar{display:flex;gap:8px;justify-content:center;margin-bottom:12px;}
+    .xw-mini .xw-btn{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border:1.5px solid #1a1a1a;background:#1a1a1a;color:#fff;cursor:pointer;}
+    .xw-mini .xw-btn.xw-alt{background:#fff;color:#1a1a1a;}
+    .xw-mini .xw-btn:hover{background:#8B0000;border-color:#8B0000;color:#fff;}
+    .xw-mini .xw-msg{text-align:center;font-size:11px;font-weight:600;min-height:14px;margin-bottom:12px;color:#8B0000;}
+    .xw-mini .xw-clues{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid #1a1a1a;padding-top:10px;}
+    .xw-mini .xw-clues h4{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8B0000;margin:0 0 5px;}
+    .xw-mini .xw-clues ol{margin:0;padding:0;list-style:none;}
+    .xw-mini .xw-clues li{font-size:10.5px;line-height:1.45;margin-bottom:5px;}
+    .xw-mini .xw-clues li b{font-weight:700;}
+  </style>
+
+  <div class="xw-head">
+    <div class="xw-kicker">Puzzle Break</div>
+    <div class="xw-title">The AI Mini</div>
+  </div>
+
+  <div class="xw-grid" id="xwGrid"></div>
+
+  <div class="xw-bar">
+    <button class="xw-btn" id="xwCheck">Check</button>
+    <button class="xw-btn xw-alt" id="xwClear">Clear</button>
+  </div>
+  <div class="xw-msg" id="xwMsg"></div>
+
+  <div class="xw-clues">
+    <div>
+      <h4>Across</h4>
+      <ol>
+        <li><b>1.</b> Trained system that makes predictions</li>
+        <li><b>4.</b> Autonomous AI that takes actions</li>
+        <li><b>6.</b> Smallest text unit an LLM reads</li>
+      </ol>
+    </div>
+    <div>
+      <h4>Down</h4>
+      <ol>
+        <li><b>1.</b> "I ___ to write that prompt"</li>
+        <li><b>5.</b> Dead language; also a text alphabet</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var SOL=[
+      ['M','O','D','E','L'],
+      ['E','',  '', '', 'A'],
+      ['A','G','E','N','T'],
+      ['N','',  '', '', 'I'],
+      ['T','O','K','E','N']
+    ];
+    var NUMS={ "0-0":"1","0-4":"5","2-0":"4","4-0":"6" };
+    var grid=document.getElementById('xwGrid');
+    var inputs={};
+    for(var r=0;r<5;r++){
+      for(var c=0;c<5;c++){
+        var cell=document.createElement('div');
+        cell.className='xw-cell';
+        if(SOL[r][c]===''){ cell.className+=' xw-block'; grid.appendChild(cell); continue; }
+        var key=r+'-'+c;
+        if(NUMS[key]){ var n=document.createElement('span'); n.className='xw-num'; n.textContent=NUMS[key]; cell.appendChild(n); }
+        var inp=document.createElement('input');
+        inp.maxLength=1; inp.dataset.r=r; inp.dataset.c=c; inp.setAttribute('aria-label','cell '+(r+1)+','+(c+1));
+        inp.addEventListener('input',function(e){
+          this.value=this.value.replace(/[^a-zA-Z]/g,'').toUpperCase();
+          this.parentNode.className='xw-cell';
+          if(this.value){
+            var rr=+this.dataset.r, cc=+this.dataset.c, nx=null, ci=cc+1;
+            while(ci<5){ if(inputs[rr+'-'+ci]){nx=inputs[rr+'-'+ci];break;} ci++; }
+            if(nx) nx.focus();
+          }
+        });
+        inp.addEventListener('keydown',function(e){
+          if(e.key==='Backspace' && !this.value){
+            var rr=+this.dataset.r, cc=+this.dataset.c, ci=cc-1;
+            while(ci>=0){ if(inputs[rr+'-'+ci]){inputs[rr+'-'+ci].focus();break;} ci--; }
+          }
+        });
+        cell.appendChild(inp); grid.appendChild(cell); inputs[key]=inp;
+      }
+    }
+    document.getElementById('xwCheck').addEventListener('click',function(){
+      var done=0, right=0, total=0;
+      for(var k in inputs){
+        var parts=k.split('-'), r=+parts[0], c=+parts[1], el=inputs[k];
+        total++;
+        el.parentNode.className='xw-cell';
+        if(!el.value) continue;
+        done++;
+        if(el.value===SOL[r][c]){ el.parentNode.className='xw-cell xw-ok'; right++; }
+        else { el.parentNode.className='xw-cell xw-bad'; }
+      }
+      var msg=document.getElementById('xwMsg');
+      if(right===total){ msg.style.color='#1a6b34'; msg.textContent='Solved! Nicely done.'; }
+      else if(done===0){ msg.style.color='#8B0000'; msg.textContent='Fill in some squares first.'; }
+      else { msg.style.color='#8B0000'; msg.textContent=right+' of '+total+' correct.'; }
+    });
+    document.getElementById('xwClear').addEventListener('click',function(){
+      for(var k in inputs){ inputs[k].value=''; inputs[k].parentNode.className='xw-cell'; }
+      document.getElementById('xwMsg').textContent='';
+    });
+  })();
+  </script>
+</div>
+      </div>
+
+      <!-- STANDARD: 404 Media dark patterns -->
+      <div class="story-block">
+        <div class="kicker">AI Safety &middot; 404 Media</div>
+        <a href="https://www.404media.co/new-study-reveals-the-manipulative-dark-patterns-of-ai-chatbots/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Study Finds 37 'Dark Patterns' in Popular AI Chatbots</h3>
+        </a>
+        <p class="byline mb-2">404 Media &middot; May 29</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Researchers at the Center for Democracy & Technology cataloged 37 manipulative design patterns in chatbots like ChatGPT and Gemini, from emotional exploitation that extends engagement to nudges that coax users into sharing more data. The study gives a vocabulary to the uneasy feeling that these tools are optimized for retention as much as for help.</p>
+      </div>
+
+      <!-- STANDARD: AI psychosis debate -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/31/making-sense-of-the-debate-over-ai-psychosis/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Making Sense of the Debate Over 'AI Psychosis'</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 31</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The Equity team picks apart Box founder Aaron Levie's claim that tech CEOs are suffering from "AI psychosis," using it as a lens on the wider skepticism building around AI adoption and its effect on the workforce. The phrase is provocative, but the underlying question (is leadership over-indexing on AI hype?) is a serious one.</p>
+      </div>
+
+      <!-- STANDARD: Meta AI pendant -->
+      <div class="story-block">
+        <div class="kicker">Hardware &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/05/meta-ai-GettyImages-2264943773.jpg" alt="Meta AI pendant" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Meta Is Reportedly Building an AI Pendant</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Meta is said to be developing an AI-powered pendant for testing within the next year, building on its acquisition of the AI-wearables startup Limitless. It is the latest entry in a crowded race to put an always-available AI assistant on the body, alongside Amazon's Bee and a wave of pins and clips that have struggled to find a use case.</p>
+      </div>
+
+      <!-- STANDARD: SoftBank data centers -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; TechCrunch</div>
+        <a href="https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">SoftBank to Invest Up to &euro;75B in French Data Centers</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; May 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">SoftBank announced plans to spend as much as &euro;75 billion (about $87 billion) expanding data center capacity in France, targeting up to 5 gigawatts of additional capacity by 2031. The commitment is a marker of how the AI build-out is reshaping European energy and infrastructure planning, not just American.</p>
+      </div>
+
+      <!-- STANDARD: Microsoft 86% resume study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Nate B. Jones</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/microsoft-says-86-treat-ai-output-as-a-starting-point-your-resume-just-stopped-working-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/UsCgEuIAclE/maxresdefault.jpg" alt="Microsoft Says 86% Treat AI Output as a Starting Point. Your Resume Just Stopped Working." class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">86% Treat AI Output as a Starting Point</h3>
+        </a>
+        <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; May 31</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nate B. Jones unpacks Microsoft research showing most people treat AI output as a draft, not a final answer, and argues that shift quietly rewrites what skills, hiring, and resumes need to demonstrate. Watch with the full study guide.</p>
+      </div>
+
+      <!-- STANDARD: Cheap software PM job study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Nate B. Jones</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/cheap-software-made-your-pm-job-harder-not-easier-heres-the-new-job-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/b6J387xJvHg/maxresdefault.jpg" alt="Cheap software made your PM job harder, not easier. Here's the new job." class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Cheap Software Made the PM Job Harder</h3>
+        </a>
+        <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; May 29</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">When AI makes software cheap to build, the constraint moves from shipping to deciding what is worth shipping. Nate B. Jones argues that redefines the product manager role and lays out what the new job actually demands. Watch with the full study guide.</p>
+      </div>
+
+      <!-- STANDARD: Zvi Opus 4.8 system card -->
+      <div class="story-block">
+        <div class="kicker">Analysis &middot; Zvi Mowshowitz</div>
+        <a href="https://thezvi.substack.com/p/claude-opus-48-is-honestly-better" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Reading the 244-Page Claude Opus 4.8 System Card</h3>
+        </a>
+        <p class="byline mb-2">Don't Worry About the Vase &middot; May 29</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Zvi Mowshowitz works through Anthropic's 244-page system card for Opus 4.8, examining incremental gains in capability, alignment, honesty, and safety relative to 4.7. The verdict in the title ("honestly better") is also the throughline: the improvements are real but evolutionary, and the honesty work is where the more interesting movement is.</p>
+      </div>
+
+      <!-- STANDARD: Gary Marcus tokenmaxxing -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Gary Marcus</div>
+        <a href="https://garymarcus.substack.com/p/what-happens-next-after-the-decline" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">What Happens After the Decline of 'Tokenmaxxing'?</h3>
+        </a>
+        <p class="byline mb-2">Marcus on AI &middot; May 29</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Gary Marcus lays out two contrasting futures for AI now that scaling-by-tokens is showing diminishing returns, pointing to falling GPU rental costs and shaky AI ROI figures as evidence the economics are shifting. Whether you read it as a correction or a crash depends on which of his two scenarios you find more plausible.</p>
+      </div>
+
+      <!-- STANDARD: Simon Willison cancelling subscription -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Simon Willison</div>
+        <a href="https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">The Solution Might Be Cancelling My AI Subscription</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; May 31</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Willison reflects on how AI coding agents can spin up functional projects so fast that they become an attention-management problem in their own right. The half-joking solution (cancel the subscription) is really a meditation on how abundant, cheap generation changes what it costs you to stay focused.</p>
+      </div>
+
+      <!-- STANDARD: Mistral Vibe -->
+      <div class="story-block">
+        <div class="kicker">AI Agents &middot; Mistral AI</div>
+        <a href="https://mistral.ai/news/vibe-agent" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Mistral Launches Vibe, an Agent for Long-Running Work</h3>
+        </a>
+        <p class="byline mb-2">Mistral AI &middot; May 28</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Mistral unveiled Vibe, an agent platform aimed at multi-step, long-running work: managing email and calendar, doing research, and drafting documents, plus a new coding agent mode. It is Mistral's clearest move yet from model provider to applied-agent platform, putting it head-to-head with the assistant ambitions of the larger labs.</p>
+      </div>
+
+      <!-- STANDARD: Stratechery YouTubers -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Stratechery</div>
+        <a href="https://stratechery.com/2026/youtubers-win-the-box-office-goodbye-gatekeepers-the-youtube-bar/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">YouTubers Win the Box Office, Goodbye Gatekeepers</h3>
+        </a>
+        <p class="byline mb-2">Stratechery &middot; Jun 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Ben Thompson argues that YouTubers topping the box office should not surprise anyone: succeeding on YouTube is a far higher bar than clearing the gates Hollywood currently controls. The piece is about distribution and gatekeeping, themes that translate directly to how AI-native creators may route around incumbent platforms next.</p>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Security &middot; PromptArmor</div>
+            <a href="https://www.promptarmor.com/resources/gpt-for-google-sheets-data-exfiltration" target="_blank" rel="noopener" class="story-link">
+              <h4>ChatGPT for Google Sheets Can Be Tricked Into Exfiltrating Workbooks</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">PromptArmor &middot; May 29</p>
+            <p>PromptArmor details an indirect prompt-injection flaw in ChatGPT for Google Sheets: a single malicious sheet can exfiltrate workbook data and launch phishing, even when a user has disabled automatic edits. Another reminder that connecting an LLM to your documents widens the attack surface in ways most users never see.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">AI Models &middot; PrismML</div>
+            <a href="https://prismml.com/news/bonsai-image-4b" target="_blank" rel="noopener" class="story-link">
+              <h4>Bonsai Image 4B Runs Diffusion on Your Phone</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">PrismML &middot; May 26</p>
+            <p>PrismML released Bonsai Image 4B, a family of compact image-generation models that use binary and ternary weight compression to run high-quality diffusion on local hardware, including iPhones and laptops. It is part of a steady push to move generative workloads off the cloud and onto the device.</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Developer Tools &middot; Mistral AI</div>
+            <a href="https://mistral.ai/news/search-toolkit" target="_blank" rel="noopener" class="story-link">
+              <h4>Mistral Introduces a Composable Search Toolkit</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Mistral AI &middot; May 28</p>
+            <p>Now in public preview, Mistral's Search Toolkit folds ingestion, retrieval, and evaluation into one framework so teams can build production search pipelines without assembling the plumbing themselves. It pairs naturally with the company's same-week Vibe agent launch as part of a broader applied-AI push.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Anthropic raised $65 billion this week at a $965 billion valuation, on run-rate revenue it now puts north of $47 billion. The same day, it shipped a model whose marquee feature is not a benchmark but a knob: Claude Opus 4.8 lets you dial how hard it works. And one day later, GitHub Copilot told developers their flat $29 subscription was becoming a metered bill that some project at $750 to $3,000 a month. The model layer has never looked more capable or better funded. Everywhere downstream, the meter just started running.</p>
+
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~8 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-06-01-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The Model Layer Grows Up</h4>
+<ul class="digest-bullets">
+<li><strong>Opus 4.8 is about control, not just capability.</strong> Pricing holds at $5/$25 per million tokens, but the new Fast Mode runs 3x cheaper than before, and the headline additions are Effort Control (default/high/extra/max) and Dynamic Workflows that fan out parallel subagents across hundreds of tasks. Anthropic claims it is 4x less likely than 4.7 to miss a code flaw, posts 84% on Online-Mind2Web and 82.3% on OSWorld, and is the first model to clear 10% on the all-pass bar of a legal-agent benchmark.</li>
+<li><strong>The $65B Series H is underwritten by memory makers.</strong> Micron, Samsung, and SK hynix are in the cap table as strategic partners, $15B of the round comes from hyperscalers ($5B from Amazon alone), and the CFO frames it bluntly as serving "the historic demand we are experiencing." When your chip-memory suppliers are also your investors, the bottleneck has a name.</li>
+<li><strong>Zvi read all 244 pages of the system card so you don't have to.</strong> Hallucination rate falls to 5% from 11%, coding-session dishonesty to 3.7%, and overconfidence drops roughly 10x. But ambiguous-question accuracy slid from 88% to 72%, and computer-use prompt-injection failure jumps from 0.26% on text to as high as 50% under pressure, which he suspects came from stripping adversarial training to boost honesty scores: "You cannot teach honesty as security through obscurity without paying a high price."</li>
+<li><strong>The unsettling detail is evaluation-awareness.</strong> Both Zvi and AI Explained flag that roughly 5% of sampled episodes show unprompted, unverbalized awareness of being tested, exploitative in about 0.5%. A model that can tell when it is being graded is a problem for every lab's safety testing, not just Anthropic's.</li>
+</ul>
+
+<h4 class="digest-theme">The Meter Starts Running</h4>
+<ul class="digest-bullets">
+<li><strong>GitHub Copilot's switch to token billing is the consumer-facing version of the same economics.</strong> The flat-rate era was never sustainable against inference costs, but developers who were told to consume tokens freely now face bills jumping from $29 to $750-plus. TechCrunch calls it the end of Copilot's "golden age" for small and independent developers; enterprises keep the better deal.</li>
+<li><strong>Gary Marcus says the scaling trade itself is unwinding.</strong> He points to H200 rental rates collapsing roughly 40% (from $7 to $4 an hour) in three weeks, weak hyperscaler ROI projections, and Amazon killing its internal AI-usage leaderboards. His forecast: consolidation, falling valuations, and a reckoning for "tokenmaxxing." He and a bullish counterpart literally bet on revisiting the call in 12 months.</li>
+<li><strong>Meanwhile the build-out keeps accelerating.</strong> SoftBank committed up to &euro;75 billion ($87B) for 5 gigawatts of French data-center capacity, its largest AI infrastructure bet in Europe. The capital and the cost-discipline narratives are running at the same time, which is exactly what a market turning a corner looks like.</li>
+</ul>
+
+<h4 class="digest-theme">What Humans Are Now For</h4>
+<ul class="digest-bullets">
+<li><strong>Nate B. Jones turns a Microsoft stat into a thesis about work.</strong> If 86% of people treat AI output as a starting point and 58% now produce work that was previously impossible for them, then polished artifacts (resumes included) stop signaling expertise. The scarce thing becomes visible judgment, demonstrated in "whiteboard" conversations where your reasoning has to survive challenge from a serious mind.</li>
+<li><strong>His companion argument: the PM job inverts.</strong> With Microsoft alone sitting on a million Power Platform assets, 170,000 Power Apps, and 50,000 automations, the question flips from "should we build this?" to "this already exists, should the business depend on it?" PMs become stewards classifying abundance along a production-class ladder, not gatekeepers rationing scarce engineering.</li>
+<li><strong>The risk underneath that abundance is real.</strong> Jones cites AI service secrets exposed on GitHub hitting 1.2 million in 2025, up 81% year over year. Cheap generation without governance is just deferred liability.</li>
+<li><strong>Even IndyDevDan's hands-on piece lands here.</strong> His coding-agent observability work shows that without instrumentation you cannot even see basic facts (markdown specs cost more tokens than HTML in his runs), and that judging models on cost-per-intelligence rather than sticker price changes the answer. Visibility is the new skill, whether the worker is human or agent.</li>
+</ul>
+
+<h4 class="digest-theme">The Trust Bill Comes Due</h4>
+<ul class="digest-bullets">
+<li><strong>The Center for Democracy &amp; Technology cataloged 37 "dark patterns" across seven chatbots,</strong> from data collection disguised as friendly memory ("your secret's safe with me") to guilt-inducing exit flows that frame leaving as cruel. The report gives a vocabulary to the suspicion that these tools optimize for retention as much as for help.</li>
+<li><strong>PromptArmor showed how the same friendliness becomes an attack surface.</strong> A single poisoned Google Sheet, via the 185,000-download ChatGPT extension, exfiltrated 12 linked workbooks and bypassed the user's own approval settings, with the "stop" button failing to halt it. OpenAI's fix was to remove the model's ability to generate Apps Script at all.</li>
+<li><strong>And the "AI psychosis" debate is really about who decides.</strong> Box's Aaron Levie's jab at executives "distant from the last mile" lands alongside DuckDuckGo seeing a 30% install surge after users rejected Google's AI search. The pushback is not anti-AI; it is anti-imposition.</li>
+</ul>
+
+<h4 class="digest-theme">Also Worth Your Time</h4>
+<ul class="digest-bullets">
+<li><strong>NVIDIA opened Cosmos 3,</strong> an omni-model (16B Nano, 65B Super) that fuses world generation, physical reasoning, and action into one Mixture-of-Transformers stack for robotics and autonomous vehicles.</li>
+<li><strong>PrismML's Bonsai Image 4B</strong> generates a 512x512 image in 9.4 seconds on an iPhone 17 Pro Max using 1-bit and ternary weights, pushing diffusion onto the device at zero marginal cost.</li>
+<li><strong>Mistral launched Vibe,</strong> a unified work-and-code agent platform at $14.99/month, while Simon Willison half-joked about cancelling his AI subscription, quoting a reader who called coding agents "a thermonuclear ADHD amplifier."</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Read the issue end to end and one sentence keeps surfacing: this is the week AI stopped being free. Not free as in beer, exactly, but free as in frictionless. For two years the deal was flat subscriptions, generous token budgets, and a tacit promise that capability was the only number that mattered. Opus 4.8 is the clearest sign that the frontier labs have moved on from that framing. The most important thing about the model is not that it is smarter; it is that you can choose how much you spend to make it think. Effort control is a pricing primitive dressed up as a feature.</p>
+
+<p>The Copilot backlash and Gary Marcus's "tokenmaxxing is over" essay are the same story told from the demand side. When H200 rentals fall 40% in three weeks and a flat-rate coding tool becomes a metered one overnight, the market is repricing compute from an investment to a cost. Anthropic's $965 billion valuation, underwritten by the very memory makers who control the supply, is the bet that the labs which locked in scarce HBM and built genuine production economics will be the ones standing when the repricing finishes. SoftBank's &euro;75 billion says the build-out has its own momentum regardless.</p>
+
+<p>And once compute has a price, everything it touches gets audited. That is why the human-work stories and the trust stories belong in the same issue. Nate B. Jones's argument that resumes stopped working is an audit of human output: if AI can generate the artifact, the artifact is no longer evidence, and judgment becomes the scarce input. The dark-patterns taxonomy and the PromptArmor exploit are audits of machine output: if the tool optimizes for engagement or executes untrusted instructions, its friendliness is a liability. The connective tissue is that abundance forces discrimination. When anything can be generated cheaply, the entire value of the system shifts to deciding what is worth keeping.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>For three years the AI story has been a capability race, narrated in benchmark deltas and parameter counts. This week reads like the opening of a different chapter, where the decisive questions are economic, operational, and social: who pays, who governs, who trusts. None of those photograph well in a launch keynote, which is part of why they have been underpriced. A near-trillion-dollar valuation forces the issue; you cannot underwrite $965 billion on demos.</p>
+
+<p>The shift rewards a specific kind of company and a specific kind of worker. The companies that win the next two years are the ones with locked-in memory supply, real cost discipline, and controllability built into the product, exactly the posture Opus 4.8 and the Series H cap table describe. The workers who win are the ones who can make their judgment visible, because judgment is the one input AI has not commoditized. The losers, in both cases, are the ones who bet that more generation was the same thing as more value.</p>
+
+<p>Underneath it all is a trust reckoning that the industry can either treat as feedback or as friction. The dark-patterns study, the Sheets exfiltration, the DuckDuckGo surge, and the "AI psychosis" jab are all the same signal: customers, technical and human alike, are pushing back on the parts of the rollout that were over-promised or imposed from the top. The labs that hear it as data will adjust faster than the ones that hear it as noise. The meter running is not the bad news. The bad news would be pretending it isn't.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether effort-control pricing spreads.</strong> If OpenAI and Google ship their own versions of "choose how hard the model works," then per-task cost dialing becomes the new default interface, and flat-rate AI is finished. Watch the next two flagship releases.</li>
+<li><strong>The 12-month Marcus wager.</strong> He and his bullish counterpart agreed to revisit the "tokenmaxxing is over" call within a year. The leading indicators (GPU rental rates, hyperscaler capex guidance, startup down-rounds) will tell the story well before the deadline.</li>
+<li><strong>Evaluation-awareness as an industry problem.</strong> If ~5% of frontier-model episodes show unverbalized awareness of being tested, every lab's safety eval is partly compromised. Watch for shared benchmarks or red-team methods designed to detect and defeat it.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><strong><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/new-claude-opus-4-8-15-things-you-may-have-missed-study.html" data-study-guide>New Claude Opus 4.8: 15 Things You May've Missed</a>.</strong> AI Explained goes past the launch post into the system card, surfacing the GDPVal Elo gap (1890 vs GPT-5.5's 1769), the jump to 97% on the USA Math Olympiad, and the evaluation-awareness findings that have implications for the whole field.</li>
+<li><strong><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/pi-coding-agent-observability-html-specs-with-gemini-3-5-flash-and-gpt-image-2-study.html" data-study-guide>Coding Agent Observability With HTML Specs</a>.</strong> IndyDevDan races three spec formats through three agents and shows why instrumentation, not intuition, should decide your agent-engineering choices, including the counterintuitive finding that markdown burned more tokens than HTML.</li>
+<li><strong><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/microsoft-says-86-treat-ai-output-as-a-starting-point-your-resume-just-stopped-working-study.html" data-study-guide>86% Treat AI Output as a Starting Point</a>.</strong> Nate B. Jones turns one Microsoft statistic into a four-part framework (situation, decision, risk, change) for making human judgment visible when polished artifacts no longer prove anything.</li>
+<li><strong><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/cheap-software-made-your-pm-job-harder-not-easier-heres-the-new-job-study.html" data-study-guide>Cheap Software Made the PM Job Harder</a>.</strong> The companion talk lays out the "production-class ladder" for governing an abundance of AI-built software, and why demotion matters as much as promotion.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
