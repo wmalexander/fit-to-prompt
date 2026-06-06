@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - June 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup - June 6, 2026. Google will pay SpaceX $920M a month for compute, the token bill comes due across the AI industry, Anthropic heads toward its IPO, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #55">
+  <meta property="og:description" content="Daily AI news roundup - June 6, 2026. Google will pay SpaceX $920M a month for compute, the token bill comes due across the AI industry, Anthropic heads toward its IPO, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Saturday, June 6, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 55</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>13 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Infrastructure &middot; Compute</div>
+          <a href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Google Will Pay SpaceX $920M a Month for Compute</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; Jun 5</p>
+          <div class="newspaper-body">
+            <p>SpaceX has agreed to supply Google with compute capacity for roughly $920 million per month, a deal that runs from October 2026 through June 2029 and routes on the order of 110,000 NVIDIA GPUs to Google's AI workloads. The arrangement is striking on its own terms, but it is the direction of the money that matters: a rocket company is now a compute landlord, and one of the world's largest cloud providers is the tenant. The AI build-out has grown large enough that even hyperscalers are renting capacity from outside their own data centers.</p>
+            <p>The number also reframes how to read every other AI cost story in circulation this week. A near-billion-dollar monthly compute bill is the supply-side mirror of the metered invoices landing on developers and enterprises. When the people who own the GPUs sign contracts this size, the pressure flows downstream as usage caps, token billing, and a sudden industry-wide interest in what inference actually costs.</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:#1a1a1a;">
+          <a href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2259661359.jpg?w=1024" alt="Google and SpaceX compute deal" style="width:100%;height:100%;object-fit:cover;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Token bill comes due -->
+      <div class="story-span-2">
+        <div class="kicker">AI Economics</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-06-06-cartoon.png" alt="New Yorker-style cartoon: a stressed developer at a laptop while a suited manager holds an enormously long accordion-folded invoice unspooling across the floor, with a rising COSTS chart on the wall. Caption: The AI wrote the code for free. Then it sent us the bill." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"The AI wrote the code for free. Then it sent us the bill."</p>
+          </div>
+          <div>
+            <a href="https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">The Token Bill Comes Due as the Industry Scrambles</h3>
+            </a>
+            <p class="byline mb-2">TechCrunch &middot; Jun 5</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Across the industry, AI token consumption is climbing faster than per-token prices are falling, and the resulting bills are forcing a reckoning. The Linux Foundation has launched a Tokenomics Foundation to set standards for tracking and managing AI spend, echoing how FinOps once tamed runaway cloud costs. The story is the connective tissue of the week: the same cost pressure shows up as usage caps at Uber, token billing at GitHub Copilot, and nine-figure compute contracts up the stack.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE: Anthropic IPO -->
+      <div class="story-block">
+        <div class="kicker">Business &middot; Anthropic</div>
+        <a href="https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/06/55314412841_11b924318f_c.jpg?w=799" alt="Anthropic's Daniela Amodei" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Ahead of Its IPO, Anthropic Shrugs Off Doubts on AI's Returns</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jun 4</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">With a public listing now in view after a $65 billion raise at a $965 billion valuation, co-founder Daniela Amodei waves off the skeptics questioning whether AI's returns justify the spending. Her framing is that the capital intensity is the point: training and deploying frontier models simply requires this much money, and the IPO is how you fund it at scale. It is the clearest signal yet that Anthropic intends to test public markets on the bet.</p>
+      </div>
+
+      <!-- FEATURE: Project Glasswing -->
+      <div class="story-block">
+        <div class="kicker">Cybersecurity &middot; Anthropic</div>
+        <a href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/19e93d85e033d3f992b78cbce2c5a3f60709bd3b-3840x2160.jpg" alt="Anthropic Project Glasswing" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Anthropic Expands Project Glasswing to 150 New Partners</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jun 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic is widening Project Glasswing, its cybersecurity initiative built on a Claude Mythos Preview model, to roughly 150 new partner organizations across more than 15 countries. The goal is to help defenders secure critical infrastructure and software at a moment when attackers are increasingly AI-assisted. The expansion pairs naturally with the company's own research on how threat actors are folding AI into post-compromise operations.</p>
+      </div>
+
+      <!-- FEATURE: Making Claude a chemist -->
+      <div class="story-block">
+        <div class="kicker">Research &middot; Anthropic</div>
+        <a href="https://www.anthropic.com/research/making-claude-a-chemist" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Making Claude a Chemist: Reading NMR Spectra</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jun 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic shows how Claude performs on NMR spectrum analysis, a foundational task in chemistry, predicting chemical shifts and proposing molecular structures from spectral data. It is a concrete example of frontier models moving past text and code into the specialized reasoning of a scientific discipline. The work is early, but it sketches a path toward AI as a working lab collaborator rather than a general assistant.</p>
+      </div>
+
+      <!-- PUZZLE: Scramble -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Scramble</div>
+        <div class="scr-mini">
+  <style>
+    .scr-mini *{box-sizing:border-box;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;}
+    .scr-mini{max-width:300px;margin:0 auto;color:#1a1a1a;padding:4px 0;}
+    .scr-mini .scr-head{border-top:3px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:8px 0 6px;margin-bottom:12px;text-align:center;}
+    .scr-mini .scr-title{font-size:20px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;}
+    .scr-mini .scr-kicker{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8B0000;margin-bottom:2px;}
+    .scr-mini .scr-sub{font-size:10.5px;line-height:1.45;color:#4b5563;margin-bottom:12px;text-align:center;}
+    .scr-mini .scr-row{margin-bottom:11px;}
+    .scr-mini .scr-word{font-size:17px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:3px;}
+    .scr-mini .scr-word .hl{color:#8B0000;}
+    .scr-mini .scr-clue{font-size:10.5px;color:#4b5563;line-height:1.4;margin-bottom:4px;}
+    .scr-mini input{width:100%;border:0;border-bottom:1.5px solid #1a1a1a;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1a1a1a;background:transparent;padding:3px 2px;outline:none;}
+    .scr-mini input:focus{border-color:#8B0000;}
+    .scr-mini input.ok{border-color:#1a6b34;color:#1a6b34;}
+    .scr-mini input.bad{border-color:#8B0000;color:#8B0000;}
+    .scr-mini .scr-bonus{border-top:1px solid #1a1a1a;margin-top:8px;padding-top:10px;}
+    .scr-mini .scr-bonus .scr-clue{font-weight:600;color:#1a1a1a;}
+    .scr-mini .scr-bar{display:flex;gap:8px;justify-content:center;margin-top:12px;}
+    .scr-mini .scr-btn{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border:1.5px solid #1a1a1a;background:#1a1a1a;color:#fff;cursor:pointer;}
+    .scr-mini .scr-btn.alt{background:#fff;color:#1a1a1a;}
+    .scr-mini .scr-btn:hover{background:#8B0000;border-color:#8B0000;color:#fff;}
+    .scr-mini .scr-msg{text-align:center;font-size:11px;font-weight:600;min-height:14px;margin-top:10px;color:#8B0000;}
+  </style>
+
+  <div class="scr-head">
+    <div class="scr-kicker">Puzzle Break</div>
+    <div class="scr-title">Scramble</div>
+  </div>
+  <p class="scr-sub">Unscramble each word from today's news. The <span style="color:#8B0000;font-weight:700;">red</span> letters spell the bonus word.</p>
+
+  <div class="scr-row">
+    <div class="scr-word">T E <span class="hl">M</span> C O U P</div>
+    <div class="scr-clue">What Google rents from SpaceX (7)</div>
+    <input data-ans="COMPUTE" maxlength="7" aria-label="word 1">
+  </div>
+  <div class="scr-row">
+    <div class="scr-word">E N <span class="hl">O</span> K T</div>
+    <div class="scr-clue">Smallest unit an LLM bills you for (5)</div>
+    <input data-ans="TOKEN" maxlength="5" aria-label="word 2">
+  </div>
+  <div class="scr-row">
+    <div class="scr-word">T I C H E <span class="hl">S</span> M</div>
+    <div class="scr-clue">What Claude is learning to be (7)</div>
+    <input data-ans="CHEMIST" maxlength="7" aria-label="word 3">
+  </div>
+  <div class="scr-row">
+    <div class="scr-word">R N Y S <span class="hl">C</span></div>
+    <div class="scr-clue">Unix file-sync tool in the Claude bug study (5)</div>
+    <input data-ans="RSYNC" maxlength="5" aria-label="word 4">
+  </div>
+
+  <div class="scr-bonus">
+    <div class="scr-clue">Bonus: what the whole issue is really about (4)</div>
+    <input data-ans="COST" maxlength="4" aria-label="bonus word">
+  </div>
+
+  <div class="scr-bar">
+    <button class="scr-btn" id="scrCheck">Check</button>
+    <button class="scr-btn alt" id="scrClear">Clear</button>
+  </div>
+  <div class="scr-msg" id="scrMsg"></div>
+
+  <script>
+  (function(){
+    var root=document.currentScript.parentNode;
+    var inputs=root.querySelectorAll('input');
+    inputs.forEach(function(inp){
+      inp.addEventListener('input',function(){
+        this.value=this.value.replace(/[^a-zA-Z]/g,'').toUpperCase();
+        this.className='';
+      });
+    });
+    root.querySelector('#scrCheck').addEventListener('click',function(){
+      var right=0,total=inputs.length;
+      inputs.forEach(function(inp){
+        if(inp.value===inp.dataset.ans){inp.className='ok';right++;}
+        else if(inp.value){inp.className='bad';}
+        else{inp.className='';}
+      });
+      var msg=root.querySelector('#scrMsg');
+      if(right===total){msg.style.color='#1a6b34';msg.textContent='Solved! Nicely done.';}
+      else{msg.style.color='#8B0000';msg.textContent=right+' of '+total+' correct.';}
+    });
+    root.querySelector('#scrClear').addEventListener('click',function(){
+      inputs.forEach(function(inp){inp.value='';inp.className='';});
+      root.querySelector('#scrMsg').textContent='';
+    });
+  })();
+  </script>
+</div>
+      </div>
+
+      <!-- STANDARD: AI-enabled cyber threats -->
+      <div class="story-block">
+        <div class="kicker">AI Safety &middot; Anthropic</div>
+        <a href="https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Mapping a Year of AI-Enabled Cyber Threats</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jun 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic's Frontier Red Team analyzed 832 accounts banned for malicious cyber activity and found threat actors increasingly leaning on AI in the post-compromise stages of attacks. The finding weakens traditional risk-assessment frameworks that assume the hard part is initial access. As AI lowers the cost of the later stages, defenders have to rethink where in the kill chain the leverage actually sits.</p>
+      </div>
+
+      <!-- STANDARD: S&P 500 blocks SpaceX -->
+      <div class="story-block">
+        <div class="kicker">AI Policy &middot; Markets</div>
+        <a href="https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">S&amp;P 500 Won't Waive Profit Rule for Unprofitable AI Firms</h3>
+        </a>
+        <p class="byline mb-2">Ars Technica &middot; Jun 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The S&amp;P 500 has declined to fast-track SpaceX's entry, holding firm on its profitability requirement and keeping richly valued but unprofitable AI-era firms out of the index. The decision is a quiet counterweight to the private-market exuberance: public benchmarks still want to see earnings, not just valuations. It also sets the bar Anthropic and its peers will have to clear as they eye public listings.</p>
+      </div>
+
+      <!-- STANDARD: Gemma 4 QAT -->
+      <div class="story-block">
+        <div class="kicker">AI Models &middot; Google</div>
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Gemma 4 Gets Quantization-Aware Training Checkpoints</h3>
+        </a>
+        <p class="byline mb-2">Google &middot; Jun 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google released Quantization-Aware Training checkpoints for Gemma 4 that sharply cut memory requirements while preserving model quality, making the models practical on phones, laptops, and consumer GPUs. It is part of the steady push to run capable models on local hardware, and a direct hedge against exactly the inference-cost pressure dominating the rest of the week's news.</p>
+      </div>
+
+      <!-- STANDARD: rsync bug study -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; Analysis</div>
+        <a href="https://alexispurslane.github.io/rsync-analysis/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Did Claude Increase Bugs in rsync? A Data Check</h3>
+        </a>
+        <p class="byline mb-2">Alexis Purslane &middot; Jun 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A statistical look at whether Claude-assisted development introduced more bugs into rsync, measuring severity-weighted bugs per ten commits across 36 releases. The conclusion: no statistical evidence that the Claude-assisted releases were unusually buggy. It is a useful, numbers-first rebuttal to the anecdote-driven panic about AI-written code degrading mature open-source projects.</p>
+      </div>
+
+      <!-- STANDARD: Services Track Partner Hub -->
+      <div class="story-block">
+        <div class="kicker">Business &middot; Anthropic</div>
+        <a href="https://www.anthropic.com/news/services-track-partner-hub" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Adds a Services Track and Partner Hub</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jun 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic introduced two additions to its Claude Partner Network: a tiered Services Track that measures partner capability, and a Partner Hub directory that connects customers with qualified service providers. The moves are unglamorous but telling, the scaffolding of an enterprise ecosystem rather than a product launch. It is how a model company turns into a platform.</p>
+      </div>
+
+    </div>
+
+    <!-- WIRE BRIEFS -->
+    <section class="my-6">
+      <div class="section-label">The Wire</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">Security &middot; OpenAI</div>
+            <a href="https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/" target="_blank" rel="noopener" class="story-link">
+              <h4>OpenAI Ships a 'Lockdown Mode' Against Prompt Injection</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Simon Willison &middot; Jun 5</p>
+            <p>Simon Willison covers OpenAI's new Lockdown Mode, a security setting that restricts the outbound network requests an assistant can make so that a successful prompt injection has nowhere to send stolen data. It is an admission that exfiltration, not just bad output, is the real risk once you connect a model to your tools.</p>
+          </div>
+          <div class="wire-item">
+            <div class="kicker">AI Economics &middot; Uber</div>
+            <a href="https://simonwillison.net/2026/Jun/3/uber-caps-usage/" target="_blank" rel="noopener" class="story-link">
+              <h4>Uber Caps Employee Spend on Tools Like Claude Code</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Simon Willison &middot; Jun 3</p>
+            <p>Uber has imposed a $1,500 monthly per-tool cap on AI coding assistants after burning through its 2026 budget in four months. The policy, covering tools like Claude Code and Cursor, is the most concrete sign yet that even well-funded engineering orgs are now rationing AI usage by the dollar.</p>
+          </div>
+        </div>
+        <div class="wire-col">
+          <div class="wire-item">
+            <div class="kicker">AI Models &middot; Microsoft</div>
+            <a href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/" target="_blank" rel="noopener" class="story-link">
+              <h4>Microsoft Unveils MAI-Thinking-1 and MAI-Code-1-Flash</h4>
+            </a>
+            <p class="byline mb-1" style="margin-top:0.25rem;">Simon Willison &middot; Jun 2</p>
+            <p>Microsoft announced two new in-house text models, MAI-Thinking-1 and MAI-Code-1-Flash, as it continues building model capacity independent of its OpenAI partnership. Willison walks through the details and corrects his own initial read on the model sizes and training-data licensing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE - Expert Digest -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">SpaceX is about to be a compute landlord, and Google just signed a lease: $920 million a month, for 110,000 GPUs, through 2029. That is roughly half of what Anthropic already pays SpaceX. One organization reportedly ran up a $500 million Claude bill because nobody set a usage limit. Uber burned its entire 2026 AI budget by April. The thread running through this issue is not a model release. It is an invoice, and it is moving down the stack one tier at a time, from the hyperscalers renting rockets' worth of silicon to the individual developer suddenly capped at $1,500 a month.</p>
+
+<h4 class="digest-theme">The Meter Reaches the Top of the Stack</h4>
+<ul class="digest-bullets">
+<li><strong>Even hyperscalers are renting now.</strong> Per SEC filings, Google will pay SpaceX about $920 million monthly from October 2026 through June 2029 for roughly 110,000 NVIDIA GPUs, calling it "bridge capacity" for Gemini Enterprise. Alphabet has already committed $180 billion in capex this year and expects more in 2027. When the company with one of the largest in-house fleets on earth still has to rent, the supply crunch is structural, not seasonal.</li>
+<li><strong>The compute landlord is going public too.</strong> The Google deal lands just ahead of SpaceX's anticipated Nasdaq IPO, which targets $75 billion in capital at a roughly $1.75 trillion valuation. The same S-1 disclosures reveal Anthropic's own SpaceX compute commitment runs about $1.25 billion a month, twice Google's. Compute supply is consolidating into a handful of balance sheets large enough to underwrite it.</li>
+<li><strong>The S&amp;P 500 is holding the line on profits.</strong> Index gatekeepers declined to fast-track SpaceX and won't waive the profitability rule for unprofitable AI-era firms. It is a quiet reminder that private valuations and public-market membership still answer to different questions, and the gap is exactly what Anthropic will have to bridge.</li>
+</ul>
+
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~7 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="assets/2026-06-06-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The Token Bill Comes Due</h4>
+<ul class="digest-bullets">
+<li><strong>Consumption is outrunning falling prices.</strong> TechCrunch reports per-developer token use jumped roughly 18.6x over nine months, driven by agentic features, even as per-token prices dropped. Uber exhausted its 2026 AI coding budget by April; Microsoft revoked Claude Code licenses; Priceline faced renewals at 4-5x; and one company ran up a $500 million Claude bill with no usage caps in place.</li>
+<li><strong>"Go fast" became "we need guardrails."</strong> FinOps Foundation's J.R. Storment describes companies already 3x over their annual budgets and a conversation that "shifted from tokenmaxxing... to we need guardrails, how do we control this?" The Linux Foundation responded with a new Tokenomics Foundation to standardize cost metrics, calling token tracking "a trillions-of-rows-a-month data problem." Goldman Sachs projects global token usage growing 24-fold by 2030.</li>
+<li><strong>Uber's cap is the rational version of the same panic.</strong> Simon Willison reads Uber's $1,500-per-tool monthly cap (about $36,000 a year per engineer if you run two) as a sane policy, roughly 11% of a median $330,000 comp package, and far better than leaderboards that reward burning the most tokens. The productivity math is genuinely messy: the heaviest users are about 2x more productive but spend 10x more tokens to get there, and a two-year Faros AI study of 20,000 developers found rising output alongside more bugs and rewrites.</li>
+</ul>
+
+<h4 class="digest-theme">Anthropic Bets on Demand, Not Data Centers</h4>
+<ul class="digest-bullets">
+<li><strong>The IPO is a capital story, not a margin story.</strong> Anthropic hit $47 billion in annualized revenue in May, up from roughly $9 billion at the end of 2025, after a $65 billion raise at a $965 billion valuation. President Daniela Amodei waves off the returns skeptics: "It's a really big upfront cost to train the models and to serve inference on them," and she would "much prefer to be on the side of having a little bit more demand for the product than we're able to serve."</li>
+<li><strong>The strategy is deliberately asset-light.</strong> Unlike OpenAI and xAI, Anthropic chose not to build its own data centers, renting from SpaceX instead to avoid overextending. That is the same bet as the rest of this issue, read from the other side: own the demand and the product, rent the compute, and let someone else carry the $1.75 trillion infrastructure balance sheet.</li>
+<li><strong>It is also quietly building a platform.</strong> The new Services Track and Partner Hub add a tiered capability rating for partners and a directory connecting customers to qualified providers. Unglamorous, but it is the scaffolding that turns a model vendor into an ecosystem.</li>
+</ul>
+
+<h4 class="digest-theme">Defense Gets Its Own Frontier Models</h4>
+<ul class="digest-bullets">
+<li><strong>Attackers have moved AI past the front door.</strong> Anthropic's Frontier Red Team studied 832 banned accounts: 67.3% used AI for malware development, and the share of medium-to-high-risk actors rose from 33% to 56% across the year. AI-assisted phishing (initial access) fell 8.6% while post-compromise account discovery rose 8.9%, meaning AI is increasingly used inside already-breached networks. A state-sponsored operation that scored only "medium" on technique count earned Anthropic's maximum 100 risk score, because the MITRE ATT&amp;CK framework cannot capture "agentic orchestration."</li>
+<li><strong>So Anthropic is arming the defenders.</strong> Project Glasswing's first ~50 partners found over 10,000 high- or critical-severity flaws; it is now expanding to ~150 organizations across 15+ countries, most running systems that touch 100 million-plus people. The company expects Mythos-class cyber models to be widespread within 6-12 months and argues the bottleneck is no longer finding bugs but "verifying, disclosing, and patching" them. It also shipped Claude Security, an Opus 4.8-powered code scanner that suggests patches.</li>
+<li><strong>OpenAI is fixing the exfiltration problem at the network layer.</strong> Its new Lockdown Mode, covered by Willison, restricts the outbound requests an assistant can make so a successful prompt injection has nowhere to send stolen data. It is an admission that the real risk of connecting a model to your tools is not bad output but quiet data theft.</li>
+</ul>
+
+<h4 class="digest-theme">Also Worth Your Time</h4>
+<ul class="digest-bullets">
+<li><strong>Claude can read an NMR spectrum.</strong> Across 20 compounds from post-cutoff preprints, Opus 4.7 hit ±0.079 ppm average hydrogen error and predicted peak splitting within 0.5 Hz about 80% of the time, versus 26-35% for ChemDraw and MestReNova, and solved all 8 simpler structure-elucidation problems with no 2D NMR or licensed tools.</li>
+<li><strong>Gemma 4 shrinks to fit your phone.</strong> Google's Quantization-Aware Training squeezed Gemma 4 E2B down to 1GB of memory while preserving quality, using static activations, channel-wise and targeted 2-bit quantization. On-device inference is the structural counter-pressure to the whole token-bill story.</li>
+<li><strong>The rsync panic doesn't survive the numbers.</strong> A permutation test on 36 releases returned a 46% p-value and Fisher's exact test a 74% p-value: no statistical evidence Claude-assisted releases were buggier. As the author puts it, "the only thing that made v3.4.3 special was the availability of an enemy everyone had already decided to hate." The pre-Claude v3.4.1 actually had the worst bug rate in the dataset.</li>
+<li><strong>Microsoft keeps building its own models,</strong> unveiling MAI-Thinking-1 and MAI-Code-1-Flash as it grows capacity independent of OpenAI.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Read the issue end to end and the same sentence keeps surfacing: this is the week AI's economics became the story. For two years the narrative was a capability race, told in benchmark deltas. This week it is told in dollars per month, and the dollars only move in one direction, downhill. A $920 million Google-SpaceX contract at the top becomes a Tokenomics Foundation in the middle becomes a $1,500 per-tool cap at the bottom. The numbers are different by orders of magnitude, but they are the same number: the price of inference, finally being counted.</p>
+
+<p>What makes the week coherent is that everyone is responding to the same pressure with a different instrument. Anthropic's answer is to stay asset-light, rent the compute, and bet that enterprise demand outruns supply long enough to justify a $965 billion valuation. Google's answer is to pay almost a billion a month for "bridge capacity" rather than wait for its own build-out. Uber's answer is a hard cap. Google's other answer, Gemma 4 QAT, is to make the model small enough that the meter barely runs at all. The Linux Foundation's answer is to make the bill legible before anyone can manage it. These are not contradictory strategies; they are the full menu of what you do when a cost you used to ignore becomes the cost that decides everything.</p>
+
+<p>And once compute has a price, every output it produces gets audited. That is why the security stories belong in the same issue as the cost stories. Anthropic's threat research and Project Glasswing are an audit of what AI does on offense, and the unsettling finding is that the value has moved past initial access into autonomous, multi-stage orchestration that existing frameworks score as merely "medium." The rsync analysis is an audit of AI's reputation, using a permutation test to show that the loudest claim about Claude degrading open source was a story in search of evidence. When generation is cheap, scrutiny is the scarce input, whether you are pricing a token, scoring a threat actor, or deciding whether to believe the panic.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>The AI industry is transitioning from a phase where the binding constraint was intelligence to one where it is economics and governance. None of this quarter's decisive questions, who pays for compute, who controls runaway token spend, who can defend critical infrastructure, photograph well in a launch keynote. That is precisely why they were underpriced for so long. A near-trillion-dollar valuation and a billion-dollar monthly invoice force the issue, because you cannot underwrite numbers that large on demos.</p>
+
+<p>The shift rewards a particular posture. The companies positioned to win the next two years are the ones with locked-in compute supply, real cost discipline, and a credible answer to inference economics, whether that answer is Anthropic's rent-don't-build strategy, Google's willingness to pay for bridge capacity, or the on-device path that QAT opens up. The losers are the ones who assumed that more generation was the same thing as more value, and who are now discovering, via a $500 million surprise bill, that it is not. Uber's two-front reality, more output but also more bugs and rewrites, is the honest version of the productivity story the whole industry has been telling itself.</p>
+
+<p>Underneath the economics is a security reckoning that is arriving on the same timeline. Anthropic's bet that "hundreds of thousands" of defenders will need frontier-grade cyber tools within a year is really a claim that the offense-defense balance is about to tip, and that the patch pipeline, not the vulnerability scanner, is where the fight will be lost or won. OpenAI's Lockdown Mode is the same admission at the consumer scale. The labs that treat the cost meter and the threat surface as feedback rather than friction will adapt faster than the ones still optimizing for raw capability. The meter running is not the bad news. The bad news would be pretending it isn't.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>The compute-landlord model.</strong> If SpaceX's IPO succeeds at a $1.75 trillion valuation on the back of compute leases to Google and Anthropic, expect more infrastructure owners to spin GPU capacity into a rentable, financeable asset class. Watch who signs the next nine-figure monthly contract.</li>
+<li><strong>Whether cost governance actually sticks.</strong> The Tokenomics Foundation and a new crop of vendors (Pay-i, Paid, plus Datadog and New Relic adding AI cost monitoring) are betting that token FinOps becomes standard practice. The leading indicator is whether more companies follow Uber into hard per-tool caps.</li>
+<li><strong>Agentic orchestration breaking the threat models.</strong> If AI-coordinated, multi-stage attacks keep scoring "medium" on frameworks like MITRE ATT&amp;CK while doing maximum damage, the entire risk-assessment toolchain needs a rewrite. Watch the Anthropic-MITRE collaboration for what replaces technique-counting.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
