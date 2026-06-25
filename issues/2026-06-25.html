@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - June 25, 2026</title>
+  <meta name="description" content="Daily AI news roundup - June 25, 2026. Anthropic launches Claude Tag, an AI teammate that lives in your Slack; OpenAI debuts its first custom Broadcom inference chip; Google ships a wave of Gemini and Gemma releases; and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #58">
+  <meta property="og:description" content="Daily AI news roundup - June 25, 2026. Anthropic launches Claude Tag, an AI teammate that lives in your Slack; OpenAI debuts its first custom Broadcom inference chip; Google ships a wave of Gemini and Gemma releases; and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, June 25, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 58</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>17 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">From Anthropic &middot; AI Agents</div>
+          <a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Anthropic Puts Claude in Your Slack and Tells It to Get to Work</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; Jun 23</p>
+          <div class="newspaper-body">
+            <p>Anthropic introduced <strong>Claude Tag</strong>, an "always-on" AI teammate that lives inside a company's Slack and can be handed work simply by mentioning <em>@Claude</em> in a channel. Unlike a chatbot you visit, Tag picks up the context of the channel it is in, reaches for the org's connected tools, and has the persistence to carry a task across days, coming back when the work is done or when it needs a human decision. It is the clearest sign yet that Anthropic wants Claude to behave less like a tool you open and more like a colleague you delegate to.</p>
+            <p>The design choices are pointed. Claude works under its own account, so every credential it uses is logged, and its memory respects channel boundaries, what it learns in a private channel stays there. Available in beta on Team and Enterprise plans, it is an evolution of Claude Code into the place most teams already coordinate. Anthropic says its internal version of Tag now writes 65% of its product team's code, a quiet boast about how far the "AI as employee" framing has already gone inside the company building it.</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:#1a1a1a;">
+          <a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+            <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/301d5ee481a352435c048a9df7ce172b9617b05f-2400x1260.png" alt="Anthropic introduces Claude Tag for Slack" style="width:100%;height:100%;object-fit:cover;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- [id0] SPAN-2: Cartoon + OpenAI Broadcom chip -->
+      <div class="story-span-2">
+        <div class="kicker">Infrastructure &middot; OpenAI</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-06-25-cartoon.png" alt="New Yorker-style cartoon: a manager at the head of a conference table gestures at a Slack channel projected on the wall filled with messages all from a bot named @Claude, while four weary human employees slump in their chairs. Caption: And that concludes my performance review of everyone except @Claude, who once again carried the team." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"And that concludes my performance review of everyone except @Claude, who once again carried the team."</p>
+          </div>
+          <div>
+            <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">OpenAI Unveils Its First Custom Chip, Built by Broadcom</h3>
+            </a>
+            <p class="byline mb-2">TechCrunch &middot; Jun 24</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI took the wraps off its first custom-built inference processor, developed with Broadcom and designed specifically for the demands of OpenAI's own inference systems. Early figures point to superior performance-per-watt versus the merchant silicon the company currently rents, a metric that matters enormously when serving models at OpenAI's scale. The move follows Google, Amazon, and Anthropic-aligned partners down the path of building bespoke chips, a bid to claw back margin and reduce dependence on Nvidia as the cost of running frontier models becomes the industry's central anxiety.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- [id7] STANDARD: Engineering jobs resilient -->
+      <div class="story-block">
+        <div class="kicker">Future of Work &middot; Careers</div>
+        <a href="https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2022/01/GettyImages-1250956868.jpg?w=1024" alt="AI was supposed to kill engineering jobs" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">AI Was Supposed to Kill Engineering Jobs. The Data Says Otherwise</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jun 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Despite two years of predictions that AI would gut software engineering, new research from venture firm SignalFire finds engineers are the <em>most</em> resilient job category, making up 55% of new hires at major tech companies in 2025. The data complicates the tidy narrative that code-writing models translate directly into fewer coders, suggesting instead that demand for people who can direct, verify, and ship AI-assisted work is rising, not falling.</p>
+      </div>
+
+      <!-- [id13] PUZZLE: Cryptogram -->
+      <div class="story-block">
+        <div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
+        <div class="cgx">
+<style>
+.cgx{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;max-width:300px;line-height:1.4;}
+.cgx *{box-sizing:border-box;}
+.cgx .cgx-head{font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-bottom:2px solid #1a1a1a;padding-bottom:5px;margin-bottom:8px;}
+.cgx .cgx-head span{color:#8B0000;}
+.cgx .cgx-hint{font-size:11px;color:#555;margin-bottom:10px;}
+.cgx .cgx-quote{display:flex;flex-wrap:wrap;gap:7px 10px;margin-bottom:10px;}
+.cgx .cgx-word{display:flex;gap:2px;}
+.cgx .cgx-letter{display:flex;flex-direction:column;align-items:center;width:15px;}
+.cgx .cgx-in{width:15px;height:18px;border:none;border-bottom:1.5px solid #1a1a1a;text-align:center;font-size:13px;font-weight:600;text-transform:uppercase;padding:0;background:transparent;color:#8B0000;outline:none;}
+.cgx .cgx-in:focus{background:#f3d6d6;}
+.cgx .cgx-in.given{color:#1a1a1a;border-bottom-color:#999;}
+.cgx .cgx-code{font-size:9px;color:#888;font-weight:600;margin-top:1px;font-variant-numeric:tabular-nums;}
+.cgx .cgx-btns{display:flex;gap:8px;}
+.cgx .cgx-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:5px 10px;border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;cursor:pointer;}
+.cgx .cgx-btn.alt{background:#fff;color:#1a1a1a;}
+.cgx .cgx-result{font-size:12px;font-weight:600;color:#8B0000;margin-top:7px;min-height:16px;}
+</style>
+<div class="cgx-head">Crypto<span>gram</span></div>
+<div class="cgx-hint">Each letter stands for another. Crack the quote on agentic engineering. Three letters are filled in.</div>
+<div class="cgx-quote" id="cgx-quote"></div>
+<div class="cgx-btns">
+  <button class="cgx-btn" id="cgx-check">Check</button>
+  <button class="cgx-btn alt" id="cgx-reveal">Reveal</button>
+</div>
+<div class="cgx-result" id="cgx-result"></div>
+<script>
+(function(){
+  var plain="THE HARNESS MATTERS MORE THAN THE MODEL";
+  var map={T:"Q",H:"Z",E:"K",A:"W",R:"P",N:"X",S:"V",M:"J",O:"B",D:"F",L:"Y"};
+  var given={K:"E",Q:"T",W:"A"};
+  var quoteEl=document.getElementById("cgx-quote"),resEl=document.getElementById("cgx-result");
+  var inputs={};
+  plain.split(" ").forEach(function(word){
+    var wEl=document.createElement("div");wEl.className="cgx-word";
+    word.split("").forEach(function(ch){
+      var code=map[ch];
+      var lEl=document.createElement("div");lEl.className="cgx-letter";
+      var inp=document.createElement("input");inp.className="cgx-in";inp.maxLength=1;inp.dataset.code=code;inp.dataset.answer=ch;
+      if(given[code]){inp.value=given[code];inp.classList.add("given");inp.readOnly=true;}
+      var cd=document.createElement("div");cd.className="cgx-code";cd.textContent=code;
+      lEl.appendChild(inp);lEl.appendChild(cd);wEl.appendChild(lEl);
+      (inputs[code]=inputs[code]||[]).push(inp);
+      inp.addEventListener("input",function(){
+        var v=this.value.toUpperCase().replace(/[^A-Z]/g,"");this.value=v;
+        (inputs[code]||[]).forEach(function(o){if(!o.readOnly)o.value=v;});
+        resEl.textContent="";
+      });
+    });
+    quoteEl.appendChild(wEl);
+  });
+  document.getElementById("cgx-check").addEventListener("click",function(){
+    var all=[].concat.apply([],Object.keys(inputs).map(function(k){return inputs[k];}));
+    var filled=all.every(function(i){return i.value;});
+    var correct=all.every(function(i){return i.value===i.dataset.answer;});
+    if(!filled){resEl.textContent="Keep going. Some letters are blank.";return;}
+    resEl.textContent=correct?"Solved. The harness wins.":"Not quite. Check your letters.";
+  });
+  document.getElementById("cgx-reveal").addEventListener("click",function(){
+    Object.keys(inputs).forEach(function(k){inputs[k].forEach(function(i){i.value=i.dataset.answer;});});
+    resEl.textContent="“The harness matters more than the model.”";
+  });
+})();
+</script>
+</div>
+      </div>
+
+      <!-- [id3] FEATURE VIDEO: Google Masterclass on Agentic Engineering -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Agentic Engineering</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/google-just-dropped-a-masterclass-on-agentic-engineering-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/zbmuiaPuiNM/maxresdefault.jpg" alt="Google Just Dropped a Masterclass on Agentic Engineering" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Google Just Dropped a Masterclass on Agentic Engineering</h3>
+        </a>
+        <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Jun 25</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cole Medin distills Google's 51-page playbook on the AI-driven software development lifecycle into a blunt thesis: vibe coding does not scale, agentic engineering does, and the model you obsess over is maybe 10% of what determines results. The other 90% is the harness, the context, tools, guardrails, and verification you build around the model. A study guide breaks down the framework.</p>
+      </div>
+
+      <!-- [id6] STANDARD: Microsoft Talos -->
+      <div class="story-block">
+        <div class="kicker">AI Research &middot; Healthcare</div>
+        <a href="https://www.microsoft.com/en-us/research/blog/talos-scaling-rare-disease-diagnosis-with-automated-iterative-genomic-reanalysis/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Talos Reanalyzes Genomes as the Science Changes, and Finds Answers</h3>
+        </a>
+        <p class="byline mb-2">Microsoft Research &middot; Jun 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Talos is an open-source tool that automatically re-runs genomic analysis as new scientific knowledge becomes available, surfacing diagnoses that were invisible when the data was first collected. Deployed across nearly 5,000 undiagnosed patients, it delivered 241 new diagnoses, averaging just 32 days between new evidence going public and a patient getting an answer, a vivid example of AI compounding the value of data that already exists.</p>
+      </div>
+
+      <!-- [id12] FEATURE VIDEO: Midjourney Medical -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Medical AI</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/midjourney-wants-to-delete-30-percent-of-all-death-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/a2i9h2ip-nY/maxresdefault.jpg" alt="Midjourney wants to delete 30% of all death" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Midjourney Wants to Delete 30% of All Death</h3>
+        </a>
+        <p class="byline mb-2">Fireship &middot; YouTube &middot; Jun 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Fireship unpacks Midjourney founder David Holz's announcement of a medical imaging device that promises full-body scans faster and cheaper than an MRI, and the bold claim that it could meaningfully reduce preventable death. The study guide weighs the pitch against the physics-based skepticism it has already drawn from researchers.</p>
+      </div>
+
+      <!-- [id2] FEATURE VIDEO: Tag Claude In -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; From Anthropic</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/tag-claude-in-right-where-you-already-work-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/VojDzHaciKQ/maxresdefault.jpg" alt="Tag Claude in, right where you already work" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Tag Claude In, Right Where You Already Work</h3>
+        </a>
+        <p class="byline mb-2">Claude &middot; YouTube &middot; Jun 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic's own walkthrough of Claude Tag shows the @Claude teammate in action inside Slack, picking up channel context, using the org's tools under its own logged-in account, and respecting per-channel memory boundaries. The companion study guide breaks down how it works and why it matters for teams.</p>
+      </div>
+
+      <!-- [id8] STANDARD: Mistral OCR 4 -->
+      <div class="story-block">
+        <div class="kicker">AI Models &middot; Mistral</div>
+        <a href="https://mistral.ai/news/ocr-4/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Mistral OCR 4 Pushes Document Intelligence to the State of the Art</h3>
+        </a>
+        <p class="byline mb-2">Mistral AI &middot; Jun 23</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Mistral released OCR 4, a document-extraction model that returns not just text but bounding boxes, block classification, and per-element confidence scores across 170 languages. The richer structured output is aimed squarely at agentic pipelines that need to read messy real-world documents reliably, the unglamorous plumbing that determines whether document-processing agents actually work.</p>
+      </div>
+
+      <!-- [id9] FEATURE VIDEO: Every Level of Claude Agentic OS -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Claude Code</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/every-level-of-claude-agentic-os-explained-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/HRw-vP0j8OM/maxresdefault.jpg" alt="Every Level of Claude Agentic OS Explained" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Every Level of Claude Agentic OS Explained</h3>
+        </a>
+        <p class="byline mb-2">Chase AI &middot; YouTube &middot; Jun 25</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Chase AI maps the layers of a Claude-powered "agentic OS," from skills and loop engineering at the foundation up through memory, custom interfaces, and team distribution, arguing that most of the real value lives in the lower levels, under the hood, not in flashy dashboards. The study guide lays out each level.</p>
+      </div>
+
+      <!-- [id10] FEATURE VIDEO: Four Step Loop Engineer -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Loop Engineering</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-four-step-process-to-loop-engineer-anything-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/JirDfgJcJFU/maxresdefault.jpg" alt="The Four Step Process to Loop Engineer ANYTHING" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">The Four-Step Process to Loop Engineer Anything</h3>
+        </a>
+        <p class="byline mb-2">Chase AI &middot; YouTube &middot; Jun 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cutting through the loop-engineering hype, Chase AI argues a loop is just a prompt repeated with scaffolding, then walks through its four phases (trigger, execution, verification, state) and a four-step path from a manual prompt to a self-improving system, with a parallel case for why prompt engineering is far from dead. The study guide has the full breakdown.</p>
+      </div>
+
+      <!-- [id11] FEATURE VIDEO: Stopped Prompting One Task -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Agents</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/i-stopped-prompting-ai-one-task-at-a-time-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/A4zMyjkL0Dc/maxresdefault.jpg" alt="I Stopped Prompting AI One Task At A Time" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">I Stopped Prompting AI One Task at a Time</h3>
+        </a>
+        <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; Jun 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nate B. Jones makes the case for a "loop of loops": instead of prompting one task at a time, you build recurring agent jobs that remember context, notice what changed, hand off to each other, and stop precisely where your judgment is required. The study guide unpacks the shift from prompting to designing durable loops.</p>
+      </div>
+
+      <!-- [id1] FEATURE: Gemini Omni -->
+      <div class="story-block">
+        <div class="kicker">AI Models &middot; Google</div>
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Omni_and_Gemini_3.5_heroso.width-300.format-webp.webp" alt="Introducing Gemini Omni" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Google's Gemini Omni Generates and Edits Video From Anything</h3>
+        </a>
+        <p class="byline mb-2">Google &middot; May 29</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google introduced Gemini Omni Flash, a model that generates and edits high-quality video from mixed inputs, images, audio, video, and text, all driven by natural-language commands. It is the headliner in a busy stretch of Google releases aimed at folding more modalities into a single fast model rather than a fleet of specialized ones.</p>
+      </div>
+
+      <!-- [id14] WIRE: Google dev-tool briefs -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="kicker" style="margin-bottom:0.5rem;">The Wire &middot; Also From Google</div>
+          <div class="wire-item">
+            <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/" target="_blank" rel="noopener" class="story-link">
+              <h4>Computer Use Comes to Gemini 3.5 Flash</h4>
+            </a>
+            <p>Google baked computer-use capabilities directly into Gemini 3.5 Flash, letting developers build agents that act across browsers, mobile, and desktop. <span class="byline">Google &middot; Jun 24</span></p>
+          </div>
+          <div class="wire-item">
+            <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/" target="_blank" rel="noopener" class="story-link">
+              <h4>Gemma 4 12B: A Unified, Encoder-Free Multimodal Model</h4>
+            </a>
+            <p>An open model that runs on a 16GB-RAM laptop, with native audio support and an encoder-free architecture for efficient visual and audio processing. <span class="byline">Google &middot; Jun 3</span></p>
+          </div>
+          <div class="wire-item">
+            <a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/" target="_blank" rel="noopener" class="story-link">
+              <h4>DiffusionGemma Claims 4x Faster Text Generation</h4>
+            </a>
+            <p>An experimental open model that uses text diffusion to generate whole blocks at once rather than token by token, for up to 4x faster output on GPUs. <span class="byline">Google &middot; Jun 10</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- [id4] STANDARD: OpenAI Daybreak -->
+      <div class="story-block">
+        <div class="kicker">Cybersecurity &middot; OpenAI</div>
+        <a href="https://openai.com/index/daybreak/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">OpenAI's Daybreak Turns Its Models Loose on Defense</h3>
+        </a>
+        <p class="byline mb-2">OpenAI &middot; Jun 22</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI introduced Daybreak, a package that brings together frontier cyber models, Codex Security, and ecosystem partnerships to help defenders find, validate, and fix vulnerabilities before attackers can exploit them. It is OpenAI's clearest move yet to position its models on the defensive side of the AI-security arms race, a counterweight to mounting worry about the same models' offensive cyber capabilities.</p>
+      </div>
+
+      <!-- [id5] STANDARD: Stratechery Figma / Dylan Field -->
+      <div class="story-block">
+        <div class="kicker">Design &middot; Interview</div>
+        <a href="https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Dylan Field on Where Design Meets AI</h3>
+        </a>
+        <p class="byline mb-2">Stratechery &middot; Jun 25</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Ben Thompson sits down with Figma co-founder and CEO Dylan Field to talk through the company's technical foundation, its AI strategy, and new offerings like Code on the Canvas. The conversation circles a central bet: that the canvas, where design and code increasingly converge, is the layer where AI will do its most consequential work for designers.</p>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Anthropic buried the most striking number of the day inside a product launch: 65% of its own product team's code is now written by an internal version of Claude Tag, the @-mentionable Slack teammate it just shipped to everyone else. That is the through-line of June 25, the conversation has moved past whether AI can do the work to how you hand it the work, who it answers to, and what it costs to run. From OpenAI bending metal to lower the price of inference, to a 51-page Google playbook on "agentic engineering," to data showing engineers are the hardest job to kill, today is about AI graduating from a thing you prompt into a system you operate.</p>
+
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~7 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-06-25-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The AI Teammate Clocks In</h4>
+<ul class="digest-bullets">
+<li><strong>Claude Tag makes the agent a coworker, not a chatbot.</strong> You delegate by typing <em>@Claude</em> in a Slack channel; it inherits the channel's context, uses connected tools under <em>its own logged-in account</em> (so every credential is auditable), and persists across days. Permissions are scoped per-channel: tag it in the legal channel and it can read contracts but literally cannot touch the codebase, because it cannot see it from there. It replaces the old "Claude in Slack" app with a 30-day migration window, in beta on Team and Enterprise plans.</li>
+<li><strong>The 65% figure reframes the whole pitch.</strong> Anthropic's own product team already gets most of its code from this tool. That is not a demo, it is a disclosure about how the company building the model now builds software, and it sets an uncomfortable benchmark for every engineering org watching.</li>
+</ul>
+
+<h4 class="digest-theme">The Money and the Metal</h4>
+<ul class="digest-bullets">
+<li><strong>OpenAI's first custom chip is named Jalapeño.</strong> Built with Broadcom (a partnership first announced October 2025, with OpenAI's own models assisting the design), it targets <em>inference</em>, the cost of running models, not training, which stays on Nvidia. OpenAI claims "significantly better performance-per-watt than current state-of-the-art alternatives," tuned for real-time coding models. It is still in testing with no ship date. The logic, in OpenAI's words: "OpenAI operates across the stack, each layer can be optimized around the same goal."</li>
+<li><strong>Mistral OCR 4 attacks cost, not just accuracy.</strong> It returns structured output (bounding boxes, typed blocks, per-word confidence) across 170 languages at $4 per 1,000 pages. One engineer at Rogo reported matching leading agentic document parsers "at roughly 8x lower cost and 17x lower latency." The unglamorous plumbing of agents, reading messy documents, is where the next cost war is being fought.</li>
+</ul>
+
+<h4 class="digest-theme">Agentic Engineering Stops Being a Vibe</h4>
+<ul class="digest-bullets">
+<li><strong>Google's 51-page masterclass has a blunt thesis.</strong> Per Cole Medin's breakdown: the model is roughly 10% of your system, and the harness (context, tools, guardrails, verification, observability) is the other 90% and matters more. Evidence cited: an AI layer lifted a sub-top-30 model into the top 5 on Terminal Bench 2.0, and LangChain reportedly added 13.7 points, about the Sonnet-to-Opus gap. Vibe coding is recast as one end of a spectrum (fine for disposable work); agentic engineering, with specs, evals, and CI gates, is the other.</li>
+<li><strong>Three creators converged on the same idea from different angles.</strong> Chase AI maps an "agentic OS" where 90% of the value lives under the hood in skills, loops, and a well-structured file system, and separately breaks loop engineering into four phases (trigger, execution, verification, state) where the success criteria decides whether a task even belongs in a loop. Nate B. Jones reframes it as a "loop of loops," recurring jobs that remember, notice change, and crucially <em>stop before acting where your judgment is required</em>. The shared insight: the unit of work is no longer the prompt, it is the durable, supervised loop.</li>
+</ul>
+
+<h4 class="digest-theme">Models, Tools, and Defense</h4>
+<ul class="digest-bullets">
+<li><strong>Google shipped a wave.</strong> Gemini Omni Flash generates and edits video from mixed image/audio/video/text inputs; computer-use landed in Gemini 3.5 Flash for cross-device agents; Gemma 4 12B is an encoder-free multimodal model that runs on a 16GB laptop; and experimental DiffusionGemma claims 4x faster text generation by producing blocks at once instead of token-by-token.</li>
+<li><strong>OpenAI's Daybreak points its models at defense.</strong> Bundling frontier cyber models, Codex Security, and partnerships to help defenders find and fix vulnerabilities first, it is a deliberate counterweight to rising anxiety about the same models' offensive cyber capabilities.</li>
+</ul>
+
+<h4 class="digest-theme">Where AI Meets the Body and the Career</h4>
+<ul class="digest-bullets">
+<li><strong>Microsoft's Talos turns old genomes into new diagnoses.</strong> It re-interprets a patient's existing variant data against the latest knowledge each cycle. Across 4,735 undiagnosed individuals it produced 241 new diagnoses in 238 people (a 5.1% additional yield), every one later confirmed pathogenic by accredited labs, averaging just 32 days between new evidence appearing in a database and a patient getting an answer.</li>
+<li><strong>Engineers are the hardest job to kill, so far.</strong> SignalFire found total big-tech hiring fell 25% versus 2019, but engineering roles fell only 11%, and engineers were 55% of all new hires in 2025 (up from 46%). "They're suddenly a lot more productive, and there's endless work for them to do," said research head Asher Bantock.</li>
+<li><strong>Dylan Field's contrarian read on AI and design.</strong> "AI draws from the middle of the distribution, and to be differentiated you need to be at the tails." Figma's bet is that more activity on its canvas feeds a data flywheel model providers lack, and that "Code on the Canvas" collapses design and code into one continuum rather than rivals.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>For two years the AI story was the model. Today, almost every story is about everything <em>around</em> the model. Anthropic's 65% code figure, Google's "the harness is 90%" thesis, Chase AI's agentic OS, and Nate Jones's loop of loops are four versions of the same claim: the model is now a commodity component, and the value has migrated to the scaffolding, the context, the tools, the verification, the memory, and the human checkpoints. Cole Medin's framing of the harness "mattering more than the model" is not a hot take anymore; it is the operating assumption of the people shipping production software, and Anthropic just proved it on its own codebase.</p>
+
+<p>Notice how cleanly the loop people and the teammate people fit together. Nate Jones's central design rule is that a loop is only trustworthy when it <em>pauses for human decisions</em>, his message-drafting loop stops before hitting send. Claude Tag is that principle productized at the org level: it works autonomously across days but comes back when it needs your input, under a logged identity with channel-scoped permissions. The hard problem of agentic AI was never raw capability; it was control, auditability, and knowing where the machine should stop. The most consequential releases today are the ones that answer those governance questions, not the ones with the highest benchmark.</p>
+
+<p>And underneath it all runs the meter. OpenAI is fabricating a custom inference chip and Mistral is advertising "8x lower cost" because the agentic workflows everyone is racing to build are voracious token consumers. Chase AI's loop engineering explicitly bakes in stop-conditions ("eight iterations, then halt") because, as he flatly notes, "AI isn't free." The same week we learn AI writes most of Anthropic's code, we learn the industry's frontier labs are bending silicon to make that code cheaper to run. Capability and cost are now the same conversation.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>Step back and today reads like the moment AI stopped being a product category and started becoming infrastructure, with all the boring, load-bearing concerns that implies: identity, permissions, audit logs, unit economics, and org-chart placement. Claude Tag does not ask to be a smarter chatbot; it asks to be onboarded like an employee, with an account and a scope of authority. That is a different kind of adoption. It means the binding constraint on AI's enterprise spread is no longer model quality, it is trust architecture, and the vendors who win the next phase will be the ones who make delegation safe and accountable, not the ones who top a leaderboard.</p>
+
+<p>The SignalFire data is the human counterweight, and it complicates the doom narrative in a specific way. AI did not thin out engineers; it made them "a lot more productive" with "endless work to do." That is exactly what you would expect if Medin and Jones are right that the job is shifting from typing code to specifying, supervising, and verifying systems of agents. The work did not vanish, it moved up a level of abstraction, toward judgment, taste, and the design of harnesses and loops. Dylan Field's "be at the tails, not the middle" is the same lesson aimed at creative work: when AI floods the median, the durable human value is whatever is out of distribution.</p>
+
+<p>Even Midjourney's wild swing at healthcare, a profitable, investor-free lab proposing an "ultrasonic CT" to make full-body scans a 25,000-square-foot spa amenity, fits the pattern. It is a bet that the scarce thing is not raw model capability but the system around it: hardware, access, regulatory clearance, and a workflow people will actually tolerate. The physics critics are right that ultrasound cannot see through air or bone, and there is no FDA clearance yet. But the framing is the tell. Across the most serious and the most speculative stories today, the message is identical: the model is the easy part. The system is the whole game.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether "65% of code" becomes a hiring story.</strong> If Anthropic's internal figure is real and replicable, watch how fast enterprises restructure engineering teams around supervising agents, and whether the SignalFire resilience holds or starts bending for junior roles the data did not break out.</li>
+<li><strong>Custom-silicon economics.</strong> Jalapeño is in testing with no ship date. The metric that matters is whether OpenAI's performance-per-watt claim survives production, because cheaper inference is what makes always-on teammates like Claude Tag financially sane to run at scale.</li>
+<li><strong>The governance layer.</strong> Claude Tag's per-channel permissions and logged identity are a template. Watch whether "the agent has its own account and audit trail" becomes the baseline enterprise requirement, the way SSO and SOC 2 did.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/tag-claude-in-right-where-you-already-work-study.html" data-study-guide>Tag Claude In, Right Where You Already Work</a> — Anthropic's own walkthrough, with the Drew-and-Priya scenario showing Claude tracking a thread, opening a PR, and editing a doc under its own logged account.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/google-just-dropped-a-masterclass-on-agentic-engineering-study.html" data-study-guide>Google's Masterclass on Agentic Engineering</a> — Cole Medin's breakdown of the harness, the vibe-coding-to-agentic-engineering spectrum, and the token economics of CapEx vs. OpEx coding.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/every-level-of-claude-agentic-os-explained-study.html" data-study-guide>Every Level of Claude Agentic OS</a> — the four-level model (skills/loops, memory, interface, distribution) and why most value lives in the bottom two, including Karpathy's knowledge-base structure.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/the-four-step-process-to-loop-engineer-anything-study.html" data-study-guide>The Four-Step Process to Loop Engineer Anything</a> — the four phases of a loop and why the success criteria, not the prompt, decides whether a task should be a loop at all.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/i-stopped-prompting-ai-one-task-at-a-time-study.html" data-study-guide>I Stopped Prompting AI One Task at a Time</a> — Nate B. Jones on the loop of loops, with the rule that self-organizing agents are only trustworthy when they stop for human decisions.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/midjourney-wants-to-delete-30-percent-of-all-death-study.html" data-study-guide>Midjourney Wants to Delete 30% of All Death</a> — Fireship on the "ultrasonic CT," the Midjourney Spa, and the physics-based skepticism the device has already drawn.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+</body>
+</html>
