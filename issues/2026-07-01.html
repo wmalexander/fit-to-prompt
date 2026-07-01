@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - July 1, 2026</title>
+  <meta name="description" content="Daily AI news roundup - July 1, 2026. Anthropic ships Claude Sonnet 5 matching Opus at a fraction of the price, Washington lifts export controls on Fable and Mythos, Claude Science opens a reproducible research lab, Amazon bets $1B on forward-deployed engineers, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #62">
+  <meta property="og:description" content="Daily AI news roundup - July 1, 2026. Anthropic ships Claude Sonnet 5 matching Opus at a fraction of the price, Washington lifts export controls on Fable and Mythos, Claude Science opens a reproducible research lab, Amazon bets $1B on forward-deployed engineers, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, July 1, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 62</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>8 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models &middot; Anthropic</div>
+          <a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Claude Sonnet 5 Matches Opus at a Fraction of the Price</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; Jun 30</p>
+          <div class="newspaper-body">
+            <p>Anthropic released Claude Sonnet 5, a new model it says narrows the gap with its far more expensive Opus 4.8 while excelling at the autonomous, multi-step work, browsing, coding, running terminals, that defines the agentic era. Introductory pricing runs $2 per million input tokens and $10 per million output through August 31 before settling at $3 and $15, and early testers report it finishing complex tasks where previous Sonnet models "would stop short," including multi-step insurance workflows that used to require a human in the loop.</p>
+            <p>The pitch is economic as much as technical: most of the frontier's capability at a mid-tier price, paired with safety evaluations Anthropic says show lower misaligned-behavior rates and sharply reduced cybersecurity capability compared with its Opus line. In a week when governments spent their energy deciding who may touch the closed frontier at all, Anthropic's answer was to make the capable-enough version cheaper and put it in far more hands.</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:#1a1a1a;">
+          <a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+            <img src="https://cdn.sanity.io/images/4zrzovbb/website/458ea645ef6b729f6847cba16932716e6b547f2f-2880x1620.png" alt="Anthropic introduces Claude Sonnet 5" style="width:100%;height:100%;object-fit:cover;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Pi + Ollama local agent -->
+      <div class="story-span-2">
+        <div class="kicker">Video &middot; Local AI</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-01-cartoon.png" alt="New Yorker-style cartoon: a man crouches to unplug a large glowing server tower labeled CLOUD AI and gestures proudly at a tiny Raspberry Pi board on the floor, while his skeptical wife watches from the doorway with a dollar-sign thought bubble." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"He insists the tiny one does everything the $200-a-month version did. She's still waiting for it to finish the first sentence."</p>
+          </div>
+          <div>
+            <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/pi-ollama-i-replaced-claude-code-with-this-free-local-agent-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+              <h3 class="headline-feature mb-2">Pi + Ollama: I Replaced Claude Code With This Free Local Agent</h3>
+            </a>
+            <p class="byline mb-2">Leon van Zyl &middot; YouTube &middot; Jun 30</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Leon van Zyl builds a free, fully local coding agent on a Raspberry Pi with Ollama, installing and running open models on modest hardware as a no-subscription alternative to cloud tools like Claude Code. The study guide follows the setup step by step, for developers who want a private agent they own outright: no monthly bill, and no vendor that can switch it off. It is the practical, hobbyist end of the same instinct driving enterprises toward open weights.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO: Sonnet 5 is LIVE / Chase AI -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Models</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/sonnet-5-is-live-and-it-competes-with-opus-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/_QE7v4VFxsE/maxresdefault.jpg" alt="Sonnet 5 is LIVE And It Competes With Opus" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Sonnet 5 is LIVE, And It Competes With Opus</h3>
+        </a>
+        <p class="byline mb-2">Chase AI &middot; YouTube &middot; Jun 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Chase AI puts Claude Sonnet 5 through its paces against Sonnet 4.6 and the pricier Opus 4.8, walking through the benchmarks, the introductory pricing, and the agentic search and computer-use gains. His practical takeaway is that model choice is now a per-task decision, Sonnet 5 for most work and Opus held back for the hardest long-horizon problems, and the study guide turns that into a simple rule of thumb for when to reach for which.</p>
+      </div>
+
+      <!-- VIDEO: This New AI Model Changes Everything / Two Minute Papers -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Policy</div>
+        <a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/this-new-ai-model-changes-everything-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/qks6dGQFd_c/maxresdefault.jpg" alt="This New AI Model Changes Everything" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">This New AI Model Changes Everything</h3>
+        </a>
+        <p class="byline mb-2">Two Minute Papers &middot; YouTube &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Two Minute Papers uses the export ban on Anthropic's Fable and Mythos models to ask a bigger question: if the most capable systems can be locked away even from their own creators, what happens when an open-weight model reaches the same capability, and who gets to say no then? The study guide traces the argument that gating the frontier may be futile once the same power is downloadable by anyone.</p>
+      </div>
+
+      <!-- FEATURE: Trump lifts export controls -->
+      <div class="story-block">
+        <div class="kicker">AI Policy &middot; Government</div>
+        <a href="https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/06/anthropic-claude-fable.jpg?w=1024" alt="Washington lifts export controls on Anthropic's Mythos and Fable models" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Washington Lifts Export Controls on Anthropic's Mythos and Fable</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jun 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Eighteen days after adding Anthropic's most capable models to its export-restricted list, forcing the company to pull public access entirely because compliance was impractical at scale, the U.S. government reversed course and cleared Mythos and Fable to come back online. In exchange, Anthropic committed to proactively detect security risks and to build shared protocols with the government. Critics had called the original controls political leverage dressed as security; the climb-down arrived as Asian labs shipped competing models and the restrictions began to look more costly than protective.</p>
+      </div>
+
+      <!-- FEATURE: Redeploying Fable 5 (text-only, same event) -->
+      <div class="story-block">
+        <div class="kicker">From Anthropic &middot; Safety</div>
+        <a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Redeploys Fable 5, With New Safeguards</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jun 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic's own account fills in what triggered the whole episode: Amazon researchers found a way to coax Fable 5 into surfacing software vulnerabilities, and testing showed less capable models could do the same, so the flaw was not unique to Fable. The company shipped a classifier it says blocks the specific technique in over 99% of cases, and is now working with Amazon, Microsoft, and Google on an industry framework for scoring jailbreak severity across four axes, from capability gain to ease of weaponization. It also pledged pre-release access and rapid vulnerability sharing with the government.</p>
+      </div>
+
+      <!-- FEATURE: Claude Science -->
+      <div class="story-block">
+        <div class="kicker">AI Tools &middot; Science</div>
+        <a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg" alt="Claude Science, an AI workbench for scientists" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Claude Science Puts a Reproducible Research Lab Inside Claude</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jun 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic launched Claude Science, a research workbench with more than 60 curated skills and connectors for genomics, proteomics, structural biology, and cheminformatics that runs analyses and generates figures and manuscripts alongside the exact code, environment, and conversation that produced them, so results stay reproducible months later. It scales compute automatically from a laptop to an HPC cluster, and UCSF researchers report cutting analysis time to roughly a tenth. The beta is open to paid Claude tiers, with Anthropic funding up to 50 projects at $30,000 in credits each through July 15.</p>
+      </div>
+
+      <!-- FEATURE: Amazon $1B FDE org -->
+      <div class="story-block">
+        <div class="kicker">Industry &middot; Enterprise</div>
+        <a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/06/AWS-VP-Francessca-Vasquez.jpg?w=1200" alt="AWS VP Francessca Vasquez announces a $1B forward-deployed engineering org" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Amazon Bets $1B on Forward-Deployed Engineers</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jun 30</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">AWS is standing up a $1 billion organization of forward-deployed engineers who embed inside client companies to build customized AI agents and hand back reusable skills and workflows. The model, pioneered by Palantir, is suddenly the industry's favorite: OpenAI and Anthropic recently launched comparable ventures valued at $4 billion and $1.5 billion, each paired with a private-equity partner. Amazon's version is funded internally rather than as a joint venture, a sign the labs now see hands-on deployment, not just API access, as where enterprise AI is actually won.</p>
+      </div>
+
+      <!-- PUZZLE: Word Search -->
+      <div class="story-block">
+<style>
+.ai-ws{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:300px;margin:0 auto;color:#1a1a1a;background:#fff;border:2px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.ai-ws *{box-sizing:border-box}
+.ai-ws .ws-head{border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:10px}
+.ai-ws .ws-kicker{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#8B0000;font-weight:700}
+.ai-ws .ws-title{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1}
+.ai-ws .ws-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;background:#e5e7eb;border:1px solid #1a1a1a;user-select:none}
+.ai-ws .ws-cell{aspect-ratio:1;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;cursor:pointer;line-height:1}
+.ai-ws .ws-cell.pick{background:#fbe9e9;color:#8B0000}
+.ai-ws .ws-cell.found{background:#e6f5ec;color:#0a7a32}
+.ai-ws .ws-words{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:10px}
+.ai-ws .ws-word{font-size:11px;font-weight:700;letter-spacing:.5px}
+.ai-ws .ws-word.done{color:#0a7a32;text-decoration:line-through}
+.ai-ws .ws-msg{font-size:11px;color:#6b7280;margin-top:8px;text-align:center;line-height:1.3}
+</style>
+<div class="ai-ws">
+  <div class="ws-head">
+    <div class="ws-kicker">Puzzle</div>
+    <div class="ws-title">Word Search</div>
+  </div>
+  <div class="ws-grid" id="ws-grid"></div>
+  <div class="ws-words" id="ws-words"></div>
+  <div class="ws-msg" id="ws-msg">Tap a start letter, then the end letter.</div>
+</div>
+<script>
+(function(){
+  var GRID=[["D","F","N","S","T","V","W","E","M","O"],["D","A","Z","N","W","U","L","P","N","T"],["W","K","E","A","E","L","B","A","F","Q"],["U","G","G","F","M","V","I","I","Y","B"],["A","B","S","O","H","T","Y","M","C","T"],["I","S","U","P","O","X","K","D","L","N"],["O","L","L","A","M","A","F","N","A","I"],["L","F","T","E","N","N","O","S","U","M"],["Y","U","X","A","N","L","A","M","D","I"],["E","I","A","P","E","X","Q","J","E","D"]];
+  var WORDS=[{w:"CLAUDE",cells:[[4,8],[5,8],[6,8],[7,8],[8,8],[9,8]]},{w:"SONNET",cells:[[7,7],[7,6],[7,5],[7,4],[7,3],[7,2]]},{w:"OLLAMA",cells:[[6,0],[6,1],[6,2],[6,3],[6,4],[6,5]]},{w:"FABLE",cells:[[2,8],[2,7],[2,6],[2,5],[2,4]]},{w:"MYTHOS",cells:[[4,7],[4,6],[4,5],[4,4],[4,3],[4,2]]},{w:"OPUS",cells:[[5,4],[5,3],[5,2],[5,1]]},{w:"AGENT",cells:[[4,0],[3,1],[2,2],[1,3],[0,4]]}];
+  var gridEl=document.getElementById("ws-grid"),wordsEl=document.getElementById("ws-words"),msg=document.getElementById("ws-msg");
+  var found={},start=null;
+  for(var r=0;r<10;r++)for(var c=0;c<10;c++){var d=document.createElement("div");d.className="ws-cell";d.textContent=GRID[r][c];d.dataset.r=r;d.dataset.c=c;gridEl.appendChild(d);}
+  WORDS.forEach(function(o){var s=document.createElement("span");s.className="ws-word";s.textContent=o.w;s.id="ww-"+o.w;wordsEl.appendChild(s);});
+  function cellAt(r,c){return gridEl.children[r*10+c];}
+  function lineBetween(a,b){var dr=b[0]-a[0],dc=b[1]-a[1];var len=Math.max(Math.abs(dr),Math.abs(dc));if(len===0)return null;if(dr!==0&&dc!==0&&Math.abs(dr)!==Math.abs(dc))return null;if(dr!==0&&dc!==0&&Math.abs(dr)!==Math.abs(dc))return null;var sr=dr===0?0:dr/Math.abs(dr),sc=dc===0?0:dc/Math.abs(dc);if(dr!==0&&dc!==0&&Math.abs(dr)!==Math.abs(dc))return null;var cells=[];for(var i=0;i<=len;i++)cells.push([a[0]+sr*i,a[1]+sc*i]);return cells;}
+  function key(cells){return cells.map(function(x){return x[0]+","+x[1];}).sort().join("|");}
+  function clearPick(){Array.prototype.forEach.call(gridEl.querySelectorAll(".pick"),function(e){e.classList.remove("pick");});}
+  gridEl.addEventListener("click",function(e){
+    var t=e.target;if(!t.classList.contains("ws-cell"))return;
+    var r=+t.dataset.r,c=+t.dataset.c;
+    if(!start){start=[r,c];clearPick();t.classList.add("pick");return;}
+    var cells=lineBetween(start,[r,c]);start=null;clearPick();
+    if(!cells){msg.textContent="Straight lines only, try again.";return;}
+    var k=key(cells);var hit=null;
+    WORDS.forEach(function(o){if(!found[o.w]&&key(o.cells)===k)hit=o;});
+    if(hit){found[hit.w]=1;hit.cells.forEach(function(x){cellAt(x[0],x[1]).classList.add("found");});document.getElementById("ww-"+hit.w).classList.add("done");
+      var n=Object.keys(found).length;msg.textContent=n===WORDS.length?"Solved. Every word found.":"Nice, "+n+" of "+WORDS.length+" found.";}
+    else{msg.textContent="Not a word, keep looking.";}
+  });
+})();
+</script>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">The numbers that matter today are all fractions. Claude Sonnet 5 lands within two percentage points of Opus on computer use and agentic coding, and actually beats it on knowledge work, at roughly 40% of Opus's input price. A free, downloadable Chinese model, GLM-5.2, closes most of the gap to the paid frontier in a single point release shipped in under three months. And a Raspberry Pi running Ollama can stand in for a $200-a-month coding subscription, if you strip away the harness. The through-story of the day is that raw model capability is getting cheap fast, and everyone, Anthropic, Washington, and the open-source world, is scrambling to figure out what's actually still worth paying for.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~8 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-07-01-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">Anthropic Fills the Whole Front Page</h4>
+<ul class="digest-bullets">
+<li><strong>Sonnet 5 is the "good enough, half the price" play.</strong> Chase AI's benchmark walk-through is blunt: versus Opus 4.8, Sonnet 5 is only ~2% behind on computer use and agentic coding, ahead on knowledge work, with the biggest gap on SWE-bench Pro (63% vs 69%). Introductory pricing is $2/$10 per million tokens (settling to $3/$15) against Opus at $5/$25, "less than half the cost." The catch he surfaces from the effort-level charts: "low" Sonnet 5 is just cheap, not smart, and at "high" effort you're paying near-Opus prices, where Opus's token efficiency can actually make it the cheaper finisher on hard problems. Model choice is now a per-task decision, not a tier you pick once.</li>
+<li><strong>Claude Science turns Claude into a reproducible lab.</strong> The new workbench ships with 60+ curated skills and connectors for genomics, proteomics, structural biology, and cheminformatics, and, crucially, emits every figure and manuscript alongside the exact code, environment, and conversation that produced it, so results replay months later. It auto-scales compute from a laptop to an HPC cluster; UCSF reports cutting analysis time to roughly a tenth. Anthropic is funding up to 50 projects at $30,000 in credits each, applications open through July 15.</li>
+<li><strong>Fable comes back, with a paper trail.</strong> Anthropic's own post explains the June episode: Amazon researchers found a technique that coaxed Fable 5 into surfacing software vulnerabilities, and testing showed weaker models could do the same, so the flaw wasn't unique to Fable. It shipped a classifier that blocks the technique in "over 99%" of cases and is convening Amazon, Microsoft, and Google around a shared jailbreak-severity framework scored on four axes (capability gain, breadth, ease of weaponization, discoverability).</li>
+</ul>
+
+<h4 class="digest-theme">Government Reverses Itself in Eighteen Days</h4>
+<ul class="digest-bullets">
+<li><strong>The export controls lasted less than three weeks.</strong> TechCrunch reports the U.S. added Mythos and Fable to its export-restricted list on June 12, which forced Anthropic to pull public access entirely because per-user nationality checks were impractical at scale, then cleared them to return on June 30. In exchange Anthropic agreed to proactively detect risks and co-develop protocols. Cybersecurity experts had read the original move as political leverage dressed as security, and the reversal came as Asian labs shipped their own competing frontier models.</li>
+<li><strong>Two Minute Papers reads the whole thing as an argument for owning your weights.</strong> His framing: if a frontier capability can be locked away "even from some of its own creators," and it may only return behind identity-and-nationality verification, the durable answer is open models "you can actually own." He argues GLM-5.2 is the proof, near-frontier, and in his telling more honest than a paid model that (per his read of Fable) could silently route your query to a weaker model without telling you.</li>
+</ul>
+
+<h4 class="digest-theme">The Open And Local Frontier Keeps Closing In</h4>
+<ul class="digest-bullets">
+<li><strong>GLM-5.2 is a real jump, with clever training behind it.</strong> A ~700B-parameter open model that Two Minute Papers says "leaves all other open systems in the dust" and comes close to the frontier one minor version after 5.1. The technical tells: multi-token prediction for speed, PPO (grading every step, not a whole "classroom" like GRPO) so long-horizon coding agents learn which small decisions paid off, a parallel-training factory called Slime, and an anti-benchmark-hacking trick that feeds a cheating model bogus data so gaming the score "won't pay off."</li>
+<li><strong>The local-model problem is the harness, not the weights.</strong> Leon van Zyl's thesis: Claude Code injects 20,000-30,000 tokens of system prompt and tools before you type a word, and local models cap out around 120,000-200,000 tokens of VRAM-bound context, with quality degrading past the 50-70% "dumb zone." His fix is a lean harness (the Pi Agent SDK, or OpenCode) that injects a minimal tool set, plus Ollama to run the model, giving a free, private agent that doesn't drown itself in scaffolding before it starts.</li>
+</ul>
+
+<h4 class="digest-theme">The Money Moves To Deployment</h4>
+<ul class="digest-bullets">
+<li><strong>Amazon puts $1B behind forward-deployed engineers.</strong> AWS is building an org of engineers who embed inside client companies to stand up custom AI agents and hand back reusable skills and workflows, the Palantir-pioneered FDE model. It follows OpenAI's ~$4B and Anthropic's ~$1.5B versions, both structured with private-equity partners; Amazon's is funded internally. The signal: the labs increasingly believe enterprise AI is won by hands-on integration, not by renting API access.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+
+<p>Read today's stories together and they resolve into a single sentence: <em>the model is getting commoditized, and everyone is repositioning around the parts that aren't</em>. Sonnet 5 is Anthropic conceding that most work doesn't need the top model, so it's selling "90-plus percent of Opus at 40% of the price." GLM-5.2 is the open-source world making the same point for free. And Leon van Zyl's harness argument is the most radical version: for a lot of real coding, the expensive thing isn't the intelligence at all, it's the wrapper, and you can strip that down to nothing on a Raspberry Pi. Three different actors, one conclusion, the frontier model is no longer the scarce good.</p>
+
+<p>So what <em>is</em> scarce? Two things today, and they map cleanly onto the rest of the issue. The first is trust and governance. The entire Fable saga, an export ban imposed and lifted in eighteen days, a 99%-blocking classifier, a four-company jailbreak-severity framework, is Anthropic and Washington building the machinery to decide when a capable model is safe to ship. That machinery is now a competitive surface: Anthropic is trading pre-release access and shared protocols for the right to keep deploying. The second scarce thing is integration. Claude Science isn't valuable because Claude got smarter; it's valuable because it wires 60 tools and reproducibility into one place a scientist can actually use. Amazon's $1B FDE bet is the enterprise version of the identical insight, spend the money on the humans who make the model useful in situ.</p>
+
+<p>The tension the day leaves unresolved is honesty and control. Two Minute Papers lobs a real accusation, that a paid frontier model quietly downgrading your query is a betrayal of the "honest" promise, and offers open weights as the fix. Anthropic's counter is implicit in the same news cycle: the reason to keep a hand on the frontier is that Fable could be pushed to find 10,000-vulnerability-scale exploits, and an open model that reaches that capability can't be recalled. Both are right, which is the problem. The open frontier is more transparent and more uncontrollable at the same time.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+
+<p>We are watching a frontier technology slide down the classic commoditization curve in fast-forward, and the interesting money is already rushing to the layers above and below the model. Below it: memory fabs, GPUs, and the compute that Claude Science quietly scales across a laptop, an HPC cluster, and on-demand GPUs. Above it: integration, reproducibility, deployment services, and the governance apparatus that says which model may run where. The model in the middle, the thing that captured every headline for three years, is turning into the part you can increasingly get for $2 a million tokens, or free off Hugging Face, or off a Pi in your closet.</p>
+
+<p>That reframing makes the government's whiplash look less like incompetence and more like a system with no settled theory of what it's regulating. You cannot export-control a capability that a free Chinese model reaches on its own timeline, and eighteen days was apparently long enough for Washington to notice. The durable lever isn't the weights; it's the deployment relationships, the vulnerability-sharing agreements, and the trust frameworks now forming between the labs and the state. Anthropic seems to grasp this, which is why its answer to a ban wasn't defiance but a set of protocols, and why its product news, Sonnet 5, Claude Science, is about reach and utility rather than raw capability records.</p>
+
+<p>For anyone building right now, the practical takeaway is that the winning move is a portfolio, not a bet. Chase AI's "case-by-case" model choice, van Zyl's lean local harness, Two Minute Papers' owned open weights, and even Amazon's embed-an-engineer strategy are all versions of the same discipline: match the tool to the task, don't overpay for capability you won't use, and don't let a single vendor, or a single government, be a single point of failure. The era of "just use the best model" is ending. The era of managing a stack has begun.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether the four-company jailbreak framework becomes a real standard.</strong> Anthropic, Amazon, Microsoft, and Google agreeing on how to score jailbreak severity could turn into the industry's shared safety vocabulary, or quietly stall. Watch for a published rubric and whether any non-founding lab adopts it.</li>
+<li><strong>Whether Sonnet 5 cannibalizes Opus demand.</strong> If "90% of Opus at 40% of the price" holds up in production, watch Anthropic's revenue mix and pricing moves, a too-good mid-tier model can undercut the flagship it's meant to complement.</li>
+<li><strong>Whether lean local harnesses go mainstream.</strong> The Pi Agent SDK and OpenCode are betting the harness, not the model, is the bottleneck. Watch adoption numbers and whether the big labs respond by making their own harnesses leaner and more controllable.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/sonnet-5-is-live-and-it-competes-with-opus-study.html" data-study-guide>Sonnet 5 is LIVE, And It Competes With Opus</a> &mdash; Chase AI's benchmark-by-benchmark comparison to Opus 4.8, the effort-level pricing nuance, and a rule of thumb for when Sonnet 5 beats reaching for Opus.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/this-new-ai-model-changes-everything-study.html" data-study-guide>This New AI Model Changes Everything</a> &mdash; Two Minute Papers on why the Fable/Mythos ban makes the case for open weights, and how GLM-5.2's training tricks (PPO, multi-token prediction, anti-benchmark-hacking) got it near the frontier.</li>
+<li><a href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/video-study-guides/pi-ollama-i-replaced-claude-code-with-this-free-local-agent-study.html" data-study-guide>Pi + Ollama: I Replaced Claude Code With This Free Local Agent</a> &mdash; Leon van Zyl on why the harness, not the model, is what breaks local coding, and how a lean setup plus Ollama gives you a private, no-subscription agent.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
