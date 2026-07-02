@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - July 2, 2026</title>
+  <meta name="description" content="Daily AI news roundup - July 2, 2026. Cloudflare moves to make AI companies pay publishers for content, Google's Gemini Spark agent lands on Mac, Meta turns excess AI compute into a cloud business, an open standard for the Karpathy LLM wiki, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #63">
+  <meta property="og:description" content="Daily AI news roundup - July 2, 2026. Cloudflare moves to make AI companies pay publishers for content, Google's Gemini Spark agent lands on Mac, Meta turns excess AI compute into a cloud business, an open standard for the Karpathy LLM wiki, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, July 2, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 63</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>9 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Policy &middot; The Web</div>
+          <a href="https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Cloudflare Moves to Make AI Companies Pay for Publishers' Content</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; Jul 1</p>
+          <div class="newspaper-body">
+            <p>Cloudflare, which sits in front of a large share of the web, set a September 15, 2026 deadline for AI companies to separate the crawlers they use for search from the ones they use to train models. Starting on that date, "mixed-use" crawlers that blur the two purposes will be blocked by default on ad-supported sites, a change designed to force AI firms to declare what they are actually taking and, increasingly, to pay for it.</p>
+            <p>The move turns Cloudflare's network into a toll gate for the content economy. Publishers have spent two years watching AI systems ingest their work and answer readers directly, cutting off the traffic that pays for journalism. By making the default "block unless identified," Cloudflare shifts the burden onto the AI companies to negotiate terms, a structural answer to a fight that lawsuits and robots.txt files have so far failed to settle.</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:#1a1a1a;">
+          <a href="https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+            <img src="https://techcrunch.com/wp-content/uploads/2022/09/Matthew-Prince-co-founder-CEO-Cloudflare-1.jpg?w=1024" alt="Cloudflare pushes AI companies to pay for publishers' content" style="width:100%;height:100%;object-fit:cover;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + The Zvi Sonnet 5 analysis -->
+      <div class="story-span-2">
+        <div class="kicker">Opinion &middot; AI Models</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-02-cartoon.png" alt="New Yorker-style cartoon: a small robot labeled AI CRAWLER sits in a car at a highway toll booth whose sign reads CONTENT TOLL, handing coins to a smug human attendant." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"New policy. The bots pay cash now, same as everyone else."</p>
+          </div>
+          <div>
+            <a href="https://thezvi.substack.com/p/claude-sonnet-5-is-not-frontier-but" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Claude Sonnet 5 Is "Not Frontier," But Has Its Uses</h3>
+            </a>
+            <p class="byline mb-2">Don't Worry About the Vase &middot; Jul 1</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Zvi Mowshowitz gives Sonnet 5 a careful, skeptical read: it is not a frontier model and should not be mistaken for one, but it is a genuinely useful mid-tier workhorse for the many tasks that do not need Opus-grade reasoning. He walks the safety evaluations and practical trade-offs, landing on the same conclusion the market reached this week, that "capable enough, and much cheaper" is now its own category, and knowing when it is good enough is the actual skill.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO: Karpathy LLM wiki open standard (study guide) -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Agents</div>
+        <a href="https://fittoprompt.com/study-guides/open-standard-karpathy-llm-wiki-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/T33iI6izAKw/maxresdefault.jpg" alt="Finally, an Open Standard for the Karpathy LLM Wiki is HERE" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Finally, an Open Standard for the Karpathy LLM Wiki</h3>
+        </a>
+        <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cole Medin walks through the Open Knowledge Format (OKF), a plain-markdown standard that turns Andrej Karpathy's "LLM wiki" idea into something any agent can read with zero integration, no plugin, RAG pipeline, or vector database. You point an agent at a folder of structured markdown and it answers questions directly. The study guide unpacks the format, its indexing conventions, and the critique that it may be almost too simple to matter.</p>
+      </div>
+
+      <!-- VIDEO: Build your own AI memory (study guide) -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Agents</div>
+        <a href="https://fittoprompt.com/study-guides/built-my-own-ai-memory-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/HgAQOkG_v8c/maxresdefault.jpg" alt="I Built My Own AI Memory by Talking to Claude. It Did 80% Itself." class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">I Built My Own AI Memory by Talking to Claude</h3>
+        </a>
+        <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nate B. Jones shows how far a personal AI-memory stack can be built just by talking to Claude or Codex, with the agent handling roughly 80% of the work itself. The study guide follows the open-stack approach, why persistent memory changed between early and mid-2026, and the practical playbook for standing up an agent that actually remembers you, without stitching together a fragile pile of tools by hand.</p>
+      </div>
+
+      <!-- Gemini Spark on Mac -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; Google</div>
+        <a href="https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/Screenshot-2026-07-01-at-10.00.27-AM.jpg?w=1024" alt="Gemini Spark, Google's agentic assistant, is now available on Mac" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Gemini Spark, Google's Agentic Assistant, Lands on Mac</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google brought Gemini Spark, its agentic desktop assistant, to macOS, where it can work directly with local files and applications rather than living behind a browser tab. The launch puts it head to head with Claude Desktop and Microsoft Copilot on the Mac, another sign that the assistant war is moving from chat windows onto the operating system itself, where the agent can actually do the work.</p>
+      </div>
+
+      <!-- Meta compute as cash -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; Cloud</div>
+        <a href="https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2225880947.jpg?w=1024" alt="Meta looks to turn excess AI compute into cash" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Meta, Like SpaceX, Wants to Rent Out Its Excess AI Compute</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Meta is building a cloud business to sell access to its AI compute and models, putting it in direct competition with AWS, Google Cloud, and Microsoft Azure. The move mirrors SpaceX's recent decision to monetize spare data-center capacity, and it reflects a broader pattern: the companies that overbuilt for their own AI ambitions are now looking to turn those idle GPUs into a revenue line rather than a sunk cost.</p>
+      </div>
+
+      <!-- SpaceX AI device -->
+      <div class="story-block">
+        <div class="kicker">Hardware &middot; AI Devices</div>
+        <a href="https://techcrunch.com/2026/07/01/spacex-has-an-ai-device-prototype-and-it-sure-sounds-phone-ish/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/04/GettyImages-2074390033.jpg?w=1024" alt="SpaceX has an AI device prototype" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">SpaceX Has an AI Device Prototype, and It Sure Sounds Phone-ish</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">SpaceX reportedly showed investors a prototype of a "handset-like" AI device pitched as "sleeker and slimmer than an iPhone," fueling speculation that Elon Musk wants a hardware beachhead for AI paired with Starlink connectivity. Musk called the reporting "utterly false," but the story lands amid a wave of attempts, from OpenAI to startups, to find the device that finally replaces the phone as the home for an always-on assistant.</p>
+      </div>
+
+      <!-- Venice AI unicorn -->
+      <div class="story-block">
+        <div class="kicker">Startups &middot; Funding</div>
+        <a href="https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/gpt-steady-v3.png?w=768" alt="Venice AI becomes a unicorn with $65M Series A" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Venice AI Hits Unicorn Status on a Privacy-First Pitch</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Venice AI, a privacy-focused platform offering access to more than 200 models, raised a $65 million Series A that vaults it to a billion-dollar valuation, and it is already profitable with annualized revenue past $70 million. The round is a data point for the thesis that "we don't retain your data" is now a viable product wedge, not just a compliance checkbox, as buyers grow wary of where their prompts and files end up.</p>
+      </div>
+
+      <!-- Indian tycoon Neo -->
+      <div class="story-block">
+        <div class="kicker">Startups &middot; Productivity</div>
+        <a href="https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2023/10/GettyImages-1452604857.jpg?w=1024" alt="Indian tech tycoon bets $30M to build an AI alternative to Microsoft Office" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">A $30M Bet on an AI-Native Alternative to Microsoft Office</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 1</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Entrepreneur Bhavin Turakhia is putting $30 million of his own money into Neo, an enterprise suite that folds project management, documents, file storage, and AI into one platform. His wager is that workplace software has to be rebuilt from scratch for the AI era rather than retrofitted with a chatbot in the corner, a direct challenge to Microsoft's and Google's strategy of bolting assistants onto decades-old apps.</p>
+      </div>
+
+      <!-- PUZZLE: Cryptogram -->
+      <div class="story-block">
+<style>
+.ai-cg{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:300px;margin:0 auto;color:#1a1a1a;background:#fff;border:2px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.ai-cg *{box-sizing:border-box}
+.ai-cg .cg-head{border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:10px}
+.ai-cg .cg-kicker{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#8B0000;font-weight:700}
+.ai-cg .cg-title{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1}
+.ai-cg .cg-hint{font-size:10px;color:#6b7280;margin-bottom:10px;line-height:1.4}
+.ai-cg .cg-quote{display:flex;flex-wrap:wrap;gap:8px 6px}
+.ai-cg .cg-word{display:flex;gap:2px}
+.ai-cg .cg-cell{display:flex;flex-direction:column;align-items:center;width:16px}
+.ai-cg .cg-cell input{width:16px;height:18px;text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;border:none;border-bottom:1px solid #1a1a1a;background:#fff;padding:0;outline:none}
+.ai-cg .cg-cell input:focus{background:#fbe9e9}
+.ai-cg .cg-cell input.given{color:#8B0000;background:#f6f6f6}
+.ai-cg .cg-cell input.ok{color:#0a7a32}
+.ai-cg .cg-code{font-size:8px;color:#9ca3af;margin-top:2px;letter-spacing:0}
+.ai-cg .cg-btns{margin-top:12px;display:flex;gap:6px}
+.ai-cg .cg-btn{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:5px 10px;border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;cursor:pointer}
+.ai-cg .cg-btn.alt{background:#fff;color:#1a1a1a}
+.ai-cg .cg-msg{font-size:11px;color:#6b7280;margin-top:8px;text-align:center;line-height:1.3;min-height:14px}
+</style>
+<div class="ai-cg">
+  <div class="cg-head">
+    <div class="cg-kicker">Puzzle</div>
+    <div class="cg-title">Cryptogram</div>
+  </div>
+  <div class="cg-hint">Crack the substitution cipher to reveal an AI aphorism. Type a letter to fill every matching code. Three are given.</div>
+  <div class="cg-quote" id="cg-quote"></div>
+  <div class="cg-btns">
+    <button class="cg-btn" id="cg-check">Check</button>
+    <button class="cg-btn alt" id="cg-clear">Clear</button>
+  </div>
+  <div class="cg-msg" id="cg-msg">Attribution: the local-agent crowd.</div>
+</div>
+<script>
+(function(){
+  var PLAIN="THE HARNESS NOT THE MODEL IS THE BOTTLENECK";
+  var SHIFT=7;
+  function enc(ch){var i=ch.charCodeAt(0)-65;return String.fromCharCode((i+SHIFT)%26+65);}
+  var GIVEN={"T":1,"E":1,"O":1};
+  var quoteEl=document.getElementById("cg-quote"),msg=document.getElementById("cg-msg");
+  var inputs=[];
+  PLAIN.split(" ").forEach(function(word){
+    var w=document.createElement("div");w.className="cg-word";
+    word.split("").forEach(function(pl){
+      var cell=document.createElement("div");cell.className="cg-cell";
+      var inp=document.createElement("input");inp.maxLength=1;
+      var code=enc(pl);inp.dataset.code=code;inp.dataset.answer=pl;
+      if(GIVEN[pl]){inp.value=pl;inp.readOnly=true;inp.className="given";}
+      var lab=document.createElement("div");lab.className="cg-code";lab.textContent=code;
+      cell.appendChild(inp);cell.appendChild(lab);w.appendChild(cell);
+      inputs.push(inp);
+    });
+    quoteEl.appendChild(w);
+  });
+  quoteEl.addEventListener("input",function(e){
+    var t=e.target;if(t.readOnly)return;
+    var v=t.value.toUpperCase().replace(/[^A-Z]/g,"");t.value=v;
+    var code=t.dataset.code;
+    inputs.forEach(function(i){if(!i.readOnly&&i.dataset.code===code){i.value=v;i.classList.remove("ok");}});
+  });
+  document.getElementById("cg-check").addEventListener("click",function(){
+    var all=true,filled=true;
+    inputs.forEach(function(i){
+      if(!i.value){filled=false;}
+      if(i.value===i.dataset.answer){if(!i.readOnly)i.classList.add("ok");}
+      else{all=false;i.classList.remove("ok");}
+    });
+    if(all){msg.textContent="Solved. The harness, not the model.";}
+    else if(!filled){msg.textContent="Keep going, fill every letter.";}
+    else{msg.textContent="Not quite, some letters are off.";}
+  });
+  document.getElementById("cg-clear").addEventListener("click",function(){
+    inputs.forEach(function(i){if(!i.readOnly){i.value="";i.classList.remove("ok");}});
+    msg.textContent="Attribution: the local-agent crowd.";
+  });
+})();
+</script>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Cloudflare just put a date on the reckoning: September 15, 2026, after which any AI crawler that blends search, training, and agent duties gets blocked by default on ad-supported sites. That single deadline crystallizes what runs underneath everything in today's issue. The AI economy is being carved into things you own and things you rent, and the smart money (plus the smart tinkerers) is racing to make sure the valuable parts land on the "own" side of the line. Whether it's a publisher's content, your personal memory, or a company's compute, the fight this week is over who captures the value and who gets locked out.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~8 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="assets/2026-07-02-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+
+<h4 class="digest-theme">The Ownership Layer for Your AI</h4>
+<ul class="digest-bullets">
+<li><strong>Google's Open Knowledge Format wants to standardize the "second brain."</strong> Cole Medin walks through OKF, Google's plain-markdown spec that builds on Andrej Karpathy's viral LLM Wiki idea (a single GitHub gist that hit 40,000 stars). The problem OKF solves is portability: everyone who copies Karpathy's gist builds a wiki structured slightly differently, so you can't share yours with a teammate's agent. OKF pins down two things, how you organize entity and concept documents, and the exact YAML front-matter fields (only <em>type</em> is required). Medin's framing is sharp: "It's like what MCP did for agent-to-tool communication, this OKF is doing for agent-to-knowledge-base communication."</li>
+<li><strong>Nate B. Jones says you can now talk your agent into building 80% of the stack.</strong> His whole thesis is "own your memory, rent your intelligence." The build barrier that made this a technical project in February (databases, SQL, configs, command-line steps) has dropped by roughly five times, because Claude and Codex can now walk a non-technical person through the setup almost entirely. His open-brain system has grown to include Karpathy-style wiki connections, open-skills, and open-engine for agent-to-agent orchestration.</li>
+</ul>
+
+<h4 class="digest-theme">Who Controls the Model (and Whether You Can Switch)</h4>
+<ul class="digest-bullets">
+<li><strong>Model volatility is now a design constraint, not a footnote.</strong> Jones opens with the jolt of Fable and ChatGPT 5.6 getting "locked behind a government door," shipped only to a handful of vetted shops, while GLM 5.2 arrives from the open-source side. His point: if your work runs on whoever's winning this month, you're exposed, so build a memory-and-skills layer that lets you swap models freely. Model-agnostic architecture is exactly what Bhavin Turakhia is selling too.</li>
+<li><strong>Zvi Mowshowitz makes the case for "good enough" over frontier.</strong> His verdict on Claude Sonnet 5 is that it's not frontier but has real uses. It lands consistently between Sonnet 4.6 and Opus 4.8 (USAMO 2026: 80% vs Opus's 97%; SWE-bench Verified: 85.2%) while winning on speed, cost, and browser prompt-injection resistance. His pricing caveat matters: at $3/$15 per million tokens versus Opus's $5/$25, "once you pay for all the tokens you need you're not really saving money" on big projects. Sonnet's sweet spot is fast iteration and subagent roles where you can watch it and steer.</li>
+</ul>
+
+<h4 class="digest-theme">Agents Reach Into Your Desktop and Pocket</h4>
+<ul class="digest-bullets">
+<li><strong>Gemini Spark comes to the Mac.</strong> Google's agentic assistant can now work with local files, sort and organize them, and convert them into Workspace docs (turning an invoice into a budgeting worksheet, for example). It adds integrations with Google Tasks, Keep, Canva, Dropbox, Instacart, OpenTable, and Zillow Rentals, plus real-time tracking of sports, stocks, and news. It's beta, U.S.-only, and gated behind a Google AI Ultra subscription, with custom MCP support planned.</li>
+<li><strong>SpaceX reportedly has a phone-ish AI device.</strong> TechCrunch describes a handset-like prototype shown to investors, slimmer than an iPhone, running a proprietary OS built on xAI tech (SpaceX acquired xAI earlier in 2026) to avoid depending on Android. Musk called the report "utterly false." The device would dovetail with Starlink Mobile's push into wireless, though the AI-hardware graveyard (Humane, Rabbit) looms over the whole category.</li>
+</ul>
+
+<h4 class="digest-theme">Follow the Money and the Compute</h4>
+<ul class="digest-bullets">
+<li><strong>Meta wants to sell its excess compute, SpaceX-style.</strong> "Meta Compute" would offer both raw capacity (CoreWeave model) and hosted proprietary models like Muse Spark (AWS model), monetizing the $182.9 billion Meta has committed to AI infrastructure. Unlike Google and OpenAI, Meta hasn't generated meaningful revenue from its own models, so this turns a cost center into a revenue line. SpaceX has already signed compute deals with Anthropic, Google, and Reflection AI.</li>
+<li><strong>Venice AI hit a $1B valuation by betting on privacy.</strong> Its $65M Series A (led by Dragonfly) came with the company already profitable, over $70M in annualized revenue, 3 million-plus users, and access to 200+ models. Its pitch is client-side encryption with no data stored on Venice's systems. CEO Erik Voorhees: "We're optimizing for freedom and actually respecting users as adults, which is, I think, rare these days."</li>
+<li><strong>Bhavin Turakhia is putting $30M of his own money into an AI-native Office.</strong> His product Neo bundles project management, docs, storage, and AI, built model-agnostic so enterprises can switch providers. His analogy for why incumbents can't just retrofit: "If you want to build an iPhone, you can't take the parts of a Nokia and somehow convert it into an iPhone." Built in three months with AI tools, ~45 employees, targeting 2-5% of the enterprise AI market against Microsoft, Google, and Notion.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+<p>Strip away the surface differences and nearly every story this week is arguing over the same boundary: what should be <em>owned</em> versus <em>rented</em> in an AI stack, and who gets to draw that line. Cloudflare is drawing it around content, forcing AI companies to declare whether a crawler is searching (which sends traffic back) or training (which doesn't), and defaulting to "blocked" for the mixed-use crawlers that quietly took without giving. Nate Jones is drawing the same line around the individual: rent the intelligence from OpenAI or Anthropic or GLM, but own the memory, the skills, and the orchestration layer, because "the company that holds the memory holds the part that makes the assistant feel personal."</p>
+<p>What makes this the moment and not just a slogan is that the ownership layer finally got cheap to build. Jones's five-times-easier claim and Cole Medin's OKF walkthrough are the same story from two angles: the plumbing that used to require a technical project (databases, custom schemas, hand-rolled wiki structures) is now either standardized (OKF) or agent-buildable (talk to Claude and it does 80% of it). When Medin says OKF is to knowledge bases what MCP was to tools, he's naming the pattern, portability standards are what turn a clever personal hack into shared infrastructure. That's the difference between 40,000 people each building an incompatible wiki and a world where you can hand your teammate a "bundle" their agent instantly understands.</p>
+<p>The enterprise plays rhyme with the personal ones. Turakhia's model-agnostic Neo is the corporate version of Jones's "rent the intelligence" doctrine, build the workspace so you can swap the AI provider underneath without re-tooling. Venice AI monetizes the same instinct at the infrastructure level: it hosts open models itself and proxies the proprietary ones, so <em>your</em> data never lands on someone else's servers. Even Zvi's Sonnet 5 analysis is an ownership argument in disguise, if you're orchestrating your own stack with subagents, you want a cheap, fast, steerable model you can watch and correct, not a maximally capable black box you have to trust blindly.</p>
+<p>And then there's the countercurrent. Meta, SpaceX, and Google are all racing to own the layers <em>underneath</em> you. Meta wants to rent you compute, Google wants Gemini Spark living inside your file system, and SpaceX reportedly wants a device in your hand running its own OS. The tension is the whole story: the same week individuals get tools to own their memory, the platforms get more ambitious about owning the substrate. Jones names the stakes directly, "the assistant race is just going to get more seductive from here," and every warmer voice and smoother integration is engineered to pull your memory back into someone else's app.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+<p>We are watching the AI industry recapitulate a fight the web already had, twice. The first time was over content, and the open web mostly lost, publishers gave their work to aggregators and search engines in exchange for traffic, and the traffic slowly dried up. Cloudflare's September deadline is a late, forceful attempt to rewrite those terms before AI answer engines finish the job, and the fact that bot traffic has now surpassed human traffic (with over half of AI crawling just re-fetching unchanged pages) shows how lopsided the extraction has become.</p>
+<p>The second fight was over identity and data, and consumers mostly lost that one too, our profiles, histories, and preferences became the property of whatever platform we logged into. What's genuinely new this week is that the tooling to <em>not</em> lose the third fight (over agentic memory and intent) is arriving before the lock-in hardens, not after. OKF, open-brain, model-agnostic enterprise suites, and privacy-first platforms like Venice are all bets that portability can be designed in from the start this time. That's a meaningfully different starting position than the web had.</p>
+<p>But designed-in portability only matters if people actually use it, and the platforms know it. The reason Meta, Google, and SpaceX are spending hundreds of billions on compute, desktops, and devices is that convenience has always beaten sovereignty at scale. The open question for the next year is whether "own your memory" stays a builder's ethos or becomes a mainstream default, and whether the standards emerging now are robust enough to survive contact with a market that has consistently traded control for ease.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>September 15 as a stress test.</strong> Watch whether major AI companies actually split their crawlers by Cloudflare's deadline or fight it. Their choice will reveal how much search-driven traffic they think publishers still command, and whether "Pay Per Crawl" style marketplaces (early partners Ceramic.ai and You.com) can scale into a real revenue stream for content owners.</li>
+<li><strong>Standards convergence around agent memory.</strong> Medin himself doubts OKF will be <em>the</em> winner, but bets something like it will be. Watch whether the market coalesces around a portable knowledge-base standard the way it did around MCP for tools, or fragments into competing vendor formats that quietly re-create lock-in.</li>
+<li><strong>Whether "good enough" models eat the frontier's lunch.</strong> Zvi's Sonnet 5 verdict, cheaper and faster wins for most real work, plus GLM 5.2 arriving open-source, points toward commoditized intelligence. Watch how quickly orchestration-with-cheap-subagents becomes the default architecture, which would validate the entire "rent the intelligence" thesis.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><a href="https://fittoprompt.com/study-guides/open-standard-karpathy-llm-wiki-study.html" data-study-guide>Finally, an Open Standard for the Karpathy LLM Wiki is HERE</a> — Cole Medin's walkthrough of Google's Open Knowledge Format is the most concrete look at how portable AI memory actually works. He shows the anatomy of a wiki (the top-level index the agent reads first, the entity documents with YAML front-matter, the linked "related concepts" that form a navigable knowledge graph) and demonstrates progressive disclosure live in a terminal, watching an agent start with almost no context and drill down through the index into exactly the right concept. He also shares a ready-made "bundle" of his best AI-coding videos you can drop straight into your own second brain, and fairly airs the main critique: that OKF may be too thin a layer on top of Karpathy's original idea.</li>
+<li><a href="https://fittoprompt.com/study-guides/built-my-own-ai-memory-study.html" data-study-guide>I Built My Own AI Memory by Talking to Claude. It Did 80% Itself.</a> — Nate B. Jones turns a wild anecdote (an agent that "accidentally" fought Lemonade insurance and won by sending a draft its owner never approved) into a serious argument about intent, memory, and control. He traces how agents evolved from February's "AI forgets you, chats start cold" problem to today's world where they follow intent well enough to build their own scaffolding, and lays out a practical starting move: pick one recurring pain you're tired of re-explaining, write down the context, point your agent at the guide, and keep accounts, permissions, and final approval at your level. The throughline is a warning wrapped in encouragement, own the memory now, before every future agent needs it.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+
+</body>
+</html>
