@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - July 3, 2026</title>
+  <meta name="description" content="Daily AI news roundup - July 3, 2026. Alibaba moves to ban Claude Code over alleged backdoor risks, companies throttle employee AI use as costs spiral, organized crime builds an AI hardware theft economy, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #64">
+  <meta property="og:description" content="Daily AI news roundup - July 3, 2026. Alibaba moves to ban Claude Code over alleged backdoor risks, companies throttle employee AI use as costs spiral, organized crime builds an AI hardware theft economy, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, July 3, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 64</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>19 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Policy &middot; China</div>
+          <a href="https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Alibaba Moves to Ban Claude Code at Work Over Alleged Backdoor Risks</h2>
+          </a>
+          <p class="byline mb-3">Reuters &middot; Jul 3</p>
+          <div class="newspaper-body">
+            <p>Alibaba will bar employees from using Anthropic's Claude Code starting July 10, according to a source cited by Reuters, after developers reported that the tool inspected user environments, including timezone and proxy details, and inserted subtle markers into prompts sent to Anthropic's servers, signals that can identify China-linked users. An Anthropic employee responded that the mechanism is "an experiment we launched in March" aimed at unauthorized resellers and model distillation, not a backdoor. Employees are being pointed to Qoder, Alibaba's in-house coding platform, instead.</p>
+            <p>The subtext is a feud already in progress: Anthropic has accused Alibaba of illicitly extracting Claude's capabilities through distillation, and the "backdoor" in question looks a lot like anti-distillation plumbing. Whatever the intent, the effect is the same. Developer tools are now an extension of geopolitics, and each side's security story is the other side's industrial policy.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">From Anthropic</div>
+          <a href="https://anthropic.com/news/fable-safeguards-jailbreak-framework" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Lock&backgroundColor=cactus" alt="More details on Fable 5's cyber safeguards and Anthropic's jailbreak framework" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+            <h3 class="headline-feature mb-2">Anthropic Details Fable 5's Cyber Safeguards and a Jailbreak Severity Framework</h3>
+          </a>
+          <p class="byline mb-2">Anthropic &middot; Jul 2</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">In a timely counterpoint to the security claims swirling around its tools, Anthropic published specifics on what its cyber classifiers for Fable 5 do and don't block, plus a first draft of a framework for grading jailbreak severity, an attempt to replace vibes with a shared vocabulary for AI security incidents.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + OpenClaw dating -->
+      <div class="story-span-2">
+        <div class="kicker">AI Culture &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-03-cartoon.png" alt="New Yorker-style cartoon: two people meet awkwardly at a coffee shop while their laptop-borne AI agents chat happily in the background." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"Our agents have been dating for three months. They thought it was time we met."</p>
+          </div>
+          <div>
+            <a href="https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Yep, We're Using OpenClaw to Date Now</h3>
+            </a>
+            <p class="byline mb-2">TechCrunch &middot; Jul 2</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Ben Guez has "a bunch of potential international wives in DMs" thanks to an automated script he built with OpenClaw, Claude Code, and Instagram trial accounts. TechCrunch's tour of AI-agent dating captures a moment when the technology built to automate work is being pointed, inevitably, at romance, with all the charm and horror that implies. The agents handle the outreach, the openers, and the follow-ups; the humans, in theory, show up for the actual date.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fortune: cargo theft economy -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; Crime</div>
+        <a href="https://fortune.com/2026/07/03/organized-crime-cargo-theft-economy-ai-infrastructure-data-center-black-market/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/07/GettyImages-2268678705-e1783030077649.jpg?resize=1200,600" alt="Organized crime is building an AI hardware cargo theft economy" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Organized Crime Is Building an AI Hardware Theft Economy</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; Jul 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cargo theft was a $725 million problem in 2025, with electronics making up 22% of it by some estimates, and organized crime now has a particular thirst for AI hardware bound for data centers. "The economics have become just crazy from the criminal opportunistic perspective," one security executive tells Fortune. High-density GPU shipments are compact, wildly valuable, and easy to resell into a supply-starved black market.</p>
+      </div>
+
+      <!-- PUZZLE -->
+<div class="story-block"><style>.scramble-wrap{font-family:'Inter',-apple-system,Helvetica,Arial,sans-serif;color:#1a1a1a}.scramble-label{font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#8B0000;border-top:3px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:5px 0;margin:0 0 10px}.scramble-intro{font-size:12px;line-height:1.55;margin:0 0 14px}.scramble-item{margin:0 0 14px}.scramble-word{font-size:19px;font-weight:800;letter-spacing:5px;line-height:1.2}.scramble-word .hl{color:#8B0000}.scramble-clue{font-size:11px;font-style:italic;color:#555;margin:3px 0 5px;line-height:1.4}.scramble-in{width:100%;box-sizing:border-box;border:1px solid #1a1a1a;border-radius:0;background:#fff;padding:6px 8px;font-family:inherit;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#1a1a1a;outline:none}.scramble-in:focus{border-color:#8B0000}.scramble-in.scramble-ok{border-color:#059669;background:#ecfdf5;color:#059669}.scramble-in.scramble-no{border-color:#8B0000;background:#fef2f2;color:#8B0000}.scramble-bonus{border-top:1px dashed #1a1a1a;padding-top:12px;margin-top:4px}.scramble-bonus-title{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 3px}.scramble-btn{display:block;width:100%;margin-top:12px;padding:8px 0;border:none;background:#1a1a1a;color:#fff;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer}.scramble-btn:hover{background:#8B0000}.scramble-result{font-size:12px;font-weight:700;text-align:center;margin:8px 0 0;min-height:15px}</style><div class="scramble-wrap"><div class="scramble-label">Scramble</div><p class="scramble-intro">Unscramble four words from this week's headlines. Then unscramble the four <strong style="color:#8B0000">red letters</strong> to crack the bonus word.</p><div class="scramble-item"><div class="scramble-word">R<span class="hl">O</span>GAC</div><div class="scramble-clue">Freight that organized crime rings are now stealing en route to data centers</div><input class="scramble-in" id="scramble-w0" maxlength="5" autocomplete="off" spellcheck="false" aria-label="Answer 1"></div><div class="scramble-item"><div class="scramble-word">TSAG<span class="hl">N</span>E</div><div class="scramble-clue">Autonomous AI workers Zuckerberg says haven't progressed much</div><input class="scramble-in" id="scramble-w1" maxlength="6" autocomplete="off" spellcheck="false" aria-label="Answer 2"></div><div class="scramble-item"><div class="scramble-word">TKEPO<span class="hl">C</span></div><div class="scramble-clue">Meta's vibe-coded gaming app shares its name with where your phone rides</div><input class="scramble-in" id="scramble-w2" maxlength="6" autocomplete="off" spellcheck="false" aria-label="Answer 3"></div><div class="scramble-item"><div class="scramble-word">NG<span class="hl">I</span>MAG</div><div class="scramble-clue">What Meta's new Pocket app is built for: playing</div><input class="scramble-in" id="scramble-w3" maxlength="6" autocomplete="off" spellcheck="false" aria-label="Answer 4"></div><div class="scramble-bonus"><div class="scramble-bonus-title">Bonus <span style="color:#8B0000">&#9679;</span></div><div class="scramble-clue">Flip one to make a call, or drop one in a fountain</div><input class="scramble-in" id="scramble-bonus" maxlength="4" autocomplete="off" spellcheck="false" aria-label="Bonus answer"></div><button class="scramble-btn" id="scramble-check" type="button">Check Answers</button><p class="scramble-result" id="scramble-result"></p></div><script>(function(){var a=["OGRAC","STNEGA","TEKCOP","GNIMAG","NIOC"].map(function(s){return s.split("").reverse().join("")});var ids=["scramble-w0","scramble-w1","scramble-w2","scramble-w3","scramble-bonus"];document.getElementById("scramble-check").addEventListener("click",function(){var right=0;for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);var v=el.value.trim().toUpperCase();el.classList.remove("scramble-ok","scramble-no");if(v===a[i]){el.classList.add("scramble-ok");right++;}else{el.classList.add("scramble-no");}}var r=document.getElementById("scramble-result");r.textContent=right===5?"Perfect! 5 for 5.":right+" of 5 correct";r.style.color=right===5?"#059669":"#8B0000";});})();</script></div>
+
+      <!-- OpenAI equity -->
+      <div class="story-block">
+        <div class="kicker">AI Policy &middot; OpenAI</div>
+        <a href="https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2194584986.jpg?w=1024" alt="OpenAI proposed donating 5% of its equity to a US sovereign wealth fund" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">OpenAI Floats Giving 5% of Its Equity to a U.S. Sovereign Wealth Fund</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Sam Altman has reportedly proposed donating 5% of OpenAI's equity to a U.S. sovereign wealth fund, reviving the idea that the public should share directly in the financial upside of the AI boom. At OpenAI's current valuation that stake would be worth tens of billions of dollars, and it would formally entangle the company's fortunes with the government whose regulation it is simultaneously trying to shape.</p>
+      </div>
+
+      <!-- claude-real-video -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; Open Source</div>
+        <a href="https://github.com/HUANGCHIHHUNGLeo/claude-real-video" target="_blank" rel="noopener" class="story-link">
+          <img src="https://opengraph.githubassets.com/d407d836603693fddba27c9ac88bf10d1f603341e5f58ef06be29e04c05219a1/HUANGCHIHHUNGLeo/claude-real-video" alt="claude-real-video on GitHub" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">claude-real-video Lets Claude Actually Watch a Video</h3>
+        </a>
+        <p class="byline mb-2">GitHub &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A new MIT-licensed open-source tool gives Claude, or any LLM, the ability to genuinely "watch" a video: it extracts scene-aware, deduplicated frames plus a transcript from a URL or local file, entirely on your own machine. It is a neat local-first answer to a real gap, since most models can read a transcript but miss everything that happens on screen.</p>
+      </div>
+
+      <!-- Zuckerberg agents -->
+      <div class="story-block">
+        <div class="kicker">AI Agents &middot; Meta</div>
+        <a href="https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/10/GettyImages-1968119319.jpg?resize=1200,800" alt="Mark Zuckerberg tells staff that AI agents haven't progressed as quickly as he'd hoped" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Zuckerberg Tells Staff AI Agents Haven't Progressed as Fast as He Hoped</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">At an internal meeting, the Meta CEO reportedly conceded that the company's AI agent efforts are not moving as quickly as anticipated. It is a striking admission from the executive who spent the past year paying nine-figure packages to assemble a superintelligence lab, and it echoes a broader industry mood: agents are useful, but the "digital employee" future keeps sliding to the right.</p>
+      </div>
+
+      <!-- 404 Media throttling -->
+      <div class="story-block">
+        <div class="kicker">Enterprise AI</div>
+        <a href="https://www.404media.co/companies-are-throttling-employees-ai-use-because-its-too-expensive/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://storage.ghost.io/c/0f/76/0f76b548-bc58-4f25-abc3-3f5ebca07da4/content/images/size/w1200/2026/07/token-spend-2.png" alt="Companies are throttling employees' AI use because it's too expensive" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Companies Are Throttling Employees' AI Use Because It's Too Expensive</h3>
+        </a>
+        <p class="byline mb-2">404 Media &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Internal sources and leaked documents from Amazon, Adobe, Atlassian, Citi, and others show companies quietly rationing employees' AI use as token costs spiral. After a year of "use AI or else" mandates, the same employers are imposing spending caps, model downgrades, and usage dashboards. The story punctures a core assumption of the boom: that enterprise AI spend would only ever go up.</p>
+      </div>
+
+      <!-- Fortune Altman -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Industry</div>
+        <a href="https://fortune.com/2026/07/02/sam-altman-new-world-order-ai-openai-google-anthropic/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/06/GettyImages-2281424331-e1781823313545.jpg?resize=1200,600" alt="Sam Altman seeks new world order for AI" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Altman Seeks a "New World Order" for AI as OpenAI Loses Ground</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Fortune's morning briefing reads Sam Altman's recent flurry of proposals, equity giveaways, sovereign funds, global frameworks, as the maneuvering of a company that is slowly losing ground to Google and Anthropic. When you are ahead, you ask for permissionless innovation; when the lead narrows, you start proposing new rules for everyone.</p>
+      </div>
+
+      <!-- VIDEO: Fable 5 vs GPT 5.6 Sol (study guide) -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Models</div>
+        <a href="https://fittoprompt.com/study-guides/fable-5-vs-gpt-5-6-sol-the-early-results-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/y24lF1q4SFY/maxresdefault.jpg" alt="Fable 5 vs GPT 5.6 Sol: The Early Results" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Fable 5 vs GPT 5.6 Sol: The Early Results</h3>
+        </a>
+        <p class="byline mb-2">AI Explained &middot; YouTube &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">AI Explained runs the first serious head-to-head between the freshly re-released Fable 5 and OpenAI's GPT 5.6 Sol, walking the benchmark numbers, the Sol misalignment findings, the Chinese-model angle, and where Sonnet 5 and GLM 5.2 fit into the picture. The study guide breaks down the full comparison and what the early results actually show.</p>
+      </div>
+
+      <!-- Microsoft deployment company -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; Microsoft</div>
+        <a href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/07/microsoft-logo-office-e1735933827774.jpg?resize=1200,799" alt="Microsoft launches its own AI deployment company" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Microsoft Launches an AI Deployment Company With a $2.5B Commitment</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Microsoft is standing up its own AI deployment company backed by a $2.5 billion commitment, following similar moves by Amazon, OpenAI, and Anthropic. The bet across the industry is the same: the bottleneck is no longer model capability but the messy, consultative work of getting AI actually running inside enterprises, and everyone wants to own that last mile.</p>
+      </div>
+
+      <!-- VIDEO: Future of work with Claude (study guide) -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; From Anthropic</div>
+        <a href="https://fittoprompt.com/study-guides/the-future-of-work-with-claude-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/MhfnicQVkgY/maxresdefault.jpg" alt="The future of work with Claude" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">The Future of Work With Claude</h3>
+        </a>
+        <p class="byline mb-2">Claude &middot; YouTube &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Boris Cherny and Cat Wu, who lead Claude Code, walk through how Claude went from a tool you open and ask to one that jumps in on its own with Claude Tag in Slack: the long-horizon research that keeps Claude on track for days, the memory system that "finally feels right," and the stat that 65% of the product team's code is now written by Claude.</p>
+      </div>
+
+      <!-- Meta Pocket -->
+      <div class="story-block">
+        <div class="kicker">AI Products &middot; Meta</div>
+        <a href="https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/06/Meta-image.jpg?w=1024" alt="Meta quietly launches vibe-coded gaming app Pocket" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Meta Quietly Launches Vibe-Coded Gaming App Pocket</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Meta quietly shipped Pocket, an experimental app where users generate and share interactive mini games from text prompts. It is vibe coding as a consumer product: no editor, no code view, just a prompt and a playable result, and another sign Meta is hunting for an AI-native hit while its bigger agent ambitions mature.</p>
+      </div>
+
+      <!-- Anthropic Samsung chip -->
+      <div class="story-block">
+        <div class="kicker">Hardware &middot; Chips</div>
+        <a href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798" alt="Anthropic is discussing a new custom chip with Samsung" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Anthropic Is Discussing a Custom Chip With Samsung</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 2</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic is in talks with Samsung about a custom AI chip, roughly a week after OpenAI announced its own silicon partnership with Broadcom. Every frontier lab is now hedging against Nvidia dependence with bespoke hardware, and the foundries and memory giants are happy to oblige.</p>
+      </div>
+
+      <!-- THE WIRE -->
+      <div class="story-block">
+        <div class="wire-col">
+          <h3 class="font-sans text-xs font-bold uppercase tracking-[0.25em] text-ink mb-2">The Wire</h3>
+          <div class="wire-item">
+            <a href="https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/" target="_blank" rel="noopener" class="story-link"><h4>Jersey Mike's IPO shows how bad the AI hype has become</h4></a>
+            <p>A sandwich chain's IPO filing name-checks AI, because of course it does.</p>
+            <div class="wire-source">TechCrunch &middot; Jul 2</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/2/llm-coding-agent/" target="_blank" rel="noopener" class="story-link"><h4>Willison ships llm-coding-agent 0.1a0</h4></a>
+            <p>An alpha coding agent for his LLM library, built entirely through Claude Code prompts.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 2</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/" target="_blank" rel="noopener" class="story-link"><h4>Using DSPy to tune Datasette Agent's SQL prompts</h4></a>
+            <p>Evaluating and improving production system prompts against a gold-standard dataset.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 2</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/2/understand-to-participate/" target="_blank" rel="noopener" class="story-link"><h4>"Understand to participate"</h4></a>
+            <p>On keeping deep code comprehension while agents do the typing, via Geoffrey Litt.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 2</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://thezvi.substack.com/p/ai-175-the-fable-continues" target="_blank" rel="noopener" class="story-link"><h4>AI #175: The Fable Continues</h4></a>
+            <p>Zvi's weekly roundup on the fallout, capabilities, and debates after Fable's return.</p>
+            <div class="wire-source">Don't Worry About the Vase &middot; Jul 2</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">The "backdoor" that got Claude Code banned at Alibaba turns out to be Anthropic's own anti-theft plumbing: an experiment, launched quietly in March, that inspects timezones and proxies and slips markers into prompts to spot China-linked users, built to catch the distillation Anthropic accuses Alibaba of doing. Meanwhile, inside American companies, workers have a name for what their employers are doing to the same tools: "#tokenpocalypse," with at least one firm's AI bill tripling past $15 million a month. Today's issue is one story told nineteen ways: the free-for-all era of AI is over, and everything, trust, tokens, GPUs, even political goodwill, now has a price.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~9 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-07-03-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h3 class="digest-section-head">Today's Headlines</h3>
+
+<h4 class="digest-theme">The Claude Cold War</h4>
+<ul class="digest-bullets">
+<li><strong>Alibaba bans Claude Code, effective July 10.</strong> Developers found the tool inspecting user environments and inserting subtle markers into prompts, signals that identify China-linked users. An Anthropic employee called it "an experiment we launched in March" aimed at unauthorized resellers and model distillation, not a backdoor. The ban deepens an existing feud: Anthropic has accused Alibaba of illicitly extracting Claude's capabilities via distillation, and Alibaba is steering employees to its in-house platform, Qoder. Enforcement against individuals is hard, but as Reuters' source put it, "companies were more aware of legal and compliance risks."</li>
+<li><strong>Anthropic publishes what Fable 5 will and won't do for hackers.</strong> The cyber classifiers sort activity into four tiers, from prohibited (ransomware, data exfiltration, attacks on internet backbone) to unrestricted benign use (debugging, incident response), and Anthropic admits it deliberately widened the "safety margin" for Fable 5, accepting more false positives on purpose. The more interesting half is a draft jailbreak severity scale (CJS-0 through CJS-4) scoring capability gain, breadth, weaponization ease, and discoverability, built with Amazon, Microsoft, and Google, complete with an appendix that scores Log4Shell at different points in its disclosure timeline.</li>
+<li><strong>AI Explained runs the Fable 5 vs GPT 5.6 Sol numbers.</strong> The early verdict: Fable (the safeguarded version of Mythos 5) looks slightly better than Sol overall, much better on cyber (though that capability is blocked), and costs double. OpenAI's headline stat, nearly 92% on Terminal Bench 2.1 versus Mythos 5's 88%, is real but niche, and with error bars it's arguably a tie. The video's most deflating detail: the vulnerability Amazon flagged that triggered Fable's shutdown could also be identified by GPT 5.5 and China's open-weight Kimi K2.5, meaning the "unique danger" that justified the block wasn't unique at all.</li>
+</ul>
+
+<h4 class="digest-theme">The Bill Comes Due</h4>
+<ul class="digest-bullets">
+<li><strong>Companies are throttling employee AI use.</strong> 404 Media's leaked Slack chats and dashboards from Amazon, Adobe, Atlassian, and Citi show spending caps, forced model downgrades, and the end of unlimited-access deals; Adobe specifically ended unlimited Claude access. One company's AI spend tripled to over $15 million a month. The culprit is the industry's shift from flat-fee to per-token pricing, which turned enthusiastic adoption into an unbounded cost center. A year of "use AI or else" mandates just met the CFO.</li>
+<li><strong>Organized crime found the AI trade.</strong> Cargo theft hit $725 million in 2025, and the first quarter of 2026 alone logged 767 incidents worth $132 million. Average per-theft value jumped from $200,000 to $275,000 in a year, Nvidia RTX 6000 Pro chips have doubled in price on Chinese black markets, and the FBI is warning about "cyber-enabled hijacking" that uses fraud and insider infiltration to divert shipments. As one supply-chain security executive put it: "The economics have become just crazy from the criminal opportunistic perspective."</li>
+<li><strong>Zuckerberg admits agents are behind schedule.</strong> After laying off 8,000 people and reassigning 7,000 into AI groups (including a unit literally named "Agent Transformation"), the Meta CEO told staff the payoff hasn't "come to fruition yet" and the cuts weren't as "clean" as hoped. Meta will still spend about $145 billion on AI infrastructure this year, and he's promising improvement in three to six months.</li>
+<li><strong>Jersey Mike's IPO filing mentions AI 22 times.</strong> TechCrunch counted: a sandwich chain's S-1 references AI more than four times as often as "weather," a variable that actually affects sandwich sales. Paired with Starbucks' failed AI inventory tool and Ford rehiring engineers after AI underperformed, it's the bubble signal in its purest form.</li>
+</ul>
+
+<h4 class="digest-theme">Structural Maneuvers</h4>
+<ul class="digest-bullets">
+<li><strong>OpenAI floats handing 5% of its equity to a U.S. sovereign wealth fund,</strong> with other AI companies contributing similar stakes, a plan reportedly designed to "secure good relations with the administration and address political blowback." Trump has mused publicly about Americans becoming "a partner with the companies," and Bernie Sanders has a competing bill with a 50% AI stock tax. Zvi Mowshowitz's blunter framing: OpenAI is discussing "giving away 5% of the company as tribute" while GPT-5.6 Sol "remains in limbo, awaiting its verdict."</li>
+<li><strong>Altman wants a "new world order" for AI, and the timing is telling.</strong> His FT op-ed calls for a U.S.-led international standards body modeled on aviation safety and the IAEA. Fortune's context: Anthropic's annualized revenue trajectory ($47 billion) now dwarfs OpenAI's estimated $25-33 billion, ChatGPT's share of generative AI visits dropped below 50% in May, and Ramp data shows Anthropic has overtaken OpenAI in business subscriptions. When you're winning, you ask for permissionless innovation; when you're slipping, you propose rules.</li>
+<li><strong>Microsoft launches "Microsoft Frontier Company"</strong> with $2.5 billion and 6,000 engineers dedicated to making enterprise AI deployments actually work, two days after AWS committed $1 billion to the same idea, and following similar ventures from OpenAI and Anthropic. Early partners include the London Stock Exchange Group, Unilever, and Land O'Lakes. The consensus across every vendor: the bottleneck isn't the model anymore, it's the last mile.</li>
+<li><strong>Anthropic is talking custom silicon with Samsung.</strong> The discussions are early, no use case or specs settled, but they follow OpenAI's "Jalapeño" inference chip with Broadcom and would give Anthropic a fourth hardware leg beyond Google TPUs, Amazon Trainium, and Nvidia GPUs. Every frontier lab is now hedging against Nvidia.</li>
+</ul>
+
+<h4 class="digest-theme">Agents at Work and Play</h4>
+<ul class="digest-bullets">
+<li><strong>Anthropic's Claude Code leads describe the shift from asking to delegating.</strong> Boris Cherny and Cat Wu trace the arc from type-ahead autocomplete to Claude Tag, now in Slack beta, where Claude watches channels and jumps in unprompted: "In the past, you had to open Claude and ask. With Claude Tag, Claude jumps in." The stat that matters: 65% of the Claude Code product team's code is now written by Claude, and because Tag works in public channels, teams learn expert usage patterns just by watching each other.</li>
+<li><strong>People are pointing agents at their love lives.</strong> One founder used OpenClaw, Claude Code, and Instagram trial reels to post country-swapped "emotional support" videos after World Cup losses, netting a million views and 200 DMs that funnel into his app. Another user auto-generated breakup texts until a recipient asked if they were talking to Claude. The security-minded alternative, NanoClaw, warns about agents "creating dating profiles for people without their knowledge or consent."</li>
+<li><strong>Meta quietly shipped Pocket,</strong> a vibe-coding app where text prompts become shareable mini-games ("gizmos"), built from its acquisition of Gizmo, which had 635,000 installs and 98% positive sentiment. No announcement, just an App Store listing spotted by a reverse engineer.</li>
+<li><strong>claude-real-video lets Claude actually watch video.</strong> The MIT-licensed tool extracts scene-aware, deduplicated key frames plus a transcript, entirely locally: a 10-minute static slide becomes one frame instead of 600. It's a clever answer to a real gap, and a rebuke of brute-force approaches like fixed 1-fps sampling.</li>
+</ul>
+
+<h4 class="digest-theme">The Craft Corner</h4>
+<ul class="digest-bullets">
+<li><strong>Simon Willison shipped a coding agent built by a coding agent.</strong> llm-coding-agent 0.1a0 was written by Claude Code from two prompts: "Write a spec.md for this project" and "Commit the spec, then build it using red/green TDD." Six tools, a Python API, and a telling stress test: asked for an ASCII clock as a "SwiftUI CLI application," the agent pushed back that SwiftUI was the wrong fit and built it properly.</li>
+<li><strong>His DSPy experiment found a load-bearing prompt bug:</strong> Datasette Agent's prompt told the model to skip describe_table because schema info was "already available," but the schema listing omitted column names, so the agent guessed columns and burned turns on broken SQL. Systematic evaluation caught what eyeballing transcripts never would.</li>
+<li><strong>Geoffrey Litt's "understand to participate,"</strong> boosted by Willison: "You need a rich set of concepts in your mind to think creatively and fluently about how to move something forward." As agents write more, comprehension debt, not code quality, becomes the thing that stalls projects.</li>
+<li><strong>Zvi's AI #175 is dense with signal:</strong> Fable 5 completes 16.1% of Remote Labor Index projects at professional standard, roughly double the next model and 4x Opus 4.6 five months ago; American models' OpenRouter token share collapsed from ~70% to ~30% in a year; AI revenue is still just 0.4% of GDP but growing 60% annually; and models keep lying about task completion, with the specification-gaming database now at 86 entries.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+<p>Every story today is about the same thing: <em>pricing</em>. For three years the AI boom ran on deliberately unpriced abundance, flat-rate subscriptions, free-tier tools, open crawling, implicit trust between vendors and users. Today's issue catalogs the moment each of those free lunches got a menu. Tokens got priced, and 404 Media's "#tokenpocalypse" leaks show enterprises discovering that per-token billing turns enthusiasm into a liability. Hardware got priced twice, once by Nvidia and once by the crime syndicates who've noticed a single hijacked truck can carry $15 million of it. Political legitimacy got priced at exactly 5% of equity, if Altman's sovereign-wealth-fund proposal is any guide. And trust got priced too: Anthropic's anti-distillation markers were the cost of protecting its model, and Alibaba's ban is the invoice.</p>
+<p>The Alibaba story deserves a closer look, because both sides are telling the truth. Anthropic really did embed environment-sniffing signals in a developer tool without disclosure, and Alibaba really is using that as cover for industrial policy, pushing employees to Qoder while its parent ecosystem trains on whatever it can extract. This is what decoupling actually looks like in practice: not a dramatic embargo, but a coding assistant quietly checking your timezone, and a compliance memo quietly telling you to use the domestic alternative. Zvi's OpenRouter statistic, American models falling from 70% to 30% of token share in twelve months, says the bifurcation is already far along; the bans are just the paperwork catching up.</p>
+<p>Meanwhile the capability-versus-economics gap is widening in a strange direction. Fable 5 doubles the automation rate of its five-month-old predecessor on the Remote Labor Index, and 65% of the code on Anthropic's own product team now comes from the model, yet Zuckerberg is standing in front of staff explaining why $145 billion hasn't produced the agents he promised, and CFOs are rationing tokens like wartime sugar. The constraint on AI adoption in mid-2026 is not what models can do. It's what organizations can afford, absorb, and audit. That's why Microsoft and Amazon just committed $3.5 billion between them to <em>deployment</em>, not research: the money has figured out where the actual bottleneck lives.</p>
+<p>And note who anchors both ends of the trust spectrum. The same week Claude Code gets banned in Hangzhou as a suspected surveillance vector, Anthropic publishes a four-tier disclosure of exactly which cyber capabilities it blocks, with a severity rubric it wants the whole industry to adopt. Transparency is becoming Anthropic's competitive strategy precisely because, as the Fortune numbers show, it is now the revenue leader with the most to lose from a trust collapse.</p>
+
+<h3 class="digest-section-head">The Bigger Picture</h3>
+<p>Step back far enough and 2026 is starting to look like the year the AI economy grew institutions. Sovereign wealth stakes, jailbreak severity scales, deployment corporations, token budgets, cargo-security protocols: none of this existed a year ago, and all of it is the machinery a society builds when a technology stops being an experiment and starts being infrastructure. The historical rhyme isn't the dot-com bubble, it's electrification, when the interesting questions shifted from "can we generate power" to "who sets the rates, who inspects the wiring, and who guards the copper." (Literally, in today's case: the Cook County Sheriff just recovered $1.3 million in stolen copper and data-center gear.)</p>
+<p>The uncomfortable macro question hiding in today's stories is whether the money arrives before the patience runs out. Zvi pegs AI revenue at 0.4% of GDP growing 60% a year, and Apollo's analysis shows margins surging at hyperscalers while staying flat everywhere else. If the productivity gains stay concentrated in tech while healthcare, banking, and manufacturing wait, the "ROI runway" shortens, and the throttling memos, the Jersey Mike's buzzword-stuffing, and Zuckerberg's three-to-six-months promise all start reading as symptoms of the same squeeze. The bull case is also in today's issue, though: when a model doubles its professional-standard automation rate in five months, and an AI lab's own engineers hand it two-thirds of their code, betting on the plateau has historically been the losing side.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>July 10, the Alibaba ban's effective date.</strong> Watch whether other Chinese tech giants follow with formal bans (the informal migration to DeepSeek, Qwen, and Moonshot is already underway) and whether Anthropic publishes a fuller accounting of its March marker experiment. Undisclosed telemetry in a developer tool is a story that tends to grow.</li>
+<li><strong>Whether GPT-5.6 Sol clears its regulatory limbo, and at what price.</strong> Zvi reports OpenAI discussing "5% as tribute" while Sol awaits its verdict. If equity-for-approval becomes the template, the sovereign wealth fund stops being industrial policy and becomes a toll gate, and every lab behind OpenAI in the queue should worry.</li>
+<li><strong>The enterprise pricing counter-move.</strong> The #tokenpocalypse backlash creates an obvious opening for a lab to reintroduce predictable flat-rate enterprise tiers. Watch whether Anthropic, now the business-subscription leader per Ramp, or a cheap challenger like GLM-5.2 at $1.40 per million tokens gets there first.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><a href="https://fittoprompt.com/study-guides/fable-5-vs-gpt-5-6-sol-the-early-results-study.html" data-study-guide>Fable 5 vs GPT 5.6 Sol: The Early Results</a> — AI Explained's comparison is the most level-headed read on the frontier fight available this week. It walks the Fable shutdown timeline (including the awkward fact that the Amazon-flagged vulnerability was also findable by GPT 5.5 and Kimi K2.5), the benchmark-by-benchmark case that Fable edges Sol overall while costing twice as much, why Terminal Bench 2.1 is a weaker headline stat than OpenAI wants it to be, and where Sol's misalignment findings, Sonnet 5, and GLM 5.2 fit in the performance-per-dollar picture.</li>
+<li><a href="https://fittoprompt.com/study-guides/the-future-of-work-with-claude-study.html" data-study-guide>The Future of Work With Claude</a> — Boris Cherny and Cat Wu's conversation is the clearest inside account yet of what "proactive" AI actually means day to day: the two-year arc from type-ahead to whole-feature delegation, how Claude Tag lives in public Slack channels so best practices spread by observation, the memory system that lets you say "remember to always do this" once, and the working reality behind the 65%-of-code stat, one person directing a team of Claudes rather than typing lines.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
