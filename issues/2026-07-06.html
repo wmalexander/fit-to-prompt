@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - July 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup - July 6, 2026. Why you can't compete on cheap models anymore, Amazon closes Mechanical Turk to new customers, GPT-5.5 vs Opus 4.8 and the rise of /goal mode, Claude Fable's $149 code review, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #66">
+  <meta property="og:description" content="Daily AI news roundup - July 6, 2026. Why you can't compete on cheap models anymore, Amazon closes Mechanical Turk to new customers, GPT-5.5 vs Opus 4.8 and the rise of /goal mode, Claude Fable's $149 code review, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, July 6, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 66</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>5 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Video &middot; AI Strategy</div>
+          <a href="https://www.youtube.com/watch?v=1cSNE-ZkDLQ" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">You Can't Compete on Cheap Models Anymore</h2>
+          </a>
+          <p class="byline mb-3">Nate B. Jones &middot; YouTube &middot; Jul 5</p>
+          <div class="newspaper-body">
+            <p>Nate B. Jones names a paradox every AI user is hitting at once: the tools keep getting better and cheaper, yet everyone's output is starting to look the same. When execution gets cheap, he argues, value doesn't vanish, it moves, and the whole industry is currently sprinting to answer the wrong question, how to route everything to the cheapest model, just as that answer becomes table stakes.</p>
+            <p>His evidence is Mitchell Hashimoto's experiment. A budget model, GPT-5.5, and a $9 Fable 5 run all produced equally acceptable code on ordinary tasks, making the frontier model look like a rip-off, until Hashimoto handed it a problem the cheap models couldn't touch: optimizing his own systems code. That two-hour, $40 job reached a level he says he couldn't have hit himself. Nobody assigned that task; it existed only because an expert imagined it. The ceiling on AI's value, Jones concludes, was never the model or the price. It's the size of your list of things worth asking for. Cheap execution is the engine; frontier-grade imagination is where you steer the plane.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">AI Policy &middot; Governance</div>
+          <a href="https://news.un.org/en/story/2026/07/1167848" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/28-02-2023_UNICEF_India.jpg/image1440x560cropped.jpg" alt="A UN scientific panel warns AI is advancing faster than regulation can keep pace" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+            <h3 class="headline-feature mb-2">The UN's Message on AI: Why the World Needs to Act Now</h3>
+          </a>
+          <p class="byline mb-2">UN News &middot; Jul 1</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">A UN scientific panel warns that artificial intelligence is advancing faster than the regulatory frameworks meant to govern it, laying out both the transformative upside, from medical breakthroughs to scientific acceleration, and the mounting risks of disinformation and deepfakes. The message is a call to build guardrails now, while they can still catch up.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Mechanical Turk -->
+      <div class="story-span-2">
+        <div class="kicker">AI Labor &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-06-cartoon.png" alt="New Yorker-style cartoon about the human workers who trained AI being retired." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"We used to have humans train the AI. Now the AI just tells us it misses them."</p>
+          </div>
+          <div>
+            <a href="https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Amazon Closes Mechanical Turk to New Customers</h3>
+            </a>
+            <p class="byline mb-2">TechCrunch &middot; Jul 5</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Amazon will stop accepting new customers for Mechanical Turk on July 30, the beginning of the end for the 21-year-old crowdsourcing platform that paid workers small sums to label data and complete micro-tasks. Existing customers can keep using it for now, but the wind-down closes a chapter on the human-in-the-loop labor that quietly trained much of modern AI, right as the models it helped build make that work redundant.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GPT-5.5 vs Opus video -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Developer Tools</div>
+        <a href="https://www.youtube.com/watch?v=uWauLhx6pWk" target="_blank" rel="noopener" class="story-link" style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/uWauLhx6pWk/maxresdefault.jpg" alt="GPT-5.5 vs Opus 4.8: The Real Winner Was /goal Mode" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">GPT-5.5 vs Opus 4.8: The Real Winner Was /goal Mode</h3>
+        </a>
+        <p class="byline mb-2">Matt Maher &middot; YouTube &middot; Jul 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Matt Maher pits GPT-5.5 against Opus 4.8 across real coding and agent tasks and concludes the headline matchup misses the point. The biggest productivity unlock, he argues, was /goal mode, a workflow that lets the model plan and drive toward an outcome instead of executing step-by-step instructions. A practical look at where the frontier models actually differ in day-to-day work.</p>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="story-block">
+<div style="font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8B0000;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:10px;">Acronym Quiz</div>
+<style>
+  #aq-20260706 { font-family:'Inter',sans-serif; color:#1a1a1a; font-size:0.8rem; }
+  #aq-20260706 .aq-q { margin-bottom:12px; }
+  #aq-20260706 .aq-term { font-weight:700; font-size:0.9rem; letter-spacing:0.03em; margin-bottom:4px; }
+  #aq-20260706 .aq-opt { display:block; padding:3px 0; cursor:pointer; line-height:1.35; }
+  #aq-20260706 .aq-opt input { margin-right:6px; accent-color:#8B0000; }
+  #aq-20260706 .aq-opt.aq-right { color:#1a7a1a; font-weight:600; }
+  #aq-20260706 .aq-opt.aq-wrong { color:#8B0000; text-decoration:line-through; }
+  #aq-20260706 .aq-check { margin-top:6px; font-family:'Inter',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#ffffff; background:#8B0000; border:none; padding:7px 16px; cursor:pointer; }
+  #aq-20260706 .aq-check:hover { background:#6d0000; }
+  #aq-20260706 .aq-score { margin-top:8px; font-weight:700; font-size:0.85rem; min-height:1.2em; }
+</style>
+<div id="aq-20260706">
+  <div class="aq-q" data-correct="B">
+    <div class="aq-term">1. LLM</div>
+    <label class="aq-opt"><input type="radio" name="aq1" value="A">Low-Latency Model</label>
+    <label class="aq-opt"><input type="radio" name="aq1" value="B">Large Language Model</label>
+    <label class="aq-opt"><input type="radio" name="aq1" value="C">Layered Learning Machine</label>
+  </div>
+  <div class="aq-q" data-correct="C">
+    <div class="aq-term">2. RAG</div>
+    <label class="aq-opt"><input type="radio" name="aq2" value="A">Rapid Agent Gateway</label>
+    <label class="aq-opt"><input type="radio" name="aq2" value="B">Recursive Answer Generator</label>
+    <label class="aq-opt"><input type="radio" name="aq2" value="C">Retrieval-Augmented Generation</label>
+  </div>
+  <div class="aq-q" data-correct="A">
+    <div class="aq-term">3. MoE</div>
+    <label class="aq-opt"><input type="radio" name="aq3" value="A">Mixture of Experts</label>
+    <label class="aq-opt"><input type="radio" name="aq3" value="B">Model of Everything</label>
+    <label class="aq-opt"><input type="radio" name="aq3" value="C">Memory-Optimized Encoder</label>
+  </div>
+  <div class="aq-q" data-correct="B">
+    <div class="aq-term">4. SDK</div>
+    <label class="aq-opt"><input type="radio" name="aq4" value="A">Structured Data Kernel</label>
+    <label class="aq-opt"><input type="radio" name="aq4" value="B">Software Development Kit</label>
+    <label class="aq-opt"><input type="radio" name="aq4" value="C">System Design Key</label>
+  </div>
+  <div class="aq-q" data-correct="C">
+    <div class="aq-term">5. API</div>
+    <label class="aq-opt"><input type="radio" name="aq5" value="A">Automated Prompt Injection</label>
+    <label class="aq-opt"><input type="radio" name="aq5" value="B">Adaptive Parameter Index</label>
+    <label class="aq-opt"><input type="radio" name="aq5" value="C">Application Programming Interface</label>
+  </div>
+  <button class="aq-check" type="button">Check Answers</button>
+  <div class="aq-score"></div>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('aq-20260706');
+  if(!root) return;
+  root.querySelector('.aq-check').addEventListener('click',function(){
+    var qs=root.querySelectorAll('.aq-q'),correct=0;
+    qs.forEach(function(q){
+      var ans=q.getAttribute('data-correct');
+      q.querySelectorAll('.aq-opt').forEach(function(o){o.classList.remove('aq-right','aq-wrong');});
+      var sel=q.querySelector('input:checked');
+      q.querySelectorAll('.aq-opt').forEach(function(o){
+        var v=o.querySelector('input').value;
+        if(v===ans) o.classList.add('aq-right');
+      });
+      if(sel){ if(sel.value===ans) correct++; else sel.parentNode.classList.add('aq-wrong'); }
+    });
+    root.querySelector('.aq-score').textContent='You got '+correct+' of '+qs.length+' right.';
+  });
+})();
+</script>
+      </div>
+
+      <!-- Simon Willison: sqlite-utils / Claude Fable review -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; Analysis</div>
+        <a href="https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Claude Fable Reviewed sqlite-utils 4.0 for About $149</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Jul 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Simon Willison used Claude Fable to run a comprehensive pre-release review of sqlite-utils 4.0, and it surfaced real bugs, including a transaction-handling flaw in <code>delete_where()</code> that could cause data loss. The AI-assisted effort spanned 37 prompts across multiple sessions at an estimated $149.25 in unsubsidized API costs, a concrete data point on what serious agentic code review actually costs.</p>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Mitchell Hashimoto ran a budget model, GPT-5.5, and a $9 Fable 5 job against the same ordinary coding task, and all three produced acceptable work, until he handed the frontier model a problem the cheap ones couldn't touch and it delivered something he says he couldn't have built himself, for $40 and two hours. That single experiment is the hinge of today's issue: the price of intelligence is being rewritten from both ends at once. Cheap execution is racing toward free, the human micro-labor that trained AI is being retired, and the premium is migrating to the two things machines still can't supply on their own, judgment about what's worth doing and the patience to verify it was done right.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~6 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="assets/2026-07-06-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h3 class="digest-section-head">Today's Headlines</h3>
+
+<h4 class="digest-theme">The Repricing of Intelligence</h4>
+<ul class="digest-bullets">
+<li><strong>You can't compete on cheap models anymore, because everyone is about to have them.</strong> Nate B. Jones's argument starts from a paradox users are feeling all at once: the tools get better and cheaper, yet everyone's output looks the same. His frame is that when execution gets cheap, value doesn't disappear, it moves. Routing everything to the cheapest model is real and worth doing, but it's becoming table stakes; the leverage sits on top of a cheap execution layer, in the "targeted, surgical" application of frontier models to the questions that decide what the cheap layer should even build. The ceiling on AI's value to you, he concludes, "was never the model or the price or the prompt pack." It's the length of your list of things worth asking for, and no process, backlog, or best-practices guide generates the Hashimoto task; only an expert's imagination does.</li>
+<li><strong>Amazon is retiring Mechanical Turk, and the timing is the story.</strong> The platform closes to new customers on July 30 and enters maintenance mode ("we do not plan to introduce new features"). MTurk launched in 2005, named after the 1770s chess-playing automaton that secretly hid a human operator, and around 2018 Amazon repositioned it as an AI data-labeling tool wired into SageMaker. The kicker is an irony that undercuts its whole premise: a 2023 analysis found 33 to 46 percent of MTurk workers were themselves using LLMs to complete their tasks. The human-in-the-loop layer that trained modern AI is being wound down at the exact moment the models it labeled can do the labeling, and had already started doing the workers' jobs for them.</li>
+</ul>
+
+<h4 class="digest-theme">Frontier Models Earn Their Keep on the Hard Part</h4>
+<ul class="digest-bullets">
+<li><strong>Claude Fable found a data-loss bug in sqlite-utils, and it cost $149.25.</strong> Simon Willison used Claude Fable to review the sqlite-utils 4.0rc2 release and it surfaced a genuine flaw in <code>delete_where()</code>: the method ran its DELETE outside a transaction, leaving the connection in an open-transaction state so that every later <code>atomic()</code> call silently failed to commit, and subsequent inserts and table creations vanished on reopen. The full effort ran $141.02 for the main review plus five smaller passes, 37 prompts, 34 commits, roughly +1,321/-190 lines across 30 files. A cross-review with GPT-5.5 caught two more critical <code>db.query()</code> bugs. Willison, a self-described skeptic, wrote that he "used to think that the idea of having one model review the work of another was somewhat absurd, it felt weirdly superstitious," before conceding: "the problem is it really does work."</li>
+<li><strong>GPT-5.5 vs Opus 4.8, and the workflow beat the model.</strong> Matt Maher pitted Codex (GPT-5.5, extra-high) against Claude Code (Opus 4.8, extra-high) building a genuinely hard target, a native macOS radial launcher in Swift, and also ran each in <code>/goal</code> mode, an open-ended, outcome-driven build in its own worktree. His verdict: the goal-mode builds were "measurably, markedly better" for both models, obvious to any observer. Claude won "almost hands down," but GPT-5.5 was "really very excellent" and a pass or two of settings-panel refinement would have closed the gap. The builds took 30 to 60 minutes each. "Everything's very, very close these days," which is exactly why the mode you run mattered more than the badge on the model.</li>
+</ul>
+
+<h4 class="digest-theme">The Governance Gap</h4>
+<ul class="digest-bullets">
+<li><strong>The UN's new science panel says the world needs to act now.</strong> The Independent International Scientific Panel on AI, 40 experts serving in a personal capacity, released its preliminary report on July 1 and found "the complexity of tasks these systems can complete has been doubling every few months." It documents a stark concentration of power, the US holds about 75 percent of global AI supercomputer capacity and China about 15 percent, nearly 90 percent between two countries, and warns that developing nations depend on tools they "cannot build, inspect, audit or adapt." The benefits are real (200M+ protein structures predicted, earlier disease detection, food-security early warning); so are the named risks (deepfakes and abuse material, disinformation, AI-enabled cyberattacks, mental-health harms, loss of control). More than 40 governance frameworks now exist worldwide, and the panel found them fragmented and largely untested. The UN Global Dialogue on AI Governance opens today, July 6, in Geneva.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+<p>Read together, today's stories describe a single price chart with two lines crossing. <em>The cost of routine execution is collapsing toward zero, and the value of expert judgment is rising to meet the gap.</em> Jones names it directly, Hashimoto's cheap models all cleared the ordinary bar, so the differentiator was the one task nobody assigned. Maher's bake-off is the same finding in miniature: with GPT-5.5 and Opus 4.8 so close that a couple of refinement passes separate them, the meaningful variable wasn't the model at all but <code>/goal</code> mode, the workflow that let a human specify an outcome and let the machine own the path. When the models converge, the leverage moves up a level, to how you ask.</p>
+<p>Willison's $149 invoice is where this stops being a slogan and becomes an accounting line. He didn't pay frontier prices to write code faster; he paid them to catch a silent data-loss bug that would have shipped, the kind of failure a cheap model glosses and a human reviewer misses at 11pm. That reframes the "just route to cheap models" consensus that Jones warns is already conventional wisdom. The cheap layer executes; the expensive layer verifies and imagines. The skeptic's conversion ("it really does work") is really a conversion about <em>where</em> to spend: not on producing more output, which is nearly free, but on trusting it, which is not.</p>
+<p>MTurk is the same repricing seen from the bottom of the ladder. The economy's cheapest human intelligence, penny-per-task labeling, is being decommissioned precisely because it has been commoditized past the point of viability, and the workers had already outsourced themselves to the LLMs. What's vanishing isn't "human work," it's <em>undifferentiated</em> human work, the exact category Jones says has no defensible value left. What survives, in his telling and Willison's, is the part that requires taste, context, and accountability. The UN report is the uncomfortable coda: the capability to imagine and verify is concentrating in the same two countries that hold 90 percent of the compute, while everyone else inherits tools they can't audit.</p>
+
+<h3 class="digest-section-head">The Bigger Picture</h3>
+<p>Step back and 2026 looks like the year intelligence got unbundled and separately priced. For most of computing history, "doing the task" and "knowing whether the task was worth doing" came bundled in the same human. AI is prying those apart and stamping a different price on each: execution trending to free, verification and imagination commanding a premium steep enough that a careful engineer will happily pay $149 for one code review. The strategic implication for anyone building with these tools is counterintuitive but consistent across today's issue, spend the savings from cheap execution on more expensive judgment, not on more output. The organizations that win the next phase won't be the ones generating the most code or content; they'll be the ones with the longest list of problems worth solving and the discipline to verify the answers.</p>
+<p>That is also why the UN's warning lands harder than the usual governance hand-wringing. If value is migrating to imagination, verification, and the compute that powers both, then a world where two countries hold 90 percent of the supercomputers and most nations use models they "cannot inspect or audit" isn't just unequal on access, it's unequal on the exact capabilities that now carry the value. The end of MTurk is a preview of the friction: a whole tier of work disappears faster than the systems meant to govern the transition can convene. The Geneva dialogue opens today into a world where the tasks these systems can do double every few months. The gap between what AI can do and what our institutions can absorb is the real story under all five headlines, and nothing today suggests it's closing.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether "route to cheap models" curdles into a trap.</strong> Jones's contrarian read is that the whole industry is converging on the cheap-execution playbook just as it becomes undifferentiated. Watch for the counter-move: teams that visibly reinvest their token savings into frontier-grade review and planning (Willison-style) versus teams that simply pocket the savings and ship more unverified output. The first group's defect rates will tell the story within a quarter.</li>
+<li><strong>Whether workflow features become the real benchmark.</strong> Maher's finding that <code>/goal</code> mode mattered more than GPT-5.5-vs-Opus suggests raw model leaderboards are losing signal. Watch whether the next wave of comparisons shifts from "which model" to "which harness," and whether his open benchmark starts scoring modes and agent scaffolds rather than base models.</li>
+<li><strong>The Geneva dialogue's first concrete output.</strong> The UN Global Dialogue on AI Governance opens today with 40+ fragmented frameworks already on the table. The test isn't another report; it's whether anything emerges that a developing nation without its own compute could actually use to inspect or contest a model it didn't build.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    .digest-body code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #f1f1f1; padding: 0.05em 0.3em; border-radius: 3px; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
