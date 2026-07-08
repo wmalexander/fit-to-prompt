@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - July 8, 2026</title>
+  <meta name="description" content="Daily AI news roundup - July 8, 2026. Microsoft leans on its own models to cut AI costs, Meta's Muse image generator sparks a photo-consent backlash, SambaNova raises $1B at an $11B valuation, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #67">
+  <meta property="og:description" content="Daily AI news roundup - July 8, 2026. Microsoft leans on its own models to cut AI costs, Meta's Muse image generator sparks a photo-consent backlash, SambaNova raises $1B at an $11B valuation, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, July 8, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 67</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>20 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Economics &middot; Microsoft</div>
+          <a href="https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/" target="_blank" rel="noopener" class="story-link">
+            <h2 class="headline-lead mb-3">Microsoft Joins the AI Cost-Cutting Wave, Leaning on Its Own Models</h2>
+          </a>
+          <p class="byline mb-3">TechCrunch &middot; Jul 7</p>
+          <div class="newspaper-body">
+            <p>Microsoft has begun quietly swapping in its homegrown MAI models to power AI features in Excel and Word, reducing its reliance on the OpenAI and Anthropic software it has spent billions licensing. The move puts one of the industry's biggest AI buyers squarely inside a trend that has been building for weeks: the era of spending freely on frontier tokens is giving way to a colder calculus about what those tokens actually return.</p>
+            <p>The subtext is that even the companies selling the AI dream are now managing its cost. Microsoft can afford premium models better than almost anyone, so its decision to route routine tasks through cheaper in-house models is less about survival than about margin discipline, and a signal to every enterprise still writing blank checks that the bill has finally arrived.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Analysis &middot; Open Source</div>
+          <a href="https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2256487455.jpg?w=1024" alt="Why the rise of open source AI isn't hurting Anthropic yet" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+            <h3 class="headline-feature mb-2">Why the Rise of Open Source AI Isn't Hurting Anthropic &mdash; Yet</h3>
+          </a>
+          <p class="byline mb-2">TechCrunch &middot; Jul 7</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Open-source and frontier models aren't really competing head-to-head, the argument goes; they occupy two phases of the same lifecycle. Expensive frontier models prove out a use case, then cheaper open-weight alternatives mature to serve it, while the frontier labs keep their pricing power at the bleeding edge. It's the optimistic counterpoint to today's cost-cutting anxiety.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Discord ban -->
+      <div class="story-span-2">
+        <div class="kicker">AI Culture &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-08-cartoon.png" alt="New Yorker-style cartoon: two office workers stare at a robot moderation notice while one clutches a printed chessboard photo and a spreadsheet." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"The AI flagged your chessboard as inappropriate, so naturally you're permanently banned."</p>
+          </div>
+          <div>
+            <a href="https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Discord Admits an AI Moderation Bug Wrongfully Banned Thousands</h3>
+            </a>
+            <p class="byline mb-2">TechCrunch &middot; Jul 7</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Discord acknowledged that a bug in its AI moderation system mistakenly banned more than 8,000 users after harmless images, spreadsheets, chessboards, and game textures among them, were flagged as harmful. All affected accounts are being restored. It's a small, almost comic failure that gestures at a real problem: automated moderation at scale keeps confusing the mundane for the menacing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meta Muse launch + backlash -->
+      <div class="story-block">
+        <div class="kicker">AI Products &middot; Meta</div>
+        <a href="https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/Screenshot-2026-07-07-at-1.27.24-PM.png?w=1024" alt="Meta launches Muse Image, an AI image generator, and users push back over use of their photos" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Meta's New Muse Image Generator Draws Instant Backlash Over Photos</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 7</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Meta unveiled Muse Image, a new generator threaded through the Meta AI app, Instagram Stories, and WhatsApp. The controversy was immediate: a feature that lets users manipulate other people's public Instagram profile photos with AI, no explicit consent required. The launch reprises Meta's familiar pattern of shipping a capable tool and sorting out the consent questions in public, afterward.</p>
+      </div>
+
+      <!-- SambaNova raise -->
+      <div class="story-block">
+        <div class="kicker">AI Chips &middot; Funding</div>
+        <a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/chip__1_.png?w=940" alt="SambaNova raises $1B at an $11B valuation" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">AI Chip Maker SambaNova Raises $1B at an $11B Valuation</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">SambaNova Systems has secured $1 billion in a Series F first close led by General Atlantic, pegging the company at an $11 billion valuation just five months after its last mega-round. The pace underscores how much capital is still chasing an independent alternative to Nvidia, even as the wider industry frets about AI's return on investment.</p>
+      </div>
+
+      <!-- ZML inference -->
+      <div class="story-block">
+        <div class="kicker">Infrastructure &middot; Inference</div>
+        <a href="https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/ZML-founder-Steeve-Morin.jpg?w=1024" alt="French startup ZML releases free product to speed inference across many AI chips" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">France's ZML Ships Free Software to Run Models Across Any Chip</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">ZML, a French startup endorsed by Turing Award winner Yann LeCun, released inference software that lets a single model run across Nvidia, AMD, Google TPU, and Apple Metal hardware at once. The pitch is squarely of the moment: cut inference costs and break the vendor lock-in that makes AI so expensive to serve.</p>
+      </div>
+
+      <!-- Fortune debt warning -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; Macro</div>
+        <a href="https://fortune.com/2026/07/08/ais-productivity-gains-jim-reid-deutsche-bank-debt/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/07/GettyImages-2285062874-e1783484268637.jpg?format=webp&w=1440&q=100" alt="Deutsche Bank economist warns AI productivity gains are years away" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">AI's Productivity Payoff Is Years Away, Deutsche Bank Warns</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; Jul 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Deutsche Bank economist Jim Reid cautions that meaningful AI-driven productivity gains are still years out, and that if the technology fails to deliver, it could make already-unsustainable global debt levels worse. It's the sober macro frame beneath a day full of cost-cutting: a lot of borrowing is riding on a payoff that hasn't arrived.</p>
+      </div>
+
+      <!-- Claude Cowork -->
+      <div class="story-block">
+        <div class="kicker">AI Agents &middot; Anthropic</div>
+        <a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/Cowork-Web-Mobile-Press-alt-Claude-logo-1920x1080-1.png?w=1024" alt="Claude Cowork comes to web and mobile" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">The Coding-Agent Wars Are Spilling Into the Rest of the Office</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 7</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic's Claude Cowork is now on web and mobile for Max subscribers, letting users kick off a task at their desk and track its progress from a phone. The expansion marks a deliberate step beyond coding toward general office automation, and another front in the escalating fight over who owns the agentic workday.</p>
+      </div>
+
+      <!-- Forterra Ukraine -->
+      <div class="story-block">
+        <div class="kicker">Autonomy &middot; Defense</div>
+        <a href="https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/img-dedb3291-a67a-44b6-a6d7-dd6659f9d433.png?w=1024" alt="The first American autonomous ground vehicles are fighting in Ukraine" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">The First American Autonomous Ground Vehicles Are Fighting in Ukraine</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 7</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Forterra has deployed more than 100 self-driving ATVs into Ukrainian conflict zones over nine months, in what it calls the largest autonomous ground-vehicle combat deployment by a U.S. defense-tech company: 1,100-plus missions, 2,500-plus miles, and 52 casualties evacuated, mostly under remote control. The autonomy story quietly graduated from warehouses to the front line.</p>
+      </div>
+
+      <!-- Savi scam protection -->
+      <div class="story-block">
+        <div class="kicker">Consumer &middot; Security</div>
+        <a href="https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/Patrick_and_Ryan_Coughlin-1-e1783013392927.jpg?w=1024" alt="Savi Security app aims to protect consumers from realistic AI scams" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Savi's App Aims to Shield Consumers From Realistic AI Scams</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 7</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Founded by brothers Patrick and Ryan Coughlin, Savi Security raised $7 million in seed funding to launch an app that flags AI-generated scams in real time, from fraudulent texts and emails to spoofed calls and voicemails, plus a live-call monitoring feature aimed at threats like fake kidnapping-ransom demands. As generative fraud gets more convincing, a consumer-grade defense layer starts to look inevitable.</p>
+      </div>
+
+      <!-- VIDEO: J-Space study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Interpretability</div>
+        <a href="https://fittoprompt.com/study-guides/we-just-figured-out-how-ai-actually-works-j-space-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/bjHuGNo3spk/maxresdefault.jpg" alt="We just figured out how AI actually works (J-Space)" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">We Just Figured Out How AI Actually Works (J-Space)</h3>
+        </a>
+        <p class="byline mb-2">Matthew Berman &middot; YouTube &middot; Jul 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Matthew Berman walks through Anthropic's research on the "J-space," a global workspace inside language models where verbalizable representations appear to enable deliberate, conscious-like reasoning. The study guide breaks down what the finding means, why it matters for interpretability, and where the claims run ahead of the evidence.</p>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="story-block"><div class="ws-mini">
+  <style>
+    .ws-mini { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; max-width: 300px; margin: 0 auto; -webkit-user-select: none; user-select: none; }
+    .ws-mini * { box-sizing: border-box; }
+    .ws-mini .ws-head { font-size: 15px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-bottom: 2px solid #1a1a1a; padding-bottom: 4px; margin-bottom: 8px; }
+    .ws-mini .ws-sub { font-size: 10px; color: #555; margin-bottom: 8px; line-height: 1.4; }
+    .ws-mini .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 1px; background: #ccc; border: 2px solid #1a1a1a; }
+    .ws-mini .ws-cell { background: #fff; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; cursor: pointer; color: #1a1a1a; transition: background .08s; }
+    .ws-mini .ws-cell.ws-sel { background: #f2c9c9; }
+    .ws-mini .ws-cell.ws-found { background: #8B0000; color: #fff; }
+    .ws-mini .ws-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 10px; font-size: 11px; font-weight: 600; letter-spacing: .03em; }
+    .ws-mini .ws-list li { padding: 1px 0; }
+    .ws-mini .ws-list li.ws-done { color: #8B0000; text-decoration: line-through; }
+    .ws-mini .ws-status { font-size: 10px; color: #8B0000; font-weight: 700; margin-top: 8px; min-height: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  </style>
+  <div class="ws-head">Word Search</div>
+  <div class="ws-sub">Find this week's AI terms. Click a start cell, then an end cell (or click and drag).</div>
+  <div class="ws-grid" id="wsGrid"></div>
+  <ul class="ws-list" id="wsList"></ul>
+  <div class="ws-status" id="wsStatus"></div>
+  <script>
+  (function(){
+    var SIZE = 10;
+    var WORDS = ["MUSE","INFERENCE","SAMBANOVA","COWORK","FORTERRA","SQLITE","TOKENS","FOUNDRY"];
+    var ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var DIRS = [[1,0],[0,1],[1,1],[-1,1],[-1,0],[0,-1],[-1,-1],[1,-1]];
+    function rnd(n){ return Math.floor(Math.random()*n); }
+    function build(){
+      var grid, placed, attempts = 0;
+      while(attempts++ < 400){
+        grid = []; placed = [];
+        for(var r=0;r<SIZE;r++){ grid.push(new Array(SIZE).fill(null)); }
+        var ok = true;
+        for(var w=0; w<WORDS.length; w++){
+          if(!placeWord(grid, WORDS[w], placed)){ ok=false; break; }
+        }
+        if(ok) break;
+      }
+      for(var r2=0;r2<SIZE;r2++){ for(var c2=0;c2<SIZE;c2++){ if(grid[r2][c2]===null){ grid[r2][c2]=ALPHA[rnd(26)]; } } }
+      return {grid:grid, placed:placed};
+    }
+    function placeWord(grid, word, placed){
+      for(var t=0; t<200; t++){
+        var dir = DIRS[rnd(DIRS.length)];
+        var r = rnd(SIZE), c = rnd(SIZE);
+        var er = r + dir[0]*(word.length-1), ec = c + dir[1]*(word.length-1);
+        if(er<0||er>=SIZE||ec<0||ec>=SIZE) continue;
+        var fits = true, cells = [];
+        for(var i=0;i<word.length;i++){
+          var rr = r+dir[0]*i, cc = c+dir[1]*i, ex = grid[rr][cc];
+          if(ex!==null && ex!==word[i]){ fits=false; break; }
+          cells.push([rr,cc]);
+        }
+        if(!fits) continue;
+        for(var j=0;j<word.length;j++){ grid[cells[j][0]][cells[j][1]] = word[j]; }
+        placed.push({word:word, cells:cells});
+        return true;
+      }
+      return false;
+    }
+    var data = build();
+    var grid = data.grid, placed = data.placed;
+    var gridEl = document.getElementById('wsGrid');
+    var listEl = document.getElementById('wsList');
+    var statusEl = document.getElementById('wsStatus');
+    var cellEls = [];
+    for(var r=0;r<SIZE;r++){
+      cellEls.push([]);
+      for(var c=0;c<SIZE;c++){
+        var d = document.createElement('div');
+        d.className = 'ws-cell'; d.textContent = grid[r][c];
+        d.dataset.r = r; d.dataset.c = c;
+        gridEl.appendChild(d); cellEls[r].push(d);
+      }
+    }
+    var foundWords = {};
+    WORDS.forEach(function(w){
+      var li = document.createElement('li'); li.textContent = w; li.dataset.word = w;
+      listEl.appendChild(li);
+    });
+    var startCell = null, dragging = false, curSel = [];
+    function coords(el){ return [parseInt(el.dataset.r,10), parseInt(el.dataset.c,10)]; }
+    function lineCells(r0,c0,r1,c1){
+      var dr = r1-r0, dc = c1-c0;
+      var adr = Math.abs(dr), adc = Math.abs(dc);
+      if(!(dr===0 || dc===0 || adr===adc)) return null;
+      var len = Math.max(adr, adc);
+      var sr = dr===0?0:(dr>0?1:-1), sc = dc===0?0:(dc>0?1:-1);
+      var out = [];
+      for(var i=0;i<=len;i++){ out.push([r0+sr*i, c0+sc*i]); }
+      return out;
+    }
+    function clearSel(){ curSel.forEach(function(rc){ var el=cellEls[rc[0]][rc[1]]; if(!el.classList.contains('ws-found')) el.classList.remove('ws-sel'); }); curSel=[]; }
+    function showSel(cells){ clearSel(); if(!cells) return; cells.forEach(function(rc){ cellEls[rc[0]][rc[1]].classList.add('ws-sel'); }); curSel = cells; }
+    function tryMatch(cells){
+      if(!cells) return;
+      var str = cells.map(function(rc){ return grid[rc[0]][rc[1]]; }).join('');
+      var rev = str.split('').reverse().join('');
+      for(var i=0;i<placed.length;i++){
+        var p = placed[i];
+        if(foundWords[p.word]) continue;
+        if(p.cells.length !== cells.length) continue;
+        if(str===p.word || rev===p.word){
+          if(sameCells(cells, p.cells)){
+            markFound(p);
+            return;
+          }
+        }
+      }
+    }
+    function sameCells(a,b){
+      var ka = a.map(function(x){return x[0]+','+x[1];}).sort().join('|');
+      var kb = b.map(function(x){return x[0]+','+x[1];}).sort().join('|');
+      return ka===kb;
+    }
+    function markFound(p){
+      foundWords[p.word] = true;
+      p.cells.forEach(function(rc){ var el=cellEls[rc[0]][rc[1]]; el.classList.remove('ws-sel'); el.classList.add('ws-found'); });
+      var li = listEl.querySelector('li[data-word="'+p.word+'"]'); if(li) li.classList.add('ws-done');
+      var n = Object.keys(foundWords).length;
+      statusEl.textContent = n===WORDS.length ? 'Solved! All words found.' : (n+' of '+WORDS.length+' found');
+    }
+    gridEl.addEventListener('mousedown', function(e){
+      var t = e.target; if(!t.classList.contains('ws-cell')) return;
+      e.preventDefault();
+      if(!startCell){
+        startCell = coords(t); dragging = true;
+        t.classList.add('ws-sel'); curSel=[startCell];
+      }
+    });
+    gridEl.addEventListener('mouseover', function(e){
+      if(!dragging || !startCell) return;
+      var t = e.target; if(!t.classList.contains('ws-cell')) return;
+      var end = coords(t);
+      showSel(lineCells(startCell[0],startCell[1],end[0],end[1]));
+    });
+    document.addEventListener('mouseup', function(e){
+      if(!startCell) return;
+      var t = e.target;
+      if(dragging && curSel.length>1){
+        tryMatch(curSel); clearSel(); startCell=null; dragging=false; return;
+      }
+      if(t && t.classList && t.classList.contains('ws-cell')){
+        var end = coords(t);
+        if(end[0]===startCell[0] && end[1]===startCell[1]){
+          dragging=false; return;
+        }
+        var cells = lineCells(startCell[0],startCell[1],end[0],end[1]);
+        if(cells){ tryMatch(cells); }
+        clearSel(); startCell=null; dragging=false; return;
+      }
+      clearSel(); startCell=null; dragging=false;
+    });
+    statusEl.textContent = '0 of '+WORDS.length+' found';
+  })();
+  </script>
+</div></div>
+
+      <!-- VIDEO: 5 open source repos study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Developer Tools</div>
+        <a href="https://fittoprompt.com/study-guides/5-open-source-repos-that-fix-95-percent-of-claude-codes-problems-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/IRPEfl2BD_c/maxresdefault.jpg" alt="5 Open Source Repos That Fix 95% of Claude Code's Problems" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">5 Open Source Repos That Fix 95% of Claude Code's Problems</h3>
+        </a>
+        <p class="byline mb-2">Chase AI &middot; YouTube &middot; Jul 8</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Chase AI runs through five open-source repos that plug the most common gaps in a Claude Code workflow, from context and memory management to guardrails and automation. The study guide names each tool, the problem it solves, and how to wire it into a real setup.</p>
+      </div>
+
+      <!-- THE WIRE -->
+      <div class="story-block">
+        <div class="wire-col">
+          <h3 class="font-sans text-xs font-bold uppercase tracking-[0.25em] text-ink mb-2">The Wire</h3>
+          <div class="wire-item">
+            <a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/" target="_blank" rel="noopener" class="story-link"><h4>Meta introduces Muse Image and Muse Video</h4></a>
+            <p>Superintelligence Labs' image model adds agentic tool use and self-refinement, and ranks second on Arena.</p>
+            <div class="wire-source">Meta AI &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://stratechery.com/2026/a-script-for-mark-zuckerberg/" target="_blank" rel="noopener" class="story-link"><h4>A script for Mark Zuckerberg</h4></a>
+            <p>Ben Thompson drafts the earnings-call speech that would frame Meta's AI spend as core to advertising.</p>
+            <div class="wire-source">Stratechery &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://thezvi.substack.com/p/no-space-like-j-space" target="_blank" rel="noopener" class="story-link"><h4>No space like J-space</h4></a>
+            <p>Zvi unpacks Anthropic's "J-space" global-workspace research and what it does (and doesn't) imply.</p>
+            <div class="wire-source">Don't Worry About the Vase &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/7/sqlite-utils-4/" target="_blank" rel="noopener" class="story-link"><h4>sqlite-utils 4.0 adds schema migrations</h4></a>
+            <p>Willison's release brings database migrations, nested transactions via db.atomic(), and compound foreign keys.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio" target="_blank" rel="noopener" class="story-link"><h4>Hugging Face to SageMaker Studio in one click</h4></a>
+            <p>Models now open pre-loaded in a configured SageMaker Studio environment from a single selection.</p>
+            <div class="wire-source">Hugging Face &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/blog/microsoft/foundry-managed-compute" target="_blank" rel="noopener" class="story-link"><h4>Hugging Face models on Foundry Managed Compute</h4></a>
+            <p>Microsoft adds a curated open-weight catalog deployable in one click with enterprise governance.</p>
+            <div class="wire-source">Hugging Face &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/blog/skypilot-hf-storage" target="_blank" rel="noopener" class="story-link"><h4>Zero-egress storage with SkyPilot</h4></a>
+            <p>Hugging Face Storage becomes a first-class SkyPilot backend for multi-cloud training without egress fees.</p>
+            <div class="wire-source">Hugging Face &middot; Jul 7</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/blog/lerobot-release-v060" target="_blank" rel="noopener" class="story-link"><h4>LeRobot v0.6.0: imagine, evaluate, improve</h4></a>
+            <p>World-model policies learn to imagine future states, plus reward models and six new sim benchmarks.</p>
+            <div class="wire-source">Hugging Face &middot; Jul 7</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+<p class="digest-hook">Microsoft is quietly swapping its own homegrown MAI models into Excel and Word, cutting the OpenAI and Anthropic tokens out of the two most-used apps on Earth, because even the company that helped fund the frontier has decided the frontier is too expensive to run at scale. On the same day, a French startup blessed by Yann LeCun shipped free software that runs one model across Nvidia, AMD, Google, and Apple silicon interchangeably, and a Deutsche Bank economist warned that if AI's promised productivity never shows up, it could make the world's debt load unpayable. Today's issue is a single argument told a dozen ways: the industry has stopped asking what AI <em>can</em> do and started asking what it <em>costs</em>, and every player is now scrambling to lower the floor.</p>
+
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~7 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/issues/assets/2026-07-08-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h3 class="digest-section-head">Today's Headlines</h3>
+
+<h4 class="digest-theme">The Cost Floor</h4>
+<ul class="digest-bullets">
+<li><strong>Microsoft is deploying its own MAI models inside Excel and Word.</strong> The move cuts reliance on OpenAI and Anthropic for routine in-app AI features and joins an industry-wide cost-cutting trend. When the largest single distributor of frontier AI decides to self-supply its flagship productivity apps, it is a signal that per-token economics have become the deciding factor, not raw capability.</li>
+<li><strong>Why open-source AI isn't hurting Anthropic yet.</strong> TechCrunch frames frontier and open-weight models as two phases of one lifecycle: frontier models prove a use case exists and command pricing power, then cheaper open-weight models mature to serve that demand at volume. The open-source wave functions less as a competitor and more as a cost floor the frontier labs price against, which is exactly why Anthropic keeps its margins even as free models proliferate.</li>
+<li><strong>ZML releases free multi-vendor inference software.</strong> The French startup, endorsed by Yann LeCun, lets a single model run across Nvidia, AMD, Google TPU, and Apple Metal hardware to break vendor lock-in and cut inference costs. It attacks the same problem as Microsoft's in-housing from the other direction: not building your own model, but freeing the one you have from any single chip supplier.</li>
+<li><strong>SambaNova raises a $1 billion Series F at an $11 billion valuation.</strong> The first close, led by General Atlantic, lands just five months after the AI-chip maker's last mega-round. Capital is flooding into anything that promises cheaper inference, and SambaNova's pitch, custom silicon that undercuts Nvidia on cost-per-token, is precisely the bet the market is now willing to fund at scale.</li>
+<li><strong>Deutsche Bank warns the productivity payoff may be years away.</strong> Economist Jim Reid argues AI's measurable productivity gains remain distant and that if the technology fails to deliver, it could worsen an already unsustainable global debt burden. It is the macro counterweight to every optimistic capex announcement: the spending is real and immediate, the returns are hypothetical and deferred.</li>
+</ul>
+
+<h4 class="digest-theme">Meta's Image Play</h4>
+<ul class="digest-bullets">
+<li><strong>Meta launches Muse Image across its apps, and the backlash is instant.</strong> The generator rolls out in the Meta AI app, Instagram Stories, and WhatsApp. Meta Superintelligence Labs says Muse Image adds agentic tool use and self-refinement and ranks second on Arena, with a Muse Video preview to follow. But a feature that lets users AI-manipulate strangers' public Instagram profile photos without consent drew immediate criticism, a familiar pattern of shipping capability first and reckoning with consent second.</li>
+<li><strong>Ben Thompson writes Zuckerberg's earnings-call script.</strong> Stratechery's "A Script for Mark Zuckerberg" imagines a speech reframing Meta's enormous AI infrastructure spend as core to its advertising engine, while reflecting candidly on past platform and Reality Labs missteps. It reads as a strategic case that Meta's AI bet only pays off if it flows back into ads, not as a standalone product line.</li>
+</ul>
+
+<h4 class="digest-theme">Agents Off the Screen</h4>
+<ul class="digest-bullets">
+<li><strong>Claude Cowork comes to web and mobile for Max subscribers.</strong> Users can now start a task on desktop and get updates on their phone, marking Anthropic's push from coding tools toward general office automation. Cowork's expansion signals the agent battleground moving out of the IDE and into the everyday knowledge-work stack, where the addressable market is far larger.</li>
+<li><strong>Forterra deployed 100+ self-driving ATVs in Ukraine over nine months.</strong> The vehicles ran 1,100+ missions across 2,500+ miles and evacuated 52 casualties, mostly under remote control, in what TechCrunch calls the largest autonomous ground-vehicle combat deployment by a US defense-tech firm. It is a stark reminder that the same autonomy stack powering consumer agents is being battle-tested in an active war zone.</li>
+<li><strong>Savi Security raises $7M seed to catch AI scams in real time.</strong> Founders Patrick and Ryan Coughlin built a consumer app that flags AI-driven fraud in texts, emails, calls, and voicemails, including live-call monitoring against fake kidnapping-ransom scams. As generative tools lower the cost of convincing fraud, a defensive consumer layer becomes its own funded category.</li>
+<li><strong>Discord admits an AI moderation bug wrongly banned 8,000+ users.</strong> The system flagged harmless images, spreadsheets, chessboards, and game textures, as violations before accounts began being restored. It is a clean cautionary tale about deploying automated classifiers at scale without adequate human review, and the reputational cost when they misfire.</li>
+</ul>
+
+<h4 class="digest-theme">Understanding the Machine</h4>
+<ul class="digest-bullets">
+<li><strong>Anthropic's "J-space" research maps how LLMs actually reason.</strong> Matthew Berman's video breaks down the finding of a global workspace inside language models where verbalizable representations enable deliberate, conscious-like reasoning, as opposed to opaque pattern-matching. It is a rare piece of interpretability work that connects mechanistic detail to the everyday experience of a model "thinking through" a problem.</li>
+<li><strong>Zvi Mowshowitz analyzes the same research in "No Space Like J-Space."</strong> His companion write-up pressure-tests Anthropic's global-workspace claims and situates them in the broader interpretability debate. Paired with the video, it is the week's most substantive attempt to answer the durable question of what these systems are doing under the hood.</li>
+<li><strong>Chase AI catalogs five open-source repos that fix Claude Code's rough edges.</strong> The video walks through five community tools that patch common workflow gaps in Claude Code, the kind of ecosystem tooling that emerges once a platform is widely adopted enough to have well-known pain points worth fixing.</li>
+<li><strong>Simon Willison ships sqlite-utils 4.0.</strong> The release adds schema migrations, nested transactions via <code>db.atomic()</code>, and compound foreign key support. It is unglamorous plumbing, but the durable kind: the data-wrangling substrate that AI pipelines quietly depend on.</li>
+<li><strong>LeRobot v0.6.0 brings world models to open robotics.</strong> The update ships world-model policies that imagine future states, reward models, six new simulation benchmarks, depth sensing, VLM-based annotation, and cloud training. It pulls frontier robot-learning techniques into an accessible open framework, the same democratization arc playing out in language models.</li>
+</ul>
+
+<h4 class="digest-theme">The Deployment Plumbing</h4>
+<ul class="digest-bullets">
+<li><strong>Hugging Face models now deploy to Amazon SageMaker Studio in one click.</strong> The integration collapses the friction between the open-model hub and enterprise AWS infrastructure. It is a small convenience that compounds: the easier it is to move an open model into production, the stronger the cost case against paying frontier API prices.</li>
+<li><strong>Hugging Face lands on Microsoft Foundry Managed Compute.</strong> One-click deploy with enterprise governance brings open-weight models into Microsoft's managed enterprise stack, the same week Microsoft in-houses its own models in Office. The two moves rhyme: Microsoft is building every path that reduces dependence on external frontier APIs.</li>
+<li><strong>SkyPilot and Hugging Face offer zero-egress storage.</strong> The combination gives multi-cloud compute a centralized hub with no egress fees, attacking one of the quietest and most punishing line items in AI infrastructure. Egress charges are the toll booths of the cloud, and eliminating them is pure cost discipline.</li>
+</ul>
+
+<h3 class="digest-section-head">The Throughline</h3>
+<p>Read together, today's twenty stories describe an industry crossing from <em>abundance</em> to <em>austerity</em>. For three years the operating assumption was that capability was the constraint and cost would take care of itself, so everyone spent freely to be first. That assumption broke this week, in public, from multiple directions at once. Microsoft, the company most responsible for making frontier AI ubiquitous, decided the frontier was too costly to keep inside Excel. ZML built a way to escape any single chip vendor's pricing. SkyPilot went after egress fees. Hugging Face made open models a one-click substitute for paid APIs on both AWS and Azure. None of these are capability stories. Every one is a cost story.</p>
+<p>The TechCrunch lifecycle framing is the key that unlocks the rest. Frontier and open-weight models are not really competitors; they are two stages of the same maturation curve. The frontier proves a use case is possible and, for a window, charges a premium for it. Then open-weight models catch up and serve that same demand at a fraction of the price. What changed this week is that the second stage has arrived for enough use cases that buyers can finally act on it, and they are. The reason open source "isn't hurting Anthropic yet" is precisely that Anthropic has moved on to proving the <em>next</em> use case, where it still has pricing power. Cowork's jump to mobile is that move in miniature: get out of the commoditizing coding market and into general office automation before the floor rises underneath you.</p>
+<p>And note where the capability work is still happening, because it hasn't stopped, it has just changed character. The J-space research and LeRobot's world models are about <em>understanding and generalizing</em>, not just scaling. The frontier increasingly justifies its premium not by being bigger but by being more legible and more capable in ways open models can't yet copy. Interpretability is becoming a product feature, because a model you can explain is a model an enterprise can trust, audit, and pay more for.</p>
+<p>The Deutsche Bank warning is the shadow over all of it. Every cost-cutting move this week is rational only if the productivity payoff eventually arrives to justify the spending that came before. If Jim Reid is right that the gains are years away, then the entire industry is optimizing the cost of an engine whose output remains unproven, and doing so on borrowed money.</p>
+
+<h3 class="digest-section-head">The Bigger Picture</h3>
+<p>What we are watching is a technology transition from its speculative phase into its industrial phase, and industrial phases are won on unit economics, not demos. The historical rhyme is not the smartphone launch but the maturation of any capital-intensive utility: the exciting question shifts from "can we build it" to "who can deliver it cheapest, on whose hardware, with what margin." The proliferation of vendor-neutral inference, open-model deployment paths, and in-house model substitution all point to the same endgame, a market where the model itself commoditizes and the durable advantage lives in distribution, trust, and cost structure.</p>
+<p>That reframing carries real social stakes. When Meta ships an image generator that can manipulate strangers' photos without consent, when Discord's automated moderation wrongly bans thousands, and when defense-tech firms field autonomous vehicles in combat, the through-line is an industry deploying faster than its guardrails mature, precisely because the competitive pressure is now about cost and speed rather than careful capability gains. Savi Security getting funded to detect AI scams is the market pricing in that same reality: the harms are arriving on the same cost curve as the benefits.</p>
+<p>The uncomfortable macro question is whether the debt-fueled buildout meets its return before patience runs out. Deutsche Bank's warning and the SambaNova mega-round are two readings of the same bet placed five months apart, one cautioning that the productivity may never come, the other wagering a billion dollars that cheaper inference will unlock it. Both cannot be right, and 2026 is starting to look like the year we find out which.</p>
+
+<h3 class="digest-section-head">What to Watch</h3>
+<ul class="digest-bullets">
+<li><strong>Whether Microsoft's MAI in-housing spreads beyond Office.</strong> If the homegrown models prove good enough for Excel and Word, watch for them to creep into Copilot's higher-stakes surfaces, and watch how OpenAI responds to losing token volume inside its own largest partner. This is the clearest test yet of whether frontier APIs are becoming a commodity input.</li>
+<li><strong>The Muse Image consent backlash.</strong> The feature that lets users manipulate strangers' public profile photos is the kind of thing that draws regulatory attention fast. Watch whether Meta walks it back, and whether the Muse Video preview ships with tighter guardrails after the reaction.</li>
+<li><strong>The productivity-versus-debt reckoning.</strong> Deutsche Bank framed the risk; the next few quarters of enterprise AI ROI data will start to settle it. Watch whether the cost-cutting moves of this week translate into visible margin expansion for AI buyers, or just cheaper spending on returns that still haven't materialized.</li>
+</ul>
+
+<h3 class="digest-section-head">Go Deeper</h3>
+<ul class="digest-bullets">
+<li><a href="https://fittoprompt.com/study-guides/we-just-figured-out-how-ai-actually-works-j-space-study.html" data-study-guide>We Just Figured Out How AI Actually Works (J-Space)</a> — Matthew Berman's walkthrough of Anthropic's J-space research is the most accessible entry point into the week's biggest interpretability finding: the discovery of a global workspace inside language models where verbalizable representations enable deliberate, conscious-like reasoning rather than opaque pattern-matching. The guide breaks down the key properties of the J-space and why a model whose reasoning can be inspected is a model enterprises can actually trust, the exact quality the frontier labs are betting will justify their premium as open-weight models close the raw-capability gap.</li>
+<li><a href="https://fittoprompt.com/study-guides/5-open-source-repos-that-fix-95-percent-of-claude-codes-problems-study.html" data-study-guide>5 Open Source Repos That Fix 95% of Claude Code's Problems</a> — Chase AI's tour of five community-built tools is a practical companion to today's cost-discipline theme: rather than paying for more capability, it shows how to close the everyday workflow gaps in Claude Code with free, open-source tooling. The guide catalogs each repo, the specific pain point it solves, and how they fit together into a smoother agentic-coding setup, the kind of ecosystem maturity that only forms once a platform is adopted widely enough for its rough edges to be worth fixing.</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '-'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    /* Podcast player */
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
