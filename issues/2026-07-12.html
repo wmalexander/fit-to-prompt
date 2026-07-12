@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - Terence Tao Puts Coding Agents to Work - July 12, 2026</title>
+  <meta name="description" content="Daily AI news roundup for July 12, 2026. Terence Tao uses modern coding agents to resurrect decades-old math apps, a 41-million-paper study finds AI boosts careers but flattens scientific discovery, OpenAI courts families, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #71">
+  <meta property="og:description" content="Daily AI news roundup for July 12, 2026. Terence Tao uses modern coding agents to resurrect decades-old math apps, a 41-million-paper study finds AI boosts careers but flattens scientific discovery, OpenAI courts families, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-07-12.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-07-12.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Sunday, July 12, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 71</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>5 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">Developer Tools &middot; Coding Agents</div>
+          <a href="https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://terrytao.wordpress.com/wp-content/uploads/2026/07/image.png" alt="Terence Tao: Old and New Apps, via Modern Coding Agents" class="w-full aspect-video object-cover mb-4" style="background:#f1f1f1;">
+            <h2 class="headline-lead mb-3">Terence Tao Puts Coding Agents to Work on 40 Years of Math Apps</h2>
+          </a>
+          <p class="byline mb-3">Terry Tao &middot; Jul 11</p>
+          <div class="newspaper-body">
+            <p>Fields Medalist Terence Tao describes handing modern AI coding agents a pile of decades-old Java applets, the kind of educational visualizations that quietly stopped working when browsers dropped Java, and watching them migrate cleanly to modern JavaScript. Tools he had written off as lost were back online in an afternoon.</p>
+            <p>He did not stop at restoration. Tao used the same agents to build new interactive apps from scratch, including a special-relativity visualization and a demonstration of the Gilbreath conjecture. His takeaway is quietly striking: modern coding agents make both legacy porting and net-new development far more accessible, collapsing work that once demanded a dedicated programmer into a conversation.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Video &middot; Design</div>
+          <a href="https://fittoprompt.com/study-guides/skill-turns-fable-5-gpt-56-web-design-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/KBH8P0z2AL8/maxresdefault.jpg" alt="This Skill Turns Fable 5 and GPT 5.6 Into Web Design Monsters" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">This Skill Turns Fable 5 &amp; GPT 5.6 Into Web Design Monsters</h3>
+          </a>
+          <p class="byline mb-2">Chase AI &middot; YouTube &middot; Jul 11</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Chase AI shows how a single reusable skill file pushes Claude Fable 5 and GPT 5.6 to one-shot polished, animated websites, chaining several scroll animations into one smooth build. Watch the full study guide.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + IEEE Spectrum science story -->
+      <div class="story-span-2">
+        <div class="kicker">AI Culture &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-12-cartoon.png" alt="New Yorker-style cartoon about a mathematician whose life's work was ported by an AI agent." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"The agent ported forty years of my work in an afternoon. Now I have nothing to do but math."</p>
+          </div>
+          <div>
+            <div class="kicker">AI &amp; Science</div>
+            <a href="https://spectrum.ieee.org/ai-science-research-flattens-discovery" target="_blank" rel="noopener" class="story-link">
+              <img src="https://spectrum.ieee.org/media-library/illustration-of-the-tip-of-a-pencil-breaking-the-shattered-graphite-pieces-resemble-sparkles-frequently-used-for-ai-application.jpg?id=62826545&width=1200&height=900" alt="AI Boosts Research Careers but Flattens Scientific Discovery" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+              <h3 class="headline-feature mb-2">AI Boosts Research Careers but Flattens Scientific Discovery</h3>
+            </a>
+            <p class="byline mb-2">IEEE Spectrum &middot; Jul 11</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">A study of 41.3 million academic papers finds researchers who use AI publish more and gain citations faster, but their work clusters around fewer, data-rich topics, trading individual career gains against the diversity of what science explores.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE: OpenAI families -->
+      <div class="story-block">
+        <div class="kicker">Consumer AI</div>
+        <a href="https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2170386424.jpg?w=1024" alt="OpenAI Bets on Families as ChatGPT Goes Deeper Into Households" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">OpenAI Bets on Families as ChatGPT Goes Deeper Into Households</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 11</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI is hiring a product manager to build ChatGPT experiences tailored to families, caregivers, and older adults. The push tracks a demographic shift: users aged 35 and older now make up 31 percent of ChatGPT's global base, up from 26 percent a year earlier.</p>
+      </div>
+
+      <!-- PUZZLE: The AI Mini crossword -->
+      <div class="story-block">
+<div class="aimini-wrap">
+<style>
+.aimini-wrap{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;max-width:300px;margin:0 auto;color:#1a1a1a;background:#fff;box-sizing:border-box;padding:4px;}
+.aimini-wrap *{box-sizing:border-box;}
+.aimini-head{text-align:center;border-top:2px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:6px 0 4px;margin-bottom:10px;}
+.aimini-kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8B0000;font-weight:700;}
+.aimini-title{font-size:20px;font-weight:800;letter-spacing:0.5px;line-height:1.1;margin-top:2px;}
+.aimini-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;width:100%;max-width:250px;margin:0 auto;border:2px solid #1a1a1a;}
+.aimini-cell{position:relative;aspect-ratio:1/1;border:1px solid #1a1a1a;}
+.aimini-cell.aimini-black{background:#1a1a1a;}
+.aimini-num{position:absolute;top:1px;left:2px;font-size:8px;line-height:1;font-weight:700;color:#1a1a1a;pointer-events:none;z-index:2;}
+.aimini-cell input{width:100%;height:100%;border:0;text-align:center;font-family:inherit;font-size:16px;font-weight:700;text-transform:uppercase;color:#1a1a1a;background:transparent;padding:0;outline:none;}
+.aimini-cell input:focus{background:#f4ecec;}
+.aimini-cell.aimini-ok input{background:#e3efe3;color:#1a1a1a;}
+.aimini-cell.aimini-bad input{background:#f7dede;color:#8B0000;}
+.aimini-actions{display:flex;gap:6px;justify-content:center;margin:12px 0 4px;}
+.aimini-btn{font-family:inherit;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;padding:7px 14px;border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;cursor:pointer;}
+.aimini-btn.aimini-alt{background:#fff;color:#1a1a1a;}
+.aimini-btn:active{opacity:.8;}
+.aimini-msg{text-align:center;font-size:11px;min-height:14px;margin-bottom:8px;color:#8B0000;font-weight:600;}
+.aimini-clues{display:flex;gap:12px;font-size:11px;line-height:1.5;border-top:1px solid #1a1a1a;padding-top:8px;}
+.aimini-col{flex:1;}
+.aimini-col h4{margin:0 0 4px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#8B0000;border-bottom:1px solid #ccc;padding-bottom:2px;}
+.aimini-col ol{list-style:none;margin:0;padding:0;}
+.aimini-col li{margin-bottom:5px;}
+.aimini-col b{font-weight:700;}
+</style>
+<div class="aimini-head">
+<div class="aimini-kicker">Puzzle</div>
+<div class="aimini-title">The AI Mini</div>
+</div>
+<div class="aimini-grid" id="aimini-grid"></div>
+<div class="aimini-actions">
+<button class="aimini-btn" id="aimini-check" type="button">Check</button>
+<button class="aimini-btn aimini-alt" id="aimini-clear" type="button">Clear</button>
+</div>
+<div class="aimini-msg" id="aimini-msg"></div>
+<div class="aimini-clues">
+<div class="aimini-col">
+<h4>Across</h4>
+<ol>
+<li><b>1.</b> Units of work an agent breaks a goal into</li>
+<li><b>3.</b> Autonomous AI that acts on your behalf</li>
+<li><b>4.</b> Points in a neural network or graph</li>
+</ol>
+</div>
+<div class="aimini-col">
+<h4>Down</h4>
+<ol>
+<li><b>1.</b> Teach a model on data</li>
+<li><b>2.</b> Tokens-per-second measures this</li>
+</ol>
+</div>
+</div>
+<script>
+(function(){
+var SOL=["TASKS","R P  ","AGENT","I E  ","NODES"];
+var NUMS={"0-0":1,"0-2":2,"2-0":3,"4-0":4};
+var grid=document.getElementById("aimini-grid");
+var inputs=[];
+for(var r=0;r<5;r++){
+  inputs[r]=[];
+  for(var c=0;c<5;c++){
+    var ch=SOL[r][c];
+    var cell=document.createElement("div");
+    cell.className="aimini-cell";
+    if(ch===" "){cell.className+=" aimini-black";inputs[r][c]=null;grid.appendChild(cell);continue;}
+    var key=r+"-"+c;
+    if(NUMS[key]){var n=document.createElement("span");n.className="aimini-num";n.textContent=NUMS[key];cell.appendChild(n);}
+    var inp=document.createElement("input");
+    inp.type="text";inp.maxLength=1;inp.setAttribute("data-r",r);inp.setAttribute("data-c",c);
+    inp.addEventListener("input",function(e){
+      var t=e.target;t.value=t.value.replace(/[^a-zA-Z]/g,"").toUpperCase();
+      t.parentNode.classList.remove("aimini-ok","aimini-bad");
+      if(t.value){moveNext(+t.getAttribute("data-r"),+t.getAttribute("data-c"));}
+    });
+    inp.addEventListener("keydown",function(e){
+      if(e.key==="Backspace"&&!e.target.value){movePrev(+e.target.getAttribute("data-r"),+e.target.getAttribute("data-c"));}
+    });
+    cell.appendChild(inp);
+    inputs[r][c]=inp;
+    grid.appendChild(cell);
+  }
+}
+function moveNext(r,c){
+  for(var i=r*5+c+1;i<25;i++){var rr=Math.floor(i/5),cc=i%5;if(inputs[rr][cc]){inputs[rr][cc].focus();return;}}
+}
+function movePrev(r,c){
+  for(var i=r*5+c-1;i>=0;i--){var rr=Math.floor(i/5),cc=i%5;if(inputs[rr][cc]){inputs[rr][cc].focus();inputs[rr][cc].parentNode.classList.remove("aimini-ok","aimini-bad");return;}}
+}
+document.getElementById("aimini-check").addEventListener("click",function(){
+  var total=0,right=0,filled=0;
+  for(var r=0;r<5;r++)for(var c=0;c<5;c++){
+    var inp=inputs[r][c];if(!inp)continue;total++;
+    inp.parentNode.classList.remove("aimini-ok","aimini-bad");
+    var v=(inp.value||"").toUpperCase();
+    if(v)filled++;
+    if(v===SOL[r][c]){right++;inp.parentNode.classList.add("aimini-ok");}
+    else if(v){inp.parentNode.classList.add("aimini-bad");}
+  }
+  var msg=document.getElementById("aimini-msg");
+  if(right===total){msg.style.color="#1a1a1a";msg.textContent="Solved. Nicely done.";}
+  else if(filled<total){msg.style.color="#8B0000";msg.textContent=right+"/"+total+" correct · keep going";}
+  else{msg.style.color="#8B0000";msg.textContent=right+"/"+total+" correct";}
+});
+document.getElementById("aimini-clear").addEventListener("click",function(){
+  for(var r=0;r<5;r++)for(var c=0;c<5;c++){var inp=inputs[r][c];if(!inp)continue;inp.value="";inp.parentNode.classList.remove("aimini-ok","aimini-bad");}
+  document.getElementById("aimini-msg").textContent="";
+});
+})();
+</script>
+</div>
+      </div>
+
+      <!-- STANDARD: Zvi on Plan A -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; AI Policy</div>
+        <a href="https://thezvi.substack.com/p/introduction-for-and-reactions-to" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Zvi Wrestles With "Plan A" for Governing Superintelligence</h3>
+        </a>
+        <p class="byline mb-2">Zvi Mowshowitz &middot; Jul 11</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Zvi Mowshowitz introduces and reacts to "AI 2040: Plan A," a scenario proposing US-China coordination to slow superintelligence through joint compute monitoring and mutually assured compute destruction. His crux: whether superintelligence is even possible by 2040, and why the plan's value lies in engaging the specifics of governance seriously.</p>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE                               -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Terence Tao, arguably the most celebrated living mathematician, spent an afternoon handing decades-old, long-dead Java applets to an AI coding agent and watching them come back to life in modern JavaScript. Along the way the agent found two bugs in his original 1999 code that he had never noticed. On the same day, a study of 41.3 million papers reported that scientists who lean on AI publish three times as much and earn nearly five times the citations, yet crowd into ever-fewer questions. The tool that just resurrected forty years of one mathematician's work is, at scale, quietly narrowing what the rest of science bothers to ask. That tension runs through today's issue.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~8 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-07-12-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Agent as Builder</h4>
+        <ul class="digest-bullets">
+          <li><strong>Tao resurrects (and extends) 40 years of math apps.</strong> Terence Tao ported roughly two dozen Java 1.0 applets from his late-1990s course and research pages, including a honeycomb applet co-built with Allen Knutson in 1999 and a Besicovitch set applet he took the chance to colorize, all in a matter of hours. He then built genuinely new tools he had abandoned decades ago as too hard to code by hand, notably a special-relativity spacetime editor he calls "Inkscape, but in Minkowski space," and a Gilbreath conjecture visualization. His rule of thumb: since these applets are "secondary visual aids rather than critical components of a mathematical argument, the downside risk of such bugs is relatively low."</li>
+          <li><strong>A single "skill" makes Fable 5 and GPT 5.6 one-shot animated sites.</strong> Chase AI walks through Scroll World, a portable skill file that hands the hard part of premium web design, a coherent, non-janky chain of scroll animations, to Claude Fable 5 or GPT 5.6. The pipeline turns a single anchor image into a video, extracts frames with FFmpeg, and binds each frame to scroll position, offloading media generation to the Higgsfield MCP. His GPT 5.6 build finished a four-scene Japan travel site in about 32 minutes, though he gave Fable 5 the edge on transition smoothness.</li>
+        </ul>
+
+        <h4 class="digest-theme">What AI Does to Discovery</h4>
+        <ul class="digest-bullets">
+          <li><strong>AI boosts careers but flattens science.</strong> A James Evans-led study (University of Chicago, published in Nature) analyzed 41.3 million papers from 1980 to 2025 across six natural sciences. Researchers using AI publish 3x more, gain nearly 5x the citations, and lead teams one to two years earlier, but their work clusters around fewer, data-rich problems and generates weaker follow-on engagement. Northwestern's Luis Amaral put it bluntly: "We are digging the same hole deeper and deeper." Evans argues the fix is not better algorithms but restructured incentives that reward researchers for widening the range of questions they pursue.</li>
+        </ul>
+
+        <h4 class="digest-theme">Households and Governance</h4>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI courts families.</strong> OpenAI is hiring a product manager dedicated to building ChatGPT experiences for families, caregivers, and older adults. The move tracks a real demographic shift: users aged 35 and up now make up 31 percent of ChatGPT's global base, up from 26 percent a year ago. The frontier lab is starting to think like a consumer-products company chasing the living room, not just the lab bench.</li>
+          <li><strong>Zvi wrestles with "Plan A" for superintelligence.</strong> Zvi Mowshowitz engages "AI 2040: Plan A," from Daniel Kokotajlo, Ryan Greenblatt, and collaborators (the AI 2027 team), which proposes a US-China deal to slow AI via joint control of chip supplies, universal data-center auditing, and a "mutually assured compute destruction" mechanism. Zvi does not endorse it but insists it deserves engagement because "even when plans are worthless, planning is essential." The crux he identifies is simply whether superintelligence is even plausible by 2040, an "epistemic chasm" that divides the whole debate.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Two stories today describe the same capability from opposite ends of the telescope. Tao and the Chase AI skill both show coding agents collapsing work that used to require a dedicated programmer into a short conversation. What is striking about Tao's account is not that the agent worked, but <em>how little was at stake in letting it</em>. He was candid that LLMs can introduce "blatant or subtle bugs," and he found exactly one across two dozen ports. His judgment was that the reward now clears the risk for anything non-mission-critical, so he plans to routinely bolt interactive visualizations onto future papers. That is a quiet but real shift: the threshold for "worth building" just dropped to near zero.</p>
+
+        <p>Set that against the Evans study and the optimism gets complicated. When creation becomes nearly free, you would expect an explosion of variety. What the 41.3-million-paper analysis found instead was concentration: AI pulls researchers toward the same data-rich, well-trodden problems, digging one hole deeper rather than opening new ground. The same force that lets Tao chase a 1999 whim also nudges a field toward whatever the models handle best. Democratized creation and narrowed exploration are not contradictions here. They are the same tool viewed at the level of the individual versus the level of the system.</p>
+
+        <p>That is exactly the seam the governance and consumer stories sit on. Zvi's Plan A is an argument that the system-level dynamics, the incentives, the races, the defaults, are the thing that actually determines the outcome, and that leaving them to markets or to "it will probably be fine" is how humans end up unable to override irreversible decisions. OpenAI hiring for families is the same realization wearing a friendlier face: the models are diffusing into households and daily habits faster than anyone is designing the guardrails for it. Evans wants to redesign scientific incentives; Zvi wants to redesign geopolitical ones; OpenAI is simply meeting the demographic where it already is.</p>
+
+        <h3 class="digest-section-head">The Bigger Picture</h3>
+
+        <p>The signal underneath today's stories is that frontier AI has stopped being mainly a story about frontier demos. A year ago the headline would have been the capability itself. Today the most-celebrated mathematician alive treats an agent as unremarkable plumbing for restoring old teaching tools, a design skill turns a terminal into a boutique web studio in half an hour, and the biggest lab in the field is staffing up to serve grandparents. The technology has crossed from spectacle into infrastructure, and infrastructure is judged by second-order effects, not benchmarks.</p>
+
+        <p>Those second-order effects are where the real argument now lives. The Evans study is the clearest early evidence that a productivity tool can reshape the intellectual portfolio of an entire discipline without anyone choosing that outcome. Scale that logic beyond science and you get the worry threaded through Zvi's piece: systems optimizing local incentives can march collectively somewhere no participant intended. The optimistic reading, and it is a fair one, is that Tao points the other way. In the hands of someone with taste and deep expertise, the same tool amplifies range rather than shrinking it. The open question for the next few years is whether AI mostly hands people Tao's leverage or mostly herds them into Evans's hole, and how much of that is a design choice rather than a fate.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Whether "worth building" keeps falling.</strong> Tao says he will now routinely add visualizations he previously skipped. If that behavior generalizes, expect a wave of small, agent-built interactive tools attached to papers, docs, and courses, and a new question about who maintains and verifies them.</li>
+          <li><strong>Whether anyone acts on the concentration finding.</strong> Evans argues the remedy is incentive redesign, not better models. Watch funders, journals, and universities for any concrete move to reward topical breadth, because without one, the flattening effect compounds across decades.</li>
+          <li><strong>Consumer AI as the real regulatory surface.</strong> OpenAI's family push means the highest-stakes safety questions increasingly play out in ordinary households, not enterprise deployments. The design decisions made for caregivers and older adults will preview the guardrail debates to come.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/skill-turns-fable-5-gpt-56-web-design-study.html" data-study-guide>This Skill Turns Fable 5 &amp; GPT 5.6 Into Web Design Monsters</a> &mdash; How the Scroll World skill chains image-to-video-to-frame-binding into a one-shot animated site, the four-scene sweet spot, why the anchor image is the highest-leverage decision, and the head-to-head where Fable 5's transitions edged out GPT 5.6.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
