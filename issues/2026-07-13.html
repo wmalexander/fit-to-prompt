@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - GPT-5.6 Unseats Claude Opus in Production - July 13, 2026</title>
+  <meta name="description" content="Daily AI news roundup for July 13, 2026. A production agent swaps Opus 4.8 for GPT-5.6 and gets 2.2x faster, Claude Code is measured burning 4.7x the tokens of OpenCode, Simon Willison says an agent can never be the Directly Responsible Individual, researchers find AI fiction gives itself away, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #72">
+  <meta property="og:description" content="Daily AI news roundup for July 13, 2026. A production agent swaps Opus 4.8 for GPT-5.6 and gets 2.2x faster, Claude Code is measured burning 4.7x the tokens of OpenCode, Simon Willison says an agent can never be the Directly Responsible Individual, researchers find AI fiction gives itself away, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-07-13.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-07-13.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Monday, July 13, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 72</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>10 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models &middot; Migration</div>
+          <a href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://storage.googleapis.com/ployai/d21bf4ad-2458-43ee-9561-54c28ab0e85f/user/fcebce5c-colorful-hero-opus-vs-gpt.png" alt="Migrating a production AI agent from Claude Opus 4.8 to GPT-5.6" class="w-full aspect-video object-cover mb-4" style="background:#f1f1f1;">
+            <h2 class="headline-lead mb-3">GPT-5.6 Unseats Claude Opus in Production, and the Migration Was the Hard Part</h2>
+          </a>
+          <p class="byline mb-3">Ploy &middot; Jul 9</p>
+          <div class="newspaper-body">
+            <p>Ploy swapped the backbone of its production coding agent from Claude Opus 4.8 to GPT-5.6 Sol and posted the kind of numbers that force a re-evaluation: builds finished in 3 minutes 42 seconds instead of 8 minutes flat, cost dropped from $3.06 to $2.22 per build, and the visual quality score actually rose from 0.936 to 0.970. It is the first model in four months to beat Opus at the job.</p>
+            <p>The interesting part is everything that broke. About a third of the initial failures traced not to the model but to Ploy's own evaluation harness, which had Opus-shaped assumptions baked into it. GPT-5.6 insists on filling in all 25 tool parameters every time, inventing plausible values for fields it should have omitted, which caused between 52 and 64 percent of file reads to come back empty until the team rewrote optional properties as required-but-nullable. Rebuilding prompt caching for a provider with no partial-prefix matching took first-call cache hits from roughly zero to 83.7 percent. Cross-family model migration, it turns out, is an infrastructure project rather than a config change.</p>
+          </div>
+        </div>
+        <div>
+          <div class="kicker">Video &middot; Strategy</div>
+          <a href="https://fittoprompt.com/study-guides/your-roadmap-is-why-youre-losing-to-ai-native-teams-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+            <img src="https://img.youtube.com/vi/hYcOFTMesGc/maxresdefault.jpg" alt="Your Roadmap Is Why You're Losing to AI-Native Teams" class="w-full aspect-video object-cover mb-3">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+            <h3 class="headline-feature mb-2">Your Roadmap Is Why You're Losing to AI-Native Teams</h3>
+          </a>
+          <p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; Jul 12</p>
+          <p class="font-serif text-sm text-gray-600 leading-relaxed">Nate B. Jones argues that the quarterly roadmap is an artifact of an era when building was expensive. Once AI drives the cost of building toward zero, the bottleneck moves, and the teams still planning around scarcity are the ones falling behind. Watch the full study guide.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Simon Willison DRI -->
+      <div class="story-span-2">
+        <div class="kicker">AI Culture &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-13-cartoon.png" alt="New Yorker-style cartoon: a desktop computer wearing a necktie sits in the CEO chair at a boardroom table." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"He's the Directly Responsible Individual. A computer can never be held accountable."</p>
+          </div>
+          <div>
+            <div class="kicker">Opinion &middot; Agent Accountability</div>
+            <a href="https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">An Agent Can Never Be the Directly Responsible Individual</h3>
+            </a>
+            <p class="byline mb-2">Simon Willison &middot; Jul 12</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Simon Willison takes the Apple-born idea of the Directly Responsible Individual, the single person ultimately accountable for a project's success or failure, and draws a hard line: it can never be an agent. He anchors the argument in a 1979 IBM training slide that reads "a computer can never be held accountable, therefore a computer must never make a management decision." Delegating execution to agents is fine. Delegating accountability is a category error, and the more autonomous the agents get, the more the human DRI matters.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE: Cole Medin video -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Claude Code</div>
+        <a href="https://fittoprompt.com/study-guides/claude-code-video-generation-system-archon-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/deeOA6YVfqw/maxresdefault.jpg" alt="I Turned Claude Code Into a Complete Video Generation System (with Archon)" class="w-full aspect-video object-cover mb-3">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Claude Code as a Complete Video Generation System</h3>
+        </a>
+        <p class="byline mb-2">Cole Medin &middot; YouTube &middot; Jul 12</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cole Medin points Archon, his open-source orchestration project now near 23,000 stars, at something other than coding: an "AI content factory" that turns a still-image product catalog into renders and video ads. Two Ralph-loop workflows fan out parallel worker agents, five for image concepts and three for renders, with a human approving before any video burns credits.</p>
+      </div>
+
+      <!-- PUZZLE: Acronym Quiz -->
+      <div class="story-block">
+<div class="aiacro-wrap">
+<style>
+.aiacro-wrap{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;max-width:300px;margin:0 auto;color:#1a1a1a;background:#fff;box-sizing:border-box;padding:4px;}
+.aiacro-wrap *{box-sizing:border-box;}
+.aiacro-head{text-align:center;border-top:2px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:6px 0 4px;margin-bottom:10px;}
+.aiacro-kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8B0000;font-weight:700;}
+.aiacro-title{font-size:20px;font-weight:800;letter-spacing:0.5px;line-height:1.1;margin-top:2px;}
+.aiacro-sub{font-size:11px;line-height:1.5;color:#555;text-align:center;margin-bottom:10px;}
+.aiacro-q{border-top:1px solid #e2e2e2;padding-top:7px;margin-bottom:7px;}
+.aiacro-q:first-of-type{border-top:0;padding-top:0;}
+.aiacro-term{font-size:13px;font-weight:800;letter-spacing:1px;margin-bottom:4px;}
+.aiacro-term span{font-weight:600;font-size:10px;letter-spacing:0;color:#8B0000;margin-left:4px;}
+.aiacro-opt{display:flex;align-items:flex-start;gap:6px;font-size:11px;line-height:1.4;padding:3px 4px;cursor:pointer;border:1px solid transparent;}
+.aiacro-opt input{margin:2px 0 0;accent-color:#8B0000;flex:0 0 auto;}
+.aiacro-opt.aiacro-ok{background:#e3efe3;border-color:#3f7a3f;}
+.aiacro-opt.aiacro-bad{background:#f7dede;border-color:#8B0000;color:#8B0000;}
+.aiacro-actions{display:flex;gap:6px;justify-content:center;margin:12px 0 4px;}
+.aiacro-btn{font-family:inherit;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;padding:7px 14px;border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;cursor:pointer;}
+.aiacro-btn.aiacro-alt{background:#fff;color:#1a1a1a;}
+.aiacro-btn:active{opacity:.8;}
+.aiacro-msg{text-align:center;font-size:11px;min-height:14px;margin-bottom:4px;color:#8B0000;font-weight:600;}
+</style>
+<div class="aiacro-head">
+<div class="aiacro-kicker">Puzzle</div>
+<div class="aiacro-title">Acronym Quiz</div>
+</div>
+<div class="aiacro-sub">Six letters, three guesses each. Pick the right expansion.</div>
+<div id="aiacro-body"></div>
+<div class="aiacro-actions">
+<button class="aiacro-btn" id="aiacro-submit" type="button">Submit</button>
+<button class="aiacro-btn aiacro-alt" id="aiacro-reset" type="button">Reset</button>
+</div>
+<div class="aiacro-msg" id="aiacro-msg"></div>
+<script>
+(function(){
+var Q=[
+{t:"DRI",o:["Directly Responsible Individual","Deferred Runtime Instance","Data Retrieval Index"],a:0},
+{t:"MCP",o:["Multi-Core Pipeline","Model Context Protocol","Managed Compute Platform"],a:1},
+{t:"RAG",o:["Rapid Agent Gateway","Recursive Attention Graph","Retrieval-Augmented Generation"],a:2},
+{t:"LLM",o:["Large Language Model","Layered Logic Machine","Linear Learning Method"],a:0},
+{t:"TTS",o:["Token Transfer Stream","Text-to-Speech","Temporal Training Set"],a:1},
+{t:"GPU",o:["General Purpose Unit","Guided Prompt Utility","Graphics Processing Unit"],a:2}
+];
+var body=document.getElementById("aiacro-body");
+Q.forEach(function(q,i){
+  var d=document.createElement("div");
+  d.className="aiacro-q";
+  var h=document.createElement("div");
+  h.className="aiacro-term";
+  h.textContent=q.t;
+  var s=document.createElement("span");
+  s.textContent="#"+(i+1);
+  h.appendChild(s);
+  d.appendChild(h);
+  q.o.forEach(function(txt,j){
+    var lab=document.createElement("label");
+    lab.className="aiacro-opt";
+    var inp=document.createElement("input");
+    inp.type="radio";inp.name="aiacro-q"+i;inp.value=j;
+    var sp=document.createElement("span");
+    sp.textContent=txt;
+    lab.appendChild(inp);lab.appendChild(sp);
+    d.appendChild(lab);
+  });
+  body.appendChild(d);
+});
+function clearMarks(){
+  var labs=body.querySelectorAll(".aiacro-opt");
+  for(var i=0;i<labs.length;i++){labs[i].classList.remove("aiacro-ok","aiacro-bad");}
+}
+body.addEventListener("change",function(){
+  clearMarks();
+  document.getElementById("aiacro-msg").textContent="";
+});
+document.getElementById("aiacro-submit").addEventListener("click",function(){
+  clearMarks();
+  var right=0,answered=0;
+  Q.forEach(function(q,i){
+    var picked=body.querySelector('input[name="aiacro-q'+i+'"]:checked');
+    var labs=body.querySelectorAll(".aiacro-q")[i].querySelectorAll(".aiacro-opt");
+    if(picked){
+      answered++;
+      var v=+picked.value;
+      if(v===q.a){right++;labs[v].classList.add("aiacro-ok");}
+      else{labs[v].classList.add("aiacro-bad");labs[q.a].classList.add("aiacro-ok");}
+    }else{
+      labs[q.a].classList.add("aiacro-ok");
+    }
+  });
+  var msg=document.getElementById("aiacro-msg");
+  if(right===Q.length){msg.style.color="#1a1a1a";msg.textContent="You got 6 / 6. Perfect run.";}
+  else if(answered===0){msg.style.color="#8B0000";msg.textContent="Pick an answer first.";}
+  else{msg.style.color="#8B0000";msg.textContent="You got "+right+" / "+Q.length+".";}
+});
+document.getElementById("aiacro-reset").addEventListener("click",function(){
+  clearMarks();
+  var ins=body.querySelectorAll("input");
+  for(var i=0;i<ins.length;i++){ins[i].checked=false;}
+  document.getElementById("aiacro-msg").textContent="";
+});
+})();
+</script>
+</div>
+      </div>
+
+      <!-- FEATURE: Ray Myers -->
+      <div class="story-block">
+        <div class="kicker">Opinion &middot; AI Narrative</div>
+        <a href="https://raymyers.org/post/zed-creator-calls-spade-a-spade/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://raymyers.org/_astro/ray-gs.BQTkqUTi_ChC9G.webp" alt="Zig Creator Calls Spade a Spade, Anthropic Blows Smoke" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Zig Creator Calls Spade a Spade, Anthropic Blows Smoke</h3>
+        </a>
+        <p class="byline mb-2">Ray Myers &middot; Jul 12</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Ray Myers takes apart Anthropic's framing of Bun's Zig-to-Rust rewrite as proof that agents now write production code. The public rationale is "all pros no cons," he argues, and it contradicts itself: Bun stresses that Rust reads better for human maintainers while also saying "we haven't been typing code ourselves for many months now." He calls Anthropic an unreliable narrator whose automation story pushes the industry toward "building things nobody wants, poorly."</p>
+      </div>
+
+      <!-- FEATURE: Two Minute Papers -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; AI Research</div>
+        <a href="https://fittoprompt.com/study-guides/minecraft-was-missing-one-brilliant-idea-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <img src="https://img.youtube.com/vi/Ae9q7KsRbuI/maxresdefault.jpg" alt="Minecraft Was Missing One Brilliant Idea" class="w-full aspect-video object-cover mb-3">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+          <h3 class="headline-feature mb-2">Minecraft Was Missing One Brilliant Idea</h3>
+        </a>
+        <p class="byline mb-2">Two Minute Papers &middot; YouTube &middot; Jul 12</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A SIGGRAPH paper breaks the old tradeoff in terrain generation, where noise-based methods are infinite but repetitive and learned methods are coherent but slow. Using diffusion over overlapping neighbor windows, it decouples generation cost from world size, trains in two weeks, and runs interactively on a four-year-old consumer GPU.</p>
+      </div>
+
+      <!-- STANDARD: 404 Media -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Culture</div>
+        <a href="https://www.404media.co/ai-fiction-is-easy-to-detect-because-its-stupid-and-bad-research-finds/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://www.404media.co/assets/images/img-placeholder-md.jpg?v=53fda75f8d" alt="AI Fiction Is Easy to Detect Because It's Stupid and Bad, Research Finds" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">AI Fiction Is Easy to Detect Because It's Stupid and Bad</h3>
+        </a>
+        <p class="byline mb-2">404 Media &middot; Jul 10</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Researchers at the University of Maryland and Google DeepMind built StoryScope, which catches machine-written fiction by its narrative architecture rather than its prose tics. Across 50,000 AI stories, AI narrators spell out the theme 77 percent of the time against 52 percent for humans, and each model has a tell: Claude escalates flatly, GPT reaches for dream sequences, Gemini describes characters from the outside.</p>
+      </div>
+
+      <!-- FEATURE: Systima token overhead -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools &middot; Analysis</div>
+        <a href="https://systima.ai/blog/claude-code-vs-opencode-token-overhead" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Claude Code Is Far More Token-Hungry Than OpenCode. Someone Measured It</h3>
+        </a>
+        <p class="byline mb-2">Systima &middot; Jul 12</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Using a logging proxy to capture raw payloads, Systima found Claude Code ships roughly 33,000 tokens of system prompt and tool schemas before the user types a word, against about 7,000 for OpenCode. It also rewrites cache mid-session, producing up to 54x more cache-write tokens. On benchmarks the two finish the same tasks at identical success rates, but OpenCode averages 72,000 input tokens per passing run to Claude Code's 268,000. Harness overhead, not model choice, is what dominates the bill.</p>
+      </div>
+
+      <!-- WIRE BRIEFS -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="section-label" style="border-top:none;padding-top:0;">The Wire</div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/12/bump/" target="_blank" rel="noopener" class="story-link">
+              <h4>Fable Gets Another Bump</h4>
+            </a>
+            <p>Anthropic extended Claude Fable 5 access on all paid plans through July 19, with a 50 percent higher weekly rate limit for Claude Code. Simon Willison contrasts the week-by-week extensions with OpenAI removing its 5-hour usage limit on GPT-5.6 Sol, and argues Anthropic should stop dangling deadlines and just make Fable permanent.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 12</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/12/shot-scraper/" target="_blank" rel="noopener" class="story-link">
+              <h4>shot-scraper 1.11 Waits for Your Server</h4>
+            </a>
+            <p>The screenshot-and-scrape CLI now gives server processes up to 30 seconds to accept connections instead of failing when a dev server takes longer than a second to boot. The release also spreads <code>--js-file</code> across more commands and adds <code>--timeout</code> to the javascript and html commands.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 12</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE                               -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Before you type a single character into Claude Code, it has already sent about 33,000 tokens to the model. OpenCode sends roughly 7,000. Same tasks, same success rate, and yet on verified benchmarks Claude Code averages 268,000 input tokens per passing run against OpenCode's 72,000. Nobody chose that; it is just what the harness does when you are not looking. Today's issue is full of that shape of story: the model gets the headline, but the thing that actually determines your cost, your speed, and your blast radius is the plumbing wrapped around it, and almost nobody is measuring the plumbing.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~12 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-07-13-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">The Harness Is the Product</h4>
+        <ul class="digest-bullets">
+          <li><strong>Ploy swapped Opus 4.8 for GPT-5.6 Sol and the numbers moved hard.</strong> Builds went from 8 minutes flat to 3 minutes 42 seconds, cost fell from $3.06 to $2.22 per build, input tokens dropped from 2.60M to 1.70M, and visual quality actually <em>rose</em> from 0.936 to 0.970. It is the first model in four months to beat Opus at their job. But the migration was not an API swap: roughly a third of the initial failures traced back to Ploy's own eval harness, which had Opus-shaped assumptions baked into its tool-call budgets and file-read patterns.</li>
+          <li><strong>The tool-schema bug is the detail worth stealing.</strong> GPT-5.6 "sends all 25 [parameters], every time," confabulating plausible values for fields it should have left blank. That single behavior made 52 to 64 percent of Ploy's file reads return empty. The fix was to rewrite optional properties as required-but-nullable at the provider boundary. They also had to re-architect prompt caching because OpenAI dropped partial-prefix matching, which took first-call cache hits from about 0 percent to 83.7 percent.</li>
+          <li><strong>Systima put a logging proxy on the wire and measured what the harnesses actually send.</strong> Claude Code's bootstrap is ~33,000 tokens of system prompt plus tool schemas before your prompt; OpenCode's is ~7,000. Claude Code also rewrites cache mid-session, generating up to <em>54x</em> more cache-write tokens on identical tasks, while OpenCode keeps byte-identical request prefixes so the cache prefix actually holds.</li>
+          <li><strong>And your config is worse than the default.</strong> A 72KB instruction file adds ~20,000 tokens per request. Five MCP servers add another 5,000 to 7,000. Realistic setups sit at 75,000 to 85,000 tokens before the user says anything. Subagents are the real multiplier: delegating to two of them took one task from 121,000 to 513,000 tokens, a 4.2x jump, because each subagent pays its own bootstrap and then eats the transcript.</li>
+        </ul>
+
+        <h4 class="digest-theme">Who Is Actually Responsible</h4>
+        <ul class="digest-bullets">
+          <li><strong>Simon Willison draws a bright line on accountability.</strong> The Directly Responsible Individual, the Apple-born idea of one person ultimately accountable for a project's success or failure, can never be an agent. He anchors it in the 1979 IBM training slide: "A computer can never be held accountable, therefore a computer must never make a management decision." Delegating execution to agents is fine. Delegating accountability is a category error, and as agents get more autonomous, naming a human DRI gets <em>more</em> important, not less.</li>
+          <li><strong>Ray Myers thinks Anthropic is selling a story, not an engineering result.</strong> Reading Anthropic's amplification of Bun's Zig-to-Rust rewrite, he notes the public rationale gives motivation and options but no tradeoffs, "all pros no cons," omitting costs like slower build times. He points out TigerBeetle solved comparable Zig readability concerns with a style guide, and that Bun maintains its own compiler fork and could have fixed things on the Zig side.</li>
+          <li><strong>The contradiction at the center of it.</strong> Bun stresses that Rust is more readable for human maintainers while simultaneously saying "we haven't been typing code ourselves for many months now." If humans are not writing the code, human readability cannot be the deciding factor. Myers calls Anthropic an unreliable narrator with a $132 billion valuation that benefits from fear-driven adoption and higher token consumption, and warns the narrative pushes the industry toward "building things nobody wants, poorly."</li>
+        </ul>
+
+        <h4 class="digest-theme">What the Machines Give Away</h4>
+        <ul class="digest-bullets">
+          <li><strong>AI fiction is detectable by its architecture, not its prose.</strong> A University of Maryland and Google DeepMind team built StoryScope and analyzed 50,000+ AI stories. AI narrators explicitly spell out the theme 77 percent of the time versus 52 percent for humans, use dialogue for philosophical debate 59 percent versus 34 percent, and prefer vague allusions to specific references 72 percent versus 50 percent. AI also nearly never uses subplots or flashbacks. Each model has a tell: Claude escalates flatly, GPT reaches for dream sequences, Gemini describes characters from the outside.</li>
+          <li><strong>The methodology has its own problem.</strong> The researchers trained on Books3, the pirated dataset of 183,000 books, and then declined to release their human-story corpus publicly over copyright concerns. The detector for machine-generated text was built on machine-ingested text nobody licensed.</li>
+        </ul>
+
+        <h4 class="digest-theme">Building, and the Collapsing Cost of It</h4>
+        <ul class="digest-bullets">
+          <li><strong>Nate B. Jones says your roadmap is the tell.</strong> His argument is that AI-native teams ship weekly because of culture, not tooling: they move repeatable human coordination into code and documents that agents can act on, so humans stop being the rate limit. His anchor is the digital-photography analogy, where the cost of one more draft, prototype, or piece of code collapses toward zero. His warning matters as much as his thesis: partial adoption, cherry-picking one of his fifteen rules, produces chaos rather than speed.</li>
+          <li><strong>Cole Medin builds the thing that thesis implies.</strong> Using Archon (now near 23,000 stars), he wires Claude Code into an "AI content factory" that turns a still-image product catalog into product renders and UGC-style video ads. Two Ralph-loop workflows fan out parallel workers, five agents for image concepts and only three for renders because video burns more credits, and a human approves in the UI before anything renders. He is explicit that it is a demo, not production.</li>
+          <li><strong>A SIGGRAPH paper quietly kills a decades-old tradeoff.</strong> Terrain generation has always forced a choice: noise-based methods are infinite but repetitive and learn nothing, while learned generators are coherent but slow because every new region depends on every other. The fix is diffusion where each new region is the weighted average of denoised overlapping neighbor windows, which decouples generation cost from world size. It trained in two weeks, runs interactively on a four-year-old consumer GPU, and ships with free code and a Minecraft mod.</li>
+          <li><strong>Anthropic extends Fable again, and Willison is tired of it.</strong> Claude Fable 5 access is extended on all paid plans through July 19, with a 50 percent higher weekly Claude Code rate limit. Meanwhile OpenAI is <em>removing</em> the 5-hour usage limit on GPT-5.6 Sol. Willison's read: OpenAI is confident it will not need to ration, and Anthropic should stop dangling week-by-week deadlines and commit to keeping Fable permanently.</li>
+          <li><strong>shot-scraper 1.11 fixes the thing that breaks in CI.</strong> Server processes used by <code>shot-scraper multi</code> and <code>shot-scraper video</code> now wait up to 30 seconds for the target URL to accept connections, instead of failing when a dev server takes longer than one second to boot.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Put Ploy and Systima side by side and you get today's most useful, least comfortable idea: <em>the model is no longer the interesting variable.</em> Systima's benchmark line is the one to sit with, because it is a controlled comparison and the result is a wash on quality: both harnesses complete the same tasks correctly, at identical success rates, and OpenCode does it on 72,000 input tokens per passing run versus Claude Code's 268,000. That 3.7x gap has nothing to do with reasoning ability. It is bootstrap size, cache-prefix stability, and subagent fan-out. Systima's own conclusion is blunt: harness overhead, not model choice, dominates agentic coding cost.</p>
+
+        <p>Ploy is the same lesson from the other end of the telescope. They got a genuinely great outcome, 2.2x faster and 27 percent cheaper, but read what it cost them. A third of their initial failures were not GPT-5.6 being worse; they were Ploy's evaluation harness silently encoding Opus's habits as if they were laws of nature. If you had run that migration for a week and stopped at the first bad eval, you would have concluded, with data in hand, that GPT-5.6 was the weaker model. You would have been measuring your own scaffolding. The 52-to-64-percent empty-file-read bug is the perfect artifact of this: a model that fills in all 25 tool parameters every time is not hallucinating in the usual sense, it is being confidently over-cooperative, and the only reason it destroyed their file reads is that the schema let it.</p>
+
+        <p>Now bring in Willison, because he supplies the governing rule for the world the other two describe. When a third of your failures live in your harness, and your bill is set by invisible bootstrap tokens, and your model will helpfully invent values for fields you never meant it to touch, "the agent did it" stops being an explanation. Somebody has to be the one who is wrong when it goes wrong. That is the entire content of the 1979 IBM slide, and it is why he insists the DRI is never the agent. The technical stories and the accountability story are not two topics that happen to share an issue. Once execution is cheap and opaque, the scarce thing is a human who owns the outcome and can say what "correct" was supposed to mean.</p>
+
+        <p>Which sets up Ray Myers, and makes him more than a hot take. His complaint about the Bun rewrite is not really about Zig or Rust; it is that a decision was published without its tradeoffs, "all pros no cons," and then amplified by a $132 billion company with an obvious interest in the conclusion. Notice how neatly that rhymes with Systima's finding. Anthropic benefits from token consumption. Claude Code is the harness that sends 33,000 tokens before you type and rewrites cache mid-session for 54x the cache-writes. Myers is not alleging that anyone did that on purpose, and neither am I. But the incentive gradient is real, and when the same company is both the narrator of "agents write our code now" and the vendor whose harness quietly costs 3.7x more per passing run, "all pros no cons" is exactly the failure mode you should expect. The 404 Media study is the joke ending: the machines cannot even hide it in fiction, where AI over-explains its own theme 77 percent of the time. The tell is always over-tidiness. A story with no tradeoffs is the same smell as a rewrite with no cons.</p>
+
+        <h3 class="digest-section-head">The Bigger Picture</h3>
+
+        <p>Zoom out and 2026 looks like the year the industry's center of gravity moved from <em>capability</em> to <em>infrastructure</em>, and most of the discourse has not caught up. For three years the question was which model is smartest, and the answer changed every few months and everybody rewrote their stack. Today's issue is what it looks like when that question stops being decisive. Ploy's headline is not "GPT-5.6 is smarter," it is "GPT-5.6 is 2.2x faster and 27 percent cheaper <em>and it took an infrastructure project to find out.</em>" Systima's headline is that two harnesses running the same models produce a 3.7x cost spread at identical quality. The differentiation has migrated down the stack, into schemas, caches, context budgets, and eval design, which is precisely the boring layer where real engineering disciplines get built and where marketing narratives go to die.</p>
+
+        <p>That migration has an uncomfortable consequence for the vendors. When capability converges, switching costs become the moat, and today you can watch both companies play that hand differently. OpenAI is removing usage limits and expanding access, the posture of a company confident in its compute. Anthropic is extending Fable one week at a time, which Willison correctly reads as a signal of constraint and, more importantly, as a tax on anyone trying to build a durable habit on the platform. Meanwhile Anthropic is running the loudest version of the "agents write the code now" narrative, which Myers argues is doing double duty as fear-driven demand generation. A company can be technically excellent and still be an unreliable narrator about its own products; those are not contradictory, and the industry is going to have to get comfortable holding both thoughts.</p>
+
+        <p>The deeper shift, though, is the one Nate B. Jones and the SIGGRAPH terrain paper are both circling. When the marginal cost of another draft, another prototype, another region of an infinite world drops to roughly zero, the binding constraint stops being production and becomes judgment: what to make, what to keep, who is answerable for it. The terrain paper is a lovely miniature of this, since its whole trick is decoupling cost from scale. Jones's fifteen commandments are the organizational version of the same decoupling, and his warning that partial adoption produces chaos is the honest part, because it means you cannot buy this outcome with a tool purchase. And 404 Media's finding is the caution: infinite cheap output, absent judgment, converges on the tidy, the themed, the morally resolved, the <em>flat</em>. Cheap generation does not produce good work. It produces a lot of work, and it raises the value of the human who can tell the difference and is willing to sign their name to the answer.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Whether "tokens per passing task" becomes a standard metric.</strong> Systima's proxy-measured numbers (72k vs 268k input tokens per passing run at equal success rates) are the first apples-to-apples harness benchmark that ignores the model. If that framing catches on, harness vendors will have to compete on it, and the 33,000-token bootstrap becomes a liability rather than an invisible default. Watch whether Claude Code's system prompt shrinks.</li>
+          <li><strong>Whether Anthropic commits to Fable or keeps extending it weekly.</strong> July 19 is the current deadline. A fourth one-week bump would confirm Willison's read that this is compute-constrained rationing, right as OpenAI removes its 5-hour cap. This is a user-acquisition fight being fought with access policy rather than benchmarks.</li>
+          <li><strong>Whether anyone audits their eval harness before their next model migration.</strong> Ploy found a third of their failures were self-inflicted. That ratio, if it generalizes even loosely, means a meaningful slice of published "model X is worse than model Y" claims are actually measuring the author's scaffolding. Before you trust a migration postmortem, ask whether they checked their own assumptions first.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/your-roadmap-is-why-youre-losing-to-ai-native-teams-study.html" data-study-guide>Your Roadmap Is Why You're Losing to AI-Native Teams</a> &mdash; Nate B. Jones's fifteen commandments, organized in three clusters: product does not make roadmaps but lives in the terminal daily; no meetings over an hour and documentation treated as code; stay flexible, build with a team, teach others. The study guide walks the digital-photography argument for why the cost of another draft is collapsing, and his specific warning that cherry-picking one rule produces chaos rather than speed.</li>
+          <li><a href="https://fittoprompt.com/study-guides/claude-code-video-generation-system-archon-study.html" data-study-guide>Claude Code as a Complete Video Generation System</a> &mdash; The full walkthrough of Cole Medin's Archon build: two Ralph-loop workflows, why he fans out five agents for image concepts but only three for renders (video burns more credits), how the agent scores its own generated images with Gemini validating, and where the human approval gate sits before any video renders. Useful as a concrete look at parallel agent orchestration, including his own caveat that it is a demo rather than a production system.</li>
+          <li><a href="https://fittoprompt.com/study-guides/minecraft-was-missing-one-brilliant-idea-study.html" data-study-guide>Minecraft Was Missing One Brilliant Idea</a> &mdash; How the diffusion trick actually works: each new region is the weighted average of denoised overlapping neighbor windows, which is what decouples generation cost from world size and makes a truly infinite learned world tractable. The guide also covers the second trick, Laplacian re-extraction denoising for height maps, which separates scales so both mountain-sized relief and few-foot riverbanks survive.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-cta { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: #8B0000; color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.6rem 1.2rem; border: none; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35); transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .digest-cta:hover { background: #a00000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45); }
+    .digest-cta.hidden { display: none; }
+    .digest-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .digest-overlay.active { display: flex; }
+    .digest-container { background: #fff; border-radius: 6px; width: 100%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .digest-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .digest-header-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #8B0000; }
+    .digest-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .digest-close:hover { color: #1a1a1a; }
+    .digest-body { padding: 2rem 2.5rem; overflow-y: auto; flex: 1; }
+    .digest-hook { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; line-height: 1.75; color: #1a1a1a; font-weight: 600; font-style: italic; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 2px solid #8B0000; }
+    .digest-section-head { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: #8B0000; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .digest-theme { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .digest-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.75; color: #374151; margin-bottom: 1em; }
+    .digest-bullets { list-style: none; padding: 0; margin: 0 0 0.75rem 0; }
+    .digest-bullets li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.6; color: #374151; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .digest-bullets li::before { content: '\2014'; position: absolute; left: 0; color: #8B0000; font-weight: 700; }
+    .digest-bullets li strong { color: #1a1a1a; }
+    .digest-bullets li a { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .digest-bullets li a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .digest-body { padding: 1.25rem 1rem; } .digest-cta { bottom: 1rem; right: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; } }
+    .digest-podcast { margin: 1.5rem 0 2rem; padding: 1rem 1.25rem; background: #fafafa; border: 1px solid #e5e5e5; border-radius: 6px; }
+    .digest-podcast-label { display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8B0000; margin-bottom: 0.75rem; }
+    .digest-podcast-icon { font-size: 0.65rem; }
+    .digest-podcast-duration { margin-left: auto; color: #999; font-weight: 400; }
+    .digest-podcast-audio { width: 100%; height: 36px; }
+    @media print { .digest-cta, .digest-overlay, .digest-podcast { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() { overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); cta.classList.add('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeDigest() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); cta.classList.remove('hidden'); document.body.style.overflow = ''; }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeDigest(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest(); });
+  })();
+  </script>
+
+</body>
+</html>
