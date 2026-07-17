@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - Kimi K3 Reaches the Open Frontier - July 17, 2026</title>
+  <meta name="description" content="Daily AI news roundup for July 17, 2026. Moonshot's Kimi K3 open model reaches the frontier, Hugging Face discloses an AI-agent breach of its own infrastructure, Apple Intelligence launches in China with Alibaba and Baidu, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #75">
+  <meta property="og:description" content="Daily AI news roundup for July 17, 2026. Moonshot's Kimi K3 open model reaches the frontier, Hugging Face discloses an AI-agent breach of its own infrastructure, Apple Intelligence launches in China with Alibaba and Baidu, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-07-17.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-07-17.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    .yt-thumb-wrap { position: relative; display: block; }
+    .yt-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; }
+    .yt-play::after { content: ''; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #ffffff; margin-left: 3px; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Friday, July 17, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 75</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>17 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models</div>
+          <a href="https://www.kimi.com/blog/kimi-k3" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://static.simonwillison.net/static/2026/kimi-3-pelican.jpg" alt="Kimi K3 open frontier model" class="w-full aspect-video object-cover mb-4" style="background:#f1f1f1;">
+            <h2 class="headline-lead mb-3">Kimi K3 Lands: China's 2.8-Trillion-Parameter Open Model Reaches the Frontier</h2>
+          </a>
+          <p class="byline mb-3">Moonshot AI &middot; Jul 16</p>
+        </div>
+        <div>
+          <div class="newspaper-body">
+            <p>Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-source model with native vision and a one-million-token context window, posting frontier-level results across coding, knowledge work, and reasoning.</p>
+            <p>Released under an open license, it is the largest open-weight model yet to come out of China, and early benchmarks put it in striking distance of Anthropic's Opus 4.8.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Human-in-the-loop is tired -->
+      <div class="story-span-2">
+        <div class="kicker">AI &amp; Work &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-17-cartoon.png" alt="Cartoon: an exhausted developer surrounded by autonomous AI agents, weakly pressing a giant Approve button in the small hours." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"The agents do all the work now. My only job is to stay awake and keep clicking 'Approve.'"</p>
+          </div>
+          <div>
+            <div class="kicker">AI &amp; Work</div>
+            <a href="https://pydantic.dev/articles/the-human-in-the-loop-is-tired" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">The Human-in-the-Loop Is Tired</h3>
+            </a>
+            <p class="byline mb-2">Pydantic &middot; Jul 16</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">LLM-assisted coding is productive but exhausting: it demands constant supervision, isolates the developer, and hollows out the reward cycles of writing code, reshaping the job rather than eliminating it.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE: Hugging Face breach -->
+      <div class="story-block">
+        <div class="kicker">AI Security</div>
+        <a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener" class="story-link">
+          <img src="https://huggingface.co/blog/assets/security-incident-july-2026/thumbnail.png" alt="Hugging Face security incident" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Hugging Face: An Autonomous AI Agent Breached Our Infrastructure</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The company disclosed that an autonomous AI agent system infiltrated its production infrastructure through malicious datasets, and that it detected and contained the intrusion using its own AI tools for forensics.</p>
+      </div>
+
+      <!-- STUDY GUIDE: Claude + Codex headache -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Study Guide</div>
+        <a href="https://fittoprompt.com/study-guides/this-repo-just-solved-the-1-claude-codex-headache-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <span class="yt-thumb-wrap mb-3">
+            <img src="https://img.youtube.com/vi/neK8ydl0Vlk/maxresdefault.jpg" alt="This Repo Just Solved The #1 Claude + Codex Headache" class="w-full aspect-video object-cover" style="background:#f1f1f1;">
+            <span class="yt-play" aria-hidden="true"></span>
+          </span>
+          <h3 class="headline-feature mb-2">This Repo Just Solved The #1 Claude + Codex Headache</h3>
+        </a>
+        <p class="byline mb-2">Chase AI &middot; YouTube &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Chase AI walks through Herder, an open-source terminal multiplexer that tames the chaos of running Claude Code, Codex, and other coding agents at once, adding organization, agent monitoring, and background persistence.</p>
+      </div>
+
+      <!-- STANDARD: Gemini Notebook -->
+      <div class="story-block">
+        <div class="kicker">Google AI</div>
+        <a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-notebook__cover.width-1300.png" alt="NotebookLM becomes Gemini Notebook" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">NotebookLM Is Now Gemini Notebook</h3>
+        </a>
+        <p class="byline mb-2">Google &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google renamed NotebookLM to Gemini Notebook and added deeper ecosystem ties, including code execution through a secure cloud computer and cross-app syncing with the Gemini app and Search.</p>
+      </div>
+
+      <!-- STANDARD: Apple China -->
+      <div class="story-block">
+        <div class="kicker">AI Policy</div>
+        <a href="https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2014/10/apple-china.jpg?w=1024" alt="Apple Intelligence approved in China" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Apple Intelligence Approved for Launch in China With Alibaba and Baidu</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">China's internet regulator approved Apple Intelligence for the Chinese market through partnerships with Alibaba and Baidu, a milestone for Apple's AI push in a market where it recently regained the number-two smartphone spot.</p>
+      </div>
+
+      <!-- STUDY GUIDE: Fable game -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Study Guide</div>
+        <a href="https://fittoprompt.com/study-guides/watch-fable-turn-628-million-tokens-into-a-professional-game-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <span class="yt-thumb-wrap mb-3">
+            <img src="https://img.youtube.com/vi/DVQ-Y6poojY/maxresdefault.jpg" alt="Watch Fable Turn 628 Million Tokens Into a Professional Game" class="w-full aspect-video object-cover" style="background:#f1f1f1;">
+            <span class="yt-play" aria-hidden="true"></span>
+          </span>
+          <h3 class="headline-feature mb-2">Watch Fable Turn 628 Million Tokens Into a Professional Game</h3>
+        </a>
+        <p class="byline mb-2">Matt Maher &middot; YouTube &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Matt Maher takes a mobile Spades card game from a Claude Design concept to a polished, playable product with Claude Code and the Fable model, using the /goal command for self-evaluating, objective-level builds.</p>
+      </div>
+
+      <!-- STANDARD: Inkling -->
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://simonwillison.net/2026/Jul/16/inkling/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://static.simonwillison.net/static/2026/inkling-pelican.jpg" alt="Thinking Machines Lab releases Inkling" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Inkling: Thinking Machines Lab's 975B Open-Weights Model</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Thinking Machines Lab released Inkling, an Apache-2.0 multimodal model with 975B total parameters, pitched as a base for fine-tuning, with image generation and description on display.</p>
+      </div>
+
+      <!-- STANDARD: LM Studio Bionic -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://lmstudio.ai/blog/introducing-lm-studio-bionic" target="_blank" rel="noopener" class="story-link">
+          <img src="https://lmstudio.ai/assets/marketing/blog/introducing-lm-studio-bionic/Bionic-Cover-blogimage.png" alt="LM Studio Bionic" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">LM Studio Bionic: An AI Agent Built for Open Models</h3>
+        </a>
+        <p class="byline mb-2">LM Studio &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">LM Studio introduced Bionic, an agent for coding, research, and document tasks that runs on open models, supporting local execution, optional cloud inference, and offline voice transcription with zero data retention.</p>
+      </div>
+
+      <!-- STUDY GUIDE: Two Minute Papers -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Study Guide</div>
+        <a href="https://fittoprompt.com/study-guides/claude-just-revealed-ais-biggest-problem-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+          <span class="yt-thumb-wrap mb-3">
+            <img src="https://img.youtube.com/vi/axOcn--n_lM/maxresdefault.jpg" alt="Claude Just Revealed AI's Biggest Problem" class="w-full aspect-video object-cover" style="background:#f1f1f1;">
+            <span class="yt-play" aria-hidden="true"></span>
+          </span>
+          <h3 class="headline-feature mb-2">Claude Just Revealed AI's Biggest Problem</h3>
+        </a>
+        <p class="byline mb-2">Two Minute Papers &middot; YouTube &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Two Minute Papers breaks down a controlled study of 52 junior engineers: AI-assisted coders were barely faster but scored worse on a follow-up quiz, especially at debugging, plus three habits to keep your mind sharp.</p>
+      </div>
+
+      <!-- STANDARD: Simon Kimi analysis -->
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Kimi K3, and What We Can Still Learn From the Pelican Benchmark</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Simon Willison puts Moonshot's new 2.8-trillion-parameter Kimi K3 through his 'pelican riding a bicycle' SVG test, probing where it lands among the top benchmark performers and what it costs.</p>
+      </div>
+
+      <!-- STANDARD: TechCrunch Kimi -->
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Moonshot's Kimi 3 Is Expected to Close the Gap With Anthropic's Opus 4.8</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">At 2-to-3 trillion parameters, Kimi K3 would become China's largest open-weight model, and analysts expect it to match or exceed Anthropic's Opus 4.8 on key benchmarks.</p>
+      </div>
+
+      <!-- STANDARD: Google AI Mode -->
+      <div class="story-block">
+        <div class="kicker">Google AI</div>
+        <a href="https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/01/ai-mode-google.jpg?w=1024" alt="Google AI Mode links apps" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Google's AI Mode Now Lets You Link and Interact With Select Apps</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Google expanded AI Mode so users can link apps like Instacart, Canva, and YouTube and complete tasks in place, a direct push against ChatGPT and Claude for conversational-commerce turf.</p>
+      </div>
+
+      <!-- PUZZLE: Crossword -->
+      <div class="story-block">
+        <div class="section-label" style="border-top:none;padding-top:0;">Puzzle</div>
+<div class="xw-puzzle">
+  <style>
+    .xw-puzzle{box-sizing:border-box;width:100%;max-width:300px;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:#fff;border:1px solid #1a1a1a;padding:14px 12px;}
+    .xw-puzzle *{box-sizing:border-box;}
+    .xw-puzzle .xw-head{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8B0000;border-bottom:2px solid #1a1a1a;padding-bottom:6px;margin-bottom:4px;}
+    .xw-puzzle .xw-sub{font-size:10px;color:#555;margin-bottom:10px;line-height:1.4;}
+    .xw-puzzle .xw-grid{display:grid;grid-template-columns:repeat(5,30px);grid-template-rows:repeat(5,30px);gap:0;margin:0 auto 10px;width:max-content;}
+    .xw-puzzle .xw-cell{position:relative;width:30px;height:30px;border:1px solid #1a1a1a;}
+    .xw-puzzle .xw-cell.blk{background:#1a1a1a;}
+    .xw-puzzle .xw-cell input{width:100%;height:100%;border:none;text-align:center;font-family:inherit;font-size:15px;font-weight:600;text-transform:uppercase;color:#1a1a1a;padding:0;background:transparent;}
+    .xw-puzzle .xw-cell input:focus{outline:none;background:#f4ecec;}
+    .xw-puzzle .xw-num{position:absolute;top:1px;left:2px;font-size:8px;font-weight:600;color:#555;line-height:1;pointer-events:none;}
+    .xw-puzzle .xw-clues{font-size:10px;line-height:1.45;}
+    .xw-puzzle .xw-clues h5{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#8B0000;margin:8px 0 3px;}
+    .xw-puzzle .xw-clues p{margin:2px 0;}
+    .xw-puzzle .xw-actions{display:flex;gap:8px;margin-top:12px;}
+    .xw-puzzle button{font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border:1px solid #1a1a1a;background:#1a1a1a;color:#fff;padding:6px 12px;}
+    .xw-puzzle button.xw-alt{background:#fff;color:#1a1a1a;}
+    .xw-puzzle button:hover{background:#8B0000;border-color:#8B0000;color:#fff;}
+    .xw-puzzle .xw-msg{font-size:11px;font-weight:700;min-height:14px;margin-top:9px;}
+    .xw-puzzle .xw-msg.ok{color:#0a7a25;}
+    .xw-puzzle .xw-msg.no{color:#8B0000;}
+  </style>
+  <div class="xw-head">The AI Mini</div>
+  <div class="xw-sub">A 5x5 crossword. Fill the white squares; click Check when done.</div>
+  <div class="xw-grid" id="xwGrid" aria-label="crossword grid"></div>
+  <div class="xw-clues">
+    <h5>Across</h5>
+    <p><strong>1.</strong> Moonshot's new open frontier model (4)</p>
+    <p><strong>5.</strong> A neural network processes one, taking in a prompt (5)</p>
+    <p><strong>7.</strong> "___-weights," describing a freely downloadable model (4)</p>
+    <h5>Down</h5>
+    <p><strong>1.</strong> A single unit of text an LLM reads or writes (5)</p>
+    <p><strong>2.</strong> What a coding agent writes a lot of (4)</p>
+  </div>
+  <div class="xw-actions">
+    <button id="xwCheck" type="button">Check</button>
+    <button id="xwReveal" type="button" class="xw-alt">Reveal</button>
+  </div>
+  <div class="xw-msg" id="xwMsg" role="status"></div>
+  <script>
+  (function(){
+    // 5x5 grid. '#' = block. Solution letters below.
+    // Row layout (solution):
+    //  K I M I #
+    //  # N # N #
+    //  I N P U T
+    //  # E # T #
+    //  O P E N #
+    var sol = [
+      ['K','I','M','I','#'],
+      ['#','N','#','N','#'],
+      ['I','N','P','U','T'],
+      ['#','E','#','T','#'],
+      ['O','P','E','N','#']
+    ];
+    var nums = { "0-0":1, "0-1":2, "0-3":3, "2-0":4, "2-1":5, "4-0":7 };
+    var grid = document.getElementById('xwGrid');
+    var inputs = [];
+    for(var r=0;r<5;r++){
+      inputs[r]=[];
+      for(var c=0;c<5;c++){
+        var cell=document.createElement('div'); cell.className='xw-cell';
+        if(sol[r][c]==='#'){ cell.className+=' blk'; inputs[r][c]=null; }
+        else{
+          var key=r+"-"+c;
+          if(nums[key]){ var n=document.createElement('span'); n.className='xw-num'; n.textContent=nums[key]; cell.appendChild(n); }
+          var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1;
+          inp.setAttribute('data-ans', sol[r][c]);
+          inp.addEventListener('input',function(){ this.value=this.value.toUpperCase().replace(/[^A-Z]/g,''); document.getElementById('xwMsg').textContent=''; document.getElementById('xwMsg').className='xw-msg'; });
+          cell.appendChild(inp); inputs[r][c]=inp;
+        }
+        grid.appendChild(cell);
+      }
+    }
+    function each(cb){ for(var r=0;r<5;r++)for(var c=0;c<5;c++){ if(inputs[r][c]) cb(inputs[r][c]); } }
+    document.getElementById('xwCheck').addEventListener('click',function(){
+      var ok=true, filled=true, msg=document.getElementById('xwMsg');
+      each(function(o){ if(!o.value) filled=false; if(o.value.toUpperCase()!==o.getAttribute('data-ans')) ok=false; });
+      if(ok){ msg.textContent='Solved! Nice work.'; msg.className='xw-msg ok'; }
+      else if(!filled){ msg.textContent='Keep going — some squares are blank.'; msg.className='xw-msg no'; }
+      else { msg.textContent='Not quite. Check your letters and try again.'; msg.className='xw-msg no'; }
+    });
+    document.getElementById('xwReveal').addEventListener('click',function(){
+      each(function(o){ o.value=o.getAttribute('data-ans'); });
+      document.getElementById('xwMsg').textContent='Revealed: KIMI, INPUT, OPEN, TOKEN, CODE.'; document.getElementById('xwMsg').className='xw-msg ok';
+    });
+  })();
+  </script>
+</div>
+      </div>
+
+      <!-- WIRE BRIEFS -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="section-label" style="border-top:none;padding-top:0;">The Wire</div>
+          <div class="wire-item">
+            <a href="https://thezvi.substack.com/p/ai-177-part-1-tip-of-the-iceberg" target="_blank" rel="noopener" class="story-link">
+              <h4>AI #177 Part 1: Tip of the Iceberg</h4>
+            </a>
+            <div class="wire-source">Don't Worry About the Vase &middot; Jul 16</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.theocharis.dev/blog/llm-critics-are-right-i-use-llms-anyway/" target="_blank" rel="noopener" class="story-link">
+              <h4>The LLM Critics Are Right. I Use LLMs Anyway.</h4>
+            </a>
+            <div class="wire-source">Jeremy Theocharis &middot; Jul 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/" target="_blank" rel="noopener" class="story-link">
+              <h4>Google Vids Now Lets You Star in Your Own AI Videos</h4>
+            </a>
+            <div class="wire-source">TechCrunch &middot; Jul 16</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/" target="_blank" rel="noopener" class="story-link">
+              <h4>Roblox Launches an AI-Powered Game-Creation Feature in Its Mobile App</h4>
+            </a>
+            <div class="wire-source">TechCrunch &middot; Jul 16</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+<p class="digest-hook">Two labs shipped models this week that would have been the entire story a year ago, and then they gave them away. Moonshot's Kimi K3 lands at 2.8 trillion parameters with a million-token context; Thinking Machines Lab's Inkling arrives at 975 billion under an Apache-2.0 license. The frontier is now something you can download. And yet the loudest sound in today's issue isn't a benchmark, it's a sigh: a 52-engineer study found AI-assisted coders shipped barely faster and understood noticeably less, an essayist declared the human-in-the-loop "tired," and an autonomous agent walked straight into Hugging Face's production servers. Capability is going open and cheap. The ability to supervise it is not keeping pace.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~8 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="assets/2026-07-17-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The open-weight frontier arrives</h4>
+<ul class="digest-bullets">
+<li><strong>Kimi K3 reaches the frontier, in the open.</strong> Moonshot AI's new model is a 2.8-trillion-parameter open release with native vision and a one-million-token context window, the largest open-weight model yet to come out of China. TechCrunch pegs it at 2-to-3 trillion parameters and expects it to close the gap with, or exceed, Anthropic's Opus 4.8. Simon Willison ran it through his "pelican riding a bicycle" SVG test and slots it among the top benchmark performers, at a fraction of frontier pricing.</li>
+<li><strong>Inkling makes it two.</strong> Thinking Machines Lab released Inkling, a 975-billion-parameter multimodal model under Apache-2.0, explicitly pitched as a base for fine-tuning rather than a finished product. Two genuinely frontier-adjacent open releases in a single news cycle is not a coincidence; it's a strategy.</li>
+<li><strong>The tooling is following the weights.</strong> LM Studio introduced Bionic, an agent built specifically to run open models for coding, research, and document work, with local execution, optional cloud inference, and offline voice transcription that retains no data. When the models are yours to download, the agents that drive them want to run on your hardware too.</li>
+</ul>
+
+<h4 class="digest-theme">The human cost of the loop</h4>
+<ul class="digest-bullets">
+<li><strong>AI coders got faster and dumber.</strong> In today's featured study guide, Two Minute Papers breaks down a controlled trial of 52 junior engineers: those using AI assistance were only marginally quicker to ship and scored significantly worse on a follow-up comprehension quiz, with debugging the sharpest drop. The takeaway isn't "don't use AI," it's that the productivity you can measure and the understanding you can't are moving in opposite directions.</li>
+<li><strong>The human-in-the-loop is tired.</strong> Pydantic's essay names the feeling: LLM-assisted programming is genuinely productive and genuinely exhausting, demanding constant supervision, isolating the developer, and hollowing out the reward cycle of writing code yourself. It reshapes the job rather than eliminating it, and the reshaping is not free.</li>
+<li><strong>The honest defense.</strong> Jeremy Theocharis grants that the critics are right, on copyright, on environmental cost, on quality, and keeps using LLMs anyway, arguing they amplify human thinking when deployed deliberately rather than replacing it. Read alongside Zvi Mowshowitz's sprawling AI #177 roundup, the mood is less hype than fatigue-tinged realism.</li>
+</ul>
+
+<h4 class="digest-theme">When the agent acts on its own</h4>
+<ul class="digest-bullets">
+<li><strong>An AI agent breached Hugging Face.</strong> The company disclosed that an autonomous AI agent system infiltrated its production infrastructure through malicious datasets, then, in the twist that defines the moment, detected and contained the intrusion using its own AI tools for forensic analysis. The attack surface and the defense were the same kind of thing. This is the security version of the human-in-the-loop problem: when software acts without asking, the question is no longer whether it will overreach, but who is watching when it does.</li>
+</ul>
+
+<h4 class="digest-theme">Big tech consolidates the assistant layer</h4>
+<ul class="digest-bullets">
+<li><strong>Google keeps folding everything into Gemini.</strong> NotebookLM is now Gemini Notebook, gaining code execution through a secure cloud computer and cross-app syncing with the Gemini app and Search. Separately, AI Mode now lets you link and act inside apps like Instacart, Canva, and YouTube, a direct move onto ChatGPT and Claude's conversational-commerce turf, while Google Vids added AI avatars that let you star in your own generated videos.</li>
+<li><strong>Apple gets into China.</strong> China's regulator approved Apple Intelligence for the market through partnerships with Alibaba and Baidu, a milestone in a country where Apple recently clawed back the number-two smartphone spot, and where a foreign AI stack does not ship without a domestic model behind it.</li>
+<li><strong>Generation goes mass-market.</strong> Roblox launched an AI-powered game-creation feature in its mobile app, letting anyone spin up basic games from text prompts, entering public alpha July 28 amid real worries about a coming flood of low-quality AI content.</li>
+</ul>
+
+<h4 class="digest-theme">The Throughline</h4>
+<p>The two halves of today's issue are the same story told from opposite ends. On one side, intelligence is getting <em>cheaper, more open, and more autonomous</em>: a 2.8-trillion-parameter model you can download, an Apache-2.0 base model to fine-tune, agents built to run it all locally. On the other side, the people and institutions responsible for that intelligence are showing strain: engineers who understand less of what they ship, a developer culture that calls itself tired, a research lab whose own servers got walked into by an agent. The gap between what these systems can do and what we can supervise is the widening seam running through everything.</p>
+<p>What's striking is that the open-weight wave <em>accelerates</em> both sides at once. Democratizing the frontier is unambiguously good for competition, privacy, and the price of Opus-class capability, Kimi K3 is a gift to anyone who was renting intelligence by the token. But the same decentralization scatters powerful, autonomous systems into far more hands with far less oversight than a handful of closed labs ever had. The 52-engineer study is a warning about individuals; the Hugging Face breach is a warning about institutions; and open weights push the multiplier on both. You cannot recall a model that already lives on ten thousand laptops.</p>
+<p>Notice, too, where the geopolitics landed. The biggest open release of the week came out of China, and it is aimed squarely at the pricing and moat of American closed labs. Apple could only enter China by bolting on Alibaba and Baidu. The open-versus-closed contest and the US-versus-China contest are now the same contest, and this week open and China were the same answer.</p>
+
+<h4 class="digest-theme digest-bigger-picture">The Bigger Picture</h4>
+<p>Zoom out and a phase change is underway in who holds frontier capability. For three years the story was a race between a few well-capitalized labs, and the policy conversation assumed you could govern AI by governing them, submit your model for review, gate the biggest training runs, regulate the chokepoints. Kimi K3 and Inkling are the sound of that assumption cracking. When a genuinely frontier-adjacent model ships as an open download from a lab outside the US regulatory perimeter, there is no review board to submit it to and no chokepoint to squeeze. Governance built around a handful of gatekeepers does not survive contact with weights that anyone can copy.</p>
+<p>The counterweight is that capability without competence is a liability, and today's issue is quietly full of evidence that competence is the actual bottleneck. The engineers in the study got worse at the thing AI was supposed to help with. The developers describing their own exhaustion are the ones closest to the tools. Hugging Face, one of the most AI-literate organizations on earth, still got breached by an agent. The scarce resource in this next phase is not intelligence, which is becoming abundant and cheap, but the human judgment, the guardrails, and the institutional discipline to point it somewhere useful without getting hurt.</p>
+<p>So the trajectory is two curves crossing. Access to frontier AI is going vertical and its price is going to zero. The collective ability to supervise, secure, and stay sharp around it is climbing slowly, if at all. The societies and companies that thrive in the next year will be the ones that treat that second curve, not the first, as the thing worth investing in. Everyone can have the model now. Almost no one has figured out how to stay the smartest thing in the room while using it.</p>
+
+<h4 class="digest-theme">What to Watch</h4>
+<ul class="digest-bullets">
+<li><strong>Whether Kimi K3's benchmarks survive contact with real use.</strong> "Expected to close the gap with Opus 4.8" is a pre-release claim. Watch the independent evaluations, and watch how fast a 2.8-trillion-parameter open model actually gets deployed when running it requires serious hardware.</li>
+<li><strong>Whether "AI makes you worse at your job" hardens into consensus.</strong> One 52-engineer study is a data point, not a verdict. If more controlled trials replicate the comprehension-and-debugging drop, expect it to reshape how teams onboard juniors and how they measure engineering productivity.</li>
+<li><strong>Agentic breaches as a category.</strong> The Hugging Face incident is an autonomous agent attacking production infrastructure, not a phished password. Track whether this becomes a recurring pattern and whether "guardrails for AI agents" moves from advice to a funded security market.</li>
+</ul>
+
+<h4 class="digest-theme">Go Deeper</h4>
+<p>Three study guides in today's issue go past the headlines:</p>
+<ul class="digest-bullets">
+<li><a href="https://fittoprompt.com/study-guides/claude-just-revealed-ais-biggest-problem-study.html" data-study-guide><strong>Claude Just Revealed AI's Biggest Problem</strong></a> — Two Minute Papers on the 52-engineer trial, why AI-assisted coders lost the most ground on debugging, and three concrete habits (write-before-you-prompt, explain-back, deliberate off-AI practice) for keeping your mind sharp while shipping fast.</li>
+<li><a href="https://fittoprompt.com/study-guides/this-repo-just-solved-the-1-claude-codex-headache-study.html" data-study-guide><strong>This Repo Just Solved The #1 Claude + Codex Headache</strong></a> — Chase AI on Herder, an open-source terminal multiplexer that organizes multiple coding agents (Claude Code, Codex, and open-source ones) into one manageable workspace with monitoring and background persistence.</li>
+<li><a href="https://fittoprompt.com/study-guides/watch-fable-turn-628-million-tokens-into-a-professional-game-study.html" data-study-guide><strong>Watch Fable Turn 628 Million Tokens Into a Professional Game</strong></a> — Matt Maher takes a mobile Spades game from a Claude Design concept to a shippable product with Claude Code and the Fable model, leaning on the /goal command for objective-level, self-evaluating builds.</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
