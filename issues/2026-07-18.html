@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - Isomorphic Labs Moves Past AlphaFold - July 18, 2026</title>
+  <meta name="description" content="Daily AI news roundup for July 18, 2026. Isomorphic Labs unveils a drug design engine that goes beyond AlphaFold, OpenAI details GPT-Red's automated red-teaming, 54% of enterprises report an AI agent security incident, Databricks hits a $188B valuation, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #76">
+  <meta property="og:description" content="Daily AI news roundup for July 18, 2026. Isomorphic Labs unveils a drug design engine that goes beyond AlphaFold, OpenAI details GPT-Red's automated red-teaming, 54% of enterprises report an AI agent security incident, Databricks hits a $188B valuation, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-07-18.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-07-18.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    .yt-thumb-wrap { position: relative; display: block; }
+    .yt-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; }
+    .yt-play::after { content: ''; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #ffffff; margin-left: 3px; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Saturday, July 18, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 76</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>20 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI &amp; Science</div>
+          <a href="https://www.isomorphiclabs.com/articles/the-isomorphic-labs-drug-design-engine-unlocks-a-new-frontier" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://cdn.prod.website-files.com/6846c7b5a78f3e9225c64f10/6989e3d45b7a3c2eb3795578_beyond-alphafold-with-isomorphic-labs-drug-design-engine_l.jpg" alt="Isomorphic Labs Drug Design Engine" class="w-full aspect-video object-cover mb-4" style="background:#f1f1f1;">
+            <h2 class="headline-lead mb-3">Isomorphic Labs Moves Past AlphaFold With a Drug Design Engine</h2>
+          </a>
+          <p class="byline mb-3">Isomorphic Labs &middot; Jul 18</p>
+        </div>
+        <div>
+          <div class="newspaper-body">
+            <p>Isomorphic Labs introduced its Drug Design Engine (IsoDDE), which the DeepMind spinout says improves on AlphaFold 3 at predicting protein-ligand structures and, critically, binding affinities, the number that determines whether a candidate molecule is worth making.</p>
+            <p>The system also identifies novel binding pockets, pointing at targets that structure prediction alone would not surface. Predicting how a molecule folds was the famous problem; predicting how strongly two of them stick together is the one that actually gates drug discovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + GPT-Red -->
+      <div class="story-span-2">
+        <div class="kicker">AI Safety &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-18-cartoon.png" alt="Cartoon: two executives in a boardroom study a slide of a red AI robot interrogating a smaller AI robot under a desk lamp." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"We built an AI to find our AI's weaknesses, and now they're both asking for equity."</p>
+          </div>
+          <div>
+            <div class="kicker">AI Safety</div>
+            <a href="https://openai.com/index/unlocking-self-improvement-gpt-red/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">GPT-Red: OpenAI's Automated Red Teamer Beat Human Red Teams 84% to 13%</h3>
+            </a>
+            <p class="byline mb-2">OpenAI &middot; Jul 16</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI detailed GPT-Red, an internal attacker model trained alongside a group of co-evolving defender models and fed back into GPT-5.6's training. It surfaced a new "Fake Chain-of-Thought" prompt injection class that hit 95% success against GPT-5.1 and now lands below 10% against GPT-5.6 Sol.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE: Agent security gap -->
+      <div class="story-block">
+        <div class="kicker">AI Security</div>
+        <a href="https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">54% of Enterprises Have Already Had an AI Agent Incident</h3>
+        </a>
+        <p class="byline mb-2">VentureBeat &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A survey of 107 enterprises found 18% had a confirmed agent security incident and 36% a near-miss. Sixty-nine percent still share credentials across agents, and only 30% sandbox their highest-risk ones. Fleets with shared credentials were hit at 63.5%, against 40.9% where every agent had its own scoped identity.</p>
+      </div>
+
+      <!-- FEATURE: Databricks -->
+      <div class="story-block">
+        <div class="kicker">AI Business</div>
+        <a href="https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/04/dollar-signs-data-center.png" alt="Databricks valuation" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Databricks Hits $188B Valuation, AI's Favorite Second Act</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Databricks raised roughly $3 billion led by Coatue at a $188 billion valuation, capping an 18-month fundraising run that tracked its rebrand from big-data platform to AI provider.</p>
+      </div>
+
+      <!-- FEATURE: Bloomberg coding -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Work</div>
+        <a href="https://www.bloomberg.com/news/features/2026-07-16/anthropic-and-openai-tools-transform-the-profession-of-coding" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic and OpenAI Tools Transform the Profession of Coding</h3>
+        </a>
+        <p class="byline mb-2">Bloomberg &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Mark Milian's feature argues AI has changed programming more than any other profession, opening on Anthropic's Boris Cherny working in plain English against Claude rather than writing in a traditional language.</p>
+      </div>
+
+      <!-- FEATURE: Patreon -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Media</div>
+        <a href="https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/08/patreon-logo-v1.jpg?w=1024" alt="Patreon blocks AI scrapers" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Patreon Stops Asking AI Bots Not to Scrape and Starts Blocking Them</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Patreon is working with Cloudflare to actively block AI crawlers that train on creators' work, moving from the honor system of robots.txt to enforcement at the edge.</p>
+      </div>
+
+      <!-- FEATURE: India memory crunch -->
+      <div class="story-block">
+        <div class="kicker">AI Infrastructure</div>
+        <a href="https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/samsung-india-tariffs-2227140805.jpg?w=1024" alt="India smartphone market memory crunch" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">AI-Driven Memory Crunch Jolts India's Smartphone Market</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">India's smartphone market is in its steepest decline in six years as AI demand pulls memory chip production away from consumer devices, pushing prices up and reshuffling the competitive order.</p>
+      </div>
+
+      <!-- FEATURE: Cohere / UofT -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Education</div>
+        <a href="https://cohere.com/blog/cohere-university-of-toronto-announcement" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn.sanity.io/images/rjtqmwfu/web3-prod/0b4376367d0a9076aaa5438406bf9350f7bb01e9-7680x4320.png?auto=format&amp;fit=max&amp;q=90&amp;w=1600" alt="Cohere and University of Toronto partnership" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Cohere and the University of Toronto Partner on Campus-Wide AI</h3>
+        </a>
+        <p class="byline mb-2">Cohere &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A multi-year partnership puts Cohere's enterprise platform, North, at the center of the university's institution-wide AI system across research, teaching, and operations.</p>
+      </div>
+
+      <!-- FEATURE: NVIDIA diffusers -->
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67e44a92b96703c8b0e5a805/6FrP24uBex9y-EJrp_quY.png" alt="NVIDIA NeMo Automodel and Diffusers" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Fine-Tune Video and Image Models at Scale With NeMo Automodel</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">NVIDIA and Hugging Face brought distributed diffusion training to any Diffusers-format model with no checkpoint conversion, covering full fine-tuning and LoRA across FLUX.1-dev and HunyuanVideo.</p>
+      </div>
+
+      <!-- FEATURE: Vertu -->
+      <div class="story-block">
+        <div class="kicker">AI Hardware</div>
+        <a href="https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/vertu-alphafold-unfold.jpg" alt="Vertu Alphafold foldable phone" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Vertu Wants Executives to Pay $6,880 for an AI Agent</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The luxury phone maker's foldable pairs premium materials with an AI agent pitched at automating an executive's day. In testing, the agent falls well short of the price tag.</p>
+      </div>
+
+      <!-- STANDARD: Neil Rimer -->
+      <div class="story-block">
+        <div class="kicker">Opinion</div>
+        <a href="https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/Screenshot-2026-07-17-at-9.20.56-PM.png?w=1024" alt="Neil Rimer" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Neil Rimer Thinks the AI Money Is Coming Back Out</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The Index Ventures co-founder argues the historic wealth AI is minting in Silicon Valley will have to be redistributed, whether voluntarily through philanthropy or eventually by governments.</p>
+      </div>
+
+      <!-- STANDARD: Fable 5 permanent -->
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Anthropic Makes Fable 5 Permanent for Max and Team Premium</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison &middot; Jul 18</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic reversed its plan to pull Claude Fable 5 from subscription plans, keeping it available to Max and Team Premium subscribers at 50% of usage limits, a change Willison reads as competitive pressure.</p>
+      </div>
+
+      <!-- STANDARD: Inference chip financing -->
+      <div class="story-block">
+        <div class="kicker">AI Infrastructure</div>
+        <a href="https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">The First GPU Financiers Are Turning to Inference Chips in a $400M Deal</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 17</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">General Compute secured a $400 million loan from Upper90 collateralized by inference-specific chips, possibly the first financing of its kind, and a bet on cheaper infrastructure built around open models.</p>
+      </div>
+
+      <!-- STANDARD: OpenAI teens -->
+      <div class="story-block">
+        <div class="kicker">AI Policy</div>
+        <a href="https://openai.com/index/why-teens-deserve-access-safe-ai/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">OpenAI: Why Teens Deserve Access to Safe AI</h3>
+        </a>
+        <p class="byline mb-2">OpenAI &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI argues that walling teens off from AI until adulthood would leave them unprepared, noting nearly 9 in 10 teens on ChatGPT use it for learning or productivity in a given week, and pairs the case with expanded break reminders, quiet hours, and parental controls.</p>
+      </div>
+
+      <!-- STANDARD: Dharma OCR -->
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn-uploads.huggingface.co/production/uploads/67b22efa9b36260fe286e99f/XVbylBZ_TyY98EvfkO9pT.png" alt="DharmaOCR benchmark results" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Newer Models, Same Advantage: Specialist OCR Still Wins</h3>
+        </a>
+        <p class="byline mb-2">Hugging Face &middot; Jul 16</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">DharmaOCR, tuned for Brazilian Portuguese, still beats newer general multilingual models including Mistral OCR4, a case that domain training and preference optimization keep outrunning raw scale.</p>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="story-block">
+        <div class="section-label" style="border-top:none;padding-top:0;">Puzzle</div>
+<!-- Scramble answers: SCRAPING, BREACH, PROTEIN, COMPILER | Bonus word: CHIP -->
+<div id="scrmbl-mini">
+  <style>
+    #scrmbl-mini{font-family:Inter,-apple-system,'Helvetica Neue',Arial,sans-serif;color:#1a1a1a;max-width:300px;border:1px solid #1a1a1a;padding:14px 12px;box-sizing:border-box;background:#fff}
+    #scrmbl-mini .scrmbl-head{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;border-bottom:2px solid #1a1a1a;padding-bottom:5px;margin-bottom:10px}
+    #scrmbl-mini .scrmbl-row{margin-bottom:11px}
+    #scrmbl-mini .scramble-word{font-size:19px;font-weight:700;letter-spacing:.14em;line-height:1.2}
+    #scrmbl-mini .scramble-word .hl{color:#8B0000}
+    #scrmbl-mini .scrmbl-clue{font-size:11.5px;line-height:1.45;color:#555;margin-top:2px}
+    #scrmbl-mini .scrmbl-ans{font-size:12px;font-weight:700;letter-spacing:.08em;color:#8B0000;margin-top:3px;display:none}
+    #scrmbl-mini .scrmbl-bonus{border-top:1px solid #ccc;padding-top:9px;margin-top:4px;font-size:11.5px;line-height:1.5}
+    #scrmbl-mini .scrmbl-bonus b{letter-spacing:.06em}
+    #scrmbl-mini .scrmbl-bans{display:none;font-weight:700;color:#8B0000;letter-spacing:.14em}
+    #scrmbl-mini .scrmbl-btn{margin-top:10px;width:100%;font-family:inherit;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:#1a1a1a;color:#fff;border:0;padding:8px;cursor:pointer}
+    #scrmbl-mini .scrmbl-btn:hover{background:#8B0000}
+  </style>
+
+  <div class="scrmbl-head">Scramble</div>
+
+  <div class="scrmbl-row">
+    <div class="scramble-word">PAR<span class="hl">C</span>SGIN</div>
+    <div class="scrmbl-clue">Harvesting site content with bots, now widely blocked.</div>
+    <div class="scrmbl-ans">SCRAPING</div>
+  </div>
+
+  <div class="scrmbl-row">
+    <div class="scramble-word">C<span class="hl">H</span>ARBE</div>
+    <div class="scrmbl-clue">A security incident where credentials leak out.</div>
+    <div class="scrmbl-ans">BREACH</div>
+  </div>
+
+  <div class="scrmbl-row">
+    <div class="scramble-word">TERP<span class="hl">I</span>NO</div>
+    <div class="scrmbl-clue">Molecule a designed drug is built to bind.</div>
+    <div class="scrmbl-ans">PROTEIN</div>
+  </div>
+
+  <div class="scrmbl-row">
+    <div class="scramble-word">C<span class="hl">P</span>RIMELO</div>
+    <div class="scrmbl-clue">Classic tool that turns source into machine code.</div>
+    <div class="scrmbl-ans">COMPILER</div>
+  </div>
+
+  <div class="scrmbl-bonus">
+    <b>BONUS:</b> the four red letters spell what's in short supply.
+    <div class="scrmbl-bans">CHIP</div>
+  </div>
+
+  <button class="scrmbl-btn" id="scrmbl-btn" type="button">Reveal Answers</button>
+
+  <script>
+  (function(){
+    var root=document.getElementById('scrmbl-mini');
+    var btn=root.querySelector('#scrmbl-btn');
+    var shown=false;
+    btn.addEventListener('click',function(){
+      shown=!shown;
+      var els=root.querySelectorAll('.scrmbl-ans, .scrmbl-bans');
+      for(var i=0;i<els.length;i++){els[i].style.display=shown?'block':'none';}
+      btn.textContent=shown?'Hide Answers':'Reveal Answers';
+    });
+  })();
+  </script>
+</div>
+      </div>
+
+      <!-- WIRE BRIEFS -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="section-label" style="border-top:none;padding-top:0;">The Wire</div>
+          <div class="wire-item">
+            <a href="https://stateofopensource.ai/" target="_blank" rel="noopener" class="story-link">
+              <h4>The State of Open Source AI, V1.0</h4>
+            </a>
+            <p>Open-weight models have closed much of the gap with proprietary systems while inference costs fell roughly 50-fold.</p>
+            <div class="wire-source">Mozilla &middot; Jul 17</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://thezvi.substack.com/p/ai-177-part-2-wish-you-were-here" target="_blank" rel="noopener" class="story-link">
+              <h4>AI #177 Part 2: Wish You Were Here</h4>
+            </a>
+            <div class="wire-source">Don't Worry About the Vase &middot; Jul 17</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://github.com/tucan9389/nanochat-jax/discussions/1" target="_blank" rel="noopener" class="story-link">
+              <h4>Porting nanochat to a TPU: What Carries Over From PyTorch, and What Breaks</h4>
+            </a>
+            <div class="wire-source">GitHub &middot; Jul 18</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/" target="_blank" rel="noopener" class="story-link">
+              <h4>How Apple's Big Lawsuit Could Disrupt OpenAI's IPO Plans</h4>
+            </a>
+            <div class="wire-source">TechCrunch &middot; Jul 17</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/18/quixote/" target="_blank" rel="noopener" class="story-link">
+              <h4>nascheme/quixote</h4>
+            </a>
+            <div class="wire-source">Simon Willison &middot; Jul 18</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+<p class="digest-hook">A drug design engine that matches physics-based free energy perturbation "at a fraction of the time and cost," an attacker model that beat human red teams 84% to 13%, and a memory shortage that just knocked 45% off India's sub-₹15,000 phone segment. Today's issue is what it looks like when AI stops being a demo and starts showing up in the cost structure of things that have nothing to do with AI. The thread running through all of it: capability keeps compounding on schedule, while the systems meant to supervise it, pay for it, and absorb its side effects are visibly improvising.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~8 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="assets/2026-07-18-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">The Frontier Moves Into the Lab</h4>
+<ul class="digest-bullets">
+<li><strong>Isomorphic Labs goes past AlphaFold 3.</strong> IsoDDE unifies structure prediction, binding affinity, and pocket identification in one system. Isomorphic claims it more than doubles AlphaFold 3's accuracy on the "Runs N' Poses" generalisation benchmark, beats it 2.3x on high-fidelity antibody-antigen predictions (DockQ &gt; 0.8), and matches or exceeds physics-based FEP on affinity while outperforming every deep-learning competitor on FEP+4, OpenFE, and the CASP16 blind task. A cereblon case study found known <em>and</em> novel cryptic binding sites from amino acid sequence alone.</li>
+<li><strong>Why affinity is the real unlock.</strong> Structure prediction told you what a molecule looks like. Affinity tells you whether it is worth synthesizing. Doing that at FEP-grade accuracy but at deep-learning speed is what moves a model from oracle to inner loop of molecular optimization.</li>
+</ul>
+
+<h4 class="digest-theme">Models Policing Models</h4>
+<ul class="digest-bullets">
+<li><strong>OpenAI's GPT-Red.</strong> An internal attacker model trained against a group of co-evolving defenders, with its discoveries fed back into GPT-5.6's training. It found a new "Fake Chain-of-Thought" prompt injection class that hit upwards of 95% success against GPT-5.1 and now sits below 10% against GPT-5.6 Sol. OpenAI says it was trained at the compute scale of its largest post-training runs, spent purely on safety.</li>
+<li><strong>Meanwhile, in production.</strong> A survey of 107 enterprises found 54% have already had an agent security incident (18% confirmed, 36% near-miss). Sixty-nine percent share credentials across agents; only 30% sandbox their riskiest ones. Fleets with shared credentials were hit at 63.5%, versus 40.9% where every agent held its own scoped identity. The control that works is known. It is simply not deployed.</li>
+</ul>
+
+<h4 class="digest-theme">The Open Stack Consolidates</h4>
+<ul class="digest-bullets">
+<li><strong>Mozilla's State of Open Source AI V1.0.</strong> The open-vs-closed capability spread is down to 3.3% as of March 2026, from 8.04% in January 2024, with parity in coding and instruction-following and remaining gaps in reasoning and long-context retrieval. Inference fell 50x in 36 months, GPT-4-equivalent going from $20 to $0.40 per million tokens, faster than dotcom bandwidth curves. Its argument for ownership is the sharpest line in today's issue: "A provider can switch off a model. Nobody can switch off a copy already running on a machine you hold."</li>
+<li><strong>Capital is now underwriting inference.</strong> Upper90 lent General Compute $400 million collateralized by inference chips, believed to be a first. The company runs SambaNova SN50s rather than Nvidia GPUs, claims 16x faster inference than GPU clouds, and targets open-model demand. Billy Libby: "Everyone doesn't need a supercomputer, but they do need inference and AI."</li>
+<li><strong>Anthropic reverses on Fable 5.</strong> From July 20 it is included in all Max and Team Premium plans at 50% of limits, with Pro and Team Standard getting usage credits plus a one-time $100 credit. Simon Willison reads it as competitive pressure, and speculates Anthropic may need to throttle training runs to free GPU capacity to serve it at subscription scale.</li>
+<li><strong>Specialists still beat scale.</strong> DharmaOCR, tuned for Brazilian Portuguese, continues to outperform newer general multilingual models including Mistral OCR4.</li>
+</ul>
+
+<h4 class="digest-theme">Somebody Is Paying For This</h4>
+<ul class="digest-bullets">
+<li><strong>India's phone market takes the hit.</strong> Shipments fell 10% year-over-year in Q2 2026 against just 2% in China, because roughly 60% of the market sits under ₹20,000 and Samsung, SK Hynix, and Micron are diverting capacity to high-bandwidth memory for AI accelerators. The sub-₹15,000 tier collapsed 45%. Prices rose 4% to 68% depending on model. The upgrade cycle is stretching from about 3.5 years toward 4.</li>
+<li><strong>Databricks at $188B.</strong> Roughly $3 billion led by Coatue, capping an 18-month run that tracked its repositioning from big-data platform to AI provider.</li>
+<li><strong>Neil Rimer says the money comes back out.</strong> "It'll either be voluntary or it'll be involuntary, but it'll happen, and I hope it's voluntary." The Index co-founder points to Carnegie's 1889 "Gospel of Wealth" and the FDR-era taxation that followed when philanthropy proved insufficient. The backdrop: 45 new AI billionaires in 2026 worth a combined $2.9 trillion, and the 19 wealthiest U.S. households now equal to 14% of GDP against about 4% in 1910.</li>
+<li><strong>Patreon starts blocking.</strong> Having found that AI scrapers simply ignored robots.txt, Patreon deployed Cloudflare's AI Crawl Control and watched weekly scraper attempts fall from thousands to zero.</li>
+<li><strong>And at the luxury end,</strong> Vertu wants $6,880 for a foldable whose AI agent, in testing, does not come close to justifying it.</li>
+</ul>
+
+<h4 class="digest-theme">The Throughline</h4>
+<p>Put GPT-Red next to the enterprise agent survey and you get the defining asymmetry of this moment. OpenAI spent the compute of its largest post-training runs building an adversary sophisticated enough to drive a 95%-effective attack class down below 10%. That is a genuinely impressive act of institutional self-discipline. Now look at what everyone else is doing with agents: 69% share credentials, 30% sandbox. The survey even isolates the causal shape, since fleets with shared credentials got hit at 63.5% versus 40.9% for scoped identities. The frontier labs are hardening their models with state-of-the-art adversarial machinery while their customers wire those models into production with a shared API key. <em>The safety work and the deployment practice are not in the same decade.</em></p>
+
+<p>The Mozilla report explains why that gap will widen rather than close. When the capability spread is 3.3% and inference has fallen 50x, the barrier to putting a competent model into a workflow effectively disappears. Cheap, good, downloadable models mean agent deployment stops being a procurement decision reviewed by security and becomes something a team does on a Tuesday. Mozilla frames ownership as sovereignty, and it is right, but sovereignty is also responsibility: a model nobody can switch off is also a model nobody else is patching. Its own recommendation list quietly concedes the problem, calling portable permission models across agentic frameworks currently unsolved. That is the exact control the enterprise survey says is missing, named as an open research problem in the same week.</p>
+
+<p>Then there is Isomorphic, which cuts against the easy pessimism. IsoDDE is not a chatbot with better vibes; it is a claim to match free energy perturbation, a physics-grade method, at a fraction of the cost, verified against named public benchmarks. If that holds up, it is the strongest evidence yet that these systems can compress real scientific work rather than just generate plausible text about it. And notice the contrast in posture. Isomorphic published benchmark comparisons and a case study. The enterprises in the VentureBeat survey cannot say which agent did what after an incident, because shared credentials destroy the forensics. <em>The same technology is being held to laboratory standards in one building and to no standard at all in the next.</em></p>
+
+<p>Meanwhile the bill lands somewhere nobody voted on. India's sub-₹15,000 phone tier fell 45% because memory fabs pivoted to HBM for AI accelerators. No policy chose that. It is just what happens when the highest bidder for silicon changes. Rimer's warning about involuntary redistribution usually gets read as being about billionaires and taxes, but the memory crunch is redistribution already in progress, running the other direction, from the price-sensitive buyer to the data center. Patreon blocking crawlers is the same instinct expressed by someone with enough leverage to act on it.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+<p>For three years the AI debate has been argued in the register of software: benchmarks, capabilities, model releases, whether the curves bend. Today's issue reads like the moment the argument becomes physical. Memory fabs reallocating away from consumer phones. A $400 million loan collateralized by inference silicon, which means lenders now believe inference chips have a resale market and a repossession story. A drug design engine competing with physics simulation. These are not narrative claims about the future; they are capital allocation, supply chains, and lab benchmarks. AI has crossed from being a thing the economy talks about to a thing the economy is rearranging itself around, and rearrangement has losers who were never consulted.</p>
+
+<p>The open-weights story is where this gets genuinely consequential. A 3.3% capability gap and a 50x cost decline mean the strategic question is no longer who has the best model. Mozilla's answer, that the contest has moved up to orchestration and the harness layer, is the correct read, and it explains why the same week gives us LM Studio-style agents, MCP standardization arguments, and an inference neocloud that pointedly is not running Nvidia. If the models commoditize and the orchestration layer consolidates, the lock-in simply relocates. Mozilla cites the June 2026 order that forced Anthropic to disable Fable access globally as the cautionary case, and Anthropic's Fable 5 reversal this week, with Willison guessing it may have to cut training to free serving capacity, shows how tightly even the largest labs are constrained by physical compute.</p>
+
+<p>What is missing from nearly all of it is a governance layer that operates at the speed of deployment. GPT-Red is a lab hardening its own product. The enterprise survey is a portrait of everyone else's practice. Rimer is arguing about distribution after the fact. India's phone buyers are absorbing a shock with no forum in which to contest it. The technical frontier has an answer for adversarial robustness; nobody has one for the fact that a semiconductor reallocation decision made for AI margins prices a first phone out of reach. <em>That is the gap that will define the next several years, and it is not a research problem.</em></p>
+
+<h4 class="digest-theme">What to Watch</h4>
+<ul class="digest-bullets">
+<li><strong>Whether IsoDDE's affinity claims survive external replication.</strong> Matching FEP is a strong claim made against named benchmarks (FEP+4, OpenFE, CASP16). Watch for independent groups reproducing it, and for whether a candidate designed this way actually enters the clinic. That is the number that matters, not DockQ.</li>
+<li><strong>Whether agent identity becomes a procurement requirement.</strong> The 63.5%-vs-40.9% split gives security teams a defensible number to bring to a budget conversation. If scoped agent identity starts appearing in enterprise RFPs and insurance questionnaires, the gap closes fast. If it stays a best practice, expect the confirmed-incident share to climb well past 18%.</li>
+<li><strong>Whether inference-chip collateral becomes a category.</strong> Upper90's $400 million deal works because SN50s are power-efficient and redeployable, which is to say remarketable after a default. If a second and third lender write similar paper, non-Nvidia inference silicon acquires a financing market, and that does more to fragment Nvidia's position than any benchmark result.</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>
