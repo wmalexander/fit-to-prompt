@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - A $25 Prompt Found a $500,000 WordPress Exploit - July 20, 2026</title>
+  <meta name="description" content="Daily AI news roundup for July 20, 2026. A researcher finds a $500,000-class WordPress RCE with $25 of GPT-5.6, a claimed AI-authored counterexample to the Jacobian conjecture, investors dump Big Tech over AI spending, power companies invoke eminent domain for data centers, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #77">
+  <meta property="og:description" content="Daily AI news roundup for July 20, 2026. A researcher finds a $500,000-class WordPress RCE with $25 of GPT-5.6, a claimed AI-authored counterexample to the Jacobian conjecture, investors dump Big Tech over AI spending, power companies invoke eminent domain for data centers, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-07-20.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-07-20.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    .yt-thumb-wrap { position: relative; display: block; }
+    .yt-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; }
+    .yt-play::after { content: ''; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #ffffff; margin-left: 3px; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Monday, July 20, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 77</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>20 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI &amp; Security</div>
+          <a href="https://slcyber.io/research-center/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6/" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <h2 class="headline-lead mb-3">Exploit Brokers Pay $500,000 for a WordPress RCE. A Researcher Found One With $25 of GPT-5.6.</h2>
+          </a>
+          <p class="byline mb-3">Searchlight Cyber &middot; Jul 20</p>
+        </div>
+        <div>
+          <div class="newspaper-body">
+            <p>A Searchlight Cyber researcher used GPT-5.6 Sol Ultra to hunt for a pre-authentication remote code execution bug in WordPress, the class of vulnerability that exploit brokers advertise six-figure bounties for, and found one for roughly the cost of a large lunch.</p>
+            <p>The writeup's value is in the method rather than the bug. The model chained an exploitation path through code that human auditors had walked past, which is the part that should worry anyone maintaining a large codebase. The economics of finding vulnerabilities just moved; the economics of fixing them did not.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + Big Tech spending -->
+      <div class="story-span-2">
+        <div class="kicker">AI Business &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-07-20-cartoon.png" alt="Cartoon: a CFO presents a soaring cost chart to a skeptical boardroom." class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"Our compute costs are enormous, yes, but a hobbyist with twenty-five dollars just found a bug we have been paying you to miss."</p>
+          </div>
+          <div>
+            <div class="kicker">AI Business</div>
+            <a href="https://www.bloomberg.com/news/articles/2026-07-19/big-tech-needs-to-justify-ai-spending-as-investors-dump-stocks" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Big Tech Needs to Justify AI Spending as Investors Dump Stocks</h3>
+            </a>
+            <p class="byline mb-2">Bloomberg &middot; Jul 19</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Investors are selling Big Tech shares, and the platforms that have spent two years describing AI capital expenditure as an act of faith are now being asked to show the return. The question has moved from how much they are spending to what it bought.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE: Jacobian conjecture -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Science</div>
+        <a href="https://xcancel.com/__alpoge__/status/2079028340955197566" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">A Claimed Counterexample to the Jacobian Conjecture, Credited to an AI Model</h3>
+        </a>
+        <p class="byline mb-2">Levent Alpoge &middot; X &middot; Jul 20</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Mathematician Levent Alpoge announced an explicit polynomial map from C^3 to C^3, with Jacobian determinant -2, that sends three distinct points to the same image, which would falsify a conjecture open since 1939. He credits the model Fable with doing the work. Verification by the wider mathematical community is still pending.</p>
+      </div>
+
+      <!-- FEATURE: Nolan -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Culture</div>
+        <a href="https://techcrunch.com/2026/07/19/odyssey-director-christopher-nolan-calls-ai-an-obvious-trojan-horse/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-2285660756.jpg?w=1024" alt="Christopher Nolan" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Christopher Nolan Calls AI an Obvious 'Trojan Horse'</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The director, whose "The Odyssey" is topping the box office, said he is encouraged by how skeptical the public has become, particularly younger audiences. His line: AI is "a Trojan horse that everybody knows the Greeks are inside."</p>
+      </div>
+
+      <!-- FEATURE: Eminent domain -->
+      <div class="story-block">
+        <div class="kicker">AI Infrastructure</div>
+        <a href="https://fortune.com/2026/07/19/data-center-eminent-domain-public-use/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/07/GettyImages-2280056139-e1784391242756.jpg?format=webp&amp;w=1440&amp;q=100" alt="Data center construction" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Power Companies Are Using Eminent Domain to Seize Land for Data Centers</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">More than 3,000 data centers are operating and 1,500 more are planned. As they strain the grid and run into local opposition, utilities are increasingly invoking eminent domain to take land for transmission lines, even as 70% of Americans say not in my backyard.</p>
+      </div>
+
+      <!-- FEATURE: Korea -->
+      <div class="story-block">
+        <div class="kicker">AI Markets</div>
+        <a href="https://fortune.com/2026/07/19/korea-ai-stocks-sk-hynix-samsung-kospi-index-global-markets/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/07/GettyImages-2285592902-e1784472296277.jpg?format=webp&amp;w=1440&amp;q=100" alt="Korean stock market" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Korea's AI-Heavy Market Now Sets the Tone for Global Stocks</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">South Korea's $4 trillion equity market has gone from a peripheral allocation to a global barometer for AI sentiment. Fund managers in London and New York now check SK Hynix and Samsung before their own markets open.</p>
+      </div>
+
+      <!-- FEATURE: Study guide -->
+      <div class="story-block">
+        <div class="kicker">Video &middot; Study Guide</div>
+        <a href="https://fittoprompt.com/study-guides/i-cut-the-internet-and-let-ai-read-the-file-study.html" class="story-link yt-thumb-wrap" data-study-guide>
+          <img src="https://img.youtube.com/vi/5slsNizN6MQ/maxresdefault.jpg" alt="Nate B Jones on running AI offline" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <span class="yt-play" style="top:calc(50% - 0.6rem);"></span>
+          <h3 class="headline-feature mb-2">I Cut the Internet and Let AI Read the File I Could Never Upload</h3>
+        </a>
+        <p class="byline mb-2">Nate B Jones &middot; YouTube &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A practical walkthrough of running a downloaded model on your own laptop with the network off, so you can put genuinely sensitive documents in front of an AI without handing them to a vendor. Covers model choice, hardware, and how to prepare the files.</p>
+      </div>
+
+      <!-- FEATURE: Current AI -->
+      <div class="story-block">
+        <div class="kicker">Open Source</div>
+        <a href="https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/10/GettyImages-1370479417.jpg?w=1024" alt="Current AI nonprofit" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Nonprofit Current AI Is Racing to Build the World Wide Web of AI</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Founded in February 2025, Current AI is building open-source infrastructure so underrepresented languages and cultures are not left out of proprietary systems. It has allocated $3.2 million in grants and launched an open chatbot at the AI for Good Summit in Geneva.</p>
+      </div>
+
+      <!-- FEATURE: Huang Japan -->
+      <div class="story-block">
+        <div class="kicker">AI Infrastructure</div>
+        <a href="https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/01/getty-japan-flag-distance.jpg?w=1024" alt="Japan" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">What to Watch For After Jensen Huang's Japan Visit</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nvidia's CEO closed a two-day Tokyo trip with deals across Japan's tech sector, positioning the company at the center of the country's push into physical AI and industrial automation.</p>
+      </div>
+
+      <!-- FEATURE: Apple lawsuit -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Legal</div>
+        <a href="https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://techcrunch.com/wp-content/uploads/2025/05/portrait.jpg?w=1000" alt="Apple v OpenAI" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Can an Apple Lawsuit Derail OpenAI's Hardware Plans?</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Apple's trade secrets suit alleges OpenAI improperly obtained confidential information through current and former Apple employees. The open question is whether it delays OpenAI's first hardware device and its confidential IPO filing.</p>
+      </div>
+
+      <!-- FEATURE: Hassabis / Zvi -->
+      <div class="story-block">
+        <div class="kicker">AI Policy</div>
+        <a href="https://thezvi.substack.com/p/demis-hassabis-on-the-new-coming" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Demis Hassabis on the New Coming Age</h3>
+        </a>
+        <p class="byline mb-2">Don't Worry About the Vase &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Zvi Mowshowitz picks apart Hassabis's call for an international AI standards body, arguing it does not reach the risks it claims to address, and revisits how DeepMind's own commitments against military AI work did not hold.</p>
+      </div>
+
+      <!-- STANDARD: Qwen -->
+      <div class="story-block">
+        <div class="kicker">AI Models</div>
+        <a href="https://www.bloomberg.com/news/articles/2026-07-19/alibaba-s-qwen-unveils-preview-of-flagship-ai-model" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Alibaba's Qwen Unveils Preview of Flagship AI Model</h3>
+        </a>
+        <p class="byline mb-2">Bloomberg &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Alibaba's Qwen team previewed its next flagship model, continuing China's steady pressure on the leading US labs.</p>
+      </div>
+
+      <!-- STANDARD: Fiscal crisis -->
+      <div class="story-block">
+        <div class="kicker">AI Economics</div>
+        <a href="https://www.bloomberg.com/news/newsletters/2026-07-19/how-ai-could-create-a-fiscal-crisis" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">How AI Could Create a Fiscal Crisis</h3>
+        </a>
+        <p class="byline mb-2">Bloomberg &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A look at how AI-driven disruption to employment and the tax base could put real strain on government budgets well before the productivity gains show up.</p>
+      </div>
+
+      <!-- STANDARD: CFO token costs -->
+      <div class="story-block">
+        <div class="kicker">AI &amp; Work</div>
+        <a href="https://www.bloomberg.com/news/newsletters/2026-07-19/cfos-face-questions-around-ai-token-costs-zm-jpm-fds" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">CFOs Face Questions Around AI Token Costs</h3>
+        </a>
+        <p class="byline mb-2">Bloomberg &middot; Jul 19</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Finance chiefs are being pressed to explain token consumption as a real line item, with Zoom, JPMorgan, and FactSet earnings in focus. A year ago this was an engineering metric; now it is a disclosure question.</p>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="story-block">
+        <div class="section-label" style="border-top:none;padding-top:0;">Puzzle</div>
+<div class="acq-wrap">
+<style>
+.acq-wrap{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a1a1a;max-width:320px;font-size:12px;line-height:1.4;border:1px solid #1a1a1a;padding:14px 12px;box-sizing:border-box;background:#fff}
+.acq-wrap .acq-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;border-bottom:2px solid #1a1a1a;padding-bottom:5px;margin:0 0 8px}
+.acq-wrap .acq-intro{font-size:11px;color:#4a4a4a;margin:0 0 10px}
+.acq-wrap .acq-q{border-bottom:1px solid #ddd;padding:6px 0}
+.acq-wrap .acq-t{font-weight:700;font-size:12px;letter-spacing:.04em;margin:0 0 3px}
+.acq-wrap .acq-mark{color:#8B0000;font-weight:700;margin-left:5px}
+.acq-wrap .acq-mark.acq-ok{color:#1a7a3c}
+.acq-wrap .acq-opt{display:block;font-size:11.5px;line-height:1.45;cursor:pointer;padding:1px 0}
+.acq-wrap .acq-opt input{margin:0 5px 0 0;vertical-align:-1px}
+.acq-wrap .acq-btn{margin-top:10px;background:#1a1a1a;color:#fff;border:0;padding:7px 14px;font-family:inherit;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;cursor:pointer}
+.acq-wrap .acq-btn:hover{background:#8B0000}
+.acq-wrap .acq-score{margin-top:8px;font-size:12px;font-weight:700;color:#8B0000;min-height:16px}
+</style>
+<p class="acq-head">Acronym Quiz</p>
+<p class="acq-intro">Six acronyms, one right answer each.</p>
+<div class="acq-qs"></div>
+<button type="button" class="acq-btn">Submit</button>
+<div class="acq-score" aria-live="polite"></div>
+<script>
+(function(){
+  var root=document.currentScript.parentNode;
+  var data=[
+    {t:"RAG",o:["Retrieval-Augmented Generation","Recursive Attention Gating","Reinforced Adversarial Grounding"],a:0},
+    {t:"LoRA",o:["Logarithmic Rate Annealing","Low-Rank Adaptation","Local Reward Alignment"],a:1},
+    {t:"MoE",o:["Model of Everything","Multi-Objective Encoding","Mixture of Experts"],a:2},
+    {t:"RCE",o:["Remote Code Execution","Recursive Context Expansion","Runtime Cache Eviction"],a:0},
+    {t:"GGUF",o:["Gradient-Guided Update Format","GPT-Generated Unified Format","Generalized GPU Frame"],a:1},
+    {t:"KV cache",o:["Kernel-Vector cache","Quantized Value cache","Key-Value cache"],a:2}
+  ];
+  var box=root.querySelector('.acq-qs');
+  var uid='acq'+Math.random().toString(36).slice(2,8);
+  data.forEach(function(q,i){
+    var d=document.createElement('div');
+    d.className='acq-q';
+    var h='<p class="acq-t">'+q.t+'<span class="acq-mark" data-m="'+i+'"></span></p>';
+    q.o.forEach(function(o,j){
+      h+='<label class="acq-opt"><input type="radio" name="'+uid+'_'+i+'" value="'+j+'">'+o+'</label>';
+    });
+    d.innerHTML=h;
+    box.appendChild(d);
+  });
+  root.querySelector('.acq-btn').addEventListener('click',function(){
+    var n=0;
+    data.forEach(function(q,i){
+      var sel=root.querySelector('input[name="'+uid+'_'+i+'"]:checked');
+      var m=root.querySelector('[data-m="'+i+'"]');
+      if(sel&&parseInt(sel.value,10)===q.a){n++;m.textContent='✓';m.className='acq-mark acq-ok';}
+      else{m.textContent='✗';m.className='acq-mark';}
+    });
+    root.querySelector('.acq-score').textContent='You got '+n+'/6';
+  });
+})();
+</script>
+</div>
+
+      </div>
+
+      <!-- WIRE BRIEFS -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="section-label" style="border-top:none;padding-top:0;">The Wire</div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/20/sam-altman/" target="_blank" rel="noopener" class="story-link">
+              <h4>A 2016 Sam Altman Email on Open Source Strategy</h4>
+            </a>
+            <p>Surfaced in litigation: Altman argued for releasing a locally-runnable model partly to make it harder for rival efforts to raise money.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 20</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/19/ai-mania/" target="_blank" rel="noopener" class="story-link">
+              <h4>AI Mania Is Eviscerating Global Decision-Making</h4>
+            </a>
+            <p>Nik Suresh on hype-driven strategy, including an executive who authored a multi-billion-dollar AI plan without ever having used an AI tool.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 19</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/" target="_blank" rel="noopener" class="story-link">
+              <h4>Claude Code Runs on Bun's Rust Implementation Now</h4>
+            </a>
+            <p>Shipped in v2.1.181 and later. Jarred Sumner says startup got about 10% faster on Linux, and almost nobody noticed.</p>
+            <div class="wire-source">Simon Willison &middot; Jul 19</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener" class="story-link">
+              <h4>Claude Code v2.1.215 Stops Auto-Running Skills</h4>
+            </a>
+            <p>/verify and /code-review now require explicit invocation instead of firing on their own.</p>
+            <div class="wire-source">Anthropic &middot; Jul 19</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://github.com/Saivineeth147/lora-speedrun" target="_blank" rel="noopener" class="story-link">
+              <h4>LoRA Speedrun</h4>
+            </a>
+            <p>A leaderboard for LoRA fine-tuning: frozen tasks, identical L40S hardware, publicly verified wall-clock time to hit target accuracy.</p>
+            <div class="wire-source">GitHub &middot; Jul 20</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://huggingface.co/spaces/webml-community/bonsai-webgpu" target="_blank" rel="noopener" class="story-link">
+              <h4>Bonsai 1-Bit, Running in Your Browser</h4>
+            </a>
+            <p>A Hugging Face Space running the Bonsai 1-bit language model entirely client-side via WebGPU. No server inference at all.</p>
+            <div class="wire-source">Hugging Face &middot; Jul 20</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab &#8599;</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px); justify-content: center; align-items: center; padding: 1.5rem; }
+    .sg-modal-overlay.active { display: flex; }
+    .sg-modal-container { background: #fff; border-radius: 6px; width: 100%; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); }
+    .sg-modal-header { display: flex; justify-content: flex-end; align-items: center; gap: 1rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e7eb; background: #fafafa; flex-shrink: 0; }
+    .sg-modal-open-external { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #6b7280; text-decoration: none; letter-spacing: 0.02em; }
+    .sg-modal-open-external:hover { color: #8B0000; }
+    .sg-modal-close { font-size: 1.5rem; line-height: 1; background: none; border: none; color: #6b7280; cursor: pointer; padding: 0 0.25rem; }
+    .sg-modal-close:hover { color: #1a1a1a; }
+    .sg-modal-iframe { flex: 1; width: 100%; border: none; }
+    @media print { .sg-modal-overlay { display: none !important; } }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) { iframe.src = url; externalLink.href = url; overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); iframe.src = 'about:blank'; document.body.style.overflow = ''; }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) { e.preventDefault(); openModal(link.href); }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+<p class="digest-hook">Exploit brokers advertise up to $500,000 for a pre-authentication WordPress remote code execution bug. This week a Searchlight Cyber researcher found one using GPT-5.6 for about $25 of inference. Hold that next to the other number in today's issue: investors just wiped roughly $1 trillion off Korea's Kospi in a month, and Big Tech is being told to justify its AI spending as its stock gets dumped. The capability curve and the confidence curve have come apart. The machines are getting cheaper and sharper at doing real, verifiable work, right as the market, the courts, and the public start asking who exactly is paying for all of it, and whether anyone is in control.</p>
+<div class="digest-podcast">
+  <div class="digest-podcast-label">
+    <span class="digest-podcast-icon">&#9654;</span>
+    <span>Listen to the Digest</span>
+    <span class="digest-podcast-duration">~8 min</span>
+  </div>
+  <audio controls preload="none" class="digest-podcast-audio">
+    <source src="assets/2026-07-20-podcast.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<h4 class="digest-theme">Cheap Capability Meets Real Work</h4>
+<ul class="digest-bullets">
+<li><strong>A $25 prompt versus a $500,000 exploit.</strong> Our lead story is not really about one WordPress bug. It is about the economics of finding them collapsing. A researcher pointed GPT-5.6 Sol Ultra at WordPress and it chained an exploitation path through code that human auditors had walked past, for the cost of a large lunch. The offense side of security just got radically cheaper. The defense side, the patching and reviewing, did not.</li>
+<li><strong>An AI-credited counterexample to a 1939 conjecture.</strong> Mathematician Levent Alpoge posted an explicit polynomial map from C^3 to C^3 with Jacobian determinant -2 that sends three distinct points to the same image, which would falsify the Jacobian conjecture. He credits the model Fable, thanking it "for working during the world cup final," and provided Wolfram Alpha links so anyone can check the collision. He also calls the problem "the canonical crank graveyard," so verification is still pending, but the artifact is concrete and checkable, not a vibe.</li>
+<li><strong>Sensitive work, offline.</strong> In today's study guide, Nate B Jones air-gaps a laptop, runs GPT-OSS Safeguard 20B locally in LM Studio with the network off, and has it find and mask PII in a contract he could never upload to a vendor. He points at Microsoft, Discovery Bank, and Bayer doing the enterprise version of the same move. The theme across all three: the useful frontier is increasingly something you run, verify, and own, not something you rent through an API.</li>
+</ul>
+
+<h4 class="digest-theme">The Bill Comes Due</h4>
+<ul class="digest-bullets">
+<li><strong>Markets stop taking spending on faith.</strong> Investors are dumping Big Tech and demanding a return on two years of AI capital expenditure. Korea, now a $4 trillion market, has become the world's pre-market read on AI risk: the Kospi ran up 62% year-to-date, then fell 25% from its June peak, erasing about $1 trillion, with Samsung and SK Hynix each down at least 30%. The Nasdaq 100-Kospi correlation hit 0.46, nearly triple its five-year average. As PineBridge's Hani Redha put it, "We are all Korean investors now."</li>
+<li><strong>Token costs become a disclosure item.</strong> Bloomberg reports CFOs at Zoom, JPMorgan, and FactSet are being pressed to explain AI token consumption as a real line item, and a separate piece war-games how AI-driven disruption could strain the tax base into a fiscal crisis. A year ago token spend was an engineering metric. Now it is something the finance chief has to defend on an earnings call.</li>
+<li><strong>Land itself is being contested.</strong> With more than 3,000 US data centers running (over 4% of national electricity in 2024) and 1,500 more planned, utilities are invoking eminent domain to seize land for transmission lines, testing the Fifth Amendment's "public use" limit even though 70% of Americans oppose data centers in their communities. The compute buildout has run past the point where money alone can clear its path.</li>
+</ul>
+
+<h4 class="digest-theme">Who Owns the Stack</h4>
+<ul class="digest-bullets">
+<li><strong>The open, public counterweight.</strong> Nonprofit Current AI, seeded by $100 million from the French government and backed by the Ford and MacArthur foundations, DeepMind, and Salesforce, has raised $400 million to build a free "World Wide Web of AI." CEO Ayah Bdeir: "there has to be a public alternative. Like the World Wide Web, available to anyone, for free." It just distributed $3.2 million in grants across Kenya, Lebanon, and Brazil, and its Alpha Chat launched in July with Hugging Face, Mozilla, and MIT Media Lab.</li>
+<li><strong>Open source as a weapon, revisited.</strong> Simon Willison surfaced a 2022 Altman email, disclosed in litigation, proposing OpenAI release a locally-runnable GPT-3-class model, partly to ship before Stability and make it "harder for new efforts to get funded." A useful reminder that "open" has always doubled as competitive strategy.</li>
+<li><strong>The frontier keeps shrinking to fit.</strong> Bonsai, a 500M-parameter 1-bit ternary model, now runs entirely in the browser on WebGPU with no server. LoRA Speedrun turns fine-tuning into a verified sport: frozen task, one L40S, Qwen2.5-1.5B to 57% on GSM8K, current record 6m 05s. Even Claude Code quietly swapped its runtime to Bun's Rust port in v2.1.181, 10% faster startup, and, per Jarred Sumner, "barely anyone noticed. Boring is good."</li>
+</ul>
+
+<h4 class="digest-theme">The Throughline</h4>
+<p>Put the lead story next to the Jacobian thread and the same shape appears twice. In both cases a cheap model produced a result that is <em>independently checkable</em>: an exploit that either fires or doesn't, a polynomial map whose determinant you can paste into Wolfram Alpha. That verifiability is the whole game. It is why a $25 security finding and an AI-credited math counterexample land as news while a thousand chatbot demos do not. The value has migrated from fluent output to work that can be confirmed, and confirmation is exactly what makes these results economically and epistemically dangerous to ignore.</p>
+<p>Now set that against the money stories. The market is dumping AI exposure and demanding CFOs justify token spend at the precise moment the technology is getting demonstrably better at concrete, gated tasks. That is not a contradiction; it is the market re-pricing from narrative to evidence. Faith-based spending is being replaced by "show me the verified return," and Korea is where that repricing shows up first because its index is so concentrated in the memory chips everything else depends on. The same instinct that makes a checkable exploit valuable makes an unverifiable capex story cheap.</p>
+<p>And notice where control keeps slipping. Nolan calls AI "a transparent horse, made of glass," everyone can see the danger and it advances anyway. Zvi Mowshowitz reads Hassabis's FINRA-style standards body as "the least you could do," toothless on enforcement, from a lab whose leaders signed a 2018 pledge against lethal autonomous weapons before Google took a Pentagon contract with no such restriction. Current AI is racing to build a public alternative precisely because it assumes the private one cannot be trusted to distribute the benefits. The through-line is that capability is now verifiable and cheap, while <em>governance</em> is the thing nobody can independently check, and that asymmetry is where the anxiety in today's issue actually lives.</p>
+
+<h4 class="digest-theme">The Bigger Picture</h4>
+<p>Step back and 2026's AI story is quietly inverting. The last three years were about scale: bigger models, bigger clusters, bigger raises, all justified by a promise of future capability. Today's issue is what the down-slope of that curve looks like. A 500M model runs in a browser tab. A local 20B model handles documents a bank's compliance team would never let touch a cloud API. A researcher out-finds professional exploit brokers for pocket change. The center of gravity is shifting from "who has the largest model" to "who can deploy verified capability cheaply, privately, and on hardware they control." That is a much harder world to build a trillion-dollar moat in, which is exactly what the stock selloff is starting to price.</p>
+<p>The unresolved question is whether our institutions can keep up with technology that is simultaneously more capable and more diffuse. Eminent domain fights, fiscal-crisis warnings, token-cost disclosures, and Apple's trade-secrets suit against OpenAI are all the same story in different clothes: the legal, financial, and regulatory scaffolding built for a slower world straining against something that now iterates in weeks and runs anywhere. When capability was concentrated in a few labs, you could imagine governing it by governing them. When it fits on a laptop with the internet off, that theory breaks. The next phase of AI policy is not about controlling the frontier labs. It is about a world where the frontier has already left the building.</p>
+
+<h4 class="digest-theme">What to Watch</h4>
+<ul class="digest-bullets">
+<li><strong>AI-found vulnerabilities as a category.</strong> If a $25 prompt reliably finds six-figure bugs, expect both a wave of AI-assisted disclosures and a scramble by platform maintainers who cannot patch at the same cost. Watch whether responsible-disclosure norms and bug-bounty economics survive the price collapse.</li>
+<li><strong>Peer verification of the Jacobian claim.</strong> Alpoge gave everyone the tools to check it. Whether the math community confirms the counterexample, and how it credits an AI model in a formal result, will be a template-setting moment for AI-in-mathematics.</li>
+<li><strong>Korea as the tell.</strong> With the Kospi now the pre-market barometer for AI risk and its correlation to US tech near a two-year high, the next leg of the memory-chip cycle there will front-run sentiment on the whole AI trade.</li>
+</ul>
+
+<h4 class="digest-theme">Go Deeper</h4>
+<p>One study guide in today's issue goes past the headline:</p>
+<ul class="digest-bullets">
+<li><a href="https://fittoprompt.com/study-guides/i-cut-the-internet-and-let-ai-read-the-file-study.html" data-study-guide><strong>I Cut the Internet and Let AI Read the File I Could Never Upload</strong></a> — Nate B Jones air-gaps a laptop, runs GPT-OSS Safeguard 20B locally in LM Studio, and has it find and mask PII in a sensitive contract with the network off. The guide covers model choice, hardware, and how to prepare the files, plus how Microsoft, Discovery Bank, and Bayer are running the enterprise version of the same offline-AI idea.</li>
+</ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
