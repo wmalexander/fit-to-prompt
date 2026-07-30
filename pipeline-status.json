@@ -1,29 +1,33 @@
 {
-  "date": "2026-07-29",
+  "date": "2026-07-30",
   "fetch": {
     "status": "complete",
-    "completedAt": "2026-07-29T00:00:00Z",
-    "candidateCount": 110,
-    "sourcesChecked": 78
+    "completedAt": "2026-07-30T00:00:00Z",
+    "candidateCount": 30,
+    "sourcesChecked": 74
   },
   "review": {
     "status": "complete",
-    "completedAt": "2026-07-29T09:41:22Z",
+    "completedAt": "2026-07-30T09:49:22Z",
     "approved": 20,
     "mode": "auto"
   },
   "build": {
-    "status": "complete",
-    "completedAt": "2026-07-29T00:00:00Z",
+    "status": "in-progress",
+    "currentPhase": "upload",
+    "startedAt": "2026-07-30T09:52:55Z",
     "completedSubPhases": [
+      "study-guides",
       "html",
       "digest",
       "podcast",
-      "layout-review",
-      "upload",
-      "email"
+      "layout-review"
     ],
-    "notes": "study-guides skipped (both YouTube URLs were <40s Shorts); layout-review skipped (Chrome MCP unavailable)"
+    "note": "S3 uploads deferred: AWS SSO token expired, publishing via GitHub Pages",
+    "skipped": [
+      "layout-review: Chrome MCP tools unavailable in headless run",
+      "s3-upload: AWS SSO token expired"
+    ]
   },
   "lastError": null
 }
