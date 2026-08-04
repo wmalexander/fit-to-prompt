@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - Anthropic Ships Claude Opus 5 - August 4, 2026</title>
+  <meta name="description" content="Daily AI news roundup — August 4, 2026. Anthropic ships Claude Opus 5 with frontier scores at half the price of Fable 5, Dario Amodei says the company never asked for an open-weights ban, Cognizant trains 30,000 associates on Claude, Steve Yegge explains how a "just two more things" tic destroyed Gas Town, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #88">
+  <meta property="og:description" content="Daily AI news roundup — August 4, 2026. Anthropic ships Claude Opus 5 with frontier scores at half the price of Fable 5, Dario Amodei says the company never asked for an open-weights ban, Cognizant trains 30,000 associates on Claude, Steve Yegge explains how a "just two more things" tic destroyed Gas Town, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-08-04.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-08-04.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    .yt-thumb-wrap { position: relative; display: block; }
+    .yt-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; }
+    .yt-play::after { content: ''; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #ffffff; margin-left: 3px; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Tuesday, August 4, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 88</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>20 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models</div>
+          <a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <img src="https://cdn.sanity.io/images/4zrzovbb/website/54b7ab1d2c2521f83ae5d2da5f9d99321c370d24-2880x1620.png" alt="Anthropic's announcement image for Claude Opus 5" class="w-full aspect-video object-cover mb-4" style="background:#f1f1f1;">
+            <h2 class="headline-lead mb-3">Anthropic Ships Claude Opus 5 at Half the Price of Its Own Frontier Model</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; Jul 24</p>
+        </div>
+        <div>
+          <div class="newspaper-body">
+            <p>Opus 5 lands at $5 per million input tokens and $25 per million output tokens, unchanged from Opus 4.8, and Anthropic's claim is that it delivers something close to Claude Fable 5 intelligence at half the price. The benchmark table is unusually lopsided. On Frontier-Bench v0.1 it surpasses every other model and more than doubles Opus 4.8 at a lower cost per task. On CursorBench 3.2 it lands within 0.5 percent of Fable 5's peak at half the cost per task. On ARC-AGI 3 it scores three times the next-best model. On OSWorld 2.0 it beats Fable 5's best result at just over a third of the cost.</p>
+            <p>The tier improvements are where the agent story lives. New beta features let tools change mid-conversation and let the model fall back automatically to an alternative when a safety classifier intervenes, both of which matter far more to a process that runs for hours than to a chat turn. Life-sciences gains are concrete: 10.2 percentage points over Opus 4.8 on organic chemistry, 7.7 on protein prediction. A Fast mode runs roughly 2.5 times the default speed at double the base price.</p>
+            <p>Anthropic also publishes the number it did not have to. Opus 5 scores 2.3 on automated behavioral audits, which the company describes as the lowest of recent models, and it still trails Mythos 5 on cybersecurity exploitation tasks. Read that next to Dario Amodei's open-weights essay elsewhere in this issue, which argues that every sufficiently capable model should face mandatory pre-release testing for exactly these categories. The company is making its own case by showing its own scorecard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <!-- SPAN-2: Cartoon + open-weights position -->
+      <div class="story-span-2">
+        <div class="kicker">AI Policy &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-08-04-cartoon.png" alt="Two office workers stand behind a seated colleague watching an agent's fully checked-off progress list end with 'just two more things...', months crossed off the wall calendar behind them" class="w-full" style="display:block;">
+            <p class="font-serif text-xs text-gray-500 italic mt-2 px-2">"It finished the task in April. It has been finishing it ever since."</p>
+          </div>
+          <div>
+            <div class="kicker">AI Policy</div>
+            <a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">Dario Amodei: We Never Asked for a Ban on Open Weights</h3>
+            </a>
+            <p class="byline mb-2">Anthropic &middot; Jul 27</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Amodei writes to correct what he says is a misreading of Anthropic's position: the company has never advocated banning open-weights models, and models without dangerous capabilities provide real public value. His two actual concerns are authoritarian governments outbuilding the US for military or population-control purposes, and powerful models being turned to cyber or biological attack. His prescription is three specific measures rather than a ban. Restrict chip sales to China and pursue smuggling, because limited domestic chip capacity is the binding constraint on Chinese frontier training. Treat industrial-scale distillation as a policy problem, since distillation lets a chip-constrained lab exceed what its silicon should allow. And require every sufficiently capable model, open or closed, to pass safety testing for cyber, bio, and alignment risk before release. He grants parts of the industry's open letter, including the competition and customer-control arguments, but disputes the claim that open models are inherently safer, citing attacker-defender asymmetry in biology. The question, he argues, should be settled by testing rather than assumed in advance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">Enterprise</div>
+        <a href="https://www.anthropic.com/news/cognizant-anthropic" target="_blank" rel="noopener" class="story-link">
+          <img src="https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg" alt="Anthropic and Cognizant partnership announcement" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Cognizant Trains 30,000 Associates on Claude and Embeds It Across Its Platforms</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Jul 27</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Cognizant becomes a Global Premier Partner in the Claude Partner Network and is wiring Claude into Flowsource, Neuro AI Engineering, and Neuro IT Ops. Flowsource now runs Claude Code alongside human engineers in its Spec-Driven Development module, steered by project specs, coding standards, and architectural blueprints. The client numbers are the interesting part: a customer experience portal for a global manufacturer delivered in six months; an agentic contract-intelligence system for a biopharmaceutical company cutting review time by up to 40 percent while pushing extraction accuracy above 88 percent; a risk-navigation tool that turns hours of underwriter work into minutes and saves roughly eight hours per person per week. Cognizant's CEO frames the whole thing bluntly: "AI capability is rising faster than enterprises can absorb it, and that gap is the defining problem of this moment." Thirty thousand trained associates is one answer to an absorption problem.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">Developer Tools</div>
+        <a href="https://simonwillison.net/2026/Aug/4/steve-yegge/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Steve Yegge on Why Gas Town Fell Apart: "Just Two More Things"</h3>
+        </a>
+        <p class="byline mb-2">Simon Willison's Weblog &middot; Aug 4</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Simon Willison quotes Steve Yegge on the collapse of Gas Town, a system built to be reusable that in practice only ever built itself. It worked through Opus 4.6 and then came apart at the seams with 4.7. Yegge names the specific behavior that broke it: a "just two more things" tic that kept the model from ever converging on being ready to do real work, so it went on modifying Gas Town instead of finishing anything. Other problems contributed, but that is the one he identifies as the breaking point, and it persisted in the versions that followed. It is a useful counterweight to a benchmark table. A model can be measurably better at nearly everything and still be unusable for a long-running agentic loop because of one convergence habit, and no evaluation suite in this issue reports on that.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">Energy</div>
+        <a href="https://fortune.com/article/price-of-oil-08-04-2026/" target="_blank" rel="noopener" class="story-link">
+          <img src="https://fortune.com/img-assets/wp-content/uploads/2026/08/Price-of-Oil-August-4.jpg?resize=1200,600" alt="Fortune's daily oil price report for August 4, 2026" class="w-full aspect-video object-cover mb-3" style="background:#f1f1f1;">
+          <h3 class="headline-feature mb-2">Oil at $89.81, Up Nearly 30 Percent Year Over Year</h3>
+        </a>
+        <p class="byline mb-2">Fortune &middot; Aug 4</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Fortune's daily Brent reading puts crude at $89.81 a barrel, up $2.43 from yesterday's $87.38, up 23.62 percent on the month from $72.65, and up 29.57 percent on the year from $69.31. The piece is a straightforward explainer, noting that crude accounts for more than half the price at the pump and that oil moves shift natural gas demand inversely as industries substitute fuels on relative cost. It matters here for a boring reason. The data centers under construction across this issue run on electricity, and a fuel complex up thirty percent in a year is one of the input costs nobody puts in a benchmark table.</p>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="story-block">
+  <style>
+    .ws-wrap { font-family: 'Inter', sans-serif; color: #1a1a1a; }
+    .ws-head { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: #8B0000; border-bottom: 2px solid #1a1a1a; padding-bottom: 4px; margin: 0 0 6px; }
+    .ws-sub { font-size: 11px; line-height: 1.4; color: #555; margin: 0 0 8px; }
+    .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 0; border: 1px solid #1a1a1a; width: 100%; user-select: none; -webkit-user-select: none; touch-action: none; }
+    .ws-cell { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border: 1px solid #d1d5db; font-size: clamp(9px, 2.6vw, 13px); font-weight: 600; line-height: 1; cursor: pointer; background: #fff; }
+    .ws-cell.ws-sel { background: #f1d9d9; }
+    .ws-cell.ws-hit { background: #8B0000; color: #fff; border-color: #8B0000; }
+    .ws-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; }
+    .ws-list li { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .ws-list li.ws-done { text-decoration: line-through; color: #999; }
+    .ws-bar { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+    .ws-btn { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 4px 10px; background: #fff; color: #8B0000; border: 1px solid #8B0000; cursor: pointer; }
+    .ws-btn:hover { background: #8B0000; color: #fff; }
+    .ws-count { font-size: 10px; color: #555; letter-spacing: .06em; }
+  </style>
+  <div class="ws-wrap">
+    <h3 class="ws-head">Word Search</h3>
+    <p class="ws-sub">Seven terms from today's stories. Click a starting letter, then the ending letter. Words run across, down, and diagonally.</p>
+    <div class="ws-grid" id="ws-grid"></div>
+    <ul class="ws-list" id="ws-list"></ul>
+    <div class="ws-bar">
+      <span class="ws-count" id="ws-count">0 of 7 found</span>
+      <button class="ws-btn" id="ws-reveal" type="button">Reveal</button>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var wsRows = [
+      "WEIGHTSRDS",
+      "RZMLKBVNQA",
+      "TOKENSDYRF",
+      "LWFXJMRTHE",
+      "CVAGENTKDT",
+      "HJRDWZLFMY",
+      "IBNVSKRJDW",
+      "PLXUMTGVZK",
+      "SFPRHCNEBW",
+      "DOYMKLSRVJ"
+    ];
+    var wsWords = [
+      { w: "WEIGHTS", r: 0, c: 0, dr: 0, dc: 1 },
+      { w: "TOKENS",  r: 2, c: 0, dr: 0, dc: 1 },
+      { w: "AGENT",   r: 4, c: 2, dr: 0, dc: 1 },
+      { w: "SAFETY",  r: 0, c: 9, dr: 1, dc: 0 },
+      { w: "CHIPS",   r: 4, c: 0, dr: 1, dc: 0 },
+      { w: "BENCH",   r: 8, c: 8, dr: 0, dc: -1 },
+      { w: "OPUS",    r: 9, c: 1, dr: -1, dc: 1 }
+    ];
+    var wsGrid = document.getElementById("ws-grid");
+    var wsList = document.getElementById("ws-list");
+    var wsCount = document.getElementById("ws-count");
+    var wsBtn = document.getElementById("ws-reveal");
+    var wsCells = [];
+    var wsStart = null;
+    var wsFound = {};
+    var wsDragging = false;
+    for (var r = 0; r < 10; r++) {
+      wsCells[r] = [];
+      for (var c = 0; c < 10; c++) {
+        var d = document.createElement("div");
+        d.className = "ws-cell";
+        d.textContent = wsRows[r].charAt(c);
+        d.setAttribute("data-r", r);
+        d.setAttribute("data-c", c);
+        wsGrid.appendChild(d);
+        wsCells[r][c] = d;
+      }
+    }
+    wsWords.forEach(function (e) {
+      var li = document.createElement("li");
+      li.id = "ws-w-" + e.w;
+      li.textContent = e.w;
+      wsList.appendChild(li);
+    });
+    function wsClearSel() {
+      for (var r = 0; r < 10; r++) {
+        for (var c = 0; c < 10; c++) { wsCells[r][c].classList.remove("ws-sel"); }
+      }
+    }
+    function wsPath(a, b) {
+      var dr = b.r - a.r, dc = b.c - a.c;
+      if (dr === 0 && dc === 0) { return [a]; }
+      if (dr !== 0 && dc !== 0 && Math.abs(dr) !== Math.abs(dc)) { return null; }
+      var n = Math.max(Math.abs(dr), Math.abs(dc));
+      var sr = dr === 0 ? 0 : dr / Math.abs(dr);
+      var sc = dc === 0 ? 0 : dc / Math.abs(dc);
+      var out = [];
+      for (var i = 0; i <= n; i++) { out.push({ r: a.r + sr * i, c: a.c + sc * i }); }
+      return out;
+    }
+    function wsMark(entry) {
+      if (wsFound[entry.w]) { return; }
+      wsFound[entry.w] = true;
+      for (var i = 0; i < entry.w.length; i++) {
+        wsCells[entry.r + entry.dr * i][entry.c + entry.dc * i].classList.add("ws-hit");
+      }
+      var li = document.getElementById("ws-w-" + entry.w);
+      if (li) { li.className = "ws-done"; }
+      var n = Object.keys(wsFound).length;
+      wsCount.textContent = n + " of 7 found";
+    }
+    function wsCheck(a, b) {
+      for (var i = 0; i < wsWords.length; i++) {
+        var e = wsWords[i];
+        var end = { r: e.r + e.dr * (e.w.length - 1), c: e.c + e.dc * (e.w.length - 1) };
+        var fwd = a.r === e.r && a.c === e.c && b.r === end.r && b.c === end.c;
+        var rev = b.r === e.r && b.c === e.c && a.r === end.r && a.c === end.c;
+        if (fwd || rev) { wsMark(e); return true; }
+      }
+      return false;
+    }
+    function wsCoord(el) {
+      if (!el || !el.classList.contains("ws-cell")) { return null; }
+      return { r: parseInt(el.getAttribute("data-r"), 10), c: parseInt(el.getAttribute("data-c"), 10) };
+    }
+    function wsPreview(a, b) {
+      wsClearSel();
+      var p = wsPath(a, b);
+      if (!p) { return; }
+      p.forEach(function (x) { wsCells[x.r][x.c].classList.add("ws-sel"); });
+    }
+    function wsResolve(a, b) {
+      wsClearSel();
+      var p = wsPath(a, b);
+      if (p) { wsCheck(a, b); }
+      wsStart = null;
+    }
+    wsGrid.addEventListener("mousedown", function (ev) {
+      var a = wsCoord(ev.target);
+      if (!a) { return; }
+      ev.preventDefault();
+      if (wsStart) { wsResolve(wsStart, a); return; }
+      wsDragging = true;
+      wsStart = a;
+      wsPreview(a, a);
+    });
+    wsGrid.addEventListener("mouseover", function (ev) {
+      if (!wsDragging || !wsStart) { return; }
+      var b = wsCoord(ev.target);
+      if (b) { wsPreview(wsStart, b); }
+    });
+    document.addEventListener("mouseup", function (ev) {
+      if (!wsDragging || !wsStart) { return; }
+      wsDragging = false;
+      var b = wsCoord(ev.target);
+      if (!b) { return; }
+      if (b.r === wsStart.r && b.c === wsStart.c) { return; }
+      wsResolve(wsStart, b);
+    });
+    wsGrid.addEventListener("touchstart", function (ev) {
+      var t = ev.changedTouches[0];
+      var a = wsCoord(document.elementFromPoint(t.clientX, t.clientY));
+      if (!a) { return; }
+      ev.preventDefault();
+      wsStart = a;
+      wsPreview(a, a);
+    }, { passive: false });
+    wsGrid.addEventListener("touchmove", function (ev) {
+      if (!wsStart) { return; }
+      ev.preventDefault();
+      var t = ev.changedTouches[0];
+      var b = wsCoord(document.elementFromPoint(t.clientX, t.clientY));
+      if (b) { wsPreview(wsStart, b); }
+    }, { passive: false });
+    wsGrid.addEventListener("touchend", function (ev) {
+      if (!wsStart) { return; }
+      var t = ev.changedTouches[0];
+      var b = wsCoord(document.elementFromPoint(t.clientX, t.clientY));
+      if (!b) { wsClearSel(); wsStart = null; return; }
+      if (b.r === wsStart.r && b.c === wsStart.c) { return; }
+      wsResolve(wsStart, b);
+    });
+    wsBtn.addEventListener("click", function () {
+      wsClearSel();
+      wsStart = null;
+      wsWords.forEach(wsMark);
+    });
+  })();
+  </script>
+      </div>
+
+      <!-- WIRE BRIEFS -->
+      <div class="story-wide">
+        <div class="wire-col">
+          <div class="section-label" style="border-top:none;padding-top:0;">The Wire</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8">
+          <div class="wire-item">
+            <a href="https://www.nytimes.com/2026/08/04/technology/ai-washington-regulation-whiplash.html" target="_blank" rel="noopener" class="story-link">
+              <h4>White House Whipsaws Silicon Valley (and Itself) Over A.I. Rules</h4>
+            </a>
+            <p>The Times on Washington reversing itself on AI rules fast enough that the industry cannot plan against it. Paywalled, so this one is a headline and a pointer.</p>
+            <div class="wire-source">The New York Times &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/china-s-ai-blitz-creates-death-zone-for-rival-us-model-makers" target="_blank" rel="noopener" class="story-link">
+              <h4>China's AI Blitz Creates 'Death Zone' for Rival US Model Makers</h4>
+            </a>
+            <p>Bloomberg's framing of what a run of aggressively priced, openly released Chinese models does to the middle of the US market. The obvious companion to Amodei's essay above.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/features/2026-08-04/big-ai-bets-divide-venture-capital-leaving-smaller-funds-behind" target="_blank" rel="noopener" class="story-link">
+              <h4>Big AI Bets Divide Venture Capital, Leaving Smaller Funds Behind</h4>
+            </a>
+            <p>A Bloomberg feature on the split in venture capital between funds large enough to write AI-scale checks and everyone else.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/huawei-s-top-scientist-warns-of-chip-limit-nvidia-will-soon-face" target="_blank" rel="noopener" class="story-link">
+              <h4>Huawei's Top Scientist Warns of Chip Limit Nvidia Will Soon Face</h4>
+            </a>
+            <p>Huawei's chief scientist argues Nvidia is approaching a physical ceiling. Worth reading against the chip-supply argument at the center of Anthropic's open-weights position.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/nab-tests-ai-agents-in-plan-to-deploy-tech-to-banking-customers" target="_blank" rel="noopener" class="story-link">
+              <h4>NAB Sticks to Safer US AI Models as Chinese Rivals Kept At Bay</h4>
+            </a>
+            <p>National Australia Bank is testing AI agents for customer-facing banking and, per Bloomberg, keeping Chinese models out of the shortlist. Procurement is where the geopolitics actually bites.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/cxmt-narrows-gap-with-sk-hynix-and-samsung-in-smartphone-memory" target="_blank" rel="noopener" class="story-link">
+              <h4>CXMT Narrows Gap With SK Hynix and Samsung in Smartphone Memory</h4>
+            </a>
+            <p>China's CXMT is closing on the Korean incumbents in smartphone memory, another datapoint in the domestic-silicon question that export controls are meant to settle.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/videos/2026-08-04/blackrock-overweight-ai-despite-higher-risks-li-says-video" target="_blank" rel="noopener" class="story-link">
+              <h4>BlackRock Overweight AI Despite Higher Risks, Li Says</h4>
+            </a>
+            <p>A Bloomberg video segment: BlackRock is staying overweight AI while acknowledging the risk profile has gotten worse, not better.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/apple-briefly-takes-telegram-off-app-store-over-abusive-content" target="_blank" rel="noopener" class="story-link">
+              <h4>Apple Briefly Removes Telegram From the App Store Over Abusive Content</h4>
+            </a>
+            <p>Apple pulled Telegram over child abuse content and then restored it. A reminder that platform moderation enforcement still runs on the app store chokepoint.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/chinese-startup-ai-robotics-is-said-to-consider-hong-kong-ipo" target="_blank" rel="noopener" class="story-link">
+              <h4>Chinese Startup AI&sup2; Robotics Is Said to Consider Hong Kong IPO</h4>
+            </a>
+            <p>Another Chinese AI company reportedly weighing a Hong Kong listing rather than a US one.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/alibaba-backed-3d-modeling-startup-vast-is-said-to-weigh-hk-ipo" target="_blank" rel="noopener" class="story-link">
+              <h4>Alibaba-Backed 3D-Modeling Startup Vast Is Said to Weigh HK IPO</h4>
+            </a>
+            <p>Vast, an Alibaba-backed 3D modeling startup, is said to be considering a Hong Kong IPO. Two of these in one day is a pattern, not a coincidence.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/mediatek-backed-african-fintech-palmpay-eyes-hong-kong-ipo" target="_blank" rel="noopener" class="story-link">
+              <h4>MediaTek-Backed African Fintech PalmPay Eyes Hong Kong IPO</h4>
+            </a>
+            <p>PalmPay, backed by MediaTek, is looking at Hong Kong too. The listing venue of choice for anything with a chip company on the cap table right now.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/blackrock-launches-tokenized-money-market-funds-in-europe" target="_blank" rel="noopener" class="story-link">
+              <h4>BlackRock Launches Tokenized Money Market Funds in Europe</h4>
+            </a>
+            <p>BlackRock brings tokenized money market funds to Europe, continuing the slow institutional migration of plumbing onto chains.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/apple-s-india-sales-top-10-billion-on-widening-retail-push" target="_blank" rel="noopener" class="story-link">
+              <h4>Apple's India Sales Top $10 Billion on Widening Retail Push</h4>
+            </a>
+            <p>Apple crosses $10 billion in Indian sales as it widens its retail footprint.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-04/modi-seeks-sweeping-tax-cuts-for-electronics-firms-global-funds" target="_blank" rel="noopener" class="story-link">
+              <h4>Modi Seeks Sweeping Tax Cuts for Electronics Firms, Global Funds</h4>
+            </a>
+            <p>India is courting electronics manufacturing and global capital with broad tax cuts, the supply-chain half of the story above.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/videos/2026-08-04/bofa-japan-determined-to-break-yen-at-155-video" target="_blank" rel="noopener" class="story-link">
+              <h4>BofA: Japan Determined to Break Yen at 155</h4>
+            </a>
+            <p>A Bloomberg video on Bank of America's read that Japan intends to defend the yen at 155. Macro backdrop for every dollar-denominated compute contract in Asia.</p>
+            <div class="wire-source">Bloomberg &middot; Aug 4</div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="subscribe-section my-8">
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic published a benchmark table today that reads like a victory lap and a confession at the same time. Claude Opus 5 more than doubles Opus 4.8 on Frontier-Bench, lands within half a percent of Fable 5 on CursorBench at half the cost, and triples the next-best model on ARC-AGI 3. It also scores 2.3 on automated behavioral audits, which the company itself calls the lowest of recent models, and it still trails Mythos 5 on cybersecurity exploitation. Three days earlier the same company's CEO published an essay arguing that every sufficiently capable model, open or closed, should be required to pass exactly those tests before release. Today's issue is what happens when a lab argues for a rule and then publishes its own report card under it, while the rest of the market spends the day pricing chips, listings, and oil.</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label"><span class="digest-podcast-icon">&#9654;</span><span>Listen to the Digest</span><span class="digest-podcast-duration">~9 min</span></div>
+          <audio controls preload="none" class="digest-podcast-audio"><source src="assets/2026-08-04-podcast.mp3" type="audio/mpeg"></audio>
+        </div>
+
+
+        <h4 class="digest-theme">The Model</h4>
+        <ul class="digest-bullets">
+          <li><strong>Opus 5 is a price argument as much as a capability one.</strong> It ships at $5 per million input tokens and $25 per million output, identical to Opus 4.8, and Anthropic's framing is frontier intelligence close to Fable 5 at half the cost. The specific claims: more than double Opus 4.8 on Frontier-Bench v0.1 at lower cost per task, within 0.5 percent of Fable 5's peak on CursorBench 3.2 at half the cost per task, three times the next-best score on ARC-AGI 3, roughly 1.5x the next-best pass rate on Zapier AutomationBench, and a win over Fable 5's best OSWorld 2.0 result at just over a third of the cost.</li>
+          <li><strong>The new features are aimed at long-running agents, not chat.</strong> Two beta additions matter disproportionately: tools can now change mid-conversation, and the model can fall back automatically to an alternative when a safety classifier intervenes. Neither does much for a single question. Both are load-bearing for a process that runs for hours and cannot afford to die on a tool swap or a refusal.</li>
+          <li><strong>The domain gains are concrete.</strong> 10.2 percentage points over Opus 4.8 on organic chemistry, 7.7 on protein prediction. A Fast mode runs about 2.5 times default speed at double the base price. Availability spans Claude.ai, Claude Code, Claude Cowork, and the API.</li>
+          <li><strong>The safety numbers are in the same post.</strong> 2.3 on automated behavioral audits, described as the lowest of recent models, and a standing gap behind Mythos 5 on cyber exploitation. Publishing the weak row alongside the strong ones is a choice, and it is the same choice the open-weights essay is asking regulators to make mandatory.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Policy</h4>
+        <ul class="digest-bullets">
+          <li><strong>Amodei's correction has three specific asks, and none of them is a ban.</strong> He states plainly that Anthropic has never advocated banning open-weights models, and that models without dangerous capabilities deliver real public value. What he wants instead: restrict chip sales to China and pursue smuggling; treat industrial-scale distillation as a policy problem; and require pre-release safety testing on cyber, biological, and alignment risk for every sufficiently capable model, open or closed.</li>
+          <li><strong>The chip argument is the load-bearing one.</strong> His case rests on the claim that China's limited domestic chip production is what actually prevents it from training more powerful models, and that distillation is the workaround that lets a chip-constrained lab exceed what its silicon should allow. Everything else in the essay follows from that premise. If the premise weakens, the policy weakens with it.</li>
+          <li><strong>He concedes ground and then disputes the core safety claim.</strong> He agrees with parts of the industry's open letter, including that open weights help competition and give customers control. He rejects the assertion that open models are inherently safer, citing attacker-defender asymmetry in biology, and argues the question should be settled by rigorous testing rather than assumed in advance.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Absorption Problem</h4>
+        <ul class="digest-bullets">
+          <li><strong>Cognizant's number is 30,000 trained associates.</strong> The firm becomes a Global Premier Partner in the Claude Partner Network and embeds Claude into Flowsource, Neuro AI Engineering, and Neuro IT Ops. Flowsource's Spec-Driven Development module now runs Claude Code alongside engineers, directed by project specifications, coding standards, and architectural blueprints, which is a notably more structured deployment than "give everyone a chat window."</li>
+          <li><strong>The client results are specific enough to check.</strong> A customer experience portal for a global manufacturer delivered in six months. An agentic contract-intelligence system for a biopharmaceutical company cutting review time by up to 40 percent while raising extraction accuracy above 88 percent. A risk-navigation tool saving underwriters roughly eight hours per person per week.</li>
+          <li><strong>The framing is the quote worth keeping.</strong> Cognizant's CEO: "AI capability is rising faster than enterprises can absorb it, and that gap is the defining problem of this moment." A services firm whose business is that gap is not a disinterested witness, but the diagnosis holds anyway, and today's Opus 5 release widened it again.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Thing Benchmarks Don't Measure</h4>
+        <ul class="digest-bullets">
+          <li><strong>Steve Yegge's Gas Town post-mortem names a failure mode no eval reports.</strong> Gas Town was built to be reusable and in practice only ever built itself. It worked through Opus 4.6 and came apart with 4.7. The culprit Yegge identifies is a "just two more things" tic: the model never converged on being ready to do real work, so it kept modifying the harness instead of finishing the job. Other issues contributed; that one he calls the breaking point, and it persisted in later versions.</li>
+          <li><strong>This is the counterweight to every number above.</strong> A model can improve on organic chemistry, computer use, and agentic pass rates simultaneously and still be unusable in a long-running loop because of one convergence habit. Opus 5's headline feature list is aimed squarely at long-running agents. Nothing in the published evaluation suite would catch the specific defect that killed Gas Town.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Rest of the Board</h4>
+        <ul class="digest-bullets">
+          <li><strong>The China stories cluster, and they all touch the same premise.</strong> Bloomberg reports China's AI blitz creating a "death zone" for rival US model makers; CXMT narrowing the gap with SK Hynix and Samsung in smartphone memory; Huawei's top scientist warning of a chip limit Nvidia will soon face; and National Australia Bank sticking to US models while keeping Chinese rivals out. Four separate stories, one question underneath: how durable is the chip constraint that Amodei's entire policy rests on. These are paywalled, so treat the headlines as pointers rather than evidence.</li>
+          <li><strong>The capital stories cluster too.</strong> Big AI bets are splitting venture capital and leaving smaller funds behind. BlackRock is staying overweight AI despite higher risk and launching tokenized money market funds in Europe. Two Asian AI-adjacent companies, AI&sup2; Robotics and Alibaba-backed Vast, are both said to be weighing Hong Kong listings on the same day, alongside MediaTek-backed PalmPay. Hong Kong is quietly becoming the default venue.</li>
+          <li><strong>Washington is reversing itself faster than industry can plan.</strong> The Times headline is "White House Whipsaws Silicon Valley (and Itself) Over A.I. Rules." Regulatory whiplash is its own cost, separate from whatever the rules eventually say, and it lands the same week a US lab is publicly asking for a mandatory testing regime.</li>
+          <li><strong>Oil at $89.81 is up 29.57 percent year over year.</strong> Brent rose $2.43 from yesterday's $87.38 and is up 23.62 percent on the month from $72.65. Crude is more than half the price at the pump and shifts natural gas demand inversely as industries substitute on cost. The data center buildout is an electricity story before it is anything else, and this is the input cost that never appears in a model card.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Throughline</h4>
+        <p>The interesting thing about today is that Anthropic argued both sides of its own case, in public, within four days. The open-weights essay says the industry should not be trusted to self-certify: every sufficiently capable model, whoever ships it, should have to pass cyber, biological, and alignment testing before release. The Opus 5 announcement then publishes exactly that kind of result, including the unflattering rows. Opus 5 scores 2.3 on automated behavioral audits, the lowest of recent models, and it remains behind Mythos 5 on cyber exploitation tasks. That is a company demonstrating the regime it wants imposed, using itself as the worked example. It is also, conveniently, a regime that a well-resourced lab with an existing evaluation pipeline can absorb more easily than a small open-weights team can.</p>
+
+        <p>The chip premise is where the argument is most exposed. Amodei's three policies all reduce to one claim: China cannot train frontier models without US silicon, so control the silicon and control the frontier. Today's wire is four separate stories poking at that claim from different angles. CXMT is closing on Samsung and SK Hynix in memory. Huawei's chief scientist is arguing Nvidia is approaching a physical ceiling, which would mean the gap stops widening on its own. Chinese labs are producing enough pressure that Bloomberg is describing a "death zone" for US model makers in the middle of the market. None of that is proof, and all of it is behind a paywall, but the direction of every one of those headlines runs against the premise. If domestic capacity arrives sooner than the policy assumes, export controls become a delay rather than a constraint, and delay is a much weaker thing to build a safety regime on.</p>
+
+        <p>Then there is Yegge, who is not writing about policy at all and who quietly undermines the whole evaluation frame. Gas Town died of a behavioral tic. Not a capability shortfall, not a safety failure, not a benchmark regression: a model that would not stop adding two more things. Opus 5's headline improvements are aimed at precisely the long-running agentic workloads where that failure mode is fatal, and its published numbers say nothing about it. The whole apparatus being proposed as the gate on model releases measures capability and measures harm. It does not measure whether the thing converges. Cognizant's CEO says capability is rising faster than enterprises can absorb it. Yegge's post is a specific example of why: the gap is not only training and change management, it is that the useful properties of an agent are not the properties anyone is scoring.</p>
+
+        <p>Put the three together and the shape of the day is a lab that has gotten very good at measuring what it can measure, arguing that everyone should be measured that way, while the two most consequential uncertainties, whether the chip constraint holds and whether the models actually finish anything, sit outside the measurement entirely.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <p>The last two years of AI governance have run on an assumption that is starting to show its seams: that frontier capability lives inside a small number of legible, jurisdictionally reachable organizations, and that a government wanting to steer AI can do so by regulating them. Every serious proposal, including the one Amodei published this week, inherits that assumption. Mandatory pre-release testing works if there is a release event, a releaser, and a jurisdiction. Chip controls work if compute is the binding constraint and the chokepoint is Western. Both are true today. Neither is a law of nature.</p>
+
+        <p>What today's board shows is the assumption being tested from several directions at once. Memory manufacturing gaps narrowing, a Huawei scientist arguing Nvidia is nearing a physical wall, Chinese labs squeezing the US middle market, and capital reorganizing itself around Hong Kong listings rather than US ones. None of those is a frontier-model story. All of them are stories about whether the infrastructure underneath the governance assumption stays where the governance assumes it is. If it moves, the mandatory-testing proposal does not become wrong so much as it becomes local: a rule that binds American labs and describes nothing about the models most of the world can download.</p>
+
+        <p>The second thing worth naming is the widening gap between what the industry measures and what it sells. Opus 5's card is a genuinely impressive document, and it is a document about a model's performance on tests. The thing being sold is an agent that runs for hours inside somebody's business process. Cognizant's numbers are the closest thing in today's issue to evidence about that second thing, and they are vendor-supplied case studies: 40 percent off contract review, eight hours a week per underwriter. Yegge's is the closest thing to evidence against it, and it is one developer's post-mortem. Between an evaluation suite that does not test convergence and a market that buys on evaluation suites, there is room for a lot of disappointed enterprises, and Cognizant is quite explicitly building a business in that room.</p>
+
+        <h4 class="digest-theme">What to Watch</h4>
+        <ul class="digest-bullets">
+          <li><strong>Whether independent evaluations reproduce Opus 5's cost-per-task claims.</strong> Nearly every headline number in the announcement is a ratio against cost, not a raw score: half the cost per task on CursorBench, a third the cost on OSWorld, lower cost per task on Frontier-Bench. Ratios are more fragile than scores, because they depend on token efficiency under someone else's harness. If third-party runs show the raw capability but not the economics, the pitch changes from "frontier at half price" to "frontier."</li>
+          <li><strong>Whether anyone proposes a convergence benchmark.</strong> Yegge's failure mode is specific, reproducible in principle, and completely unmeasured. The gap between "scores well on agentic benchmarks" and "finishes a long-running job without being babysat" is now the most commercially important unmeasured property in the field. The first lab to publish a credible number for it will reset how these announcements are read.</li>
+          <li><strong>Whether the chip-constraint premise survives the next two quarters of Chinese manufacturing news.</strong> CXMT in memory and Huawei's ceiling argument are both leading indicators, not conclusions. Watch for independent confirmation of Chinese process-node progress rather than vendor claims. Anthropic's entire policy proposal is downstream of that one question, and so is the case for treating export controls as a safety instrument rather than a trade one.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+
+</body>
+</html>
