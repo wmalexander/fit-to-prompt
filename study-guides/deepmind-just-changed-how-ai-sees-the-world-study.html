@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepMind Just Changed How AI Sees The World — Study Page</title>
+
+    <!-- Open Graph / Social Sharing Meta Tags -->
+    <meta property="og:title" content="DeepMind Just Changed How AI Sees The World — Study Guide">
+    <meta property="og:description" content="Interactive study guide for Two Minute Papers' breakdown of DeepMind's Gemma 4 and its native multimodal architecture: image patches and 40ms audio chunks fed straight into the main transformer.">
+    <meta property="og:image" content="https://img.youtube.com/vi/vO6SWG-jxvE/maxresdefault.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DeepMind Just Changed How AI Sees The World — Study Guide">
+    <meta name="twitter:description" content="Interactive study guide for Two Minute Papers' breakdown of DeepMind's Gemma 4 and its native multimodal architecture: image patches and 40ms audio chunks fed straight into the main transformer.">
+    <meta name="twitter:image" content="https://img.youtube.com/vi/vO6SWG-jxvE/maxresdefault.jpg">
+
+    <!-- General Meta Description -->
+    <meta name="description" content="Interactive study guide for Two Minute Papers' breakdown of DeepMind's Gemma 4 and its native multimodal architecture: image patches and 40ms audio chunks fed straight into the main transformer.">
+    <style>
+/* Study Page Layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.47059;
+    background-color: #fbfbfd;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    overflow: hidden;
+}
+.lesson-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, 32%) 1fr;
+    gap: 24px;
+    height: 100vh;
+    padding: 10px 24px 0 24px;
+    box-sizing: border-box;
+}
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+.left-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+.right-panel {
+    position: relative;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.video-sticky { width: 100%; }
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 8px;
+    padding: 10px 0;
+}
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    color: #1d1d1f;
+}
+.header .subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    color: #86868b;
+    margin: 0;
+}
+.video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid #d2d2d7;
+    background: #000;
+}
+.toc-container {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-bottom: 40px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sections-wrapper { flex: 1; }
+/* Speed Controls */
+.speed-controls {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: white;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.speed-controls-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.speed-label-group {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.speed-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.speed-control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.speed-controls-header label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1d1d1f;
+    margin: 0;
+}
+.speed-btn {
+    padding: 6px 10px;
+    border: 1px solid #d2d2d7;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1d1d1f;
+    transition: all 0.2s ease;
+}
+.speed-btn:hover { background: #f5f5f7; border-color: #b0b0b0; }
+.speed-btn.active { background: #007aff; color: white; border-color: #007aff; }
+.current-speed { font-size: 13px; color: #86868b; font-weight: 500; margin-left: 0; }
+.video-controls-btn {
+    background: none;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #86868b;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.video-controls-btn:hover {
+    background: #f5f5f7;
+    border-color: #007aff;
+    color: #007aff;
+}
+/* Modal Styles */
+.video-controls-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow: hidden;
+}
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #d2d2d7;
+}
+.modal-header h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #86868b;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+.modal-close:hover {
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+.modal-body {
+    padding: 20px 24px;
+}
+.keyboard-shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f7;
+}
+.keyboard-shortcut:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.keyboard-shortcut .key {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 60px;
+    text-align: center;
+    font-family: Monaco, 'Courier New', monospace;
+}
+.keyboard-shortcut .action {
+    color: #1d1d1f;
+    font-size: 15px;
+    flex: 1;
+    margin-left: 16px;
+}
+/* Subsection Styles */
+.subsection-content { display: flex; align-items: center; flex: 1; cursor: pointer; }
+.toggle-button {
+    background-color: transparent;
+    color: #0066cc;
+    border: 1px solid #d2d2d7;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+.toggle-button:hover { background-color: #f5f5f7; border-color: #b0b0b0; }
+.section {
+    background: #fff;
+    margin-bottom: 2px;
+    border-radius: 0;
+    overflow: hidden;
+    border: 1px solid #d2d2d7;
+}
+.section:first-child { border-radius: 12px 12px 0 0; }
+.section:last-child { border-radius: 0 0 12px 12px; margin-bottom: 0; }
+.section:only-child { border-radius: 12px; }
+.section-header {
+    background: #fff;
+    color: #1d1d1f;
+    padding: 20px 56px 20px 24px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #d2d2d7;
+    transition: background-color 0.15s ease;
+}
+.section-header:hover { background-color: #f5f5f7; }
+.section-header.collapsed { border-bottom: none; }
+.section-header::after {
+    content: '';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23666' viewBox='0 0 13 8'%3E%3Cpath d='M1 1l5.5 5.5L12 1'/%3E%3C/svg%3E");
+    transition: transform 0.15s ease;
+}
+.section-header.collapsed::after { transform: translateY(-50%) rotate(-90deg); }
+.section-header .duration { margin: 0 20px 0 0; display: inline-block; }
+.section-content { padding: 0; overflow: hidden; transition: max-height 0.15s ease;}
+.section-content.collapsed { max-height: 0; }
+.subsection {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f5f5f7;
+    transition: background-color 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.subsection:hover { background-color: #f5f5f7; }
+.subsection.current-topic {
+    background-color: #007aff;
+    color: white;
+    border-radius: 8px;
+    margin: 2px 8px;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+}
+.subsection.current-topic .timestamp {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.subsection.current-topic .topic {
+    color: white;
+    font-weight: 500;
+}
+.subsection.current-topic:hover {
+    background-color: #0056b3;
+}
+.subsection:last-child { border-bottom: none; }
+.timestamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: 16px;
+    min-width: 70px;
+    transition: all 0.15s ease;
+    font-variant-numeric: tabular-nums;
+}
+.timestamp:hover { background-color: #e8e8ed; color: #1d1d1f; text-decoration: none; }
+.topic { color: #1d1d1f; font-weight: 400; font-size: 17px; flex: 1; }
+.duration { color: #86868b; font-size: 17px; font-weight: 400; margin-left: 0; }
+/* Control Buttons */
+.control-buttons {
+    display: flex;
+    gap: 12px;
+}
+/* Notes Interface Styles */
+.notes-container {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    background: white;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 70%;
+    align-self: flex-start;
+}
+.notes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #d2d2d7;
+    background: #f9f9f9;
+}
+.notes-header h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+.notes-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.toolbar-divider {
+    width: 1px;
+    height: 20px;
+    background: #d2d2d7;
+    margin: 0 4px;
+}
+.notes-btn {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notes-btn:hover {
+    background: #e8e8ed;
+    border-color: #b0b0b0;
+}
+.notes-btn.active {
+    background: #007aff;
+    color: white;
+    border-color: #007aff;
+}
+.format-btn {
+    font-weight: 600;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    min-width: 36px;
+}
+.notes-content {
+    position: relative;
+    height: 220px;
+}
+.notes-textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 16px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1d1d1f;
+    background: white;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+.notes-textarea::placeholder {
+    color: #86868b;
+}
+.notes-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px 20px;
+    overflow-y: auto;
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1d1d1f;
+}
+.notes-preview h1 { font-size: 24px; font-weight: 600; color: #1d1d1f; margin: 8px 0 12px 0; }
+.notes-preview h2 { font-size: 20px; font-weight: 600; color: #1d1d1f; margin: 8px 0 12px 0; }
+.notes-preview h3 { font-size: 17px; font-weight: 600; color: #1d1d1f; margin: 8px 0 12px 0; }
+.notes-preview p { margin: 12px 0; line-height: 1.6; }
+.notes-preview ul, .notes-preview ol { margin: 12px 0; padding-left: 24px; }
+.notes-preview li { margin: 6px 0; }
+.notes-preview strong { font-weight: 600; color: #1d1d1f; }
+.notes-preview em { font-style: italic; color: #1d1d1f; }
+.notes-preview code {
+    background: #f5f5f7;
+    color: #af52de;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 14px;
+}
+.notes-preview .empty-notes {
+    color: #86868b;
+    font-style: italic;
+    text-align: center;
+    margin-top: 60px;
+}
+.notes-toast {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: #1d1d1f;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.notes-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Study Guide Interface Styles */
+.study-guide-container {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    background: white;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 70%;
+    align-self: flex-start;
+}
+.study-guide-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #d2d2d7;
+    background: #f9f9f9;
+}
+.study-guide-header h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+.study-guide-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.study-guide-btn {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.study-guide-btn:hover {
+    background: #e8e8ed;
+    border-color: #b0b0b0;
+}
+.study-guide-content {
+    position: relative;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.study-guide-text {
+    padding: 16px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1d1d1f;
+}
+.study-guide-text h1 { font-size: 24px; font-weight: 600; color: #1d1d1f; margin: 16px 0 12px 0; }
+.study-guide-text h2 { font-size: 20px; font-weight: 600; color: #1d1d1f; margin: 16px 0 12px 0; }
+.study-guide-text h3 { font-size: 17px; font-weight: 600; color: #1d1d1f; margin: 14px 0 10px 0; }
+.study-guide-text h4 { font-size: 16px; font-weight: 600; color: #1d1d1f; margin: 12px 0 8px 0; }
+.study-guide-text p { margin: 12px 0; line-height: 1.6; }
+.study-guide-text ul, .study-guide-text ol { margin: 12px 0; padding-left: 24px; }
+.study-guide-text li { margin: 6px 0; }
+.study-guide-text strong { font-weight: 600; color: #1d1d1f; }
+.study-guide-text em { font-style: italic; color: #1d1d1f; }
+.study-guide-text code {
+    background: #f5f5f7;
+    color: #af52de;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 14px;
+}
+.study-guide-text hr { border: none; border-top: 2px solid #f5f5f7; margin: 24px 0; }
+.study-guide-toast {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: #1d1d1f;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.study-guide-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Study Guide Focus Modal */
+.study-guide-focus-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.study-guide-focus-modal.show {
+    opacity: 1;
+}
+.study-guide-focus-modal .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.study-guide-focus-modal .modal-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.study-guide-focus-modal .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #d2d2d7;
+    background: #fbfbfd;
+}
+.study-guide-focus-modal .modal-header h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+.study-guide-focus-modal .modal-toolbar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.study-guide-focus-modal .modal-btn {
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1d1d1f;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.study-guide-focus-modal .modal-btn:hover {
+    background: #e8e8ed;
+}
+.study-guide-focus-modal .close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #86868b;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+.study-guide-focus-modal .close-modal:hover {
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+.study-guide-focus-modal .modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    background: white;
+}
+.study-guide-focus-modal .modal-study-guide-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1d1d1f;
+    max-width: none;
+}
+.study-guide-focus-modal .modal-study-guide-text h1,
+.study-guide-focus-modal .modal-study-guide-text h2,
+.study-guide-focus-modal .modal-study-guide-text h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+.study-guide-focus-modal .modal-study-guide-text h1:first-child,
+.study-guide-focus-modal .modal-study-guide-text h2:first-child,
+.study-guide-focus-modal .modal-study-guide-text h3:first-child {
+    margin-top: 0;
+}
+.study-guide-focus-modal .modal-study-guide-text h1 { font-size: 24px; }
+.study-guide-focus-modal .modal-study-guide-text h2 { font-size: 21px; }
+.study-guide-focus-modal .modal-study-guide-text h3 { font-size: 19px; }
+.study-guide-focus-modal .modal-study-guide-text p { margin-bottom: 16px; }
+.study-guide-focus-modal .modal-study-guide-text ul,
+.study-guide-focus-modal .modal-study-guide-text ol { margin-bottom: 16px; padding-left: 24px; }
+.study-guide-focus-modal .modal-study-guide-text li { margin-bottom: 8px; }
+.study-guide-focus-modal .modal-study-guide-text strong { font-weight: 600; }
+.study-guide-focus-modal .modal-study-guide-text em { font-style: italic; }
+.study-guide-focus-modal .modal-study-guide-text code {
+    background: #f5f5f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', Monaco, 'Roboto Mono', Consolas, monospace;
+    font-size: 14px;
+}
+.study-guide-focus-modal .modal-study-guide-text hr {
+    border: none;
+    border-top: 1px solid #d2d2d7;
+    margin: 32px 0;
+}
+/* Notes Focus Modal */
+.notes-focus-modal .modal-notes-textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: transparent;
+}
+.notes-focus-modal .modal-notes-textarea::placeholder {
+    color: #86868b;
+}
+.notes-focus-modal .modal-body {
+    padding: 24px 32px;
+    height: calc(80vh - 80px);
+}
+/* Floating Widget */
+.floating-widget {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 1000;
+    font-size: 14px;
+}
+.widget-btn {
+    background: #34c759;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.widget-btn:hover {
+    background: #30d158;
+}
+.widget-btn.active {
+    background: #007aff;
+}
+.widget-btn.notes-btn {
+    background: #5856d6;
+}
+.widget-btn.notes-btn:hover {
+    background: #4a48c7;
+}
+.widget-btn.notes-btn.active {
+    background: #007aff;
+}
+.widget-youtube-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px 12px;
+    background: #f5f5f7;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.widget-youtube-link:hover {
+    background: #e8e8ed;
+}
+.widget-youtube-link svg {
+    width: 18px;
+    height: 18px;
+}
+@media (max-width: 900px) {
+    .floating-widget {
+        right: 12px;
+        bottom: 12px;
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    .widget-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+/* Responsive */
+@media (max-width: 900px) {
+    body { overflow: hidden; height: 100vh; }
+    .lesson-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 'video' 'content';
+        height: 100vh;
+        padding: 0;
+    }
+    .right-panel {
+        grid-area: video;
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #fbfbfd;
+        padding-bottom: 16px;
+    }
+    .video-sticky { width: 100%; }
+    .left-panel {
+        grid-area: content;
+        height: calc(100vh - (100vw * 9 / 16) - 16px);
+        overflow-y: auto;
+        padding: 10px 16px 0 16px;
+    }
+    .left-scroll, .toc-container { overflow: visible; }
+    .header { gap: 10px; }
+    .header h1, .header .subtitle { font-size: 20px; }
+    .section-header { padding: 16px 48px 16px 20px; font-size: 17px; }
+    .section-header::after { right: 20px; }
+    .section-header .duration { display: block; margin: 2px 0 0 0 !important; padding: 0; text-indent: 0; }
+    .subsection {
+        padding: 12px 20px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        gap: 8px 12px;
+        align-items: center;
+    }
+    .timestamp {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 12px 0 0;
+        min-width: 60px;
+        font-size: 14px;
+        padding: 4px 8px;
+        justify-self: start;
+    }
+    .topic {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.3;
+    }
+    .speed-controls { padding: 12px 16px; }
+    .speed-controls-row {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    .control-buttons {
+        gap: 8px;
+        justify-content: center;
+        order: 1;
+    }
+    .speed-control-group {
+        justify-content: center;
+        order: 2;
+    }
+    .video-controls-btn { display: none; }
+    .toggle-button { display: none; }
+    .notes-container {
+        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        border-radius: 8px;
+    }
+    .notes-header {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .notes-toolbar { gap: 6px; flex-wrap: wrap; }
+    .notes-btn { padding: 6px 8px; font-size: 12px; min-width: 28px; }
+    .notes-content { height: 250px; }
+    .notes-textarea, .notes-preview { padding: 12px 16px; font-size: 14px; }
+    .toolbar-divider { display: none; }
+    .study-guide-container {
+        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        border-radius: 8px;
+    }
+    .study-guide-header { padding: 12px 16px; }
+    .study-guide-btn { padding: 6px 8px; font-size: 12px; min-width: 28px; }
+    .study-guide-content { max-height: 300px; }
+    .study-guide-text { padding: 12px 16px; font-size: 14px; }
+    .study-guide-focus-modal .modal-content {
+        width: 95%;
+        max-height: 95vh;
+        margin: 20px;
+    }
+    .study-guide-focus-modal .modal-header {
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .study-guide-focus-modal .modal-toolbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .study-guide-focus-modal .modal-body { padding: 16px; }
+}
+    </style>
+</head>
+<body>
+    <div class="lesson-layout">
+        <div class="left-panel">
+            <div class="header">
+                <h1 id="video-title">DeepMind Just Changed How AI Sees The World</h1>
+            </div>
+            <div id="speed-controls-anchor"></div>
+            <div class="left-scroll">
+                <div class="toc-container">
+                    <div class="sections-wrapper" id="sections-wrapper"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="video-sticky">
+                <div class="video-container">
+                    <iframe id="lesson-video"
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/embed/vO6SWG-jxvE?enablejsapi=1&rel=0&showinfo=0&modestbranding=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <!-- Study Guide Panel - embedded HTML content -->
+            <div id="study-guide-container" class="study-guide-container" style="display: none;">
+                <div class="study-guide-header">
+                    <h3>Study Guide</h3>
+                    <div class="study-guide-toolbar">
+                        <button class="study-guide-btn copy-study-guide" title="Copy Study Guide">Copy</button>
+                        <button class="study-guide-btn focus-study-guide" title="Focus Mode">Focus</button>
+                        <button class="study-guide-btn close-study-guide" title="Close">Close</button>
+                    </div>
+                </div>
+                <div class="study-guide-content">
+                    <div class="study-guide-text">
+<h1>DeepMind Just Changed How AI Sees The World: Gemma 4's Native Multimodal Architecture</h1>
+<h2>Core Concepts (At a Glance)</h2>
+<ul>
+<li><strong>Scale has not solved sight.</strong> Some of the largest open models, like DeepSeek at over 1.6 trillion parameters, cost hundreds of thousands of dollars to run and still cannot answer "what does this image depict?"</li>
+<li><strong>Gemma 4 is the counterexample.</strong> DeepMind's free and open model is roughly 99% smaller, runs on a laptop, and handles images and audio. It has been downloaded more than 300 million times.</li>
+<li><strong>The old design is a bundle of specialists.</strong> A conventional multimodal AI is several neural networks bolted together: a vision model for images, an audio encoder for sound, each translating for the language model.</li>
+<li><strong>Translation is not perception.</strong> Zsolnai-Feher's framing is that this arrangement is not really looking or listening. It is passing around a translation produced by a different neural network.</li>
+<li><strong>Gemma 4's larger models throw the specialists out.</strong> Images are cut into patches and projected directly into the model's internal representation, with positional information preserved. Audio is sliced into 40 millisecond chunks. All of it is poured into the main transformer as tokens.</li>
+<li><strong>One network becomes eyes, ears and brain.</strong> The architecture removes hundreds of millions of specialist parameters and blurs the boundary between perception and thinking.</li>
+<li><strong>The recipe is public, and that is the bigger story.</strong> By publishing the architecture, DeepMind lets DeepSeek and other systems learn to see more efficiently too.</li>
+<li><strong>Open weights are a gift, not a guarantee.</strong> The video closes with a direct argument that free, open models are not a law of nature and may stop arriving as capabilities increase.</li>
+</ul>
+<h2>Introduction</h2>
+<p>This is a short Two Minute Papers episode from Dr. Karoly Zsolnai-Feher covering DeepMind's disclosure of the architecture behind Gemma 4's multimodal capabilities. The framing device is a paradox: enormous frontier-scale open models can cost a fortune to run and still be blind, while a model small enough to sit on a laptop can see and hear. The episode's payload is the architectural explanation for how that is possible, followed by an advocacy pitch for the open model ecosystem that produced it.</p>
+<h2>1. The Paradox: Comically Large Models That Cannot See</h2>
+<p><strong>What:</strong> Zsolnai-Feher opens by noting that AI models have become "almost comically large." He cites DeepSeek as reaching over 1.6 trillion parameters and says it is not even the biggest. Running models at that scale costs hundreds of thousands of dollars. Then comes the twist: show one an image, ask what it depicts, and it does not know. It cannot see.</p>
+<p><strong>Why:</strong> The point is to sever the intuitive link between size and capability. Parameter count buys language competence, not perception. Perception is an architectural question, not a scaling question.</p>
+<p><strong>How:</strong> He sets up the apparent impossibility deliberately. A model 99% smaller, "a speck of dust comparatively," that nonetheless has vision. He calls it wishful thinking, then reveals that it exists: DeepMind's Gemma 4, free, open, running locally, downloaded more than 300 million times.</p>
+<h2>2. The Secret Sauce Is Finally Public</h2>
+<p><strong>What:</strong> The news hook is that DeepMind has published the architecture Gemma 4 uses to see, rather than only shipping the weights.</p>
+<p><strong>Why:</strong> Disclosure turns a product into a technique. It explains observed behavior that previously looked like magic, such as the model role-playing a character in a voice while simultaneously identifying objects in your video.</p>
+<p><strong>How:</strong> With the architecture public, the question the rest of the video answers becomes tractable: how do you add vision and multimodal reasoning to an unusually small local model without ballooning its size?</p>
+<h2>3. The Conventional Approach: A Bundle of Specialists</h2>
+<p><strong>What:</strong> Zsolnai-Feher describes the standard design. A conventional AI is really several neural networks connected together. Feed it an image and you need a dedicated vision model. Give it ears and you need an audio encoder. One specialized part per task.</p>
+<p><strong>Why:</strong> His critique is pointed: "this is not really looking or listening." The main model never touches the raw signal. It receives a translation that a different neural network produced on its behalf. Every modality arrives pre-interpreted by a component with its own assumptions and its own parameter budget.</p>
+<p><strong>How:</strong> He notes that Gemma's smallest models still work this way. The architectural break happens when you move up to the 12 billion parameter model.</p>
+<h2>4. Native Multimodality: Patches and Chunks Straight Into the Transformer</h2>
+<p><strong>What:</strong> This is the core of the episode. DeepMind's scientists, in his telling, say throw all of that away. Instead, the system cuts the picture into small patches, then projects those pixels directly into the model's internal representation, retaining where each patch came from. Audio gets the same treatment, sliced into 40 millisecond chunks. Then, as he puts it, "you just pour all these tokens into your main transformer."</p>
+<p><strong>Why:</strong> Because there is no vision transformer standing between the pixels and the model, nothing pre-digests the image. The single main network is "forced to learn to be the eyes, ears and brain at the same time." He calls this one of the most important architectural ideas in Gemma 4, for two reasons: it removes hundreds of millions of specialist parameters, and it blurs the boundary between perception and thinking.</p>
+<p><strong>How:</strong> The mechanism is unification of representation. Image patches, audio chunks and text all become tokens in the same stream, handled by the same weights. The parameter savings come from deleting the encoders; the capability gain comes from perception and reasoning being learned jointly rather than in separate stages.</p>
+<h2>5. The Payoff and the Wider Effect</h2>
+<p><strong>What:</strong> The result is a system that, in his words, punches way above its weight. It handles images, handles audio, and is "bloody smart," while remaining small enough that "this is something that you can own."</p>
+<p><strong>Why:</strong> He adds two closing points. First, the Gemma 4 ecosystem continues to receive improvements that make it faster and better. Second, and more consequential, publishing the technique means Gemma 4 is not only valuable in itself. It can help DeepSeek and other systems learn to see better and more efficiently.</p>
+<p><strong>How:</strong> That second point is the difference between releasing a model and releasing knowledge. Weights improve one model. A published architecture improves the field.</p>
+<h2>6. The Argument for Open Models</h2>
+<p><strong>What:</strong> The episode ends with an unusually direct appeal. Do not take it for granted that amazing open models will keep coming. "These are gifts to all of us." He warns the gifts may stop as capabilities increase, and states plainly that it is not a law of nature that we get these models for free in the future.</p>
+<p><strong>Why:</strong> The reasoning is that openness is a policy choice made by organizations, reversible at any time, and increasingly costly to them as models get more capable.</p>
+<p><strong>How:</strong> He addresses open model builders directly, calling them heroes who help scientists, students and millions of other people do their work better, and argues the community has to come together to support open systems.</p>
+<h2>Notable Quotes</h2>
+<ul>
+<li>"AI models have become almost comically large."</li>
+<li>"You show them an image and you ask, what does this image depict? ... It doesn't know. Yes, it cannot see."</li>
+<li>"This is not really looking or listening. This is just passing a translation around that is created by a different neural network."</li>
+<li>"Scientists at DeepMind say, throw that all away."</li>
+<li>"This system is forced to learn to be the eyes, ears and brain at the same time."</li>
+<li>"It removes hundreds of millions of specialist parameters and it blurs the boundary between perception and thinking."</li>
+<li>"It is not a law of nature that we just get these models for free in the future too."</li>
+<li>"To everyone who is working on open models wherever you are in the world: you are heroes."</li>
+</ul>
+<h2>Terms and Glossary</h2>
+<ul>
+<li><strong>Gemma 4</strong> - DeepMind's family of free and open models, small enough to run locally, whose multimodal architecture the video explains.</li>
+<li><strong>Parameter</strong> - A learned weight in a neural network. Parameter count is the usual proxy for model size; the video's argument is that it is a poor proxy for perception.</li>
+<li><strong>Vision transformer</strong> - A dedicated neural network that encodes images into a representation a language model can consume. The component Gemma 4's larger models eliminate.</li>
+<li><strong>Audio encoder</strong> - The equivalent specialist component for sound, also eliminated.</li>
+<li><strong>Patch</strong> - A small tile of an image. Gemma 4 projects patch pixels directly into the model's internal representation rather than routing them through an encoder.</li>
+<li><strong>Token</strong> - The unit a transformer processes. Here, image patches and 40 millisecond audio chunks become tokens alongside text.</li>
+<li><strong>Positional information</strong> - The record of where each patch came from in the source image, preserved so spatial structure is not lost.</li>
+<li><strong>Native multimodality</strong> - An architecture where a single model learns to process multiple modalities directly, rather than consuming translations from separate encoders.</li>
+<li><strong>Open weights / open models</strong> - Models whose parameters are released publicly for download and local use, as distinct from API-only access.</li>
+<li><strong>DeepSeek</strong> - Cited as an example of a very large open model, over 1.6 trillion parameters, expensive to run and without vision.</li>
+</ul>
+<h2>Reflection Questions</h2>
+<ol>
+<li>The video argues that a bolted-on vision encoder means the model is "not really looking." Is that a meaningful distinction, or a difference in engineering convenience? What would count as evidence either way?</li>
+<li>Removing specialist encoders saves hundreds of millions of parameters. What might be lost along with them? Where would you expect a natively multimodal model to underperform a pipeline of specialists?</li>
+<li>Why would forcing one network to be "eyes, ears and brain at the same time" produce better reasoning about images rather than simply worse image encoding?</li>
+<li>Gemma 4's smallest variants keep the old encoder design; the change appears at 12 billion parameters. What does that threshold suggest about when native multimodality becomes affordable?</li>
+<li>The episode treats publishing the architecture as more valuable than publishing the model. Do you agree? Who benefits most from each?</li>
+<li>Zsolnai-Feher warns that open model releases may stop as capabilities increase. What incentives currently sustain them, and which of those incentives are most fragile?</li>
+<li>If a laptop-sized model can see and hear, which tasks currently sent to large hosted APIs should move local, and what changes about privacy, cost and dependency when they do?</li>
+<li>The video's framing pits size against architecture. In your own work, where have you assumed a bigger model was the answer when a different design would have served better?</li>
+</ol>
+<h2>Closing</h2>
+<p>The episode's technical claim is narrow and clear: Gemma 4's larger models drop the separate vision and audio encoders, project image patches and 40 millisecond audio chunks straight into the main transformer as tokens, and let one network learn perception and reasoning together. That deletes hundreds of millions of specialist parameters and produces a locally runnable model that outperforms far larger ones on multimodal tasks. The broader claim is about the ecosystem. DeepMind published not only the model but the method, which raises the ceiling for every other open system, and Zsolnai-Feher closes by insisting that this generosity is a choice worth actively defending rather than an entitlement to assume.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Notes Panel -->
+            <div id="notes-container" class="notes-container" style="display: none;">
+                <div class="notes-header">
+                    <h3>Notes</h3>
+                    <div class="notes-toolbar">
+                        <button class="notes-btn format-btn bold-btn" data-format="bold" title="Bold"><strong>B</strong></button>
+                        <button class="notes-btn format-btn italic-btn" data-format="italic" title="Italic"><em>I</em></button>
+                        <button class="notes-btn format-btn heading-btn" data-format="heading" title="Heading">H1</button>
+                        <button class="notes-btn format-btn bullet-btn" data-format="bullet" title="Bullet List">List</button>
+                        <div class="toolbar-divider"></div>
+                        <button class="notes-btn toggle-preview" title="Toggle Preview">Preview</button>
+                        <button class="notes-btn copy-notes" title="Copy Notes">Copy</button>
+                        <button class="notes-btn focus-notes" title="Focus Mode">Focus</button>
+                        <button class="notes-btn clear-notes" title="Clear Notes">Clear</button>
+                        <button class="notes-btn close-notes" title="Close Notes">Close</button>
+                    </div>
+                </div>
+                <div class="notes-content">
+                    <textarea class="notes-textarea" placeholder="Take notes about this video..."></textarea>
+                    <div class="notes-preview" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Widget -->
+    <div class="floating-widget" id="floating-widget">
+        <button class="widget-btn" id="study-guide-widget-btn" onclick="toggleStudyGuide()">Study Guide</button>
+        <button class="widget-btn notes-btn" id="notes-widget-btn" onclick="toggleNotes()">Notes</button>
+        <a href="https://youtu.be/vO6SWG-jxvE" target="_blank" class="widget-youtube-link" title="Watch on YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube
+        </a>
+    </div>
+
+    <!-- Embedded TOC Data -->
+    <script>
+        window.tocData = {
+  "videoTitle": "DeepMind Just Changed How AI Sees The World",
+  "lessonTitle": "Study Page",
+  "youtubeLink": "https://youtu.be/vO6SWG-jxvE",
+  "sections": [
+    {
+      "title": "The Setup: Giant Models That Cannot See",
+      "start": "00:00",
+      "end": "01:07",
+      "items": [
+        {
+          "time": "00:00",
+          "topic": "\"Finally, something amazing happened\""
+        },
+        {
+          "time": "00:07",
+          "topic": "Today's AI models have become almost comically large"
+        },
+        {
+          "time": "00:11",
+          "topic": "DeepSeek: over 1.6 trillion parameters, and not even the biggest"
+        },
+        {
+          "time": "00:17",
+          "topic": "Costs hundreds of thousands of dollars to run"
+        },
+        {
+          "time": "00:23",
+          "topic": "Show it an image and ask what it depicts: it does not know"
+        },
+        {
+          "time": "00:33",
+          "topic": "The impossible-sounding promise: a model 99% smaller that can see"
+        },
+        {
+          "time": "00:52",
+          "topic": "It exists: DeepMind's Gemma 4, and it runs on your laptop"
+        },
+        {
+          "time": "00:59",
+          "topic": "Free and open, downloaded more than 300 million times"
+        }
+      ]
+    },
+    {
+      "title": "The Secret Sauce Is Finally Public",
+      "start": "01:07",
+      "end": "01:49",
+      "items": [
+        {
+          "time": "01:07",
+          "topic": "DeepMind released the architecture behind Gemma 4's vision"
+        },
+        {
+          "time": "01:22",
+          "topic": "\"And it's kind of crazy\""
+        },
+        {
+          "time": "01:29",
+          "topic": "Explains feats like role-playing a character while identifying objects in your video"
+        },
+        {
+          "time": "01:36",
+          "topic": "The question: how do you fit vision and multimodal reasoning into a small local model?"
+        },
+        {
+          "time": "01:45",
+          "topic": "Two Minute Papers intro, Dr. Karoly Zsolnai-Feher"
+        }
+      ]
+    },
+    {
+      "title": "The Conventional Approach: Bolted-On Encoders",
+      "start": "01:49",
+      "end": "02:26",
+      "items": [
+        {
+          "time": "01:49",
+          "topic": "A conventional AI is really several neural networks connected together"
+        },
+        {
+          "time": "01:54",
+          "topic": "Images require a dedicated vision model"
+        },
+        {
+          "time": "02:01",
+          "topic": "Audio requires a separate audio encoder: a specialist part per task"
+        },
+        {
+          "time": "02:08",
+          "topic": "This is not really looking or listening"
+        },
+        {
+          "time": "02:11",
+          "topic": "It is passing around a translation created by a different neural network"
+        },
+        {
+          "time": "02:18",
+          "topic": "The smallest Gemma models still work this way"
+        },
+        {
+          "time": "02:22",
+          "topic": "At the 12 billion parameter model, things change"
+        }
+      ]
+    },
+    {
+      "title": "Native Multimodality: Patches and Chunks Into the Main Transformer",
+      "start": "02:26",
+      "end": "03:29",
+      "items": [
+        {
+          "time": "02:26",
+          "topic": "DeepMind scientists say: throw all of that away"
+        },
+        {
+          "time": "02:30",
+          "topic": "Instead, cut the picture into small patches"
+        },
+        {
+          "time": "02:35",
+          "topic": "Project those pixels directly into the model's internal representation"
+        },
+        {
+          "time": "02:41",
+          "topic": "Positional information: the model knows where each patch came from"
+        },
+        {
+          "time": "02:46",
+          "topic": "The point: no separate vision transformer to interpret the image for you"
+        },
+        {
+          "time": "02:56",
+          "topic": "Same for audio, sliced into 40 millisecond chunks"
+        },
+        {
+          "time": "03:03",
+          "topic": "Pour all these tokens into the main transformer"
+        },
+        {
+          "time": "03:08",
+          "topic": "The system is forced to be eyes, ears and brain at the same time"
+        },
+        {
+          "time": "03:15",
+          "topic": "\"One of the most important architectural ideas in Gemma 4\""
+        },
+        {
+          "time": "03:20",
+          "topic": "Removes hundreds of millions of specialist parameters"
+        },
+        {
+          "time": "03:27",
+          "topic": "Blurs the boundary between perception and thinking"
+        }
+      ]
+    },
+    {
+      "title": "The Payoff: Punching Above Its Weight",
+      "start": "03:29",
+      "end": "04:07",
+      "items": [
+        {
+          "time": "03:29",
+          "topic": "An AI system that punches way above its weight"
+        },
+        {
+          "time": "03:34",
+          "topic": "Handles images, handles audio, and is bloody smart"
+        },
+        {
+          "time": "03:38",
+          "topic": "And it is something you can own"
+        },
+        {
+          "time": "03:42",
+          "topic": "Point one: the Gemma 4 ecosystem keeps getting faster and better"
+        },
+        {
+          "time": "03:51",
+          "topic": "Point two: publishing the recipe helps DeepSeek and other systems learn to see"
+        },
+        {
+          "time": "04:04",
+          "topic": "\"What a time to be alive!\""
+        }
+      ]
+    },
+    {
+      "title": "A Warning: Open Models Are Not a Law of Nature",
+      "start": "04:07",
+      "end": "04:48",
+      "items": [
+        {
+          "time": "04:08",
+          "topic": "Do not take it for granted that open models will keep coming"
+        },
+        {
+          "time": "04:15",
+          "topic": "These are gifts to all of us"
+        },
+        {
+          "time": "04:17",
+          "topic": "The gifts may stop coming as capabilities increase"
+        },
+        {
+          "time": "04:21",
+          "topic": "It is not a law of nature that we get these models for free"
+        },
+        {
+          "time": "04:26",
+          "topic": "To everyone working on open models: you are heroes"
+        },
+        {
+          "time": "04:33",
+          "topic": "They help scientists, students and millions of others work better"
+        },
+        {
+          "time": "04:41",
+          "topic": "The community has to come together to support open systems"
+        }
+      ]
+    },
+    {
+      "title": "Sponsor Segment",
+      "start": "04:48",
+      "end": "05:22",
+      "items": [
+        {
+          "time": "04:48",
+          "topic": "Lambda: reproducing AI research papers, training and fine-tuning, inference"
+        }
+      ]
+    }
+  ]
+};
+        window.lessonVideoId = "vO6SWG-jxvE";
+        window.studyGuideContent = `# DeepMind Just Changed How AI Sees The World: Gemma 4's Native Multimodal Architecture
+
+## Core Concepts (At a Glance)
+
+- **Scale has not solved sight.** Some of the largest open models, like DeepSeek at over 1.6 trillion parameters, cost hundreds of thousands of dollars to run and still cannot answer "what does this image depict?"
+- **Gemma 4 is the counterexample.** DeepMind's free and open model is roughly 99% smaller, runs on a laptop, and handles images and audio. It has been downloaded more than 300 million times.
+- **The old design is a bundle of specialists.** A conventional multimodal AI is several neural networks bolted together: a vision model for images, an audio encoder for sound, each translating for the language model.
+- **Translation is not perception.** Zsolnai-Feher's framing is that this arrangement is not really looking or listening. It is passing around a translation produced by a different neural network.
+- **Gemma 4's larger models throw the specialists out.** Images are cut into patches and projected directly into the model's internal representation, with positional information preserved. Audio is sliced into 40 millisecond chunks. All of it is poured into the main transformer as tokens.
+- **One network becomes eyes, ears and brain.** The architecture removes hundreds of millions of specialist parameters and blurs the boundary between perception and thinking.
+- **The recipe is public, and that is the bigger story.** By publishing the architecture, DeepMind lets DeepSeek and other systems learn to see more efficiently too.
+- **Open weights are a gift, not a guarantee.** The video closes with a direct argument that free, open models are not a law of nature and may stop arriving as capabilities increase.
+
+## Introduction
+
+This is a short Two Minute Papers episode from Dr. Karoly Zsolnai-Feher covering DeepMind's disclosure of the architecture behind Gemma 4's multimodal capabilities. The framing device is a paradox: enormous frontier-scale open models can cost a fortune to run and still be blind, while a model small enough to sit on a laptop can see and hear. The episode's payload is the architectural explanation for how that is possible, followed by an advocacy pitch for the open model ecosystem that produced it.
+
+## 1. The Paradox: Comically Large Models That Cannot See
+
+**What:** Zsolnai-Feher opens by noting that AI models have become "almost comically large." He cites DeepSeek as reaching over 1.6 trillion parameters and says it is not even the biggest. Running models at that scale costs hundreds of thousands of dollars. Then comes the twist: show one an image, ask what it depicts, and it does not know. It cannot see.
+
+**Why:** The point is to sever the intuitive link between size and capability. Parameter count buys language competence, not perception. Perception is an architectural question, not a scaling question.
+
+**How:** He sets up the apparent impossibility deliberately. A model 99% smaller, "a speck of dust comparatively," that nonetheless has vision. He calls it wishful thinking, then reveals that it exists: DeepMind's Gemma 4, free, open, running locally, downloaded more than 300 million times.
+
+## 2. The Secret Sauce Is Finally Public
+
+**What:** The news hook is that DeepMind has published the architecture Gemma 4 uses to see, rather than only shipping the weights.
+
+**Why:** Disclosure turns a product into a technique. It explains observed behavior that previously looked like magic, such as the model role-playing a character in a voice while simultaneously identifying objects in your video.
+
+**How:** With the architecture public, the question the rest of the video answers becomes tractable: how do you add vision and multimodal reasoning to an unusually small local model without ballooning its size?
+
+## 3. The Conventional Approach: A Bundle of Specialists
+
+**What:** Zsolnai-Feher describes the standard design. A conventional AI is really several neural networks connected together. Feed it an image and you need a dedicated vision model. Give it ears and you need an audio encoder. One specialized part per task.
+
+**Why:** His critique is pointed: "this is not really looking or listening." The main model never touches the raw signal. It receives a translation that a different neural network produced on its behalf. Every modality arrives pre-interpreted by a component with its own assumptions and its own parameter budget.
+
+**How:** He notes that Gemma's smallest models still work this way. The architectural break happens when you move up to the 12 billion parameter model.
+
+## 4. Native Multimodality: Patches and Chunks Straight Into the Transformer
+
+**What:** This is the core of the episode. DeepMind's scientists, in his telling, say throw all of that away. Instead, the system cuts the picture into small patches, then projects those pixels directly into the model's internal representation, retaining where each patch came from. Audio gets the same treatment, sliced into 40 millisecond chunks. Then, as he puts it, "you just pour all these tokens into your main transformer."
+
+**Why:** Because there is no vision transformer standing between the pixels and the model, nothing pre-digests the image. The single main network is "forced to learn to be the eyes, ears and brain at the same time." He calls this one of the most important architectural ideas in Gemma 4, for two reasons: it removes hundreds of millions of specialist parameters, and it blurs the boundary between perception and thinking.
+
+**How:** The mechanism is unification of representation. Image patches, audio chunks and text all become tokens in the same stream, handled by the same weights. The parameter savings come from deleting the encoders; the capability gain comes from perception and reasoning being learned jointly rather than in separate stages.
+
+## 5. The Payoff and the Wider Effect
+
+**What:** The result is a system that, in his words, punches way above its weight. It handles images, handles audio, and is "bloody smart," while remaining small enough that "this is something that you can own."
+
+**Why:** He adds two closing points. First, the Gemma 4 ecosystem continues to receive improvements that make it faster and better. Second, and more consequential, publishing the technique means Gemma 4 is not only valuable in itself. It can help DeepSeek and other systems learn to see better and more efficiently.
+
+**How:** That second point is the difference between releasing a model and releasing knowledge. Weights improve one model. A published architecture improves the field.
+
+## 6. The Argument for Open Models
+
+**What:** The episode ends with an unusually direct appeal. Do not take it for granted that amazing open models will keep coming. "These are gifts to all of us." He warns the gifts may stop as capabilities increase, and states plainly that it is not a law of nature that we get these models for free in the future.
+
+**Why:** The reasoning is that openness is a policy choice made by organizations, reversible at any time, and increasingly costly to them as models get more capable.
+
+**How:** He addresses open model builders directly, calling them heroes who help scientists, students and millions of other people do their work better, and argues the community has to come together to support open systems.
+
+## Notable Quotes
+
+- "AI models have become almost comically large."
+- "You show them an image and you ask, what does this image depict? ... It doesn't know. Yes, it cannot see."
+- "This is not really looking or listening. This is just passing a translation around that is created by a different neural network."
+- "Scientists at DeepMind say, throw that all away."
+- "This system is forced to learn to be the eyes, ears and brain at the same time."
+- "It removes hundreds of millions of specialist parameters and it blurs the boundary between perception and thinking."
+- "It is not a law of nature that we just get these models for free in the future too."
+- "To everyone who is working on open models wherever you are in the world: you are heroes."
+
+## Terms and Glossary
+
+- **Gemma 4** - DeepMind's family of free and open models, small enough to run locally, whose multimodal architecture the video explains.
+- **Parameter** - A learned weight in a neural network. Parameter count is the usual proxy for model size; the video's argument is that it is a poor proxy for perception.
+- **Vision transformer** - A dedicated neural network that encodes images into a representation a language model can consume. The component Gemma 4's larger models eliminate.
+- **Audio encoder** - The equivalent specialist component for sound, also eliminated.
+- **Patch** - A small tile of an image. Gemma 4 projects patch pixels directly into the model's internal representation rather than routing them through an encoder.
+- **Token** - The unit a transformer processes. Here, image patches and 40 millisecond audio chunks become tokens alongside text.
+- **Positional information** - The record of where each patch came from in the source image, preserved so spatial structure is not lost.
+- **Native multimodality** - An architecture where a single model learns to process multiple modalities directly, rather than consuming translations from separate encoders.
+- **Open weights / open models** - Models whose parameters are released publicly for download and local use, as distinct from API-only access.
+- **DeepSeek** - Cited as an example of a very large open model, over 1.6 trillion parameters, expensive to run and without vision.
+
+## Reflection Questions
+
+1. The video argues that a bolted-on vision encoder means the model is "not really looking." Is that a meaningful distinction, or a difference in engineering convenience? What would count as evidence either way?
+2. Removing specialist encoders saves hundreds of millions of parameters. What might be lost along with them? Where would you expect a natively multimodal model to underperform a pipeline of specialists?
+3. Why would forcing one network to be "eyes, ears and brain at the same time" produce better reasoning about images rather than simply worse image encoding?
+4. Gemma 4's smallest variants keep the old encoder design; the change appears at 12 billion parameters. What does that threshold suggest about when native multimodality becomes affordable?
+5. The episode treats publishing the architecture as more valuable than publishing the model. Do you agree? Who benefits most from each?
+6. Zsolnai-Feher warns that open model releases may stop as capabilities increase. What incentives currently sustain them, and which of those incentives are most fragile?
+7. If a laptop-sized model can see and hear, which tasks currently sent to large hosted APIs should move local, and what changes about privacy, cost and dependency when they do?
+8. The video's framing pits size against architecture. In your own work, where have you assumed a bigger model was the answer when a different design would have served better?
+
+## Closing
+
+The episode's technical claim is narrow and clear: Gemma 4's larger models drop the separate vision and audio encoders, project image patches and 40 millisecond audio chunks straight into the main transformer as tokens, and let one network learn perception and reasoning together. That deletes hundreds of millions of specialist parameters and produces a locally runnable model that outperforms far larger ones on multimodal tasks. The broader claim is about the ecosystem. DeepMind published not only the model but the method, which raises the ceiling for every other open system, and Zsolnai-Feher closes by insisting that this generosity is a choice worth actively defending rather than an entitlement to assume.
+`;
+    </script>
+
+    <!-- Core JavaScript -->
+    <script>
+// Utilities
+function romanize(num) {
+    const val = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+    const syb = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+    let roman = "";
+    for (let i = 0; i < val.length; i++) {
+        while (num >= val[i]) { roman += syb[i]; num -= val[i]; }
+    }
+    return roman;
+}
+function parseTimeToSeconds(t) {
+    if (!t) return 0;
+    const parts = t.split(":").map(Number);
+    if (parts.length === 3) return parts[0]*3600 + parts[1]*60 + parts[2];
+    if (parts.length === 2) return parts[0]*60 + parts[1];
+    return Number(t) || 0;
+}
+function formatTimeDisplay(t) {
+    const parts = t.split(":").map((p)=>p.padStart(2,"0"));
+    if (parts.length === 3) {
+        const h = parseInt(parts[0],10);
+        const m = parts[1];
+        const s = parts[2];
+        return h === 0 ? `${m}:${s}` : `${h}:${m}:${s}`;
+    }
+    if (parts.length === 2) return `${parts[0]}:${parts[1]}`;
+    return t;
+}
+
+// Build TOC from embedded data (no fetch required)
+function buildFromTOC() {
+    const data = window.tocData;
+    if (!data) {
+        console.error('No TOC data found');
+        return;
+    }
+    const wrapper = document.getElementById('sections-wrapper');
+    if (!wrapper) return;
+    wrapper.innerHTML = '';
+    (data.sections || []).forEach((section, idx) => {
+        const secDiv = document.createElement('div');
+        secDiv.className = 'section';
+        const startDisp = formatTimeDisplay(section.start || '00:00:00');
+        const endDisp = formatTimeDisplay(section.end || '00:00:00');
+        const header = document.createElement('div');
+        header.className = 'section-header';
+        header.setAttribute('onclick', 'toggleSection(this)');
+        header.innerHTML = `${romanize(idx+1)}. ${section.title} <span class="duration">(${startDisp} - ${endDisp})</span>`;
+        const content = document.createElement('div');
+        content.className = 'section-content';
+        (section.items || []).forEach((item) => {
+            const sub = document.createElement('div');
+            sub.className = 'subsection';
+            const ts = document.createElement('span');
+            ts.className = 'timestamp';
+            ts.textContent = formatTimeDisplay(item.time);
+            ts.setAttribute('onclick', `seekToTime(${parseTimeToSeconds(item.time)})`);
+            const topic = document.createElement('span');
+            topic.className = 'topic';
+            topic.textContent = item.topic;
+            sub.appendChild(ts);
+            sub.appendChild(topic);
+            content.appendChild(sub);
+        });
+        secDiv.appendChild(header);
+        secDiv.appendChild(content);
+        wrapper.appendChild(secDiv);
+    });
+    document.querySelectorAll('.section-content').forEach((c) => c.classList.add('collapsed'));
+    document.querySelectorAll('.section-header').forEach((h) => h.classList.add('collapsed'));
+    if (typeof updateSubsections === 'function') {
+        updateSubsections();
+    }
+    if (typeof buildTopicsList === 'function') {
+        buildTopicsList();
+    }
+}
+
+// Video Player
+let allExpanded = false;
+let player;
+let playbackRate = 1.0;
+let currentHighlightedItem = null;
+let timeTrackingInterval = null;
+let allTopics = [];
+
+function loadYouTubeAPI() {
+    if (typeof YT === 'undefined') {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+}
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('lesson-video', {
+        events: {
+            onReady: function () {
+                console.log('YouTube player ready');
+                checkForAutoSeek();
+                setTimeout(startTimeTracking, 2000);
+            },
+            onStateChange: function(event) {
+                if (event.data === YT.PlayerState.PLAYING && window.tocData) {
+                    startTimeTracking();
+                }
+            }
+        },
+    });
+}
+
+function checkForAutoSeek() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const seekTime = urlParams.get('seek');
+    if (seekTime) {
+        const seconds = parseInt(seekTime, 10);
+        if (!isNaN(seconds) && seconds >= 0) {
+            setTimeout(() => { seekToTime(seconds); }, 500);
+        }
+    }
+}
+
+function seekToTime(seconds) {
+    if (player && typeof player.seekTo === 'function') {
+        player.seekTo(seconds, true);
+        player.playVideo();
+    }
+}
+
+function setupKeyboardShortcuts() {
+    document.addEventListener('keydown', function (e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+        switch (e.code) {
+            case 'Space': e.preventDefault(); togglePlayPause(); break;
+            case 'ArrowLeft': e.preventDefault(); seekRelative(-5); break;
+            case 'ArrowRight': e.preventDefault(); seekRelative(5); break;
+            case 'ArrowUp': e.preventDefault(); adjustPlaybackSpeed(0.1); break;
+            case 'ArrowDown': e.preventDefault(); adjustPlaybackSpeed(-0.1); break;
+            case 'Tab': e.preventDefault(); skipToNextTopic(); break;
+            case 'KeyN': e.preventDefault(); skipToNextTopic(); break;
+            case 'KeyP': e.preventDefault(); skipToPreviousTopic(); break;
+        }
+    });
+}
+
+function togglePlayPause() {
+    if (player && player.getPlayerState) {
+        const state = player.getPlayerState();
+        if (state === YT.PlayerState.PLAYING) player.pauseVideo();
+        else player.playVideo();
+    }
+}
+
+function seekRelative(seconds) {
+    if (player && player.getCurrentTime) {
+        const currentTime = player.getCurrentTime();
+        const newTime = Math.max(0, currentTime + seconds);
+        player.seekTo(newTime, true);
+    }
+}
+
+function adjustPlaybackSpeed(delta) {
+    playbackRate = Math.max(0.1, Math.min(2.0, playbackRate + delta));
+    playbackRate = Math.round(playbackRate * 10) / 10;
+    if (player && player.setPlaybackRate) player.setPlaybackRate(playbackRate);
+    updateSpeedDisplay();
+}
+
+function buildTopicsList() {
+    allTopics = [];
+    if (window.tocData && window.tocData.sections) {
+        window.tocData.sections.forEach(section => {
+            if (section.items) {
+                section.items.forEach(item => {
+                    allTopics.push({
+                        time: item.time,
+                        topic: item.topic,
+                        seconds: parseTimeToSeconds(item.time)
+                    });
+                });
+            }
+        });
+        allTopics.sort((a, b) => a.seconds - b.seconds);
+    }
+}
+
+function skipToNextTopic() {
+    if (!player || !player.getCurrentTime || allTopics.length === 0) return;
+    const currentTime = player.getCurrentTime();
+    const nextTopic = allTopics.find(topic => topic.seconds > currentTime + 1);
+    if (nextTopic) seekToTime(nextTopic.seconds);
+}
+
+function skipToPreviousTopic() {
+    if (!player || !player.getCurrentTime || allTopics.length === 0) return;
+    const currentTime = player.getCurrentTime();
+    let previousTopic = null;
+    for (let i = allTopics.length - 1; i >= 0; i--) {
+        if (allTopics[i].seconds < currentTime - 3) {
+            previousTopic = allTopics[i];
+            break;
+        }
+    }
+    if (previousTopic) seekToTime(previousTopic.seconds);
+}
+
+function setPlaybackSpeed(speed) {
+    playbackRate = speed;
+    if (player && player.setPlaybackRate) player.setPlaybackRate(playbackRate);
+    updateSpeedDisplay();
+    document.querySelectorAll('.speed-btn').forEach((btn) => btn.classList.remove('active'));
+    document.querySelector(`[onclick="setPlaybackSpeed(${speed})"]`)?.classList.add('active');
+}
+
+function updateSpeedDisplay() {
+    const speedDisplay = document.querySelector('.current-speed');
+    if (speedDisplay) speedDisplay.textContent = `Current: ${playbackRate}x`;
+}
+
+function showVideoControlsModal() {
+    const modal = document.createElement('div');
+    modal.className = 'video-controls-modal';
+    modal.innerHTML = `
+        <div class="modal-overlay" onclick="closeVideoControlsModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Keyboard Shortcuts</h3>
+                <button class="modal-close" onclick="closeVideoControlsModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="keyboard-shortcut"><span class="key">Space</span><span class="action">Play / Pause</span></div>
+                <div class="keyboard-shortcut"><span class="key">Left</span><span class="action">Rewind 5 seconds</span></div>
+                <div class="keyboard-shortcut"><span class="key">Right</span><span class="action">Forward 5 seconds</span></div>
+                <div class="keyboard-shortcut"><span class="key">Up</span><span class="action">Speed up (0.1x)</span></div>
+                <div class="keyboard-shortcut"><span class="key">Down</span><span class="action">Slow down (0.1x)</span></div>
+                <div class="keyboard-shortcut"><span class="key">Tab / N</span><span class="action">Next topic</span></div>
+                <div class="keyboard-shortcut"><span class="key">P</span><span class="action">Previous topic</span></div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    const escapeHandler = (e) => {
+        if (e.key === 'Escape') {
+            closeVideoControlsModal();
+            document.removeEventListener('keydown', escapeHandler);
+        }
+    };
+    document.addEventListener('keydown', escapeHandler);
+}
+
+function closeVideoControlsModal() {
+    const modal = document.querySelector('.video-controls-modal');
+    if (modal) modal.remove();
+}
+
+function toggleSection(header) {
+    const content = header.nextElementSibling;
+    const isCollapsed = content.classList.contains('collapsed');
+    if (isCollapsed) {
+        content.classList.remove('collapsed');
+        header.classList.remove('collapsed');
+    } else {
+        content.classList.add('collapsed');
+        header.classList.add('collapsed');
+    }
+}
+
+function toggleAll() {
+    const button = document.querySelector('.toggle-button');
+    const contents = document.querySelectorAll('.section-content');
+    const headers = document.querySelectorAll('.section-header');
+    if (allExpanded) {
+        contents.forEach((c) => c.classList.add('collapsed'));
+        headers.forEach((h) => h.classList.add('collapsed'));
+        if (button) button.innerHTML = 'Expand&nbsp;Sections';
+        allExpanded = false;
+    } else {
+        contents.forEach((c) => c.classList.remove('collapsed'));
+        headers.forEach((h) => h.classList.remove('collapsed'));
+        if (button) button.innerHTML = 'Collapse&nbsp;Sections';
+        allExpanded = true;
+    }
+}
+
+function createSpeedControls() {
+    const anchor = document.querySelector('#speed-controls-anchor') || document.querySelector('.left-panel');
+    const speedControls = document.createElement('div');
+    speedControls.className = 'speed-controls';
+    speedControls.innerHTML = `
+        <div class="speed-controls-header">
+            <div class="speed-label-group">
+                <label>Playback Speed:</label>
+                <span class="current-speed">Current: 1.0x</span>
+            </div>
+            <div class="control-buttons">
+                <button class="video-controls-btn" onclick="showVideoControlsModal()" title="Keyboard shortcuts">Shortcuts</button>
+            </div>
+        </div>
+        <div class="speed-controls-row">
+            <div class="speed-control-group">
+                <button class="speed-btn" onclick="setPlaybackSpeed(0.5)">0.5x</button>
+                <button class="speed-btn" onclick="setPlaybackSpeed(0.75)">0.75x</button>
+                <button class="speed-btn active" onclick="setPlaybackSpeed(1.0)">1.0x</button>
+                <button class="speed-btn" onclick="setPlaybackSpeed(1.25)">1.25x</button>
+                <button class="speed-btn" onclick="setPlaybackSpeed(1.5)">1.5x</button>
+            </div>
+            <button class="toggle-button" onclick="toggleAll()">Expand&nbsp;Sections</button>
+        </div>`;
+    anchor?.appendChild(speedControls);
+}
+
+function updateSubsections() {
+    const subsections = document.querySelectorAll('.subsection');
+    subsections.forEach((subsection) => {
+        const timestampSpan = subsection.querySelector('.timestamp');
+        if (timestampSpan && timestampSpan.hasAttribute('onclick')) {
+            const onclickValue = timestampSpan.getAttribute('onclick');
+            const match = onclickValue.match(/seekToTime\((\d+)\)/);
+            if (match) {
+                const seconds = parseInt(match[1]);
+                const subsectionContent = document.createElement('div');
+                subsectionContent.className = 'subsection-content';
+                subsectionContent.innerHTML = subsection.innerHTML;
+                subsectionContent.style.cursor = 'pointer';
+                subsectionContent.onclick = () => seekToTime(seconds);
+                subsection.innerHTML = '';
+                subsection.appendChild(subsectionContent);
+                const newTimestampSpan = subsection.querySelector('.timestamp');
+                if (newTimestampSpan) newTimestampSpan.removeAttribute('onclick');
+            }
+        }
+    });
+}
+
+function startTimeTracking() {
+    if (timeTrackingInterval) {
+        clearInterval(timeTrackingInterval);
+    }
+    timeTrackingInterval = setInterval(() => {
+        if (player && player.getCurrentTime && window.tocData) {
+            const currentTime = player.getCurrentTime();
+            highlightCurrentTopic(currentTime);
+        }
+    }, 1000);
+}
+
+function highlightCurrentTopic(currentTimeSeconds) {
+    if (!window.tocData || !window.tocData.sections) return;
+    let currentTopic = null;
+    let currentTopicElement = null;
+    for (const section of window.tocData.sections) {
+        for (const item of section.items || []) {
+            const itemTimeSeconds = parseTimeToSeconds(item.time);
+            if (currentTimeSeconds >= itemTimeSeconds) {
+                currentTopic = item;
+            } else {
+                break;
+            }
+        }
+    }
+    if (currentTopic) {
+        const subsections = document.querySelectorAll('.subsection');
+        subsections.forEach(subsection => {
+            const topicSpan = subsection.querySelector('.topic');
+            if (topicSpan && topicSpan.textContent.trim() === currentTopic.topic.trim()) {
+                currentTopicElement = subsection;
+            }
+        });
+    }
+    if (currentHighlightedItem !== currentTopicElement) {
+        if (currentHighlightedItem) {
+            currentHighlightedItem.classList.remove('current-topic');
+        }
+        if (currentTopicElement) {
+            currentTopicElement.classList.add('current-topic');
+            const section = currentTopicElement.closest('.section');
+            if (section) {
+                const sectionHeader = section.querySelector('.section-header');
+                const sectionContent = section.querySelector('.section-content');
+                if (sectionHeader && sectionContent && sectionContent.classList.contains('collapsed')) {
+                    sectionContent.classList.remove('collapsed');
+                    sectionHeader.classList.remove('collapsed');
+                }
+            }
+            scrollToCurrentTopic(currentTopicElement);
+        }
+        currentHighlightedItem = currentTopicElement;
+    }
+}
+
+function scrollToCurrentTopic(topicElement) {
+    if (!topicElement) return;
+    const scrollContainer = document.querySelector('.left-scroll');
+    if (!scrollContainer) return;
+    const containerRect = scrollContainer.getBoundingClientRect();
+    const topicRect = topicElement.getBoundingClientRect();
+    const topicOffsetFromContainer = topicRect.top - containerRect.top + scrollContainer.scrollTop;
+    const containerHeight = scrollContainer.clientHeight;
+    const topicHeight = topicRect.height;
+    const scrollTo = topicOffsetFromContainer - (containerHeight / 2) + (topicHeight / 2);
+    scrollContainer.scrollTo({
+        top: Math.max(0, scrollTo),
+        behavior: 'smooth'
+    });
+}
+
+// Notes System
+let notesVisible = false;
+let notesPreviewMode = false;
+const notesStorageKey = 'study-page-notes-' + window.location.pathname;
+
+function toggleNotes() {
+    // Close study guide if open
+    if (studyGuideVisible) {
+        studyGuideVisible = false;
+        const guideContainer = document.getElementById('study-guide-container');
+        const guideWidgetBtn = document.getElementById('study-guide-widget-btn');
+        if (guideContainer) guideContainer.style.display = 'none';
+        if (guideWidgetBtn) {
+            guideWidgetBtn.textContent = 'Study Guide';
+            guideWidgetBtn.classList.remove('active');
+        }
+    }
+    notesVisible = !notesVisible;
+    const container = document.getElementById('notes-container');
+    const widgetBtn = document.getElementById('notes-widget-btn');
+    if (container) {
+        container.style.display = notesVisible ? 'block' : 'none';
+    }
+    if (widgetBtn) {
+        widgetBtn.textContent = notesVisible ? 'Hide Notes' : 'Notes';
+        widgetBtn.classList.toggle('active', notesVisible);
+    }
+    updateRightPanelLayout();
+}
+
+function updateRightPanelLayout() {
+    const rightPanel = document.querySelector('.right-panel');
+    if (!rightPanel) return;
+    if ((studyGuideVisible || notesVisible) && window.innerWidth > 900) {
+        rightPanel.style.justifyContent = 'flex-start';
+    } else if (!studyGuideVisible && !notesVisible && window.innerWidth > 900) {
+        rightPanel.style.justifyContent = 'center';
+    }
+}
+
+function initNotes() {
+    const container = document.getElementById('notes-container');
+    if (!container) return;
+    const textarea = container.querySelector('.notes-textarea');
+    const preview = container.querySelector('.notes-preview');
+    // Load saved notes
+    try {
+        const saved = localStorage.getItem(notesStorageKey);
+        if (saved && textarea) textarea.value = saved;
+    } catch (e) {}
+    // Event listeners
+    container.querySelector('.toggle-preview')?.addEventListener('click', () => {
+        notesPreviewMode = !notesPreviewMode;
+        const btn = container.querySelector('.toggle-preview');
+        if (notesPreviewMode) {
+            textarea.style.display = 'none';
+            preview.style.display = 'block';
+            btn.textContent = 'Edit';
+            btn.classList.add('active');
+            preview.innerHTML = parseNotesMarkdown(textarea.value);
+        } else {
+            textarea.style.display = 'block';
+            preview.style.display = 'none';
+            btn.textContent = 'Preview';
+            btn.classList.remove('active');
+        }
+    });
+    container.querySelector('.copy-notes')?.addEventListener('click', () => {
+        if (textarea.value.trim()) {
+            navigator.clipboard.writeText(textarea.value).then(() => showToast('Notes copied'));
+        }
+    });
+    container.querySelector('.clear-notes')?.addEventListener('click', () => {
+        if (textarea.value.trim() && confirm('Clear all notes?')) {
+            textarea.value = '';
+            localStorage.removeItem(notesStorageKey);
+            showToast('Notes cleared');
+        }
+    });
+    container.querySelector('.focus-notes')?.addEventListener('click', openNotesFocusModal);
+    container.querySelector('.close-notes')?.addEventListener('click', toggleNotes);
+    container.querySelectorAll('.format-btn').forEach(btn => {
+        btn.addEventListener('click', () => formatNotesText(btn.dataset.format, textarea));
+    });
+    textarea?.addEventListener('input', () => {
+        try { localStorage.setItem(notesStorageKey, textarea.value); } catch (e) {}
+        if (notesPreviewMode) preview.innerHTML = parseNotesMarkdown(textarea.value);
+    });
+}
+
+function parseNotesMarkdown(md) {
+    if (!md) return '<p class="empty-notes">No notes yet.</p>';
+    return md
+        .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+        .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+        .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/^- (.+)$/gm, '<li>$1</li>')
+        .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+        .replace(/\n/g, '<br>');
+}
+
+function formatNotesText(format, textarea) {
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selected = textarea.value.substring(start, end);
+    const before = textarea.value.substring(0, start);
+    const after = textarea.value.substring(end);
+    let newText = '';
+    switch (format) {
+        case 'bold': newText = selected ? `**${selected}**` : '****'; break;
+        case 'italic': newText = selected ? `*${selected}*` : '**'; break;
+        case 'heading': newText = `# ${selected || 'Heading'}`; break;
+        case 'bullet': newText = `- ${selected || 'Item'}`; break;
+    }
+    textarea.value = before + newText + after;
+    textarea.focus();
+    try { localStorage.setItem(notesStorageKey, textarea.value); } catch (e) {}
+}
+
+// Study Guide System
+let studyGuideVisible = false;
+
+function toggleStudyGuide() {
+    // Close notes if open
+    if (notesVisible) {
+        notesVisible = false;
+        const notesContainer = document.getElementById('notes-container');
+        const notesWidgetBtn = document.getElementById('notes-widget-btn');
+        if (notesContainer) notesContainer.style.display = 'none';
+        if (notesWidgetBtn) {
+            notesWidgetBtn.textContent = 'Notes';
+            notesWidgetBtn.classList.remove('active');
+        }
+    }
+    studyGuideVisible = !studyGuideVisible;
+    const container = document.getElementById('study-guide-container');
+    const widgetBtn = document.getElementById('study-guide-widget-btn');
+    if (container) {
+        container.style.display = studyGuideVisible ? 'block' : 'none';
+    }
+    if (widgetBtn) {
+        widgetBtn.textContent = studyGuideVisible ? 'Hide Guide' : 'Study Guide';
+        widgetBtn.classList.toggle('active', studyGuideVisible);
+    }
+    updateRightPanelLayout();
+}
+
+function initStudyGuide() {
+    const container = document.getElementById('study-guide-container');
+    if (!container) return;
+    container.querySelector('.copy-study-guide')?.addEventListener('click', () => {
+        if (window.studyGuideContent) {
+            navigator.clipboard.writeText(window.studyGuideContent).then(() => showToast('Study guide copied'));
+        }
+    });
+    container.querySelector('.focus-study-guide')?.addEventListener('click', openStudyGuideFocus);
+    container.querySelector('.close-study-guide')?.addEventListener('click', toggleStudyGuide);
+}
+
+function openStudyGuideFocus() {
+    const modal = document.createElement('div');
+    modal.className = 'study-guide-focus-modal';
+    modal.innerHTML = `
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Study Guide</h2>
+                <div class="modal-toolbar">
+                    <button class="modal-btn copy-modal-guide">Copy</button>
+                    <button class="modal-btn close-modal">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-study-guide-text">${document.querySelector('.study-guide-text')?.innerHTML || ''}</div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.querySelector('.close-modal').addEventListener('click', () => closeStudyGuideFocus(modal));
+    modal.querySelector('.modal-overlay').addEventListener('click', () => closeStudyGuideFocus(modal));
+    modal.querySelector('.copy-modal-guide').addEventListener('click', () => {
+        if (window.studyGuideContent) {
+            navigator.clipboard.writeText(window.studyGuideContent).then(() => showToast('Study guide copied'));
+        }
+    });
+    document.addEventListener('keydown', function escHandler(e) {
+        if (e.key === 'Escape') {
+            closeStudyGuideFocus(modal);
+            document.removeEventListener('keydown', escHandler);
+        }
+    });
+    setTimeout(() => modal.classList.add('show'), 10);
+}
+
+function closeStudyGuideFocus(modal) {
+    modal.classList.remove('show');
+    setTimeout(() => modal.remove(), 300);
+}
+
+function openNotesFocusModal() {
+    const textarea = document.querySelector('.notes-textarea');
+    const notesContent = textarea?.value || '';
+    const modal = document.createElement('div');
+    modal.className = 'study-guide-focus-modal notes-focus-modal';
+    modal.innerHTML = `
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Notes</h2>
+                <div class="modal-toolbar">
+                    <button class="modal-btn copy-modal-notes">Copy</button>
+                    <button class="modal-btn close-modal">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <textarea class="modal-notes-textarea" placeholder="Take notes about this video...">${notesContent}</textarea>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    const modalTextarea = modal.querySelector('.modal-notes-textarea');
+    modal.querySelector('.close-modal').addEventListener('click', () => closeNotesFocusModal(modal, modalTextarea));
+    modal.querySelector('.modal-overlay').addEventListener('click', () => closeNotesFocusModal(modal, modalTextarea));
+    modal.querySelector('.copy-modal-notes').addEventListener('click', () => {
+        if (modalTextarea.value.trim()) {
+            navigator.clipboard.writeText(modalTextarea.value).then(() => showToast('Notes copied'));
+        }
+    });
+    modalTextarea.addEventListener('input', () => {
+        if (textarea) textarea.value = modalTextarea.value;
+        try { localStorage.setItem(notesStorageKey, modalTextarea.value); } catch (e) {}
+    });
+    document.addEventListener('keydown', function escHandler(e) {
+        if (e.key === 'Escape') {
+            closeNotesFocusModal(modal, modalTextarea);
+            document.removeEventListener('keydown', escHandler);
+        }
+    });
+    setTimeout(() => {
+        modal.classList.add('show');
+        modalTextarea.focus();
+    }, 10);
+}
+
+function closeNotesFocusModal(modal, modalTextarea) {
+    const textarea = document.querySelector('.notes-textarea');
+    if (textarea && modalTextarea) textarea.value = modalTextarea.value;
+    modal.classList.remove('show');
+    setTimeout(() => modal.remove(), 300);
+}
+
+function showToast(message) {
+    const existing = document.querySelector('.notes-toast');
+    if (existing) existing.remove();
+    const toast = document.createElement('div');
+    toast.className = 'notes-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.classList.add('show'), 10);
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function () {
+    buildFromTOC();
+    setupKeyboardShortcuts();
+    createSpeedControls();
+    loadYouTubeAPI();
+    initNotes();
+    initStudyGuide();
+    setTimeout(() => {
+        if (window.tocData && !player && document.getElementById('lesson-video')) {
+            startTimeTracking();
+        }
+    }, 3000);
+});
+    </script>
+</body>
+</html>
