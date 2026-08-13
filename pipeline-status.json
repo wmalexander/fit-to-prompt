@@ -1,20 +1,22 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "fetch": {
     "status": "complete",
-    "completedAt": "2026-08-12T09:40:00Z",
-    "candidateCount": 230,
-    "sourcesChecked": 74
+    "completedAt": "2026-08-13T12:20:50Z",
+    "candidateCount": 465,
+    "sourcesChecked": 79
   },
   "review": {
     "status": "complete",
-    "completedAt": "2026-08-12T09:42:52Z",
+    "completedAt": "2026-08-13T12:21:20Z",
     "approved": 20,
     "mode": "auto"
   },
   "build": {
     "status": "complete",
-    "completedAt": "2026-08-12T10:30:41.281590Z",
+    "currentPhase": "done",
+    "startedAt": "2026-08-13T12:22:00Z",
+    "completedAt": "2026-08-13T12:48:00Z",
     "completedSubPhases": [
       "study-guides",
       "html",
@@ -22,11 +24,11 @@
       "upload",
       "email"
     ],
-    "skipped": [
-      "podcast (ElevenLabs API key invalid)",
-      "layout-review (no browser tools)"
-    ],
-    "notes": "AWS SSO expired: published via GitHub Pages instead of S3. newsletter-data.js NOT uploaded to S3, so the fittoprompt.com archive list will not show issue 93 until S3 is reachable."
+    "skipped": {
+      "podcast": "ElevenLabs credential rejected (API key ID stored instead of sk_ key)",
+      "layout-review": "no browser tooling available in unattended session",
+      "s3-upload": "AWS SSO token expired; published via GitHub Pages instead"
+    }
   },
   "lastError": null
 }
