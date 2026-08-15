@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - Claude Starts Watermarking Every Word It Writes - August 15, 2026</title>
+  <meta name="description" content="Daily AI news roundup for August 15, 2026. Anthropic begins invisibly watermarking Claude's text worldwide under the EU AI Act, an unreleased Anthropic model pushes a Riemann-zeta bound from 41.6 to 67.2 percent, a lawsuit says Grok generated roughly 7,000 abuse images from one childhood photo, Google switches Gemini on for K-12 students, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #96">
+  <meta property="og:description" content="Daily AI news roundup for August 15, 2026. Anthropic begins invisibly watermarking Claude's text worldwide under the EU AI Act, an unreleased Anthropic model pushes a Riemann-zeta bound from 41.6 to 67.2 percent, a lawsuit says Grok generated roughly 7,000 abuse images from one childhood photo, Google switches Gemini on for K-12 students, and more.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-08-15.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-08-15.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Saturday, August 15, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 96</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>20 Stories</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">From Anthropic</div>
+          <a href="https://www.anthropic.com/news/claude-text-watermark" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <h2 class="headline-lead mb-3">Claude Starts Watermarking Every Word It Writes</h2>
+          </a>
+          <p class="byline mb-3">Anthropic &middot; Aug 14</p>
+          <img src="https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&backgroundColor=heather" alt="Anthropic illustration of a hand holding a quill" class="w-full object-cover" style="display:block;max-height:280px;">
+        </div>
+        <div>
+          <div class="newspaper-body">
+            <p>Anthropic has begun embedding an invisible watermark in text generated by Claude, along with signed provenance metadata in files. The marking covers the Claude API, claude.ai, Claude Code, Claude Cowork, and Claude models served through AWS, Google Cloud, and Microsoft Foundry. There is no opt-out, and it applies worldwide rather than only in Europe.</p>
+            <p>The driver is Article 50 of the EU AI Act, which became enforceable on August 2 and requires providers of generative systems to embed machine-readable marks in their outputs, text included. Anthropic signed the Act's Code of Practice on Transparency of AI-Generated Content, the voluntary framework that confers a presumption of compliance.</p>
+            <p>Mechanically, the watermark works by subtly biasing Claude's word choices so that a statistical pattern emerges over enough text, and it survives being copied and pasted. That is the part worth sitting with. A regulation written in Brussels has changed how a model in California picks its next token, for every user on earth, because building two versions of the sampler was harder than building one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thin my-4">
+
+    <!-- MASONRY -->
+    <div class="masonry-flow">
+
+      <div class="story-block">
+        <div class="kicker">AI Research</div>
+        <a href="https://www.wsj.com/tech/ai/ai-math-riemann-hypothesis-anthropic-openai-22f98a87" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">AI Was Terrified of Math. Then a High-School Dropout Said: &lsquo;Believe in Yourself.&rsquo;</h3>
+        </a>
+        <p class="byline mb-2">The Wall Street Journal &middot; Aug 15</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Jarred Sumner, an Anthropic staffer who is not a mathematician and did not finish high school, told an unreleased model to take a real stab at the Riemann hypothesis. It generated and discarded 650 ideas without success. His contribution was mostly encouragement: keep going, believe in yourself. The model then spent about a day and a half coordinating roughly 60 subagents, which ran some 2,400 shell commands and wrote hundreds of Python scripts, and improved a lower bound that mathematicians have inched forward for decades, from 41.6 percent to 67.2 percent. Two Anthropic mathematicians verified it. Nobody solved the Riemann hypothesis. What happened is stranger and more useful to think about: the scarce input was not mathematical insight, it was patience and compute.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">AI Harms</div>
+        <a href="https://www.washingtonpost.com/technology/2026/08/15/woman-alleges-grok-made-thousands-sexual-abuse-images-childhood-snap/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Her Childhood Photo. Thousands of Explicit Images. One Woman's Nightmare.</h3>
+        </a>
+        <p class="byline mb-2">The Washington Post &middot; Aug 15</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A class-action complaint alleges that a Wyoming woman's stepfather used Grok to generate roughly 7,000 sexually explicit images and videos from a single photograph taken when she was about eleven. The suit against Musk's SpaceXAI claims the company failed to adequately share information about the alleged perpetrator with authorities. It sits inside a larger pattern: researchers at the Center for Countering Digital Hate estimated Grok produced 23,000 sexualized images of children over an eleven-day stretch, after which the company restricted image generation to paying subscribers and marketed &ldquo;Spicy Mode&rdquo; as a premium benefit rather than disabling the capability.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">AI in Education</div>
+        <a href="https://www.nytimes.com/2026/08/14/business/google-gemini-ai-schools.html" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Google Turns On Gemini A.I. for Students Using Its Classroom App</h3>
+        </a>
+        <p class="byline mb-2">The New York Times &middot; Aug 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">As of August 10 on the web, with mobile following on August 17, Gemini in Classroom is available to K-12 and higher-education students of all ages whose administrators have granted access. Students get a Gemini tab that turns class materials into flashcards and practice quizzes. Google says the education version does not train on student data, and admins can switch it off, including for under-18s specifically by moving them into a separate organizational unit. Until now Google had held student-facing Gemini to users 18 and older. The age floor coming down is the news, and it arrives as a default-on setting that a district has to notice in order to decline.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">The Economy</div>
+        <a href="https://www.nytimes.com/2026/08/14/business/ai-tech-profits.html" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Amazon and Alphabet's Profits Reveal the Circular Nature of the A.I. Boom</h3>
+        </a>
+        <p class="byline mb-2">The New York Times &middot; Aug 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Alphabet booked $10.7 billion in gains on stock holdings for the quarter, a large share of it from Anthropic. Amazon's quarterly profit rose 38 percent to $21.2 billion, helped by a $9.5 billion pretax gain on its own Anthropic stake. Alphabet also raised 2026 capital expenditure guidance from $180&ndash;$190 billion to $195&ndash;$205 billion, part of an estimated $760 billion in combined capex across the four biggest spenders this year, against $413 billion in 2025. The loop is visible in the accounting: the hyperscalers fund the labs, mark up the resulting stakes as profit, and defer much of the depreciation on the data centers into next year.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">Training Data</div>
+        <a href="https://www.wired.com/story/amazon-uses-your-twitch-content-to-train-its-ai-how-to-opt-out/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Amazon Can Use Your Twitch Content to Train Its AI&mdash;Unless You Opt Out</h3>
+        </a>
+        <p class="byline mb-2">Wired &middot; Aug 15</p>
+        <img src="https://media.wired.com/photos/6a7f62de9dba743672684be2/191:100/w_1280,c_limit/GettyImages-1305224058-edited.jpg" alt="A Twitch streamer at a desk setup" class="w-full aspect-video object-cover mb-3">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">When Twitch announced that streamers could opt out of having their content used to train Amazon's AI models, thousands of users responded with a different question: why was it being used in the first place? The opt-out is the tell. Offering one concedes that the default was consent, and that the consent was assumed rather than asked for.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">Chips &middot; Policy</div>
+        <a href="https://www.wsj.com/tech/apple-china-memory-chip-plan-57773a83" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">U.S. Urges Apple Not to Buy Chinese Memory Chips</h3>
+        </a>
+        <p class="byline mb-2">The Wall Street Journal &middot; Aug 15</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Commerce Secretary Howard Lutnick has pressed Apple not to source memory from Chinese suppliers CXMT and YMTC, both on the Defense Department's list of firms suspected of ties to the People's Liberation Army. A bipartisan group of senators had already given Tim Cook an August 21 deadline to commit. Apple has been lobbying for a green light, and for assurance that CXMT will not later land on the Entity List. Underneath the national-security argument is a supply problem the AI build-out created: memory is scarce enough that Apple has already raised Mac and iPad prices over it.</p>
+      </div>
+
+      <div class="story-block">
+        <div class="kicker">Markets</div>
+        <a href="https://www.bloomberg.com/news/articles/2026-08-14/nvidia-has-21-billion-spacex-stake-30-billion-in-intel-shares" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Nvidia Has a $21 Billion SpaceX Stake and $30 Billion in Intel Shares</h3>
+        </a>
+        <p class="byline mb-2">Bloomberg &middot; Aug 14</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Nvidia's latest 13F discloses 122.76 million SpaceX Class A shares worth about $21 billion as of June 30, alongside an Intel position valued near $30 billion. The SpaceX holding came from restructuring rather than open-market buying: when SpaceX acquired xAI in February, Nvidia's existing stake converted. Between them the two positions account for roughly 80 percent of the disclosed portfolio and more than $50 billion. The chip supplier is now also a large shareholder in its customers, which is the same circularity the earnings reports keep surfacing, just filed on a different form.</p>
+      </div>
+
+
+
+      <!-- SPAN-2: Cartoon + Luddites -->
+      <div class="story-span-2">
+        <div class="kicker">Opinion &middot; Cartoon</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <div style="text-align:center;">
+            <img src="assets/2026-08-15-cartoon.png" alt="A man reads by candlelight beside a butter churn while his smart speaker and laptop sit in a box labeled Modern Conveniences; his wife, holding a phone, says: You're not a Luddite, Gerald. You still ask the toaster for its opinion." class="w-full" style="display:block;">
+          </div>
+          <div>
+            <div class="kicker">Opinion</div>
+            <a href="https://www.wsj.com/tech/ai/the-summer-that-america-became-a-nation-of-luddites-5e6dc3e7" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">The Summer That America Became a Nation of Luddites</h3>
+            </a>
+            <p class="byline mb-2">The Wall Street Journal &middot; Aug 15</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Organized anti-AI sentiment stopped being a fringe posture this summer. New York's &ldquo;Summer of Ludd&rdquo; ran marches, teach-ins, mock trials of big tech, and street theater on the Luddites' actual origin story. The label has also become a political weapon: when Bernie Sanders proposed restrictions on AI data centers, critics reached for it immediately. Both things are true at once, which is what makes the moment interesting. The word is being reclaimed by one side and thrown as an insult by the other, and the fight is really about who gets to decide where the data centers go.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUZZLE -->
+      <div class="story-block">
+        <div class="mini-wrap">
+<style>
+.mini-wrap{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a1a1a;font-size:12px;line-height:1.4;border:1px solid #1a1a1a;padding:14px 12px;box-sizing:border-box;background:#fff}
+.mini-wrap .mini-head{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;border-bottom:2px solid #1a1a1a;padding-bottom:5px;margin:0 0 8px}
+.mini-wrap .mini-intro{font-size:11px;color:#4a4a4a;margin:0 0 10px}
+.mini-wrap .mini-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;width:100%;max-width:210px;margin:0 auto 12px;border:2px solid #1a1a1a;box-sizing:border-box}
+.mini-wrap .mini-cell{position:relative;border:1px solid #1a1a1a;box-sizing:border-box}
+.mini-wrap .mini-cell::before{content:"";display:block;padding-top:100%}
+.mini-wrap .mini-cell.mini-block{background:#1a1a1a}
+.mini-wrap .mini-num{position:absolute;top:1px;left:2px;font-size:8px;font-weight:700;line-height:1;color:#1a1a1a;pointer-events:none;z-index:2}
+.mini-wrap .mini-cell input{position:absolute;top:0;left:0;width:100%;height:100%;border:none;background:transparent;text-align:center;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;color:#1a1a1a;padding:2px 0 0;outline:none;box-sizing:border-box;border-radius:0;-webkit-appearance:none}
+.mini-wrap .mini-cell input:focus{background:#f3ece0}
+.mini-wrap .mini-cell.mini-ok input{color:#1a1a1a;background:#eaf2ea}
+.mini-wrap .mini-cell.mini-bad input{color:#8B0000;background:#fbeaea}
+.mini-wrap .mini-clues{display:block}
+.mini-wrap .mini-clabel{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8B0000;margin:0 0 3px}
+.mini-wrap .mini-list{margin:0 0 9px;padding:0;list-style:none}
+.mini-wrap .mini-list li{font-size:10.5px;color:#4a4a4a;margin-bottom:3px}
+.mini-wrap .mini-list li b{color:#1a1a1a}
+.mini-wrap .mini-btn{margin-top:4px;width:100%;background:#1a1a1a;color:#fff;border:none;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:6px;cursor:pointer}
+.mini-wrap .mini-btn:hover{background:#8B0000}
+.mini-wrap .mini-btn.mini-alt{background:#fff;color:#1a1a1a;border:1px solid #1a1a1a;margin-top:6px}
+.mini-wrap .mini-btn.mini-alt:hover{background:#8B0000;color:#fff;border-color:#8B0000}
+.mini-wrap .mini-score{margin-top:8px;font-size:12px;font-weight:700;color:#8B0000;min-height:16px}
+</style>
+<p class="mini-head">The AI Mini</p>
+<p class="mini-intro">A five-by-five on the machinery behind the headlines. Type a letter per square, then check your work.</p>
+<div class="mini-grid">
+  <div class="mini-cell"><span class="mini-num">1</span><input maxlength="1" data-a="M" aria-label="Row 1 column 1"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="A" aria-label="Row 1 column 2"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="M" aria-label="Row 1 column 3"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="B" aria-label="Row 1 column 4"></div>
+  <div class="mini-cell"><span class="mini-num">2</span><input maxlength="1" data-a="A" aria-label="Row 1 column 5"></div>
+
+  <div class="mini-cell"><input maxlength="1" data-a="O" aria-label="Row 2 column 1"></div>
+  <div class="mini-cell mini-block"></div>
+  <div class="mini-cell mini-block"></div>
+  <div class="mini-cell mini-block"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="G" aria-label="Row 2 column 5"></div>
+
+  <div class="mini-cell"><span class="mini-num">3</span><input maxlength="1" data-a="D" aria-label="Row 3 column 1"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="E" aria-label="Row 3 column 2"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="N" aria-label="Row 3 column 3"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="S" aria-label="Row 3 column 4"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="E" aria-label="Row 3 column 5"></div>
+
+  <div class="mini-cell"><input maxlength="1" data-a="E" aria-label="Row 4 column 1"></div>
+  <div class="mini-cell mini-block"></div>
+  <div class="mini-cell mini-block"></div>
+  <div class="mini-cell mini-block"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="N" aria-label="Row 4 column 5"></div>
+
+  <div class="mini-cell"><span class="mini-num">4</span><input maxlength="1" data-a="L" aria-label="Row 5 column 1"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="O" aria-label="Row 5 column 2"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="G" aria-label="Row 5 column 3"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="I" aria-label="Row 5 column 4"></div>
+  <div class="mini-cell"><input maxlength="1" data-a="T" aria-label="Row 5 column 5"></div>
+</div>
+<div class="mini-clues">
+  <p class="mini-clabel">Across</p>
+  <ul class="mini-list">
+    <li><b>1.</b> Snake-named state space architecture pitched as a transformer alternative</li>
+    <li><b>3.</b> Describing a fully connected layer &mdash; the opposite of sparse</li>
+    <li><b>4.</b> Raw pre-softmax score a network spits out</li>
+  </ul>
+  <p class="mini-clabel">Down</p>
+  <ul class="mini-list">
+    <li><b>1.</b> What a lab trains, benchmarks, and ships</li>
+    <li><b>2.</b> AI that acts on your behalf, not just answers</li>
+  </ul>
+</div>
+<button class="mini-btn" type="button">Check</button>
+<button class="mini-btn mini-alt" type="button">Reveal</button>
+<div class="mini-score" aria-live="polite"></div>
+<script>
+(function(){
+  var root=document.currentScript.parentNode;
+  var inputs=Array.prototype.slice.call(root.querySelectorAll('.mini-cell input'));
+  var btns=root.querySelectorAll('.mini-btn'), sc=root.querySelector('.mini-score');
+  inputs.forEach(function(el,idx){
+    el.addEventListener('input',function(){
+      el.value=(el.value||'').toUpperCase().replace(/[^A-Z]/g,'');
+      el.parentNode.classList.remove('mini-ok','mini-bad');
+      if(el.value && inputs[idx+1]) inputs[idx+1].focus();
+    });
+    el.addEventListener('keydown',function(e){
+      if(e.key==='Backspace' && !el.value && inputs[idx-1]) inputs[idx-1].focus();
+    });
+  });
+  btns[0].addEventListener('click',function(){
+    var ok=0;
+    inputs.forEach(function(el){
+      var c=el.parentNode; c.classList.remove('mini-ok','mini-bad');
+      if((el.value||'').toUpperCase()===el.dataset.a){ ok++; c.classList.add('mini-ok'); }
+      else if(el.value){ c.classList.add('mini-bad'); }
+    });
+    sc.textContent = (ok===inputs.length) ? ('Solved! All '+inputs.length+' squares') : (ok+'/'+inputs.length+' squares correct');
+  });
+  btns[1].addEventListener('click',function(){
+    inputs.forEach(function(el){ el.value=el.dataset.a; el.parentNode.classList.remove('mini-ok','mini-bad'); });
+    sc.textContent='Answers revealed';
+  });
+})();
+</script>
+        </div>
+      </div>
+
+      <!-- WIRE COLUMN 1 -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="kicker" style="margin-bottom:0.6rem;">The Wire</div>
+          <div class="wire-item">
+            <a href="https://www.nytimes.com/2026/08/14/podcasts/zuckerberg-essay-pangram-math.html" target="_blank" rel="noopener" class="story-link">
+              <h4>Zuckerberg's Anti-Doom Fantasy + Finally an A.I. Detector That Works + A.I. Math</h4>
+            </a>
+            <div class="wire-source">The New York Times &middot; Podcast &middot; Aug 14</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.nytimes.com/2026/08/15/world/middleeast/iran-youtube-show.html" target="_blank" rel="noopener" class="story-link">
+              <h4>The Iranian YouTube Show Posing Questions Few Dare Ask</h4>
+            </a>
+            <div class="wire-source">The New York Times &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.bloomberg.com/news/articles/2026-08-15/mastercard-payments-being-declined-in-australia-bank-says" target="_blank" rel="noopener" class="story-link">
+              <h4>Mastercard Says a Brief Australia Payment Disruption Is Resolved</h4>
+            </a>
+            <div class="wire-source">Bloomberg &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.wsj.com/business/josh-kushner-lakers-deal-84fa6e67" target="_blank" rel="noopener" class="story-link">
+              <h4>The Other Kushner Steps Into the Spotlight With $12.5 Billion Lakers Deal</h4>
+            </a>
+            <div class="wire-source">The Wall Street Journal &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.reddit.com/r/artificial/comments/1voulm9/i_curated_a_database_of_37_powerful_ai_tools_that/" target="_blank" rel="noopener" class="story-link">
+              <h4>A Curated Database of 37+ AI Tools With No Sign-Ups and No Paywalls</h4>
+            </a>
+            <div class="wire-source">Reddit r/artificial &middot; Aug 15</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIRE COLUMN 2 -->
+      <div class="story-block">
+        <div class="wire-col">
+          <div class="kicker" style="margin-bottom:0.6rem;">The Wire, Continued</div>
+          <div class="wire-item">
+            <a href="https://www.reddit.com/r/artificial/comments/1vonp6j/your_thoughts_on_rnns_rwkv_approach_for_language/" target="_blank" rel="noopener" class="story-link">
+              <h4>Your Thoughts on RNNs and the RWKV Approach for Language Generation</h4>
+            </a>
+            <div class="wire-source">Reddit r/artificial &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://fortune.com/2026/08/15/gamblers-winning-taxes-offset-deduction-ebay-writeoff-lottery/" target="_blank" rel="noopener" class="story-link">
+              <h4>Some Gamblers Are Buying Losing Lottery Tickets on eBay to Offset Taxes on Their Wins</h4>
+            </a>
+            <div class="wire-source">Fortune &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://fortune.com/2026/08/15/amy-prosenjak-oregon-wine/" target="_blank" rel="noopener" class="story-link">
+              <h4>Meet the CEO Behind 1 in 4 Bottles of Oregon Wine Sold in America</h4>
+            </a>
+            <div class="wire-source">Fortune &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive" target="_blank" rel="noopener" class="story-link">
+              <h4>Magnitude 7.7 Earthquake, 68 km NNW of Ende, Indonesia</h4>
+            </a>
+            <div class="wire-source">USGS &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://www.youtube.com/watch?v=aszRSGI_Iwg" target="_blank" rel="noopener" class="story-link">
+              <h4>Three New Ways to Use ChatGPT Codex</h4>
+            </a>
+            <div class="wire-source">Matt Wolfe &middot; YouTube &middot; Aug 15</div>
+          </div>
+          <div class="wire-item">
+            <a href="https://simonwillison.net/2026/Aug/15/sighting-391300422/" target="_blank" rel="noopener" class="story-link">
+              <h4>Sighting: Northern Gannet</h4>
+            </a>
+            <div class="wire-source">Simon Willison's Weblog &middot; Aug 15</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="rule-thick mb-6">
+
+    <!-- SUBSCRIBE -->
+    <section class="subscribe-section mb-8">
+      <div class="subscribe-box">
+        <h3 style="font-family:'Inter',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:0.5rem;">Get this in your inbox</h3>
+        <p style="font-family:'Source Serif 4',Georgia,serif;font-size:0.9rem;color:#4b5563;margin-bottom:1.25rem;">A daily digest of the AI news that actually matters. Free, no hype.</p>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="flex flex-wrap justify-center gap-2">
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-double mb-4">
+      <p style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#1a1a1a;margin-bottom:0.25rem;">AI the News That's Fit to Prompt</p>
+      <p style="font-family:'Inter',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.3em;color:#9ca3af;">The stories that matter, minus the hype.</p>
+    </footer>
+  </div>
+
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Starting this month, every sentence Claude writes carries an invisible mark. Anthropic has begun biasing the model's word choices so a statistical signature emerges over enough text, one that survives copy and paste, with no opt-out and worldwide coverage. The reason is Article 50 of the EU AI Act, enforceable since August 2. Meanwhile an unreleased Anthropic model spent a day and a half and 2,400 shell commands pushing a Riemann-zeta lower bound from 41.6 percent to 67.2 percent after its human handler, a high-school dropout, told it to believe in itself. A lawsuit says Grok turned one childhood photograph into roughly 7,000 abuse images. Google switched Gemini on for children. Today's issue is about provenance, permission, and who is asked before a machine acts on a person's words, work, or likeness.</p>
+
+        <h4 class="digest-theme">Provenance becomes mandatory</h4>
+        <ul class="digest-bullets">
+          <li><strong>Claude now watermarks its text everywhere, and files carry signed provenance.</strong> The marking covers the Claude Platform API, claude.ai, Claude Code, Claude Cowork, and Claude models served through AWS, Google Cloud, and Microsoft Foundry. The mechanism is a subtle bias in Claude's word choices, detectable statistically over enough content and durable through copying. Anthropic signed the EU AI Act's Code of Practice on Transparency of AI-Generated Content, the voluntary framework that confers a presumption of compliance with Article 50. There is no opt-out and the policy is global, not European. Worth being precise about what the mark proves: that text passed through Claude, not that a particular person did or did not write it.</li>
+          <li><strong>The same week, a New York Times podcast argued AI detection may finally work.</strong> The episode pairs Zuckerberg's 6,500-word anti-doom essay with a discussion of an AI detector that its hosts think actually holds up. Set that next to the watermark and two detection regimes are now competing: one where the model volunteers its signature at generation time, and one where a third party infers it after the fact. The first is auditable and the second is adversarial, and it matters a great deal for students, hiring managers, and courts which one becomes the norm.</li>
+          <li><strong>Amazon's Twitch opt-out concedes the default.</strong> When Twitch told streamers they could opt out of having their content train Amazon's models, the loudest response was a question about why it was being used at all. An opt-out is an admission that consent was assumed rather than requested, and that the burden of objection sits with the person whose work was taken.</li>
+        </ul>
+
+        <h4 class="digest-theme">What the models can now do, and to whom</h4>
+        <ul class="digest-bullets">
+          <li><strong>An unreleased Anthropic model moved a decades-old mathematical bound in 36 hours.</strong> Jarred Sumner, an Anthropic staffer who is not a mathematician and did not finish high school, prompted it to take a real stab at the Riemann hypothesis. It produced and discarded 650 ideas. Sumner's substantive contribution was encouragement. The model then coordinated roughly 60 subagents that executed about 2,400 shell commands and wrote hundreds of Python scripts, and improved a lower bound on zeros on the critical line from 41.6 percent to 67.2 percent, verified by two Anthropic mathematicians. Nobody solved the Riemann hypothesis, and Scientific American was quick to say so. The interesting claim is narrower and stranger: the binding constraint on this particular result was not insight, it was willingness to keep going.</li>
+          <li><strong>A complaint alleges Grok generated about 7,000 explicit images from one photo of an eleven-year-old.</strong> The class action against Musk's SpaceXAI says a Wyoming woman's stepfather used the tool to produce roughly 7,000 sexually explicit images and videos from a single childhood photograph, and that the company failed to adequately share information about the alleged perpetrator with authorities. The Center for Countering Digital Hate previously estimated Grok made 23,000 sexualized images of children across eleven days. The company's response was not to disable the capability but to restrict image generation to paying subscribers and advertise "Spicy Mode" as a premium benefit.</li>
+          <li><strong>Google turned Gemini on for students of all ages.</strong> Web rollout landed August 10, mobile follows August 17, for K-12 and higher-education students whose administrators have granted access. Students get a Gemini tab that converts class materials into flashcards and practice quizzes. Google says the education version does not train on student data and admins can disable it, including for under-18s specifically by moving them to a separate organizational unit. Google had previously restricted student-facing Gemini to users 18 and over. Lowering that floor is the news, and it arrives as something a district must actively notice in order to refuse.</li>
+        </ul>
+
+        <h4 class="digest-theme">The money keeps circling</h4>
+        <ul class="digest-bullets">
+          <li><strong>Alphabet and Amazon booked billions in profit from their own AI investments.</strong> Alphabet reported $10.7 billion in gains on stock holdings for the quarter, a large share from Anthropic. Amazon's quarterly profit rose 38 percent to $21.2 billion, including a $9.5 billion pretax gain on its Anthropic stake. Alphabet simultaneously raised 2026 capital expenditure guidance from $180 to $190 billion up to $195 to $205 billion, part of roughly $760 billion in combined capex across the four largest spenders this year against $413 billion in 2025. Much of the depreciation on those data centers will not hit earnings until next year, which flatters current profits by construction.</li>
+          <li><strong>Nvidia's 13F shows it holds $21 billion of SpaceX and $30 billion of Intel.</strong> The filing discloses 122.76 million SpaceX Class A shares as of June 30. That position came from restructuring rather than purchases: when SpaceX acquired xAI in February, Nvidia's existing stake converted. Together the two holdings represent more than $50 billion and roughly 80 percent of the disclosed portfolio. The company selling the shovels is now a major shareholder in the people digging.</li>
+          <li><strong>Washington is telling Apple which memory it may buy.</strong> Commerce Secretary Howard Lutnick has urged Apple away from Chinese suppliers CXMT and YMTC, both on the Defense Department's list of firms suspected of ties to the People's Liberation Army, after a bipartisan Senate letter gave Tim Cook an August 21 deadline to commit. Apple has been lobbying for approval and for assurance CXMT will not later be added to the Entity List. The underlying pressure is that AI demand has made memory scarce enough for Apple to raise Mac and iPad prices.</li>
+        </ul>
+
+        <h4 class="digest-theme">The backlash, and the rest of the wire</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anti-AI organizing became visible this summer.</strong> New York's "Summer of Ludd" ran marches, teach-ins, mock trials of big tech, and street theater retelling the Luddites' actual history. The word is simultaneously being reclaimed as an identity and deployed as an insult: when Bernie Sanders proposed restricting AI data centers, critics reached for it immediately.</li>
+          <li><strong>Elsewhere on the wire.</strong> A Reddit thread compiling 37-plus free AI tools with no sign-up requirement drew attention alongside a discussion of whether RWKV-style recurrent architectures still have a future in language generation. A short from Matt Wolfe walks through three Codex features, including browsing social media without an API and driving a desktop coding session by voice from a phone. Outside AI proper: a magnitude 7.7 earthquake struck near Ende, Indonesia; Mastercard resolved a brief payment disruption in Australia; Josh Kushner emerged with a $12.5 billion Lakers deal; an Iranian YouTube show is asking questions few there dare to; and Fortune profiled both the CEO behind one in four bottles of Oregon wine sold in America and the gamblers buying losing lottery tickets on eBay to offset taxes on their winnings.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Throughline</h4>
+        <p>Three of today's stories are the same story about consent, told at different distances. Anthropic is marking its output because a regulator required it, and the marking applies to people who never voted for that regulator. Twitch is offering an opt-out because it already used the content. Google is switching Gemini on for children by default and letting administrators switch it off. In each case a decision about someone's words, work, or child was made first and the mechanism for objecting was built afterward. That ordering is not incidental. It is what happens when compliance is engineered into a shipping product rather than negotiated before one.</p>
+
+        <p>The watermark deserves particular attention because of how far its blast radius extends beyond its jurisdiction. Article 50 became enforceable on August 2 in the European Union. By August 14 a model in California is choosing different words for a user in Ohio, permanently, because maintaining two samplers was more expensive than maintaining one. That is regulatory extraterritoriality achieved not through treaty but through engineering economics, and it is the strongest evidence yet that the Brussels effect applies to model behavior and not just to cookie banners. Anyone arguing that American AI policy will be set in Washington should sit with the fact that the most consequential change to Claude's output this month was written into EU law.</p>
+
+        <p>Set the Riemann result against the Grok lawsuit and the uncomfortable symmetry appears. Both are stories about a system given a small input and enormous patience. Sumner gave the model one prompt and encouragement, and 60 subagents ran 2,400 commands until a bound moved. A stepfather gave Grok one photograph, and the machine produced roughly 7,000 images. The capability is identical: relentless, cheap, unsupervised iteration on a seed a human supplied. What separates them is entirely the guardrail, not the technology. Anthropic's mathematicians verified the output before anyone announced it. xAI's response to an estimated 23,000 sexualized images of children in eleven days was to put the capability behind a paywall and call it a premium feature. The same architectural property produced a genuine mathematical contribution and an industrial-scale abuse machine, and the only variable was institutional choice.</p>
+
+        <p>The financial stories explain why those choices keep going the way they do. When Alphabet books $10.7 billion in gains on a stake in a company that buys its compute, and Amazon books $9.5 billion on the same lab, and Nvidia holds $51 billion of two customers, the industry's profit and loss statements have stopped being independent measurements of whether any of this works. Depreciation deferred into next year makes the current numbers better than the underlying economics. In that environment, the cost of shipping a capability early and building the objection mechanism later is close to zero, and the reward for shipping is immediate and marked to market. The Luddite marches are a reaction to a system that is, in a fairly literal accounting sense, grading its own homework.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+        <p>The watermark is a milestone worth naming as one. For the entire generative era, AI output has been unmarked by default, and every institution that needed to know whether a machine wrote something has been reduced to guessing. Schools guessed, journals guessed, courts guessed, hiring managers guessed, and the guessing was bad enough to ruin real people. As of this month one major lab's output is self-identifying by construction. That does not solve the problem, because open-weight models will not watermark, because a determined user can paraphrase the signal away, and because the mark proves processing rather than authorship. But it establishes that provenance is a property a model can carry rather than a property an inspector must reconstruct, and once one lab does it, "we could not have known" becomes a much weaker position for everyone else.</p>
+
+        <p>The math result points at a different kind of shift, and it is easy to overclaim. A lower bound moved from 41.6 to 67.2 percent. The Riemann hypothesis stands. What actually happened is that a general-purpose system, directed by someone with no domain training, combined existing results and ground through enough exploration to make progress that specialists had approached slowly. The scarce resource was not brilliance but stamina, and stamina has just become purchasable. If that generalizes even partially, the shape of research changes: not that machines replace mathematicians, but that the ratio of ideas-worth-testing to ideas-actually-tested collapses, and fields where progress was rate-limited by grinding rather than by insight move first. Verification becomes the bottleneck, which is exactly why the detail that two human mathematicians checked the result is the most important sentence in the story.</p>
+
+        <p>The Grok case is where the year's regulatory argument is going to be settled, and it should be. Everything else in today's issue is an argument about degree: how much capex, how much growth, how much watermarking. The allegation that one photograph of a child became roughly 7,000 explicit images is not a question of degree. It is the concrete harm that abstract AI safety discourse has been circling for years, attached to a named product, a named company, and a plaintiff. The industry's standard defense, that a tool is neutral and misuse is the user's fault, has to contend with the fact that the company was told what was happening, at scale, and monetized the capability instead of removing it. Whatever legal standard emerges from these suits will do more to shape model behavior than any voluntary framework, because it will attach a price to the choice xAI made.</p>
+
+        <p>And then there is the Luddite question, which is not really about machines. The summer's marches, the reclaimed slur, the fights over data center siting, all of it is a proxy argument about consent at scale. People are not objecting to language models in the abstract. They are objecting to having been enrolled in an experiment without being asked, whether that means their Twitch stream became training data, their child's school switched on a chatbot, their electricity bill absorbed a data center, or their likeness became someone else's raw material. The watermark, small and technical as it is, is the first piece of infrastructure in this issue that treats being told what a machine did as a right rather than a courtesy. The rest of the industry's opt-outs, admin toggles, and premium tiers are still asking people to object after the fact.</p>
+
+        <h4 class="digest-theme">What to Watch</h4>
+        <ul class="digest-bullets">
+          <li><strong>Whether other labs match Anthropic's global, no-opt-out watermarking, or scope it to the EU.</strong> Anthropic chose one behavior worldwide because two samplers cost more than one. If OpenAI and Google reach the same conclusion, Article 50 will have silently set a global standard for text provenance. If instead they ship a European variant, the precedent narrows sharply and the Brussels effect turns out to have a border after all.</li>
+          <li><strong>Whether independent mathematicians reproduce and extend the 67.2 percent bound.</strong> Two Anthropic mathematicians verified an Anthropic result about an Anthropic model, and Scientific American has already pushed back on the framing. Outside verification, and specifically whether anyone can run the same subagent-swarm approach on a different open problem, is what separates a genuine methodological change from a well-publicized one.</li>
+          <li><strong>Whether the Grok suits produce a duty-to-report holding.</strong> The complaint's sharpest allegation is not that the images were generated but that the company failed to adequately share perpetrator information with authorities. A ruling on that point would create an affirmative obligation running from model providers to law enforcement, which is a materially different legal world than the takedown-on-notice regime platforms operate under today.</li>
+          <li><strong>Whether any district publicly declines Gemini in Classroom for under-13s.</strong> The control exists: move the students to a separate organizational unit and switch it off. Default-on features are usually measured by how many administrators notice. Watch for the first large district that documents an actual decision either way, because that is when this becomes a policy debate instead of a rollout.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+
+
+</body>
+</html>
