@@ -13,15 +13,21 @@
     "mode": "auto"
   },
   "build": {
-    "status": "in-progress",
-    "currentPhase": "podcast",
-    "startedAt": "2026-08-17T09:39:44Z",
+    "status": "complete",
+    "currentPhase": "done",
+    "completedAt": "2026-08-17T10:28:59Z",
     "completedSubPhases": [
       "study-guides",
       "html",
-      "digest"
+      "digest",
+      "upload",
+      "email"
     ],
-    "notes": "AWS SSO expired; S3 uploads skipped. Publishing via GitHub Pages git push. Assets referenced by repo-relative paths."
+    "skipped": {
+      "podcast": "ElevenLabs API key invalid (key ID stored instead of sk_ key)",
+      "layout-review": "Chrome MCP tools unavailable in session",
+      "s3-upload": "AWS SSO token expired; published via GitHub Pages instead"
+    }
   },
   "lastError": null
 }
