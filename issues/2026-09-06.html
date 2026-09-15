@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - The Pelican Comparison Grid for Astra Is Pretty Interesting - September 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup — September 6, 2026. Simon Willison's pelican benchmark shows GPT-6 Astra significantly outperforming its predecessors.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue #103">
+  <meta property="og:description" content="Daily AI news roundup — September 6, 2026. Simon Willison's pelican benchmark shows GPT-6 Astra significantly outperforming its predecessors.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/issues/2026-09-06.html">
+  <link rel="canonical" href="https://fittoprompt.com/issues/2026-09-06.html">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' }, fontFamily: { serif: ['"Source Serif 4"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'], display: ['"Inter"', 'system-ui', 'sans-serif'], masthead: ['"Inter"', 'system-ui', 'sans-serif'] } } } }
+  </script>
+  <style>
+    body { background-color: #f8f8f8; -webkit-font-smoothing: antialiased; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: #1a1a1a; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: #6b7280; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.05em; }
+    .masthead-info span { margin: 0 0.75rem; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 2px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: #6b7280; padding: 0.5rem 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; margin-bottom: 1.25rem; }
+    .headline-lead { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.75rem); font-weight: 900; line-height: 1.12; color: #1a1a1a; }
+    .headline-feature { font-family: 'Inter', system-ui, sans-serif; font-size: clamp(1.05rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2; color: #1a1a1a; }
+    .headline-standard { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #8B0000; margin-bottom: 0.35rem; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+    .newspaper-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.7; color: #374151; }
+    .newspaper-body p { margin-bottom: 0.85em; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .lead-grid { grid-template-columns: 2fr 1fr; } }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2rem; margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-block { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; }
+    .masonry-flow .story-wide { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: 1 / -1; }
+    .masonry-flow .story-span-2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 1.25rem; grid-column: span 2; }
+    @media (max-width: 767px) { .masonry-flow .story-span-2 { grid-column: span 1; } }
+    .wire-col { border-top: 2px solid #1a1a1a; padding-top: 0.75rem; }
+    .wire-item { padding: 0.6rem 0; border-bottom: 1px dotted #d1d5db; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item h4 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .wire-item p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.82rem; color: #4b5563; line-height: 1.5; }
+    .wire-source { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+    a.story-link { color: inherit; text-decoration: none; }
+    a.story-link:hover .headline-lead, a.story-link:hover .headline-feature, a.story-link:hover .headline-standard, a.story-link:hover h4 { color: #8B0000; }
+    .subscribe-box { background: white; border: 2px solid #1a1a1a; padding: 2rem; text-align: center; }
+    .subscribe-box input { border: 1px solid #d1d5db; padding: 0.5rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; outline: none; background: #f8f8f8; }
+    .subscribe-box input:focus { border-color: #1a1a1a; }
+    .subscribe-box button { background: #1a1a1a; color: #f8f8f8; padding: 0.5rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; border: none; cursor: pointer; transition: background 0.2s ease; }
+    .subscribe-box button:hover { background: #8B0000; }
+    @media print { body { background: white; } .subscribe-section, footer { display: none; } a { color: #000 !important; } }
+  </style>
+</head>
+
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <!-- MASTHEAD -->
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Sunday, September 6, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Vol. 1, No. 103</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>1 Story</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+    <!-- LEAD STORY -->
+    <section class="mt-6 mb-4">
+      <div class="lead-grid">
+        <div>
+          <div class="kicker">AI Models</div>
+          <a href="https://simonwillison.net/2026/Sep/4/astra-pelicans/" target="_blank" rel="noopener" class="story-link" style="display:block;">
+            <h2 class="headline-lead mb-3">The Pelican Comparison Grid for Astra Is Pretty Interesting</h2>
+          </a>
+          <p class="byline mb-3">Simon Willison's Weblog &middot; Sep 4</p>
+          <div class="newspaper-body">
+            <p>Simon Willison ran his standing "draw an SVG pelican riding a bicycle" test against GPT-6 Astra across multiple reasoning-effort levels, then laid the results out in a comparison grid alongside the GPT-5.6 family of models it replaces.</p>
+            <p>The grid shows Astra producing noticeably more coherent pelican illustrations than its predecessors, and doing it while burning through fewer tokens per generation &mdash; a small but consistent benchmark that Willison has used across several model launches now, and one that continues to track reasonably well with broader capability gains.</p>
+          </div>
+        </div>
+        <div>
+          <div class="newspaper-body">
+            <p>Because today's fetch turned up only this single usable candidate, this issue runs as a lead-only edition. The usual roundup of additional stories, the wire briefs, cartoon, and acronym quiz resume with the next issue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule-thick mb-6">
+
+    <!-- SUBSCRIBE -->
+    <section class="subscribe-section mb-8">
+      <div class="subscribe-box">
+        <h3 style="font-family:'Inter',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:0.5rem;">Get this in your inbox</h3>
+        <p style="font-family:'Source Serif 4',Georgia,serif;font-size:0.9rem;color:#4b5563;margin-bottom:1.25rem;">A daily digest of the AI news that actually matters. Free, no hype.</p>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="flex flex-wrap justify-center gap-2">
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-8">
+      <hr class="rule-double mb-4">
+      <p style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#1a1a1a;margin-bottom:0.25rem;">AI the News That's Fit to Prompt</p>
+      <p style="font-family:'Inter',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.3em;color:#9ca3af;">The stories that matter, minus the hype.</p>
+    </footer>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE — Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">Simon Willison's cheapest reasoning tier of a brand-new model called Astra beat every reasoning tier of its predecessor "Sol" on his standing pelican-drawing test &mdash; for 9.55 cents. That's not a headline you'd get from a benchmark leaderboard. It's the kind of signal you only notice if you run the same quirky test on every model release and actually look at what changed.</p>
+
+        <h3 class="digest-section-head">Today's Headlines</h3>
+
+        <h4 class="digest-theme">AI Models</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Pelican Comparison Grid for Astra Is Pretty Interesting</strong> &mdash; Willison ran his "SVG pelican riding a bicycle" test against a new model he calls GPT-6 Astra at five reasoning levels (low through max) and put the results in a grid next to the GPT-5.6 family it replaces (Sol, Terra, Luna). His verdict: "The Astra pelicans are much better," while even the best Sol output is "still pretty clearly a bunch of abstract shapes." Astra costs more per token &mdash; $10/$50 per million input/output tokens versus Sol's $5/$30 &mdash; but uses far fewer tokens per generation, and a token-count quirk (Astra and Luna both used exactly 16 input tokens for the same prompt, versus 26 for Sol and Terra) has Willison speculating Astra and Luna share more architecture than the vendor has disclosed.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The interesting thing about Willison's test isn't the pelicans themselves &mdash; it's that a silly, consistent, self-administered benchmark keeps surfacing real signal about how a model family is built. The 16-versus-26 input token gap between Astra/Luna and Sol/Terra isn't something a vendor's own marketing page would ever tell you. It's the kind of detail that only shows up when someone runs the exact same prompt across a whole model lineup and diffs the receipts.</p>
+
+        <p>That's also why the price framing matters more than it looks. A naive read of "$10/$50 versus $5/$30" says Astra is twice as expensive. But <em>token efficiency</em> flips that: if Astra needs meaningfully fewer output tokens to hit a better result, the effective cost per useful output can land below the cheaper-looking model. Willison's own math &mdash; the best Astra tier beating every Sol tier for under a dime &mdash; is the kind of total-cost-of-quality number that a per-token price sheet will never surface on its own.</p>
+
+        <h4 class="digest-theme">The Bigger Picture</h4>
+
+        <p>Zoom out and this is really a story about how the industry is quietly re-learning to distrust vendor-supplied benchmarks. As frontier labs ship faster and reasoning-effort knobs multiply (low, medium, high, xhigh, max, and whatever comes next), the practical question shifts from "which model is smartest" to "which model gives me the best result per dollar at the setting I'll actually use." Independent, repeatable, slightly absurd personal benchmarks like Willison's pelican test are filling a gap that official model cards don't: they're cheap to run, easy to compare across releases, and hard for a vendor to game after the fact.</p>
+
+        <p>The undisclosed-relationship speculation is worth sitting with too. As model families multiply within a single vendor's lineup (Sol, Terra, Luna, Astra), buyers increasingly can't tell from naming alone which models share weights, training data, or architecture. That opacity has real cost implications: if Astra and Luna really are closer cousins than officially stated, then routing decisions based on presumed independence between models could be quietly wrong. Expect more of this kind of forensic benchmarking &mdash; not because anyone especially cares about pelicans, but because it's becoming one of the few ways outsiders can reverse-engineer how these model families actually relate to each other.</p>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Token efficiency as a hidden cost lever.</strong> As reasoning-effort tiers proliferate, the sticker price per million tokens matters less than tokens-consumed-per-task. Watch for more "it costs more per token but less per answer" framing from other model releases.</li>
+          <li><strong>Model-family lineage claims getting tested.</strong> If Astra and Luna really do share architecture despite being marketed as distinct GPT-5.6/GPT-6 tiers, expect more independent probing (token counts, latency fingerprints, refusal patterns) to surface which "different" models are actually related.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body></html>

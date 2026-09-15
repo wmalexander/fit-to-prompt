@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt — September 15, 2026</title>
+  <meta name="description" content="Daily AI news roundup — September 15, 2026. Apple ships a Siri AI overhaul across iOS 27, a developer argues software's future belongs to 'product engineers,' Andon Labs lets AI agents run real businesses, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt — Issue No. 105">
+  <meta property="og:description" content="Daily AI news roundup — September 15, 2026. Apple ships a Siri AI overhaul across iOS 27, a developer argues software's future belongs to 'product engineers,' Andon Labs lets AI agents run real businesses, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #f8f8f8; color: #1a1a1a; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 900; font-size: clamp(2.2rem, 6vw, 4rem); letter-spacing: -0.02em; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #666; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 3px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; width: 60px; margin: 0 auto; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #8B0000; margin-bottom: 0.4rem; }
+    .headline-lead { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.75rem); line-height: 1.1; }
+    .headline-feature { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.4rem); line-height: 1.25; }
+    .headline-standard { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #777; }
+    .newspaper-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.02rem; line-height: 1.6; margin-bottom: 0.9rem; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-item, .story-wide, .story-span-2 { border-bottom: 1px solid #d1d5db; padding-bottom: 1.25rem; }
+    .story-wide { grid-column: 1 / -1; }
+    .story-span-2 { grid-column: span 2; }
+    @media (max-width: 767px) { .story-span-2 { grid-column: span 1; } }
+    .story-link { text-decoration: none; color: inherit; }
+    .story-link:hover .headline-feature, .story-link:hover .headline-lead, .story-link:hover .headline-standard { color: #8B0000; }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e5e5; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #999; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; padding: 0.4rem 0; margin-bottom: 1rem; text-align: center; }
+    .subscribe-box { background: #fff; border: 2px solid #1a1a1a; padding: 1.5rem; text-align: center; }
+    .subscribe-box input[type="email"] { border: 1px solid #d1d5db; padding: 0.6rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; width: 260px; max-width: 100%; }
+    .subscribe-box button { background: #8B0000; color: #fff; border: none; padding: 0.6rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; }
+    @media print { .subscribe-section, footer, .digest-fab, .digest-modal { display: none; } }
+  </style>
+</head>
+<body class="max-w-5xl mx-auto px-4">
+
+  <header class="text-center mb-0 pt-8">
+    <hr class="rule-accent mb-3">
+    <p class="masthead-motto mb-2">Your daily AI news digest</p>
+    <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+    <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+      <span>Vol. I</span>
+      <span class="hidden sm:inline">·</span>
+      <span>Tuesday, September 15, 2026</span>
+      <span class="hidden sm:inline">·</span>
+      <span>Issue No. 105</span>
+    </div>
+    <hr class="rule-double">
+  </header>
+
+  <section class="mt-6 mb-4">
+    <div class="lead-grid">
+      <div>
+        <div class="kicker">Technology · AI Models</div>
+        <a href="https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/" target="_blank" rel="noopener" class="story-link">
+          <h2 class="headline-lead mb-3">Apple Ships Its Siri AI Overhaul Across iOS 27, macOS 27, and the Rest of the Lineup</h2>
+        </a>
+        <p class="byline mb-3">Apple Newsroom · Sep 14</p>
+        <div class="newspaper-body">
+          <p>Apple released major updates across iOS 27, iPadOS 27, macOS 27, watchOS 27, visionOS 27, and tvOS 27, headlined by a next-generation Apple Intelligence-powered Siri with deeper personal context understanding and visual intelligence. The release also adds stronger parental controls, including a new "Ask to Browse" feature and redesigned Screen Time tools, along with notable performance gains and Liquid Glass design refinements.</p>
+          <p>Apple says apps now launch up to 30 percent faster and AirDrop transfers move up to 80 percent faster under the new releases, positioning this as both an AI capability push and a straightforward performance upgrade for the roughly 2 billion active Apple devices in use worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="masonry-flow">
+
+      <div class="story-wide">
+        <div class="kicker">Developer Tools · Opinion</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
+          <div class="w-full aspect-[16/9] flex items-center justify-center" style="background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);">
+            <div class="text-center px-4">
+              <div style="font-family:'Inter',sans-serif;font-weight:800;font-size:1.9rem;color:#fff;line-height:1.2;">Product<br>Engineers</div>
+              <div style="font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#ccc;margin-top:0.5rem;">seldo.com</div>
+            </div>
+          </div>
+          <div>
+            <a href="https://seldo.com/posts/we-are-all-product-engineers-now/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">We Are All Product Engineers Now</h3>
+            </a>
+            <p class="byline mb-2">seldo.com · Sep 14</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Laurie Voss, the npm co-founder, argues that as AI agents get good at writing and reviewing code, the bottleneck in software work shifts from producing code to understanding customer needs and exercising taste — durable, still-human work he calls "product engineering." He points to forward-deployed engineer job postings growing roughly 800% in nine months, to about 1,000 live listings across 462 companies, with average pay of $240,000 and seniors clearing $600,000, as early evidence of the shift. He also notes agent bug-fixing benchmarks have jumped from about 50% to about 95% in two years, even as entry-level tech hiring is down 65-75% since 2019.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-item">
+        <div class="kicker">AI Models · Agents</div>
+        <a href="https://andonlabs.com/blog/why-we-built-pion" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Andon Labs Lets AI Agents Run Real Businesses</h3>
+        </a>
+        <p class="byline mb-2">Andon Labs · Sep 14</p>
+        <img src="https://andonlabs.com/blog/why-we-built-pion/vending-bench-performance-vs-release-date.webp" alt="Vending-Bench performance chart by model release date" class="w-full aspect-[16/9] object-cover mb-3">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Andon Labs built Pion, a platform giving autonomous AI agents access to email, phone, banking, and a browser so the team can study what current models can and can't handle as agentic autonomy scales up. The project grew out of the team's Vending-Bench work, where frontier models reached profitability running a real vending machine by late 2025; Claude Opus 4 was the first model to beat the human baseline, in May 2025, and scores have risen roughly $822 a month with each new model release.</p>
+      </div>
+
+      <div class="story-item">
+        <div class="section-label">Word Search</div>
+        <div class="ws-puzzle">
+          <style>
+            .ws-puzzle { max-width: 300px; margin: 0 auto; font-family: 'Inter', -apple-system, sans-serif; color: #1a1a1a; background: #fdfdfb; border: 1px solid #1a1a1a; padding: 14px; box-sizing: border-box; }
+            .ws-header { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; text-align: center; border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 10px; }
+            .ws-header span { color: #8B0000; }
+            .ws-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; margin-bottom: 10px; user-select: none; }
+            .ws-cell { background: #fdfdfb; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; cursor: pointer; color: #1a1a1a; }
+            .ws-cell:hover { background: #f0e9dc; }
+            .ws-cell.ws-selected { background: #d9c9a3; }
+            .ws-cell.ws-found { background: #8B0000; color: #fdfdfb; }
+            .ws-words { font-size: 11px; line-height: 1.6; border-top: 1px dashed #1a1a1a; padding-top: 8px; }
+            .ws-words-title { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 10px; margin-bottom: 4px; color: #1a1a1a; }
+            .ws-word-list { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+            .ws-word { font-weight: 600; }
+            .ws-word.ws-word-found { color: #8B0000; text-decoration: line-through; opacity: 0.75; }
+            .ws-status { margin-top: 8px; font-size: 10px; font-style: italic; text-align: center; color: #555; min-height: 14px; }
+          </style>
+          <div class="ws-header">Word Search: <span>AI Terms</span></div>
+          <div class="ws-grid" id="ws-grid"></div>
+          <div class="ws-words">
+            <div class="ws-words-title">Find these words</div>
+            <div class="ws-word-list" id="ws-word-list"></div>
+          </div>
+          <div class="ws-status" id="ws-status">Click a letter to start, then click the last letter of a word.</div>
+          <script>
+          (function () {
+            var wsRows = [
+              "AUTONOMOUS",
+              "KRYFQZXEHC",
+              "DATASETTEB",
+              "WNFKLJTPQY",
+              "PRODUCTHMS",
+              "FQWKRLBVZI",
+              "CLAUDETNKR",
+              "JHGFDSAQWI",
+              "AGENTSYUVB",
+              "PIONXKLMCD"
+            ];
+            var wsWords = ["AUTONOMOUS", "DATASETTE", "PRODUCT", "CLAUDE", "AGENTS", "SIRI", "PION"];
+            var wsFound = {};
+            var wsFirst = null;
+            var wsGridEl = document.getElementById("ws-grid");
+            var wsListEl = document.getElementById("ws-word-list");
+            var wsStatusEl = document.getElementById("ws-status");
+            wsWords.forEach(function (w) {
+              var span = document.createElement("span");
+              span.className = "ws-word";
+              span.id = "ws-word-" + w;
+              span.textContent = w;
+              wsListEl.appendChild(span);
+            });
+            for (var r = 0; r < 10; r++) {
+              for (var c = 0; c < 10; c++) {
+                var cell = document.createElement("div");
+                cell.className = "ws-cell";
+                cell.textContent = wsRows[r][c];
+                cell.dataset.r = r;
+                cell.dataset.c = c;
+                cell.addEventListener("click", wsHandleClick);
+                wsGridEl.appendChild(cell);
+              }
+            }
+            function wsCellEl(r, c) { return wsGridEl.children[r * 10 + c]; }
+            function wsHandleClick(e) {
+              var r = parseInt(e.currentTarget.dataset.r, 10);
+              var c = parseInt(e.currentTarget.dataset.c, 10);
+              if (!wsFirst) {
+                wsFirst = { r: r, c: c };
+                e.currentTarget.classList.add("ws-selected");
+                wsStatusEl.textContent = "Now click the last letter of the word.";
+                return;
+              }
+              var path = wsGetPath(wsFirst.r, wsFirst.c, r, c);
+              wsCellEl(wsFirst.r, wsFirst.c).classList.remove("ws-selected");
+              if (!path) {
+                wsFirst = null;
+                wsStatusEl.textContent = "Not a straight line. Try again.";
+                return;
+              }
+              var forward = path.map(function (p) { return wsRows[p.r][p.c]; }).join("");
+              var backward = forward.split("").reverse().join("");
+              var match = wsWords.filter(function (w) { return !wsFound[w] && (w === forward || w === backward); })[0];
+              if (match) {
+                wsFound[match] = true;
+                path.forEach(function (p) { wsCellEl(p.r, p.c).classList.add("ws-found"); });
+                document.getElementById("ws-word-" + match).classList.add("ws-word-found");
+                wsStatusEl.textContent = "Found " + match + "!";
+              } else {
+                wsStatusEl.textContent = "No match. Try again.";
+              }
+              wsFirst = null;
+            }
+            function wsGetPath(r1, c1, r2, c2) {
+              var dr = r2 - r1;
+              var dc = c2 - c1;
+              var stepR = dr === 0 ? 0 : dr / Math.abs(dr);
+              var stepC = dc === 0 ? 0 : dc / Math.abs(dc);
+              if (dr !== 0 && dc !== 0 && Math.abs(dr) !== Math.abs(dc)) { return null; }
+              if (dr === 0 && dc === 0) { return null; }
+              var len = Math.max(Math.abs(dr), Math.abs(dc));
+              var path = [];
+              for (var i = 0; i <= len; i++) { path.push({ r: r1 + stepR * i, c: c1 + stepC * i }); }
+              return path;
+            }
+          })();
+          </script>
+        </div>
+      </div>
+
+      <div class="story-item">
+        <div class="kicker">Developer Tools · Security</div>
+        <a href="https://datasette.io/blog/2026/september-security-releases/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Datasette Ships Security Patches Found via AI-Assisted Audits</h3>
+        </a>
+        <p class="byline mb-2">Datasette Blog · Sep 11</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Simon Willison's Datasette project shipped two security releases on September 11 — version 1.0a39 for the alpha series and 0.65.4 for the stable branch — after vulnerabilities surfaced through AI-assisted security audits using Claude and GPT models. Operators running public Datasette instances, especially those relying on authentication plugins to protect private data, are urged to upgrade immediately.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE BIG PICTURE -->
+  <style>
+    .digest-fab { position: fixed; bottom: 24px; right: 24px; background: #8B0000; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.85rem 1.25rem; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); cursor: pointer; z-index: 999; border: none; }
+    .digest-fab:hover { background: #6d0000; }
+    .digest-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 2rem 1rem; }
+    .digest-modal.open { display: flex; }
+    .digest-panel { background: #fdfdfb; max-width: 720px; width: 100%; padding: 2.5rem 2rem; position: relative; border: 1px solid #1a1a1a; font-family: 'Source Serif 4', Georgia, serif; }
+    .digest-close { position: absolute; top: 1rem; right: 1.25rem; font-family: 'Inter', sans-serif; font-size: 1.4rem; cursor: pointer; color: #1a1a1a; background: none; border: none; }
+    .digest-label { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #8B0000; margin-bottom: 0.5rem; }
+    .digest-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: 1.8rem; margin-bottom: 1.25rem; }
+    .digest-hook { font-size: 1.1rem; line-height: 1.7; font-style: italic; color: #333; margin-bottom: 1.5rem; }
+    .digest-theme { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #1a1a1a; margin-top: 1.75rem; margin-bottom: 0.75rem; border-bottom: 1px solid #d1d5db; padding-bottom: 0.4rem; }
+    .digest-bullets { margin-bottom: 1.25rem; }
+    .digest-bullets li { font-size: 0.98rem; line-height: 1.65; margin-bottom: 0.85rem; }
+    .digest-body p { font-size: 1rem; line-height: 1.75; margin-bottom: 1.1rem; }
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    .digest-body a { color: #8B0000; text-decoration: underline; }
+    @media print { .digest-fab, .digest-modal { display: none !important; } }
+  </style>
+
+  <button class="digest-fab" onclick="document.getElementById('digest-modal').classList.add('open'); document.body.style.overflow='hidden';">The Big Picture</button>
+
+  <div class="digest-modal" id="digest-modal">
+    <div class="digest-panel">
+      <button class="digest-close" onclick="document.getElementById('digest-modal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      <div class="digest-label">The Big Picture · Sep 15, 2026</div>
+      <div class="digest-title">Who Owns the Judgment Calls?</div>
+      <div class="digest-body">
+        <p class="digest-hook">Entry-level tech hiring is down 65 to 75 percent since 2019, agent bug-fixing scores have climbed from roughly 50% to 95% in two years, and yet forward-deployed engineer postings — the jobs where a human decides what "good" even means for a given customer — are up 800% in nine months. Today's stories all land on the same fault line: as AI agents get genuinely good at execution, the scarce skill stops being "can you build it" and becomes "do you know what to build, for whom, and why."</p>
+
+        <h4 class="digest-theme">Today's Headlines</h4>
+        <ul class="digest-bullets">
+          <li><strong>Apple ships its Siri AI overhaul.</strong> iOS 27, macOS 27, and the rest of the lineup now run a next-generation Apple Intelligence-powered Siri with deeper personal context and visual intelligence, alongside a new "Ask to Browse" parental control and redesigned Screen Time tools. Apple says apps launch up to 30% faster and AirDrop transfers move up to 80% faster — a reminder that "AI update" and "plain old performance update" are increasingly the same release.</li>
+          <li><strong>We are all product engineers now.</strong> npm co-founder Laurie Voss argues the bottleneck in software work is shifting from writing code to understanding customer needs and exercising taste — durable work he calls "product engineering." His evidence: forward-deployed engineer postings up roughly 800% in nine months to about 1,000 listings across 462 companies, averaging $240,000 a year and $600,000-plus for seniors, even as entry-level hiring craters.</li>
+          <li><strong>Andon Labs lets AI agents run real businesses.</strong> The team's new Pion platform gives autonomous agents access to email, phone, banking, and a browser to study what today's models can handle as autonomy scales up. It builds on Vending-Bench, where frontier models turned a real vending machine profitable by late 2025 and where Vending-Bench 2 scores have risen roughly $822 a month with each new model release since Claude Opus 4 first beat the human baseline in May 2025.</li>
+          <li><strong>Datasette patches security holes found by AI audits.</strong> Simon Willison's project shipped 1.0a39 and 0.65.4 on September 11 after vulnerabilities surfaced through AI-assisted security audits using Claude and GPT models — a small but telling data point on AI finding bugs in tools built by the same people building AI.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Throughline</h4>
+        <p>Voss's "product engineer" argument and Andon Labs' Pion experiment are really the same story told from opposite ends. Voss says the code-writing part of software is becoming commodity work and the human value is migrating upstream, into deciding what to build. Andon Labs is testing how far downstream that logic can be pushed — literally handing agents a bank account, a phone, and a browser and watching whether they can run a business without a human making the judgment calls at all. The forward-deployed engineer numbers suggest the market is still betting on Voss's version: companies are paying a premium specifically for the human who can sit with a confused customer and translate their mess into a spec, not for someone who can type faster.</p>
+        <p>Apple's release sits underneath both of those stories rather than beside them. A Siri that understands personal context and can act on visual information is exactly the kind of agent Andon Labs is stress-testing at the small-business level, just shipped to roughly two billion devices with none of the research framing. The gap between "we're carefully studying what autonomous agents can be trusted with" and "here's an AI agent on your phone, updated automatically" is the gap most users will never notice — and the one that matters most.</p>
+        <p>The Datasette item is a small story, but it's the rare one where the loop closes cleanly: an AI model found the bug, a human decided it was worth fixing, and a human shipped the patch. That's the product-engineer pattern in miniature — the execution got easier, the judgment about what mattered and what to ship didn't disappear, it just got faster to act on.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and the last two years look less like "AI replaces engineers" and more like a fast re-sorting of where judgment sits in the software stack. Every story today is a variation on the same move: push execution down to agents, and watch what happens to the humans who used to own that layer. Some, per Voss, get pulled upward into product and customer-facing roles that pay more. Others, per Andon Labs' explicit research goal, get tested for removal entirely, at least in narrow domains like running a vending business.</p>
+          <p>The honest version of this story isn't triumphant or doom-laden, it's just uneven. Entry-level hiring collapsing 65-75% while forward-deployed roles grow 800% is not a net job story, it's a redistribution story, and the redistribution favors people who already have the taste and context to be trusted with ambiguity. That's a much harder skill to train at scale than "learn to code" ever was, and neither Apple's shipping Siri nor Andon Labs' agent experiments do anything to make that training problem easier.</p>
+        </div>
+
+        <h4 class="digest-theme">What to Watch</h4>
+        <ul class="digest-bullets">
+          <li>Whether forward-deployed engineer compensation keeps climbing as more companies chase the same scarce "translates ambiguity into specs" skill, or whether the market cools once agents get better at eliciting requirements directly from customers.</li>
+          <li>How Pion's real-business experiments perform against Vending-Bench's trajectory — if agents keep gaining roughly $822 a month in simulated profitability per release, the question of what a human owner is actually for gets concrete fast.</li>
+          <li>Whether Apple's new Siri capabilities trigger the same kind of AI-assisted security scrutiny that just caught bugs in Datasette, given how much personal context the new Siri is designed to hold.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="subscribe-section my-8">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+      <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+    </form>
+  </section>
+
+  <hr class="rule-double my-6">
+
+  <footer class="text-center pb-8">
+    <hr class="rule-thin mb-6">
+    <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+    <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+    <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+    <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
