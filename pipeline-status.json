@@ -1,21 +1,31 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-30",
   "fetch": {
     "status": "complete",
-    "completedAt": "2026-09-15T05:12:54.449095Z",
-    "candidateCount": 7,
-    "sourcesChecked": 34
+    "completedAt": "2026-09-30T05:09:07.928718+00:00",
+    "candidateCount": 80,
+    "sourcesChecked": 40,
+    "successCount": 24,
+    "emptyCount": 8,
+    "errorCount": 8,
+    "skippedCount": 0
   },
   "review": {
     "status": "complete",
-    "completedAt": "2026-09-15T05:14:06Z",
-    "approved": 7,
+    "completedAt": "2026-09-30T05:10:07Z",
+    "approved": 19,
     "mode": "auto"
   },
   "build": {
-    "status": "complete",
-    "completedAt": "2026-09-15T06:24:30Z",
-    "completedSubPhases": ["study-guides", "html", "digest", "podcast", "layout-review", "upload", "email"]
+    "status": "in-progress",
+    "currentPhase": "upload",
+    "startedAt": "2026-09-30T05:12:48Z",
+    "completedSubPhases": [
+      "study-guides",
+      "html",
+      "digest"
+    ],
+    "note": "AWS SSO expired and Chrome unavailable: S3 uploads skipped, publishing via GitHub Pages; layout-review skipped"
   },
-  "lastError": "AWS SSO token expired for wfu/wfu-sso/default profiles — S3 uploads skipped for the issue HTML and newsletter-data.js. Both need a manual S3 sync once SSO is refreshed. Cartoon and podcast skipped as a result (needed S3 hosting). Layout review skipped (Chrome browser tools unavailable this session)."
+  "lastError": null
 }
