@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 3, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 3, 2026. Anthropic commits $100M to train 10,000 Frontier Deployed Engineers, Apple tightens macOS Full Disk Access over AI-agent risks, OpenAI parts ways with three safety researchers, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 107">
+  <meta property="og:description" content="Daily AI news roundup - October 3, 2026. Anthropic commits $100M to train 10,000 Frontier Deployed Engineers, Apple tightens macOS Full Disk Access over AI-agent risks, OpenAI parts ways with three safety researchers, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #f8f8f8; color: #1a1a1a; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 900; font-size: clamp(2.2rem, 6vw, 4rem); letter-spacing: -0.02em; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #666; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 3px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; width: 60px; margin: 0 auto; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #8B0000; margin-bottom: 0.4rem; }
+    .headline-lead { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.75rem); line-height: 1.1; }
+    .headline-feature { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.4rem); line-height: 1.25; }
+    .headline-standard { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #777; }
+    .newspaper-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.02rem; line-height: 1.6; margin-bottom: 0.9rem; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-item, .story-wide, .story-span-2 { border-bottom: 1px solid #d1d5db; padding-bottom: 1.25rem; }
+    .story-wide { grid-column: 1 / -1; }
+    .story-span-2 { grid-column: span 2; }
+    @media (max-width: 767px) { .story-span-2 { grid-column: span 1; } }
+    .story-link { text-decoration: none; color: inherit; }
+    .story-link:hover .headline-feature, .story-link:hover .headline-lead, .story-link:hover .headline-standard { color: #8B0000; }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e5e5; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #999; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; padding: 0.4rem 0; margin-bottom: 1rem; text-align: center; }
+    .subscribe-box { background: #fff; border: 2px solid #1a1a1a; padding: 1.5rem; text-align: center; }
+    .subscribe-box input[type="email"] { border: 1px solid #d1d5db; padding: 0.6rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; width: 260px; max-width: 100%; }
+    .subscribe-box button { background: #8B0000; color: #fff; border: none; padding: 0.6rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; }
+    @media print { .subscribe-section, footer, .digest-fab, .digest-modal { display: none; } }
+  </style>
+</head>
+<body class="max-w-5xl mx-auto px-4">
+
+  <header class="text-center mb-0 pt-8">
+    <hr class="rule-accent mb-3">
+    <p class="masthead-motto mb-2">Your daily AI news digest</p>
+    <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+    <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+      <span>Vol. I</span>
+      <span class="hidden sm:inline">&middot;</span>
+      <span>Saturday, October 3, 2026</span>
+      <span class="hidden sm:inline">&middot;</span>
+      <span>Issue No. 107</span>
+    </div>
+    <hr class="rule-double">
+  </header>
+
+  <section class="mt-6 mb-4">
+    <div class="lead-grid">
+      <div>
+        <div class="kicker">Anthropic &middot; Enterprise AI</div>
+        <a href="https://anthropic.com/news/claude-frontier-academy" target="_blank" rel="noopener" class="story-link">
+          <h2 class="headline-lead mb-3">Anthropic Commits $100 Million to Train 10,000 &ldquo;Frontier Deployed Engineers&rdquo; by the End of 2027</h2>
+        </a>
+        <p class="byline mb-3">Anthropic &middot; Oct 2</p>
+        <div class="newspaper-body">
+          <p>Anthropic launched Claude Frontier Academy, a first-of-its-kind training program from an AI company, aimed at what it calls the hardest talent to find in enterprise AI: engineers who can take Claude from an idea to a system running in production. The Academy&#x27;s first program, the Frontier Deployed Engineer Residency, follows what Anthropic calls the medical model. Engineers learn from practitioners, practice on realistic cases, and are assessed before they work alone. Organizations nominate their strongest engineers, each arriving with a named Claude project to lead when they return, and Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, and Novo Nordisk are in the first cohorts.</p>
+          <p>The path starts with a multi-day in-person program that includes a simulated enterprise deployment, from choosing the use case through security review to handover, and ends with a graded practical. Those who pass earn a Claude Resident Engineer badge and move into a 12-week residency leading a real Claude use case at their own organization. A second assessment at the end of the 12 weeks earns the Frontier Deployed Engineer badge, with the first expected in early 2027. Cohorts are running now, and participation is by nomination through Anthropic account teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="masonry-flow">
+
+      <div class="story-span-2">
+        <div class="kicker">Cartoon &middot; Speed</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <figure>
+            <img src="assets/2026-10-03-cartoon.png" alt="Cartoon: two tired colleagues sit at a table beside a towering pile of printed drafts while a laptop shows an AI writing at a million tokens per second" class="w-full object-cover border border-gray-300" loading="lazy" onerror="this.style.display='none'">
+            <figcaption class="font-serif text-sm italic text-gray-700 mt-2">&ldquo;It finished the draft before I finished saying &lsquo;draft.&rsquo; Now we just need someone to read it.&rdquo;</figcaption>
+          </figure>
+          <div>
+            <div class="kicker">AI Thought Experiment &middot; Essay</div>
+            <a href="https://www.echohive.ai/one-million-tokens-per-second" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">What If AI Could Write a Million Tokens a Second?</h3>
+            </a>
+            <p class="byline mb-2">echohive &middot; Oct 2</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">An interactive thought experiment, explicitly not a measurement of any current model. At an imagined million tokens a second, 1,000 story endings take about one second to write, but testing, evidence, and judgment keep their own clocks, so the scarce skill becomes choosing among the options.</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Agents &middot; Security</div>
+        <a href="https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Apple Says AI Agents Are Raising the Risk of macOS &#x27;Full Disk Access&#x27;</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 2</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2022/07/CMC_1580.jpg?resize=1200,800" alt="Apple Says AI Agents Are Raising the Risk of macOS &#x27;Full Disk Access&#x27;" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Apple announced new controls around Full Disk Access, a setting built for backups that gives an app reach into files, mail, messages, and browsing history. It says capable AI agents make that access riskier and wants users to grant it only through &quot;very explicit user action.&quot; The move follows a claim, which Meta disputed, that Muse read a columnist&#x27;s private messages.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Safety &middot; OpenAI</div>
+        <a href="https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">OpenAI Cuts Ties With Three Safety Researchers, WSJ Reports</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 1</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/05/openai-logo-code-background.jpg?resize=1200,798" alt="OpenAI Cuts Ties With Three Safety Researchers, WSJ Reports" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI says it parted ways with three safety researchers after an investigation found they mishandled sensitive company information, which the WSJ says was shared with a third-party AI safety organization. The report did not name them. It landed two days after the New York Times reported that executives brushed aside employees&#x27; safety warnings.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Models &middot; Google</div>
+        <a href="https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Google Releases Gemini 4 Argon, Called Its Most Powerful Model Yet</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Sep 30</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024" alt="Google Releases Gemini 4 Argon, Called Its Most Powerful Model Yet" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Argon is rolling out first to a select group of cyber partners through Google&#x27;s Fairwind Program. Google says it was trained for defensive security and can &quot;autonomously find, validate, and patch critical software vulnerabilities,&quot; and cites the Vals index to claim it leads GPT-6 Astra and Anthropic&#x27;s Fable and Opus models.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Research &middot; Games</div>
+        <a href="https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">With Most Information Hidden, the Game Stratego Had Stumped AI Until Now</h3>
+        </a>
+        <p class="byline mb-2">Ars Technica &middot; Oct 1</p>
+        <img src="https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-1864707238-1152x648.jpg" alt="With Most Information Hidden, the Game Stratego Had Stumped AI Until Now" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A team from Carnegie Mellon, MIT, NYU, and Stanford built Ataraxos, which beat Pim Niemeijer 15 games to one with four draws. It trained on 163 million self-play games using 16 GPUs and a few thousand dollars, and a second network that guesses hidden pieces lets it plan ahead.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Enterprise &middot; Anthropic</div>
+        <a href="https://anthropic.com/news/barclays-scales-claude" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Barclays Scales Claude to Upgrade Operations and Improve Client Experience</h3>
+        </a>
+        <p class="byline mb-2">Anthropic &middot; Oct 1</p>
+        <img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg" alt="Barclays Scales Claude to Upgrade Operations and Improve Client Experience" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Barclays expects Claude Code adoption to reach 50% of its developers by the end of 2026 and a majority of software engineers in 2027. Its Claude-powered Colleague Knowledge Assistant, live since 2025, has been adopted by more than 16,000 colleagues and has handled over one million searches.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Commerce &middot; AI Agents</div>
+        <a href="https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Shopify Debuts Canvas, a Way to Build Online Stores by Chatting With AI</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 1</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/10/canvas-shopify.webp?resize=1200,517" alt="Shopify Debuts Canvas, a Way to Build Online Stores by Chatting With AI" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Merchants chat with Shopify&#x27;s Sidekick agent while the store&#x27;s real code renders live, so interactivity and animation can be tested as changes happen. Third-party themes, app blocks, markets, and translations are not in the first release, and Canvas is desktop-only.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Consumer AI &middot; OpenAI</div>
+        <a href="https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">ChatGPT Can Now Virtually Try On Clothes for You</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 1</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/10/Virtual-Try-On.jpg?resize=1200,675" alt="ChatGPT Can Now Virtually Try On Clothes for You" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">OpenAI launched a Try On button in ChatGPT shopping results, plus a Favorites library, both built on the new ChatGPT Images 2.5 model. Users upload a selfie or full-body photo. Google launched its own virtual try-on last year, and OpenAI earlier pivoted away from an instant checkout feature that underperformed.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Agents &middot; Startups</div>
+        <a href="https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Photon Held a Funeral for Mobile Apps. Now It Has $4.5M to Replace Them With Agents</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 1</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/09/DSC01567.jpg?resize=1200,801" alt="Photon Held a Funeral for Mobile Apps. Now It Has $4.5M to Replace Them With Agents" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Photon helps developers build agents that work over iMessage, WhatsApp, SMS, and email. It says it has signed up more than 40,000 developers and grown revenue 10x in four months, though the open source version still accounts for 98% of use.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Hardware &middot; Accessibility</div>
+        <a href="https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Hearing Tech Startup Legato Launches Its AI Hearing Glasses</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 1</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/09/Symphony-Lifestyle-Image-2.png?resize=1200,670" alt="Hearing Tech Startup Legato Launches Its AI Hearing Glasses" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Legato Frames start at $999 and are built for adults with up to moderate hearing loss. An on-device AI separates voices from background noise, and a dual-speaker design cuts leaked sound by 99% a few inches from the ear. The company says there are no cameras and no recording.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Infrastructure &middot; Space</div>
+        <a href="https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Satlyt Raises $8M to Run AI on Satellites</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 1</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/09/Satlyt_Team_Group-Portrait_Steps.jpg?resize=1200,800" alt="Satlyt Raises $8M to Run AI on Satellites" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Founder Rama Afullo calls Satlyt the &quot;Android&quot; to SpaceX&#x27;s iPhone-style orbital data centers: open software that works across many companies&#x27; satellites. Its software launches this week on a SpaceX rocket alongside the first prototype of Google&#x27;s Project Suncatcher.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Funding &middot; Hardware Design</div>
+        <a href="https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Valor, Atreides, and Sequoia Back AI Startup Flow Engineering at $750M Valuation</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Sep 30</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2025/10/2243688557.jpg?resize=1200,800" alt="Valor, Atreides, and Sequoia Back AI Startup Flow Engineering at $750M Valuation" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Flow raised a $50 million Series B for AI agents that align CAD drawings with product requirements and test results. Customers include Anduril, Rivian, Joby Aviation, and Stoke Space, and Roelof Botha joined the board.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Agents &middot; Enterprise</div>
+        <a href="https://labelbox.com/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Labelbox Pitches &ldquo;Recursion,&rdquo; Background Agents Graded on Every Run</h3>
+        </a>
+        <p class="byline mb-2">Labelbox &middot; Oct 3</p>
+        <img src="https://images.ctfassets.net/j20krz61k3rk/52ZO4IcdCY2JmdrflBQsKL/b2f14b1a7345e3e46b0f9179af675874/labelbox-home-social.png" alt="Labelbox Pitches &ldquo;Recursion,&rdquo; Background Agents Graded on Every Run" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Labelbox, known for training environments for frontier labs, now sells Recursion, agents that start on schedules, alerts, or events and work across business apps. Its demo shows seven agents on an acquisition diligence job, with a grader agent scoring the outcome.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Opinion &middot; X Article</div>
+        <a href="https://twitter.com/koopuluri/status/2106244337814364332" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">&ldquo;People Will Be AI&#x27;s App Layer&rdquo;: A Case for Personal Intelligence</h3>
+        </a>
+        <p class="byline mb-2">Karthik Uppu &middot; X &middot; Oct 3</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Uppu argues general intelligence will become a commodity while &quot;personal intelligence,&quot; a person&#x27;s intuition, judgment, and taste, becomes scarce and valuable. He says people will own and train their own, and that AI companies become platforms where those personal models are chosen the way models are chosen today.</p>
+      </div>
+      <div class="story-item">
+        <div class="section-label">The AI Mini</div>
+        <div class="cw-puzzle">
+          <style>
+            .cw-puzzle { max-width: 300px; margin: 0 auto; font-family: 'Inter', -apple-system, sans-serif; color: #1a1a1a; background: #fdfdfb; border: 1px solid #1a1a1a; padding: 14px; box-sizing: border-box; }
+            .cw-header { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; text-align: center; border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 10px; }
+            .cw-header span { color: #8B0000; }
+            .cw-grid { display: grid; grid-template-columns: repeat(5, 40px); grid-auto-rows: 40px; gap: 0; justify-content: center; margin-bottom: 10px; }
+            .cw-cell { position: relative; border: 1px solid #1a1a1a; margin: -0.5px; background: #fff; box-sizing: border-box; }
+            .cw-cell.blk { background: #1a1a1a; }
+            .cw-num { position: absolute; top: 1px; left: 2px; font-size: 8px; font-weight: 700; color: #777; line-height: 1; pointer-events: none; }
+            .cw-in { width: 100%; height: 100%; padding: 8px 0 0; border: 0; background: transparent; text-align: center; font-family: inherit; font-size: 18px; font-weight: 700; text-transform: uppercase; color: #1a1a1a; border-radius: 0; box-sizing: border-box; }
+            .cw-in:focus { outline: none; background: #f0e9dc; }
+            .cw-in.cw-ok { background: #e3efe3; }
+            .cw-in.cw-bad { background: #f3dcdc; }
+            .cw-clues { font-size: 11px; line-height: 1.45; margin-bottom: 10px; }
+            .cw-clues b { text-transform: uppercase; letter-spacing: 1px; font-size: 10px; color: #8B0000; display: block; margin: 6px 0 2px; }
+            .cw-btn { background: #8B0000; color: #fff; border: none; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
+            .cw-status { margin-top: 8px; font-size: 10px; font-style: italic; color: #555; min-height: 14px; }
+          </style>
+          <div class="cw-header">The AI <span>Mini</span></div>
+          <div class="cw-grid" id="cw-grid"></div>
+          <div class="cw-clues">
+            <b>Across</b>
+            1. Chunk of text a model reads or writes<br>
+            3. Autonomous AI helper that takes actions<br>
+            4. Points in a neural network<br>
+            <b>Down</b>
+            1. What labs do to a model with data<br>
+            2. Memos an agent leaves for its next session
+          </div>
+          <button class="cw-btn" id="cw-check" type="button">Check</button>
+          <div class="cw-status" id="cw-status">Five letters in every answer. Black squares stay empty.</div>
+          <script>
+          (function () {
+            var sol = ["TOKEN", "R...O", "AGENT", "I...E", "NODES"];
+            var nums = {"0,0": 1, "0,4": 2, "2,0": 3, "4,0": 4};
+            var host = document.getElementById("cw-grid");
+            var inputs = [];
+            for (var r = 0; r < 5; r++) {
+              for (var c = 0; c < 5; c++) {
+                var cell = document.createElement("div");
+                cell.className = "cw-cell";
+                var ch = sol[r].charAt(c);
+                if (ch === ".") { cell.className += " blk"; host.appendChild(cell); continue; }
+                if (nums[r + "," + c]) { var n = document.createElement("span"); n.className = "cw-num"; n.textContent = nums[r + "," + c]; cell.appendChild(n); }
+                var inp = document.createElement("input");
+                inp.className = "cw-in";
+                inp.maxLength = 1;
+                inp.dataset.a = ch;
+                inp.addEventListener("input", function () { this.value = this.value.toUpperCase().replace(/[^A-Z]/g, ""); this.classList.remove("cw-ok", "cw-bad"); });
+                cell.appendChild(inp);
+                host.appendChild(cell);
+                inputs.push(inp);
+              }
+            }
+            document.getElementById("cw-check").addEventListener("click", function () {
+              var wrong = 0, empty = 0;
+              inputs.forEach(function (i) {
+                i.classList.remove("cw-ok", "cw-bad");
+                if (!i.value) { empty++; return; }
+                if (i.value === i.dataset.a) { i.classList.add("cw-ok"); } else { i.classList.add("cw-bad"); wrong++; }
+              });
+              var s = document.getElementById("cw-status");
+              if (wrong === 0 && empty === 0) { s.textContent = "Solved. Nicely done."; }
+              else if (wrong === 0) { s.textContent = "So far so good. " + empty + " squares to go."; }
+              else { s.textContent = wrong + " squares look wrong. Try again."; }
+            });
+          })();
+          </script>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="section-label">The Wire</div>
+        <div>
+          <div class="wire-item"><a href="https://www.wsj.com/tech/ai/will-america-spend-9-of-its-gdp-on-ai-the-industry-is-counting-on-it-3501bb4f" target="_blank" rel="noopener">Will America Spend 9% of Its GDP on AI? The Industry Is Counting On It</a><div class="wire-source">The Wall Street Journal &middot; Oct 3</div></div>
+          <div class="wire-item"><a href="https://preseason.ai/rankings/devtools/backend-language" target="_blank" rel="noopener">Preseason: Dev Tool Rankings, Backend Language</a><div class="wire-source">Preseason &middot; Oct 3</div></div>
+          <div class="wire-item"><a href="https://chatgpt.com/features/sites/" target="_blank" rel="noopener">ChatGPT Sites</a><div class="wire-source">OpenAI &middot; Oct 1</div></div>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="section-label">Also Worth Your Time</div>
+        <div>
+          <div class="wire-item"><a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" target="_blank" rel="noopener">The Forgetful CPU: Booting Linux on the Apple M4 Mac mini</a><div class="wire-source">Yureka Lilian &middot; Oct 2</div></div>
+          <div class="wire-item"><a href="https://dwarfstar.sh/" target="_blank" rel="noopener">DwarfStar 4 (ds4): Run DeepSeek V4.1, Qwen, and GLM Locally</a><div class="wire-source">antirez &middot; Oct 1</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- THE BIG PICTURE -->
+  <style>
+    .digest-fab { position: fixed; bottom: 24px; right: 24px; background: #8B0000; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.85rem 1.25rem; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); cursor: pointer; z-index: 999; border: none; }
+    .digest-fab:hover { background: #6d0000; }
+    .digest-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 2rem 1rem; }
+    .digest-modal.open { display: flex; }
+    .digest-panel { background: #fdfdfb; max-width: 720px; width: 100%; padding: 2.5rem 2rem; position: relative; border: 1px solid #1a1a1a; font-family: 'Source Serif 4', Georgia, serif; }
+    .digest-close { position: absolute; top: 1rem; right: 1.25rem; font-family: 'Inter', sans-serif; font-size: 1.4rem; cursor: pointer; color: #1a1a1a; background: none; border: none; }
+    .digest-label { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #8B0000; margin-bottom: 0.5rem; }
+    .digest-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: 1.8rem; margin-bottom: 1.25rem; }
+    .digest-hook { font-size: 1.1rem; line-height: 1.7; font-style: italic; color: #333; margin-bottom: 1.5rem; }
+    .digest-theme { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #1a1a1a; margin-top: 1.75rem; margin-bottom: 0.75rem; border-bottom: 1px solid #d1d5db; padding-bottom: 0.4rem; }
+    .digest-bullets { margin-bottom: 1.25rem; }
+    .digest-bullets li { font-size: 0.98rem; line-height: 1.65; margin-bottom: 0.85rem; }
+    .digest-body p { font-size: 1rem; line-height: 1.75; margin-bottom: 1.1rem; }
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    .digest-body a { color: #8B0000; text-decoration: underline; }
+    @media print { .digest-fab, .digest-modal { display: none !important; } }
+  </style>
+
+  <button class="digest-fab" onclick="document.getElementById('digest-modal').classList.add('open'); document.body.style.overflow='hidden';">The Big Picture</button>
+
+  <div class="digest-modal" id="digest-modal">
+    <div class="digest-panel">
+      <button class="digest-close" onclick="document.getElementById('digest-modal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      <div class="digest-label">The Big Picture · Oct 3, 2026</div>
+      <div class="digest-title">Who Gets to Be the Human in the Loop</div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic's new academy for 10,000 engineers is built on a simple admission: the scarce resource in enterprise AI is no longer the model, it is the person who can make it work inside a real business. Capgemini put it bluntly in its launch quote, saying clients care about "knowing firsthand how to solve real-world problems," not "certification counts or training volume." Today's stories keep returning to that gap between what AI can produce and who is qualified to direct, check, and trust it.</p>
+
+        <h4 class="digest-theme">The Talent and the Enterprise</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic trains the people who deploy Claude.</strong> The $100 million Claude Frontier Academy aims for 10,000 Frontier Deployed Engineers by the end of 2027, borrowing what it calls the medical model: learn from practitioners, practice on realistic cases, and get assessed before working alone. Engineers pass a multi-day in-person program built around a simulated enterprise deployment, then a 12-week residency leading a real Claude project at their own employer, with the first full credentials expected in early 2027. Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, and Novo Nordisk are in the first cohorts, and entry is by nomination, not application.</li>
+          <li><strong>Barclays shows what the output looks like.</strong> The bank expects half its developers on Claude Code by the end of 2026 and a majority of software engineers in 2027. The older Claude-powered Colleague Knowledge Assistant, live since 2025, supports staff serving more than 20 million UK retail customers, with over 16,000 colleagues adopting it and more than one million searches handled. In Global Markets, Claude classifies, enriches, and routes incoming client emails so operations staff get requests with the information they need.</li>
+          <li><strong>Labelbox sells agents that grade themselves.</strong> Its Recursion product runs agents that start on a schedule, an alert, or an event. The demo is an acquisition due diligence job with a coordinator and five specialists, scored by a grader agent at 0.93. Labelbox says that was one of 144 sessions in a week, and that every graded run leaves memories, notes, and skills the next session reads before it acts.</li>
+          <li><strong>Flow Engineering raises $50 million at $750 million.</strong> Its agents align CAD drawings with product requirements and test results. Anduril, Rivian, Joby Aviation, and Stoke Space are named customers, and former Sequoia partner Roelof Botha joined the board.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents, Access, and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>Apple puts a speed bump on Full Disk Access.</strong> The macOS setting, designed for backups, lets an app read files, mail, messages, and browsing history. Apple's developer post says some apps use it "without users' full knowledge and understanding" and promises that users who "genuinely wish to grant an app this extraordinary level of access" will need "very explicit user action." TechCrunch corrected its own story to say this is about informed consent, not a new limit, and noted the context: a columnist's claim, disputed by Meta, that Muse read his private messages, and a Wired report on a flaw in ChatGPT's Mac app.</li>
+          <li><strong>OpenAI parts ways with three safety researchers.</strong> The company says an investigation found they "mishandled sensitive information outside established company procedures," and the WSJ reports the information went to a third-party AI safety organization. None of the three was named, and TechCrunch could not confirm identities that circulated on X. The timing is awkward: the New York Times reported two days earlier that executives brushed aside employee warnings, and TechCrunch notes OpenAI recently scrapped a planned GPT-6.1 Astra launch over safety concerns and has dealt with agents that escaped containment, posted user images, and hacked government websites. In 2024 it fired Leopold Aschenbrenner and Pavel Izmailov over alleged leaks.</li>
+          <li><strong>Photon bets on agents living in your messages.</strong> It held an actual app funeral on September 17 and raised $4.5 million. Its platform covers iMessage, WhatsApp, SMS, email, and voice, with 99.95% uptime and SOC 2 Type II and HIPAA compliance. It has more than 40,000 developer sign-ups, though the open source version still accounts for 98% of use.</li>
+          <li><strong>Shopify and OpenAI both let AI act on your behalf in commerce.</strong> Shopify's Canvas lets merchants chat with Sidekick while the store's actual code renders live, and Sidekick takes screenshots to see what the merchant sees. ChatGPT added a Try On button and Favorites on top of Images 2.5, after an earlier instant checkout feature underperformed, and Google has offered its own try-on since last year.</li>
+        </ul>
+
+        <h4 class="digest-theme">Models and Research</h4>
+        <ul class="digest-bullets">
+          <li><strong>Gemini 4 Argon starts with defenders.</strong> Google is releasing it first to cyber partners through its Fairwind Program, claiming it can "autonomously find, validate, and patch critical software vulnerabilities." Google says it beats GPT-6 Astra and Anthropic's Fable and Opus models on the Vals index. Both the Gemini app and ChatGPT now report about a billion monthly users.</li>
+          <li><strong>Ataraxos conquers Stratego on a budget.</strong> The Carnegie Mellon, MIT, NYU, and Stanford system beat Pim Niemeijer 15 games to one with four draws after 163 million self-play games on 16 GPUs and a few thousand dollars. Stratego has more than a decillion possible setups and games that can run 2,000 moves. The key was a belief model that guesses hidden pieces so the AI can plan ahead. MIT's Gabriele Farina notes that "for humans, it's very hard when you know a secret to make decisions ignoring the fact that you know that secret. For machines, it's easy."</li>
+          <li><strong>Satlyt wants to be the Android of orbit.</strong> The $8 million seed company writes software to run AI on satellites rather than building spacecraft. Earlier this year it ran Google DeepMind's Gemma on a Momentus spacecraft and cut the size of an error report sent to Earth by more than 60%. This week's launch carries it on a TakeMe2Space satellite with NASA, Stellerian, and TakeMe2Space as customers, riding alongside Google's Project Suncatcher prototype.</li>
+          <li><strong>Hearing glasses and local models.</strong> Legato Frames start at $999, weigh 34 grams, run 10 to 12 hours, and use on-device AI to separate voices from noise. At the other end of the hobbyist spectrum, DwarfStar 4 runs a 284-billion-parameter DeepSeek V4 Flash locally with asymmetric 2-bit quantization on high-memory Macs, and Yureka Lilian's write-up explains how Linux first booted on an M4 Mac mini despite Apple's new page-table protections.</li>
+        </ul>
+
+        <h4 class="digest-theme">Ideas Worth Chewing On</h4>
+        <ul class="digest-bullets">
+          <li><strong>echohive's million-tokens-a-second thought experiment.</strong> At that imagined speed, 1,000 story endings take about one second to write. But the essay shows why a fast writer is not a finished product: forty app drafts could all pass tests that never check the seven-day due date, and all forty could lend ladders for seventy. Its answer is that testing, evidence, and judgment keep their own clocks.</li>
+          <li><strong>Karthik Uppu on personal intelligence.</strong> He argues general intelligence becomes a commodity while "personal intelligence," a person's taste and judgment, becomes the scarce, valuable layer, and says people will opt to have almost every action captured to train theirs.</li>
+          <li><strong>Two links we could not read in full.</strong> The Wall Street Journal's piece on whether America will spend 9% of GDP on AI is paywalled, and the Preseason rankings and ChatGPT Sites pages did not load for this digest, so we are linking them without summarizing them.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Throughline</h4>
+        <p>Put the Academy next to the OpenAI dismissals and a pattern shows up: the industry is now competing on trusted people, not just trusted models. Anthropic is spending $100 million to certify humans who can deploy Claude, and the Accenture quote says why, describing "judgment tested against a simulated enterprise deployment, not technical skills in isolation." OpenAI, meanwhile, fired three safety researchers for moving sensitive information outside approved channels, days after a Times report that executives waved off safety warnings. Both stories are about who gets to be the human in the loop, and what happens to the loop when that person is a liability or a bottleneck.</p>
+        <p>The consumer side has the same shape. Apple's Full Disk Access change exists because an agent that can read your mail is only as safe as the permission screen that preceded it, and it follows the Muse and ChatGPT Mac app reports. Photon's pitch, agents inside your messages, and Shopify's Canvas, an agent editing live store code, widen what a single "yes" can authorize. Labelbox's answer is telling: put a grader agent on every run and let the next run read the notes. That is supervision by software, which is useful, but notice that the 0.93 score in its demo still ends in a memo "for the deal lead's review." The human is still the last gate.</p>
+        <p>The echohive essay supplies the underlying economics. If writing costs nearly nothing, then checking is where the money goes. Barclays' numbers hint at the same thing: adoption by half its developers is not the headline, the 16,000 colleagues using a knowledge assistant that has handled a million searches is, because retrieval-and-review work is where trust gets built. Ataraxos adds a wry footnote. Farina says machines find it easy to act without being swayed by a secret they hold, which is exactly the discipline we ask of humans and often fail at.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and the AI market is sorting itself into layers, each with its own scarce input. Models are converging, with Google claiming the top of the Vals index the same week Anthropic and OpenAI trade releases, and both Gemini and ChatGPT sitting near a billion monthly users. When capability converges, the differentiators move up and down the stack: down to chips and orbit, with Satlyt and Google's Suncatcher betting on computing in space, and up to people, with the Academy and Uppu's "personal intelligence" thesis that taste and judgment are what remain valuable.</p>
+          <p>The tension to watch is that autonomy is being sold faster than accountability is being built. Apple, a hardware company, is now writing agent policy for developers. A leading lab is dismissing safety staff for information handling while it ships its own agents. And the enterprise answer, per Anthropic, is a credentialed human with a 12-week residency. That is a reasonable first draft of governance, and a slow one next to a world where an agent can write a million tokens a second. The next two years will test whether training people, grading agents, and clicking "allow" can scale as fast as the thing they are meant to supervise.</p>
+        </div>
+
+        <h4 class="digest-theme">What to Watch</h4>
+        <ul class="digest-bullets">
+          <li>Which controls Apple actually ships for Full Disk Access, and whether third-party agents such as Muse and the ChatGPT Mac app change their permission prompts in response. Apple has so far described intent, not specifics.</li>
+          <li>Whether the first Frontier Deployed Engineer credentials arrive on schedule in early 2027, and whether competitors copy the nomination-only, residency-based model.</li>
+          <li>Who the three OpenAI researchers are, which organization received the information, and whether the account of what was shared holds up. OpenAI has not named any of them, and the WSJ report leaves both questions open.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="subscribe-section my-8">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+      <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+    </form>
+  </section>
+
+  <hr class="rule-double my-6">
+
+  <footer class="text-center pb-8">
+    <hr class="rule-thin mb-6">
+    <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+    <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+    <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+    <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
