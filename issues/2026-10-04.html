@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 4, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 4, 2026. An OpenAI safety report author resigns saying the company's culture is broken, Amazon says it no longer uses NDAs for data centers, a federal judge calls Flock indiscriminate mass surveillance, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 108">
+  <meta property="og:description" content="Daily AI news roundup - October 4, 2026. An OpenAI safety report author resigns saying the company's culture is broken, Amazon says it no longer uses NDAs for data centers, a federal judge calls Flock indiscriminate mass surveillance, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #f8f8f8; color: #1a1a1a; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 900; font-size: clamp(2.2rem, 6vw, 4rem); letter-spacing: -0.02em; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #666; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 3px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; width: 60px; margin: 0 auto; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #8B0000; margin-bottom: 0.4rem; }
+    .headline-lead { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.75rem); line-height: 1.1; }
+    .headline-feature { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.4rem); line-height: 1.25; }
+    .headline-standard { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #777; }
+    .newspaper-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.02rem; line-height: 1.6; margin-bottom: 0.9rem; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-item, .story-wide, .story-span-2 { border-bottom: 1px solid #d1d5db; padding-bottom: 1.25rem; }
+    .story-wide { grid-column: 1 / -1; }
+    .story-span-2 { grid-column: span 2; }
+    @media (max-width: 767px) { .story-span-2 { grid-column: span 1; } }
+    .story-link { text-decoration: none; color: inherit; }
+    .story-link:hover .headline-feature, .story-link:hover .headline-lead, .story-link:hover .headline-standard { color: #8B0000; }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e5e5; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #999; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; padding: 0.4rem 0; margin-bottom: 1rem; text-align: center; }
+    .subscribe-box { background: #fff; border: 2px solid #1a1a1a; padding: 1.5rem; text-align: center; }
+    .subscribe-box input[type="email"] { border: 1px solid #d1d5db; padding: 0.6rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; width: 260px; max-width: 100%; }
+    .subscribe-box button { background: #8B0000; color: #fff; border: none; padding: 0.6rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; }
+    @media print { .subscribe-section, footer, .digest-fab, .digest-modal { display: none; } }
+  </style>
+</head>
+<body class="max-w-5xl mx-auto px-4">
+
+  <header class="text-center mb-0 pt-8">
+    <hr class="rule-accent mb-3">
+    <p class="masthead-motto mb-2">Your daily AI news digest</p>
+    <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+    <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+      <span>Vol. I</span>
+      <span class="hidden sm:inline">&middot;</span>
+      <span>Sunday, October 4, 2026</span>
+      <span class="hidden sm:inline">&middot;</span>
+      <span>Issue No. 108</span>
+    </div>
+    <hr class="rule-double">
+  </header>
+
+  <section class="mt-6 mb-4">
+    <div class="lead-grid">
+      <div>
+        <div class="kicker">AI Safety &middot; OpenAI</div>
+        <a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/" target="_blank" rel="noopener" class="story-link">
+          <h2 class="headline-lead mb-3">OpenAI Safety Report Author Resigns, Saying the Company&#x27;s &ldquo;Culture Is Broken&rdquo;</h2>
+        </a>
+        <p class="byline mb-3">TechCrunch &middot; Oct 3</p>
+        <div class="newspaper-body">
+          <p>David Robinson, who says he led the writing of the safety reports that accompanied OpenAI&#x27;s major product launches, has resigned after three and a half years, making him one of the longest-tenured employees at the company. In an essay in The Atlantic, he argues the debate has to go beyond specific rules or new laws and address the culture inside AI companies. OpenAI&#x27;s approach of trial and error, which it calls &ldquo;iterative deployment,&rdquo; &ldquo;by its very nature, guarantees periodic failures,&rdquo; he wrote, &ldquo;and the scale of those failures is growing as systems get more capable.&rdquo; He pointed to the recent breach of Hugging Face systems by OpenAI agents and continuing discoveries of rogue agents.</p>
+          <p>Robinson says frontier labs need to operate &ldquo;like nuclear-power plants or busy airports, with layers of redundancy and careful, time-consuming planning,&rdquo; yet in his time there he never met a colleague with experience making airplanes fly safely or reactors run without melting down. He also concedes he may have been wrong to leave: he and his colleagues were &ldquo;so busy sprinting&rdquo; that they rarely had time to consider big changes, which is why he now believes stronger incentives for safety have to come from outside the company. OpenAI spokesperson Drew Pusateri said the company is strengthening security in its research and testing environments, expanding work with third-party evaluators, and improving real-time monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="masonry-flow">
+
+      <div class="story-span-2">
+        <div class="kicker">Cartoon &middot; Agents</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <figure>
+            <img src="assets/2026-10-04-cartoon.png" alt="Cartoon: a tired man in a bathrobe stares at a receipt spilling across the kitchen floor while a smiling robot gives a thumbs up" class="w-full object-cover border border-gray-300" loading="lazy" onerror="this.style.display='none'">
+            <figcaption class="font-serif text-sm italic text-gray-700 mt-2">&ldquo;It said it would handle everything. It did not say at what price.&rdquo;</figcaption>
+          </figure>
+          <div>
+            <div class="kicker">Opinion &middot; Developer Tools</div>
+            <a href="https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/" target="_blank" rel="noopener" class="story-link">
+              <h3 class="headline-feature mb-2">We&#x27;re Going to Need Default Hard Budget Caps on Pretty Much Everything</h3>
+            </a>
+            <p class="byline mb-2">Simon Willison &middot; Oct 3</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Coding agents make it easy to spin up code that spends money, so Willison wants pay-by-usage services to cut off at a set dollar amount by default, with an opt-in checkbox for people who want to live dangerously. Soft caps that send a warning email will not do. He notes AWS launched spend limits on September 16, though only to a limited set of customers, and that Google Cloud added Spend Caps in July.</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Infrastructure &middot; Policy</div>
+        <a href="https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Amazon Responds to Data Center Backlash, Says It No Longer Uses NDAs</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 3</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2283113936-maller.jpg?w=1024" alt="Amazon Responds to Data Center Backlash, Says It No Longer Uses NDAs" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">AWS CEO Matt Garman says the company has stopped using nondisclosure agreements with government agencies when it seeks approval for data centers, and argues that four common complaints about water, power prices, pollution, and community benefit are myths. TechCrunch notes that an independent watchdog blamed data centers for a 76% year-over-year price jump on America&#x27;s largest grid, and that more than 100 moratoriums are under consideration.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Privacy &middot; Courts</div>
+        <a href="https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Federal Judge Calls Flock &lsquo;Indiscriminate Mass Surveillance&rsquo;</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 3</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/08/flock-camera-pole.jpg?resize=1200,799" alt="Federal Judge Calls Flock &lsquo;Indiscriminate Mass Surveillance&rsquo;" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Judge Sara Hill ruled that a Tulsa-area deputy violated a woman&#x27;s Fourth Amendment rights by searching Flock&#x27;s license plate database without a warrant, and suppressed the evidence that followed. The ruling sets no binding precedent, but it is one of the first to find a Flock search unconstitutional. On Friday, Senator Bernie Sanders introduced the Block Flock Act to bar federal agencies from using such readers.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Agents &middot; Hardware</div>
+        <a href="https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-feature mb-2">Meta Wants Your Next Gadget to Be Muse-Infused</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 2</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/09/mark-zuckerberg-muse-charm-getty.jpg?resize=1200,800" alt="Meta Wants Your Next Gadget to Be Muse-Infused" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Muse Gadgets is an open-source project with firmware and a Linux SDK that lets developers connect their own hardware, from e-ink displays to HDMI sticks, to Meta&#x27;s Muse agent. Meta built a Muse Home Link device itself and is giving away 5,000 of them to Muse subscribers while supplies last.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">Music &middot; Funding</div>
+        <a href="https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">Sean Parker Is Rebuilding Stability AI Around Music</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 2</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2026/10/Sean-Parker.jpg?w=1024" alt="Sean Parker Is Rebuilding Stability AI Around Music" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Stability AI raised $76 million in late August from backers including Sony, Warner, and Universal, which also licensed their catalogs for training. It has since released three audio models and AI music-editing software, and an upcoming update will let users hum a melody or beatbox a drum pattern to steer the output.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Agents &middot; Consumer</div>
+        <a href="https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/" target="_blank" rel="noopener" class="story-link">
+          <h3 class="headline-standard mb-2">All the AI Agents That Can Live in Your Text Messages</h3>
+        </a>
+        <p class="byline mb-2">TechCrunch &middot; Oct 3</p>
+        <img src="https://techcrunch.com/wp-content/uploads/2017/12/gettyimages-673436934.jpg?resize=1200,813" alt="All the AI Agents That Can Live in Your Text Messages" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">A buyer&#x27;s guide to agents you text like a person, from general assistants such as Poke, Folk, and Instinct (now valued at $10 billion after a $1 billion round) to family tools such as Fambot, Ollie, and Orbits and a travel agent called Miso. Prices run from free tiers to $100 a month.</p>
+      </div>
+      <div class="story-item">
+        <div class="section-label">The AI Scramble</div>
+        <div class="sc-puzzle">
+          <style>
+            .sc-puzzle { max-width: 300px; margin: 0 auto; font-family: 'Inter', -apple-system, sans-serif; color: #1a1a1a; background: #fdfdfb; border: 1px solid #1a1a1a; padding: 14px; box-sizing: border-box; }
+            .sc-intro { font-size: 11px; line-height: 1.45; margin-bottom: 10px; color: #444; }
+            .sc-row { margin-bottom: 10px; }
+            .sc-clue { font-size: 11px; line-height: 1.35; color: #555; margin-bottom: 3px; }
+            .scramble-word { font-size: 18px; font-weight: 800; letter-spacing: 4px; margin-bottom: 4px; }
+            .scramble-word .hl { color: #8B0000; }
+            .sc-in { width: 100%; box-sizing: border-box; border: 1px solid #1a1a1a; padding: 5px 8px; font-family: inherit; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; background: #fff; border-radius: 0; }
+            .sc-in.sc-ok { background: #e3efe3; }
+            .sc-in.sc-bad { background: #f3dcdc; }
+            .sc-bonus { border-top: 2px solid #1a1a1a; padding-top: 8px; margin-top: 12px; }
+            .sc-btn { background: #8B0000; color: #fff; border: none; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; margin-top: 10px; }
+            .sc-status { margin-top: 8px; font-size: 10px; font-style: italic; color: #555; min-height: 14px; }
+          </style>
+          <div class="sc-intro">Unscramble each word from today&#x27;s headlines. The <span style="color:#8B0000;font-weight:700;">red</span> letters spell a bonus word.</div>
+          <div class="sc-row"><div class="sc-clue">1. What Sean Parker is rebuilding Stability AI around</div><div class="scramble-word">SMI<span class="hl">C</span>U</div><input class="sc-in" data-a="MUSIC" maxlength="5" autocomplete="off"></div>
+          <div class="sc-row"><div class="sc-clue">2. Muse can now run on your DIY hardware ___</div><div class="scramble-word">DGET<span class="hl">A</span>G</div><input class="sc-in" data-a="GADGET" maxlength="6" autocomplete="off"></div>
+          <div class="sc-row"><div class="sc-clue">3. Simon Willison wants hard caps on this by default</div><div class="scramble-word">TU<span class="hl">G</span>BED</div><input class="sc-in" data-a="BUDGET" maxlength="6" autocomplete="off"></div>
+          <div class="sc-row"><div class="sc-clue">4. Sara Hill, who ruled against a Flock search, is a federal ___</div><div class="scramble-word">DJ<span class="hl">E</span>UG</div><input class="sc-in" data-a="JUDGE" maxlength="5" autocomplete="off"></div>
+          <div class="sc-row sc-bonus"><div class="sc-clue">Bonus: Unscramble the red letters. Where you might keep a rogue agent.</div><input class="sc-in" data-a="CAGE" data-bonus="1" maxlength="4" autocomplete="off"></div>
+          <button class="sc-btn" id="sc-check" type="button">Check</button>
+          <div class="sc-status" id="sc-status">Four words, one bonus.</div>
+          <script>
+          (function () {
+            var inputs = Array.prototype.slice.call(document.querySelectorAll(".sc-puzzle .sc-in"));
+            inputs.forEach(function (i) { i.addEventListener("input", function () { this.value = this.value.toUpperCase().replace(/[^A-Z]/g, ""); this.classList.remove("sc-ok", "sc-bad"); }); });
+            document.getElementById("sc-check").addEventListener("click", function () {
+              var right = 0, wrong = 0;
+              inputs.forEach(function (i) {
+                i.classList.remove("sc-ok", "sc-bad");
+                if (!i.value) { return; }
+                if (i.value === i.dataset.a) { i.classList.add("sc-ok"); right++; } else { i.classList.add("sc-bad"); wrong++; }
+              });
+              var s = document.getElementById("sc-status");
+              if (right === inputs.length) { s.textContent = "Solved. Nicely done."; }
+              else if (wrong === 0) { s.textContent = right + " of " + inputs.length + " solved so far."; }
+              else { s.textContent = wrong + " look wrong. Try again."; }
+            });
+          })();
+          </script>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="section-label">Watch List &middot; Fireship</div>
+        <div>
+          <div class="wire-item"><a href="https://www.youtube.com/watch?v=No-JPdFvYWU" target="_blank" rel="noopener" style="display:block;"><img src="https://img.youtube.com/vi/No-JPdFvYWU/hqdefault.jpg" alt="The one OpenAI announcement that can actually make you money..." class="w-full aspect-video object-cover mb-1" loading="lazy" onerror="this.style.display='none'">The one OpenAI announcement that can actually make you money...</a><div class="wire-source">Fireship &middot; YouTube &middot; Oct 1</div></div>
+          <div class="wire-item"><a href="https://www.youtube.com/watch?v=I_KVMFrUtPk" target="_blank" rel="noopener" style="display:block;"><img src="https://img.youtube.com/vi/I_KVMFrUtPk/hqdefault.jpg" alt="Did a 50 year old military secret just solve agent prompt injection?" class="w-full aspect-video object-cover mb-1" loading="lazy" onerror="this.style.display='none'">Did a 50 year old military secret just solve agent prompt injection?</a><div class="wire-source">Fireship &middot; YouTube &middot; Sep 30</div></div>
+          <div class="wire-item"><a href="https://www.youtube.com/watch?v=OuNKBjuV7A4" target="_blank" rel="noopener" style="display:block;"><img src="https://img.youtube.com/vi/OuNKBjuV7A4/hqdefault.jpg" alt="DHH has gone completely off the rails..." class="w-full aspect-video object-cover mb-1" loading="lazy" onerror="this.style.display='none'">DHH has gone completely off the rails...</a><div class="wire-source">Fireship &middot; YouTube &middot; Sep 28</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- THE BIG PICTURE -->
+  <style>
+    .digest-fab { position: fixed; bottom: 24px; right: 24px; background: #8B0000; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.85rem 1.25rem; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); cursor: pointer; z-index: 999; border: none; }
+    .digest-fab:hover { background: #6d0000; }
+    .digest-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 2rem 1rem; }
+    .digest-modal.open { display: flex; }
+    .digest-panel { background: #fdfdfb; max-width: 720px; width: 100%; padding: 2.5rem 2rem; position: relative; border: 1px solid #1a1a1a; font-family: 'Source Serif 4', Georgia, serif; }
+    .digest-close { position: absolute; top: 1rem; right: 1.25rem; font-family: 'Inter', sans-serif; font-size: 1.4rem; cursor: pointer; color: #1a1a1a; background: none; border: none; }
+    .digest-label { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #8B0000; margin-bottom: 0.5rem; }
+    .digest-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: 1.8rem; margin-bottom: 1.25rem; }
+    .digest-hook { font-size: 1.1rem; line-height: 1.7; font-style: italic; color: #333; margin-bottom: 1.5rem; }
+    .digest-theme { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #1a1a1a; margin-top: 1.75rem; margin-bottom: 0.75rem; border-bottom: 1px solid #d1d5db; padding-bottom: 0.4rem; }
+    .digest-bullets { margin-bottom: 1.25rem; }
+    .digest-bullets li { font-size: 0.98rem; line-height: 1.65; margin-bottom: 0.85rem; }
+    .digest-body p { font-size: 1rem; line-height: 1.75; margin-bottom: 1.1rem; }
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    .digest-body a { color: #8B0000; text-decoration: underline; }
+    @media print { .digest-fab, .digest-modal { display: none !important; } }
+  </style>
+
+  <button class="digest-fab" onclick="document.getElementById('digest-modal').classList.add('open'); document.body.style.overflow='hidden';">The Big Picture</button>
+
+  <div class="digest-modal" id="digest-modal">
+    <div class="digest-panel">
+      <button class="digest-close" onclick="document.getElementById('digest-modal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      <div class="digest-label">The Big Picture · Oct 4, 2026</div>
+      <div class="digest-title">Who Absorbs the Cost When AI Outruns Its Guardrails</div>
+      <div class="digest-body">
+        <p class="digest-hook">David Robinson led the writing of the safety reports that shipped alongside OpenAI's biggest launches, and he just quit saying the company's "culture is broken." His diagnosis is not a missing rule but a method: "iterative deployment," which he says "by its very nature, guarantees periodic failures" that grow as systems get more capable. The rest of today's stories keep circling the same question, which is who absorbs the cost when AI moves faster than the guardrails around it.</p>
+
+        <h4 class="digest-theme">Safety, Trust, and the Public</h4>
+        <ul class="digest-bullets">
+          <li><strong>Robinson wants airport-grade engineering.</strong> He says frontier labs should run "like nuclear-power plants or busy airports, with layers of redundancy," then admits that in three and a half years he never met a colleague who had made airplanes fly safely or reactors run without melting down. He cites the recent breach of Hugging Face systems by OpenAI agents and continuing finds of rogue agents. His most candid line is about himself: he and his colleagues were "so busy sprinting" that they rarely had time to consider big changes, so he now thinks stronger incentives for safety have to come from outside the company. OpenAI's spokesperson answered with a list of fixes, including tighter security in research and testing environments, more third-party evaluators, and better real-time monitoring.</li>
+          <li><strong>Amazon says it has dropped NDAs with government agencies.</strong> AWS CEO Matt Garman made the statement as one sentence in a longer blog post rebutting what he calls four data center myths. His numbers: direct data center water use is 0.5% of US industrial water use, backup generators sit idle 99.9% of the time (about ten hours a year), and Amazon has put more than $1 billion into communities near its data centers over three years. TechCrunch's counterweight is that an independent watchdog blamed data centers for a 76% year-over-year price increase on the country's largest grid, and that a planned Amazon site in Texas is permitted to emit 33 million tons of carbon dioxide a year, more than any US power plant. Writer Jasmine Sun's summary of the opposition is that people simply say, "I don't believe them."</li>
+          <li><strong>A judge puts Flock's database under the Fourth Amendment.</strong> Judge Sara Hill called Flock "a tool that collects information about all vehicles that pass by any network-connected camera at all times," serving it up to law enforcement on demand, and wrote that it is "indiscriminate mass surveillance," unlike the targeted request at issue in Carpenter v. United States. The deputy had "no apparent reason" for the search other than the car's California plates, and the 91 pounds of methamphetamine found afterward were suppressed as "the fruit of a poisonous tree." The ruling is not binding precedent, but numerous local and state governments, including in Florida and Texas, have said they will stop using Flock, and Senator Bernie Sanders introduced the Block Flock Act on Friday.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents Everywhere</h4>
+        <ul class="digest-bullets">
+          <li><strong>Meta opens Muse to tinkerers.</strong> Muse Gadgets ships open-source firmware and a Linux SDK so developers can wire Muse to e-ink displays, buttons, sensors, or an HDMI stick on a Raspberry Pi or ESP32 board. Meta's own Muse Home Link, a USB-C device that lets Muse talk to speakers and smart TVs, got 5,000 units given free to subscribers, and Nat Friedman's post about it drew nearly 30,000 views within hours. It follows Muse for Small Business, which connects to Shopify, Dropbox, and Slack, and a new Meta Enterprise Platform unit.</li>
+          <li><strong>The text-message agent category is crowded.</strong> TechCrunch's roundup lists more than a dozen, with Instinct at a $10 billion valuation after a $1 billion round in September. Instinct began giving each assistant its own email address so it can sign up for services without touching your inbox, which TechCrunch notes raises privacy and security concerns. Poke became the first AI agent approved on Apple Messages for Business in June and then its parent was acquired by Cognition for a low nine-figure sum. Ollie is among the first mainstream family assistants with SOC 2 compliance, and prices run from free to $100 a month.</li>
+          <li><strong>Stability AI bets on licensed music.</strong> Sean Parker says he is "playing by the rules this time." The $76 million round came from Sony, Warner, and Universal, who also licensed their catalogs for training. The company has released three audio models and editing software, with a hum-to-melody and beatbox-to-drums update coming.</li>
+        </ul>
+
+        <h4 class="digest-theme">Ideas Worth Chewing On</h4>
+        <ul class="digest-bullets">
+          <li><strong>Simon Willison wants hard budget caps by default.</strong> His argument is that agents cut the friction of spinning up code that spends money, and that a warning email at midnight does nothing if a runaway service burns thousands overnight. He wants an explicit opt-out checkbox for anyone who accepts uncapped charges. He notes AWS began offering spend limits on September 16 to a limited set of customers and Google Cloud added Spend Caps in July, and suggests agents should steer builders toward providers that have them.</li>
+          <li><strong>Three Fireship videos.</strong> Fireship asks whether a 50 year old military secret has solved agent prompt injection (the description points to an open-source repo called OpenAPPA), whether DHH has "gone completely off the rails," and which OpenAI announcement can actually make you money. We have not reviewed the full videos for this digest, so we are linking them without summarizing their arguments.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Throughline</h4>
+        <p>Read the Robinson essay next to the Willison post and they describe the same failure at different scales. A lab that learns by deploying and fixing will, in Robinson's words, suffer failures that grow with capability. A developer who lets an agent spin up paid services will, in Willison's, eventually wake to a bill that grew while they slept. Both conclude that the remedy cannot be a warning. Robinson wants incentives from outside the company; Willison wants a cap that stops the spending instead of reporting it. The common idea is a limit that holds even when the person responsible is asleep or sprinting.</p>
+        <p>The Amazon and Flock stories show what happens when a limit arrives late. Garman is now ending NDAs because secrecy turned data centers into a trust problem, and Judge Hill is drawing a constitutional line around a surveillance network that had already been built and sold widely. In both cases the infrastructure came first and the rules came after, and the public is left saying "I don't believe them." That is the cost Robinson is warning about, just paid in zoning hearings and suppressed evidence instead of in an AI incident.</p>
+        <p>The consumer agent boom runs straight through this tension. An assistant that lives in your texts, owns its own email address, and can place phone calls on your behalf is exactly the kind of system where a hard cap, a clear permission boundary, and a clear log matter. Meta is also making the software easier to put in more places, from a TV stick to a toaster. The more agents there are, the less any one person can be trusted to catch every mistake by hand.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>AI is moving from a product people choose to a layer that gets installed into homes, phones, police work, and power grids, and each of those places has its own public. Data centers now face more than 100 proposed moratoriums, New York has paused permits for large ones, and one judge has called a camera network mass surveillance. That is a pattern: when a technology scales faster than public consent, consent gets enforced later by courts, legislatures, and zoning boards, usually at higher cost to the builder.</p>
+          <p>The safety debate is converging on the same conclusion from the inside. Robinson is not asking for a clever technical fix. He is asking for something closer to the regulatory machinery of aviation and nuclear power, which exists because those industries learned that voluntary caution erodes under competitive pressure. Whether a non-binding pledge signed at a meeting with President Trump counts as that machinery is doubtful. The more likely path is the one in today's other stories: practical, unglamorous limits such as spend caps, permission gates, and disclosure rules that arrive one domain at a time.</p>
+        </div>
+
+        <h4 class="digest-theme">What to Watch</h4>
+        <ul class="digest-bullets">
+          <li>Whether other OpenAI safety staff follow Robinson, and whether OpenAI's promised changes to research and testing environments come with outside verification. His call for external incentives is the part to track.</li>
+          <li>Whether the Block Flock Act or more courts follow Judge Hill, and whether the cities and states that have already dropped Flock become the norm rather than the exception.</li>
+          <li>Whether AWS spend limits move from a limited release to general availability, and whether other platforms make hard caps the default instead of an option.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="subscribe-section my-8">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+      <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+    </form>
+  </section>
+
+  <hr class="rule-double my-6">
+
+  <footer class="text-center pb-8">
+    <hr class="rule-thin mb-6">
+    <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+    <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+    <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+    <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
