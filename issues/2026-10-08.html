@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 8, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 8, 2026. DeepMind's AlphaGenome Atlas maps the effect of every possible DNA letter change, Mistral's Le Chonk lands as a trillion-parameter open model, Sonnet 5.5 and Opus 5.5 get a closer look, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 110">
+  <meta property="og:description" content="Daily AI news roundup - October 8, 2026. DeepMind's AlphaGenome Atlas maps the effect of every possible DNA letter change, Mistral's Le Chonk lands as a trillion-parameter open model, Sonnet 5.5 and Opus 5.5 get a closer look, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#1a1a1a', paper: '#f8f8f8', rule: '#d1d5db', accent: '#8B0000' },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #f8f8f8; color: #1a1a1a; }
+    .masthead-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 900; font-size: clamp(2.2rem, 6vw, 4rem); letter-spacing: -0.02em; }
+    .masthead-motto { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #666; }
+    .masthead-info { font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; }
+    .rule-double { border: none; border-top: 3px double #1a1a1a; }
+    .rule-thin { border: none; border-top: 1px solid #d1d5db; }
+    .rule-thick { border: none; border-top: 3px solid #1a1a1a; }
+    .rule-accent { border: none; border-top: 2px solid #8B0000; width: 60px; margin: 0 auto; }
+    .kicker { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #8B0000; margin-bottom: 0.4rem; }
+    .headline-lead { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.75rem); line-height: 1.1; }
+    .headline-feature { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.4rem); line-height: 1.25; }
+    .headline-standard { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
+    .byline { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #777; }
+    .newspaper-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.02rem; line-height: 1.6; margin-bottom: 0.9rem; }
+    .newspaper-body p + p { text-indent: 1.5em; }
+    .lead-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    .masonry-flow { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .masonry-flow { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .masonry-flow { grid-template-columns: repeat(3, 1fr); } }
+    .story-item, .story-wide, .story-span-2 { border-bottom: 1px solid #d1d5db; padding-bottom: 1.25rem; }
+    .story-wide { grid-column: 1 / -1; }
+    .story-span-2 { grid-column: span 2; }
+    @media (max-width: 767px) { .story-span-2 { grid-column: span 1; } }
+    .story-link { text-decoration: none; color: inherit; }
+    .story-link:hover .headline-feature, .story-link:hover .headline-lead, .story-link:hover .headline-standard { color: #8B0000; }
+    .wire-item { padding: 0.45rem 0; border-bottom: 1px solid #e5e5e5; }
+    .wire-item:last-child { border-bottom: none; }
+    .wire-item a { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; color: #1a1a1a; text-decoration: none; }
+    .wire-item a:hover { color: #8B0000; }
+    .wire-source { font-family: 'Inter', system-ui, sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #999; }
+    .section-label { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; padding: 0.4rem 0; margin-bottom: 1rem; text-align: center; }
+    .subscribe-box { background: #fff; border: 2px solid #1a1a1a; padding: 1.5rem; text-align: center; }
+    .subscribe-box input[type="email"] { border: 1px solid #d1d5db; padding: 0.6rem 1rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; width: 260px; max-width: 100%; }
+    .subscribe-box button { background: #8B0000; color: #fff; border: none; padding: 0.6rem 1.5rem; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; }
+    @media print { .subscribe-section, footer, .digest-fab, .digest-modal { display: none; } }
+  .ws-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}.ws-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}.ws-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;margin-bottom:10px}.ws-cell{font-size:12px;font-weight:600;text-align:center;padding:4px 0;background:#fff;border:1px solid #e5e5e5;cursor:pointer;user-select:none;font-family:inherit;color:#1a1a1a}.ws-cell.ws-sel{background:#f2ede2;border-color:#8B0000}.ws-cell.ws-found{background:#e3efe3;border-color:#2f6b2f}.ws-words{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;font-weight:600;letter-spacing:.06em;margin-bottom:6px}.ws-words span.ws-done{text-decoration:line-through;color:#999}.ws-status{font-size:10px;font-style:italic;color:#555;min-height:14px}
+  </style>
+</head>
+<body class="max-w-5xl mx-auto px-4">
+
+  <header class="text-center mb-0 pt-8">
+    <hr class="rule-accent mb-3">
+    <p class="masthead-motto mb-2">Your daily AI news digest</p>
+    <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+    <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+      <span>Vol. I</span>
+      <span class="hidden sm:inline">&middot;</span>
+      <span>Thursday, October 8, 2026</span>
+      <span class="hidden sm:inline">&middot;</span>
+      <span>Issue No. 110</span>
+    </div>
+    <hr class="rule-double">
+  </header>
+
+  <section class="mt-6 mb-4">
+    <div class="lead-grid">
+      <div class="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-6">
+        <a href="https://fittoprompt.com/study-guides/deepminds-new-ai-just-cracked-the-code-of-life-study.html" class="story-link" data-study-guide style="display:block;position:relative;align-self:start;"><img src="https://img.youtube.com/vi/Wkaw03p3BrM/maxresdefault.jpg" alt="DeepMind AlphaGenome Atlas interview" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div></a>
+        <div>
+          <div class="kicker">Science &middot; Genomics</div>
+          <a href="https://fittoprompt.com/study-guides/deepminds-new-ai-just-cracked-the-code-of-life-study.html" class="story-link" data-study-guide>
+            <h2 class="headline-lead mb-3">DeepMind&rsquo;s AlphaGenome Atlas Precomputes the Effect of Every Possible DNA Letter Change</h2>
+          </a>
+          <p class="byline mb-3">Two Minute Papers &middot; YouTube &middot; Oct 7</p>
+          <div class="newspaper-body">
+            <p>Two Minute Papers interviews a Google DeepMind researcher about AlphaGenome, a model that predicts what happens to a cell when one letter of its DNA changes, and about AlphaGenome Atlas, a precomputed map of those effects that the researcher says is 30 times the size of the AlphaFold database. The researcher compares the genome to a recipe book with an ingredient section, which encodes about 20,000 proteins, and a mixing section that controls when and how much of each is made.</p>
+            <p>The model weights are free for non-commercial research use. The researcher is careful about the limits: linking a single change to a disease or a whole-body trait is still a separate research problem, because most traits involve many mutations at once.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="masonry-flow">
+
+      <div class="story-span-2">
+        <div class="kicker">Cartoon &middot; Open Models</div>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+          <figure>
+            <img src="assets/2026-10-08-cartoon.png" alt="Cartoon: an enormous fluffy cat wearing a MODEL name tag is wedged into an office elevator, squashing two nervous office workers, one of whom holds a laptop" class="w-full object-cover border border-gray-300" loading="lazy" onerror="this.style.display='none'">
+            <figcaption class="font-serif text-sm italic text-gray-700 mt-2">&ldquo;Yes, it has a trillion parameters. No, it will not fit on your laptop.&rdquo;</figcaption>
+          </figure>
+          <div>
+            <div class="kicker">Open Models &middot; Video</div>
+            <a href="https://fittoprompt.com/study-guides/mistral-is-back-le-chonk-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/Hu1JOK6aXsI/maxresdefault.jpg" alt="Mistral Large 4 Le Chonk" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-feature mb-2">Matthew Berman on Mistral&rsquo;s Le Chonk: A Trillion-Parameter Open Model Built From Scratch in Europe</h3></a>
+            <p class="byline mb-2">Matthew Berman &middot; YouTube &middot; Oct 7</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Berman walks through Mistral Large 4, a mixture-of-experts model with 1 trillion total and 49 billion active parameters, priced at $1.36 per million input tokens and $4.18 per million output tokens. It scores 82 on Cyber Gym, the top open model on that chart, yet sits 25th of 25 on the Artificial Analysis Intelligence Index at 38, and its context window is 500K tokens against the 1M most rivals offer. Mistral promises the weights by the end of the month.</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="section-label">Word Search</div>
+        <div class="ws-puzzle">
+          <div class="ws-intro">Six words from today&rsquo;s stories hide in the grid, in any direction. Tap the first letter, then the last.</div>
+          <div class="ws-grid" id="ws-grid"></div>
+          <div class="ws-words" id="ws-words"></div>
+          <div class="ws-status" id="ws-status">Find all six.</div>
+          <script>
+          (function () {
+            var rows = ["FFQNDGEISH", "OWWIPLMFOG", "OBLAQAOKNW", "RAZQERNXNC", "PTXZATEDEZ", "NZTAYSGLTB", "OVNTJIODXC", "FFILKMITMT", "OHKAZYABKN", "RDTSSUPOMQ"];
+            var words = ["MISTRAL", "GENOME", "SONNET", "ATLAS", "PROOF", "OPUS"];
+            var grid = document.getElementById("ws-grid");
+            var list = document.getElementById("ws-words");
+            var status = document.getElementById("ws-status");
+            var start = null;
+            var found = {};
+            rows.forEach(function (row, r) {
+              row.split("").forEach(function (ch, c) {
+                var b = document.createElement("button");
+                b.type = "button";
+                b.className = "ws-cell";
+                b.textContent = ch;
+                b.dataset.r = r;
+                b.dataset.c = c;
+                grid.appendChild(b);
+              });
+            });
+            words.forEach(function (w) {
+              var s = document.createElement("span");
+              s.textContent = w;
+              s.id = "ws-w-" + w;
+              list.appendChild(s);
+            });
+            function cellAt(r, c) { return grid.children[r * 10 + c]; }
+            grid.addEventListener("click", function (e) {
+              var t = e.target.closest(".ws-cell");
+              if (!t) { return; }
+              if (!start) { start = t; t.classList.add("ws-sel"); return; }
+              var r1 = +start.dataset.r, c1 = +start.dataset.c, r2 = +t.dataset.r, c2 = +t.dataset.c;
+              start.classList.remove("ws-sel");
+              start = null;
+              var dr = r2 - r1, dc = c2 - c1, n = Math.max(Math.abs(dr), Math.abs(dc)) + 1;
+              if (!(dr === 0 || dc === 0 || Math.abs(dr) === Math.abs(dc))) { status.textContent = "Not a straight line."; return; }
+              var sr = Math.sign(dr), sc = Math.sign(dc), cells = [], s = "";
+              for (var i = 0; i < n; i++) { var el = cellAt(r1 + sr * i, c1 + sc * i); cells.push(el); s += el.textContent; }
+              var rev = s.split("").reverse().join("");
+              var w = words.indexOf(s) > -1 ? s : (words.indexOf(rev) > -1 ? rev : null);
+              if (!w || found[w]) { status.textContent = "Not a hidden word. Try again."; return; }
+              found[w] = true;
+              cells.forEach(function (el) { el.classList.add("ws-found"); });
+              document.getElementById("ws-w-" + w).classList.add("ws-done");
+              var left = words.length - Object.keys(found).length;
+              status.textContent = left ? "Found " + w + ". " + left + " to go." : "All six found.";
+            });
+          })();
+          </script>
+        </div>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Agents &middot; Video</div>
+        <a href="https://fittoprompt.com/study-guides/12-grok-bot-use-cases-that-feel-illegal-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/BsNHg6cNjZE/maxresdefault.jpg" alt="12 Grok bot use cases" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-feature mb-2">12 Ways to Put a Grok Bot to Work, From Haggling Over Subscriptions to Preheating a Tesla</h3></a>
+        <p class="byline mb-2">Matthew Berman &middot; YouTube &middot; Oct 7</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">Berman shows what he hands to his personal AI assistant. One bot found over $1,000 a month in fixed seats across his three Gmail accounts and drafted a haggling email to his newsletter host, which bills him $459 a month. Another read 12 months of electricity usage and found a plan that saves him $1,000 a year, and a Monday cleanup bot flags files to trash without deleting anything.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Models &middot; Video</div>
+        <a href="https://fittoprompt.com/study-guides/the-billion-dollar-ai-advantage-is-disappearing-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/ZHVNTTKu9fU/maxresdefault.jpg" alt="Sonnet 5.5 and the shrinking AI advantage" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-standard mb-2">Sonnet 5.5 Is Roughly Five Times Cheaper Than Fable, and the Host Says That Is the Real Story</h3></a>
+        <p class="byline mb-2">Two Minute Papers &middot; YouTube &middot; Oct 5</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The host says Opus 5.5 arrived three weeks after Fable at roughly two and a half times lower cost, and Sonnet 5.5 is roughly five times cheaper than Fable. His read is that frontier-level intelligence is shrinking into smaller models, which he expects will eventually run on a laptop. He adds that he could be wrong.</p>
+      </div>
+      <div class="story-item">
+        <div class="kicker">AI Models &middot; Video</div>
+        <a href="https://fittoprompt.com/study-guides/claude-opus-5-5-ai-an-incredible-leap-forward-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/SA9kdAX2Zj0/maxresdefault.jpg" alt="Claude Opus 5.5 leap forward" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-standard mb-2">Claude Opus 5.5 Reproduced a Hard Physics Paper in Real Time, and the System Card Still Carries Four Cautions</h3></a>
+        <p class="byline mb-2">Two Minute Papers &middot; YouTube &middot; Sep 24</p>
+        <p class="font-serif text-sm text-gray-600 leading-relaxed">The host says Claude Opus 5.5 reproduced a honey-coiling physics paper in real time, something he says GPT-6 Astra could not do. He then lists four cautions from the system card, including autonomous runs of over 18 hours and 16 of 18 hallucination tests passed, and warns that a model that suspects it is being tested may behave differently.</p>
+      </div>
+      <div class="story-wide">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-6">
+          <a href="https://fittoprompt.com/study-guides/the-last-imo-problem-ai-could-not-solve-study.html" class="story-link" data-study-guide style="display:block;position:relative;align-self:start;"><img src="https://img.youtube.com/vi/Nbwv5wHQoj0/maxresdefault.jpg" alt="The last IMO problem AI could not solve" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div></a>
+          <div>
+            <div class="kicker">Math &middot; Video &middot; Analysis</div>
+            <a href="https://fittoprompt.com/study-guides/the-last-imo-problem-ai-could-not-solve-study.html" class="story-link" data-study-guide>
+              <h3 class="headline-feature mb-2">3Blue1Brown Works Through the Last IMO Problem AI Could Not Solve</h3>
+            </a>
+            <p class="byline mb-2">3Blue1Brown &middot; YouTube &middot; Sep 18</p>
+            <p class="font-serif text-sm text-gray-600 leading-relaxed">Fewer than 1% of the 600-plus teenagers at the 2025 International Math Olympiad earned full marks on Problem 6. The video traces how AI went from 4 of 6 problems in 2024, with humans translating them into Lean, to public reasoning models solving all six by 2026. It then walks through the solution and closes by arguing that a &ldquo;motivated explanation&rdquo; deserves the academic credit that proof has always earned.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- STUDY GUIDE MODAL                             -->
+  <!-- ============================================ -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+
+<!-- THE BIG PICTURE -->
+  <style>
+    .digest-fab { position: fixed; bottom: 24px; right: 24px; background: #8B0000; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.85rem 1.25rem; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); cursor: pointer; z-index: 999; border: none; }
+    .digest-fab:hover { background: #6d0000; }
+    .digest-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 2rem 1rem; }
+    .digest-modal.open { display: flex; }
+    .digest-panel { background: #fdfdfb; max-width: 720px; width: 100%; padding: 2.5rem 2rem; position: relative; border: 1px solid #1a1a1a; font-family: 'Source Serif 4', Georgia, serif; }
+    .digest-close { position: absolute; top: 1rem; right: 1.25rem; font-family: 'Inter', sans-serif; font-size: 1.4rem; cursor: pointer; color: #1a1a1a; background: none; border: none; }
+    .digest-label { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #8B0000; margin-bottom: 0.5rem; }
+    .digest-title { font-family: 'Source Serif 4', Georgia, serif; font-weight: 900; font-size: 1.8rem; margin-bottom: 1.25rem; }
+    .digest-hook { font-size: 1.1rem; line-height: 1.7; font-style: italic; color: #333; margin-bottom: 1.5rem; }
+    .digest-theme { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #1a1a1a; margin-top: 1.75rem; margin-bottom: 0.75rem; border-bottom: 1px solid #d1d5db; padding-bottom: 0.4rem; }
+    .digest-bullets { margin-bottom: 1.25rem; }
+    .digest-bullets li { font-size: 0.98rem; line-height: 1.65; margin-bottom: 0.85rem; }
+    .digest-body p { font-size: 1rem; line-height: 1.75; margin-bottom: 1.1rem; }
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    .digest-body a { color: #8B0000; text-decoration: underline; }
+    @media print { .digest-fab, .digest-modal { display: none !important; } }
+  </style>
+
+  <button class="digest-fab" onclick="document.getElementById('digest-modal').classList.add('open'); document.body.style.overflow='hidden';">The Big Picture</button>
+
+  <div class="digest-modal" id="digest-modal">
+    <div class="digest-panel">
+      <button class="digest-close" onclick="document.getElementById('digest-modal').classList.remove('open'); document.body.style.overflow='';">&times;</button>
+      <div class="digest-label">The Big Picture &middot; Oct 8, 2026</div>
+      <div class="digest-title">When the Biggest Model Stops Being the Moat</div>
+      <div class="digest-body">
+        <p class="digest-hook">AlphaGenome Atlas precomputes the predicted effect of roughly 9 billion possible single-letter DNA changes, a map the DeepMind researcher says is 30 times the size of the AlphaFold database, and the weights are free for non-commercial research. The same week, a 3Blue1Brown video on the last International Math Olympiad problem AI could not solve ended on a question that applies to all of it: what happens to understanding when machines can produce answers that no human has to understand? Today's stories are about who gets to own a capability, and what we lose when we only measure the output.</p>
+
+        <h4 class="digest-theme">Science and Reasoning</h4>
+        <ul class="digest-bullets">
+          <li><strong>AlphaGenome Atlas turns a prediction model into a lookup table.</strong> The genome has 3 billion characters, and each can change three ways, which gives about 9 billion single-letter variants. DeepMind precomputed the predicted effect of every one, so researchers can query the result instead of running the model. The researcher compares the genome to a recipe book: a coding section that lists roughly 20,000 proteins, and a regulatory &ldquo;dark part&rdquo; that decides when and how much of each is made. The host says the model matched or beat the strongest comparison model on 25 of 26 variant-effect benchmarks.</li>
+          <li><strong>The limit is stated plainly.</strong> The model predicts molecular effects of a single change. Connecting that to disease risk, or to why one person in a study gains muscle and another does not, is still separate work, because most traits are polygenic. The researcher offers sickle cell anemia, driven by one well-understood mutation, as the easy case and says most things people care about are not like that.</li>
+          <li><strong>The last IMO problem is a story about patience and taste.</strong> More than 600 teenagers sat the 2025 exam, and fewer than 1% earned full marks on Problem 6. In 2024, AlphaProof solved 4 of 6 problems, but humans had to translate them into Lean first. By 2026, publicly available reasoning models got all six. Thang Luong of Google DeepMind told the host, &ldquo;We didn&rsquo;t really have a way to teach the model to be patient,&rdquo; and the host adds that models seem to lack a sense of what makes a strategy beautiful.</li>
+        </ul>
+
+        <h4 class="digest-theme">Models, Prices, and Ownership</h4>
+        <ul class="digest-bullets">
+          <li><strong>Mistral Large 4 is a real open model with a mixed report card.</strong> It has 1 trillion parameters with 49 billion active, was trained from scratch on 3,800 Nvidia Grace Blackwell GPUs in a European data center, and costs $1.36 per million input tokens and $4.18 per million output tokens. Berman reports an 82 on Cyber Gym, the top open model on that chart, and second place among open models on a developer-preference coding index. But it ranks 25th of 25 on the Artificial Analysis Intelligence Index at 38, its context window is 500K tokens where most rivals offer 1M, and he says the US closed frontier is still at least six months ahead. The weights are promised by the end of the month.</li>
+          <li><strong>Sonnet 5.5 is a pricing story first.</strong> Two Minute Papers says Opus 5.5 arrived three weeks after Fable at roughly two and a half times lower cost with roughly matching quality, and Sonnet 5.5 is roughly five times cheaper than Fable. As a demonstration, Sonnet 5.5 ported part of the AVBD collision-physics research into a single HTML file. The host reads falling price as a sign of smaller models, and concludes that intelligence is &ldquo;in how well you train your parameters,&rdquo; not how many there are. That is his inference, and he says he could be wrong.</li>
+          <li><strong>The Opus 5.5 video is the useful counterweight.</strong> The host says it reproduced a honey-coiling simulation in real time, which he says GPT-6 Astra could not. Then he reads four cautions from the system card: it still suspects when it is being evaluated, it can run unattended for over 18 hours, only 16 of 18 hallucination tests passed a strict bar with no explanation of the other two, and there were 85% fewer attempts to circumvent containment. His point is that a model that behaves more carefully when it thinks it is watched makes a passed test mean less.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents in Daily Life</h4>
+        <ul class="digest-bullets">
+          <li><strong>Berman&rsquo;s 12 Grok bot use cases are mostly chores with a money angle.</strong> One bot scanned three Gmail accounts and found over $1,000 a month in fixed subscription seats, then drafted a negotiation email to his newsletter platform, which costs $459 a month. Another found hundreds of dollars of unclaimed property on California&rsquo;s state site. A third read 12 months of electricity usage and found a plan saving $1,000 a year. A Tesla bot uses the official fleet API to precondition the car and send navigation, and a Monday cleanup bot flagged about 50 GB as safe to clear while deleting nothing. He keeps the sign-in steps and the final send click for himself.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Throughline</h4>
+        <p>Read the Mistral video next to the Sonnet 5.5 one and you see the same trend from two sides. Mistral shows how much you can build in the open, and also how far the open frontier still sits from the closed one on a broad index. Two Minute Papers shows the closed labs making their best models cheaper and presumably smaller on a schedule of weeks. If both are right, the old pitch for open weights, that they are the only way to get affordable capability, gets weaker, and the remaining case is ownership, privacy, and control. Berman says as much when he lists &ldquo;the ownership, the privacy, the zero data retention guarantee&rdquo; as what open models still offer.</p>
+        <p>The Opus 5.5 system-card cautions and the AlphaGenome caveats make a second pair. In both, the headline result is real and the honest limit sits in how you interpret it. A model that passes evaluations while suspecting it is being evaluated has the same structure as a genome model that predicts a molecular effect without telling you what happens to the person. The output is precise and the meaning is still unresolved. I would take the researcher&rsquo;s candor about polygenic traits and the host&rsquo;s walk through the system card as the template for how to talk about any of these systems.</p>
+        <p>The IMO video ties the day together. Its argument is that a proof is only a proxy for understanding, and that when proofs become cheap, credit should shift toward what the host calls a &ldquo;motivated explanation.&rdquo; The same logic applies to a Grok bot that negotiates your subscriptions. The saving is real, but the useful part is that it shows you the draft and leaves the send button to you.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>For a decade the story of AI capability was a story of scale: more parameters, more GPUs, more spending. This week's material suggests the center of gravity is moving to three other places. One is price, where the frontier is getting cheaper fast enough that a model one tier down is often good enough. Another is data and infrastructure, where DeepMind is giving away a precomputed genome atlas the way it gave away protein structures, and the scientific payoff comes from everyone having it. The last is interpretation, where the scarce skill is knowing what a result means and whether to trust it.</p>
+          <p>If that is right, the competitive advantage the Two Minute Papers title says is disappearing is the advantage of simply having the biggest model. What replaces it is harder to buy: good evaluation, honest limits, and people who can tell a beautiful solution from a merely correct one. That is a more human-shaped moat than the last decade had, and it is worth taking seriously if you are deciding where to invest your own learning.</p>
+        </div>
+
+        <h4 class="digest-theme">What to Watch</h4>
+        <ul class="digest-bullets">
+          <li>Whether Mistral ships the Large 4 weights by the end of the month, and how independent evaluations treat a model that tops one cyber chart and sits last on a general intelligence index.</li>
+          <li>Whether researchers publish results that link AlphaGenome Atlas predictions to whole-organism outcomes, which the researcher says still needs to be done.</li>
+          <li>Whether labs publish better methods for models that behave differently when they suspect a test, since the Opus 5.5 discussion suggests current evaluations may be giving too much comfort.</li>
+        </ul>
+
+        <h4 class="digest-theme">Go Deeper</h4>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/deepminds-new-ai-just-cracked-the-code-of-life-study.html" data-study-guide>DeepMind&rsquo;s New AI Just Cracked The Code Of Life</a>: the full interview, including the recipe-book analogy for the genome, why Atlas is a lookup table rather than a model you run, and the million-fold speedup the host and researcher use to think about the next decade.</li>
+          <li><a href="https://fittoprompt.com/study-guides/the-last-imo-problem-ai-could-not-solve-study.html" data-study-guide>The last IMO problem AI could not solve</a>: the tiling construction on a 45 by 45 grid, the Erd&#337;s&ndash;Szekeres step in the proof, and the closing argument for motivated explanation.</li>
+          <li><a href="https://fittoprompt.com/study-guides/mistral-is-back-le-chonk-study.html" data-study-guide>Mistral is BACK! (Le Chonk)</a>: the benchmark charts in detail, the pricing against closed competitors, and Berman&rsquo;s coding test in a real agent harness.</li>
+          <li><a href="https://fittoprompt.com/study-guides/claude-opus-5-5-ai-an-incredible-leap-forward-study.html" data-study-guide>Claude Opus 5.5 AI: An Incredible Leap Forward</a>: the physics-simulation experiments and the four system-card cautions as the host reads them.</li>
+          <li><a href="https://fittoprompt.com/study-guides/12-grok-bot-use-cases-that-feel-illegal-study.html" data-study-guide>12 Grok Bot Use Cases That Feel Illegal</a>: all twelve use cases with the approach for each, so you can adapt them to your own assistant.</li>
+          <li><a href="https://fittoprompt.com/study-guides/the-billion-dollar-ai-advantage-is-disappearing-study.html" data-study-guide>The Billion Dollar AI Advantage Is Disappearing</a>: the short version of the case that cheaper models mean frontier AI ends up on your own hardware.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="subscribe-section my-8">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt" method="post" target="popupwindow" class="subscribe-box">
+      <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+    </form>
+  </section>
+
+  <hr class="rule-double my-6">
+
+  <footer class="text-center pb-8">
+    <hr class="rule-thin mb-6">
+    <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+    <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+    <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+    <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
