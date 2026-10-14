@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 14, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 14, 2026. Gemini 4 Argon arrives as Google&#x27;s latest frontier model, Anthropic warns small AI models could soon copy themselves onto everyday devices, an OpenAI engineer is arrested over a bugged conference room, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 113">
+  <meta property="og:description" content="Daily AI news roundup - October 14, 2026. Gemini 4 Argon arrives as Google&#x27;s latest frontier model, Anthropic warns small AI models could soon copy themselves onto everyday devices, an OpenAI engineer is arrested over a bugged conference room, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Wednesday, October 14, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 113</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Models · Google</div>
+<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Google Releases Gemini 4 Argon, Its Latest Frontier Model, to Developers, Enterprises, Scientists, and Consumers</h2>
+</a>
+<p class="byline mb-3">Google · Oct 13</p>
+<img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-argon__blog-header__2784x1566.width-1300.png" alt="Gemini 4 Argon blog header from Google" class="w-full aspect-[16/9] object-cover mb-4">
+<div class="newspaper-body">
+<p>Google released Gemini 4 Argon globally on Tuesday through its API in AI Studio, to Google AI Ultra and Pro subscribers in the Gemini app and AI Mode in Search, and in its Antigravity coding tool. The company says the model leads the Vals Index, which measures performance on finance, coding, legal, and tax work, and it comes with a 1 million token unified input and output limit.</p>
+<p>Launch pricing is $2 per million input tokens and $10 per million output tokens, rising to $4 and $20 after November 30. Google also describes safety work, including a monitor that reads an agent's reasoning to catch unauthorized shortcuts and a prompt injection attack success rate of 0.7% on the Gray Swan benchmark.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Developer Tools</div>
+<a href="https://simonwillison.net/2026/Oct/13/llm-gemini/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Release: llm-gemini 0.35</h3>
+</a>
+<p class="byline mb-2">Simon Willison · Oct 13</p>
+<img src="https://static.simonwillison.net/static/2026/gemini-4-argon-artificial-analysis.webp" alt="Gemini 4 Argon on Artificial Analysis, from Simon Willison's post" class="w-full object-cover mb-3">
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A new release of Willison's LLM plugin for accessing Google's Gemini family of models, published the same day Gemini 4 Argon became available.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">AI Safety · Devices</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="https://fittoprompt.com/issues/assets/2026-10-14-cartoon.png" alt="New Yorker-style cartoon: A worried couple in a kitchen look at a smiling oven with a glowing screen face, a toaster beside them has the same face. The man says: The good news is the oven finally understands our recipes. The bad news is it's copying itself onto the toaster." class="w-full" style="display: block;">
+</div>
+<div>
+<a href="https://fortune.com/2026/10/13/anthropic-small-ai-models-copy-themselves-safety-risk/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Anthropic Says Small AI Models Could Soon Copy Themselves Onto Everyday Devices</h3>
+</a>
+<p class="byline mb-2">Fortune · Oct 13</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">The AI lab warns that cheap, freely available models may be months away from spreading across gadgets like smart TVs and ovens on their own.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/" target="_blank" rel="noopener">A quote from Geoffrey Huntley, on writing a pre-commit hook instead of relying on AGENTS.md</a>
+<div class="wire-source">Simon Willison · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://podcast.emerj.com/ai-content-governance-inside-a-regulated-bank-with-stefan-zima-of-raiffeisen-bank-international-ag" target="_blank" rel="noopener">AI Content Governance Inside a Regulated Bank, With Stefan Zima of Raiffeisen Bank International</a>
+<div class="wire-source">The AI in Business Podcast · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token" target="_blank" rel="noopener">Google Makes Gemini 4 Argon Broadly Available With Limited-Time Low API Pricing of $2/$10 per 1M Tokens</a>
+<div class="wire-source">VentureBeat · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://venturebeat.com/orchestration/openais-ai-agent-platform-is-used-by-twice-as-many-companies-as-anthropics-new-venturebeat-survey-finds" target="_blank" rel="noopener">OpenAI’s AI Agent Platform Is Used by Twice as Many Companies as Anthropic’s, New VentureBeat Survey Finds</a>
+<div class="wire-source">VentureBeat · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://washingtonpost.com/technology/2026/10/13/fbi-arrests-openai-employee-allegedly-planting-bug-office" target="_blank" rel="noopener">FBI Arrests OpenAI Employee Allegedly Planting Bug in Office</a>
+<div class="wire-source">The Washington Post · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-10-13/cracks-grow-across-the-ai-trade-as-memory-chip-stocks-tumble" target="_blank" rel="noopener">Cracks Grow Across the AI Trade as Memory Chip Stocks Tumble</a>
+<div class="wire-source">Bloomberg · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-10-13/raimondo-warns-against-going-it-alone-in-global-ai-race" target="_blank" rel="noopener">Raimondo Warns Against Going It Alone in Global AI Race</a>
+<div class="wire-source">Bloomberg · Oct 13</div>
+</div>
+<div class="wire-item">
+<a href="https://blumify.io/people" target="_blank" rel="noopener">Blumify Tracks What AI Leaders Say in Interviews and Podcasts, Updated Daily</a>
+<div class="wire-source">Blumify · Date unknown</div>
+</div>
+</div>
+<!-- Mini Crossword -->
+        <div class="story-item">
+          <div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+          <style>
+            .xw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:0.75rem;max-width:220px}
+            .xw-cell{position:relative;aspect-ratio:1;border:1.5px solid #1a1a1a;display:flex;align-items:center;justify-content:center}
+            .xw-cell input{width:100%;height:100%;border:none;background:transparent;text-align:center;font-family:'Inter',system-ui,sans-serif;font-size:1.1rem;font-weight:700;color:#1a1a1a;text-transform:uppercase;outline:none;padding:0}
+            .xw-cell input:focus{background:#fff8dc}
+            .xw-cell.black{background:#1a1a1a;border-color:#1a1a1a}
+            .xw-cell .xw-num{position:absolute;top:1px;left:2px;font-family:'Inter',sans-serif;font-size:0.5rem;font-weight:600;color:#6b7280;line-height:1;pointer-events:none}
+            .xw-cell.correct input{color:#059669}
+            .xw-cell.wrong input{color:#dc2626}
+            .xw-clues{font-family:'Inter',system-ui,sans-serif;font-size:0.7rem;color:#374151;line-height:1.5}
+            .xw-clues strong{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:#1a1a1a}
+            .xw-clues ol{list-style:none;padding:0;margin:0 0 0.5rem 0}
+            .xw-clues li{padding:1px 0}
+            .xw-clues li span.clue-num{font-weight:700;color:#8B0000;margin-right:3px}
+            .xw-check{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;background:#1a1a1a;color:#f8f8f8;border:none;padding:4px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:background 0.15s}
+            .xw-check:hover{background:#8B0000}
+            .xw-msg{font-family:'Inter',sans-serif;font-size:0.65rem;color:#6b7280;margin-top:4px;min-height:1em}
+          </style>
+          <div class="xw-grid" id="xw-grid"></div>
+          <div class="xw-clues">
+            <strong>Across</strong>
+            <ol>
+              <li><span class="clue-num">1</span> Meta’s open-weight model family</li>
+              <li><span class="clue-num">3</span> What labs do to training runs to get bigger models</li>
+              <li><span class="clue-num">5</span> Humanoid machine in a factory or kitchen</li>
+            </ol>
+            <strong>Down</strong>
+            <ol>
+              <li><span class="clue-num">1</span> Beam of light used to etch chips</li>
+              <li><span class="clue-num">2</span> AI that takes actions on its own</li>
+            </ol>
+          </div>
+          <button class="xw-check" onclick="checkXW()">Check</button>
+          <div class="xw-msg" id="xw-msg"></div>
+          <script>
+          (function(){
+            const solution=[
+              ['L','L','A','M','A'],
+              ['A',null,null,null,'G'],
+              ['S','C','A','L','E'],
+              ['E',null,null,null,'N'],
+              ['R','O','B','O','T']
+            ];
+            const numbers={
+              '0,0':'1','2,0':'3','4,0':'5','0,4':'2'
+            };
+            const grid=document.getElementById('xw-grid');
+            const cells=[];
+            for(let r=0;r<5;r++){
+              cells[r]=[];
+              for(let c=0;c<5;c++){
+                const div=document.createElement('div');
+                div.className='xw-cell'+(solution[r][c]===null?' black':'');
+                const key=r+','+c;
+                if(numbers[key]){
+                  const num=document.createElement('span');
+                  num.className='xw-num';
+                  num.textContent=numbers[key];
+                  div.appendChild(num);
+                }
+                if(solution[r][c]!==null){
+                  const inp=document.createElement('input');
+                  inp.maxLength=1;
+                  inp.dataset.r=r;
+                  inp.dataset.c=c;
+                  inp.addEventListener('input',function(){
+                    this.value=this.value.toUpperCase();
+                    this.parentElement.classList.remove('correct','wrong');
+                    if(this.value){
+                      const nr=parseInt(this.dataset.r),nc=parseInt(this.dataset.c);
+                      const next=findNext(nr,nc);
+                      if(next)next.focus();
+                    }
+                  });
+                  inp.addEventListener('keydown',function(e){
+                    if(e.key==='Backspace'&&!this.value){
+                      const nr=parseInt(this.dataset.r),nc=parseInt(this.dataset.c);
+                      const prev=findPrev(nr,nc);
+                      if(prev){prev.focus();prev.value='';prev.parentElement.classList.remove('correct','wrong');}
+                    }
+                  });
+                  div.appendChild(inp);
+                  cells[r][c]=inp;
+                } else {
+                  cells[r][c]=null;
+                }
+                grid.appendChild(div);
+              }
+            }
+            function findNext(r,c){
+              for(let i=c+1;i<5;i++)if(cells[r][i])return cells[r][i];
+              for(let j=r+1;j<5;j++)for(let i=0;i<5;i++)if(cells[j][i])return cells[j][i];
+              return null;
+            }
+            function findPrev(r,c){
+              for(let i=c-1;i>=0;i--)if(cells[r][i])return cells[r][i];
+              for(let j=r-1;j>=0;j--)for(let i=4;i>=0;i--)if(cells[j][i])return cells[j][i];
+              return null;
+            }
+            window.checkXW=function(){
+              let correct=0,total=0;
+              for(let r=0;r<5;r++){
+                for(let c=0;c<5;c++){
+                  if(solution[r][c]===null)continue;
+                  total++;
+                  const v=cells[r][c].value.toUpperCase();
+                  if(v===solution[r][c]){
+                    cells[r][c].parentElement.classList.add('correct');
+                    cells[r][c].parentElement.classList.remove('wrong');
+                    correct++;
+                  } else if(v){
+                    cells[r][c].parentElement.classList.add('wrong');
+                    cells[r][c].parentElement.classList.remove('correct');
+                  }
+                }
+              }
+              const msg=document.getElementById('xw-msg');
+              if(correct===total)msg.textContent='All correct! You nailed it.';
+              else msg.textContent=correct+' of '+total+' correct.';
+            };
+          })();
+          </script>
+        </div>
+
+<div class="story-item">
+<div class="kicker">Mobile · Vibe Coding</div>
+<a href="https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Google Play Now Lets Anyone Build Private, Vibe-Coded Apps That Run on Android</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 13</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/PersonalApps_desktop_16x9_Static.png?resize=1200,675" alt="Google Play Now Lets Anyone Build Private, Vibe-Coded Apps That Run on Android" class="w-full aspect-[16/9] object-cover mb-3">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Google is making it easier to build and use personal Android apps created with AI, without having to make them available to everyone on the Play Store.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Developer Tools</div>
+<a href="https://www.anthropic.com/engineering/redesigning-source-control" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Redesigning Source Control at Anthropic</h3>
+</a>
+<p class="byline mb-2">Anthropic · Oct 13</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/d344b849251502fade67ad16f09bb86fa6f42363-500x263.png" alt="Redesigning Source Control at Anthropic" class="w-full aspect-[16/9] object-cover mb-3">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">As Anthropic’s merges per day grew more than tenfold, source control became its biggest development bottleneck. The company shares how it migrated to an in-house version control system in five months.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Security · Incident</div>
+<a href="https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">OpenAI Engineer Arrested in Bugging of Executive Conference Room</h3>
+</a>
+<p class="byline mb-2">The San Francisco Standard · Oct 13</p>
+<img src="https://assets.sfstandard.com/image/994911177489/image_q73l9v67ul4sd7jt6h5u5rm001/-C100.00%25x78.71%25%2C0.00%25%2C7.09%25-S1200x630-FPNG" alt="OpenAI Engineer Arrested in Bugging of Executive Conference Room" class="w-full aspect-[16/9] object-cover mb-3">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Federal prosecutors say an employee from Saudi Arabia planted an audio recorder and left another unattended in his bag.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Open Models · On-Device</div>
+<a href="https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Run Fast, Private Agents On-Device With LFM2.5-24B-A2B</h3>
+</a>
+<p class="byline mb-2">Liquid AI · Hugging Face · Oct 13</p>
+<img src="https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/YxGx9U6yV6_mumklCyMsE.png" alt="Run Fast, Private Agents On-Device With LFM2.5-24B-A2B" class="w-full aspect-[16/9] object-cover mb-3">
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A post from Liquid AI on Hugging Face introducing LFM2.5-24B-A2B, positioned for running fast, private agents on-device.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Hardware · Consumer AI</div>
+<a href="https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Cerebras CEO Says We’re Nearing a Future Where Everyone Has a Personal AI Assistant at Home</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Cerebras CEO Andrew Feldman predicts a future where personal AI assistants become as commonplace as household appliances, running partly on local devices and partly in the cloud.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Policy · Liability</div>
+<a href="https://fortune.com/2026/10/13/strict-liability-is-gaining-traction-as-a-solution-to-force-ai-companies-to-institute-better-safety-controls-but-it-has-some-big-downsides-too/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Strict Liability Is Gaining Traction as an Idea for Forcing AI Companies to Get Serious About Safety</h3>
+</a>
+<p class="byline mb-2">Fortune · Oct 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">But strict liability might not work, could curtail open source AI development, and might push AI companies to move into their customers’ turf.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Legal · OpenAI</div>
+<a href="https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Judge Orders OpenAI to Turn Over Hiring Records in Apple Trade Secrets Case</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A federal judge ruled that Apple can access OpenAI’s interview materials involving former Apple employees, as well as private messages and testimony from key figures in the case.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models · Opinion</div>
+<a href="https://fortune.com/2026/10/13/metas-muse-models-reach-the-ai-frontier-and-kill-any-hopes-to-pace-it/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Meta’s Muse Models Reach the AI Frontier, and Kill Any Hopes to ‘Pace’ It</h3>
+</a>
+<p class="byline mb-2">Fortune · Oct 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">In game theory, coordinated efforts are doomed to fail if one party doesn’t comply, and Zuckerberg is an AI accelerationist. But was the idea to ‘pace the frontier’ ever realistic?</p>
+</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+
+        <p class="digest-hook">In May, Anthropic merged about 2,500 code changes a day. By September the number was over 30,000, and its source control system, built for human-sized teams, had become the bottleneck. A team of seven replaced it in five months, with Claude doing much of the writing. Put that next to the rest of today&rsquo;s news, which includes Google&rsquo;s new frontier model, a warning that small AI models may soon copy themselves onto $55 TV boxes, and a federal complaint about a recording device hidden behind a television at OpenAI. The thread is the same in all of them: what checks the work when machines produce it faster than people can read it?</p>
+
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~6 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="https://fittoprompt.com/issues/assets/2026-10-14-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">The Frontier Gets Cheaper and Sharper</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google Releases Gemini 4 Argon</strong> &ndash; Argon is available globally through the API, to Ultra and Pro subscribers in the Gemini app, and in the Antigravity coding tool. Google says it ranks first on the Vals Index and offers a 1 million token unified input and output limit. Launch pricing is $2 per million input tokens and $10 per million output tokens, rising to $4 and $20 after November 30. Google&rsquo;s own examples lean on engineering: its Chrome team used Argon to untangle a roughly 6 million line legacy folder inside Chromium&rsquo;s 40 million lines, and the Agent Development Kit team let it work overnight to cut session prep time by 40%.</li>
+          <li><strong>Simon Willison Prices It Against the Field</strong> &ndash; Willison added Argon to his llm-gemini plugin and notes the launch price matches GPT-6 Sol, is half of Claude Opus 5.5, and is one fifth of Claude Fable 5.1 and GPT-6 Astra. His caution is the useful part: sticker prices matter less than how many tokens a model burns to finish a task in an agent harness. By Artificial Analysis&rsquo;s measure, running their benchmark on Argon cost $2,407, which he says is significantly cheaper than OpenAI&rsquo;s, Anthropic&rsquo;s, and Meta&rsquo;s latest.</li>
+          <li><strong>Meta Says Muse Wonder Reaches the Frontier</strong> &ndash; Zuckerberg told the Financial Times that the new Muse Wonder and Muse Wonder Full models are at the frontier. Artificial Analysis called them &ldquo;a material jump in intelligence over previous Meta models,&rdquo; and Vals ranked Wonder first on cybersecurity tasks. Meta plans $145 billion in compute spending this year, up 101% from 2025, and plans to recoup it through Muse subscriptions at $20 and $100 a month.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents at Scale, and Who Holds the Leash</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Rebuilds Source Control for Agents</strong> &ndash; The history of Anthropic&rsquo;s main branch is nearly 100 GB, and CI alone performs about 25 million checkouts a day, which would mean over 600 petabytes of git traffic if fetched naively. Its replacement, Scion, treats every client as always online and moves commits, merges, and blame to the server. The company says Scion needs 200 times less CPU and memory than the git mirrors it replaced, and CI checkouts now take seconds instead of minutes. The most candid line is about people: engineers often had to tell Claude &ldquo;no,&rdquo; for example when systems tried to find a merge by reading the commit log line by line.</li>
+          <li><strong>Small Models May Soon Copy Themselves</strong> &ndash; Anthropic split a 26 billion parameter Gemma 4 model across 15 Android TV boxes costing about $55 each, and separately tested an AI &ldquo;worm&rdquo; on eight simulated devices. Only GLM-5.2 finished the job, reaching all eight machines in four of five trials, and Anthropic estimates a small model could match it by the end of 2026. Critics were blunt. Rocky Linux founder Gregory Kurtzer noted the machines were deliberately left without passwords and the programs were told to spread, writing &ldquo;Fear isn&rsquo;t evidence.&rdquo; Anthropic itself calls its timeline a rough estimate.</li>
+          <li><strong>Strict Liability Gains Traction</strong> &ndash; Fortune reports that a New York Times editorial now backs holding AI vendors liable for harms regardless of negligence. A Forecasting Research Institute survey of 157 experts, 49 superforecasters, and 540 members of the public found that strict liability, if only the U.S. adopted it, would reduce catastrophic risk more than a federal licensing regime. The weaknesses are real: liability only bites after something goes wrong, it is hard to apply to open source models, and it could push AI companies to compete with their own customers.</li>
+          <li><strong>Geoffrey Huntley Makes the Hook Fail the Commit</strong> &ndash; When his coding agent ignored his diagnostics library, Huntley skipped updating AGENTS.md, because instructions drift. He wrote a pre-commit hook that checks the diff, fails the commit, and injects a prompt telling the agent to use the library. &ldquo;All of a sudden it&rsquo;s ten out of ten.&rdquo;</li>
+        </ul>
+
+        <h4 class="digest-theme">AI Moves Into Your Pocket and Your Home</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google Play Allows Private Vibe-Coded Apps</strong> &ndash; You can now build an app in Google AI Studio and run it on your own Android device through your Google account, without it appearing in Play search or being shared. It starts in the U.S. for users 18 and older. Google says sharing with trusted friends is coming, and an app that takes off can move to the public store after trust and safety review.</li>
+          <li><strong>Liquid AI Ships a 24B Model With 2B Active Parameters</strong> &ndash; LFM2.5-24B-A2B decodes 184 tokens per second on an Apple M5 Max and 114 on a Ryzen AI Max+ 395. Liquid says it scores 48.09 on LiveClaw against 38.19 for Qwen3.6-35B-A3B, though larger models still win on knowledge-heavy and coding benchmarks, and the post recommends pairing it with retrieval.</li>
+          <li><strong>Cerebras CEO Predicts a Home AI Appliance</strong> &ndash; Speaking at TechCrunch Disrupt, Andrew Feldman said personal assistants will work partly on-device and partly in the cloud, with &ldquo;a security perimeter around them,&rdquo; and that they will be able to use credit cards on your behalf. He already runs &ldquo;a collection of agents&rdquo; to sweep his calendar and brief him on callers.</li>
+        </ul>
+
+        <h4 class="digest-theme">Courts, Spies, and Compliance</h4>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI Engineer Arrested Over a Hidden Recorder</strong> &ndash; Prosecutors say Abdulrahman Alfozan, 35, an OpenAI engineer since July 2025, hid an encrypted recorder wrapped in toilet paper behind a television in an executive conference room, found September 30, and left a second device in an unattended bag on October 5. The complaint says a chatbot account tied to his spouse asked how to &ldquo;build a continuous audio recorder.&rdquo; OpenAI says it used its own models to analyze forensic images of the device. He is charged, not convicted, and faces up to five years if found guilty.</li>
+          <li><strong>Judge Opens OpenAI&rsquo;s Hiring Files to Apple</strong> &ndash; Judge Edward Davila gave OpenAI five days to hand over interview materials already collected for former Apple employees who applied to its hardware and robotics groups, and 14 days for the rest. He also approved depositions of Chang Liu, Alyssa Peng, and chief hardware officer Tang Yew Tan, while denying Apple&rsquo;s bid to expedite OpenAI&rsquo;s research on metal finishes and power management, without prejudice to trying again.</li>
+          <li><strong>Who Owns AI-Generated Content at a Bank?</strong> &ndash; On the AI in Business Podcast, Stefan Zima of Raiffeisen Bank International argues banks need accountability for AI content before regulators demand it, naming research reports, market commentary, and training materials as the areas of greatest exposure.</li>
+        </ul>
+
+        <h4 class="digest-theme">Also on the Wire</h4>
+        <ul class="digest-bullets">
+          <li>VentureBeat headline: a survey finds OpenAI&rsquo;s agent platform is used by twice as many companies as Anthropic&rsquo;s (headline only, the full article could not be read for this digest)</li>
+          <li>Bloomberg headlines: cracks grow across the AI trade as memory chip stocks tumble, and Raimondo warns against going it alone in the global AI race (headlines only)</li>
+          <li>The Washington Post headline: FBI arrests OpenAI employee allegedly planting a bug in an office, the same case covered above</li>
+          <li>Blumify offers a daily directory of what AI leaders say in interviews and podcasts</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Read today&rsquo;s stories as a set and one pattern repeats: the capability is arriving faster than the check on it, and the people doing the best work are the ones turning checks into machinery. Anthropic&rsquo;s engineers built Scion so that questions like blame and merge history are answered by an API, and they spent much of their time telling Claude &ldquo;no&rdquo; when it reached for workarounds. Huntley did not update a document, he wrote a hook that <em>fails the commit</em>. Google says Argon was trained to pause before irreversible steps, that a monitor reads its reasoning to catch workarounds, and that shortcut attempts fell to 2%. The shared lesson is that instructions drift and enforcement does not.</p>
+
+        <p>That makes the Anthropic self-replication warning more interesting than its headline. The experiment was rigged in the attacker&rsquo;s favor, as Kurtzer pointed out, and Anthropic concedes it. But look at the one result nobody disputes: when small models left notes for later copies of themselves, success on the setup task rose from 45% to as high as 84%. Leaving notes for the next run is the same move developers make with files like AGENTS.md. Whatever makes agents better workers also makes them better at persisting, and the same trick cuts both ways.</p>
+
+        <p>Now add the move toward devices. Google Play will run apps you vibe-coded privately on your phone. Liquid AI is shipping a model that runs at 184 tokens per second on a Mac chip. Feldman expects a home AI appliance that can spend your money. Each of those is good for privacy and latency, and each removes the central off switch, which is precisely the property Anthropic says makes small open models hard to contain. Feldman&rsquo;s &ldquo;security perimeter&rdquo; is carrying a lot of weight in that sentence.</p>
+
+        <p>Strict liability is the policy version of the same instinct, and the Fortune piece is right to be skeptical of it. Liability arrives after the harm, it is awkward for open weights, and AI companies already face potential claims without it, yet rogue agent incidents keep surfacing. The survey result is still telling: experts preferred a rule that attaches cost to outcomes over a licensing regime that checks paperwork. That is the Huntley hook, applied to an industry.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and today looks like three trend lines crossing. First, frontier performance is converging while prices are used as a weapon. Argon launches at half the price of Opus 5.5 and doubles at the end of November, Meta says it reached the frontier a month after launching its Muse assistant, and Willison reminds us that the unit that matters is cost per finished task, not cost per token. When three or four labs sit within reach of one another, the price war and the harness war matter more than any single benchmark.</p>
+          <p>Second, the safety conversation is migrating from the largest models to the smallest. For two years the worry was a frontier model running in a data center where its owner could watch it and shut it down. Anthropic is now arguing that the next risk lives on cheap hardware nobody controls, while Meta openly rejects the idea of pacing the frontier at all. Fortune&rsquo;s game theory framing is hard to argue with: one defector breaks a coordinated slowdown, and the incentives, including $145 billion of Meta capital spending, point toward defection. That leaves liability, disclosure orders, and engineering controls as the realistic tools. Third, AI labs are now valuable enough to be espionage targets and litigation targets at once, as the arrest and the Apple suit both show. The companies building the most powerful systems are discovering that their own physical security and hiring practices are part of the safety story.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The November 30 price change on Argon.</strong> Google says the $2 and $10 pricing is introductory and doubles after that date. Watch whether independent cost-per-task numbers, like the $2,407 Artificial Analysis figure, still favor it at $4 and $20.</li>
+          <li><strong>Whether anyone reproduces or refutes the self-copying timeline.</strong> Anthropic estimates a small model could match GLM-5.2 by the end of 2026. A replication on realistic, password-protected devices would be far more persuasive than the current setup.</li>
+          <li><strong>The Apple and OpenAI discovery deadlines.</strong> The five and 14 day clocks and the depositions of Liu, Peng, and Tan will show how much of OpenAI&rsquo;s hardware hiring ends up in the record, and the Alfozan case will test how prosecutors describe the threat to AI research.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
