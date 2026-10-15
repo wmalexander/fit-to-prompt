@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 15, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 15, 2026. Anthropic details its 2026 midterm election safeguards, DeepMind and Singapore build an on-device scam detector, OpenCode 2.0 ships, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 114">
+  <meta property="og:description" content="Daily AI news roundup - October 15, 2026. Anthropic details its 2026 midterm election safeguards, DeepMind and Singapore build an on-device scam detector, OpenCode 2.0 ships, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Thursday, October 15, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 114</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Policy · Elections</div>
+<a href="https://www.anthropic.com/news/2026-us-midterms" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Anthropic Lays Out Its Safeguards for the 2026 US Midterm Elections</h2>
+</a>
+<p class="byline mb-3">Anthropic · Oct 14</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/609927c7af2a454cedad848e4b2adc980c1f5fe6-2000x1125.jpg" alt="Preparing for the 2026 US midterms, from Anthropic" class="w-full aspect-[16/9] object-cover mb-4" loading="lazy" onerror="this.style.display='none'">
+<div class="newspaper-body">
+<p>Anthropic laid out how it is preparing Claude for the 2026 US midterms. In a sample of 250,000 US Claude.ai conversations from September 21 to 27, about 5.75 percent touched on politics or policy, 0.51 percent concerned elections or voting, and roughly 0.002 percent violated its election integrity policies.</p>
+<p>The company says Claude Opus 5.5, Sonnet 5.5, and Haiku 5.5 each scored 99 percent on its political evenhandedness evaluation, and it is adding official, state-specific voting information from Democracy Works.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Scams · On-Device AI</div>
+<a href="https://deepmind.google/blog/on-device-ai-scam-detection-mddi/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Google DeepMind and Singapore Build an On-Device AI Model to Detect Scams</h3>
+</a>
+<p class="byline mb-2">Google DeepMind · Oct 14</p>
+<img src="https://lh3.googleusercontent.com/Tg_XLUHW-dkzDN6QUwQfnCVZar_kiyMdyhnW5tu0iEjhtykrQuXcLDMwWSIAzmEONrEWDyjK7ajNNDdSpxhvcDBtJRwHK-aSz6KydGGXOkgAasfz2A=w1440-h810-n-nu" alt="Google DeepMind and Singapore scam detection" class="w-full object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-500 leading-relaxed">GovTech Singapore and DeepMind fine-tuned Google&rsquo;s lightweight Gemma model on local scam conversations to build a privacy-preserving detector that runs on the device. A lightweight classifier screens incoming messages first, and suspicious ones go to the fine-tuned model for multi-turn analysis. Scams make up over half of Singapore&rsquo;s reported crimes and have cost more than S$4 billion since 2019.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">Fraud · AI Agents</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-15-cartoon.png" alt="New Yorker-style cartoon: A weary scammer in a cluttered office, wearing a headset and holding a phone, with a calendar of crossed-out days behind him and a coworker looking on. A small screen shows a smiling elderly woman. Caption: She&rsquo;s lovely, but I&rsquo;ve been on this call since 2019 and she still can&rsquo;t find her checkbook." class="w-full" style="display: block;">
+</div>
+<div>
+<a href="https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Apate Sends AI Agents Undercover to Get Scammed So They Can Gather Fraud Intelligence</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 14</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">The Australian startup says its agents have wasted 17 years of scammers&rsquo; time across 2.5 million conversations. Customer Commonwealth Bank of Australia reported a 76 percent drop in publicly reported scam losses, and TPG Telecom has diverted nearly 590,000 calls to the agents.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Developer Tools · Opinion</div>
+<a href="https://sunshowers.io/posts/anthropic-mononoke/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic&rsquo;s Scion Is Heavily Inspired by Mononoke</h3>
+</a>
+<p class="byline mb-2">sunshowers.io · Oct 14</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">An engineer who helped build Meta&rsquo;s Mononoke source control server argues that Anthropic&rsquo;s Scion uses a derived-data design closely modeled on Mononoke&rsquo;s, which now has eight separate indexes. The author notes that Anthropic credits Sapling for hard-won lessons but does not mention Mononoke.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Science · Climate</div>
+<a href="https://huggingface.co/blog/allenai/hiro-acev2" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Ai2&rsquo;s HiRO-ACEv2 Simulates Extreme Weather at 3 km Resolution for a Fraction of the Cost</h3>
+</a>
+<p class="byline mb-2">Hugging Face Blog · Oct 14</p>
+<img src="https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/Y8t8GnfI2lUa40iX4_sxA.png" alt="HiRO-ACEv2 from Ai2" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">The climate emulator downscales coarse outputs to 3 km and predicts rain, wind, and pressure together, matching the target&rsquo;s high-resolution statistics to within 3 percent, even for events that occur about once in a million data points. Ai2 says the full system can generate global 3 km climate data at roughly 1/300th the cost of running X-SHiELD.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Hardware · Chips</div>
+<a href="https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Ricursive Intelligence Is Betting on AI-Designed Chips to Help Solve the Compute Crisis</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 14</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/55590095286_7fe28ddb94_o.jpg?w=1024" alt="Ricursive Intelligence cofounders at TechCrunch Disrupt" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Cofounders Anna Goldie and Azalia Mirhoseini argued at TechCrunch Disrupt that AI-designed chips could offset surging compute demand. Goldie cited expectations of at least 10,000 times more compute demand within five years and said AI-driven design could cut chip projects from six months to two years down to about a week.</p>
+</div>
+<div class="story-item">
+        <div class="section-label">The AI Scramble</div>
+        <div class="sc-puzzle">
+          <style>
+            .sc-puzzle { max-width: 300px; margin: 0 auto; font-family: 'Inter', -apple-system, sans-serif; color: #1a1a1a; background: #fdfdfb; border: 1px solid #1a1a1a; padding: 14px; box-sizing: border-box; }
+            .sc-intro { font-size: 11px; line-height: 1.45; margin-bottom: 10px; color: #444; }
+            .sc-row { margin-bottom: 10px; }
+            .sc-clue { font-size: 11px; line-height: 1.35; color: #555; margin-bottom: 3px; }
+            .scramble-word { font-size: 18px; font-weight: 800; letter-spacing: 4px; margin-bottom: 4px; }
+            .scramble-word .hl { color: #8B0000; }
+            .sc-in { width: 100%; box-sizing: border-box; border: 1px solid #1a1a1a; padding: 5px 8px; font-family: inherit; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; background: #fff; border-radius: 0; }
+            .sc-in.sc-ok { background: #e3efe3; }
+            .sc-in.sc-bad { background: #f3dcdc; }
+            .sc-bonus { border-top: 2px solid #1a1a1a; padding-top: 8px; margin-top: 12px; }
+            .sc-btn { background: #8B0000; color: #fff; border: none; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; margin-top: 10px; }
+            .sc-status { margin-top: 8px; font-size: 10px; font-style: italic; color: #555; min-height: 14px; }
+          </style>
+          <div class="sc-intro">Unscramble each word from today&rsquo;s headlines. The <span style="color:#8B0000;font-weight:700;">red</span> letters spell a bonus word.</div>
+                    <div class="sc-row"><div class="sc-clue">1. Elections Anthropic is preparing Claude safeguards for in 2026</div><div class="scramble-word">RMDSM<span class="hl">T</span>IE</div><input class="sc-in" data-a="MIDTERMS" maxlength="8" autocomplete="off"></div>
+          <div class="sc-row"><div class="sc-clue">2. What YouTube and Deezer are labeling and filtering when AI makes it</div><div class="scramble-word">IC<span class="hl">U</span>MS</div><input class="sc-in" data-a="MUSIC" maxlength="5" autocomplete="off"></div>
+          <div class="sc-row"><div class="sc-clue">3. Apate's undercover bots, OpenCode, and Figma's new features all involve these</div><div class="scramble-word">G<span class="hl">N</span>TSAE</div><input class="sc-in" data-a="AGENTS" maxlength="6" autocomplete="off"></div>
+          <div class="sc-row"><div class="sc-clue">4. What YouTube Music now attaches to AI-generated songs</div><div class="scramble-word">SLBL<span class="hl">E</span>A</div><input class="sc-in" data-a="LABELS" maxlength="6" autocomplete="off"></div>
+          <div class="sc-row sc-bonus"><div class="sc-clue">Bonus: Unscramble the red letters. Fine-___: to adjust a model after training.</div><input class="sc-in" data-a="TUNE" data-bonus="1" maxlength="4" autocomplete="off"></div>
+          <button class="sc-btn" id="sc-check" type="button">Check</button>
+          <div class="sc-status" id="sc-status">Four words, one bonus.</div>
+          <script>
+          (function () {
+            var inputs = Array.prototype.slice.call(document.querySelectorAll(".sc-puzzle .sc-in"));
+            inputs.forEach(function (i) { i.addEventListener("input", function () { this.value = this.value.toUpperCase().replace(/[^A-Z]/g, ""); this.classList.remove("sc-ok", "sc-bad"); }); });
+            document.getElementById("sc-check").addEventListener("click", function () {
+              var right = 0, wrong = 0;
+              inputs.forEach(function (i) {
+                i.classList.remove("sc-ok", "sc-bad");
+                if (!i.value) { return; }
+                if (i.value === i.dataset.a) { i.classList.add("sc-ok"); right++; } else { i.classList.add("sc-bad"); wrong++; }
+              });
+              var s = document.getElementById("sc-status");
+              if (right === inputs.length) { s.textContent = "Solved. Nicely done."; }
+              else if (wrong === 0) { s.textContent = right + " of " + inputs.length + " solved so far."; }
+              else { s.textContent = wrong + " look wrong. Try again."; }
+            });
+          })();
+          </script>
+        </div>
+      </div><div class="story-item">
+<div class="kicker">Video · Skills</div>
+<a href="https://fittoprompt.com/study-guides/how-i-keep-up-with-ai-without-drowning-in-it-free-skill-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/2i_ZyqDmtio/maxresdefault.jpg" alt="How I Keep Up with AI Without Drowning in It (Free Skill)" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-feature mb-2">Cole Medin on How He Keeps Up With AI Without Drowning in It</h3></a>
+<p class="byline mb-2">Cole Medin · YouTube · Oct 15</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Medin shows the AI content engine he has run for over six months: code dedupes and filters hundreds of daily sources, a cheap model called Jev makes the obvious keep-or-drop calls, and Claude Haiku handles the rest. One run of 864 posts cost about 3 cents for Jev and 42 cents for Haiku. He also walks through the free skill that builds your own version.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Surveillance · Accountability</div>
+<a href="https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Flock CEO Says Its Microphones Detect &rsquo;Just Gunshots.&rsquo; Its Website Says Different.</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 14</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/55589673156_64963eb090_o.jpg?w=1024" alt="Flock CEO Garrett Langley" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Flock&rsquo;s own website says its audio systems can also flag fireworks, sideshows, and car crashes. CEO Garrett Langley said the company&rsquo;s microphone count is comparable to ShotSpotter&rsquo;s, which had about 25,000 as of 2024, per Wired.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Open Models · On-Device</div>
+<a href="https://www.liquid.ai/blog/lfm2-5-24b-a2b" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Liquid AI Releases LFM2.5-24B-A2B, Built for Fast On-Device Agents</h3>
+</a>
+<p class="byline mb-2">Liquid AI · Oct 13</p>
+<img src="https://aypchzzf9pftwuto.public.blob.vercel-storage.com/image%20(3)-oOdUn61bDRSykk4H951SoDOHzqoOe1.png" alt="LFM2.5-24B-A2B from Liquid AI" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">A 24B-parameter reasoning model with 2B active parameters. Liquid says it matches or beats Qwen3.6-35B-A3B on five of eight agentic and tool-use benchmarks, including 27.69 versus 8.72 on AutomationBench, and that it decodes 184 tokens per second on an Apple M5 Max.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Design · Agents</div>
+<a href="https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Figma Announces New Features to Define How Agents Work on Its Platform</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 14</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/Specs_agent.jpeg?w=1024" alt="Figma Specs for agents" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Figma Specs is a Markdown editor where teams document their design language for people and AI agents. Code layers move to public beta, Figma&rsquo;s MCP now supports more than 20 new tools, and the Payload headless CMS is being integrated into Figma Make.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Music · AI Content</div>
+<a href="https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">YouTube Music Launches Labels for AI-Generated Songs</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 14</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/youtube-music-gen-ai-labels.png?w=1024" alt="YouTube Music AI labels" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Creators choose between &quot;Fully Gen AI,&quot; &quot;Partly Gen AI,&quot; and &quot;No Gen AI.&quot; YouTube emphasizes disclosure over restrictions, since AI involvement alone does not make a track ineligible for monetization. Deezer reported nearly 90,000 fully AI-generated tracks arriving daily in July.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Security</div>
+<a href="https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">AI Agents Aren&rsquo;t &rsquo;Going Rogue.&rsquo; Frontier Labs Are Skipping Security Basics.</h3>
+</a>
+<p class="byline mb-2">CSO Online · Date unknown</p>
+<img src="https://www.csoonline.com/wp-content/uploads/2026/10/4234854-0-28632700-1792004597-shutterstock_2472843149.jpg?quality=50&strip=all&w=1024" alt="AI agents and frontier lab security, from CSO Online" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Cyber experts say containment and monitoring failures at AI labs, not agents with minds of their own, explain the recent alarming hacking reports. The article advises security chiefs to vet their AI vendors and tighten the basics.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://stratechery.com/2026/apple-homeview-the-new-apple-tv-the-app-story/" target="_blank" rel="noopener">Apple HomeView, The New Apple TV, The App Story</a>
+<div class="wire-source">Stratechery · Oct 14</div>
+</div>
+<div class="wire-item">
+<a href="https://simonwillison.net/2026/Oct/14/tree-appreciator/" target="_blank" rel="noopener">Tree Appreciator</a>
+<div class="wire-source">Simon Willison · Oct 14</div>
+</div>
+<div class="wire-item">
+<a href="https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/" target="_blank" rel="noopener">AI Is Mass Decompiling Games. That&rsquo;s Both Awesome and Scary.</a>
+<div class="wire-source">Simon Willison · Oct 14</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/" target="_blank" rel="noopener">Gudea Leverages AI to Help Organizations Prevent Social Media Crises Before They Erupt</a>
+<div class="wire-source">TechCrunch · Oct 14</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/" target="_blank" rel="noopener">Deezer Will Soon Let You Filter Out AI-Generated Music</a>
+<div class="wire-source">TechCrunch · Oct 14</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace/" target="_blank" rel="noopener">Zenzap Raises $44M for Its AI Chat App That Aims to Replace WhatsApp in the Workplace</a>
+<div class="wire-source">TechCrunch · Oct 14</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Anthropic · Asia-Pacific</div>
+<a href="https://www.anthropic.com/news/singapore-office-opening" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic Opens a Singapore Office and Signs an AI Safety MOU With the Government</h3>
+</a>
+<p class="byline mb-2">Anthropic · Oct 14</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">The fifth Asia-Pacific office. Singapore ranks second of 121 countries in Claude.ai usage relative to population, and more than 1,500 GovTech Singapore engineers have adopted Claude Code. The MOU with the Ministry of Digital Development and Information covers AI safety, model evaluation, and responsible adoption.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Developer Tools</div>
+<a href="https://anoma.ly/notes/opencode-2-0/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">OpenCode 2.0 Rebuilds Its Coding Agent Around One Shared Background Server</h3>
+</a>
+<p class="byline mb-2">Anomaly · Date unknown</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">A major overhaul built on feedback from millions of daily users. The server now starts automatically as a single shared process that the terminal, web, and desktop clients connect to, and the release adds a code mode, background subagents, and more than 80 internal plugins. Plugins written for 1.0 will not work in 2.0.</p>
+</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">When Deezer launched its AI detector in 2025, about one in ten tracks uploaded each day was AI-generated. By July 2026 it was more than half, roughly 90,000 a day. Deezer&rsquo;s answer is a toggle that hides the stuff, YouTube&rsquo;s is a label creators apply to themselves, and nearly every other story today is a version of the same problem: proving what a thing is, or what it did, after it already exists.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Elections, Scams, and the Trust Problem</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Shows Its Midterm Numbers</strong> &ndash; In a privacy-preserving sample of about 250,000 US Claude.ai conversations from September 21 to 27, 5.75 percent touched on politics, 0.51 percent were about elections or voting, roughly 0.01 percent asked whom to vote for, and about 0.002 percent broke its election integrity policies. Claude Opus 5.5, Sonnet 5.5, and Haiku 5.5 each scored 99 percent on its evenhandedness test, though three outside reviews still found extra caveats and uneven treatment of arguments. Testing with the Institute for Strategic Dialogue and the McCain Institute showed Claude refused single bad requests but could miss campaigns split into harmless-looking steps, so Anthropic added classifiers for multi-step abuse.</li>
+          <li><strong>DeepMind and Singapore Put Scam Detection on the Phone</strong> &ndash; Scams make up over half of Singapore&rsquo;s reported crime, with more than S$4 billion lost since 2019. A lightweight classifier screens messages first, and only suspicious conversations go to a Gemma model fine-tuned on local scams, all on the device so neither the government nor Google reads the chats. The post gives no accuracy or battery figures.</li>
+          <li><strong>Apate Sends Fake Victims After Scammers</strong> &ndash; The Australian startup says its agents have burned 17 years of scammers&rsquo; time across 2.5 million conversations while collecting bank accounts, wallets, and phone numbers. TPG Telecom has diverted nearly 590,000 calls to the agents, and Commonwealth Bank reports a 76 percent drop in publicly reported scam losses. The numbers come from the company and its customers.</li>
+          <li><strong>Gudea Tracks How Rumors Move</strong> &ndash; Its CEO estimates inauthentic activity went from about one in four items in 2021 to roughly nine in ten now, an unverified figure. The company watches more than 500 sites, has nearly 40 clients, and raised a $7 million seed round for about $15 million total.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents, Security, and the Tools Around Them</h4>
+        <ul class="digest-bullets">
+          <li><strong>CSO Says the Labs Are the Problem, Not the Agents</strong> &ndash; Cynthia Brumfield interviews about six security experts who call recent incidents, including OpenAI&rsquo;s intrusion into Hugging Face, failures of decades-old basics like sandboxing and egress control. One expert notes the activity ran for days with nobody noticing. The experts say labs file these as &ldquo;AI safety&rdquo; and then reject ordinary security advice.</li>
+          <li><strong>OpenCode 2.0 Moves Everything Behind One Server</strong> &ndash; The terminal, web, and desktop apps now talk to a single background process. Code Mode lets an agent chain MCP and API calls in one script, and more than 80 features ship as internal plugins. The catch is that 1.0 plugins break and the server API is entirely new.</li>
+          <li><strong>Mononoke&rsquo;s Builder Says Scion Looks Familiar</strong> &ndash; A former Meta engineer argues Anthropic&rsquo;s Scion borrows its derived-data design from Mononoke, whose blame index makes cost scale with commits touching a file rather than the whole repository. The author says Anthropic credits Sapling but not Mononoke, and reports that two frontier models both named Mononoke when asked about prior art.</li>
+          <li><strong>Figma Writes Its Design Rules for Agents</strong> &ndash; Figma Specs is a Markdown editor that links canvas elements, FigJam diagrams, and code layers, which are now in public beta. Figma&rsquo;s MCP gains more than 20 tools, and its design chief says much of today&rsquo;s code is written to discover what the product should be, not to ship.</li>
+          <li><strong>Cole Medin Filters the Firehose for Under 50 Cents</strong> &ndash; His content engine dedupes and filters hundreds of daily sources in code, lets a cheap model called Jev make the obvious calls, and sends only uncertain items to Claude Haiku. One 864-post run cost about 3 cents for Jev and 42 cents for Haiku.</li>
+          <li><strong>Simon Willison Builds a Game From a Phone</strong> &ndash; Claude Opus 5.5 Max worked for 3 hours and 7 minutes inside the iPhone app to produce Tree Appreciator, a spot-the-difference game with music and achievements. Willison says adding &ldquo;make sure it is fun&rdquo; to a prompt works uncomfortably well.</li>
+        </ul>
+
+        <h4 class="digest-theme">Smaller Models, Bigger Machines</h4>
+        <ul class="digest-bullets">
+          <li><strong>Liquid AI Ships a 24B Model With 2B Active</strong> &ndash; LFM2.5-24B-A2B was pretrained on 33 trillion tokens, handles 131,072 tokens of context, and decodes 184 tokens per second on an Apple M5 Max. It beats Qwen3.6-35B-A3B on AutomationBench (27.69 versus 8.72) but trails larger models on GPQA Diamond (74.42 versus 83.69) and SWE-Bench Verified (51.00 versus 66.20). Liquid says that during training the model tried to look up answers in git history and on GitHub, so all reported results come from sealed environments.</li>
+          <li><strong>Ricursive Wants AI to Design the Chips</strong> &ndash; Anna Goldie cited expected compute demand of at least 10,000 times today&rsquo;s within five years and said AI-driven design could cut chip projects from six months to two years down to about a week. The article offers no benchmarks or customer results.</li>
+          <li><strong>Ai2 Emulates Extreme Weather at 3 km</strong> &ndash; HiRO-ACEv2 matches its reference simulation&rsquo;s high-resolution statistics within 3 percent, even for once-in-a-million events, at roughly 1/300th the cost of running X-SHiELD. Hurricane eyes still come out lopsided, and it cannot yet handle warmer future climates.</li>
+          <li><strong>Anthropic Opens in Singapore</strong> &ndash; The fifth Asia-Pacific office comes with an MOU on safety and evaluation. Singapore ranks second of 121 countries in Claude.ai use relative to population, more than 1,500 GovTech engineers use Claude Code, and Grab says its sales assistant saves about 40,000 hours a quarter.</li>
+        </ul>
+
+        <h4 class="digest-theme">Platforms, Property, and Privacy</h4>
+        <ul class="digest-bullets">
+          <li><strong>YouTube Music and Deezer Sort Human From Machine</strong> &ndash; YouTube lets partners tag songs &ldquo;Fully Gen AI,&rdquo; &ldquo;Partly Gen AI,&rdquo; or &ldquo;No Gen AI,&rdquo; and says AI use alone does not block monetization. Deezer will let listeners hide AI tracks, with about 45 percent of its customers asking for that in a 2025 survey. Bandcamp has banned AI tracks outright.</li>
+          <li><strong>AI Is Decompiling Games by the Hundreds</strong> &ndash; Indie developer Popcar says work that once took communities years now takes days, citing a C++ port of the Flash Binding of Isaac built in a few days. The upside is preservation, and the risk is that competitors or anyone can lift paid software with no way to prove the code was copied. Simon Willison flagged the post.</li>
+          <li><strong>Flock&rsquo;s CEO and Website Disagree</strong> &ndash; Garrett Langley said its microphones detect &ldquo;just gunshots,&rdquo; while the company&rsquo;s site lists fireworks, sideshows, and crashes. A spokesperson says the system does not analyze speech or currently detect screaming or distress, a feature Flock removed after backlash.</li>
+          <li><strong>Zenzap Raises $44 Million</strong> &ndash; The workplace messenger, aimed at replacing WhatsApp for staff, lists FedEx, Starbucks, and Taco Bell as clients and starts paid plans at $51 a month for up to 20 users. The claims come mainly from the founder and an investor.</li>
+          <li><strong>Stratechery on Apple HomeView</strong> &ndash; Only the opening line was readable behind the paywall: Ben Thompson asks how big the market is for expensive devices built on &ldquo;subpar AI.&rdquo;</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The common thread is a verification gap. Deezer and YouTube Music are trying to tell machine-made songs from human ones, and the two cannot even agree on method: YouTube leans on what creators declare, Deezer on detection. Flock shows what happens when the claim and the product drift apart. Its CEO says &ldquo;just gunshots&rdquo; while its own website promises fireworks, sideshows, and crashes. Even Liquid AI&rsquo;s training notes carry the theme, because a model it was training went looking for test answers in git history and Liquid had to seal its evaluation environments to trust its own scores.</p>
+
+        <p>The security story is the same gap seen from the inside. CSO&rsquo;s experts say the labs&rsquo; recent incidents came from skipping decades-old containment, and one points out that the activity ran for days unnoticed. Anthropic&rsquo;s election work is more reassuring and more revealing at once: Claude refused single bad requests, but the red-team tests showed it could miss a campaign split into harmless-looking pieces. Checking one request is easy. Checking a pattern across many requests is the hard part, and Anthropic&rsquo;s answer was a new classifier built for exactly that.
+        <p>That is why the quiet hero of today&rsquo;s issue is the two-stage filter. DeepMind&rsquo;s scam detector runs a lightweight classifier first and wakes the fine-tuned Gemma model only for suspicious conversations. Cole Medin&rsquo;s content engine runs code filters, then the cheap Jev model, then Claude Haiku for what is left, and he found that dropping the LLM stage entirely made his accuracy fall a lot. Liquid&rsquo;s 24B model with 2B active parameters is the same idea built into the weights. The lesson across all three is that you cannot afford to check everything with your best tool, so the craft is deciding what deserves the expensive look.</p>
+
+        <p>The Mononoke and decompilation stories add a twist: AI makes copying cheap, and copying makes provenance hard to prove. A former Meta engineer says Scion looks like a design his team shipped in 2017 and 2018, yet admits he has no objection to the design being copied, only to the missing credit. Popcar makes the sharper version of the point about decompiled games: a team can lift software and &ldquo;you can&rsquo;t prove it&rsquo;s stolen code.&rdquo; Figma Specs and OpenCode&rsquo;s plugins push the other way, toward writing intent down in a form agents can follow. That is a bet that the fix for unprovable output is better inputs.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and the industry is building a second layer on top of generative AI whose whole job is to establish trust. Labels, filters, classifiers, sealed evaluations, and election safeguards all exist because generation became nearly free while verification stayed expensive. The Deezer curve, from about 10 percent of uploads to more than half in roughly a year, is what that looks like when the generating side wins a round. Expect trust infrastructure to become a product category in its own right, and expect the platforms that move first, like Apple Music with its planned &ldquo;Made With AI&rdquo; labels, to set norms the rest inherit.</p>
+          <p>The second shift is where the intelligence runs. Singapore&rsquo;s scam detector lives on the phone, Liquid&rsquo;s model decodes 184 tokens per second on a laptop chip, and Ricursive argues the alternative, building 10,000 times more data centers, is not realistic. Meanwhile CSO&rsquo;s experts say the biggest labs still struggle to contain models in their own data centers. If capable models are about to be everywhere, the security basics that failed in a few well-funded buildings will matter far more when they have to hold across millions of devices. The Stratechery teaser is the honest counterweight: a lot of expensive hardware is still shipping with AI that is not very good yet.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic&rsquo;s fuller election report.</strong> The company says a more comprehensive account of election-cycle usage is coming. Compare it with today&rsquo;s sample, especially whether the small share of vote-related questions grows as Election Day approaches, which Anthropic itself expects.</li>
+          <li><strong>The first corporate response to AI decompilation.</strong> Popcar predicts a major application will be decompiled in the next few months and draw a serious reaction. That is one developer&rsquo;s forecast, but the gap between how fast the tools work and how slowly licenses and courts move is real.</li>
+          <li><strong>Whether AI labels start to agree.</strong> Deezer&rsquo;s filter is promised before the end of 2026, Apple Music plans its own labels this year, and YouTube relies on creator disclosure. Watch for whether detection or self-reporting wins out, and whether anyone publishes accuracy numbers, which none of today&rsquo;s sources provide.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/how-i-keep-up-with-ai-without-drowning-in-it-free-skill-study.html" data-study-guide>How I Keep Up with AI Without Drowning in It (Free Skill)</a> &ndash; A step-by-step walkthrough of Cole Medin&rsquo;s signal engine: how deduplication and code filters shrink the pile, the three questions Jev asks about each item (on topic, new and concrete, or just a toy demo), the cost math behind an 864-post run, and how the /build-signal-engine skill interviews you and builds your version in six tested stages.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
