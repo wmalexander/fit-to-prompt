@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-16",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["acronym", "crossword", "scramble", "wordsearch"]
+        lastUpdated: "2026-10-17",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["acronym", "crossword", "scramble", "wordsearch", "cryptogram"]
     },
     issues: [
+        {
+            date: "2026-10-17",
+            volume: 1,
+            issueNumber: 116,
+            title: "Claude Designs Quantum Circuits That Beat the Best Published Designs, Sometimes by an Order of Magnitude",
+            description: "Daily AI news roundup - October 17, 2026. Claude designs quantum circuits that beat published records, Claude traces the origin of the NIST curve seeds, Anthropic maps the AI expectations gap, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-17.html",
+            storyCount: 19,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-10-16",
             volume: 1,

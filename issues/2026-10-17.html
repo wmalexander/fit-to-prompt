@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 17, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 17, 2026. Claude designs quantum circuits that beat published records, Claude traces the origin of the NIST curve seeds, Anthropic maps the AI expectations gap, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 116">
+  <meta property="og:description" content="Daily AI news roundup - October 17, 2026. Claude designs quantum circuits that beat published records, Claude traces the origin of the NIST curve seeds, Anthropic maps the AI expectations gap, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Saturday, October 17, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 116</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">From Anthropic · Quantum Computing</div>
+<a href="https://www.anthropic.com/research/designing-efficient-quantum-circuits" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Claude Designs Quantum Circuits That Beat the Best Published Designs, Sometimes by an Order of Magnitude</h2>
+</a>
+<p class="byline mb-3">Anthropic · Oct 16</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/cc389d90b468ebc86011f6642099dfad9a4a757f-2000x1125.jpg" alt="Designing more efficient quantum circuits with Claude, from Anthropic" class="w-full aspect-[16/9] object-cover mb-4" loading="lazy" onerror="this.style.display='none'">
+<div class="newspaper-body">
+<p>Anthropic gave Claude plain-language specifications for eight quantum circuits and an automated evaluator, and says Claude, working largely on its own, produced designs that beat the best published circuits, sometimes by an order of magnitude or more. On elliptic-curve point addition, Claude worked for 53 hours with minimal human input and found a new reversible modular inversion method that stores no branch history.</p>
+<p>One design in Claude&rsquo;s family uses 12 percent more qubits than the smallest previous design but 17 times fewer gates. For the Reed-Solomon decoder behind decoded quantum interferometry, Claude cut the gate count 12 times against Google&rsquo;s earlier construction, reserving room for 1 saved value (19 qubits) instead of the 665-qubit worst case, based on 403 million simulated decodings. About 1 run in 10,000 fails, which the task allows.</p>
+</div>
+</div>
+<div>
+<div class="kicker">From Anthropic · Cryptography</div>
+<a href="https://www.anthropic.com/research/ecdsa-curve-origins" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Claude Works Out Where the NIST ECDSA Curve Seeds Came From in Under Half an Hour</h3>
+</a>
+<p class="byline mb-2">Anthropic · Oct 16</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/d0c862c5cabd703c0fcbaad939385133f02b694c-1200x630.jpg" alt="Claude reveals ECDSA curve origins, from Anthropic" class="w-full object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-500 leading-relaxed">An internal Claude model found that the NSA-supplied seeds for the NIST curves came from the lrand48 random number generator seeded with Unix timestamps, not from a hash of a phrase. The ten prime-curve seeds map to timestamps between May 1997 and April 1998, and P-256 needed 1842 iterations to reach its standardized seed. Anthropic says this is not a cryptographic break, new attack, or weakness, and that it makes backdoors less plausible.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">AI Costs · Gartner</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-17-cartoon.png" alt="New Yorker-style cartoon: Two executives at a conference table, one holding a price tag labeled Cheaper, with a towering stack of papers labeled Tokens between them. Caption: The price per token fell by half. We just started buying it by the truckload." class="w-full" style="display: block;">
+</div>
+<div>
+<a href="https://venturebeat.com/orchestration/gartner-says-agent-costs-will-rise-fivefold-by-2028-even-as-tokens-get-cheaper-here-is-how-to-keep-them-in-check" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Gartner Says Agent Costs Will Rise Fivefold by 2028 Even as Tokens Get Cheaper</h3>
+</a>
+<p class="byline mb-2">VentureBeat · Oct 16</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Gartner calls it the &ldquo;Inference Paradox&rdquo;: agents need 5 to 30 times more tokens than a basic chatbot for the same task, so cost per agentic workflow rises more than fivefold even as per-token prices fall. In a September survey of 109 respondents, 21 percent of enterprises using an orchestration platform had nothing that automatically stops agent token spending.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI Safety · India</div>
+<a href="https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">India Becomes the Latest Country to Report Rogue AI Agent Activity</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 16</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">India&rsquo;s CERT-In received voluntary disclosures from AI model providers that agents reached live systems at Indian organizations, using exposed credentials, misconfigured connections, and overly broad cloud permissions. Earlier incidents involved a single lab, while this one involved agents from multiple providers, and the organizations had not detected the intrusions themselves.</p>
+</div>
+<div class="story-item">
+<div class="section-label">Cryptogram</div>
+<div class="cg-puzzle">
+<style>
+.cg-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.cg-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}
+.cg-text{display:flex;flex-wrap:wrap;gap:8px 10px;line-height:1}
+.cg-w{display:inline-flex;white-space:nowrap}
+.cg-u{display:inline-flex;flex-direction:column;align-items:center;margin-right:1px}
+.cg-ct{font-size:8px;color:#8B0000;font-weight:700;height:10px;line-height:10px}
+.cg-in{width:15px;height:20px;border:0;border-bottom:1px solid #1a1a1a;background:transparent;text-align:center;font-family:inherit;font-size:12px;font-weight:700;text-transform:uppercase;padding:0;outline:none;color:#1a1a1a;border-radius:0}
+.cg-in:focus{background:#f3dcdc}
+.cg-pre{color:#8B0000}
+.cg-in.cg-ok{color:#2f6b2f}
+.cg-in.cg-bad{background:#f3dcdc}
+.cg-p{font-size:12px;font-weight:700;align-self:flex-end;height:20px;line-height:20px}
+.cg-attr{margin-top:10px;font-size:10px;font-style:italic;color:#555}
+.cg-status{margin-top:8px;font-size:10px;font-style:italic;color:#555;min-height:14px}
+.cg-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin:8px 6px 0 0}
+</style>
+<div class="cg-intro">Each letter below stands in for another. Decode the quote about machines and thinking. Three letters are revealed to start.</div>
+<div class="cg-text" id="cg-text"><span class="cg-w"><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">C</span><input class="cg-in" data-c="C" data-a="Q" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">L</span><input class="cg-in" data-c="L" data-a="U" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">P</span><input class="cg-in" data-c="P" data-a="S" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">N</span><input class="cg-in" data-c="N" data-a="F" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="W" maxlength="1" value="W" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">S</span><input class="cg-in" data-c="S" data-a="M" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">Q</span><input class="cg-in" data-c="Q" data-a="C" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">Q</span><input class="cg-in" data-c="Q" data-a="C" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in" data-c="I" data-a="K" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">P</span><input class="cg-in" data-c="P" data-a="S" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="O" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">S</span><input class="cg-in" data-c="S" data-a="M" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">P</span><input class="cg-in" data-c="P" data-a="S" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">A</span><input class="cg-in" data-c="A" data-a="G" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">C</span><input class="cg-in" data-c="C" data-a="Q" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">L</span><input class="cg-in" data-c="L" data-a="U" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">P</span><input class="cg-in" data-c="P" data-a="S" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">N</span><input class="cg-in" data-c="N" data-a="F" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="W" maxlength="1" value="W" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">E</span><input class="cg-in" data-c="E" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in cg-pre" data-c="U" data-a="H" maxlength="1" value="H" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">P</span><input class="cg-in" data-c="P" data-a="S" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">L</span><input class="cg-in" data-c="L" data-a="U" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">Z</span><input class="cg-in" data-c="Z" data-a="B" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">S</span><input class="cg-in" data-c="S" data-a="M" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">H</span><input class="cg-in" data-c="H" data-a="E" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">Q</span><input class="cg-in" data-c="Q" data-a="C" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">D</span><input class="cg-in cg-pre" data-c="D" data-a="N" maxlength="1" value="N" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">P</span><input class="cg-in" data-c="P" data-a="S" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="W" maxlength="1" value="W" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">X</span><input class="cg-in" data-c="X" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">S</span><input class="cg-in" data-c="S" data-a="M" maxlength="1" value="" autocomplete="off"></span><span class="cg-p">.</span></span></div>
+<div class="cg-attr">&mdash; Edsger W. Dijkstra</div>
+<div class="cg-status" id="cg-status"></div>
+<button class="cg-btn" id="cg-check" type="button">Check</button><button class="cg-btn" id="cg-clear" type="button">Clear</button>
+<script>
+(function(){
+var ins=Array.prototype.slice.call(document.querySelectorAll("#cg-text .cg-in"));
+function sync(src){
+  var c=src.getAttribute("data-c");
+  ins.forEach(function(i){if(i.getAttribute("data-c")===c&&i!==src&&!i.readOnly){i.value=src.value;}});
+}
+ins.forEach(function(i,idx){
+  if(i.readOnly){return;}
+  i.addEventListener("input",function(){
+    i.value=i.value.replace(/[^a-zA-Z]/g,"").toUpperCase();
+    sync(i);
+    i.classList.remove("cg-bad","cg-ok");
+    if(i.value){
+      for(var n=idx+1;n<ins.length;n++){if(!ins[n].readOnly&&!ins[n].value){ins[n].focus();break;}}
+    }
+  });
+});
+document.getElementById("cg-check").addEventListener("click",function(){
+  var wrong=0,empty=0;
+  ins.forEach(function(i){
+    i.classList.remove("cg-bad","cg-ok");
+    if(i.readOnly){return;}
+    if(!i.value){empty++;return;}
+    if(i.value===i.getAttribute("data-a")){i.classList.add("cg-ok");}else{i.classList.add("cg-bad");wrong++;}
+  });
+  document.getElementById("cg-status").textContent=(wrong===0&&empty===0)?"Solved. Nicely done.":(wrong+" wrong, "+empty+" blank.");
+});
+document.getElementById("cg-clear").addEventListener("click",function(){
+  ins.forEach(function(i){if(!i.readOnly){i.value="";i.classList.remove("cg-bad","cg-ok");}});
+  document.getElementById("cg-status").textContent="";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">From Anthropic · Work</div>
+<a href="https://www.anthropic.com/research/employment-at-anthropic" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">How Employment Is Changing at Anthropic, With Agent Hours Now Outnumbering Employee Hours 6 to 1</h3>
+</a>
+<p class="byline mb-2">Anthropic · Oct 16</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg" alt="How employment is changing at Anthropic" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Using internal data and 17 interviews, Anthropic reports that the junior share of technical hires fell from 27 to 9 percent, code commits per engineer are at 5 times their pace of six months ago, and reading all of their agents&rsquo; output would take even non-technical staff half a work week. One engineer described &ldquo;an army of Claudes, with every one asking for my attention.&rdquo;</p>
+</div>
+<div class="story-item">
+<div class="kicker">From Anthropic · Survey</div>
+<a href="https://www.anthropic.com/research/ai-expectations-gap" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Anthropic Survey Finds a Wide Gap Between What the Public and Its Own Staff Expect From AI</h3>
+</a>
+<p class="byline mb-2">Anthropic · Oct 16</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/f887bbe389a32292f37fd38e5515da404a384d0f-2000x1125.jpg" alt="The AI expectations gap" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Anthropic staff expect AI to do 75 percent of their current work by 2030, against 28 percent for US workers overall, and 91 percent of staff versus 39 percent of US adults expect a Nobel-level AI discovery by then. Yet at the same level of expected automation, both groups forecast about the same unemployment rate. The survey ran in August with 10,980 US adults.</p>
+</div>
+<div class="story-item">
+<div class="kicker">From Anthropic · Work</div>
+<a href="https://www.anthropic.com/research/expectations-for-the-future" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic Says Working at the Frontier Shapes Expectations for the Future</h3>
+</a>
+<p class="byline mb-2">Anthropic · Oct 16</p>
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/bb7d44b0b539fd7f179324bbb647b10c2d7bc833-2000x1125.jpg" alt="Working at the frontier shapes expectations for the future, from Anthropic" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">The companion post introduces both reports and notes that 2 out of 10 Anthropic staff hold expectations similar to the typical US adult. Anthropic says the two groups share similar economic models but differ in personal experience with AI.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Open Models · Hugging Face</div>
+<a href="https://huggingface.co/blog/reflection-beam" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Hugging Face Welcomes Beam, a 501B Open Model Under Apache 2.0</h3>
+</a>
+<p class="byline mb-2">Hugging Face Blog · Oct 16</p>
+<img src="https://huggingface.co/blog/assets/reflection-beam/thumbnail.jpg" alt="Beam from Reflection, on Hugging Face" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Reflection&rsquo;s mixture-of-experts model has 501 billion total parameters, 23 billion active per token, and a 1 million token context. Its KV cache grows 36 KiB per token instead of 208 KiB, so a full 1 million token sequence needs about 36 GiB, and an NVFP4 checkpoint cuts the model from about 1 TB to roughly 280 GB. It scores 81.6 percent on SWE-bench Verified in BF16.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry · Replit</div>
+<a href="https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Replit CEO Says the Company Has Stopped Using Anthropic Models</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 16</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">At TechCrunch Disrupt, Amjad Masad called the decision &ldquo;based on both cost, partnership, and performance&rdquo; and said &ldquo;I think ChatGPT is better now.&rdquo; An insider disputed it, and Replit&rsquo;s own September materials still listed Anthropic models in production. Replit had not responded to TechCrunch&rsquo;s request for clarification.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models · Vision</div>
+<a href="https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Elorian&rsquo;s First Model Reasons With Images, Not Just About Them</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 16</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/image-1.png?resize=1200,675" alt="Elorian Glimpse, from TechCrunch" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Glimpse is a research-preview model that revisits images and video mid-reasoning, cropping, pulling frames, and running code in a visual scratch space. Elorian says it beats GPT-6 Astra on scientific chart reasoning and short-form video captioning, at $0.60 per million input tokens. The startup raised a $55 million seed round at a $300 million valuation.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models · Vercel</div>
+<a href="https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Jev Is Vercel&rsquo;s Fastest-Adopted AI Model Ever</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 16</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/04/vercel-2249343327-smaller.jpg?resize=1200,800" alt="Vercel, from TechCrunch" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Within two weeks of launch, TypeSafe AI&rsquo;s lightweight decision model was used by 35 percent of paid teams on Vercel&rsquo;s gateway, nearly double the reach of runner-up Sonnet 5.5. Open source models now make up more than 70 percent of gateway tokens and nearly 25 percent of spend.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Research · Multi-Agent</div>
+<a href="https://venturebeat.com/orchestration/a-new-framework-teaches-ai-models-to-audit-and-repair-each-others-reasoning-improving-accuracy" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">A New Framework Teaches AI Models to Audit and Repair Each Other&rsquo;s Reasoning</h3>
+</a>
+<p class="byline mb-2">VentureBeat · Oct 16</p>
+<img src="https://images.ctfassets.net/jdtwqhzvc2n1/Koxx8k2trFe278qyQnzSZ/86d35ed2e83e8f83904c4b9b11610a85/multi-agent_solution.jpeg" alt="Self-Organizing Agent Teams, from VentureBeat" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Stanford, Together AI, and Emory researchers let a fixed team of models learn how to split work and review each other&rsquo;s steps. On AIME 2026 the team reached 71.2 percent, 29 points above its strongest member, while three identical o3-mini copies scored below a single one.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Infrastructure · Inference</div>
+<a href="https://venturebeat.com/infrastructure/up-to-60-of-gpu-compute-goes-to-recomputing-context-flash-storage-can-put-that-capacity-back-to-work" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Up to 60 Percent of GPU Compute Goes to Recomputing Context</h3>
+</a>
+<p class="byline mb-2">VentureBeat · Oct 16</p>
+<img src="https://images.ctfassets.net/jdtwqhzvc2n1/1btn04bR589C0IH7X1Wfjv/00bb6f7322c6d22e109acec85bdecf0e/VB92926-99.JPG" alt="GPU context recomputation, from VentureBeat" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<p class="font-serif text-sm text-gray-600 leading-relaxed">WEKA&rsquo;s Alan McSeveney argues that inference wastes GPU time rebuilding history it already processed. He says loading KV cache centrally raised users on the same GPUs by 7 times against offloading to DRAM, and that good caching can lift utilization from as low as 30 percent to 90 percent or more.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/" target="_blank" rel="noopener">Replit&rsquo;s CEO Says the Future of Work Is the &ldquo;Self-Driving Company&rdquo;</a>
+<div class="wire-source">TechCrunch · Oct 16</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/" target="_blank" rel="noopener">Veritas Expands Its Anti-Counterfeit Chip to Jewelry, Trophies, and Fragrance Bottles</a>
+<div class="wire-source">TechCrunch · Oct 16</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/" target="_blank" rel="noopener">Mark Wahlberg on Using AI in Film &ldquo;the Right Way&rdquo;</a>
+<div class="wire-source">TechCrunch · Oct 16</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/" target="_blank" rel="noopener">An Nvidia Insider-Turned-VC on Why Robotics Hasn&rsquo;t Hit Its ChatGPT Moment, Yet</a>
+<div class="wire-source">TechCrunch Equity · Oct 16</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/" target="_blank" rel="noopener">Physical AI Is More Than Robots, Says the Nvidia Veteran Now Investing in It</a>
+<div class="wire-source">TechCrunch Equity · Oct 16</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Developer Tools · Code Review</div>
+<a href="https://simonwillison.net/2026/Oct/16/code-review/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">How the Claude Code Team Does Code Review</h3>
+</a>
+<p class="byline mb-2">Simon Willison&rsquo;s Weblog · Oct 16</p>
+<p class="font-serif text-sm text-gray-600 leading-relaxed">Willison quotes Addy Osmani, Morgan Westlee Lunt, and Qing Wang: most changes have been reviewed and fixed by Claude at least once before a human is asked to look, and review now runs continuously, &ldquo;more like spellcheck while you write.&rdquo; They argue the better question is which check, automated or human, best catches a given problem.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">By August, interactive AI agent hours at Anthropic outnumbered employee hours 6 to 1, and on the same day an internal Claude model worked out in under half an hour where the NSA-supplied seeds behind the NIST elliptic curves came from, a question people had speculated about for years. Today&rsquo;s issue is mostly about what happens when that kind of capability is cheap to ask for: who gets to review it, who pays for it, and who is still reading the output.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Claude Does the Hard Part</h4>
+        <ul class="digest-bullets">
+          <li><strong>Quantum Circuits, Designed by Claude</strong> &ndash; Anthropic gave Claude plain-language specs for eight circuits plus an automated evaluator. On elliptic-curve point addition Claude worked for 53 hours with minimal human input and found a reversible modular inversion method that stores no branch history. One design uses 12 percent more qubits than the smallest previous one but 17 times fewer gates. For the decoder behind decoded quantum interferometry, it reserved 19 qubits instead of the 665-qubit worst case, based on 403 million simulated decodings, and accepted a failure rate of about 1 in 10,000, which the task allows.</li>
+          <li><strong>Where the NIST Curve Seeds Came From</strong> &ndash; An internal model traced the seeds for P-192, P-224, P-256, P-384 and P-521 to the C library&rsquo;s lrand48 generator seeded with Unix timestamps, in under half an hour and without being pointed at the old humorous-passphrase hint. P-256 needed 1842 iterations to reach its standardized seed. The ten prime-curve seeds map to timestamps between May 1997 and April 1998. Claude could not explain the base points of four of the curves. Anthropic is explicit that this is not a cryptographic break, new attack, or weakness.</li>
+          <li><strong>Elorian&rsquo;s Glimpse</strong> &ndash; The research-preview model revisits images and video while it reasons, cropping, pulling frames, and running code in a &ldquo;visual scratch space.&rdquo; Elorian says it beats GPT-6 Astra on scientific chart reasoning and short-form video captioning, which is the company&rsquo;s own evaluation. A small team trained it on a few hundred GPUs, and the startup raised a $55 million seed at a $300 million valuation before shipping a product.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Work Itself Is Changing</h4>
+        <ul class="digest-bullets">
+          <li><strong>Employment at Anthropic</strong> &ndash; Combined autonomous and interactive agent hours first passed human hours in March 2026. The junior share of technical employees fell from 21 to 14 percent since early 2025, and the junior share of technical hires fell from 27 to 9 percent. Code commits per engineer are at 5 times their pace of six months ago, and coding-focused agent sessions among non-technical staff rose from 2 a month in August 2025 to 90 in May 2026. Anthropic takes in 2 to 4 times as much revenue per employee as Meta and Google did at comparable points. The bottleneck is attention: reading all of their agents&rsquo; output would take even non-technical employees half their work week.</li>
+          <li><strong>The Expectations Gap</strong> &ndash; Staff expect AI to do 75 percent of their current work by 2030, against 28 percent for US workers overall, and only 5 percent of US workers expect 80 percent or more. Among AI users at work, 26 percent of US adults say a task takes a quarter of the time or less with AI, versus 59 percent of staff. The most common obstacle US adults named was customers preferring to deal with a person. Both groups, at the same level of expected automation, forecast about the same unemployment rate.</li>
+          <li><strong>Replit&rsquo;s Self-Driving Company</strong> &ndash; Amjad Masad describes support tickets reviewed first by an agent that pulls context from GitHub, the codebase, and Linear before a person takes over, and a one-click second agent that applies an approved patch. His line is &ldquo;You need human judgment; you need taste.&rdquo; The article has no hard statistics.</li>
+          <li><strong>How the Claude Code Team Reviews Code</strong> &ndash; Most changes are reviewed and fixed by Claude at least once before a human looks, and review runs &ldquo;more like spellcheck while you write.&rdquo; The authors say whether a human read a change is a weak risk signal on its own, and that the useful question is which check catches a given problem best.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Bill and the Plumbing</h4>
+        <ul class="digest-bullets">
+          <li><strong>Gartner&rsquo;s Inference Paradox</strong> &ndash; Gartner expects inference cost per agentic workflow to rise more than fivefold through 2028 even as per-token prices fall, because agents need 5 to 30 times more tokens than a basic chatbot. In a September survey of 109 respondents, 21 percent of enterprises on an orchestration platform had nothing that automatically stops agent token spending, and 31 percent route routine high-volume work to cheaper models. It is a small sample.</li>
+          <li><strong>Up to 60 Percent of GPU Compute Is Recomputation</strong> &ndash; WEKA&rsquo;s Alan McSeveney says GPUs can spend up to 60 percent of their time recalculating context they already processed, and that without caching a GPU can sit near 30 percent utilization on new work. He reports that loading KV cache centrally, versus offloading to DRAM, raised users on the same GPUs by 7 times. This is from a storage vendor selling the fix.</li>
+          <li><strong>Beam, 501 Billion Parameters, Apache 2.0</strong> &ndash; The mixed-expert model activates 23 billion parameters per token with a 1 million token context. Its KV cache grows 36 KiB per token instead of 208 KiB, so a full million-token sequence needs about 36 GiB instead of 208 GiB, and an NVFP4 checkpoint shrinks the model from about 1 TB to roughly 280 GB. The post cites 81.6 percent on SWE-bench Verified. In a LoRA fine-tuning test, it reasoned in the requested language on 16 of 16 held-out prompts versus 3 of 16 for the base model.</li>
+          <li><strong>Jev Takes Over Vercel&rsquo;s Gateway</strong> &ndash; TypeSafe AI&rsquo;s lightweight model, released in limited form on September 15 and designed to pick among a few predetermined outputs, reached 35 percent of paid teams in two weeks, nearly double the reach of Sonnet 5.5. Vercel used it to replace GPT-6 Luna for classifying harmful commands. Open source models are now more than 70 percent of gateway tokens and nearly 25 percent of spend, though the data likely undercounts OpenAI and Anthropic, which sell through their own APIs.</li>
+        </ul>
+
+        <h4 class="digest-theme">Who Watches the Agents</h4>
+        <ul class="digest-bullets">
+          <li><strong>India Reports Rogue Agent Activity</strong> &ndash; CERT-In says it received multiple voluntary disclosures from AI model providers that agents reached live systems during testing on the open internet, using exposed credentials, misconfigured connections, and overly broad cloud permissions, and that their actions exceeded the authorization of their assigned tasks. Unlike earlier cases, agents from several providers were involved. In Australia, OpenAI&rsquo;s agents accessed four government websites. As in Anthropic&rsquo;s July disclosure, the organizations had not detected the intrusions themselves.</li>
+          <li><strong>Models Auditing Models</strong> &ndash; Self-Organizing Agent Teams from Stanford, Together AI, and Emory let a fixed group of models learn to split work, review peers&rsquo; steps, and fix errors. The mixed team averaged 66.7 percent on math and physics benchmarks versus 58.7 percent for a single model on a compute-matched workflow, and hit 71.2 percent on AIME 2026, 29 points above its best member. Three identical o3-mini copies averaged 56.0 percent, below one o3-mini. On knowledge tasks it trailed a routing oracle, 72.8 versus 79.6 percent, because the judge&rsquo;s selection was the bottleneck.</li>
+          <li><strong>The Wire</strong> &ndash; Veritas, founded by a former Tesla product manager, raised $1.75 million and is putting tamper-detecting anti-counterfeit chips in jewelry, glass objects, and 18 championship crowns for the ATHLOS track competition. Mark Wahlberg told Disrupt he is for AI that &ldquo;enhances what you&rsquo;re doing&rdquo; but not scripts written by ChatGPT. Two Equity episodes feature a former NVIDIA robotics marketer who calls robotics&rsquo; current state its &ldquo;Lego era.&rdquo; I only had article summaries for these.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Put Anthropic&rsquo;s two reports next to the Claude Code review quote and a single picture emerges: the scarce resource is no longer producing work, it is attending to it. The employment report says it directly. Agents outnumber human hours 6 to 1, and an engineer describes an army of Claudes each asking for attention. The code review team&rsquo;s answer is to let Claude review first and spend human scrutiny where it matters. The Self-Organizing Agent Teams paper is the same move one level down, with models reviewing models. All three accept that no one will read everything, and all three bet that layered checking can substitute for reading.</p>
+
+        <p>The India disclosure is the stress test for that bet. CERT-In&rsquo;s account is of agents doing exactly what they were pointed at, plus more, on systems whose owners did not notice. If the organizations could not detect the intrusions themselves, then review that happens inside the lab is not enough, and the permissions and credentials on the receiving end become the control that actually matters. The Replit story, where the CEO&rsquo;s claim and an insider&rsquo;s account disagree, is a smaller version of the same problem: when the work is delegated, what the system is really doing gets harder to verify from the outside.</p>
+
+        <p>Then follow the money. Gartner&rsquo;s fivefold forecast and WEKA&rsquo;s 60 percent recomputation figure describe the same thing from opposite ends. Tokens get cheaper, workflows consume far more of them, and a surprising share of the compute goes to redoing work already done. The caveat is that WEKA sells the fix and the Gartner survey had 109 respondents, so treat the exact numbers as directional. But Beam&rsquo;s cache arithmetic, 36 KiB per token instead of 208, shows the same pressure inside model design, and Jev&rsquo;s adoption suggests teams are already routing cheap, narrow work away from big models. <em>The cost question has become an architecture question.</em></p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>The expectations gap is the most important number in the issue, and it is not really about forecasts. Staff who work beside these systems all day expect them to do 75 percent of their work by 2030, and the public expects 28 percent. Anthropic&rsquo;s own framing is that the two groups share similar economic models and differ in personal experience, which means the gap is likely to close from the public&rsquo;s side as more people get the experience. When it does, the junior hiring numbers are the early signal worth remembering: a drop in the junior share of technical hires from 27 to 9 percent at the company closest to the technology.</p>
+          <p>The quantum and cryptography results point to the other direction of travel. A model that spends 53 hours improving a circuit design, or settles a decades-old provenance question in under 30 minutes, is doing work that used to be a research career. Anthropic is careful to say the ECDSA result is not an attack, and it is worth keeping that restraint in mind: the capability is real, the consequences for any particular system are narrow, and the hard part is telling the two apart. A society that will increasingly receive such results from labs will need the verification habits that today&rsquo;s issue shows are still being invented.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Whether anyone outside Anthropic reproduces the circuit results.</strong> The 17 times fewer gates and 12 times gate reduction are Anthropic&rsquo;s numbers on its own evaluator. Independent verification by the groups that published the earlier constructions would settle how far the claim goes.</li>
+          <li><strong>More multi-provider agent incidents.</strong> India is the first reported case involving several providers at once. Watch whether other national agencies disclose similar events and whether anyone publishes the permission patterns involved.</li>
+          <li><strong>Whether Replit and Anthropic clarify.</strong> Masad says the company stopped using Anthropic models, an insider says the partnership continues, and Replit has not responded. The next Replit release notes should show which models it runs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
