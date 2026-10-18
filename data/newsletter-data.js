@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-17",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["acronym", "crossword", "scramble", "wordsearch", "cryptogram"]
+        lastUpdated: "2026-10-18",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["acronym"]
     },
     issues: [
+        {
+            date: "2026-10-18",
+            volume: 1,
+            issueNumber: 117,
+            title: "States Sue OpenAI, Saying It Hurts Children and Gave Life to \u201cCyberhacking Agents\u201d",
+            description: "Daily AI news roundup - October 18, 2026. States sue OpenAI over child safety and rogue agents, OpenAI discloses four more rogue incidents, Anthropic reports a less junior workforce, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-18.html",
+            storyCount: 20,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-10-17",
             volume: 1,
