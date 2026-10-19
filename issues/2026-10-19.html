@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 19, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 19, 2026. Anthropic puts 5 percent of its stock into a public benefit fund, a new paper on hybrid reasoning agents, the trust looming over Anthropic&rsquo;s IPO, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 118">
+  <meta property="og:description" content="Daily AI news roundup - October 19, 2026. Anthropic puts 5 percent of its stock into a public benefit fund, a new paper on hybrid reasoning agents, the trust looming over Anthropic&rsquo;s IPO, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  .cw-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}.cw-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}.cw-grid{display:grid;grid-template-columns:repeat(5,38px);gap:2px;justify-content:center;margin-bottom:10px}.cw-cell{position:relative;width:38px;height:38px}.cw-cell input{width:38px;height:38px;box-sizing:border-box;text-align:center;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:700;font-size:16px;padding:0;border:1px solid #1a1a1a;background:#fff;border-radius:0;outline:none}.cw-cell input:focus{background:#f2ede2}.cw-cell.cw-ok input{background:#e3f0e3}.cw-cell.cw-bad input{background:#f5dede}.cw-blk{width:38px;height:38px;background:#1a1a1a}.cw-num{position:absolute;top:1px;left:3px;font-size:8px;line-height:1;color:#666;pointer-events:none}.cw-clues{font-size:11px;line-height:1.4;margin-bottom:8px}.cw-clues b{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8B0000}.cw-clues div{margin:2px 0}.cw-btn{background:#8B0000;color:#fff;border:none;padding:4px 12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}.cw-status{font-size:10px;font-style:italic;color:#555;min-height:14px;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Monday, October 19, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 118</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Industry &middot; Anthropic</div>
+<a href="https://fortune.com/2026/10/18/anthropic-5-percent-stock-public-benefit-fund-large-donations-traditional-nonprofits-specific-populations/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Anthropic Commits 5% of Its Stock to a New &ldquo;Public Benefit&rdquo; Fund</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Oct 18</p>
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/AP26283549290505_7364db-e1792367563606.jpg?resize=1200,600" alt="Anthropic, from Fortune" class="w-full aspect-[16/9] object-cover mb-4" loading="lazy" onerror="this.style.display='none'">
+<div class="newspaper-body">
+<p>Anthropic is putting 5% of its shares into a new entity within the company called the Anthropic Public Benefit Fund, a stake that could grow in value as the company&rsquo;s shares rise.</p>
+<p>Fortune reports the fund may be used for large donations to traditional nonprofits or for direct distributions to specific groups of people.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Research &middot; Agents</div>
+<a href="https://arxiv.org/abs/2610.18861" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Hybrid Reasoning Agents Switch Between Latent Thinking and Text Within a Single Generation</h3>
+</a>
+<p class="byline mb-2">arXiv &middot; Oct 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The paper proposes HybridAgents, which pair a lightweight module called HybridLink with a continuous working memory so an agent can reason without words and still act through text. The authors report a 10.4% average gain over frontier LLM agents across 11 benchmarks, with 35.5% to 54.7% fewer tokens and 1.8x to 2.6x faster inference.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">AI Industry &middot; Anthropic IPO</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-19-cartoon.png" alt="New Yorker-style cartoon: A smiling executive holds up a pie chart with one small slice labeled 5 percent while a small robot beside him holds almost the whole pie. Caption: We gave five percent to humanity." class="w-full" style="display: block;">
+</div>
+<div>
+<a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1ISFpZMnFpbzQ3NWZQZmF0ZDUyNk1wSFg2WUFZT0hiSXh6THFObUw3dUFCbzk5UVY0NjNfdXQxQWhybEQxLXNZNlB4cllkOXFMa05CZ3dmekU1dTZkSGdMczZqeXFneFFCcUxmc3d4UDczdw?oc=5" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">What to Know About the Obscure Trust Looming Over Anthropic&rsquo;s IPO</h3>
+</a>
+<p class="byline mb-2">WSJ &middot; Oct 19</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">On the Forums</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x9mwmz/dont_sleep_on_nemotron_35_super_vl/" target="_blank" rel="noopener">Don't sleep on Nemotron 3.5 Super VL</a>
+<div class="wire-source">r/LocalLLaMA (Reddit) &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x9mitw/calling_all_gpus_help_us_benchmark_sonicboom_v003/" target="_blank" rel="noopener">Calling all GPUs: help us benchmark SonicBoom v0.0.3 - a compiler-first AI runtime that beats llama.cpp on decode</a>
+<div class="wire-source">r/LocalLLaMA (Reddit) &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x9lkh5/nemotron_35_bolt_is_okayish_for_small_multiuser/" target="_blank" rel="noopener">Nemotron 3.5 Bolt is okayish for small multiuser setups</a>
+<div class="wire-source">r/LocalLLaMA (Reddit) &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x9iufz/qwen_38_flash_next_optimized_for_two_cmp_170hx/" target="_blank" rel="noopener">Qwen 3.8 Flash Next optimized for two CMP 170hx GPUs</a>
+<div class="wire-source">r/LocalLLaMA (Reddit) &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x9n1i6/80s_computing_era_meets_small_local_decision/" target="_blank" rel="noopener">80s computing era meets small local decision models</a>
+<div class="wire-source">r/LocalLLaMA (Reddit) &middot; Oct 19</div>
+</div>
+</div>
+<div class="story-item">
+        <div class="section-label">The AI Mini</div>
+        <div class="cw-puzzle">
+          <div class="cw-intro">A tiny crossword. Type one letter per square, then check.</div>
+          <div class="cw-grid" id="cw-grid"></div>
+          <div class="cw-clues">
+            <b>Across</b>
+            <div>1. Chunk of text a language model reads and bills by</div>
+            <div>3. Trained system such as Claude or GPT</div>
+            <div>4. Starts, as a session or a file</div>
+            <b>Down</b>
+            <div>1. Speed of a song, or of a release cycle</div>
+            <div>2. Empty values in a database</div>
+          </div>
+          <button type="button" id="cw-check" class="cw-btn">Check</button>
+          <div class="cw-status" id="cw-status">Fill in the grid.</div>
+          <script>
+          (function () {
+            var sol = ["TOKEN", "E###U", "MODEL", "P###L", "OPENS"];
+            var nums = { "0,0": 1, "0,4": 2, "2,0": 3, "4,0": 4 };
+            var grid = document.getElementById("cw-grid");
+            var status = document.getElementById("cw-status");
+            sol.forEach(function (row, r) {
+              row.split("").forEach(function (ch, c) {
+                var d = document.createElement("div");
+                if (ch === "#") { d.className = "cw-blk"; grid.appendChild(d); return; }
+                d.className = "cw-cell";
+                d.id = "cw-" + r + "-" + c;
+                var i = document.createElement("input");
+                i.type = "text";
+                i.maxLength = 1;
+                i.setAttribute("aria-label", "Row " + (r + 1) + " column " + (c + 1));
+                d.appendChild(i);
+                var k = r + "," + c;
+                if (nums[k]) { var n = document.createElement("span"); n.className = "cw-num"; n.textContent = nums[k]; d.appendChild(n); }
+                grid.appendChild(d);
+              });
+            });
+            document.getElementById("cw-check").addEventListener("click", function () {
+              var right = 0, total = 0, blank = 0;
+              sol.forEach(function (row, r) {
+                row.split("").forEach(function (ch, c) {
+                  if (ch === "#") return;
+                  total++;
+                  var d = document.getElementById("cw-" + r + "-" + c);
+                  d.classList.remove("cw-ok", "cw-bad");
+                  var v = d.querySelector("input").value.toUpperCase();
+                  if (!v) { blank++; return; }
+                  if (v === ch) { right++; d.classList.add("cw-ok"); } else { d.classList.add("cw-bad"); }
+                });
+              });
+              status.textContent = right === total ? "Solved. Nicely done." : right + " of " + total + " squares correct" + (blank ? ", " + blank + " empty." : ".");
+            });
+          })();
+          </script>
+        </div>
+      </div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOZFNoWWpmS0Y2cmh2bmhEWjRoeFNzbUhBRmFpTmR3VG0zUWF6UjJZbXRrOTY4S0xPRVpFLUxkLVVZeWI5Y3RUYmJIaHZNVC10N0hLbXAzNUtvWkhFYXVqaU1YQWJaZG0zODVVcGp0a3Jrb2JxYmgtNE04Z3M2R3ktNUN2M3RKa3NWTEJOSFY0YUtEWXdWR1B3aGUwalVkTGZEZjNIc3B1dDEtdF80T1NJS1g1Qkc?oc=5" target="_blank" rel="noopener">Malaysia September Exports Surge to Five-Year High on AI Demand</a>
+<div class="wire-source">Bloomberg &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPX3VrQ1l0RkFPbERpQjNDUExIM2dhS1ZkdWRUYXcyOVJMejJxUkR6X0Y3b2RodG9KZXYxVWZacFpveklOanlxYVk2bnNnTlZKdHplU09ubHZfTGVCWlIxXzFRNjVSWmRYcHcxckNRTHBCcXFMd1laUU9GTW9ialQtTFV0UVJndmNCelhBTzJURUhGSmpKRmdUMTY1SkJKN0M2VXNzM3p4aHZiUjRNaVZN?oc=5" target="_blank" rel="noopener">Anthropic's IPO Dreams May Be Eclipsed By the Cloud</a>
+<div class="wire-source">Bloomberg &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxObTA1ekU0MGNaRzl1ZV9QVkY5bTJFOGlvOVZzNVU2b1d2RU5CS1E3QWxQcHltOE5DWi15ZFBLR21IXzBaa0FqYlN2dDRKVmJ0Q0FPWVRkX25ZWnhxSHBYU3dGTWJ4S3JoWUt2alBaajQzdGJ2TlNoVG5XazdJUGRMbXMzRUhFV1RqM0E4V29JcTQtNVNQVFBBdWFMZWJ4M1J3NkpIbFNuOVRyTFV1TFJZWHJTeGJiWGxQbGpmUEFldjVUNlpibWc?oc=5" target="_blank" rel="noopener">How Will AI Affect Jobs? The UK Finance Industry Is Showing Us</a>
+<div class="wire-source">Bloomberg &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPN2oyYlZtWGlnN3dRWDFGLWFyTzVIclhCVW1Nd1FSOGZrejdrN0h2STRPdDUxZ1BWa1gwd1pDWWNXSTNjR1lHdHFTVGNHWTdkSFBkOEFCeU1jWV82STlfQ1pwWERFcE1xbHJkX3BfSnZkT25KRDdLdzlibGMwSkZxdUJ0T3JXUTc2Q2FxT082MUhvVUdtTC1BeHV4Ny1rSTdIYmRhVkloU2o?oc=5" target="_blank" rel="noopener">Bloomberg Daybreak Asia: Earnings to Test AI Trade</a>
+<div class="wire-source">Bloomberg &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUXA0UE44Z0FqMDFNeDVUaEo0TlVDRTUyOEx1OS1vTDJZZHFrZGxUZlNOcFNidk5kcVJ1bDcwUW01ZzZOZDBSZXFTWUR2WVBzMkw5aE1KQ0tpdWVqNWZIWm5oMWZXQkpsY3BGcU5PZTZTdzdnMmpHbEFzcUJ1WGVJd19SMUNwRWtlaGk2QXhNNUl0V3JQaXFiRmV1Y0xmeEFPTnI4YXdLRWd0bXc?oc=5" target="_blank" rel="noopener">Watch AI Will Empower India's Space Missions, Says Minister</a>
+<div class="wire-source">Bloomberg &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNVWlGZml4V2JESElWVjd5RDgtN0htcHAxSEUwT3p6LUlWQm1nLVNkR2lzSlNxQ2ZaQW5ZMjZiVnZJeWZjaDJNS2o4LXU3TEljOHNjU052OC1laGhOZ0lRbU5XeWZRR0FDSXVpcm04S0FLTDFpQTJpNkIyQUpqdTRNLW9udEk?oc=5" target="_blank" rel="noopener">JGBs Rise Amid AI-Related Credit Concerns</a>
+<div class="wire-source">WSJ &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9uX0ZERU9SaU1EenlpSldrYmJNZ0piN0lFMUxlWExWNkwxTGctLTVZeExkZjB3VkstLVJfc1dSem1QUTRtR01iT0dtbHM4ZHZocS1Jc3VSWjc5NnZ3ODVNSmhPRlpCX0NTZEVsRWRR?oc=5" target="_blank" rel="noopener">VB Pulse Agentic Orchestration Report</a>
+<div class="wire-source">VentureBeat &middot; Oct 19</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">On the Forums, Continued</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x9n3qv/tempopfn_synthetic_pretraining_of_linear_rnns_for/" target="_blank" rel="noopener">TempoPFN: Synthetic Pre-training of Linear RNNs for Zero-shot Time Series Forecasting</a>
+<div class="wire-source">r/LocalLLaMA (Reddit) &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/MachineLearning/comments/1x9c5ty/beating_warcraft_iiis_insane_ai_with_selfplay/" target="_blank" rel="noopener">Beating Warcraft III&rsquo;s insane AI with self-play reinforcement learning on one desktop [P]</a>
+<div class="wire-source">r/MachineLearning (Reddit) &middot; Oct 18</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/MachineLearning/comments/1x9e2fw/anyone_else_get_brain_lag_from_overlycondensed/" target="_blank" rel="noopener">Anyone else get brain lag from overly-condensed AI-speak? [D]</a>
+<div class="wire-source">r/MachineLearning (Reddit) &middot; Oct 18</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/MachineLearning/comments/1x8xxmv/gpt2_kv_cache_from_scratch_correctness_latency/" target="_blank" rel="noopener">GPT-2 KV cache from scratch: correctness, latency, and memory measurements [P]</a>
+<div class="wire-source">r/MachineLearning (Reddit) &middot; Oct 18</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/MachineLearning/comments/1x975ea/proof_before_reuse_showing_agents_only_what_later/" target="_blank" rel="noopener">Proof Before Reuse: showing agents only what later sessions reproduced keeps a poisoned skill out of procedural memory [R]</a>
+<div class="wire-source">r/MachineLearning (Reddit) &middot; Oct 18</div>
+</div>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic is setting aside 5% of its stock for a new Public Benefit Fund that, per Fortune, could make large donations to traditional nonprofits or send money straight to specific groups of people. The same news cycle carries a WSJ explainer on an &ldquo;obscure trust&rdquo; looming over the company&rsquo;s IPO and a Bloomberg piece arguing those IPO dreams may be eclipsed by the cloud. Around that, a new paper claims agents can cut token use by 35% to 55% by thinking in latent space, while bond and trade headlines show the AI trade now moving markets from Kuala Lumpur to Tokyo.</p>
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~4 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-10-19-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+
+        <p><em>A note on sourcing: Reddit and Google News links could not be opened for this issue, so entries below that rest only on a headline say so.</em></p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Anthropic&rsquo;s Stock, Spoken For</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Public Benefit Fund</strong> &ndash; The 5% stake goes into a new entity inside the company, and Fortune notes its value could grow as Anthropic&rsquo;s shares rise. The notable design choice is the flexibility: the fund may fund big gifts to established nonprofits, or distribute money directly to specific populations, which are very different bets on how to do good with equity.</li>
+          <li><strong>The Trust and the IPO</strong> &ndash; WSJ&rsquo;s headline calls the trust looming over Anthropic&rsquo;s IPO &ldquo;obscure,&rdquo; and Bloomberg&rsquo;s says the IPO dreams may be eclipsed by the cloud. We could not open either article, so this is a read of the headlines only: one points at governance, the other at where the real money in AI is made.</li>
+        </ul>
+
+        <h4 class="digest-theme">The AI Trade, Priced Around the World</h4>
+        <ul class="digest-bullets">
+          <li><strong>Trade and Credit</strong> &ndash; Bloomberg&rsquo;s headline says Malaysia&rsquo;s September exports surged to a five-year high on AI demand, and WSJ&rsquo;s says Japanese government bonds rose amid AI-related credit concerns. Both are headline-only here, but together they show AI demand lifting factory orders in one market while worry about AI borrowing leaks into the sovereign bond market in another.</li>
+          <li><strong>Earnings, Jobs, and Space</strong> &ndash; Bloomberg Daybreak Asia frames the week&rsquo;s earnings as a test of the AI trade, a separate Bloomberg piece asks what the UK finance industry reveals about how AI will affect jobs, and an Indian minister says AI will empower the country&rsquo;s space missions. Headline only.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents, Research, and the Workbench</h4>
+        <ul class="digest-bullets">
+          <li><strong>Hybrid Reasoning Agents</strong> &ndash; The paper&rsquo;s HybridAgents switch between latent, non-linguistic reasoning and text within a single generation, using a lightweight HybridLink module and a continuous working memory. The authors report a 10.4% average gain over frontier LLM agents across 11 benchmarks, 35.5% to 54.7% fewer tokens, and inference 1.8x to 2.6x faster. Those are the authors&rsquo; numbers, not independent replications.</li>
+          <li><strong>Agent Orchestration</strong> &ndash; VentureBeat&rsquo;s VB Pulse Agentic Orchestration Report is in the wire. Headline only.</li>
+          <li><strong>From the Forums</strong> &ndash; r/LocalLLaMA is busy with Nemotron 3.5 variants (a Super VL model people say not to sleep on, and a Bolt model called &ldquo;okayish&rdquo; for small multiuser setups), a Qwen 3.8 Flash Next build tuned for two CMP 170HX cards, and a call to benchmark SonicBoom, which its author describes as a compiler-first runtime that beats llama.cpp on decode. r/MachineLearning has a self-play project that beats Warcraft III&rsquo;s built-in AI on one desktop, a GPT-2 KV cache built from scratch with latency and memory measurements, and a proposal called Proof Before Reuse that shows agents only what later sessions reproduced, to keep a poisoned skill out of procedural memory. Titles only; threads not opened.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Read the Anthropic items together and the common thread is <em>who owns the upside before the IPO prices it</em>. A 5% stake earmarked for a public benefit fund, a trust that WSJ thinks readers need explained, and a Bloomberg argument that the cloud providers may capture more of the value than the model labs all point at the same question: how is the economics of a frontier lab divided among founders, public-benefit commitments, and the infrastructure it rents? We only have headlines for two of those, so treat this as a framing, not a finding. Fortune&rsquo;s description of the fund is the firm piece of evidence, and its stated flexibility between nonprofit grants and direct distributions is the part to watch.</p>
+
+        <p>The second thread is cost. The Malaysia and JGB headlines suggest AI spending is now visible in trade data and in credit worries at the same time. Against that backdrop, the HybridAgents paper is interesting less for its 10.4% gain than for its claimed 35.5% to 54.7% token reduction: if reasoning in latent space really does cut tokens that much, it attacks the cost side directly. The forum threads rhyme with it, from squeezing Qwen onto two CMP 170HX cards to benchmarking a runtime against llama.cpp. When capital is scarce and credit nervous, efficiency work moves from hobby to strategy.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>AI is maturing from a technology story into a capital-structure story. Labs are preparing public listings, setting aside equity for public benefit, and answering questions about trusts and governance, while bond and export data show the effects spreading well beyond the companies themselves. That is what a technology looks like when it becomes an asset class: the interesting questions shift from what the models can do to who is entitled to what they earn.</p>
+          <p>The counterweight is efficiency. Every claim of fewer tokens, faster inference, or a leaner local runtime lowers the amount of capital the whole system needs, which is good news for anyone worried about credit conditions and awkward news for anyone whose business assumes the buildout keeps compounding. Which force wins is still open, and today&rsquo;s evidence, mostly headlines and one unreplicated paper, cannot settle it.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>What an Anthropic IPO filing says about the fund and the trust.</strong> Fortune describes the fund only in outline. A filing would show how the 5% is governed and how the trust fits in, which would turn today&rsquo;s headlines into facts.</li>
+          <li><strong>Whether the HybridAgents results replicate.</strong> A 10.4% average gain and up to 54.7% token savings are the authors&rsquo; own figures. Independent benchmarks on the same 11 tasks would show whether latent reasoning holds up outside the paper.</li>
+          <li><strong>The earnings tests for the AI trade.</strong> Bloomberg says this week&rsquo;s earnings will test the trade. Pay attention to whether demand shows up in orders and revenue the way the Malaysia export headline implies.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

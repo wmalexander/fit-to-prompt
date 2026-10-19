@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-18",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["acronym"]
+        lastUpdated: "2026-10-19",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["acronym", "crossword"]
     },
     issues: [
+        {
+            date: "2026-10-19",
+            volume: 1,
+            issueNumber: 118,
+            title: "Anthropic Commits 5% of Its Stock to a New \u201cPublic Benefit\u201d Fund",
+            description: "Daily AI news roundup - October 19, 2026. Anthropic puts 5 percent of its stock into a public benefit fund, a new paper on hybrid reasoning agents, the trust looming over Anthropic\u2019s IPO, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-19.html",
+            storyCount: 20,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-10-18",
             volume: 1,
