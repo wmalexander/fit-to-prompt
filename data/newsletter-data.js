@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-19",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["acronym", "crossword"]
+        lastUpdated: "2026-10-20",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["acronym", "crossword", "scramble"]
     },
     issues: [
+        {
+            date: "2026-10-20",
+            volume: 1,
+            issueNumber: 119,
+            title: "\u201cAn Army of Claudes, With Every One Asking for My Attention\u201d: Anthropic Calls Human Attention the Bottleneck",
+            description: "Daily AI news roundup - October 20, 2026. Anthropic says human attention is now the bottleneck for its agents, Microsoft calls AI agents insider threats, New York\u2019s mayor urges residents to push back on AI, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-20.html",
+            storyCount: 20,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-10-19",
             volume: 1,

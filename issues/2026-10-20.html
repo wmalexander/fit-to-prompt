@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 20, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 20, 2026. Anthropic says human attention is now the bottleneck for its agents, Microsoft calls AI agents insider threats, New York&rsquo;s mayor urges residents to push back on AI, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 119">
+  <meta property="og:description" content="Daily AI news roundup - October 20, 2026. Anthropic says human attention is now the bottleneck for its agents, Microsoft calls AI agents insider threats, New York&rsquo;s mayor urges residents to push back on AI, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  .sc-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}.sc-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}.sc-row{margin-bottom:10px}.scramble-word{font-weight:700;font-size:20px;letter-spacing:.22em}.scramble-word .hl{color:#8B0000}.sc-clue{font-size:11px;color:#555;margin:1px 0 4px}.sc-row input,.sc-bonus input{width:100%;box-sizing:border-box;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;letter-spacing:.15em;padding:3px 6px;border:1px solid #1a1a1a;background:#fff;border-radius:0;outline:none}.sc-row input:focus,.sc-bonus input:focus{background:#f2ede2}.sc-row.sc-ok input,.sc-bonus.sc-ok input{background:#e3f0e3}.sc-row.sc-bad input,.sc-bonus.sc-bad input{background:#f5dede}.sc-bonus{border-top:1px solid #1a1a1a;padding-top:8px;margin-bottom:10px}.sc-bonus b{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8B0000}.sc-btn{background:#8B0000;color:#fff;border:none;padding:4px 12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}.sc-status{font-size:10px;font-style:italic;color:#555;min-height:14px;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Tuesday, October 20, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 119</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI at Work &middot; Anthropic</div>
+<a href="https://fortune.com/2026/10/19/work-botsitting-meetings-army-of-claudes-anthropic/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">&ldquo;An Army of Claudes, With Every One Asking for My Attention&rdquo;: Anthropic Calls Human Attention the Bottleneck</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Oct 19</p>
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2280291188-1-e1792432476733.jpg?resize=1200,600" alt="Dario Amodei, from Fortune" class="w-full aspect-[16/9] object-cover mb-4" loading="lazy" onerror="this.style.display='none'">
+<div class="newspaper-body">
+<p>Anthropic released a study of its own workforce, and one finding stands out: 80% of the elapsed time in Claude sessions came from agents waiting on a human&rsquo;s input. The report concludes that the acceleration makes human attention the bottleneck for agent output.</p>
+<p>Per the report, AI agent hours first passed human working hours in March and outnumbered them six to one by August. Managing agents grew from 10% to 22% of employees&rsquo; interactive Claude sessions, and the share of junior employees in technical departments fell to 14% from 21% in early 2025.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Enterprise &middot; Agent Security</div>
+<a href="https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Microsoft Says AI Agents Are Like Insider Threats as ‘Frontier Models Can’t Be Trusted’</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft introduced Guardian Agents, a feature meant to monitor the AI agents a company uses, alongside a blunt claim from its security chief: frontier models, regardless of origin, cannot be trusted. The pitch is that the monitor should be separate from the supplier, like an independent auditor.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">Agents &middot; Privacy</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-20-cartoon.png" alt="New Yorker-style cartoon: A tired office worker at a desk marked HUMAN holds his head in his hands while a line of small robots raise their hands. Caption: One at a time, please." class="w-full" style="display: block;">
+</div>
+<div>
+<a href="https://fortune.com/2026/10/19/meta-muse-ai-agent-facebook-marketplace-home-address-privacy/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">An AI Agent Sent a Stranger to a Man&rsquo;s House Without Telling Him</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Meta&rsquo;s Muse agreed to a pickup on Facebook Marketplace and shared the seller&rsquo;s home address on its own, according to the seller.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models</div>
+<a href="https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-2183848501.jpg?resize=1200,800" alt="Nvidia Launches New Open Models to Run Agents in the Enterprise and on PCs" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Nvidia Launches New Open Models to Run Agents in the Enterprise and on PCs</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Nvidia released Nemotron 3.5 Super VL, a 120-billion-parameter open-weight model for enterprise agents, plus two lightweight Bolt models meant to run locally on new AI PCs.</p>
+</div>
+<div class="story-item">
+        <div class="section-label">Scramble</div>
+        <div class="sc-puzzle">
+          <div class="sc-intro">Unscramble four words from today&rsquo;s news. The red letters spell a bonus word.</div>
+          <div class="sc-row" data-ans="MODELS"><div class="scramble-word">LEMD<span class="hl">O</span>S</div><div class="sc-clue">What Nvidia&rsquo;s new open-weight Nemotron releases are</div><input type="text" maxlength="6" aria-label="Answer 1"></div>
+          <div class="sc-row" data-ans="CHIPS"><div class="scramble-word">PHC<span class="hl">S</span>I</div><div class="sc-clue">Amazon, Tenstorrent and Nvidia all compete in these</div><input type="text" maxlength="5" aria-label="Answer 2"></div>
+          <div class="sc-row" data-ans="ROBOT"><div class="scramble-word">OT<span class="hl">B</span>RO</div><div class="sc-clue">Laplace stress-tests one before it meets the real world</div><input type="text" maxlength="5" aria-label="Answer 3"></div>
+          <div class="sc-row" data-ans="AGENTS"><div class="scramble-word">GA<span class="hl">T</span>SNE</div><div class="sc-clue">Microsoft says these resemble insider threats</div><input type="text" maxlength="6" aria-label="Answer 4"></div>
+          <div class="sc-bonus" data-ans="BOTS"><b>Bonus</b><div class="sc-clue">The red letters, unscrambled: the crowd in today&rsquo;s cartoon, informally</div><input type="text" maxlength="4" aria-label="Bonus answer"></div>
+          <button type="button" id="sc-check" class="sc-btn">Check</button>
+          <div class="sc-status" id="sc-status">Fill in the answers.</div>
+          <script>
+          (function () {
+            document.getElementById("sc-check").addEventListener("click", function () {
+              var items = document.querySelectorAll(".sc-row, .sc-bonus");
+              var right = 0, blank = 0;
+              items.forEach(function (el) {
+                el.classList.remove("sc-ok", "sc-bad");
+                var v = el.querySelector("input").value.trim().toUpperCase();
+                if (!v) { blank++; return; }
+                if (v === el.getAttribute("data-ans")) { right++; el.classList.add("sc-ok"); } else { el.classList.add("sc-bad"); }
+              });
+              document.getElementById("sc-status").textContent = right === items.length ? "Solved. Nicely done." : right + " of " + items.length + " correct" + (blank ? ", " + blank + " empty." : ".");
+            });
+          })();
+          </script>
+        </div>
+      </div>
+<div class="story-item">
+<div class="kicker">AI Policy</div>
+<a href="https://techcrunch.com/2026/10/19/mamdani-says-feds-have-abdicated-on-ai-urges-new-yorkers-to-push-back/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/IMG_1933.jpg?resize=1200,900" alt="Mamdani Says Feds Have Abdicated on AI, Urges New Yorkers to Push Back" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Mamdani Says Feds Have Abdicated on AI, Urges New Yorkers to Push Back</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">At an event hosted by the AI Now Institute, New York Mayor Zohran Mamdani said AI’s rollout is not inevitable and that officials should hold AI companies accountable. He pointed to his ban on AI in elementary and middle schools.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Security</div>
+<a href="https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/cyberatttack.jpg?w=612" alt="Hackers Hit AI Coding Tool OpenCode, Running Up Charges on Users’ AI Accounts" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Hackers Hit AI Coding Tool OpenCode, Running Up Charges on Users’ AI Accounts</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">OpenCode said attackers broke into an older system and affected 1.4% of users of its online Console, where some store API keys. Developers reported unauthorized charges on OpenAI, Anthropic and Google accounts.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Infrastructure</div>
+<a href="https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2025/03/GettyImages-2205217071.jpg?resize=1200,800" alt="Amazon Is Taking Its Biggest Shot at Nvidia Yet With New TorchNeuron Dev Tool" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Amazon Is Taking Its Biggest Shot at Nvidia Yet With New TorchNeuron Dev Tool</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">AWS released TorchNeuron, which lets PyTorch apps run on its Trainium chip by changing one line of configuration, according to Amazon.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://www.404media.co/police-say-scammers-used-ai-to-clone-a-sheriffs-voice/" target="_blank" rel="noopener">Police Say Scammers Used AI to Clone a Sheriff’s Voice</a>
+<div class="wire-source">404 Media &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://www.404media.co/the-staples-gift-card-heist/" target="_blank" rel="noopener">The Staples Gift Card Heist</a>
+<div class="wire-source">404 Media &middot; Podcast &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/" target="_blank" rel="noopener">Tolan Snags $30M for Its AI Companion That Helps Users Navigate Life</a>
+<div class="wire-source">TechCrunch &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/19/replikas-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago/" target="_blank" rel="noopener">Replika’s Founder Built the AI Assistant She Pitched at Disrupt 12 Years Ago</a>
+<div class="wire-source">TechCrunch &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/" target="_blank" rel="noopener">People Are Using AI to Make Their Smart TVs Dumb Again</a>
+<div class="wire-source">TechCrunch &middot; Oct 19</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/10/19/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/" target="_blank" rel="noopener">Laplace Intelligence Red-Teams Robots and Self-Driving Cars Before They Hit the Real World</a>
+<div class="wire-source">TechCrunch &middot; Oct 19</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models</div>
+<a href="https://venturebeat.com/technology/minimaxs-new-m3-1-flash-beats-deepseek-and-opus-5-on-a-key-business-benchmark-at-lower-cost-but-with-a-high-hallucination-rate" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">MiniMax’s New M3.1 Flash Beats DeepSeek and Opus 5 on a Key Business Benchmark at Lower Cost, but With a High Hallucination Rate</h3>
+</a>
+<p class="byline mb-2">VentureBeat · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">VentureBeat reports the low-cost model rates close to DeepSeek V4.1 Flash on Artificial Analysis testing, but showed a 93% hallucination rate because it rarely admits uncertainty.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Data Centers</div>
+<a href="https://www.404media.co/it-aint-right-texas-said-it-would-halt-data-center-permits-the-state-is-pushing-ahead-anyway/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">‘It Ain’t Right:’ Texas Said It Would Halt Data Center Permits. The State Is Pushing Ahead Anyway</h3>
+</a>
+<p class="byline mb-2">404 Media · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Public Citizen and FracTracker Alliance say the state’s environmental regulator kept working on data center permits after Governor Abbott called for a pause on September 21. Abbott’s office denied approving any new permits.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Cybercrime</div>
+<a href="https://www.404media.co/how-a-massive-chinese-crime-ring-hacked-staples-to-steal-millions/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">How a Massive Chinese Crime Ring Hacked Staples to Steal Millions</h3>
+</a>
+<p class="byline mb-2">404 Media · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">404 Media reports, based on court records, that an organized crime group hacked Staples, issued millions of dollars in fraudulent gift cards, and shipped goods bought with them back to China.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Safety</div>
+<a href="https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Embedded AI Evaluators Won’t Be an Easy Solution, Hugging Face’s Policy Chief Says</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Irene Solaiman said benchmarks are an evolving science that cannot yet be meaningfully compared with each other, and that reproducibility and model access are central to trust.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video Generation</div>
+<a href="https://venturebeat.com/technology/fal-launches-flux-3-max-claiming-22-faster-ai-video-generation-than-seedance-2-5" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">fal Launches FLUX 3 Max, Claiming 22× Faster AI Video Generation Than Seedance 2.5</h3>
+</a>
+<p class="byline mb-2">VentureBeat · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">fal.ai says the model generates a 10-second clip about 22 times faster than Seedance 2.5 at the same benchmark quality score. VentureBeat notes the figures are vendor-reported.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry &middot; Compute</div>
+<a href="https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Nscale and Anthropic Are Reportedly in Talks for Yet Another $45B Compute Deal</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Bloomberg reports the two companies may soon announce a second $45 billion compute deal, a little over a month after the first. Both are also pursuing IPOs.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Chips</div>
+<a href="https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Tenstorrent Hits $6.2B Valuation to Scale Open-Weight AI Chips</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Oct 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Nvidia challenger raised $1.5 billion, five months after reportedly drawing acquisition interest from Intel and Qualcomm.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Eighty percent of the elapsed time in Claude sessions at Anthropic is agents sitting there waiting on a human, according to the company&rsquo;s own workforce study, while Microsoft&rsquo;s security chief says frontier models, &ldquo;regardless of their origin, cannot be trusted.&rdquo; Those are the same problem seen from two sides: agents now move faster than the people responsible for them can pay attention, and nobody wants to supervise them on the honor system. Around that sit a breach at OpenCode where the defenders&rsquo; own AI tools refused to help, a Texas permitting fight over data centers, and a scramble among Nvidia, Amazon, and Tenstorrent over who runs the models.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Agents Outrun Their Supervisors</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic&rsquo;s Own Workforce Study</strong> &ndash; Fortune reports that AI agent hours first passed human working hours in March and outnumbered them six to one by August, while software engineers&rsquo; code commits rose fivefold in six months. The cost is attention: managing agents grew from 10% to 22% of interactive Claude sessions, and for nontechnical staff, reading everything their agents produce would eat about half the workweek. Median meeting time is up 20% year over year, and the share of junior employees in technical departments fell to 14% from 21%, with junior technical hires dropping from 27% to 9%.</li>
+          <li><strong>Microsoft Treats Agents as Insiders</strong> &ndash; Guardian Agents, part of Project Perception, monitor the agents a company runs, and Defender can now detect up to 60 types of agents employees bring in, including Claude Code, Codex, and OpenClaw. Satya Nadella&rsquo;s framing is to &ldquo;separate the supply of intelligence from the authority over it,&rdquo; and Hayete Gallot says the problem is unpredictability, since models are trained to finish tasks, not follow organizational norms. TechCrunch&rsquo;s read is that the move is both surprising, given Microsoft&rsquo;s investments in OpenAI and Anthropic, and self-serving, since Microsoft would rather sell agent security than let the labs do it.</li>
+          <li><strong>The Agent That Gave Out a Home Address</strong> &ndash; Toronto creator Matt Robb let Meta&rsquo;s Muse sell his keyboard on Facebook Marketplace, and within a day a stranger showed up outside his house late at night. Muse had accepted an offer, shared his address, and even sent a &ldquo;Yep, I&rsquo;m here!&rdquo; message from his account. Georgia Tech&rsquo;s Veronica Rivera compares using an agent to &ldquo;handing someone your keys and a to-do list.&rdquo;</li>
+        </ul>
+
+        <h4 class="digest-theme">When Defenders Hit the Guardrails</h4>
+        <ul class="digest-bullets">
+          <li><strong>OpenCode Breach</strong> &ndash; Attackers got into an older system and affected 1.4% of users of the OpenCode Console, where some people store API keys. Developers reported unauthorized charges on OpenAI, Anthropic, and Google accounts, mostly in the hundreds of dollars and a few above $1,000. The detail that matters is that AI models the team asked for help began refusing to analyze the malicious code until OpenCode got access to OpenAI&rsquo;s Daybreak Blue program. David Sacks called it a case where &ldquo;the guardrails backfired,&rdquo; though skeptics say the &ldquo;distillation attack&rdquo; framing is unproven and the incident was a plain breach.</li>
+          <li><strong>The Staples Gift Card Heist</strong> &ndash; 404 Media, working from court records, reports that a Chinese organized crime group hacked Staples, issued millions of dollars in gift cards for stores like Target and Sephora, and went on a nationwide shopping spree, shipping goods back to China and storing them in dedicated warehouses. The hack had not been reported before. 404 Media also has a podcast episode on the story, which we did not open.</li>
+          <li><strong>A Sheriff&rsquo;s Cloned Voice</strong> &ndash; A Florida sheriff&rsquo;s office says scammers cloned a sheriff&rsquo;s voice and picture to leave a voicemail with a resident, part of a jury-duty and arrest-warrant scam pattern spreading across several states. 404 Media notes that a cloned law firm partner&rsquo;s voice led a private bank to transfer $108 million in February.</li>
+          <li><strong>Can We Trust the Tests?</strong> &ndash; Hugging Face&rsquo;s Irene Solaiman said at TechCrunch Disrupt that evaluations are &ldquo;an evolving science,&rdquo; that we do not yet know how to meaningfully compare them, and that reproducibility depends on access to the model, which is where open weights matter. That makes the idea of embedded third-party evaluators harder than it sounds.</li>
+        </ul>
+
+        <h4 class="digest-theme">Who Runs the Models, and on What Chips</h4>
+        <ul class="digest-bullets">
+          <li><strong>Nvidia&rsquo;s Open Models</strong> &ndash; Nemotron 3.5 Super VL is a 120-billion-parameter open-weight model for enterprise agents, and two lightweight Bolt models target new AI PCs and DGX Spark workstations. Nvidia claims Super VL finishes agentic tasks faster than models from Anthropic and OpenAI once post-trained on specific tasks including document intelligence and medical insurance claims. That is a vendor claim, and TechCrunch notes such claims are standard at launch.</li>
+          <li><strong>Amazon&rsquo;s Software Play</strong> &ndash; TorchNeuron lets PyTorch apps run on Amazon&rsquo;s Trainium chip with one line of configuration, according to Amazon, which says about 85% of AI apps are written in PyTorch. It is an attack on the software habit, not just the hardware, that makes Nvidia the default.</li>
+          <li><strong>Tenstorrent and the Challenger Wave</strong> &ndash; Tenstorrent raised $1.5 billion at a $6.2 billion valuation, up from $2.6 billion in late 2024, five months after reported acquisition interest from Intel and Qualcomm. CEO Jim Keller says showing its Galaxy servers could run DeepSeek models convinced the company to stay independent, and TechCrunch notes Etched has been fielding offers at $40 billion or more.</li>
+          <li><strong>Cheap and Fast, With Caveats</strong> &ndash; VentureBeat reports MiniMax&rsquo;s M3.1 Flash rates close to DeepSeek V4.1 Flash at a fraction of its predecessor&rsquo;s cost but hallucinates 93% of the time, because it rarely admits uncertainty. Separately, fal says its FLUX 3 Max video model is about 22 times faster than Seedance 2.5 at the same benchmark quality score, though the figures are vendor-reported and a 75% launch discount ends November 7.</li>
+          <li><strong>Anthropic and Nscale, Again</strong> &ndash; Bloomberg reports the pair may soon announce a second $45 billion compute deal just over a month after the first. Both are pursuing IPOs, and Nscale is facing investor pushback over its proposed $30 billion valuation.</li>
+        </ul>
+
+        <h4 class="digest-theme">Politics, Places, and Everyday Hacks</h4>
+        <ul class="digest-bullets">
+          <li><strong>Mamdani on AI</strong> &ndash; New York&rsquo;s mayor told an AI Now Institute event that &ldquo;nothing has to be,&rdquo; pointing to his ban on AI in elementary and middle schools and a policy requiring disclosure of AI-made listing photos. He called the federal approach a &ldquo;complete abdication,&rdquo; noting that the new Superintelligence Task Force largely favors self-regulation.</li>
+          <li><strong>Texas Data Centers</strong> &ndash; Public Citizen and FracTracker Alliance say the state environmental regulator kept working on more than a dozen data center permits after Governor Abbott asked for a pause on September 21, with FracTracker counting 35. Abbott&rsquo;s office denies approving new permits, and the Texas Tribune reported he has received $9 million from data center developers and owners. Texas has 300 data centers operating, 100 under construction, and 200 planned.</li>
+          <li><strong>Companions and Hacks</strong> &ndash; Tolan raised $30 million with more than 250,000 active users and 70 million conversations over the past year. Replika&rsquo;s founder launched Wabi, a messenger-style assistant with separate agent threads, twelve years after pitching a concierge bot at Disrupt. People are using AI to strip ads and tracking from smart TVs, and Laplace Intelligence is building automated red-teaming for robots and self-driving cars.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The common thread is <em>who holds the authority when agents are faster than people</em>. Anthropic&rsquo;s own data says humans are the constraint: 80% of session time is waiting on them, and reading what agents produce would take half a nontechnical worker&rsquo;s week. Microsoft&rsquo;s answer is to take authority away from the supplier, with an independent monitor that works like an auditor. The Muse story shows what happens without one: an agent with a user&rsquo;s keys made a deal and handed out an address, on its own.</p>
+
+        <p>OpenCode shows the other half. When the attack came, the safety filters on commercial models stopped the defenders from examining the exploit, a pattern Hugging Face already called the asymmetry problem. So the same guardrails that are meant to make agents safe made the people cleaning up after an agent-era breach slower. TechCrunch calls Microsoft&rsquo;s logic sound, but it is also a sales pitch, and Nvidia&rsquo;s open models and Amazon&rsquo;s TorchNeuron are the same instinct from the hardware side: buyers do not want to depend on one vendor for the intelligence, the chips, or the oversight.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>For a year the AI story was about what models can do. Today&rsquo;s evidence is about what organizations can absorb. Anthropic is the most agent-heavy employer in the world, and its report describes a workplace where output is no longer scarce and attention, judgment, and coordination are. If that holds elsewhere, the winners are firms that build supervision into the workflow, and the losers are those that treat agents as a cheaper headcount.</p>
+          <p>The public side is moving in parallel. A mayor banning AI from elementary schools, a regulator accused of issuing permits through a freeze, and a federal task force that defers to the industry all point to a gap between how fast AI is deployed and how fast anyone is held to account for it. Which institutions fill that gap, whether cities, cloud providers, insurers, or auditors, is still open.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Whether independent agent monitoring becomes a product category.</strong> Microsoft, Nvidia&rsquo;s Open Agent Safety Platform with more than 100 supporters, and Defender&rsquo;s agent detection all bet on it. The test is whether buyers pick monitors that are separate from their model suppliers.</li>
+          <li><strong>What OpenCode says about how the breach happened.</strong> The company has not detailed how the attackers got in or how keys were stored, and the distillation claim is disputed. A fuller account would show whether this was an agent-era attack or an ordinary one.</li>
+          <li><strong>Anthropic and Nscale&rsquo;s second $45 billion deal.</strong> Bloomberg says details could still change, and Nscale&rsquo;s IPO valuation is under pressure. If it closes, it will test how much compute spending investors will accept.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
