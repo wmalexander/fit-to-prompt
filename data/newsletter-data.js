@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-20",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["acronym", "crossword", "scramble"]
+        lastUpdated: "2026-10-21",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: ["acronym", "crossword", "scramble", "wordsearch"]
     },
     issues: [
+        {
+            date: "2026-10-21",
+            volume: 1,
+            issueNumber: 120,
+            title: "Anthropic\u2019s Cloud Partnerships Are Getting Messy",
+            description: "Daily AI news roundup - October 21, 2026. Anthropic\u2019s leaked IPO filing shows a scramble for cloud capacity, Anthropic pitches a federal AI safety bill, Meta pauses Muse link sharing after a privacy leak, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-21.html",
+            storyCount: 20,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-10-20",
             volume: 1,

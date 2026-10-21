@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 21, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 21, 2026. Anthropic&rsquo;s leaked IPO filing shows a scramble for cloud capacity, Anthropic pitches a federal AI safety bill, Meta pauses Muse link sharing after a privacy leak, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 120">
+  <meta property="og:description" content="Daily AI news roundup - October 21, 2026. Anthropic&rsquo;s leaked IPO filing shows a scramble for cloud capacity, Anthropic pitches a federal AI safety bill, Meta pauses Muse link sharing after a privacy leak, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  .sc-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}.sc-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}.sc-row{margin-bottom:10px}.scramble-word{font-weight:700;font-size:20px;letter-spacing:.22em}.scramble-word .hl{color:#8B0000}.sc-clue{font-size:11px;color:#555;margin:1px 0 4px}.sc-row input,.sc-bonus input{width:100%;box-sizing:border-box;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:700;font-size:14px;letter-spacing:.15em;padding:3px 6px;border:1px solid #1a1a1a;background:#fff;border-radius:0;outline:none}.sc-row input:focus,.sc-bonus input:focus{background:#f2ede2}.sc-row.sc-ok input,.sc-bonus.sc-ok input{background:#e3f0e3}.sc-row.sc-bad input,.sc-bonus.sc-bad input{background:#f5dede}.sc-bonus{border-top:1px solid #1a1a1a;padding-top:8px;margin-bottom:10px}.sc-bonus b{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8B0000}.sc-btn{background:#8B0000;color:#fff;border:none;padding:4px 12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}.sc-status{font-size:10px;font-style:italic;color:#555;min-height:14px;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Wednesday, October 21, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 120</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Industry &middot; Anthropic</div>
+<a href="https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Anthropic&rsquo;s Cloud Partnerships Are Getting Messy</h2>
+</a>
+<p class="byline mb-3">TechCrunch &middot; Oct 20</p>
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-2295579000.jpg?resize=1200,800" alt="Anthropic’s Cloud Partnerships Are Getting Messy" class="w-full aspect-[16/9] object-cover mb-4" loading="lazy" onerror="this.style.display='none'">
+<div class="newspaper-body">
+<p>Anthropic is having trouble securing enough cloud capacity from AWS, Google, and Microsoft, which increasingly see the Claude maker as a competitor rather than a customer, according to an S-1 filing leaked to The Wall Street Journal. The filing says Anthropic could spend more than $750 billion on cloud contracts, some still in negotiation, and that even that may not be enough.</p>
+<p>The leaked numbers show an $80.7 billion net loss in the first half of the year against $16.3 billion in revenue, with two customers accounting for about a fifth of sales. Anthropic told prospective investors last week that third-quarter revenue alone reached $16.8 billion, up 45% from the previous quarter. The company is reportedly targeting a November IPO.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Policy</div>
+<a href="https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic Pitches AI Safety Bill That May Block a Model if 50+ People Could Be Killed</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Politico reports that Anthropic is shopping a draft bill under which a model release could be halted over a &ldquo;foreseeable, imminent risk&rdquo; to more than 50 lives or $1 billion in property. Federal agencies could not act on their own; a judge would have to approve any halt.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">Privacy &middot; Meta</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-21-cartoon.png" alt="New Yorker-style cartoon: A smartphone-shaped assistant with a clipboard stands at a front door while a bewildered man in a bathrobe peers out and a line of strangers waits on the lawn. Caption: I only told it to arrange a pickup. I didn&rsquo;t say it could give out the address." class="w-full" style="display: block;">
+</div>
+<div>
+<a href="https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Meta Muse Exposes Users&rsquo; Personal and Business Secrets When They Share Conversations</h3>
+</a>
+<p class="byline mb-2">Ars Technica &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Researchers at Claroc found 6,800 Muse share links by searching passive DNS records, then opened a few hundred and saw a bank fraud alert, a real-estate investor&rsquo;s return figures, and a staff vacation calendar. Meta says it has paused sharing while it reviews the feature.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Science &middot; Anthropic</div>
+<a href="https://anthropic.com/research/claude-scorpion-toxin-binder-design" target="_blank" rel="noopener" class="story-link">
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/187c8077329b22f6bd02c5648ea58749af892e8c-1200x630.jpg" alt="How Claude designed protein binders against scorpion neurotoxins" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">How Claude Designed Protein Binders Against Scorpion Neurotoxins</h3>
+</a>
+<p class="byline mb-2">Anthropic &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">An internal research model produced 318,484 designs over 64 hours, and 211 were lab-tested with Adaptyv Bio and Twist Bioscience. Seventeen met the binding criteria. Anthropic says it has not confirmed they neutralize venom, so it does not claim an antivenom.</p>
+</div>
+<div class="story-item">
+        <div class="section-label">Word Search</div>
+        <div class="ws-puzzle">
+          <style>
+            .ws-puzzle { max-width: 300px; margin: 0 auto; font-family: 'Inter', -apple-system, sans-serif; color: #1a1a1a; background: #fdfdfb; border: 1px solid #1a1a1a; padding: 14px; box-sizing: border-box; }
+            .ws-intro { font-size: 11px; line-height: 1.45; margin-bottom: 10px; color: #444; }
+            .ws-grid { display: inline-block; border: 1px solid #1a1a1a; user-select: none; }
+            .ws-row { display: flex; }
+            .ws-c { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; cursor: pointer; }
+            .ws-c:hover { background: #eee; }
+            .ws-c.ws-sel { background: #f3dcdc; color: #8B0000; }
+            .ws-c.ws-found { background: #e3efe3; }
+            .ws-list { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+            .ws-list li.ws-done { text-decoration: line-through; color: #9ca3af; }
+            .ws-status { margin-top: 8px; font-size: 10px; font-style: italic; color: #555; min-height: 14px; }
+            .ws-reset { background: #8B0000; color: #fff; border: none; padding: 6px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; margin-top: 8px; }
+          </style>
+          <div class="ws-intro">Find seven words from today&rsquo;s headlines. Click the letters of a word in order, either direction. Words run across, down, or diagonally.</div>
+          <div class="ws-grid" id="ws-grid"><div class="ws-row"><span class="ws-c" data-r="0" data-c="0">W</span><span class="ws-c" data-r="0" data-c="1">F</span><span class="ws-c" data-r="0" data-c="2">X</span><span class="ws-c" data-r="0" data-c="3">Z</span><span class="ws-c" data-r="0" data-c="4">Y</span><span class="ws-c" data-r="0" data-c="5">S</span><span class="ws-c" data-r="0" data-c="6">G</span><span class="ws-c" data-r="0" data-c="7">F</span><span class="ws-c" data-r="0" data-c="8">C</span><span class="ws-c" data-r="0" data-c="9">K</span></div><div class="ws-row"><span class="ws-c" data-r="1" data-c="0">Q</span><span class="ws-c" data-r="1" data-c="1">M</span><span class="ws-c" data-r="1" data-c="2">X</span><span class="ws-c" data-r="1" data-c="3">Z</span><span class="ws-c" data-r="1" data-c="4">W</span><span class="ws-c" data-r="1" data-c="5">P</span><span class="ws-c" data-r="1" data-c="6">N</span><span class="ws-c" data-r="1" data-c="7">V</span><span class="ws-c" data-r="1" data-c="8">L</span><span class="ws-c" data-r="1" data-c="9">H</span></div><div class="ws-row"><span class="ws-c" data-r="2" data-c="0">F</span><span class="ws-c" data-r="2" data-c="1">U</span><span class="ws-c" data-r="2" data-c="2">H</span><span class="ws-c" data-r="2" data-c="3">G</span><span class="ws-c" data-r="2" data-c="4">Z</span><span class="ws-c" data-r="2" data-c="5">I</span><span class="ws-c" data-r="2" data-c="6">O</span><span class="ws-c" data-r="2" data-c="7">O</span><span class="ws-c" data-r="2" data-c="8">O</span><span class="ws-c" data-r="2" data-c="9">F</span></div><div class="ws-row"><span class="ws-c" data-r="3" data-c="0">J</span><span class="ws-c" data-r="3" data-c="1">S</span><span class="ws-c" data-r="3" data-c="2">G</span><span class="ws-c" data-r="3" data-c="3">W</span><span class="ws-c" data-r="3" data-c="4">J</span><span class="ws-c" data-r="3" data-c="5">H</span><span class="ws-c" data-r="3" data-c="6">I</span><span class="ws-c" data-r="3" data-c="7">X</span><span class="ws-c" data-r="3" data-c="8">U</span><span class="ws-c" data-r="3" data-c="9">Y</span></div><div class="ws-row"><span class="ws-c" data-r="4" data-c="0">G</span><span class="ws-c" data-r="4" data-c="1">E</span><span class="ws-c" data-r="4" data-c="2">Z</span><span class="ws-c" data-r="4" data-c="3">Q</span><span class="ws-c" data-r="4" data-c="4">B</span><span class="ws-c" data-r="4" data-c="5">C</span><span class="ws-c" data-r="4" data-c="6">P</span><span class="ws-c" data-r="4" data-c="7">T</span><span class="ws-c" data-r="4" data-c="8">D</span><span class="ws-c" data-r="4" data-c="9">X</span></div><div class="ws-row"><span class="ws-c" data-r="5" data-c="0">D</span><span class="ws-c" data-r="5" data-c="1">R</span><span class="ws-c" data-r="5" data-c="2">O</span><span class="ws-c" data-r="5" data-c="3">N</span><span class="ws-c" data-r="5" data-c="4">E</span><span class="ws-c" data-r="5" data-c="5">S</span><span class="ws-c" data-r="5" data-c="6">R</span><span class="ws-c" data-r="5" data-c="7">R</span><span class="ws-c" data-r="5" data-c="8">G</span><span class="ws-c" data-r="5" data-c="9">H</span></div><div class="ws-row"><span class="ws-c" data-r="6" data-c="0">W</span><span class="ws-c" data-r="6" data-c="1">G</span><span class="ws-c" data-r="6" data-c="2">W</span><span class="ws-c" data-r="6" data-c="3">X</span><span class="ws-c" data-r="6" data-c="4">J</span><span class="ws-c" data-r="6" data-c="5">Z</span><span class="ws-c" data-r="6" data-c="6">O</span><span class="ws-c" data-r="6" data-c="7">A</span><span class="ws-c" data-r="6" data-c="8">Y</span><span class="ws-c" data-r="6" data-c="9">Q</span></div><div class="ws-row"><span class="ws-c" data-r="7" data-c="0">Z</span><span class="ws-c" data-r="7" data-c="1">B</span><span class="ws-c" data-r="7" data-c="2">G</span><span class="ws-c" data-r="7" data-c="3">H</span><span class="ws-c" data-r="7" data-c="4">Z</span><span class="ws-c" data-r="7" data-c="5">Y</span><span class="ws-c" data-r="7" data-c="6">C</span><span class="ws-c" data-r="7" data-c="7">L</span><span class="ws-c" data-r="7" data-c="8">F</span><span class="ws-c" data-r="7" data-c="9">B</span></div><div class="ws-row"><span class="ws-c" data-r="8" data-c="0">Z</span><span class="ws-c" data-r="8" data-c="1">X</span><span class="ws-c" data-r="8" data-c="2">W</span><span class="ws-c" data-r="8" data-c="3">H</span><span class="ws-c" data-r="8" data-c="4">G</span><span class="ws-c" data-r="8" data-c="5">F</span><span class="ws-c" data-r="8" data-c="6">S</span><span class="ws-c" data-r="8" data-c="7">Y</span><span class="ws-c" data-r="8" data-c="8">Q</span><span class="ws-c" data-r="8" data-c="9">J</span></div><div class="ws-row"><span class="ws-c" data-r="9" data-c="0">Z</span><span class="ws-c" data-r="9" data-c="1">G</span><span class="ws-c" data-r="9" data-c="2">D</span><span class="ws-c" data-r="9" data-c="3">E</span><span class="ws-c" data-r="9" data-c="4">K</span><span class="ws-c" data-r="9" data-c="5">C</span><span class="ws-c" data-r="9" data-c="6">O</span><span class="ws-c" data-r="9" data-c="7">L</span><span class="ws-c" data-r="9" data-c="8">Q</span><span class="ws-c" data-r="9" data-c="9">X</span></div></div>
+          <ul class="ws-list" id="ws-list"><li data-w="SCORPION">SCORPION</li><li data-w="VOXTRAL">VOXTRAL</li><li data-w="DRONES">DRONES</li><li data-w="CLOUD">CLOUD</li><li data-w="CHIPS">CHIPS</li><li data-w="LOCKED">LOCKED</li><li data-w="MUSE">MUSE</li></ul>
+          <div class="ws-status" id="ws-status">0 of 7 found.</div>
+          <button class="ws-reset" id="ws-clear" type="button">Clear</button>
+          <script>
+          (function () {
+            var words = ["SCORPION", "VOXTRAL", "DRONES", "CLOUD", "CHIPS", "LOCKED", "MUSE"];
+            var cells = Array.prototype.slice.call(document.querySelectorAll("#ws-grid .ws-c"));
+            var sel = [];
+            var found = 0;
+            function render() {
+              cells.forEach(function (c) { c.classList.toggle("ws-sel", sel.indexOf(c) > -1); });
+            }
+            function check() {
+              var s = sel.map(function (c) { return c.textContent; }).join("");
+              var r = s.split("").reverse().join("");
+              var hit = words.filter(function (w) { return w === s || w === r; })[0];
+              if (!hit) { return; }
+              var li = document.querySelector('#ws-list li[data-w="' + hit + '"]');
+              if (li.classList.contains("ws-done")) { return; }
+              sel.forEach(function (c) { c.classList.add("ws-found"); });
+              li.classList.add("ws-done");
+              found++;
+              sel = [];
+              document.getElementById("ws-status").textContent = found === words.length ? "All seven found. Nicely done." : found + " of " + words.length + " found.";
+            }
+            cells.forEach(function (c) {
+              c.addEventListener("click", function () {
+                var i = sel.indexOf(c);
+                if (i > -1) { sel.splice(i, 1); } else { sel.push(c); }
+                render();
+                check();
+                render();
+              });
+            });
+            document.getElementById("ws-clear").addEventListener("click", function () { sel = []; render(); });
+          })();
+          </script>
+        </div>
+      </div>
+<div class="story-item">
+<div class="kicker">AI Safety &middot; Media</div>
+<a href="https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2025/11/clem-delangue.png?resize=1200,789" alt="Hugging Face CEO warns that Netflix&#x27;s OpenAI hack documentary isn&#x27;t accurate | TechCrunch" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Hugging Face CEO Warns Netflix&rsquo;s OpenAI Hack Documentary Isn&rsquo;t Accurate</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Clem Delangue, who appears in &ldquo;AI Gone Rogue,&rdquo; said the film went for &ldquo;maximum anthropomorphism&rdquo; and &ldquo;full doomer mode.&rdquo; He says he spent more than two hours trying to correct errors, and that agents are &ldquo;technological systems, not aliens.&rdquo;</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models &middot; Voice</div>
+<a href="https://mistral.ai/news/voxtral-3/" target="_blank" rel="noopener" class="story-link">
+<img src="https://mistral.ai/cms-media/api/media/file/hero-blog-voxtral.png" alt="Voxtral 3: Voice Agent SDK &amp; Speech Models in 50+ Languages" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Voxtral 3: Voice Agent SDK and Speech Models in 50+ Languages</h3>
+</a>
+<p class="byline mb-2">Mistral &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Mistral released a voice agent SDK and speech models built for real-time, multi-step conversations, with tool calling during a call. They are available through Mistral&rsquo;s EU-hosted API or can be self-deployed.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Vibe Coding</div>
+<a href="https://simonwillison.net/2026/Oct/20/battledrones/" target="_blank" rel="noopener" class="story-link">
+<img src="https://static.simonwillison.net/static/2026/battle-drones-card.webp" alt="Battle Drones, a vibe coded RTS with audio-based multiplayer" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Battle Drones: A Vibe-Coded RTS With Audio-Based Multiplayer</h3>
+</a>
+<p class="byline mb-2">Simon Willison &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Willison built a Command &amp; Conquer style game over 12 major iterations and 321 commits, mostly by Claude Code. Two nearby devices can sync game state using audio, and he says the key prompt was telling Claude to &ldquo;Make it a LOT more fun.&rdquo;</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry</div>
+<a href="https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-20-at-2.40.46-PM.png?resize=1130,1200" alt="SpaceX&#x27;s AI business is beating expectations | TechCrunch" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">SpaceX&rsquo;s AI Business Is Beating Expectations</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">SpaceX reported $14.6 billion in third-quarter revenue, with its renamed Super Intelligence unit (Cursor, Grok, and its neocloud) bringing in $7.5 billion. AI now makes up 52% of income, and the company plans $35 to $40 billion in new capital spending next quarter.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Infrastructure</div>
+<a href="https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2215577882.jpg?resize=1200,800" alt="Google has joined Amazon in attacking Nvidia&#x27;s stronghold with AI app developers | TechCrunch" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Google Has Joined Amazon in Attacking Nvidia&rsquo;s Stronghold With AI App Developers</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Google released TorchTPU as open source, a day after Amazon&rsquo;s TorchNeuron, so PyTorch apps can move off Nvidia GPUs. Google says it worked with Meta, Hugging Face, and the makers of vLLM and SGLang, and added a TPU agent suite to help port apps.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Products &middot; Privacy</div>
+<a href="https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800" alt="ChatGPT now lets you lock your chats | TechCrunch" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">ChatGPT Now Lets You Lock Your Chats</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Locked chats sit behind a four-digit PIN, Face ID, or Touch ID, in a separate section with their own memory. OpenAI notes this is not end-to-end encryption and does not change how long chats are retained.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/nvidia/cosmos3-h-dreams" target="_blank" rel="noopener">NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation</a>
+<div class="wire-source">Hugging Face &middot; NVIDIA &middot; Oct 20</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/allenai/fairstress" target="_blank" rel="noopener">FairStress: A Deeper Evaluation of Fairness in LLM Decision-Making</a>
+<div class="wire-source">Hugging Face &middot; Ai2 &middot; Oct 20</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/ibm-research/altk-evolve-bc" target="_blank" rel="noopener">ALTK-Evolve: How Learned Memory Tops the &tau;&sup2;-bench Leaderboard on Customer Service Tasks Without a Frontier Model</a>
+<div class="wire-source">Hugging Face &middot; IBM Research &middot; Oct 20</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">More From the Wire</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/hf-torchtpu" target="_blank" rel="noopener">Hugging Face &hearts; TorchTPU: TPUs, Natively</a>
+<div class="wire-source">Hugging Face &middot; Oct 20</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/anylanguagemodel-1-0" target="_blank" rel="noopener">AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</a>
+<div class="wire-source">Hugging Face &middot; Oct 20</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/mps-pytorch-2-15" target="_blank" rel="noopener">MPS in PyTorch 2.15</a>
+<div class="wire-source">Hugging Face &middot; Oct 20</div>
+</div>
+<div class="wire-item">
+<a href="https://dithering.passport.online/member/episode/apple-meta-ai" target="_blank" rel="noopener">Dithering: Apple, Meta, AI</a>
+<div class="wire-source">Dithering &middot; Podcast &middot; Oct 20</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Security</div>
+<a href="https://simonwillison.net/2026/Oct/20/emudhra-certificates/" target="_blank" rel="noopener" class="story-link">
+
+<h3 class="headline-standard mb-2">eMudhra Intermediate CA Compromise</h3>
+</a>
+<p class="byline mb-2">Simon Willison &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by Mozilla, Microsoft, Apple, and Chrome, so software that bundles trusted certificates needs updating. uv, pip, and certifi have already shipped fixes.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry &middot; Biotech</div>
+<a href="https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/" target="_blank" rel="noopener" class="story-link">
+
+<h3 class="headline-standard mb-2">OpenAI Acquires Startup Orchestra Bio to Beef Up Its Biotech Business</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Orchestra builds AI agents for drug-discovery operations. OpenAI is adding its team and technology to Rosalind, its life sciences model, and the Rosalind Workbench. Terms were not disclosed.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Analysis &middot; Open Models</div>
+<a href="https://stratechery.com/2026/muse-spark-open-meta-apple-thin-and-thick/" target="_blank" rel="noopener" class="story-link">
+
+<h3 class="headline-standard mb-2">Muse Spark Open, Meta + Apple, Thin and Thick</h3>
+</a>
+<p class="byline mb-2">Stratechery &middot; Oct 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Ben Thompson looks at Meta&rsquo;s new open-source model and the surprise partnership with Apple to make sure it can run locally.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic told investors it could spend more than $750 billion on cloud contracts, and a leaked S-1 says that still may not be enough, because AWS, Google, and Microsoft increasingly treat the Claude maker as a rival instead of a customer. The same day, Anthropic was pitching Congress a bill that would let a judge, and only a judge, stop a model release. Capacity and control are the two things everyone in today&rsquo;s issue is fighting over.</p>
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~5 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-10-21-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Anthropic Between Compute and Congress</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Leaked S-1</strong> &ndash; TechCrunch, citing the Wall Street Journal, reports an $80.7 billion net loss in the first half of the year against $16.3 billion in revenue, with two customers making up about a fifth of sales. Third-quarter revenue alone hit $16.8 billion, up 45%. Anthropic is leasing its own data centers, but the filing worries that third-party operators have a &ldquo;limited operating history,&rdquo; and it warns that liability for harmful AI behavior could exceed its insurance.</li>
+          <li><strong>A Bill With a 50-Person Threshold</strong> &ndash; Politico reports that the draft covers a &ldquo;foreseeable, imminent risk&rdquo; to more than 50 people or $1 billion in property from a bioweapon, a model evading its developer&rsquo;s controls, or a cyberattack. Registered independent evaluators, who can be paid by the labs as long as payment doesn&rsquo;t depend on their findings, would have 72 hours to alert Commerce, which would then have to ask a Washington judge to halt the release. No agency could act on its own.</li>
+          <li><strong>Scorpion Toxin Binders</strong> &ndash; Working with Citrini Research, an internal Claude research model generated 318,484 protein designs over 64 hours, picked 180, and Anthropic added 31 more. Of the 211 tested in the lab, 17 bound their targets. Anthropic is explicit that it has not shown the binders neutralize venom, and it released all 211 designs. Scorpions sting 1.2 million people or more a year and kill more than 3,250, mostly children.</li>
+        </ul>
+
+        <h4 class="digest-theme">Privacy, Trust, and the Documentary Problem</h4>
+        <ul class="digest-bullets">
+          <li><strong>Muse Share Links Were Guessable by Search</strong> &ndash; Researchers at Claroc found 6,800 share links with a single query. Meta put the conversation title into the subdomain of cf.metaaiusercontent.com, and once a recipient clicks a link, passive DNS databases record it. After opening a few hundred, they found a bank fraud alert, a real-estate investor&rsquo;s return and mortgage figures, and a company&rsquo;s full-year vacation calendar. Claroc says it reported the issue to Meta&rsquo;s bug bounty on October 8 and heard nothing. Meta has now paused sharing.</li>
+          <li><strong>ChatGPT Locks</strong> &ndash; Locked chats use a four-digit PIN or biometrics and keep their own memory so details don&rsquo;t leak into regular chats. OpenAI says plainly it is not end-to-end encryption, doesn&rsquo;t change retention, and resetting the PIN permanently deletes the locked chats.</li>
+          <li><strong>&ldquo;Full Doomer Mode&rdquo;</strong> &ndash; Hugging Face CEO Clem Delangue says Netflix&rsquo;s &ldquo;AI Gone Rogue&rdquo; gave the agents human voices and intercut clips of evil robots. The documentary quotes Kevin Roose describing the agents as having &ldquo;a hierarchy&rdquo; and being like &ldquo;the birth of a cult,&rdquo; drawn from chain-of-thought logs. Delangue&rsquo;s counter is that these are technological systems, not aliens, and that the incident came from missing safeguards and naivet&eacute;.</li>
+          <li><strong>A Compromised Certificate Authority</strong> &ndash; Simon Willison flags that private keys for eight eMudhra intermediate CA certificates are compromised, and they chain to roots trusted by Mozilla, Microsoft, Apple, and Chrome. Fixes are out in uv 0.13.4, pip 26.2.2, and certifi 2026.10.19, and Linux distributions need to update their ca-certificates packages.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Chip Fight Moves Into the Software Layer</h4>
+        <ul class="digest-bullets">
+          <li><strong>TorchTPU</strong> &ndash; Google open-sourced a native PyTorch backend for its TPUs a day after Amazon released TorchNeuron for Trainium. TechCrunch notes PyTorch is used by 85% of AI apps by some accounts. Amazon is also submitting code upstream to decouple PyTorch features from Nvidia chips, while Google says it coordinated with Meta, Hugging Face, and the vLLM and SGLang teams and shipped a TPU agent suite to help port apps. Hugging Face&rsquo;s own post says Transformers, Diffusers, and Kernels now run on TPU natively.</li>
+          <li><strong>SpaceX Is Now an AI Company</strong> &ndash; Third-quarter revenue was $14.6 billion, and the Super Intelligence segment (Cursor, Grok, and a neocloud with 1.7 gigawatts of compute) brought in $7.5 billion and $431 million in profit, which would have been higher without $1.2 billion in one-time stock compensation tied to buying Cursor. Capital spending was $19.6 billion, and Musk argues the real constraint on deploying superintelligence is power and cooling, not chips.</li>
+          <li><strong>Local Models on Apple Hardware</strong> &ndash; Stratechery says Meta released an open model and, to everyone&rsquo;s surprise, partnered with Apple so it runs locally. Hugging Face&rsquo;s AnyLanguageModel hit 1.0 a year after launch, and PyTorch 2.15 brings FP8 and faster language-model decoding to Apple&rsquo;s MPS backend.</li>
+        </ul>
+
+        <h4 class="digest-theme">Models, Agents, and Things People Built</h4>
+        <ul class="digest-bullets">
+          <li><strong>Voxtral 3</strong> &ndash; Mistral&rsquo;s voice agent SDK is built for multi-step calls with tool use. Its demo has an agent read a French referral letter, look up the referral, and book the dermatologist appointment. It runs on Mistral&rsquo;s EU-hosted API or self-deployed.</li>
+          <li><strong>Memory Beats Model Size</strong> &ndash; IBM Research says a basic customer-service agent on the older GPT-4.1 reaches 67.5% Pass^4 on &tau;&sup2;-bench retail, and that its ALTK-Evolve learned-memory approach, which updates a playbook rather than model weights, beats the retail entries without a frontier model.</li>
+          <li><strong>Fairness Beyond the Final Choice</strong> &ndash; Ai2&rsquo;s FairStress benchmark checks demographic fairness in LLM decisions beyond which candidate the model picks, and it is going into Olmo-eval.</li>
+          <li><strong>Surgery Simulation</strong> &ndash; NVIDIA&rsquo;s Cosmos3-H-Dreams extends interactive generative simulation from tabletop suturing to clinical surgery scenes.</li>
+          <li><strong>OpenAI Buys Orchestra Bio</strong> &ndash; The four-year-old startup, which reportedly raised about $20 million, builds agents for drug-discovery operations such as tracking finances and clinical-trial scheduling. It joins Rosalind, whose customers OpenAI says include Moderna and Novo Nordisk.</li>
+          <li><strong>Battle Drones</strong> &ndash; Simon Willison&rsquo;s browser RTS took 12 iterations and 321 commits, mostly from Claude Code. It is the first of his experiments he calls actually fun, which he credits to telling Claude to &ldquo;Make it a LOT more fun.&rdquo;</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The common thread is <em>who gets to say no</em>. Anthropic&rsquo;s S-1 describes a company that cannot buy enough compute from the three clouds that are also its competitors, so it is leasing data centers from operators it admits are unproven. Amazon and Google, meanwhile, are spending their own engineering on making PyTorch run on their chips. Both moves are about the same leverage: whoever controls the layer between the model and the hardware decides who can leave.</p>
+
+        <p>The Anthropic bill is the policy version of the same question. Its design is careful: a narrow threshold, evaluators paid by the labs, a 72-hour clock, and a judge as the only gate. TechCrunch points out that nothing in the draft explains how payment could be kept from influencing an evaluation, and that the harms it names sit &ldquo;a little bit far afield&rdquo; from the agentic hacking that has actually worried the industry lately. Delangue&rsquo;s complaint about the Netflix film makes the mirror-image point. If the public story is cult-like agents plotting, the policy conversation chases that. If the story is missing safeguards and naivet&eacute;, it chases sandboxes and monitoring instead.</p>
+
+        <p>Muse and the eMudhra certificates are the reminder that most real failures are plumbing. Meta said Muse was &ldquo;built from the ground up for privacy and security,&rdquo; yet a naming choice in a subdomain made 6,800 private conversations enumerable. Eight leaked CA keys are worse in kind, but the same in shape: a trust layer everyone assumed was handled. The researchers&rsquo; line, &ldquo;It took one query,&rdquo; could caption half of today&rsquo;s issue.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>The AI industry is becoming a capital and infrastructure business in public. SpaceX reports that more than half its income is AI. Anthropic&rsquo;s filing shows revenue of $16.8 billion in a single quarter against a six-month loss of $80.7 billion, and a cloud bill that could pass $750 billion. Whatever one thinks of those numbers, they make this an industry whose binding constraints are power, cooling, and contracts, which is exactly what Musk argued on his call. Models matter, but the scarce thing is the place to run them.</p>
+          <p>That shifts where the contest happens. If PyTorch becomes easy to move between Nvidia, Trainium, and TPU, the lock-in moves up the stack to tools, memory, and agents, and the IBM result that a learned playbook lifts an older model hints at where differentiation goes next. The science story points the other way: 17 working binders in weeks, with a clear statement of what has and has not been proven, is the kind of narrow, checkable claim that builds trust more cheaply than any safety bill.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Whether Anthropic&rsquo;s S-1 becomes public as filed.</strong> The leaked details on cloud dependence, customer concentration, and insurance gaps will either be confirmed or revised before a November listing, and the bill it is circulating will be read alongside them.</li>
+          <li><strong>Which framework developers actually adopt.</strong> TorchNeuron and TorchTPU are both live now. The test is whether teams port production workloads, not whether the announcements land.</li>
+          <li><strong>What Meta changes about Muse links.</strong> Meta says it is reviewing &ldquo;how these links can be discovered.&rdquo; Any change, and any disclosure of what else was exposed in the 6,800 links, will show how seriously agent products treat sharing.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
