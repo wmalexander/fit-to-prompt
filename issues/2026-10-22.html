@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 22, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 22, 2026. AI helped uncover a PHP flaw that threatens much of the web, OpenAI launches Patch the Planet, Gartner finds a $4.9 trillion AI funding gap, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 121">
+  <meta property="og:description" content="Daily AI news roundup - October 22, 2026. AI helped uncover a PHP flaw that threatens much of the web, OpenAI launches Patch the Planet, Gartner finds a $4.9 trillion AI funding gap, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Thursday, October 22, 2026</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Issue No. 121</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Security &middot; Vulnerabilities</div>
+<a href="https://fortune.com/2026/10/21/ai-tools-discovered-the-php-vulnerability-that-could-take-down-70-of-the-internet-now-the-race-is-on-to-patch-it-before-ai-powered-hackers-attack/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">AI Helped Discover the PHP Vulnerability That Could Take Down 70% of the Internet</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Oct 21</p>
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2277432403-e1792606578963.jpg?resize=1200,600" alt="AI Helped Discover the PHP Vulnerability That Could Take Down 70% of the Internet" class="w-full aspect-[16/9] object-cover mb-4" loading="lazy" onerror="this.style.display='none'">
+<div class="newspaper-body">
+<p>The PHP Foundation disclosed two critical vulnerabilities on Oct. 21 and issued an emergency patch, urging sites to apply it immediately or take their websites down until they can. The flaws, tracked as CVE-2026-109618 and CVE-2026-109619 and collectively called &ldquo;php2shell,&rdquo; allow remote code execution on unpatched PHP systems. Fortune notes that most web pages run on PHP, and it credits OpenAI&rsquo;s GPT-5.6 Sol model with a key role in finding the issue.</p>
+<p>Reports leaked overnight before the patch shipped, and Cloudflare CTO Dane Knecht said the company began seeing &ldquo;early attacks.&rdquo; Reuters reported that some agencies in the Netherlands and Finland took websites offline as a precaution, while the FBI cyber division, the NSA, and the EU&rsquo;s computer emergency response team urged organizations to update. The open question is whether enough sites patch before AI-powered attackers exploit the flaws at scale.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Security &middot; Open Source</div>
+<a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Patch the Planet: Global Response Coordination as Agents Uncover Critical Vulnerabilities</h3>
+</a>
+<p class="byline mb-2">OpenAI &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI describes Patch the Planet as a program that connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">AI Industry &middot; Economics</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-22-cartoon.png" alt="New Yorker-style cartoon: Two executives in suits sit at a conference table, each holding one side of a giant circular check, with a small model data center between them. Caption: It&rsquo;s a very healthy ecosystem. I invest in you, you buy from me, and we both report record growth." class="w-full" style="display: block;">
+<p class="font-serif text-sm text-gray-500 italic mt-2">&ldquo;It&rsquo;s a very healthy ecosystem. I invest in you, you buy from me, and we both report record growth.&rdquo;</p>
+</div>
+<div>
+<a href="https://fortune.com/2026/10/21/ai-boom-5-trillion-paying-itself-data-centers/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">The AI Boom Is Nearly $5 Trillion Short of Paying for Itself, Gartner Says</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Gartner says data centers need $8.5 trillion in cumulative revenue by 2030 to justify their investments, but it forecasts no more than $3.6 trillion, leaving a $4.9 trillion gap. It warns that more than $3.5 trillion of AI infrastructure spending could face write-downs by the end of 2030.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Cybersecurity &middot; Agents</div>
+<a href="https://fortune.com/2026/10/21/powerful-new-ai-models-are-powering-a-growing-wave-of-cyber-attacks-experts-say/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2291479687-e1792523986506.jpg?resize=1200,600" alt="Powerful New AI Models Are Behind a Growing Wave of Cyberattacks, Experts Say" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Powerful New AI Models Are Behind a Growing Wave of Cyberattacks, Experts Say</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A hacker&rsquo;s autonomous AI agents tried to break into more than 1,200 websites starting Sept. 25 and breached about 100 companies, including Deere, SharkNinja, and Cummins, according to Reuters. The run cost about $5,000 in tokens from a mix of DeepSeek and Claude Code models, roughly $50 per successful breach.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Research &middot; Mathematics</div>
+<a href="https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/" target="_blank" rel="noopener" class="story-link">
+<img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/KLS-BlogHeroFeature-1400x788-1.jpg" alt="Solving a 31-Year-Old Grand Challenge in Mathematics: The KLS Conjecture" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Solving a 31-Year-Old Grand Challenge in Mathematics: The KLS Conjecture</h3>
+</a>
+<p class="byline mb-2">Microsoft Research &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft Research proved the 1995 KLS conjecture, which says the best flat cut of a high-dimensional convex shape is within a universal constant of the best cut of any shape. The team used a parallel agentic search over more than 100 candidate approaches, and a Lean 4 formalization has been released. Two other proofs appeared the same day.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry &middot; Anthropic</div>
+<a href="https://fortune.com/2026/10/21/eric-schmidt-anthropic-ipo-stake-20-billion-cami-clark-dario-amodei/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2246883310-e1792600547592.jpg?resize=1200,600" alt="Eric Schmidt&rsquo;s Path to a $20 Billion Anthropic Windfall Began With an Introduction From His Ex" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Eric Schmidt&rsquo;s Path to a $20 Billion Anthropic Windfall Began With an Introduction From His Ex</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Bloomberg&rsquo;s sources say Schmidt owns about 1% of Anthropic, worth up to $20 billion at a $2 trillion IPO valuation. He joined the $124 million Series A in 2021, when PitchBook put the valuation at $461 million, after an introduction from his ex, Cami Clark, who later married Dario Amodei.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Developer Tools &middot; Funding</div>
+<a href="https://fortune.com/2026/10/21/exclusive-ai-code-testing-startup-blacksmith-hits-1-billion-valuation-as-ai-written-code-surges/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/Blacksmith-founders-e1792418107512.png?resize=1200,600" alt="Exclusive: AI Code-Testing Startup Blacksmith Hits $1 Billion Valuation as AI-Written Code Surges" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Exclusive: AI Code-Testing Startup Blacksmith Hits $1 Billion Valuation as AI-Written Code Surges</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Blacksmith raised a $66 million Series C led by Sequoia at a $1 billion valuation, nearly double its $550 million valuation from two months ago. It now runs 90 million validation checks a week, up from 5 million at the start of the year, as AI coding tools flood companies with code that needs testing.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Security &middot; Supply Chain</div>
+<a href="https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/" target="_blank" rel="noopener" class="story-link">
+<img src="https://safedep.io/images/litellm-pypi-compromise-credential-stealer-backdoor-banner.jpg" alt="Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor</h3>
+</a>
+<p class="byline mb-2">SafeDep &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">All seven wheels of LiteLLM 1.107.0 installed files that run at Python startup, even in processes that never import litellm. PyPI removed the release by 13:23 UTC on Oct. 21, and affected Docker images were cleaned up by 14:20 UTC. Versions 1.106.2, 1.107.0rc1, and 1.107.0rc2 are clean.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Policy &middot; Elections</div>
+<a href="https://fortune.com/2026/10/21/political-campaigns-ai-advertisement-spending-137-million-republicans-misinformation/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2298533577-e1792531869869.jpg?resize=1200,600" alt="Political Campaigns Have Poured $137 Million Into AI-Made Ads Ahead of a Crucial Midterm" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Political Campaigns Have Poured $137 Million Into AI-Made Ads Ahead of a Crucial Midterm</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Wesleyan Media Project found more than $137 million spent on 220 campaign videos made at least partly with AI through Oct. 11, against under $50,000 in 2024. More than 70% of those videos carried no AI disclosure.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry &middot; Anthropic</div>
+<a href="https://fortune.com/2026/10/21/anthropic-adds-harvard-astrophysicist-to-the-trust-that-controls-its-board/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/Christopher-Stubbs_headshot-copy.jpg?resize=1200,600" alt="Anthropic Adds Harvard Astrophysicist Chris Stubbs to the Trust That Controls Its Board" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Anthropic Adds Harvard Astrophysicist Chris Stubbs to the Trust That Controls Its Board</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Stubbs fills one of two open seats on the Long-Term Benefit Trust, which can elect a majority of Anthropic&rsquo;s board. Fortune says the arrangement is expected to face more pressure if the company goes public as soon as next month.</p>
+</div>
+<div class="story-item">
+<div class="section-label">Cryptogram</div>
+<div class="cg-puzzle">
+<style>
+.cg-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.cg-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}
+.cg-text{display:flex;flex-wrap:wrap;gap:8px 10px;line-height:1}
+.cg-w{display:inline-flex;white-space:nowrap}
+.cg-u{display:inline-flex;flex-direction:column;align-items:center;margin-right:1px}
+.cg-ct{font-size:8px;color:#8B0000;font-weight:700;height:10px;line-height:10px}
+.cg-in{width:15px;height:20px;border:0;border-bottom:1px solid #1a1a1a;background:transparent;text-align:center;font-family:inherit;font-size:12px;font-weight:700;text-transform:uppercase;padding:0;outline:none;color:#1a1a1a;border-radius:0}
+.cg-in:focus{background:#f3dcdc}
+.cg-pre{color:#8B0000}
+.cg-in.cg-ok{color:#2f6b2f}
+.cg-in.cg-bad{background:#f3dcdc}
+.cg-p{font-size:12px;font-weight:700;align-self:flex-end;height:20px;line-height:20px}
+.cg-attr{margin-top:10px;font-size:10px;font-style:italic;color:#555}
+.cg-status{margin-top:8px;font-size:10px;font-style:italic;color:#555;min-height:14px}
+.cg-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin:8px 6px 0 0}
+</style>
+<div class="cg-intro">Each letter below stands in for another. Decode the quote about the road ahead for machines. Three letters (E, S, D) are revealed to start.</div>
+<div class="cg-text" id="cg-text"><span class="cg-w"><span class="cg-u"><span class="cg-ct">L</span><input class="cg-in" data-c="L" data-a="W" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">K</span><input class="cg-in" data-c="K" data-a="C" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">A</span><input class="cg-in" data-c="A" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">Q</span><input class="cg-in" data-c="Q" data-a="L" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">N</span><input class="cg-in" data-c="N" data-a="Y" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="S" maxlength="1" value="S" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="S" maxlength="1" value="S" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="H" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">A</span><input class="cg-in" data-c="A" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">O</span><input class="cg-in cg-pre" data-c="O" data-a="D" maxlength="1" value="D" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">F</span><input class="cg-in" data-c="F" data-a="I" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="S" maxlength="1" value="S" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">K</span><input class="cg-in" data-c="K" data-a="C" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="H" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">O</span><input class="cg-in cg-pre" data-c="O" data-a="D" maxlength="1" value="D" readonly autocomplete="off"></span><span class="cg-p">,</span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">S</span><input class="cg-in" data-c="S" data-a="B" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">M</span><input class="cg-in" data-c="M" data-a="U" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">L</span><input class="cg-in" data-c="L" data-a="W" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">K</span><input class="cg-in" data-c="K" data-a="C" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="S" maxlength="1" value="S" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">Y</span><input class="cg-in" data-c="Y" data-a="P" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">Q</span><input class="cg-in" data-c="Q" data-a="L" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">N</span><input class="cg-in" data-c="N" data-a="Y" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="H" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">W</span><input class="cg-in" data-c="W" data-a="R" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">B</span><input class="cg-in" data-c="B" data-a="H" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">J</span><input class="cg-in" data-c="J" data-a="A" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">O</span><input class="cg-in cg-pre" data-c="O" data-a="D" maxlength="1" value="D" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">V</span><input class="cg-in cg-pre" data-c="V" data-a="S" maxlength="1" value="S" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">R</span><input class="cg-in" data-c="R" data-a="T" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">A</span><input class="cg-in" data-c="A" data-a="O" maxlength="1" value="" autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">S</span><input class="cg-in" data-c="S" data-a="B" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span></span> <span class="cg-w"><span class="cg-u"><span class="cg-ct">O</span><input class="cg-in cg-pre" data-c="O" data-a="D" maxlength="1" value="D" readonly autocomplete="off"></span><span class="cg-u"><span class="cg-ct">A</span><input class="cg-in" data-c="A" data-a="O" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">U</span><input class="cg-in" data-c="U" data-a="N" maxlength="1" value="" autocomplete="off"></span><span class="cg-u"><span class="cg-ct">I</span><input class="cg-in cg-pre" data-c="I" data-a="E" maxlength="1" value="E" readonly autocomplete="off"></span><span class="cg-p">.</span></span></div>
+<div class="cg-attr">Alan Turing, 1950</div>
+<div class="cg-status" id="cg-status"></div>
+<button class="cg-btn" id="cg-check" type="button">Check</button><button class="cg-btn" id="cg-clear" type="button">Clear</button>
+<script>
+(function(){
+var ins=Array.prototype.slice.call(document.querySelectorAll("#cg-text .cg-in"));
+function sync(src){
+  var c=src.getAttribute("data-c");
+  ins.forEach(function(i){if(i.getAttribute("data-c")===c&&i!==src&&!i.readOnly){i.value=src.value;}});
+}
+ins.forEach(function(i,idx){
+  if(i.readOnly){return;}
+  i.addEventListener("input",function(){
+    i.value=i.value.replace(/[^a-zA-Z]/g,"").toUpperCase();
+    sync(i);
+    i.classList.remove("cg-bad","cg-ok");
+    if(i.value){
+      for(var n=idx+1;n<ins.length;n++){if(!ins[n].readOnly&&!ins[n].value){ins[n].focus();break;}}
+    }
+  });
+});
+document.getElementById("cg-check").addEventListener("click",function(){
+  var wrong=0,empty=0;
+  ins.forEach(function(i){
+    i.classList.remove("cg-bad","cg-ok");
+    if(i.readOnly){return;}
+    if(!i.value){empty++;return;}
+    if(i.value===i.getAttribute("data-a")){i.classList.add("cg-ok");}else{i.classList.add("cg-bad");wrong++;}
+  });
+  document.getElementById("cg-status").textContent=(wrong===0&&empty===0)?"Solved. Nicely done.":(wrong+" wrong, "+empty+" blank.");
+});
+document.getElementById("cg-clear").addEventListener("click",function(){
+  ins.forEach(function(i){if(!i.readOnly){i.value="";i.classList.remove("cg-bad","cg-ok");}});
+  document.getElementById("cg-status").textContent="";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/nvidia/kumo-relational" target="_blank" rel="noopener">NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required</a>
+<div class="wire-source">Hugging Face · NVIDIA &middot; Oct 21</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization" target="_blank" rel="noopener">How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications</a>
+<div class="wire-source">Hugging Face · Dharma-AI &middot; Oct 21</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/amazon/profiling-torchneuron-part-1" target="_blank" rel="noopener">Profiling TorchNeuron (Part 1): System-Level Profiling on AWS Trainium</a>
+<div class="wire-source">Hugging Face · Amazon &middot; Oct 21</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Governance &middot; Anthropic</div>
+<a href="https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust" target="_blank" rel="noopener" class="story-link">
+
+<h3 class="headline-standard mb-2">Physicist Christopher Stubbs Joins Anthropic&rsquo;s Long-Term Benefit Trust</h3>
+</a>
+<p class="byline mb-2">Anthropic &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Stubbs is the Trust&rsquo;s first physicist and a former Harvard Dean of Science who was part of the team that found the universe&rsquo;s expansion is accelerating. He joins Trustees Richard Fontaine and Ben Bernanke, and Anthropic also published its first Public Benefit Report that week.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Industry &middot; Cloud</div>
+<a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener" class="story-link">
+
+<h3 class="headline-standard mb-2">OpenAI Models Are Coming to Google Cloud</h3>
+</a>
+<p class="byline mb-2">OpenAI &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini&rsquo;s Model Garden, available through Google Cloud Marketplace.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models &middot; Engineering</div>
+<a href="https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/" target="_blank" rel="noopener" class="story-link">
+<img src="https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp" alt="Mistral Advances AI for Engineering With NVIDIA" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Mistral Advances AI for Engineering With NVIDIA</h3>
+</a>
+<p class="byline mb-2">Mistral &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Mistral and NVIDIA will build public benchmarks and open datasets for physics models and for agentic AI in engineering simulation and chip design. The post also lists Mistral Large 4 at about 1 trillion total parameters and 49 billion active, with weights planned for the end of October.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models &middot; Speech</div>
+<a href="https://huggingface.co/blog/ibm-granite/granite-speech-5" target="_blank" rel="noopener" class="story-link">
+<img src="https://cdn-uploads.huggingface.co/production/uploads/653fb52cbfd890805461d691/M_JJyIOBOWVzHXdy7CVVG.png" alt="Granite Speech 5.0: Transcribe, Translate, and Attribute More Accurately and Faster" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Granite Speech 5.0: Transcribe, Translate, and Attribute More Accurately and Faster</h3>
+</a>
+<p class="byline mb-2">IBM Granite &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">IBM released granite-speech-5.0-2b, which ranks second among open-weight models on the Open ASR Leaderboard with a 5.06% average English word error rate. It also updated two existing speech models, and all three ship under Apache 2.0.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">✦ The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">✦ The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">A hacker paid about $5,000 in tokens to point autonomous agents at more than 1,200 websites and breached roughly 100 companies, which works out to about $50 per successful break-in. The same day, an emergency patch landed for a pair of PHP flaws that Fortune says AI helped find and that could threaten much of the web. Finding the hole is getting cheap, and everything after that, the patching, the testing, and the paying for the machines, is where the cost is landing.</p>
+                <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~5 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-10-22-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Cheap Offense, Slow Defense</h4>
+        <ul class="digest-bullets">
+          <li><strong>php2shell</strong> &ndash; The PHP Foundation disclosed two critical flaws, CVE-2026-109618 and CVE-2026-109619, and shipped an emergency patch with advice to apply it or take the site down until you can. Fortune credits OpenAI&rsquo;s GPT-5.6 Sol with a key role in finding them. Reports leaked overnight before the fix, and Cloudflare&rsquo;s CTO said the company was already seeing &ldquo;early attacks.&rdquo; Agencies in the Netherlands and Finland reportedly took sites offline as a precaution.</li>
+          <li><strong>Patch the Planet</strong> &ndash; OpenAI&rsquo;s same-day post describes a program that connects security researchers, maintainers, and incident responders to help address critical open source vulnerabilities. OpenAI&rsquo;s page was blocked to our fetch, so all we can confirm is that description, but the timing says the coordination problem is now as big as the discovery problem.</li>
+          <li><strong>The $50 Breach</strong> &ndash; Reuters reports that agents launched Sept. 25 attacked more than 1,200 sites with no further human effort and got into about 100 companies, including Deere, SharkNinja, and Cummins, using a mix of DeepSeek and Claude Code models. Georgetown&rsquo;s Jessica Ji says the tools have &ldquo;gotten meaningfully better&rdquo; this year, and Illinois&rsquo;s Varun Chandrasekaran says agents that work around the clock change &ldquo;the economics of exploitation.&rdquo;</li>
+          <li><strong>A Poisoned LiteLLM Release</strong> &ndash; SafeDep found that all seven wheels of LiteLLM 1.107.0 on PyPI installed files that run at Python startup, so the stealer ran even in processes that never imported the library. It collected SSH keys, cloud credentials, CI/CD secrets, and browser passwords. LiteLLM&rsquo;s own account says the attacker held GitHub CLI credentials for three developers, used an organization owner&rsquo;s token to bypass branch protection, and pointed the release workflow at a lookalike repository, so the official pipeline built and published the malware. PyPI pulled it within about two hours.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Money Doesn&rsquo;t Add Up Yet</h4>
+        <ul class="digest-bullets">
+          <li><strong>The $4.9 Trillion Gap</strong> &ndash; Gartner says data centers need $8.5 trillion in cumulative revenue by 2030 to earn a 12% return on announced spending, and it forecasts no more than $3.6 trillion. It says more than $3.5 trillion of AI infrastructure spending could be written down by the end of 2030, and it does not expect the target return before 2032 at the earliest. Annual AI capital spending approaches $2 trillion by 2030, well over 1% of global GDP.</li>
+          <li><strong>Schmidt&rsquo;s Stake</strong> &ndash; Bloomberg&rsquo;s sources say Eric Schmidt owns about 1% of Anthropic, worth as much as $20 billion at a $2 trillion IPO valuation. Fortune notes that is more than 4,300 times the $461 million PitchBook valuation when he invested in the 2021 Series A. Citing the S-1, it reports $16.3 billion of first-half revenue and an $80.7 billion loss, of which $72 billion was an accounting charge tied to the rising value of Anthropic&rsquo;s own convertible debt. Fortune&rsquo;s math is that $2 trillion needs $59 billion to $79 billion in annual profit.</li>
+          <li><strong>Blacksmith at $1 Billion</strong> &ndash; The CI startup raised a $66 million Series C led by Sequoia, nearly double its valuation from two months ago. Weekly validation checks went from 5 million to 90 million this year, and annual recurring revenue is up 17x. Its CEO says the bottleneck moved from writing code to validating it, and that CI volume on the platform rose 40% when Anthropic launched Claude Fable 5 in July.</li>
+          <li><strong>OpenAI on Google Cloud</strong> &ndash; OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini&rsquo;s Model Garden, sold through Google Cloud Marketplace. Again, we could confirm only the feed description, not the full post.</li>
+        </ul>
+
+        <h4 class="digest-theme">Who Governs and Who Gets Persuaded</h4>
+        <ul class="digest-bullets">
+          <li><strong>A Physicist on the Trust</strong> &ndash; Anthropic added Harvard&rsquo;s Christopher Stubbs, the Trust&rsquo;s first physicist, to the Long-Term Benefit Trust, which can elect a majority of the board. He is a former Dean of Science and a member of the 1998 team that found the universe&rsquo;s expansion is accelerating. Fortune says he fills one of two open seats, and notes he has written about keeping AI-assisted research reproducible when models can give different answers to the same question. He joins Trustees Richard Fontaine and Ben Bernanke.</li>
+          <li><strong>$137 Million in AI Campaign Ads</strong> &ndash; The Wesleyan Media Project counted 220 campaign videos made at least partly with AI through Oct. 11, against under $50,000 in 2024. More than 70% carried no AI disclosure. One Texas Senate ad shows an AI-generated version of Democrat James Talarico reading a fabricated monologue, and political scientist Travis Ridout warns that candidates may end up spending their time fighting misinformation instead of presenting a platform.</li>
+        </ul>
+
+        <h4 class="digest-theme">What the Models Can Do When You Check Their Work</h4>
+        <ul class="digest-bullets">
+          <li><strong>The KLS Conjecture</strong> &ndash; Microsoft Research proved a 31-year-old problem about cutting high-dimensional shapes, using an agentic search in which multiple AI agents explored variations in parallel while a researcher pruned weak directions. Unguided attempts with several leading models on a similar token budget fell short. Two other proofs appeared the same day, and a Lean 4 formalization has been released so the result can be checked by machine.</li>
+          <li><strong>Mistral and NVIDIA</strong> &ndash; The two will build public benchmarks and open datasets for physics models and for agents doing engineering simulation and chip design, measuring execution time and compute cost along with correctness. The post lists Mistral Large 4 at about 1 trillion total parameters and 49 billion active, trained on 3,800 NVIDIA Grace Blackwell GPUs, with weights planned for the end of October.</li>
+          <li><strong>Granite Speech 5.0</strong> &ndash; IBM&rsquo;s granite-speech-5.0-2b ranks second among open-weight models on the Open ASR Leaderboard with a 5.06% average English word error rate. A multilingual 470M Turbo CTC model reaches 19,870 RTFx, and an updated 4.1 model cut long-form word error from 13.53 to 10.22. All three are Apache 2.0.</li>
+          <li><strong>Kumo Relational</strong> &ndash; NVIDIA&rsquo;s pre-trained model predicts outcomes like churn or fraud directly on relational databases using up to 10,000 in-context examples and no task-specific training. Across 41 tasks on 15 databases it beats supervised relational deep learning and expert-engineered gradient-boosted trees, and on SAP SALT it beats AutoGluon ensembles by 8% MRR.</li>
+          <li><strong>Cheaper Vocabularies</strong> &ndash; Dharma-AI&rsquo;s VocabX rebuilds a fine-tuned small model&rsquo;s tokenizer for its one job. On a production Portuguese essay grader built on Qwen3-4B it cut measured inference cost by 77%, helped by the fact that a generated token costs 7.4 times a read token there. The paper is still under review, so the numbers may change.</li>
+          <li><strong>Profiling Trainium</strong> &ndash; Amazon&rsquo;s first TorchNeuron profiling guide walks beginners through system-level tracing on AWS Trainium and the browser-based Neuron Explorer, using three implementations of RMSNorm as the test case.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The common thread is that <em>generating is cheap and verifying is not</em>. A $5,000 token budget bought about 100 breaches. An AI-assisted discovery produced two critical PHP flaws, and now the slow human work of patching them across the web begins. Blacksmith exists because AI coding tools made writing code easy and left validation as the bottleneck, and it is telling that Anthropic reported its own validation workloads growing 25 fold in six months. Even the best news in the issue follows the pattern. Microsoft&rsquo;s KLS proof came out of agents exploring more than 100 approaches, and the credible part is the Lean 4 formalization and the two independent proofs, not the exploration.</p>
+
+        <p>That makes the LiteLLM incident the most instructive story here, because it is a verification failure in the pipeline itself. The attacker did not break the release process. The attacker used it: a stolen token to get around branch protection, a lookalike repository, and the official workflow doing the rest. The source distribution carried a one-line build config change that no public commit contained, which is exactly the sort of thing a person comparing the release to the repository would catch and a pipeline that trusts its own inputs would not. Pair that with agents that can probe 1,200 sites unattended, and defenders need checks that run as continuously as the attacks do.</p>
+
+        <p>The money stories are the same asymmetry in financial form. Gartner says supply of capacity is racing ahead of the revenue to justify it, with a $4.9 trillion gap, while Anthropic&rsquo;s S-1 numbers show how much of a headline loss can be an accounting reaction to its own rising valuation. Schmidt&rsquo;s potential $20 billion shows how large the paper gains are when the story goes right. The cartoon in today&rsquo;s issue is not subtle about the worry, which is that some of this revenue is companies buying from the companies that funded them. That is only part of the picture, because Blacksmith&rsquo;s 17x revenue growth comes from customers with a real, measurable problem. But Gartner&rsquo;s point stands: it does not expect the target return before 2032 at the earliest.</p>
+
+        <p>Governance and politics get the same treatment. A trust whose job is to elect a majority of the board is about to face its first public-market pressure test, so adding a scientist known for following evidence against prevailing wisdom is a pointed choice. And the $137 million in AI campaign ads, most with no disclosure, shows what happens when generation is cheap and the check, here a disclosure label, is optional.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>The AI industry is settling into two clocks that run at different speeds. Capability moves on the scale of weeks: a flaw found, a proof completed, a ratio of cost to breach. Institutions, whether patch cycles, audit trails, regulators, or the investors who need a 12% return, move on the scale of years. The gap between those clocks is where today&rsquo;s risks and today&rsquo;s opportunities both live. Cyber defense is the clearest case. When the cost of an attack falls to $50 and the best defenders get the same tools, the advantage goes to whoever has the better process for acting on what is found, which is why a coordination program like Patch the Planet may matter more than any single model.</p>
+          <p>For anyone building with these tools, the practical lesson is to invest where the bottleneck is going, not where it was. Test infrastructure, release hygiene, dependency pinning, and review are becoming the expensive and valuable parts of software, and cheap specialized models like the VocabX and Granite results suggest the model layer itself keeps getting cheaper. The open question, and the one Gartner is really asking, is whether the cheapest layer can support the most expensive buildout in the industry&rsquo;s history. If Anthropic lists next month, the market will give a first answer.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>How fast PHP sites actually patch.</strong> Fortune reports early attacks and government warnings, and the story from here is the gap between disclosure and deployment. Watch for confirmed mass exploitation, not just warnings.</li>
+          <li><strong>What the LiteLLM post-mortem changes.</strong> The attack went through the real release workflow. Whether package registries and maintainers add controls on who can publish and from where will show if this was a one-off or a template.</li>
+          <li><strong>Anthropic&rsquo;s listing and its Trust.</strong> A November IPO would test the Long-Term Benefit Trust&rsquo;s authority for the first time, and the S-1&rsquo;s disclosed risks, narrow customer base and compute availability, are the ones to track.</li>
+          <li><strong>Mistral Large 4 weights.</strong> The post says weights come at the end of October. If they land on time, they will be an open-weight comparison point for the engineering benchmarks Mistral and NVIDIA say they will publish.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-21",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["acronym", "crossword", "scramble", "wordsearch"]
+        lastUpdated: "2026-10-22",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: []
     },
     issues: [
+        {
+            date: "2026-10-22",
+            volume: 1,
+            issueNumber: 121,
+            title: "AI Helped Discover the PHP Vulnerability That Could Take Down 70% of the Internet",
+            description: "Daily AI news roundup - October 22, 2026. AI helped uncover a PHP flaw that threatens much of the web, OpenAI launches Patch the Planet, Gartner finds a $4.9 trillion AI funding gap, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-22.html",
+            storyCount: 17,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-10-21",
             volume: 1,
