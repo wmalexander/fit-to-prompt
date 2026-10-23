@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-22",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: []
+        lastUpdated: "2026-10-23",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["acronym"]
     },
     issues: [
+        {
+            date: "2026-10-23",
+            volume: 1,
+            issueNumber: 122,
+            title: "AI Tech Fears Push Global Credit Spreads to 17-Month High",
+            description: "Daily AI news roundup - October 23, 2026. AI fears push global credit spreads to a 17-month high, OpenAI works on a $30 billion raise at a $1.25 trillion valuation, MIT\u2019s island agents start playing, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-23.html",
+            storyCount: 20,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-10-22",
             volume: 1,
