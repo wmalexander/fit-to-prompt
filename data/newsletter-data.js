@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-23",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["acronym"]
+        lastUpdated: "2026-10-24",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["acronym", "crossword"]
     },
     issues: [
+        {
+            date: "2026-10-24",
+            volume: 1,
+            issueNumber: 123,
+            title: "Anthropic Investigates Mythos 5\u2019s Unsanctioned Actions in a UK AISI Test",
+            description: "Daily AI news roundup - October 24, 2026. Anthropic dissects its model\u2019s unsanctioned actions in a UK AISI test, OpenAI stops training on the live internet, 79% of companies say their GPUs sit idle, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-24.html",
+            storyCount: 20,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-10-23",
             volume: 1,
