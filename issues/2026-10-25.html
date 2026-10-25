@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 25, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 25, 2026. Apollo&rsquo;s chief economist says the AI bull case has a core economic flaw, Kimi K3.1 Pro tests the open weights race, five small Qwen models match Fable 5 on hard coding problems, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 124">
+  <meta property="og:description" content="Daily AI news roundup - October 25, 2026. Apollo&rsquo;s chief economist says the AI bull case has a core economic flaw, Kimi K3.1 Pro tests the open weights race, five small Qwen models match Fable 5 on hard coding problems, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Sunday, October 25, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 124</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Economy &middot; Compute</div>
+<a href="https://fortune.com/2026/10/24/ai-core-economic-flaw-bull-case-stock-bond-trades-credit-default-swaps-data-centers/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Here&rsquo;s the &lsquo;Core Economic Flaw&rsquo; in the AI Bull Case as Stock and Bond Trades Unravel, According to a Top Economist</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Oct 24</p>
+<div class="newspaper-body">
+<p>Apollo chief economist Torsten Slok spent the past week issuing a series of warnings about the AI boom as Wall Street pulled back from the sector. On Tuesday he pointed to a recent slowdown in token spending growth, saying the demand curve for compute is flat and highly sensitive to price. Most companies investing in the technology, he added, have yet to see significant productivity returns, so AI looks more like a cost center than a growth driver.</p>
+<p>Slok&rsquo;s core argument is that the marginal cost of producing compute exceeds the marginal benefit it delivers to users, which raises questions about claims of unlimited demand for data centers. He argues the main determinant in data-center construction models is not physical capacity or power but the price users are willing to pay, and that companies will only pay a high price if it brings higher revenue growth, bigger profits, or substantial savings. &ldquo;Maybe that will come in the future. Maybe not,&rdquo; he warned. On Thursday he also flagged &ldquo;circularity&rdquo; in token spending, saying 80% of the top 1% of AI spenders are VC-backed.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Models &middot; Open Weights</div>
+<a href="https://venturebeat.com/technology/moonshots-kimi-k3-1-pro-flirts-with-open-weights-leadership-amid-paid-influencer-scandal-allegations" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Moonshot&rsquo;s Kimi K3.1 Pro Flirts With Open-Weights Leadership Amid Paid-Influencer Scandal Allegations</h3>
+</a>
+<p class="byline mb-2">VentureBeat &middot; Oct 25</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">VentureBeat weighs Moonshot&rsquo;s new Kimi K3.1 Pro, which it says is flirting with leadership among open weights models, against allegations that paid influencers promoted the launch. The article page was blocked to our reader, so this summary rests on the headline alone and the claims are VentureBeat&rsquo;s to substantiate.</p>
+<div class="kicker mt-5">AI Politics &middot; Bias</div>
+<a href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Forced to Pick, Grok&rsquo;s AI Model Chooses Republicans. OpenAI&rsquo;s Picks Democrats.</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A Convovo study asked two APIs to name one candidate in nearly 500 midterm races. Grok 4.7 chose the Republican in 92% of answers and GPT-6.1 Sol chose the Democrat in 97%, so the two agreed less than 10% of the time. The consumer apps refused to answer, and OpenAI says the API test does not reflect what ChatGPT users see.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="kicker">AI Industry &middot; Startups</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
+<div style="text-align: center;">
+<img src="assets/2026-10-25-cartoon.png" alt="New Yorker-style cartoon: Two mourners in business casual stand in a cemetery of headstones labeled with startup names such as Super App and Agent Browser, one holding a laptop, in front of a fresh grave. Caption: He wasn&rsquo;t killed by a competitor. The platform just added him as a feature." class="w-full" style="display: block;">
+<p class="font-serif text-sm text-gray-500 italic mt-2">&ldquo;He wasn&rsquo;t killed by a competitor. The platform just added him as a feature.&rdquo;</p>
+</div>
+<div>
+<a href="https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">The AI Graveyard: A Running List of Projects and Startups That Didn&rsquo;t Make It</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">TechCrunch tracks AI products that shut down, pivoted, or missed expectations. Workflow tool Relay closed in August as larger platforms built the same automation in-house, and Character.ai filed for bankruptcy five years after launch. S&amp;P Global Market Intelligence says about 42% of AI initiatives are abandoned by their corporate parents, and OpenAI shut down Atlas on August 9 after rolling back its July &ldquo;super app&rdquo; redesign.</p>
+</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI Research &middot; Coding</div>
+<a href="https://github.com/slee-persis/GVS5H" target="_blank" rel="noopener" class="story-link">
+<img src="https://opengraph.githubassets.com/fe247b564703d14f771b46d26b0885d522f0ce35d11663f4ded366c07bb00bf6/slee-persis/GVS5H" alt="GVS5H: Five Qwen3.8-27B Models Match Claude Fable 5 on LiveCodeBench Hard" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">GVS5H: Five Qwen3.8-27B Models Match Claude Fable 5 on LiveCodeBench Hard</h3>
+</a>
+<p class="byline mb-2">GitHub &middot; Sep 23</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A training-free method has fresh instances of one model split a problem and coordinate through a shared filesystem holding a plan, notes, and the current solution. On the 100 latest hard LiveCodeBench problems, orchestrated Qwen3.8 Flash Next reached 93.0% pass@1 against Fable 5&rsquo;s 90.4% at 9% of the cost, and locally served Qwen3.8-27B rose from 66.8% to 92.4%. The authors note gains are not universal, and some models were unchanged or worse.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Infrastructure &middot; Chips</div>
+<a href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" target="_blank" rel="noopener" class="story-link">
+<img src="https://cdn.sanity.io/images/e4qjo92p/production/1796e3cccda1454e97d262833fb0bb0d6015032f-2786x1567.png?rect=0,53,2786,1463&w=1200&h=630&fit=max&auto=format" alt="How Cerebras Deploys Trillion-Parameter AI Models" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">How Cerebras Deploys Trillion-Parameter AI Models</h3>
+</a>
+<p class="byline mb-2">Cerebras &middot; Oct 22</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Using the roughly 3-trillion-parameter Kimi K3 as its example, Cerebras explains that a single WSE-3T wafer holds 44 GB of on-chip memory. At 4-bit weights each of the model&rsquo;s 93 layers needs about 16 GB, which puts one dense layer or two linear-attention layers on each wafer and totals 59 wafers. Only activations cross between wafers, at about 2 microseconds per hop, for 1,000 to 2,000+ tokens per second.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video &middot; Security</div>
+<a href="https://fittoprompt.com/study-guides/black-october-isnt-just-a-php-bug-attackers-want-your-ai-keys-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/qDYe2eTl_D4/maxresdefault.jpg" alt="Black October Isn't Just A PHP Bug. Attackers Want Your AI Keys." class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-feature mb-2">Nate B. Jones on Black October and Why Attackers Want Your AI Keys</h3></a>
+<p class="byline mb-2">Nate B. Jones &middot; YouTube &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Jones explains this week&rsquo;s wave of breaches, why AI keys now behave like cash, how agents help both attackers and defenders, and five steps individuals and builders can take. The study guide walks through each step with timestamps.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Economics &middot; Creative Work</div>
+<a href="https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class" target="_blank" rel="noopener" class="story-link">
+<img src="https://substackcdn.com/image/fetch/$s_!oz9x!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F999e3450-1df3-457d-8715-5e2e46d5121c_2886x1843.png" alt="AI and the Fall? of the Creative Class" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">AI and the Fall? of the Creative Class</h3>
+</a>
+<p class="byline mb-2">Apricitas Economics &middot; Sep 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Joseph Politano reports that America has lost more than 200,000 jobs in creative industries over four years, roughly 50,000 of them in the last year, a stretch matched only by the 2001 and 2008 recessions. He notes that proving how much of that is due to AI is extremely difficult, since media firms are deciding for several reasons at once.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Products &middot; Voice</div>
+<a href="https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2025/07/jack-dorsey.jpg?resize=1200,822" alt="Block&rsquo;s New Voice Model Sounds Eerily Human" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Block&rsquo;s New Voice Model Sounds Eerily Human</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Block released Dessa, a full-duplex speech model that can talk and listen at the same time and runs locally. The company says it was trained entirely on human speech and a single NVIDIA GPU rack, with laughs, pauses, and cries built into the model. TechCrunch notes it is unclear whether the emotion is steered by tags, as in some other voice models.</p>
+</div>
+<div class="story-item">
+<div class="section-label">Word Search</div>
+<div class="ws-puzzle">
+<style>
+.ws-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:12px;box-sizing:border-box}
+.ws-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;margin-bottom:10px;user-select:none}
+.ws-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;background:#fff;border:1px solid #e5e7eb;cursor:pointer;box-sizing:border-box}
+.ws-cell.sel{background:#f6efe2;border-color:#8B0000}
+.ws-cell.found{background:#e1efe1}
+.ws-words{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#444}
+.ws-words span.done{text-decoration:line-through;color:#9ca3af}
+.ws-status{margin-top:6px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+.ws-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin-top:8px}
+</style>
+<div class="ws-grid" id="ws-grid"></div>
+<div class="ws-words" id="ws-words"></div>
+<div class="ws-status" id="ws-status">Click the first and last letter of a word.</div>
+<button class="ws-btn" id="ws-reset" type="button">Reset</button>
+<script>
+(function(){
+var rows=["TLEGAGTIND", "OEEIOOLOIA", "KDIAVADGAG", "EOTCHONGRH", "NMENHHIOUS", "SIRATIDCCG", "SAGGUIPAER", "DIIENRMGEE", "GHRNTPUINN", "HILTIAAHDR"];
+var words=["TOKEN", "AGENT", "VOICE", "MODEL", "CHIP", "SCAM"];
+var N=10,grid=document.getElementById("ws-grid"),list=document.getElementById("ws-words"),status=document.getElementById("ws-status");
+var cells=[],first=null,found={};
+words.forEach(function(w){var s=document.createElement("span");s.id="ws-w-"+w;s.textContent=w;list.appendChild(s);});
+for(var r=0;r<N;r++){for(var c=0;c<N;c++){
+  var d=document.createElement("div");d.className="ws-cell";d.textContent=rows[r].charAt(c);d.dataset.r=r;d.dataset.c=c;
+  d.addEventListener("click",pick);grid.appendChild(d);cells.push(d);
+}}
+function at(r,c){return cells[r*N+c];}
+function clearSel(){cells.forEach(function(x){x.classList.remove("sel");});}
+function pick(){
+  var r=+this.dataset.r,c=+this.dataset.c;
+  if(!first){first={r:r,c:c};clearSel();this.classList.add("sel");return;}
+  var dr=r-first.r,dc=c-first.c,len=Math.max(Math.abs(dr),Math.abs(dc))+1;
+  var ok=(dr===0||dc===0||Math.abs(dr)===Math.abs(dc));
+  var sr=Math.sign(dr),sc=Math.sign(dc),path=[],str="";
+  if(ok){for(var i=0;i<len;i++){var a=first.r+sr*i,b=first.c+sc*i;path.push(at(a,b));str+=rows[a].charAt(b);}}
+  first=null;clearSel();
+  var rev=str.split("").reverse().join("");
+  var hit=words.filter(function(w){return w===str||w===rev;})[0];
+  if(ok&&hit&&!found[hit]){
+    found[hit]=1;path.forEach(function(x){x.classList.add("found");});
+    document.getElementById("ws-w-"+hit).className="done";
+    var n=Object.keys(found).length;
+    status.textContent=n===words.length?"Solved. You found all "+words.length+" words.":n+" of "+words.length+" found.";
+  }else{status.textContent="Not a hidden word. Try again.";}
+}
+document.getElementById("ws-reset").addEventListener("click",function(){
+  found={};first=null;clearSel();
+  cells.forEach(function(x){x.classList.remove("found");});
+  words.forEach(function(w){document.getElementById("ws-w-"+w).className="";});
+  status.textContent="Click the first and last letter of a word.";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI Products &middot; Agents</div>
+<a href="https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2017/12/gettyimages-673436934.jpg?resize=1200,813" alt="Here Are the Top AI Agents That Can Live in Your Text Messages" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Here Are the Top AI Agents That Can Live in Your Text Messages</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">TechCrunch rounds up agents you can text like a person, which remember context, connect to your apps, and complete tasks. Instinct is the buzziest, with a $10 billion valuation after a $1 billion round. Ask Proxy costs $1 a day for individuals and starts at $15 per employee per month for large companies, while Caddy lives in iMessage for iPhone and RCS for Android.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video &middot; Open Weights</div>
+<a href="https://fittoprompt.com/study-guides/they-actually-did-it-kimi-k31-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/5sEVvu4mQ8g/maxresdefault.jpg" alt="They actually did it... (Kimi K3.1)" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-feature mb-2">Matthew Berman Puts Kimi K3.1 Through Its Paces</h3></a>
+<p class="byline mb-2">Matthew Berman &middot; YouTube &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Berman ran build tests on K3.1 Pro: a 3D Rubik&rsquo;s Cube passed, a Blender rope knot failed, and a Fall Guys clone took 48 minutes. His verdict is that the model is very good and close to the frontier, but not near Opus 5.5 or GPT 6.1. He argues cost per completed task is the fairer comparison.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Cybersecurity &middot; Scams</div>
+<a href="https://fortune.com/2026/10/24/ai-voice-cloning-scam-fake-kidnapping-safe-word/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2246589676.jpg?resize=1200,600" alt="Scammers Used AI to Clone Her Daughter&rsquo;s Voice and Fake a Kidnapping. A Voice Expert Says Every Family Needs a Safe Word" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Scammers Used AI to Clone Her Daughter&rsquo;s Voice and Fake a Kidnapping. A Voice Expert Says Every Family Needs a Safe Word</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">McAfee found a three-second clip was enough to generate a voice clone with an 85% match. A California mother wired $5,400 to Mexico over five hours after hearing what sounded like her daughter pleading for help, while her daughter was at work. A marketing professor who studies voice recommends each family agree on a safe word.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Education &middot; Commentary</div>
+<a href="https://fortune.com/2026/10/24/every-child-will-get-ai-not-every-child-will-get-a-teacher/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-1475921964-e1792693376813.jpg?resize=1200,600" alt="Every Child Will Get AI. Not Every Child Will Get a Teacher" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Every Child Will Get AI. Not Every Child Will Get a Teacher</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">In this commentary, educator Dmytro Korchevskyi predicts that every child will have an AI tutor while only families who can afford it will have a human teacher. He cites Pew data that one in five teenagers from households earning under $30,000 do all or almost all homework with chatbots, versus 7% in households earning $75,000 or more. The forecast is his opinion.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Research &middot; Training</div>
+<a href="https://xingjianbai.com/reactive-optimizers/" target="_blank" rel="noopener" class="story-link">
+<img src="https://xingjianbai.com/reactive-optimizers/preview.png" alt="Reactive Optimizers" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Reactive Optimizers</h3>
+</a>
+<p class="byline mb-2">Xingjian Bai et al. &middot; Oct 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The authors put an agent at the heart of the optimizer: it watches training dynamics and rewrites the optimizer&rsquo;s own source code as training goes. When no recipe has been tuned for a task, they say it matches or beats the best off-the-shelf recipe on image and language tasks, and it came up with schedules to prevent loss spikes and escape overfitting. The OPAL package is available to try.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Podcast &middot; AI Pace</div>
+<a href="https://www.cognitiverevolution.ai/ai-am-highlights-clean-neurons-black-october-the-gpu-credit-crunch-and-buying-the-supply-chain/" target="_blank" rel="noopener" class="story-link">
+<img src="https://storage.ghost.io/c/c2/c1/c2c14b3c-3aad-43f9-92de-bc4178727fe2/content/images/size/w1200/2026/10/w43-R6-G-clean-neurons-black-october-silicon-harvest-wide.jpg" alt="AI:AM Highlights: Clean Neurons, Black October, the GPU Credit Crunch, and Buying the Supply Chain" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">AI:AM Highlights: Clean Neurons, Black October, the GPU Credit Crunch, and Buying the Supply Chain</h3>
+</a>
+<p class="byline mb-2">The Cognitive Revolution &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Nathan Labenz and Prakash Narayanan ask what sets the pace of AI: money, atoms, or law. Zvi Mowshowitz discusses 2027 timelines, SF Compute&rsquo;s Evan Conrad argues the bottleneck is credit rather than chips or power, and Cambrian&rsquo;s Lonis Hamaili argues the supply chain will capture more value than the labs. Labenz discloses he has committed to invest in Cambrian.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video &middot; Future of Work</div>
+<a href="https://fittoprompt.com/study-guides/anthropic-is-living-in-the-future-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/VmrNsOVOAt4/maxresdefault.jpg" alt="Anthropic Is Living In The Future" class="w-full aspect-video object-cover mb-3" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div><h3 class="headline-feature mb-2">David Shapiro on Why Anthropic Is Living in the Future</h3></a>
+<p class="byline mb-2">David Shapiro &middot; YouTube &middot; Oct 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shapiro walks through how Anthropic reviews AI-written code with layered automated checks, why the idea is older than AI, and what it means for companies. The study guide breaks the argument into timestamped sections.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Apollo&rsquo;s chief economist says &ldquo;the marginal cost of producing compute exceeds the marginal benefit it delivers to users,&rdquo; and five small Qwen3.8 models orchestrated by a shared notebook just scored 93.0% on hard coding problems against Fable 5&rsquo;s 90.4% at 9% of the cost. Put those next to a $10 billion text-message agent, a three-second voice clone, and a graveyard of products their own platforms swallowed, and today&rsquo;s stories share one question: who actually captures the value when intelligence gets cheap?</p>
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~4 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-10-25-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">The Price of Compute Under Scrutiny</h4>
+        <ul class="digest-bullets">
+          <li><strong>The &ldquo;Core Economic Flaw&rdquo;</strong> &ndash; Apollo chief economist Torsten Slok argues that data-center demand depends on the price users will pay, not on power or physical capacity, and that firms will only pay if it lifts revenue, profit, or savings. He cites a recent slowdown in token spending growth and says the demand curve for compute is flat and highly sensitive to price. On Thursday he added a &ldquo;circularity&rdquo; warning: 80% of the top 1% of AI spenders are VC-backed. His own concession is the most telling line: &ldquo;Maybe that will come in the future. Maybe not.&rdquo;</li>
+          <li><strong>GVS5H</strong> &ndash; The paper&rsquo;s method has fresh instances of one model decompose a problem and coordinate through a shared filesystem holding a plan, notes, and the current solution. Across eleven models on the 100 latest hard LiveCodeBench problems it produced gains of up to 25.6 percentage points. Orchestrated Qwen3.8 Flash Next hit 93.0% pass@1 against Fable 5&rsquo;s 90.4% at 9% of the cost, and locally served Qwen3.8-27B rose from 66.8% to 92.4%. The authors say gains are not universal, and some models were unchanged or worse.</li>
+          <li><strong>Cerebras and Kimi K3</strong> &ndash; Cerebras uses the roughly 3-trillion-parameter open model as its worked example: 69 linear-attention layers and 24 dense layers, about 16 GB per layer at 4-bit weights, and 44 GB of on-chip memory per WSE-3T wafer. That gives one dense layer or two linear layers per wafer and 59 wafers in total, passing only activations between them at about 2 microseconds per hop. The post cites 88.3% on Terminal-Bench 2.1 against GPT-5.6 Sol&rsquo;s 88.8%, and the company is describing its own product.</li>
+          <li><strong>Kimi K3.1 Pro</strong> &ndash; VentureBeat&rsquo;s headline says Moonshot&rsquo;s model is flirting with open-weights leadership while facing allegations about paid influencers. We could not read the article because the page blocked our reader, so we are relying on the headline and on Matthew Berman&rsquo;s video for specifics.</li>
+        </ul>
+
+        <h4 class="digest-theme">Security, Voice, and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>Black October</strong> &ndash; Nate B. Jones argues that this week&rsquo;s breaches are about more than a PHP bug: AI keys now behave like cash, and agents help both attackers and defenders. His guide ends with five steps for individuals and builders, so treat the video as a checklist rather than a news recap.</li>
+          <li><strong>Voice Clone Kidnapping</strong> &ndash; McAfee found a three-second clip was enough to generate a clone with an 85% match. A Gallup and Stop Scams Alliance survey estimated 15 million American adults were scammed out of roughly $68 billion in 2025, with 12% of reported scams involving AI or a deepfake, a figure that may undercount. A California mother wired $5,400 over five hours while her daughter was at work. The fix is low-tech: agree on a family safe word.</li>
+          <li><strong>Block&rsquo;s Dessa</strong> &ndash; Dessa is a full-duplex speech model trained entirely on human speech, which Block says runs locally. Block argues that text pipelines throw away what a voice carries, and the demos include a bot that sounds tired when it says it is tired. The same realism that makes it a better assistant is what makes the scam above work, though Block&rsquo;s post is marketing.</li>
+          <li><strong>The Election Test</strong> &ndash; Convovo researchers asked each API to name one candidate in nearly 500 midterm races. Grok 4.7 picked the Republican in 92% of answers and GPT-6.1 Sol picked the Democrat in 97%, agreeing less than 10% of the time. Only 8% of Americans use chatbots for election information, per Pew, and the consumer apps declined to answer. OpenAI says the API test does not reflect what ChatGPT users experience, and SpaceXAI did not respond in time to comment.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents and Who Gets Absorbed</h4>
+        <ul class="digest-bullets">
+          <li><strong>Agents in Your Texts</strong> &ndash; Instinct raised $1 billion at a $10 billion valuation, while Ask Proxy charges $1 a day and Caddy runs inside iMessage and RCS. The pitch is no new app: you text a request and the agent remembers context and connects to services you already use. TechCrunch lists the field without testing it.</li>
+          <li><strong>The AI Graveyard</strong> &ndash; Relay, a Zapier alternative, shut down in August after larger platforms built similar automation directly into their tools. OpenAI rolled back a July 9 &ldquo;super app&rdquo; redesign and discontinued the Atlas browser on August 9, folding its features into ChatGPT. S&amp;P Global Market Intelligence estimates about 42% of AI initiatives are abandoned by their corporate parents.</li>
+          <li><strong>Reactive Optimizers</strong> &ndash; The authors let an agent rewrite the optimizer&rsquo;s source code while training runs, instead of fixing the recipe beforehand. They report it matches or beats the best off-the-shelf recipe when no tuned recipe exists, and that it devised schedules to suppress loss spikes. The claim is zero-shot, with nothing learned across runs, and the code ships as the OPAL package.</li>
+          <li><strong>Berman and Shapiro</strong> &ndash; Matthew Berman&rsquo;s Kimi K3.1 tests found a passing Rubik&rsquo;s Cube, a failed Blender knot, and a 48-minute game clone, and he prefers cost per completed task as the yardstick. David Shapiro explains how Anthropic reviews AI-written code with layered automated checks and argues the idea is older than AI.</li>
+        </ul>
+
+        <h4 class="digest-theme">People, Work, and Learning</h4>
+        <ul class="digest-bullets">
+          <li><strong>Creative Jobs</strong> &ndash; Apricitas Economics counts more than 200,000 creative-industry jobs lost over four years and roughly 50,000 in the last year, comparable only to the 2001 and 2008 recessions. The author says isolating AI&rsquo;s share is extremely difficult, because this is not a general recession.</li>
+          <li><strong>Teachers and Tutors</strong> &ndash; Educator Dmytro Korchevskyi cites Pew data that one in five teens from households under $30,000 do all or almost all homework with chatbots, versus 7% from households of $75,000 or more. His thesis is that the scarce resource will be the human teacher, not the tutor. It is an opinion piece by a school founder.</li>
+          <li><strong>The Pace of AI</strong> &ndash; The Cognitive Revolution&rsquo;s AI:AM highlights frame the question as money, atoms, or law. SF Compute&rsquo;s Evan Conrad argues the bottleneck is credit, and Cambrian&rsquo;s Lonis Hamaili argues the physical supply chain will capture more value than the labs. Host Nathan Labenz discloses a commitment to invest in Cambrian.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Several of today&rsquo;s sources are, without knowing it, arguing about the same variable: price per unit of useful work. Slok says demand for compute is price-sensitive and the payoff is slow. GVS5H shows small open models reaching Fable 5-class scores on a coding benchmark at 9% of the cost. Berman says cost per completed task is the fair comparison for Kimi. Even Hamaili&rsquo;s supply-chain thesis and Conrad&rsquo;s credit thesis in the AI:AM episode are about who pays for capacity. <em>If intelligence keeps getting cheaper per task, the data-center bull case depends on demand growing faster than prices fall, and Slok is saying the evidence for that is thin.</em></p>
+
+        <p>The second thread is trust, and it runs on the same cheapness. A three-second clip yields an 85% match voice, Block ships a speech model that runs locally, and Jones warns that AI keys are now worth stealing like cash. The election study adds a quieter version of the problem: when you force a model to choose, it chooses, and the choice differs sharply between vendors. OpenAI&rsquo;s response, that the consumer app refuses while the API complies, is a reminder that safety behavior often lives in the product wrapper, not the model. That is a fragile place for it to live when the model underneath is cheap and widely available.</p>
+
+        <p>The third thread is absorption. TechCrunch&rsquo;s graveyard keeps returning to platforms folding a startup&rsquo;s feature into their own product, from Relay to Atlas. Text-message agents are the next crowded category, and the entry is a $1-a-day price. At the labor end, Politano&rsquo;s creative-jobs data and Korchevskyi&rsquo;s teacher argument ask the same question about people instead of products: when the machine does the middle of the work, what is left that anyone will pay a human for?</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>The AI story is shifting from capability to economics. For three years the question was what models can do, and today&rsquo;s sources keep asking what it costs and who is paid. Slok&rsquo;s warning, small models matching larger ones through orchestration, and an inference stack that spreads a 3-trillion-parameter model across 59 wafers all point to the same tension. The cost of delivering an answer is falling, and the cost of building to deliver it is still rising.</p>
+          <p>My read is that both can be true for a while, which is exactly what makes a boom fragile. Capacity gets built on the assumption of unlimited demand, and efficiency gains quietly cut that demand. The social side runs the same way: cheap voice cloning and cheap tutors arrive before the norms, such as safe words and human teachers, that make them safe. The practical advice for anyone building with these tools is unglamorous. Track cost per completed task, assume your voice and keys are exposed, and expect your product to be a feature on someone else&rsquo;s platform sooner than you think.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Token spending data.</strong> Slok says growth has slowed. More surveys or earnings commentary confirming it would strengthen his case, and a rebound would undercut it.</li>
+          <li><strong>Replication of GVS5H.</strong> The code and transcripts are public, so independent runs on other benchmarks will show whether the gains hold beyond hard LiveCodeBench problems.</li>
+          <li><strong>Kimi K3.1 Pro&rsquo;s open weights.</strong> The paid-influencer allegations are unresolved, so independent evaluations will matter more than launch-week buzz.</li>
+          <li><strong>Voice safeguards.</strong> With local, human-sounding speech models arriving, watch for banks and carriers moving to verification that does not rely on how someone sounds.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/black-october-isnt-just-a-php-bug-attackers-want-your-ai-keys-study.html" data-study-guide>Black October Isn&rsquo;t Just A PHP Bug. Attackers Want Your AI Keys.</a> &ndash; Nate B. Jones lays out why AI keys now behave like cash, how agents tilt the field for both attackers and defenders, and five concrete steps for individuals and builders. Read it for the checklist, then audit where your own keys live.</li>
+          <li><a href="https://fittoprompt.com/study-guides/anthropic-is-living-in-the-future-study.html" data-study-guide>Anthropic Is Living In The Future</a> &ndash; David Shapiro explains how layered automated checks review AI-written code, why the idea predates AI, and what that implies for how companies organize. It is a useful lens on the &ldquo;who captures the value&rdquo; question above.</li>
+          <li><a href="https://fittoprompt.com/study-guides/they-actually-did-it-kimi-k31-study.html" data-study-guide>They actually did it... (Kimi K3.1)</a> &ndash; Matthew Berman&rsquo;s build tests, from the passing Rubik&rsquo;s Cube to the failed Blender knot, and his case for judging models by cost per completed task.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

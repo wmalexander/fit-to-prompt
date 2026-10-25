@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-24",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["acronym", "crossword"]
+        lastUpdated: "2026-10-25",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: ["acronym", "crossword", "wordsearch"]
     },
     issues: [
+        {
+            date: "2026-10-25",
+            volume: 1,
+            issueNumber: 124,
+            title: "Apollo Economist Flags a \u201CCore Economic Flaw\u201D in the AI Bull Case",
+            description: "Daily AI news roundup - October 25, 2026. Apollo\u2019s chief economist says the AI bull case has a core economic flaw, Kimi K3.1 Pro tests the open weights race, five small Qwen models match Fable 5 on hard coding problems, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-25.html",
+            storyCount: 16,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-10-24",
             volume: 1,
