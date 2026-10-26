@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-25",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["acronym", "crossword", "wordsearch"]
+        lastUpdated: "2026-10-26",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["acronym", "crossword", "wordsearch", "scramble"]
     },
     issues: [
+        {
+            date: "2026-10-26",
+            volume: 1,
+            issueNumber: 125,
+            title: "As the U.S. and China Divide the World Into Rival AI Blocs, \u201CSwing Countries\u201D Gain Leverage",
+            description: "Daily AI news roundup - October 26, 2026. The U.S. and China split the world into rival AI blocs, an Apollo economist sees \u201Czero financial payoff\u201D outside tech, Grok\u2019s AI-made Odyssey falls flat, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-26.html",
+            storyCount: 6,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-10-25",
             volume: 1,
