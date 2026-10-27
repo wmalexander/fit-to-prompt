@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-26",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["acronym", "crossword", "wordsearch", "scramble"]
+        lastUpdated: "2026-10-27",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["acronym", "crossword", "wordsearch", "scramble", "cryptogram"]
     },
     issues: [
+        {
+            date: "2026-10-27",
+            volume: 1,
+            issueNumber: 126,
+            title: "Anthropic Officially Files for Its Public Debut",
+            description: "Daily AI news roundup - October 27, 2026. Anthropic files for its IPO, a closer look at its enterprise playbook and founder-control structure, OpenAI’s always-on dots assistant, SpaceX’s $40 billion GPU financing, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-27.html",
+            storyCount: 19,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-10-26",
             volume: 1,
