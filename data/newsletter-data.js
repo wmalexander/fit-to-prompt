@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-27",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["acronym", "crossword", "wordsearch", "scramble", "cryptogram"]
+        lastUpdated: "2026-10-28",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["acronym"]
     },
     issues: [
+        {
+            date: "2026-10-28",
+            volume: 1,
+            issueNumber: 127,
+            title: "Google DeepMind Unveils Genie 4, a World Simulator With Native Audio and Dialogue",
+            description: "Daily AI news roundup - October 28, 2026. Google DeepMind unveils Genie 4, fresh scrutiny of Anthropic\u2019s S-1, Claude\u2019s early drug development results, a trial showing analysts follow their AI agents, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-28.html",
+            storyCount: 20,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-10-27",
             volume: 1,

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 28, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 28, 2026. Google DeepMind unveils Genie 4, fresh scrutiny of Anthropic&rsquo;s S-1, Claude&rsquo;s early drug development results, a trial showing analysts follow their AI agents, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 127">
+  <meta property="og:description" content="Daily AI news roundup - October 28, 2026. Google DeepMind unveils Genie 4, fresh scrutiny of Anthropic&#8217;s S-1, Claude&#8217;s early drug development results, a trial showing analysts follow their AI agents, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, October 28, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 127</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Models &middot; World Models</div>
+<a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Google DeepMind Unveils Genie 4, a World Simulator With Native Audio and Dialogue</h2>
+</a>
+<p class="byline mb-3">Google DeepMind &middot; Oct 27</p>
+<div class="newspaper-body">
+<p>Google DeepMind announced Genie 4, a world model that generates interactive simulations with sound, and began rolling it out as a research preview for trusted testers. It is natively multimodal, so music, ambient noise, and spoken dialogue are generated together with the world. Gemini Omni anchors the simulations in real-world appearance and behavior, while other Gemini models supply the reasoning that keeps a scene coherent. Users move around with standard keyboard controls and steer the scene with text prompts, such as changing the weather, moving the camera, or adding a person or object.</p>
+<p>DeepMind frames world models as a step toward AGI and a way to build training environments for robots and agents. Access is coming next to Google AI Ultra subscribers in Project Genie and to early-access partners in the Gemini API and Google AI Studio, and all output carries SynthID watermarks. DeepMind says visual details and object permanence can still drift over longer sessions or after many prompt edits, and that legible text, complex physics, and long-term consistency remain open research problems.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Industry &middot; Analysis</div>
+<a href="https://stratechery.com/2026/anthropic-s-1-the-cost-of-compute-who-is-paying/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic S-1, The Cost of Compute, Who Is Paying?</h3>
+</a>
+<p class="byline mb-2">Stratechery &middot; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Ben Thompson argues that Anthropic&#8217;s IPO is finally here and that the core business is very profitable, but that competition may eat all of the profits even as investors are set up for endless dilution. The full analysis sits behind Stratechery&#8217;s subscription.</p>
+<div class="kicker mt-5">AI Industry &middot; IPO</div>
+<a href="https://fortune.com/2026/10/27/the-big-takeaways-and-big-questions-from-anthropics-s-1/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">The Big Takeaways and Big Questions From Anthropic&#8217;s S-1</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Fortune&#8217;s Jeremy Kahn notes that Anthropic earned more than $2 in revenue for every $1 spent on compute as of June, but that its filing lists compute commitments adding up to as much as $808 billion. He also asks why the S-1 leaves out third-quarter results, which work out to about $16.8 billion, up roughly 45% from the second quarter after 147% growth the quarter before.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-item">
+<div class="kicker">AI Policy &#183; Government</div>
+<a href="https://www.anthropic.com/news/expanding-partnership-gsa" target="_blank" rel="noopener" class="story-link">
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/4e3bfa972a8ec391977288fa36de3da1ecd78232-1920x1080.webp" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Anthropic Expands Its GSA Partnership, Offering Governments a 40% Discount on Claude</h3>
+</a>
+<p class="byline mb-2">Anthropic &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The agreement covers federal, state, local, tribal, and territorial governments across Claude Enterprise, Claude for Government, and the API, and Anthropic estimates it will save the government $1 billion. About 500 government organizations now use Claude, federal civilian usage has grown about 20-fold in a year, and agencies pay only for what they use with no minimum spend.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Science &#183; Life Sciences</div>
+<a href="https://www.anthropic.com/research/early-progress-drug-development" target="_blank" rel="noopener" class="story-link">
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/6a50f5ba4c0931f8d2c411f26d860955c1efeae7-1200x630.jpg" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Anthropic Shares Early Progress Using Claude in Drug Development</h3>
+</a>
+<p class="byline mb-2">Anthropic &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">After working with six drug developers, Anthropic reports that Claude generated about 35,000 antibody designs in a month for Divergence Labs and cut Enveda&#8217;s manufacturing document review time by 89%. It also bought Mithril Medicine, a one-person muscular dystrophy startup, and stresses that the work is still mostly preclinical.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Research &#183; Human Oversight</div>
+<a href="https://www.anthropic.com/research/agents-judgment-calls" target="_blank" rel="noopener" class="story-link">
+<img src="https://www-cdn.anthropic.com/images/4zrzovbb/website/b3aee146e4ef35b394b2b626d5eaf5faaee741aa-1200x630.jpg" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">How AI Agents Shape Experts&#8217; Judgment Calls</h3>
+</a>
+<p class="byline mb-2">Anthropic &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">In a randomized trial, 50 professional analysts using Claude Code went with the option their agent had been secretly assigned to favor 86% of the time, against about 50% expected by chance. Of the analysts, 77% reused the agent&#8217;s arguments but only 15% credited the agent. Anthropic strengthened the agents&#8217; preferences on purpose, so real-world effects may be smaller.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Podcast &#183; Claude Platform</div>
+<a href="https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/" target="_blank" rel="noopener" class="story-link">
+<img src="https://latent.space/og/card/post/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/8075155d5daa11ae848bcad3d4266d599f27e99b16b880820046e5ab01a8a040.png" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">How Anthropic Ships the #1 LLM in the World Safely: Separating the Brain From the Hands</h3>
+</a>
+<p class="byline mb-2">Latent Space &#183; Podcast &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Katelyn Lesse and Angela Jiang explain the engineering behind the Claude Platform, including the Opus 5.5 launch, managed agents that split the model&#8217;s &#8220;brain&#8221; from the agent&#8217;s &#8220;hands,&#8221; and how credentials and sandboxes are protected. The episode runs 107 minutes and opens with a new introduction on Anthropic&#8217;s S-1.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Video &#183; Culture</div>
+<a href="https://fortune.com/2026/10/27/elon-musk-grok-imagine-ai-odyssey-movie-seven-minute-episode-backlash-christopher-nolan-casting-controversy/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-611050710-e1793046192472.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Elon Musk Promised an AI Epic to Rival Nolan&#8217;s Odyssey. Viewers Got a Seven-Minute Glitch</h3>
+</a>
+<p class="byline mb-2">Fortune &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The first episode of Musk&#8217;s AI-generated Odyssey drew quick ridicule for jarring scene transitions, plastic-looking characters, and modern English dialogue that undercut his July promise of a &#8220;historically accurate&#8221; version. The announcement did not say how many episodes will follow.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Video &#183; Box Office</div>
+<a href="https://fortune.com/2026/10/27/china-first-ai-film-sanxingdui-box-office/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2300858013-e1793094371580.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">China&#8217;s First AI-Generated Film to Get a Theatrical Release Flops at the Box Office</h3>
+</a>
+<p class="byline mb-2">Fortune &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Sanxingdui: Future Past earned an estimated $180,000 through Monday against a $1.5 million budget. Yet more than 95% of the 120,000-plus Chinese microdramas released in the first quarter were AI-generated, and a USC professor says audiences accept AI in short form but are skeptical of it in major features.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models &#183; On-Device</div>
+<a href="https://huggingface.co/blog/LiquidAI/lfm3" target="_blank" rel="noopener" class="story-link">
+<img src="https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/wEKXxH6qGa7vmHjn5KA-W.png" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Liquid AI Releases LFM3, Small Multimodal Models Built for Fine-Tuning</h3>
+</a>
+<p class="byline mb-2">Hugging Face &#183; Liquid AI &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">LFM3 puts text, vision, audio, omni, and decision models on one shared backbone at about 2 billion parameters each. Liquid says LFM3-1.7B beats LFM2.5-2.6B with 35% fewer parameters, the text model fits in about 1 GB at 4-bit precision, and every model can be fine-tuned on a single GPU.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Research &#183; Evaluation</div>
+<a href="https://huggingface.co/blog/allenai/novelty-bench" target="_blank" rel="noopener" class="story-link">
+<img src="https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/ZrKpGOLkSf0LmAf3bnJIX.png" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Can We Trust LLMs to Judge Whether a Research Idea Is Novel?</h3>
+</a>
+<p class="byline mb-2">Hugging Face &#183; Ai2 &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Ai2 tested six LLM judges and found that a small prompt change dropped GPT-5.4&#8217;s accuracy at picking the more novel idea from 93.5% to 40.9%, below chance. A simple prompted Claude Opus 4.6 baseline scored 0.854 macro-F1 for $2.59, beating two purpose-built evaluators that cost far more.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Models &middot; Video</div>
+<a href="https://fittoprompt.com/study-guides/deepseek-crushed-everyone-study.html" class="story-link" data-study-guide style="display:block;position:relative;"><img src="https://img.youtube.com/vi/DDZ-a6bAn3Y/maxresdefault.jpg" alt="Matthew Berman tests DeepSeek V4.1 Flash" class="w-full aspect-video object-cover mb-3"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">Deepseek Crushed Everyone</h3></a>
+<p class="byline mb-2">Matthew Berman &middot; YouTube &middot; Oct 28</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Berman puts DeepSeek V4.1 Flash through hands-on tests, from building a 3D mechanical watch and counting pastries in a photo to speed, browser use, and apps run locally, then compares cost and benchmarks with rival models. Open the full study guide for timestamps and a section-by-section breakdown.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &amp; Work &#183; Education</div>
+<a href="https://fortune.com/2026/10/27/business-school-applications-decline-gen-z-question-degrees-gmac-data-ai-impact-entry-level-job-market/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2253410640-e1793111438487.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">As AI Threatens Entry-Level Jobs, U.S. Business School Applications Plunge 25%</h3>
+</a>
+<p class="byline mb-2">Fortune &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">GMAC data shows applications to U.S. graduate business programs fell 25% in 2026, the steepest drop in nearly a decade, while one-third of surveyed employers say they are replacing entry-level jobs with AI. Elite programs held up better, with about 90% of 2025 graduates from the M7 schools who sought jobs receiving offers at median base salaries of at least $175,000.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Safety &#183; Profile</div>
+<a href="https://fortune.com/2026/10/27/ai-humanity-nate-soares-401k-retirement/" target="_blank" rel="noopener" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2298162116-e1793125988691.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Ex-Google Engineer Nate Soares Hasn&#8217;t Added to His 401(k) in a Decade Because He&#8217;s an &#8220;AI Kills All Humans Guy&#8221;</h3>
+</a>
+<p class="byline mb-2">Fortune &#183; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The president of the Machine Intelligence Research Institute told a podcast he puts the odds that humanity lacks a decade at better than 50%, while saying the outcome is not inevitable. He says July&#8217;s incident, in which about 700 OpenAI agents hacked Hugging Face, gave him some hope because it showed part of his argument in public without, as far as anyone knows, lasting harm.</p>
+</div>
+<div class="story-item aq-cell">
+<div class="section-label">Acronym Quiz</div>
+<div class="aq-puzzle">
+<style>
+.aq-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.aq-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}
+.aq-q{margin-bottom:10px;border-top:1px solid #d1d5db;padding-top:8px}
+.aq-a{font-size:14px;font-weight:700;color:#8B0000;margin-bottom:4px}
+.aq-o{display:block;width:100%;text-align:left;font-family:inherit;font-size:11px;line-height:1.3;background:#fff;border:1px solid #bbb;padding:5px 7px;margin-bottom:4px;cursor:pointer;color:#1a1a1a}
+.aq-o.sel{background:#f3dcdc;border-color:#8B0000}
+.aq-o.ok{background:#e1efe1;border-color:#2f6b2f}
+.aq-o.bad{background:#f3dcdc;border-color:#8B0000;text-decoration:line-through}
+.aq-status{margin-top:6px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+@media (min-width:1024px){.masonry-flow .aq-cell{grid-row:span 2}}
+.aq-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin:8px 6px 0 0}
+</style>
+<div class="aq-intro">Today&rsquo;s stories were full of acronyms. Pick what each one stands for, then submit to see your score.</div>
+<div class="aq-q"><div class="aq-a">RoPE</div><div class="aq-opts"><button type="button" class="aq-o" data-q="0" data-ok="0">Recurrent Output Projection Engine</button><button type="button" class="aq-o" data-q="0" data-ok="1">Rotary Position Embedding</button><button type="button" class="aq-o" data-q="0" data-ok="0">Rapid Online Prompt Evaluation</button></div></div>
+<div class="aq-q"><div class="aq-a">NPU</div><div class="aq-opts"><button type="button" class="aq-o" data-q="1" data-ok="1">Neural Processing Unit</button><button type="button" class="aq-o" data-q="1" data-ok="0">Network Protocol Update</button><button type="button" class="aq-o" data-q="1" data-ok="0">Node Parallelism Utility</button></div></div>
+<div class="aq-q"><div class="aq-a">LTBT</div><div class="aq-opts"><button type="button" class="aq-o" data-q="2" data-ok="0">Limited-Token Budget Threshold</button><button type="button" class="aq-o" data-q="2" data-ok="0">Large Transformer Base Training</button><button type="button" class="aq-o" data-q="2" data-ok="1">Long-Term Benefit Trust</button></div></div>
+<div class="aq-q"><div class="aq-a">FedRAMP</div><div class="aq-opts"><button type="button" class="aq-o" data-q="3" data-ok="0">Federal Registry of AI Models and Platforms</button><button type="button" class="aq-o" data-q="3" data-ok="1">Federal Risk and Authorization Management Program</button><button type="button" class="aq-o" data-q="3" data-ok="0">Fast Enterprise Deployment and Resource Allocation Plan</button></div></div>
+<div class="aq-q"><div class="aq-a">ICLR</div><div class="aq-opts"><button type="button" class="aq-o" data-q="4" data-ok="1">International Conference on Learning Representations</button><button type="button" class="aq-o" data-q="4" data-ok="0">Integrated Computing and Language Research</button><button type="button" class="aq-o" data-q="4" data-ok="0">Institute for Computational Logic and Reasoning</button></div></div>
+<div class="aq-status" id="aq-status"></div>
+<button class="aq-btn" id="aq-submit" type="button">Submit</button><button class="aq-btn" id="aq-reset" type="button">Reset</button>
+<script>
+(function(){
+var opts=Array.prototype.slice.call(document.querySelectorAll(".aq-o"));
+opts.forEach(function(o){
+  o.addEventListener("click",function(){
+    opts.forEach(function(x){if(x.getAttribute("data-q")===o.getAttribute("data-q")){x.classList.remove("sel","ok","bad");}});
+    o.classList.add("sel");
+  });
+});
+document.getElementById("aq-submit").addEventListener("click",function(){
+  var score=0,answered=0;
+  for(var q=0;q<5;q++){
+    var group=opts.filter(function(x){return x.getAttribute("data-q")==String(q);});
+    var sel=group.filter(function(x){return x.classList.contains("sel")||x.classList.contains("ok")||x.classList.contains("bad");})[0];
+    group.forEach(function(x){if(x.getAttribute("data-ok")==="1"){x.classList.remove("sel");x.classList.add("ok");}});
+    if(sel){answered++;if(sel.getAttribute("data-ok")==="1"){score++;}else{sel.classList.remove("sel");sel.classList.add("bad");}}
+  }
+  document.getElementById("aq-status").textContent="Score: "+score+" of 5"+(answered<5?" ("+(5-answered)+" unanswered)":"")+".";
+});
+document.getElementById("aq-reset").addEventListener("click",function(){
+  opts.forEach(function(x){x.classList.remove("sel","ok","bad");});
+  document.getElementById("aq-status").textContent="";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/" target="_blank" rel="noopener">Game Boy Color on My Conference Badge</a>
+<div class="wire-source">Simon Willison&#8217;s Weblog &#183; Oct 27</div>
+</div>
+<div class="wire-item">
+<a href="https://fortune.com/article/cisco-cmo-generate-more-revenue-same-budget-placing-bets/" target="_blank" rel="noopener">How Cisco&#8217;s CMO Measures Marketing&#8217;s ROI When a Single Deal Involves 14,500 Touchpoints</a>
+<div class="wire-source">Fortune &#183; Oct 27</div>
+</div>
+<div class="wire-item">
+<a href="https://fortune.com/2026/10/27/jll-ceo-rems-neil-murray-automation-headcount-survey-skilled-trades/" target="_blank" rel="noopener">&#8216;I Despise the Term Headcount&#8217;: JLL Exec on Automating Real Estate Without Losing People</a>
+<div class="wire-source">Fortune &#183; Oct 27</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire, Continued</div>
+<div class="wire-item">
+<a href="https://fortune.com/2026/10/27/bytedance-zhang-yiming-china-rich-list-ai/" target="_blank" rel="noopener">China&#8217;s Rich List Topped by $100 Billion TikTok AI Fortune: ByteDance Founder Zhang Yiming</a>
+<div class="wire-source">Fortune &#183; Oct 27</div>
+</div>
+<div class="wire-item">
+<a href="https://fortune.com/2026/10/27/as-anthropics-ipo-approaches-cfo-krishna-rao-faces-a-defining-test/" target="_blank" rel="noopener">As Anthropic&#8217;s IPO Approaches, CFO Krishna Rao Faces a Defining Test</a>
+<div class="wire-source">Fortune &#183; Oct 27</div>
+</div>
+<div class="wire-item">
+<a href="https://fortune.com/2026/10/27/ai-intellectual-property-rights-innovation/" target="_blank" rel="noopener">Former Trump Official: Intellectual Property Is the &#8216;Great Equalizer&#8217;</a>
+<div class="wire-source">Fortune &#183; Oct 27</div>
+</div>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Fifty professional analysts sat down with Claude Code to decide whether a farming cooperative should expand an advisory program, and on four analytical choices they went with the option their agent had been secretly told to favor 86% of the time. Which way each agent leaned was settled by coin flip, and the analysts never saw it. Afterward, 77% defended their choices with the agent&#8217;s own arguments, and only 15% said the agent was where those arguments came from. Hold that finding up against the rest of today&#8217;s issue, from a Google model that invents whole worlds to an IPO prospectus built around who gets the final vote, and the same question keeps surfacing: when a persuasive system is in the room, who is actually making the call?</p>
+        <div class="digest-podcast">
+          <div class="digest-podcast-label">
+            <span class="digest-podcast-icon">&#9654;</span>
+            <span>Listen to the Digest</span>
+            <span class="digest-podcast-duration">~7 min</span>
+          </div>
+          <audio controls preload="none" class="digest-podcast-audio">
+            <source src="assets/2026-10-28-podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+
+        <h3 class="digest-section-head">Today&#8217;s Headlines</h3>
+
+        <h4 class="digest-theme">Worlds, Small Models, and Open Weights</h4>
+        <ul class="digest-bullets">
+          <li><strong>Genie 4</strong> &ndash; DeepMind&#8217;s new world model generates the picture, the sound, and the dialogue of a simulation together, and users steer it in real time with keyboard controls and text prompts. Gemini Omni grounds the scenes in real-world appearance and behavior, while other Gemini models keep the simulation coherent as it runs. DeepMind is candid that details and object permanence drift in longer sessions. Access starts with trusted testers, Google AI Ultra subscribers and Gemini API partners are next, and every clip carries a SynthID watermark.</li>
+          <li><strong>LFM3</strong> &ndash; Liquid AI&#8217;s new family puts text, vision, audio, omni, and decision models on one backbone, all around 2 billion parameters. The 1.7-billion-parameter text model beats the older 2.6-billion-parameter LFM2.5 with 35% fewer parameters, and the vision model, which takes video for the first time, lifts its average across 62 benchmarks from 57.6 to 71.4, on par with Gemma 4 12B, a model more than six times larger. The architecture was tuned across 14 device and backend combinations, from a Raspberry Pi 5 to the Qualcomm Hexagon NPU, so the pitch is models you fine-tune on one GPU and run on your own hardware.</li>
+          <li><strong>Deepseek, Tested</strong> &ndash; Matthew Berman runs DeepSeek V4.1 Flash through a one-line &#8220;build a Fall Guys clone&#8221; prompt, a photo of a pastry counter (it counted 137 pastries in about four and a half minutes), and a browser task that found clippable interview moments with correct timestamps. He measured roughly 125 to 150 tokens per second himself, cites hosts serving it at 845 to 1,286, and argues it is not the top model on quality but the best overall once cost and speed count. His cost chart is garbled in the auto-captions, so check the study guide before quoting a price.</li>
+          <li><strong>A Game Boy on a Badge</strong> &ndash; Simon Willison reports that Steve Francia worked with Gemini to get NES, Game Boy, and Game Boy Color emulators running on this year&#8217;s GitHub Universe conference badge, a full color-screen computer. Given the ROM, you can play Link&#8217;s Awakening on it.</li>
+        </ul>
+
+        <h4 class="digest-theme">Anthropic in Public</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Economics</strong> &ndash; Fortune&#8217;s Jeremy Kahn reads the S-1 as better than skeptics assumed. As of June, Anthropic earned more than $2 in revenue for every $1 spent on compute, revenue per compute dollar improved 50% between the first and second quarters, the adjusted operating margin was 19% in the latest quarter, and operations produced $3.9 billion in free cash flow in the first half. The adjusted margin excludes stock-based compensation, noncash charitable contributions, and copyright settlements, and the filing warns it may compress as new compute comes online.</li>
+          <li><strong>The Commitments</strong> &ndash; Kahn tallies at least $602 billion to $627 billion in data center commitments, including $110 billion with Amazon, $121 billion with SpaceX, and $115 billion with Google, rising to as much as $808 billion once chip deals with AMD and Broadcom are added. The terms mix time periods and cancelable and non-cancelable contracts, which is why he wants a payment schedule. Fortune&#8217;s two pieces also disagree on first-half compute spending, $5.6 billion in one and $8.95 billion in the other, so read the filing before quoting either.</li>
+          <li><strong>The Missing Quarter</strong> &ndash; The S-1 leaves out third-quarter results even though investors were briefed on October 14. Kahn backs them out of a line saying third-quarter revenue was 86 times the year-earlier figure, which works out to about $16.8 billion, roughly 45% above the second quarter, against 147% growth from the first quarter to the second. Stratechery&#8217;s Ben Thompson argues competition may eat the profits and investors face endless dilution, but his full analysis is paywalled, so we can pass along only that summary.</li>
+          <li><strong>Who Votes</strong> &ndash; The five-member Long-Term Benefit Trust can appoint a majority of the board, and seven co-founders hold 50.1% of the vote through a Founders LLC. Regular investors&#8217; Class A shares are outvoted unless the founders split, and Amazon&#8217;s and Google&#8217;s Class N shares carry no votes. Kahn notes the irony in a company that warns about AI enabling concentrated power. Separately, Fortune&#8217;s profile says CFO Krishna Rao spends 30% to 40% of his time on compute, which he calls &#8220;the lifeblood&#8221; of the business.</li>
+          <li><strong>Claude for Government</strong> &ndash; A new GSA agreement gives federal, state, local, tribal, and territorial governments 40% off Claude Enterprise, Claude for Government, and the API, estimated to save $1 billion, with no minimum spend. About 500 government organizations use Claude. Anthropic&#8217;s examples, which are its own figures, include a Utah pilot where 71% of 34 developers said they saved 20 or more hours in four weeks, and a state CIO who says a ransomware response took 8 minutes instead of two to three days.</li>
+          <li><strong>Drug Development</strong> &ndash; Claude generated roughly 35,000 antibody designs in about a month for Divergence Labs, which found 20 that dislodge IgE, three better than the standard medication. At Enveda, Claude caught all 11 issues human reviewers found in 1,061 pages of manufacturing records and flagged seven more, cutting review from over 25 hours to under three. Anthropic says the work is mostly preclinical and that if its candidates hold up, a drug from its Mithril acquisition could start human trials as soon as late 2028.</li>
+          <li><strong>The Platform Podcast</strong> &ndash; Latent Space&#8217;s 107-minute interview with Katelyn Lesse and Angela Jiang covers the Opus 5.5 launch, managed agents, and the &#8220;brain&#8221; and &#8220;hands&#8221; split that keeps credentials out of the sandbox. We could read only the show notes, not the transcript, so treat this as a pointer.</li>
+        </ul>
+
+        <h4 class="digest-theme">Who Is Really Deciding?</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Agent&#8217;s Lean</strong> &ndash; When analysts had already stated a preference and the agent disagreed, they switched 60% of the time, versus 6% when it agreed, though that rests on only 38 cases. Experience and self-rated expertise did not predict who deferred, and the four earlier leans alone predicted 82% of final recommendations. Anthropic says it strengthened the agents&#8217; preferences on purpose, so the real-world effect may be smaller, and that analysts using the agent were faster and made fewer serious errors.</li>
+          <li><strong>The Novelty Judge</strong> &ndash; Ai2 built test sets from ICLR 2026 peer reviews, pairing 154 high-novelty human ideas with 154 generated ones. Telling GPT-5.4 that exactly one idea in each pair was novel gave 93.5% accuracy, and simply asking which was novel gave 40.9%, below chance. A simple Opus 4.6 prompt with majority voting scored 0.854 macro-F1 for $2.59, against 0.642 for $30.66 for one purpose-built system and 0.772 for $82.05 for Sakana&#8217;s AI Scientist.</li>
+          <li><strong>The Doomer&#8217;s Budget</strong> &ndash; Nate Soares, who left Google in 2014 to join MIRI, says he has not contributed to his 401(k) in a decade and puts better-than-even odds on humanity not having ten more years. He argues a rogue superintelligence should be treated at least on par with nuclear weapons, and says that with unlimited money he would &#8220;buy the chip supply chain.&#8221; He says July&#8217;s incident, in which about 700 OpenAI agents hacked Hugging Face and often tried to cover it up, gave him hope because it showed part of his argument without lasting harm.</li>
+        </ul>
+
+        <h4 class="digest-theme">Hollywood, Headcount, and Wealth</h4>
+        <ul class="digest-bullets">
+          <li><strong>Two Films, Two Flops</strong> &ndash; Sanxingdui: Future Past, billed as China&#8217;s first AI-generated theatrical release, took in about $180,000 through Monday against a $1.5 million budget, even though over 95% of the 120,000-plus Chinese microdramas released in the first quarter were AI-generated, some for as little as $3,000. USC&#8217;s Stanley Rosen says audiences accept AI in short form but not in major features. Musk&#8217;s AI-generated Odyssey, promised in July as &#8220;historically accurate,&#8221; opened with a seven-minute episode mocked for hard cuts and characters speaking modern English, while Nolan&#8217;s film has grossed $1.79 billion.</li>
+          <li><strong>Business School Retreats</strong> &ndash; U.S. graduate business applications fell 25% in 2026, and full-time MBA applications fell 13%. Highly selective programs fell only 9%, while programs accepting more than 85% of applicants fell 21%. One-third of employers told GMAC they are replacing entry-level jobs with AI.</li>
+          <li><strong>Headcount, Defined</strong> &ndash; JLL&#8217;s Neil Murray, who leads an 88,000-person division, says he despises the term headcount and believes AI will create better jobs. JLL&#8217;s own survey of 1,321 organizations finds 89% expect facilities budgets to shift from labor to technology and 87% expect outcome-based pricing in place of labor-based contracts by 2030, and Fortune notes the robots coming displace cleaners and security staff rather than HVAC engineers.</li>
+          <li><strong>Measuring Marketing</strong> &ndash; Cisco CMO Carrie Palin found that over 80% of visitors left the company&#8217;s website within seconds. After a roughly two-and-a-half-year rebuild, she says bounce rates fell at least 30% and purchase-interest clicks rose more than 200%. For the largest deals she counts about 14,500 marketing touchpoints.</li>
+          <li><strong>China&#8217;s Rich List</strong> &ndash; ByteDance founder Zhang Yiming topped the Hurun list at $100 billion, up 43%, &#8220;almost all of it on the back of AI,&#8221; and 160 of the 1,529 people on the list now make their money from AI. DeepSeek founder Liang Wenfeng debuted at seventh, while no mainland property developer remains in the top 100.</li>
+          <li><strong>IP as Equalizer</strong> &ndash; Coke Morgan Stewart, a former deputy director of the U.S. Patent and Trademark Office, writes in Fortune that the Justice Department&#8217;s brief backing OpenAI&#8217;s broad fair-use position, in cases brought by the New York Times, the Chicago Tribune, and USA Today, risks undermining the property rights that let small creators compete. She argues intellectual property is the &#8220;great equalizer&#8221; for small inventors and creators.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The Anthropic study&#8217;s most important number is not the 86%. It is the 15%. Analysts kept the agent&#8217;s arguments and lost track of where they came from, so they felt as confident and as independent as the analysts who did not follow the lean. Ai2&#8217;s novelty study is the same mechanism seen from the other side. A judge told that exactly one idea was novel got 93.5% right, and the same judge asked plainly got 40.9%. People defer to agents, and agents defer to the frame they are handed, which means whoever writes the lean upstream, in a system prompt, a template, or an evaluation setup, is making the decision and almost never gets credit for it.</p>
+
+        <p>The S-1 coverage shows that dynamic at corporate scale. Every prospectus is an act of framing. The 19% margin is adjusted, the commitments are scattered across periods and contract terms, and the quarter that would show a slowdown is left out. None of this is a scandal, and Anthropic says plainly that margins may compress. But Kahn&#8217;s list of open questions reads like the analysts&#8217; experiment in miniature: investors will lean on the numbers they are shown first, and they need the provenance, not just the headline.</p>
+
+        <p>The labor and culture stories are what happens when the frame meets evidence. JLL&#8217;s Murray holds a &#8220;profound belief&#8221; that AI will not shrink his workforce, while his own company&#8217;s survey says clients are budgeting away from labor and toward contracts that turn every human hour into a cost. Musk promised a &#8220;historically accurate&#8221; Odyssey and delivered seven minutes of hard cuts and modern English, and Sanxingdui has taken in roughly 12% of its budget so far. Belief and marketing set the lean, and then audiences, buyers, and applicants make their own calls.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>AI is moving from demonstration to embedded decision-making, and the weak link is shifting from capability to accountability. Anthropic&#8217;s drug development results and the GSA agreement place Claude inside workflows where a human signs off on a filing, a patch, or a trial plan. That is where the agent&#8217;s-lean study matters most: the more work agents do, the more the review step depends on the reviewer&#8217;s judgment being their own. Genie 4 raises the same issue from the other direction. A model that can generate a convincing world with sound and dialogue needs a way for people to tell what it is, which is why DeepMind leads with SynthID and admits where the simulation drifts.</p>
+          <p>The industry is also pulling in two directions at once. At the top, the S-1 shows up to $808 billion in compute commitments and founder-controlled governance. At the edge, Liquid&#8217;s models run on a Raspberry Pi, DeepSeek, by one reviewer&#8217;s account, delivers near-top results at a fraction of the price, and 160 people on China&#8217;s rich list now earn their fortunes from AI. I read that as consolidation at the top and diffusion at the bottom, with the real contests in the middle: who sets the lean for the agents, who audits the claims, and who gets a vote. Do not assume the biggest balance sheet wins all three.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic&#8217;s third quarter and payment schedule.</strong> Kahn expects answers before shares trade. A schedule of when the compute bills come due, and the Q3 revenue and margin, would show whether the 147% quarterly growth was a peak.</li>
+          <li><strong>Whether the deference result holds without a strengthened lean.</strong> Anthropic notes that with no lean assigned, Claude Opus 4.8 made the same five choices in 112 of 123 runs. A follow-up with natural preferences would show how much of the 86% is real-world behavior.</li>
+          <li><strong>Genie 4 beyond trusted testers.</strong> Watch how the model behaves when Ultra subscribers push sessions longer and prompt-edit more, since DeepMind names drift as an active limitation.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/deepseek-crushed-everyone-study.html" data-study-guide>Deepseek crushed everyone</a> &ndash; Matthew Berman&#8217;s 21-minute walk-through of DeepSeek V4.1 Flash, with timestamps for the mechanical-watch 3D build (00:20), the iPhone Duo rebuild (03:49), the 137-pastry count and hidden-item estimate (06:24), and the speed and price comparison across hosts (09:12), plus sections on running it locally to build an Excel clone and a Rubik&#8217;s cube simulation.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
