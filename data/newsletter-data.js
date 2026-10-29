@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-28",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["acronym"]
+        lastUpdated: "2026-10-29",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["acronym", "scramble"]
     },
     issues: [
+        {
+            date: "2026-10-29",
+            volume: 1,
+            issueNumber: 128,
+            title: "Google Unveils Gemini 4 Carbon, Its Strongest Model Yet, and Gives Cyber Defenders First Access",
+            description: "Daily AI news roundup - October 29, 2026. Google unveils Gemini 4 Carbon, OpenAI\u2019s isolated agents pass notes through CPU cache, Anthropic\u2019s new AI spending reports, Google takes AI Search ads global, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-29.html",
+            storyCount: 20,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-10-28",
             volume: 1,
