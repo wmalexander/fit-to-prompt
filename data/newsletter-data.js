@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-29",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["acronym", "scramble"]
+        lastUpdated: "2026-10-30",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["acronym", "scramble", "cryptogram"]
     },
     issues: [
+        {
+            date: "2026-10-30",
+            volume: 1,
+            issueNumber: 129,
+            title: "Big Tech\u2019s Data Center Blitz Is Burning Through Cash and Scaring Wall St.",
+            description: "Daily AI news roundup - October 30, 2026. Big Tech\u2019s data center blitz burns through cash, Binance suspends withdrawals after a $6.3 billion hack, Alphabet\u2019s worst day as a public company, a new Claude Code release, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-30.html",
+            storyCount: 20,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-10-29",
             volume: 1,
