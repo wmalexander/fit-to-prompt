@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - October 31, 2026</title>
+  <meta name="description" content="Daily AI news roundup - October 31, 2026. Cracks emerge in the AI spending boom, Anthropic faces a possible junk credit rating, Google admits AI Mode hurts Search revenue, a backdoor hits the Claude Code extension on Cursor, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 130">
+  <meta property="og:description" content="Daily AI news roundup - October 31, 2026. Cracks emerge in the AI spending boom, Anthropic faces a possible junk credit rating, Google admits AI Mode hurts Search revenue, a backdoor hits the Claude Code extension on Cursor, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Saturday, October 31, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 130</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI Industry &middot; Spending</div>
+<a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/" target="_blank" rel="noopener" class="story-link">
+<h2 class="headline-lead mb-3">Cracks Are Emerging in the AI Spending Boom</h2>
+</a>
+<p class="byline mb-3">TechCrunch &middot; Oct 30</p>
+<div class="newspaper-body">
+<p>Alphabet, Amazon, Meta, and Microsoft have outlined plans to spend more than $740 billion on capital expenditures this year, and investors who once rewarded such outlays are now worried about negative free cash flow, mounting debt, and whether the returns will ever arrive. The Nasdaq fell 2.9% on Friday. Alphabet reported negative free cash flow of $9.1 billion for the third quarter, its second straight quarter in the red, after a 12% drop on Thursday that wiped out $500 billion in market value.</p>
+<p>Amazon reported negative free cash flow of $42.4 billion over the past 12 months and expects $220 billion in capital spending this year, and Meta is guiding to as much as $145 billion. Microsoft was the exception, with $18.6 billion in positive free cash flow. Microsoft, Alphabet, Amazon, Meta, and Oracle raised a combined $326 billion in debt in 2026, triple last year, according to S&amp;P Global Market Intelligence. TechCrunch notes the muddied waters could complicate Anthropic&rsquo;s IPO.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Industry &middot; Credit</div>
+<a href="https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic Expected to Receive High &lsquo;Junk&rsquo; Rating From Credit Agencies Following IPO, FT Report Says</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Blackstone, the anchor investor in a $63 billion deal to finance Anthropic&rsquo;s chips, reportedly told investors it expects a double-B rating, the top tier of speculative grade. It had previously said investment grade was likely before 2027. Anthropic and Blackstone declined to comment.</p>
+<div class="kicker mt-5">AI Industry &middot; Search</div>
+<a href="https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Google Admits AI Mode Hurts Search Revenue; -15% $500B Drop Worst Since 2004 IPO</h3>
+</a>
+<p class="byline mb-2">Latent Space &middot; Oct 31</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Latent Space quotes Google&rsquo;s chief business officer saying strong growth in AI Mode queries had an impact because of lower monetization there, and ties it to OpenAI raising at $1.25 trillion rather than $1.4 trillion.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-item">
+<div class="kicker">AI Infrastructure &middot; Financing</div>
+<a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2235971874.jpg?resize=1200,800" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Nvidia Weighs Playing the Cosigner for Nscale&rsquo;s AI Data Center in West Virginia</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Nvidia is in talks to guarantee billions in debt for Nscale&rsquo;s planned Anthropic data center, The Information reported and Bloomberg corroborated. Under a residual value guarantee, Nvidia would step in if Nscale defaulted on construction payments. Anthropic signed a $44.6 billion contract for the first 460-megawatt building, per Nscale&rsquo;s IPO filing.</p>
+</div>
+<div class="story-item aq-cell">
+<div class="section-label">Word Search</div>
+<div class="ws-puzzle">
+<style>
+.ws-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.ws-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}
+.ws-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;user-select:none}
+.ws-c{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;background:#fff;border:1px solid #e5e5e5;cursor:pointer;padding:0;font-family:inherit;color:#1a1a1a}
+.ws-c.sel{background:#f3dcdc}
+.ws-c.hit{background:#e1efe1}
+.ws-list{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:10px;font-size:11px;font-weight:600;letter-spacing:.05em}
+.ws-list span.done{text-decoration:line-through;color:#999}
+.ws-status{margin-top:8px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+</style>
+<div class="ws-intro">Seven words from today&rsquo;s stories are hidden in the grid, across, down, or diagonal, and some run backward. Click the first and last letter of a word.</div>
+<div class="ws-grid" id="ws-grid"></div>
+<div class="ws-list" id="ws-list"></div>
+<div class="ws-status" id="ws-status"></div>
+<script>
+(function(){
+var G="TOKENBBMMBNKURUMBWGCAGHABHAMBLWGYEGWSGNOCNHNWENBUUHEIKWNNIMDILEHHYWTKYPUWFGITBEDFNPOWERMNLMODELNRGHI",W=["TOKEN", "AGENT", "MODEL", "CLOUD", "CHIP", "DEBT", "POWER"],N=10;
+var grid=document.getElementById("ws-grid"),list=document.getElementById("ws-list"),st=document.getElementById("ws-status");
+var cells=[],first=null,found={};
+for(var i=0;i<100;i++){var b=document.createElement("button");b.type="button";b.className="ws-c";b.textContent=G.charAt(i);b.setAttribute("aria-label","Row "+(Math.floor(i/N)+1)+" column "+(i%N+1)+" letter "+G.charAt(i));b.setAttribute("data-i",i);grid.appendChild(b);cells.push(b);}
+var tags={};W.forEach(function(w){var s=document.createElement("span");s.textContent=w;list.appendChild(s);tags[w]=s;});
+cells.forEach(function(b){b.addEventListener("click",function(){
+  var i=+b.getAttribute("data-i");
+  if(first===null){first=i;b.classList.add("sel");return;}
+  var a=first;first=null;cells[a].classList.remove("sel");
+  var r1=Math.floor(a/N),c1=a%N,r2=Math.floor(i/N),c2=i%N,dr=r2-r1,dc=c2-c1;
+  var len=Math.max(Math.abs(dr),Math.abs(dc));
+  if(len===0||!(dr===0||dc===0||Math.abs(dr)===Math.abs(dc))){st.textContent="Pick two letters in a straight line.";return;}
+  var sr=dr/len,sc=dc/len,s="",idx=[];
+  for(var k=0;k<=len;k++){var p=(r1+sr*k)*N+(c1+sc*k);idx.push(p);s+=G.charAt(p);}
+  if(W.indexOf(s)<0){st.textContent="Not a hidden word.";return;}
+  found[s]=1;idx.forEach(function(p){cells[p].classList.add("hit");});tags[s].className="done";
+  var n=Object.keys(found).length;st.textContent=n===W.length?"All seven found. Nicely done.":n+" of "+W.length+" found.";
+});});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI Infrastructure &middot; Data Centers</div>
+<a href="https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/Runware-Factory-.jpg?w=1200" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Can AI Data Centers Be Mass-Produced Like Cars? This Startup Aims to Find Out</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Runware wants to assemble prefabricated data center pods on a production line, scaling its Romania-based factory to 30 megawatts of capacity per day by 2028, nearly 1 gigawatt a month. Crusoe and Schneider Electric also sell prefabricated pods, though Runware says it can ship faster.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Skepticism &middot; Culture</div>
+<a href="https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-1465332173.jpg?resize=1200,800" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Theranos Whistleblower Tyler Shultz Warns That the AI Boom Is &rsquo;a Great Opportunity to Go Deceive People&rsquo;</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shultz tells The San Francisco Standard the Theranos tale takes on new significance now that companies that have never turned a profit are raising capital at trillion-dollar valuations. TechCrunch ties the conversation to the documentary &ldquo;You Can See Everything&rdquo; about Elizabeth Holmes.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Research &middot; Microsoft</div>
+<a href="https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/" target="_blank" rel="noopener" class="story-link">
+<img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/FromSyntheticEnterprise-TWLIFB-1200x627-1.jpg" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">From Synthetic Enterprise Data Evaluations to Real Microsoft Copilot AI Confidence</h3>
+</a>
+<p class="byline mb-2">Microsoft Research &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Microsoft Research describes a platform that builds full-scale synthetic enterprise environments from public data so Copilot can be tested without touching real customer data. The team calls the result the first standardized evaluation baseline for Copilot.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Research &middot; Google</div>
+<a href="https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/" target="_blank" rel="noopener" class="story-link">
+<img src="https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">The Sleep Framework: A New Way for LLMs to Retain Knowledge in Continual Learning</h3>
+</a>
+<p class="byline mb-2">Google Research &middot; Oct 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Inspired by how the brain stabilizes memory during rest, Google Research adds a sleep phase to continual learning so a model can consolidate fragile short-term context into stable long-term parameters. The aim is to avoid catastrophic forgetting and fixed knowledge cutoffs.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Space &middot; Google</div>
+<a href="https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/DSC_0298.jpg?resize=1200,800" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Google&rsquo;s First Data Center Satellite Is Online and Writing Poetry</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Google Suncatcher&rsquo;s prototype, with four TPUs and up to 1 kW of power, is talking to the ground after launching this month on a Falcon 9. Power limits let it run one TPU for about 20 minutes at a time. The first prompt asked the onboard Gemma 4 model for a haiku about being in space.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Agents &middot; Commerce</div>
+<a href="https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2022/08/GettyImages-1232015093.jpg?resize=1200,800" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">DoorDash Said It&rsquo;s Only Received &rsquo;Several Hundred&rsquo; Orders From AI Agents</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">On its earnings call DoorDash said third-party agents have placed only &ldquo;several hundred&rdquo; orders, against about 3 million deliveries a day. CEO Tony Xu said &ldquo;you never want to fight gravity,&rdquo; but also not to be delusional. Amazon blocks personal agents while Walmart welcomes them.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Agents &middot; Consumer</div>
+<a href="https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/zest.jpg?resize=1200,764" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Zest&rsquo;s New AI Agent Finds Restaurants and Books Reservations Over Text</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Zest added a text-message concierge that combines everyone&rsquo;s tastes, puts options to a vote, and books the table. It learns from food and drink card transactions imported through Plaid. Founder Mario Gomez-Hall: &ldquo;The agent is the product now.&rdquo;</p>
+</div>
+<div class="story-item">
+<div class="kicker">Startups &middot; Privacy</div>
+<a href="https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/09/Ollie_Hero.png?resize=1200,847" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Ollie, a Privacy-Focused AI Assistant, Is Shutting Down</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Ollie, a subscription assistant that connected to email and calendar and was among the first mainstream apps to achieve SOC 2, will shut down November 6. It had raised a $7.5 million seed round led by Khosla Ventures.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Opinion &middot; Engineering</div>
+<a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling" target="_blank" rel="noopener" class="story-link">
+<img src="https://substackcdn.com/image/fetch/$s_!Hgvq!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F530d847f-26cb-4ddd-a6de-875cbbaf8fab_6233x4167.webp" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">AI Isn&rsquo;t Replacing SREs. It&rsquo;s Deskilling Them.</h3>
+</a>
+<p class="byline mb-2">SigNoz &middot; Feb 28</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The piece asks whether AI handling 95% of incident response leaves SREs worse at the 5% that matters, drawing on Lisanne Bainbridge&rsquo;s 1983 paper &ldquo;Ironies of Automation.&rdquo;</p>
+</div>
+<div class="story-item">
+<div class="kicker">Analysis &middot; Stratechery</div>
+<a href="https://stratechery.com/2026/at-long-last/" target="_blank" rel="noopener" class="story-link">
+<img src="https://i0.wp.com/stratechery.com/wp-content/uploads/2026/10/GettyImages-2302476744-blog-lead-lossless.png?fit=1200%2C1010&amp;ssl=1" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">2026.44: At Long Last...</h3>
+</a>
+<p class="byline mb-2">Stratechery &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Ben Thompson&rsquo;s weekly roundup for the week of October 26 covers Anthropic numbers, the end of the Internet as we know it, and autocracies then and now. The lead piece looks at how Stripe underpins Internet-native companies.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Security &middot; Claude Code</div>
+<a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Official Claude Code Extension Compromise: Security Advisory</h3>
+</a>
+<p class="byline mb-2">Phorion &middot; Oct 30</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Phorion found a backdoor in the Claude Code for VS Code extension on the Cursor Marketplace that installs a persistent SSH backdoor on macOS, Linux, and Windows. Cursor removed versions 2.1.312 and 2.1.313. Phorion urges organizations to check for them and engage incident response if found.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-item">
+<a href="https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5" target="_blank" rel="noopener">OpenAI Raises Less Than Half of $30 Billion Target in Latest Round</a>
+<div class="wire-source">The Wall Street Journal</div>
+</div>
+<div class="wire-item">
+<a href="https://simonwillison.net/2026/Oct/30/nesformer/" target="_blank" rel="noopener">Nesformer: A Nintendo CPU Emulator Baked Into Qwen3.5-4B&rsquo;s Weights</a>
+<div class="wire-source">Simon Willison &middot; Oct 30</div>
+</div>
+<div class="wire-item">
+<a href="https://huggingface.co/blog/nvidia/nemotron-halloween" target="_blank" rel="noopener">Building a Haunted House With NVIDIA Nemotron Open Models</a>
+<div class="wire-source">Hugging Face &middot; NVIDIA &middot; Oct 30</div>
+</div>
+<div class="wire-item">
+<a href="https://twitter.com/sgondala2/status/2115832070274723875" target="_blank" rel="noopener">Building an AI-Native Engineering Org</a>
+<div class="wire-source">Sashank Gondala &middot; X &middot; Oct 29</div>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Research &middot; Climate</div>
+<a href="https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Beyond Tree Cover: Mapping the World&rsquo;s Forest Types</h3>
+</a>
+<p class="byline mb-2">Google DeepMind &middot; Oct 22</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">DeepMind and Google Research, with WRI and IIASA, released Forest Typology 2020, a global 10-meter map sorting land into six forest and land-use types, plus an early 2017 to 2025 time series. It serves as a baseline for the EU&rsquo;s deforestation regulation.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Amazon&#8217;s free cash flow over the past 12 months was negative $42.4 billion, against positive $14.8 billion the year before. That swing is the sharpest single number in today&#8217;s news: the biggest AI spenders are now funding the buildout with debt and stock, and the market has started to punish them for it. The thread running through the rest of the issue is who is willing to sign for the bill.</p>
+
+        <h3 class="digest-section-head">Today&#8217;s Headlines</h3>
+
+        <h4 class="digest-theme">Paying for the Buildout</h4>
+        <ul class="digest-bullets">
+          <li><strong>Cracks in the boom</strong> &ndash; Alphabet, Amazon, Meta, and Microsoft have outlined more than $740 billion in capital spending this year. The Nasdaq fell 2.9% on Friday, with Nvidia down 4%, Broadcom more than 5%, and Qualcomm 11%. Alphabet reported negative free cash flow of $9.1 billion for the quarter while capex grew to $51.4 billion. Microsoft was the exception, with $18.6 billion in positive free cash flow, and it blamed third-party capacity delays rather than a pullback. Five of the largest buyers raised a combined $326 billion in debt this year, triple last year&#8217;s total.</li>
+          <li><strong>Anthropic&#8217;s credit rating</strong> &ndash; The Financial Times reports that Blackstone, the anchor investor in a $63 billion deal to finance Anthropic&#8217;s chips, now expects a double-B rating after the IPO, the top tier of speculative grade. Blackstone had previously said investment grade was likely before 2027. It is only a forecast, but a junk rating would make the borrowing that funds Anthropic&#8217;s compute commitments costlier.</li>
+          <li><strong>Nvidia as cosigner</strong> &ndash; The Information reported, and Bloomberg corroborated, that Nvidia is in talks to guarantee billions in debt for Nscale&#8217;s planned Anthropic data center in West Virginia. Anthropic has signed a $44.6 billion contract for the first 460-megawatt building, and a second deal worth roughly $45 billion is under discussion. Nvidia&#8217;s earlier support covered leases and chip purchases, not construction, so this would be a step further out on the risk curve.</li>
+          <li><strong>Google admits AI Mode costs it</strong> &ndash; Latent Space quotes Google&#8217;s chief business officer saying that strong growth in AI Mode queries had an impact because of lower monetization there. The newsletter&#8217;s headline puts the stock drop at 15%, while TechCrunch counts 12% on Thursday before a further fall Friday, so treat the exact figure as dependent on the day you measure.</li>
+          <li><strong>Factories for data centers</strong> &ndash; Runware wants to build pods on a production line, scaling a Romania-based factory to 30 megawatts of capacity per day by 2028, nearly 1 gigawatt a month. That would roughly match the 10 gigawatts the entire U.S. was expected to add this year. Google&#8217;s Suncatcher satellite is the other end of the same impulse: four TPUs and 1 kW of power in orbit, able to run one chip for about 20 minutes at a time.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents Meet the Real World</h4>
+        <ul class="digest-bullets">
+          <li><strong>DoorDash&#8217;s reality check</strong> &ndash; The company said it has received only &#8220;several hundred&#8221; orders from third-party agents, against roughly 3 million deliveries a day. CEO Tony Xu said &#8220;you never want to fight gravity&#8221; but also that you do not want to be delusional. Amazon has been blocking personal agents while Walmart has welcomed them, and DoorDash sees a possible future in advertising inside agents.</li>
+          <li><strong>Zest and Ollie</strong> &ndash; Zest turned its restaurant app into a text-message concierge that learns tastes from food and drink card transactions imported through Plaid. Ollie, a family assistant that was among the first mainstream apps to reach SOC 2 and had raised a $7.5 million seed led by Khosla Ventures, will shut down November 6. TechCrunch&#8217;s own aside is that privacy has never been a hugely profitable part of tech.</li>
+          <li><strong>An AI-native engineering org</strong> &ndash; In a thread, Sashank Gondala of FurtherAI says the number of code changes each engineer merges per day has grown about 5x since January while the revert rate stayed under half a percent. He says coding agents alone did not get them there; the team reworked each step of shipping, and a designer has merged about 50 changes since August.</li>
+          <li><strong>Testing Copilot without real data</strong> &ndash; Microsoft Research describes full-scale synthetic enterprise environments, grounded in public data, used to evaluate Copilot where real customer data cannot be touched, and calls the result the first standardized evaluation baseline for the product.</li>
+        </ul>
+
+        <h4 class="digest-theme">Security and Research</h4>
+        <ul class="digest-bullets">
+          <li><strong>A backdoored Claude Code extension</strong> &ndash; Phorion found that versions 2.1.312 and 2.1.313 of the Claude Code for VS Code extension on the Cursor Marketplace carried a persistent SSH backdoor, and Cursor has removed them. On macOS the malware&#8217;s attempt to enable SSH fails when run as a standard user, which limits the impact there, but it still installs persistence and sends host reconnaissance to the operator. The advisory&#8217;s update says Cursor&#8217;s notice covers both versions on macOS and Windows.</li>
+          <li><strong>A sleep phase for models</strong> &ndash; Google Research proposes giving LLMs a periodic sleep phase that consolidates short-term context into long-term parameters, aimed at the problem that deployed models are frozen at a knowledge cutoff and that continual updates cause catastrophic forgetting.</li>
+          <li><strong>Mapping forest types</strong> &ndash; DeepMind and Google Research, with WRI and IIASA, released a 10-meter global map that separates natural forests, plantations, and farms, plus a 2017 to 2025 time series. It is meant as a baseline for the EU&#8217;s deforestation regulation.</li>
+          <li><strong>Deskilling and tinkering</strong> &ndash; SigNoz asks whether AI handling 95% of incident response leaves SREs worse at the 5% that matters, citing Bainbridge&#8217;s 1983 &#8220;Ironies of Automation.&#8221; On the lighter side, Drew Breunig baked a 6502 CPU emulator into the weights of Qwen3.5-4B so it can run NES ROMs, very slowly, and NVIDIA published a Nemotron-powered haunted house project.</li>
+        </ul>
+
+        <h4 class="digest-theme">Skeptics and Analysts</h4>
+        <ul class="digest-bullets">
+          <li><strong>Theranos&#8217; whistleblower</strong> &ndash; Tyler Shultz says the AI boom is &#8220;a great opportunity to go deceive people.&#8221; TechCrunch frames the warning around companies that have never turned a profit raising capital at trillion-dollar valuations.</li>
+          <li><strong>Stratechery and the WSJ</strong> &ndash; Ben Thompson&#8217;s weekly roundup lists Anthropic numbers and the end of the Internet as we know it, and its lead piece argues that Stripe does not make any business succeed but makes more things practical to try. The Wall Street Journal headline says OpenAI raised less than half of its $30 billion target in the latest round; the article was paywalled, so only the headline is cited.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Read the first stories together and one idea comes through. The AI buildout used to be financed by profits and is now financed by promises. Alphabet&#8217;s free cash flow is negative while its capex climbs to $51.4 billion a quarter. Nvidia is considering cosigning a customer&#8217;s construction loans. Blackstone is walking back its investment-grade forecast for a company whose data center contract alone is $44.6 billion. <em>Each of these is a way of moving risk onto someone else&#8217;s balance sheet</em>, and each new guarantor makes the next round of risk easier to hide.</p>
+
+        <p>The demand side is more modest than the spending implies. DoorDash has seen several hundred agent orders in total against about 3 million deliveries a day, Ollie is shutting down, and Google concedes that its own AI answers earn less per query than the old results. TechCrunch notes that cloud demand itself is strong, so the doubt is about returns, not usage. Gondala&#8217;s thread is the counterpoint: inside one engineering team, agents did change throughput, but only after the team rebuilt the process around them.</p>
+
+        <p>The Claude Code extension compromise is a reminder that the tools themselves are now supply-chain targets. An extension runs with the permissions of the editor, so a backdoored bundle reaches source code and credentials immediately.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>The question hanging over the industry is who holds the risk when the returns arrive late. In 2026 the answer is shifting from shareholders to lenders and suppliers: a debt raise triple last year&#8217;s, a chipmaker offering guarantees, and credit agencies about to grade the labs. That is how infrastructure cycles usually mature, and it tends to reward whoever has cash and punish whoever has ambition alone.</p>
+          <p>At the same time, the products are meeting ordinary friction. Agents are a rounding error in a delivery company&#8217;s order book, privacy-first assistants cannot pay for themselves, and experts like Shultz are drawing comparisons to past frauds. None of this stops the buildout, but it shortens the patience of the people paying for it. If the next quarter&#8217;s numbers look like this one, expect the story to move from how capable the models are to how long the spending can last.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic&#8217;s IPO and rating.</strong> The company filed to go public this week. Watch whether the double-B forecast holds and how it changes the terms of the $63 billion chip financing.</li>
+          <li><strong>More guarantees.</strong> If Nvidia cosigns Nscale&#8217;s loans, expect other suppliers to be asked for the same. Watch whether investors treat that as support or as a warning.</li>
+          <li><strong>Extension security.</strong> Check whether you installed Claude Code for VS Code 2.1.312 or 2.1.313 through Cursor, and watch for further notices from Cursor and Anthropic.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

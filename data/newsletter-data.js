@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-30",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["acronym", "scramble", "cryptogram"]
+        lastUpdated: "2026-10-31",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: ["acronym", "scramble", "cryptogram", "wordsearch"]
     },
     issues: [
+        {
+            date: "2026-10-31",
+            volume: 1,
+            issueNumber: 130,
+            title: "Cracks Are Emerging in the AI Spending Boom",
+            description: "Daily AI news roundup - October 31, 2026. Cracks emerge in the AI spending boom, Anthropic faces a possible junk credit rating, Google admits AI Mode hurts Search revenue, a backdoor hits the Claude Code extension on Cursor, and more.",
+            url: "https://fittoprompt.com/issues/2026-10-31.html",
+            storyCount: 20,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-10-30",
             volume: 1,
