@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-10-31",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["acronym", "scramble", "cryptogram", "wordsearch"]
+        lastUpdated: "2026-11-01",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["acronym", "scramble", "cryptogram", "wordsearch", "crossword"]
     },
     issues: [
+        {
+            date: "2026-11-01",
+            volume: 1,
+            issueNumber: 131,
+            title: "Data Centers Are Now a Midterm Issue, Even in Brooklyn",
+            description: "Daily AI news roundup - November 1, 2026. Data centers become a midterm issue, DeepSeek drops a coding agent aimed at Anthropic, South Korea's exports surge on the AI boom, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-01.html",
+            storyCount: 18,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-10-31",
             volume: 1,

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 1, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 1, 2026. Data centers become a midterm issue, DeepSeek drops a coding agent aimed at Anthropic, South Korea's exports surge on the AI boom, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 131">
+  <meta property="og:description" content="Daily AI news roundup - November 1, 2026. Data centers become a midterm issue, DeepSeek drops a coding agent aimed at Anthropic, South Korea's exports surge on the AI boom, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Sunday, November 1, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 131</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &amp; Politics &middot; Data Centers</div>
+<a href="https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/" target="_blank" rel="noopener" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/10/Newsreel-Midterm-Madness-22.jpg?resize=1200,800" alt="" class="w-full aspect-[16/9] object-cover mb-3" loading="lazy" onerror="this.style.display='none'">
+<h2 class="headline-lead mb-3">Data Centers Are Now a Midterm Issue, Even in Brooklyn</h2>
+</a>
+<p class="byline mb-3">TechCrunch &middot; Oct 31</p>
+<div class="newspaper-body">
+<p>At a Brooklyn midterm party five days before Election Day, TechCrunch&rsquo;s Dominic-Madori Davis found that nearly every conversation circled back to AI and data centers. When she asked a room full of media types and techies who was pro-AI data center, she was promptly booed. A recent Data Center Watch report found that almost $200 billion in data center projects were delayed, stalled, or blocked in the first half of 2026 because of political and community opposition.</p>
+<p>States including Pennsylvania, Georgia, Texas, New York, and Virginia are weighing more guardrails and transparency, and hundreds of new data centers are planned in Virginia alone. Panelist Hilary Flint said people still protest because they &ldquo;value their lives a little bit more than a temporary check,&rdquo; while NewsNation host Batya Ungar-Sargon noted that some labor unions back the projects for the jobs they promise.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Models &middot; Coding Agents</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">DeepSeek Drops Enhanced Coding Agent With Aim to Rival Anthropic</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Bloomberg reports that DeepSeek has released an enhanced coding agent that it is positioning against Anthropic&rsquo;s tools. Bloomberg&rsquo;s article was behind a paywall when we built this issue, so we are relying on its headline.</p>
+<div class="kicker mt-5">Crypto &middot; Security</div>
+<a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOQkM3dmhycV92Tk5Oa2xmTVhpMUI3RnluVVRpV1dlUGtIVXo4NjBqX0RDcjlLVW5FaGN4TGhZOXpEMlhBbzhzZ0gteVMwWUx2dVFoVzhnMzkxeU5tZzlDaHpZZE5LUVMxYllLTVBfTzhTcEZMaTl4eXhKT2l4ekwxWFFWOHc3bjJrWXhHRkVQQTFhOUNXMzlJSGQyZw?oc=5" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">FBI Blames North Korea for Stolen Billions From Binance in Biggest Hack in History</h3>
+</a>
+<p class="byline mb-2">AP &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">That is the AP headline. We could not open the full article for this issue, and our own quick search did not turn up independent confirmation, so treat the details as unverified until you read the AP story.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-item">
+<div class="kicker">Trade &middot; AI Chips</div>
+<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTEw3WmpfUE9XNlpDeFd4LUpBenRHZVpiTVpFRDZfakN2T29CaHE4emNXQ0s0VzFDZTJTeDlXVkJtV0FSVEpwblJEVWZoWEZ4eEFzNDA5eHh0TGo4X2ZFX3hlYzljRl9TTDhPNkE1a05aNjNPU19Kb1lGbmV1UWw0dUtNZk9HS2JENWx5dDJyNWgxSGRWMzBLaGxMazJRbWxGbVBFbWNJbVlzbHkzTk05RDFGMnBzcUh4V2VqSmhTZmhkUQ?oc=5" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">South Korea Exports Nearly Double in October on AI Investment Boom</h3>
+</a>
+<p class="byline mb-2">Reuters &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Reuters reports that South Korea&rsquo;s October exports nearly doubled, with the headline crediting the boom in AI investment. We could only see the headline for this issue.</p>
+</div>
+<div class="story-item aq-cell">
+<div class="section-label">The AI Mini</div>
+<div class="cw-puzzle">
+<style>
+.cw-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.cw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:10px}
+.cw-cell{position:relative;aspect-ratio:1;background:#fff;border:1px solid #1a1a1a}
+.cw-cell.blk{background:#1a1a1a}
+.cw-num{position:absolute;top:1px;left:3px;font-size:9px;font-weight:600;color:#555;pointer-events:none}
+.cw-in{width:100%;height:100%;border:0;padding:8px 0 0;text-align:center;font-size:18px;font-weight:700;text-transform:uppercase;background:transparent;font-family:inherit;color:#1a1a1a;box-sizing:border-box}
+.cw-in.ok{background:#e1efe1}
+.cw-in.bad{background:#f3dcdc}
+.cw-clues{font-size:11px;line-height:1.5;color:#333}
+.cw-clues b{display:block;margin-top:6px;text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+.cw-btn{margin-top:10px;background:#1a1a1a;color:#fff;border:0;padding:6px 14px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:inherit}
+.cw-status{margin-top:8px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+</style>
+<div class="cw-grid" id="cw-grid"></div>
+<div class="cw-clues"><b>Across</b>1. What GPT or Claude is, in short<br>3. Power ___ strained by data centers<br>4. Person who writes software<b>Down</b>1. Hype word for what AI feels like to newcomers<br>2. Mosquito-zapping beam from a recent issue</div>
+<button type="button" class="cw-btn" id="cw-check">Check</button>
+<div class="cw-status" id="cw-status"></div>
+<script>
+(function(){
+var A=["MODEL#","A###A","GRIDS","I###E","CODER"];
+A[0]="MODEL";
+var nums={"0,0":1,"0,4":2,"2,0":3,"4,0":4};
+var g=document.getElementById("cw-grid"),st=document.getElementById("cw-status"),ins={};
+for(var r=0;r<5;r++){for(var c=0;c<5;c++){
+ var d=document.createElement("div"),ch=A[r].charAt(c);
+ if(ch==="#"){d.className="cw-cell blk";g.appendChild(d);continue;}
+ d.className="cw-cell";
+ if(nums[r+","+c]){var n=document.createElement("span");n.className="cw-num";n.textContent=nums[r+","+c];d.appendChild(n);}
+ var i=document.createElement("input");i.className="cw-in";i.maxLength=1;i.setAttribute("aria-label","Row "+(r+1)+" column "+(c+1));
+ i.addEventListener("input",function(){this.value=this.value.toUpperCase();this.className="cw-in";});
+ d.appendChild(i);ins[r+","+c]=i;g.appendChild(d);
+}}
+document.getElementById("cw-check").addEventListener("click",function(){
+ var good=0,tot=0;
+ Object.keys(ins).forEach(function(k){var p=k.split(","),want=A[+p[0]].charAt(+p[1]),v=ins[k].value.toUpperCase();tot++;
+  if(!v){ins[k].className="cw-in";return;}
+  if(v===want){good++;ins[k].className="cw-in ok";}else{ins[k].className="cw-in bad";}});
+ st.textContent=good===tot?"Solved. Nicely done.":good+" of "+tot+" letters correct.";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Agents &middot; How-To</div>
+<a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxObVM3eS0zbjY1QVZYMl92Ym80ZHZ2MTJ2ZTVycG8xY2FrWjAzSHlOODNKUmhWTkhuN1RqSm9TeXJPLXBzM0s3YUhKY2ttZVpENjlVQmRpbGIxazBISmNnYkExbFR1RnMtSGRaTVlYaFdxYzlHOTJvT1JjMDBzVnE0UnRieGJabm0tZ1lWYXJEcnlYeTBobWRMNjY0QWxVeG8?oc=5" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-feature mb-2">Put Your A.I. Agents to Work With These 5 Killer Tasks</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Times offers five tasks it suggests handing to AI agents. The full piece was not available to us when we built this issue, so see the original for the list.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire &middot; Politics</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPSjgzV092eGo2OEhXRVd2aGsxOTl5Zzc0V25lSHBSNW9Qd3FLTXVpQUszdEdqanpLdVVscjZlMUoxTllTYVhsd0ZqYzJfbGl6Ry1YRjhNY0NyY1hjdmNRdE9jTDdpck1VSVhuRUFKblRicVAwVERrMU9sTkU0d0ppaFM4OVoxYTlpb2otQUw0MlBNaDFTbVUxTzA0UExNTWU3MTlucVFCbGFiNzAwOE5BRjBTampMT2Y0U183dWxyRQ?oc=5" target="_blank" rel="noopener">Trump Calls $50 Million Contract for Ex-Lawyer Habba Mildon &lsquo;Not Acceptable&rsquo;</a>
+<div class="wire-source">Reuters &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNLVlXWHJiT1ZELXhOM3ZVM1hySTBsenhZbUxYdDRCN1NTcnFRN0xXcWFhVjZ2NDhnLVRzOFhGNzNtOEpXV3RUOWVtSW9tbFlqY184eVFqbUpPRXNQbnl6Q2V4SVVjdU1UZ0tMdGdpdWhhZjM3N3cwSTBPdGIwSXZSeXYxR0JySnhKdE02dzJmYmpvUXlwb05GeUl5QzhjZzNPRVU3VDBDRE1hemVyWHJzendXXzBaWWRKakZqTlh3a3U?oc=5" target="_blank" rel="noopener">California Governor Asks US Judges to Resist Trump Attempts to Seize Ballots</a>
+<div class="wire-source">Reuters &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSmwzNUwxNEpXRmE1UjRrTlBIeGJQMGJ0N1NxOUlVZENsWFVadHloUlA2MzlWRWU1dGFqYk55aUpWeUVkbDJhczBBUThTZ0p6alRuV245ckRGOTl2S1VXbzJDc2NCU1g3QV9QeE1KYnhaVEY5YVp0RnZjVmtpZkNkNFdhdUZjVi0ySXpJWjdPTHUxNDhmeUdxVkR3aTBiRmIxN0ZmT2F0RVBvNlU?oc=5" target="_blank" rel="noopener">Trump Says Flavio Bolsonaro Can Stay in US &lsquo;As Long As He Wants&rsquo;</a>
+<div class="wire-source">Reuters &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNHloVEIzZEI3TmxoR0JDdWdRWWhlTHB3eFBtcDRnZDFDMEl6RkpzSlRZd3NHM0EtUnRqX1F4Vlh0OGxvaUkyM21RdGlWdlNPT1Q4Mlh1X2ZtbjZqRi1GdWY2TFlCYjdpVDNVaHhQR25WY29MbWdybFFmb3ZXc0ZqSExhS3VRVElxdU9Wa3BjRlY5YVJkdWp2QTh4ZDhQNWZHaGxYbWhkU2M0QQ?oc=5" target="_blank" rel="noopener">Republicans on Defense in Texas While Democrats in Michigan Can&rsquo;t Get on the Same Page</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire &middot; Courts &amp; Crime</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPZ2dXRjY0R0EzUzFSNXBrYmRsZGJFdXEzTEtvZHFJYmFwUEVoNndYRzVGWkRyTVlOcHN6LUZFYThjRFFkVDVjZTFYdlRfekxWTE13VTZYRnF4RXlvdmJtQkMzOFViVElDWVdqdW5tXzlCZ0tCSjBZR2dReVlCbVVWZ3NxMGFaNUJydXpoYUFRZVZqRjV2QkJhZE5YeExkZ1AzYUdaUnJ3bmtJRVRmRFE?oc=5" target="_blank" rel="noopener">&lsquo;Grasping at Straws&rsquo;: Judge Dismisses Trump Suit Against Wall Street Journal Over Epstein Letter</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbU5MbXRmeFNhTFoxNmNDeGVHeWQyX08tREttblVoMDg2ZjB5dU90dC1XNXdDaGh6MGE1TXdGVnNlQ1NZMzZDZXAzWDFnbDVLeVRHeDZvR3AyakN5aXBvZjNpd21YT0pKSkVCQ3ZqTVdDN1Zsb0dGekRqZXhVVzhNbGxFR0lJeTBhbDVPSUp3cmFqdVVMeTY1SEZ5Q09qTUZ5dlFERFBOR3c?oc=5" target="_blank" rel="noopener">Federal Officials Investigate Arson at Beleaguered Police Department in Mississippi</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQRV9KLUhEZ0cwNXhZaFZjbnNSVFdwZW5WdHp0NFZhYUtSNnpaNUVwd3h3TVd5eVBMNHIyNlBoRjFpeUMtaEtVTEYzcU5WMl9VTTZLY0xrYW5PRkNoc05sdU5QRHBCVUVXb0YyQ1ZUangwTHZLUWloaWRuOVVOLWVxbjh5UHhWZk5JTUtsRFY2MEFEV1pmT0J6UDNFWHNDQ3V2WVplcjA1UUo5S2NYalE?oc=5" target="_blank" rel="noopener">FBI Visits Dan J. Sullivan Donor in Candidate&rsquo;s Hometown as Alaska Senate Inquiry Widens</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-01/china-s-upgraded-peru-trade-deal-takes-effect-widening-ties" target="_blank" rel="noopener">China&rsquo;s &lsquo;Upgraded&rsquo; Peru Trade Deal Takes Effect, Widening Ties</a>
+<div class="wire-source">Bloomberg &middot; Nov 1</div>
+</div>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire &middot; Sports</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxON2lBQVM2dU1OS3Nvb21jTmphSEdXdGhfdGp4Z2pIT1RwSWRybmJSZC1neV9WQ0pqMTNsUmRPd2hJdmd6NUREV3o0akVCODUxQ2lvaThjMjUxcGJNRUw0RjlBTmFGS1hRN3Rjd3Vha19lRlR3X3U4VS1fWmIzYjZFNnBhbGNMY3p2eGdiNEVPNTRKRzlrRmFnYm53?oc=5" target="_blank" rel="noopener">Gabby Williams Leads Valkyries to WNBA Championship in Second Season, Beating Dream 68-63 in Game 7</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPOWhHamZGTmZIZzllNWZGUWNDVW15eVQ5enBZTEF2bkpFNXViNnpWMzR0aU1xbDJvcndobEhJZFluVV9nVzhERzBjZUJ4T2ozaXlRckFTYUZqTWNRNEtMb0NYb0hUZmhaSmZuSUluRjdNR210OWFfMFQwQjhKX3dSR1F3?oc=5" target="_blank" rel="noopener">No. 4 Indiana Needs Matching 60-Yard Field Goal, Overtime Stop to Outlast Minnesota 23-16</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPWU9OSmxFSjk0SFRMSC1VSXNBT1NTUGNWRTNQanlGeUxua3NTY2NxbXpOcHVNbmtWcGtrVVQ5TmhGMFlEUFpWejBNUllYcTBKQTFfTUJIcFY1cmpKdFJMVHBWOVVnTWE0TXhJa0Y0RU9pV2cxWDNvWThGZGM1Yl9UZFFqWTg4SmZ4d3UtUEEzb1d6MW1CVnc?oc=5" target="_blank" rel="noopener">LeBron James Is 41 and Feeling Young in Philly. He Had His Best Game Yet With the 76ers</a>
+<div class="wire-source">AP &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPZVlMVEpaN2xQd3I2UlFaRWdPUWp1ZG9zNXppUkROdGRTMGIySXBhV2UxUXhpSnMzZFB1a0dTV2hVeTFlNUt3UDZZUFppOFlsVU5wZGVzRVRLODhGRkhHdTM0YjRlYllWeWprWHBubUF1UHFkeWxOV2FpVE9DZ1NJWExneC0tbTJXSXdIU3FRR2xNZzRnWlZYa0hwRGduN0dsajh0bV8xTzZyRzhUQkQxSERSWDRaTFlyenNGMWJxUWNJVDM3?oc=5" target="_blank" rel="noopener">USC Stuns No. 2 Ohio State 30-18 With Big Plays From Jayden Maiava, Freshman Trent Mosley</a>
+<div class="wire-source">The Washington Post &middot; Nov 1</div>
+</div>
+<div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUDNmZW1UYzdxZXVwT0lBYW5ad0VMLXhrUHRRVzhUemtsRmowMGhrVUxlcExtZDUzM2tHaElQbVgtalNoTlhCekprUWQ5d2wyaFRDODdnSjRzeDd0T1U0ZzR0aUJTOVpvbUNfeHFSQjdPODh1cnRBTEJiTzB5T2Z0eTFBdGJYaUJwT2UxMUZqR1dpWkNaSHR1TnU1bDVmWF9xY0dZOHhRVVRQOEtMZU9HTGM3Y29GVDRNZEtr?oc=5" target="_blank" rel="noopener">Jets Place DT T&rsquo;Vondre Sweat on Injured Reserve With a Knee Injury</a>
+<div class="wire-source">The Washington Post &middot; Nov 1</div>
+</div>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Almost $200 billion in data center projects were delayed, stalled, or blocked in the first half of 2026 because of political and community opposition, according to a Data Center Watch report cited by TechCrunch. Yesterday&#8217;s issue was about whether the companies building them can afford the bill. Today&#8217;s lead is about whether the neighbors will let them finish.</p>
+
+        <h3 class="digest-section-head">Today&#8217;s Headlines</h3>
+
+        <h4 class="digest-theme">The Buildout Meets the Ballot Box</h4>
+        <ul class="digest-bullets">
+          <li><strong>Data centers on the ballot</strong> &ndash; TechCrunch&#8217;s Dominic-Madori Davis moderated a data center panel at a Brooklyn midterm event five days before the November 3 election. When she asked who in the room was pro-AI data center, she was booed. Panelist Hilary Flint, an environmental and public health advocate, said people protest because they &#8220;value their lives a little bit more than a temporary check.&#8221; The panel&#8217;s shared view was that data centers have become the physical embodiment of anger at the tech class. Davis also notes that reports show data center jobs are plentiful during construction but not permanent afterward.</li>
+          <li><strong>Labor and consent</strong> &ndash; NewsNation&#8217;s Batya Ungar-Sargon argued that some unions back data centers because past generations took pride in huge buildings that meant prosperity. Vox&#8217;s Astead Herndon countered that the issue is consent, noting Vivek Ramaswamy was booed in Ohio for a similar argument and that lack of consent runs across party lines. States including Pennsylvania, Georgia, Texas, New York, and Virginia are weighing more guardrails, and hundreds of new data centers are planned in Virginia alone.</li>
+          <li><strong>South Korea&#8217;s export surge</strong> &ndash; Reuters&#8217; headline says South Korea&#8217;s October exports nearly doubled on the AI investment boom. We could see only the headline, but it is the supply-side mirror of the lead: the spending that frightens voters is showing up as revenue for chip exporters.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents and Competition</h4>
+        <ul class="digest-bullets">
+          <li><strong>DeepSeek&#8217;s coding agent</strong> &ndash; Bloomberg reports that DeepSeek has released an enhanced coding agent aimed at rivaling Anthropic. The article was behind a paywall, so we cannot say what the agent does or how it benchmarks. The headline alone tells you that agentic coding, not chat, is now where Chinese labs are choosing to compete.</li>
+          <li><strong>Five tasks for agents</strong> &ndash; The New York Times offers a list of five tasks it suggests giving to AI agents. We saw only the headline, but a mainstream paper running agent how-tos shows the topic has moved from developer circles to general readers.</li>
+        </ul>
+
+        <h4 class="digest-theme">Security</h4>
+        <ul class="digest-bullets">
+          <li><strong>Binance hack attribution</strong> &ndash; The AP headline says the FBI is blaming North Korea for billions stolen from Binance in what it calls the biggest hack in history. We could not open the article, and a quick search did not independently confirm it, so read the AP report before repeating the figure.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Wire</h4>
+        <ul class="digest-bullets">
+          <li><strong>Politics and courts</strong> &ndash; Reuters and AP carry stories on a $50 million contract for ex-lawyer Habba Mildon that Trump called &#8220;not acceptable,&#8221; California&#8217;s governor asking federal judges to resist attempts to seize ballots, Flavio Bolsonaro staying in the U.S., a judge dismissing Trump&#8217;s suit against the Wall Street Journal over the Epstein letter, an FBI visit to a donor in the Alaska Senate inquiry involving Dan Sullivan, and a Texas and Michigan midterm roundup.</li>
+          <li><strong>Trade and crime</strong> &ndash; Bloomberg reports that China&#8217;s upgraded Peru trade deal has taken effect, widening ties. AP reports federal officials are investigating arson at a Mississippi police department.</li>
+          <li><strong>Sports</strong> &ndash; The Valkyries won the WNBA title over the Dream 68-63 in Game 7, No. 4 Indiana beat Minnesota 23-16 in overtime, USC upset No. 2 Ohio State 30-18, LeBron James had his best game yet with the 76ers, and the Jets placed T&#8217;Vondre Sweat on injured reserve.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Put today&#8217;s lead next to yesterday&#8217;s news and the AI buildout has two bills coming due at once. Yesterday the problem was financial: <em>negative free cash flow</em> at the biggest spenders and record debt raises. Today it is political. The $200 billion in blocked or delayed projects is a number about permission, not money, and it arrives just as voters in New York are booing a pro-data-center question in a room that is full of techies.</p>
+
+        <p>The sharpest point in the TechCrunch piece is Herndon&#8217;s, because it moves the argument off jobs and onto <em>consent</em>. Ungar-Sargon&#8217;s Rust Belt pride argument assumes communities were asked and said yes. Davis&#8217;s panel described the opposite: secret deals with local officials and zoning that hides what is being built until it is too late to protest. If that is the grievance, more construction jobs will not fix it, and the industry&#8217;s usual answer is aimed at the wrong complaint.</p>
+
+        <p>The two stories we could read only by headline fit the same picture from the other side. South Korea&#8217;s export jump and DeepSeek&#8217;s coding agent both say the demand and competition are real. What the lead adds is that the physical footprint of that demand has a local address, and the people at that address are now voting.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Technology buildouts have usually run into local opposition eventually, from railroads to power lines. What is different here is speed and visibility: a data center is a large, windowless building that arrives with little public input, and it has become a stand-in for a wider anxiety about who gains from AI. Davis&#8217;s observation that people outside the tech world find it all &#8220;ugly&#8221; is the part the industry should take most seriously.</p>
+          <p>If the midterms show data centers can swing races, expect state legislatures to treat transparency and siting rules as popular politics rather than technical policy. That would raise the cost and slow the timeline of the buildout in exactly the states, like Virginia, where capacity is concentrated. Whether that is a pause or a real brake depends on the results on November 3, which we cannot yet read.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>November 3 results.</strong> Watch whether candidates who ran against local data centers outperform, and how the industry and state officials describe the outcome afterward.</li>
+          <li><strong>State guardrails.</strong> Pennsylvania, Georgia, Texas, New York, and Virginia are all weighing transparency or oversight rules. Watch which bills move first once the election is over.</li>
+          <li><strong>DeepSeek&#8217;s agent in practice.</strong> Wait for independent testing and developer reports before treating the release as a threat to Anthropic or anyone else. We have only a paywalled headline.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
