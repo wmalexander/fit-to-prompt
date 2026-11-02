@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 2, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 2, 2026. Salesforce and Microsoft fight over who controls AI agents, India floats a plan where the model travels to the data, Linus Torvalds weighs in on AI kernel patches, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 132">
+  <meta property="og:description" content="Daily AI news roundup - November 2, 2026. Salesforce and Microsoft fight over who controls AI agents, India floats a plan where the model travels to the data, Linus Torvalds weighs in on AI kernel patches, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, November 2, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 132</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">Video &middot; Enterprise AI</div>
+<a href="https://fittoprompt.com/study-guides/salesforce-just-helped-microsoft-youre-picking-the-winner-of-a-trillion-dollar-fight-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/KDGxQtfjBj0/maxresdefault.jpg" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h2 class="headline-lead mb-3">Salesforce Just Helped Microsoft. You&rsquo;re Picking the Winner of a Trillion-Dollar Fight.</h2>
+</a>
+<p class="byline mb-3">Nate B Jones &middot; YouTube &middot; Nov 1</p>
+<div class="newspaper-body">
+<p>On October 27, Salesforce made Microsoft&rsquo;s agents easier to use, and the same day Oracle said it is building a workspace that brings its apps into ChatGPT. Jones argues that rivals opening doors for rivals is no accident: every one of them is chasing the &ldquo;agent control plane,&rdquo; the software that oversees agents, hands them the right data and tools, applies company rules, and returns the work for a person to review.</p>
+<p>Jones puts the stakes in numbers: the nine biggest cloud companies, Jones says, are on track to spend $957 billion on capacity this year and more than $1.5 trillion next year, and cites Gartner&rsquo;s forecast of about $1.46 trillion in worldwide software spending. The advice to anyone buying: write interoperability into purchasing requirements, because the question of whether a single control plane wins should be settled within 12 to 24 months.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Policy &middot; India</div>
+<a href="https://www.theregister.com/public-sector/2026/11/02/india-floats-ai-plan-under-which-the-model-travels-to-the-data-rather-than-the-data-travelling-to-the-model/5306872" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">India Floats AI Plan Under Which &lsquo;The Model Travels to the Data, Rather Than the Data Travelling to the Model&rsquo;</h3>
+</a>
+<p class="byline mb-2">The Register &middot; Nov 2</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">India&rsquo;s IT ministry wants AI trained on local data without handing it over. Hospitals, banks, and agencies would put anonymized, encrypted data into secure exchanges where model builders can train on it under rules the data owners set. The Register notes it is unclear how much work remains before the scheme is real.</p>
+<div class="kicker mt-5">Open Source &middot; AI Contributions</div>
+<a href="https://www.theregister.com/os-platforms/2026/11/01/linus-torvalds-says-linux-kernel-is-out-of-stabilization-phase-and-using-much-healthier-model-for-ai-contributions/5306852" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Linus Torvalds Says Linux Kernel Is Out of &lsquo;Stabilization Phase&rsquo; and Using &lsquo;Much Healthier Model&rsquo; for AI Contributions</h3>
+</a>
+<p class="byline mb-2">The Register &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The first release candidate of Linux 7.4 carries almost 20,000 commits against the usual 15,000 or so. Torvalds likes that AI-found fixes now arrive in the merge window rather than as late patches, but notes the machine-made patches &ldquo;often get rewritten.&rdquo;</p>
+<div class="kicker mt-5">Opinion &middot; Mathematics</div>
+<a href="https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/" target="_blank" rel="noopener" class="story-link">
+<h3 class="headline-standard mb-2">Mathematics Has Changed. Let&rsquo;s Act Like It</h3>
+</a>
+<p class="byline mb-2">Frank Calegari, on Terence Tao&rsquo;s blog &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">In a guest post, number theorist Frank Calegari calls OpenAI&rsquo;s October 6 release of over 700 research papers a watershed. The post urges mathematicians to evaluate all work as if it were AI-assisted, hire through in-person conversations, and reward choosing worthwhile problems over racing to prove them.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-item">
+<div class="kicker">Video &middot; Agents</div>
+<a href="https://fittoprompt.com/study-guides/my-ai-agent-worked-for-hours-then-i-looked-closer-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/fk20bs6KLNE/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">My AI Agent Worked for Hours. Then I Looked Closer.</h3>
+</a>
+<p class="byline mb-2">Matt Maher &middot; YouTube &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Maher asked an agent to refactor a large system and it worked for about 20 hours. The result looked great but had quietly dropped requirements and a chunk of the tests. The lesson: verify the work with a second agent, keep the &ldquo;why&rdquo; in written intent files, and write the evals first.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video &middot; Economics</div>
+<a href="https://fittoprompt.com/study-guides/the-rise-of-the-automated-economy-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/LMiadHKsf64/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">The Rise of the Automated Economy</h3>
+</a>
+<p class="byline mb-2">David Shapiro &middot; YouTube &middot; Nov 1</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shapiro argues the economy&rsquo;s three classic sectors are about how value gets created, and that the real &ldquo;fourth sector&rdquo; is value created with negligible human input. The labor share of income hit 52.8% in the second quarter, Shapiro says, the lowest on record, and that ownership will matter more than wages.</p>
+</div>
+<div class="story-item aq-cell">
+<div class="section-label">Acronym Quiz</div>
+<div class="aq-puzzle">
+<style>
+.aq-puzzle{max-width:300px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.aq-q{margin-bottom:12px}
+.aq-a{font-size:15px;font-weight:800;letter-spacing:.04em}
+.aq-h{font-size:10.5px;color:#666;margin:1px 0 4px;font-style:italic}
+.aq-q select{width:100%;font-family:inherit;font-size:11px;padding:4px;border:1px solid #1a1a1a;background:#fff;color:#1a1a1a;border-radius:0}
+.aq-q.ok select{background:#e1efe1}
+.aq-q.bad select{background:#f3dcdc}
+.aq-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin:4px 6px 0 0}
+.aq-status{margin-top:8px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+</style>
+<div id="aq-box"></div>
+<button class="aq-btn" id="aq-submit" type="button">Submit</button>
+<div class="aq-status" id="aq-status"></div>
+<script>
+(function(){
+var Q=[{"a": "LLM", "c": "Large Language Model", "o": ["Large Language Model", "Limited Learning Machine", "Linear Logic Module"], "h": "The technology behind ChatGPT and Claude."}, {"a": "LTS", "c": "Long-Term Support", "o": ["Low Transfer Speed", "Linked Test Suite", "Long-Term Support"], "h": "What people expect Linux 7.4 to be, per Torvalds."}, {"a": "DEPA", "c": "Data Empowerment and Protection Architecture", "o": ["Digital Edge Processing Array", "Data Empowerment and Protection Architecture", "Distributed Encrypted Platform for AI"], "h": "India&rsquo;s plan for training AI on local data."}, {"a": "DPI", "c": "Digital Public Infrastructure", "o": ["Digital Public Infrastructure", "Distributed Processing Interface", "Data Privacy Index"], "h": "India funds tools like UPI payments under this banner."}, {"a": "MCP", "c": "Model Context Protocol", "o": ["Machine Code Parser", "Multi-Chip Package", "Model Context Protocol"], "h": "A standard for connecting AI models to tools and data."}, {"a": "RAG", "c": "Retrieval-Augmented Generation", "o": ["Rapid Agent Gateway", "Retrieval-Augmented Generation", "Recursive Alignment Graph"], "h": "Feeding a model fresh documents before it answers."}];
+var box=document.getElementById("aq-box"),sels=[];
+Q.forEach(function(q,i){
+ var d=document.createElement("div");d.className="aq-q";
+ var a=document.createElement("div");a.className="aq-a";a.textContent=q.a;
+ var h=document.createElement("div");h.className="aq-h";h.innerHTML=q.h;
+ var s=document.createElement("select");s.setAttribute("aria-label",q.a+" stands for");
+ var o=document.createElement("option");o.value="";o.textContent="Choose...";s.appendChild(o);
+ q.o.forEach(function(t){var p=document.createElement("option");p.value=t;p.textContent=t;s.appendChild(p);});
+ d.appendChild(a);d.appendChild(h);d.appendChild(s);box.appendChild(d);sels.push({d:d,s:s,c:q.c});
+});
+document.getElementById("aq-submit").addEventListener("click",function(){
+ var good=0;
+ sels.forEach(function(x){x.d.className="aq-q";if(!x.s.value)return;if(x.s.value===x.c){good++;x.d.className="aq-q ok";}else{x.d.className="aq-q bad";}});
+ document.getElementById("aq-status").textContent=good===Q.length?"Perfect score. Nicely done.":good+" of "+Q.length+" correct.";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-02-cartoon.png" alt="A cheerful robot in a necktie unrolls a new blueprint for a weary man while a wastebasket overflows with pages labeled TESTS" class="w-full object-contain mb-2" style="max-height:460px;" loading="lazy">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;It&rsquo;s a refactor. Half of what you asked for just wasn&rsquo;t load-bearing.&rdquo;</p>
+<p class="byline mt-1">The robot, to a very quiet project owner</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Linus Torvalds just opened a Linux merge window with almost 20,000 commits, about 5,000 more than usual, and called the flood of AI-triggered work &ldquo;a good sign.&rdquo; The same day, a mathematician wrote that the field needs to treat every paper as AI-assisted, and a YouTuber admitted that a 20-hour agent refactor had quietly thrown away half of what was asked for. Today&rsquo;s stories keep landing on one question: when the machines do the work, who is checking it, and who controls the system doing the checking?</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Who Controls the Agents</h4>
+        <ul class="digest-bullets">
+          <li><strong>The trillion-dollar fight over the control plane</strong> &ndash; Nate B Jones points to October 27, when Salesforce made Microsoft&rsquo;s agents easier to use and Oracle said it is building a workspace that brings its applications into ChatGPT. Jones&rsquo;s reading is that nobody does this out of generosity: each company wants to own the &ldquo;agentic control plane,&rdquo; the software that decides which data an agent can see, which instructions are current, who approves actions, and where the result goes. Jones compares the prize to Windows in the 1990s and says nobody has that position yet. The backdrop is spending: Jones says the nine biggest cloud companies will put $957 billion into capacity this year and more than $1.5 trillion next year, against Gartner&rsquo;s forecast of about $1.46 trillion in worldwide software spending.</li>
+          <li><strong>Why the rivals cooperate</strong> &ndash; Jones explains that a bridge between Salesforce and Microsoft&rsquo;s Copilot Studio agents lets customers keep the agents they already built while Salesforce still helps coordinate the work. That earns each vendor more responsibility inside the customer without forcing a rip-and-replace. Jones adds that Microsoft Fabric can reference external data in place, so a rival can become important without a giant database migration. The buyer advice is blunt: put interoperability into purchasing requirements, because the expectation is that the question of whether one control plane wins to be answered within 12 to 24 months.</li>
+          <li><strong>The agent that dropped half the requirements</strong> &ndash; Matt Maher asked a top-tier reasoning model to refactor a large system built on what Maher calls the &ldquo;director pattern&rdquo;, because the agents were reading 30 or more files and taking about two minutes just to say hello. It worked for roughly 20 hours and returned something that looked great. Then Maher found the original system had on the order of 100 tests and the new one had 60 or 70, and agents were missing instructions that had been written for them, such as the emojis they were supposed to use. Maher also found that long instruction files were being truncated, with the agent reading only about the first 32,000 characters of one.</li>
+          <li><strong>Maher&rsquo;s forensic fix</strong> &ndash; Maher&rsquo;s recovery depended on written intent. A rationale file with 18 entries records why things were asked for, and an agent audited seven important ones against the before and after state, marking each as met, partial, or improved. The advice is to have a second agent, even a different model such as Opus 5.5, verify long-running work, and to write the evals first &ldquo;like we used to in the old days.&rdquo; The summary: these systems are excellent but not magic.</li>
+        </ul>
+
+        <h4 class="digest-theme">Humans in the Loop, Like It or Not</h4>
+        <ul class="digest-bullets">
+          <li><strong>Torvalds on AI patches</strong> &ndash; Announcing the first release candidate of Linux 7.4, Torvalds wrote of being &ldquo;much happier with the flood of AI triggered work going into the merge window than it showing up mainly as extra fixes during the -rc period.&rdquo; Torvalds hopes AI fixes are becoming part of normal development instead of a flood during stabilization, calling that &ldquo;a much healthier model.&rdquo; Torvalds hedges on two counts: 7.4 is expected to be the next long-term support release, which also makes releases bigger, and AI-suggested patches &ldquo;often get rewritten.&rdquo; AMD GPU register offsets and bit masks account for a third of the changes.</li>
+          <li><strong>Mathematics after the paper dump</strong> &ndash; In a guest post on Terence Tao&rsquo;s blog, Frank Calegari calls OpenAI&rsquo;s October 6 release of more than 700 research papers a watershed, while granting that they are poorly written, break attribution norms, and are sometimes wrong. The post quotes Hugo Duminil-Copin&rsquo;s lament that every major open problem publicly mentioned over a career was claimed solved, and offers the 1980s classification of finite simple groups as a precedent for a field losing its famous problem and its momentum with it. Tao notes that the post was first written in another file format and converted using AI.</li>
+          <li><strong>Calegari&rsquo;s concrete proposals</strong> &ndash; Calegari argues that tools which work are economic, not rhetorical: hiring and journal acceptance. The post wants all work evaluated as if it were AI-assisted, hiring built around in-person conversations rather than paper files, journals that adapt, more breadth in graduate education, and better seminars. It also says senior mathematicians who fear being scooped by AI &ldquo;are not being ambitious enough,&rdquo; and that choosing a worthwhile problem and truly understanding an AI-produced proof deserves real credit.</li>
+        </ul>
+
+        <h4 class="digest-theme">Who Owns the Output</h4>
+        <ul class="digest-bullets">
+          <li><strong>India&rsquo;s model-to-data plan</strong> &ndash; India&rsquo;s IT ministry calls it the Data Empowerment and Protection Architecture for AI Training, or DEPA. Training Data Providers such as hospitals, banks, and government agencies would place anonymized, encrypted data in exchange platforms with hardware-based secure environments, and Training Data Consumers would train models there under rules the providers set. The framework promises differential privacy and immutable audit logs, and claims it could extend formal credit to 400 million underserved people and small businesses and serve 250 million students in a $29 billion EdTech sector. The Register adds that India already runs several data exchanges but it is unclear how much work remains.</li>
+          <li><strong>The fourth sector</strong> &ndash; David Shapiro walks through the Fisher-Clark three-sector model: extraction, transformation, and services. Shapiro cites estimates that England in 1381 was about 45% extraction, under 30% transformation, and about 26% services, while the United States today is about 1%, under 20%, and about 80%. The proposed fourth sector is value created with negligible human input, meaning AI and robots, and Shapiro argues earlier fourth and fifth sector proposals only sliced services by job type.</li>
+          <li><strong>What the labor share says</strong> &ndash; Shapiro says labor&rsquo;s share of national income fell to 52.8% in the second quarter, the lowest since records began in 1947. The thought experiment: if the economy grows tenfold and 90% of that is automated, the human sectors together are only about today&rsquo;s economy, and all the new growth goes to whoever owns the automated slice. Shapiro forecasts the automated sector at 75 to 90% of the economy within a few decades and proposes two new metrics tracking how much household income comes from ownership and from publicly owned wealth.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Read the six items together and the interesting character is not the model, it is the <em>checkpoint</em>. Jones&rsquo;s control plane is a checkpoint by another name: the place that decides what an agent may see and do. Maher&rsquo;s forensic audit is a checkpoint that was not built in advance. Torvalds&rsquo;s merge window is a checkpoint with a human maintainer standing at it, and the remark that AI patches &ldquo;often get rewritten&rdquo; tells you the checkpoint is still doing real work. Calegari wants the checkpoint moved to hiring and journal acceptance, because that is where mathematicians actually respond to incentives.</p>
+
+        <p>Maher&rsquo;s story is the cleanest illustration of why this matters. Maher did everything advertised as responsible, with intent files, tests, and an expensive model, and still lost requirements by trusting a 20-hour run. What helped was not better code review but a record of <em>why</em> things had been asked for. Jones makes the same point from the enterprise side with the recruiter example: the real asset is the accumulated corrections and instructions, not the raw candidate data, and a vendor that preserves that knowledge becomes very hard to replace. Both are saying that durable context is the thing worth owning.</p>
+
+        <p>That is also where the vendor fight gets its intensity. If the control plane holds the context, whoever runs it holds the customer, which is why rivals are building bridges to each other&rsquo;s agents rather than walls. India&rsquo;s plan attacks the same problem from the public side: let the data stay with its owners, enforce the rules in hardware, and log everything. It is a control plane for training data, with a government as the operator.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Shapiro&rsquo;s sector argument and Calegari&rsquo;s plea for mathematicians are the same bet at different scales. If automation produces most of the value, then pay and status no longer follow effort, and institutions have to decide deliberately what they will reward. Calegari&rsquo;s answer for mathematics is to reward problem choice and understanding. Shapiro&rsquo;s answer for the economy is to track ownership, because the 52.8% labor-share figure suggests wages are already a shrinking claim on output.</p>
+          <p>The pattern to watch is that every institution in today&rsquo;s stories is reaching for the same tools: written intent, audit trails, interoperability requirements, and human sign-off at the right point. None of it requires believing the most aggressive forecasts. It only requires accepting Torvalds&rsquo;s and Maher&rsquo;s shared observation that the output is useful, abundant, and not yet trustworthy by default. The organizations that build the verification habit early will look cautious now and competent later.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Interoperability in contracts.</strong> Jones expects a possible control plane winner to emerge in 12 to 24 months. Watch whether more incumbents follow Salesforce and Oracle in supporting rivals&rsquo; agents, and whether buyers start demanding it.</li>
+          <li><strong>The Linux 7.4 cycle.</strong> Torvalds called the large merge window a healthier model but flagged that 7.4 may also be a long-term support release. The later release candidates will show whether AI-found fixes really arrive earlier or simply move the flood.</li>
+          <li><strong>Journals and hiring committees.</strong> Calegari&rsquo;s proposals only matter if journals and departments adopt them. Watch for policy statements on AI-assisted work and for whether disclosure norms move from minimizing the machine to explaining the human contribution.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/salesforce-just-helped-microsoft-youre-picking-the-winner-of-a-trillion-dollar-fight-study.html" data-study-guide>Salesforce Just Helped Microsoft</a> &ndash; Jones&rsquo;s definition of the agent control plane, the recruiter story about accumulated agent knowledge, and the questions Jones says to ask when vetting a control plane.</li>
+          <li><a href="https://fittoprompt.com/study-guides/my-ai-agent-worked-for-hours-then-i-looked-closer-study.html" data-study-guide>My AI Agent Worked for Hours. Then I Looked Closer.</a> &ndash; A first-person post-mortem on truncated instruction files, dropped tests, and the intent-and-rationale approach Maher used to audit a 20-hour refactor.</li>
+          <li><a href="https://fittoprompt.com/study-guides/the-rise-of-the-automated-economy-study.html" data-study-guide>The Rise of the Automated Economy</a> &ndash; Shapiro&rsquo;s pie-chart tour from medieval England to today, the category error in earlier fourth-sector proposals, and the ownership-based metrics.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-01",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["acronym", "scramble", "cryptogram", "wordsearch", "crossword"]
+        lastUpdated: "2026-11-02",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["acronym"]
     },
     issues: [
+        {
+            date: "2026-11-02",
+            volume: 1,
+            issueNumber: 132,
+            title: "Salesforce Just Helped Microsoft. You\u2019re Picking the Winner of a Trillion-Dollar Fight.",
+            description: "Daily AI news roundup - November 2, 2026. Salesforce and Microsoft fight over who controls AI agents, India floats a plan where the model travels to the data, Linus Torvalds weighs in on AI kernel patches, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-02.html",
+            storyCount: 6,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-11-01",
             volume: 1,
