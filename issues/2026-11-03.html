@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 3, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 3, 2026. AI Explained on models labs may release but cannot verify, IndyDevDan's tiny software factories, Cole Medin's factory dashboard, David Shapiro on AI and drug development, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 133">
+  <meta property="og:description" content="Daily AI news roundup - November 3, 2026. AI Explained on models labs may release but cannot verify, IndyDevDan's tiny software factories, Cole Medin's factory dashboard, David Shapiro on AI and drug development, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Tuesday, November 3, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 133</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">Video &middot; AI Safety</div>
+<a href="https://fittoprompt.com/study-guides/we-may-release-models-we-cant-control-amodei-altman-and-gemini-carbon-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/0Kw6_DTZPrY/maxresdefault.jpg" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h2 class="headline-lead mb-3">&lsquo;We may release models we can&rsquo;t control&rsquo;: Amodei, Altman &hellip; and Gemini Carbon</h2>
+</a>
+<p class="byline mb-3">AI Explained &middot; YouTube &middot; Nov 2</p>
+<div class="newspaper-body">
+<p>AI Explained walks through a busy week of statements from AI lab leaders and sets them against what the labs have written. A line in Anthropic&rsquo;s IPO documents says that if it becomes less able to detect misalignment as its models advance, it &ldquo;may deploy models whose behavior we cannot adequately verify.&rdquo; Sam Altman describes layers of defense, sandboxing, then monitoring, then alignment, and says that in the end nothing but alignment will work.</p>
+<p>The host also questions Dario Amodei&rsquo;s reply to critic Nathan Calvin, cites a staff survey in which 91% of Anthropic employees expect a Nobel-level AI discovery by 2030, and notes that Google&rsquo;s Gemini 4 Carbon placed second to Opus 5.5 on one benchmark at one third of the cost. His closing mental model is that models follow rules humans may never fully read, so bounds on how they are used matter.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Video &middot; Health &amp; Compute</div>
+<a href="https://fittoprompt.com/study-guides/anthropic-buys-mithril-medicine-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/XyRE7eKKKug/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">Anthropic Buys MITHRIL MEDICINE</h3>
+</a>
+<p class="byline mb-2">David Shapiro &middot; YouTube &middot; Nov 2</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shapiro says Anthropic bought Mithril Medicine, a one-person company whose founder used Claude to run experiments with 11 outside labs, then walks through an Anthropic report on speeding up drug development. He argues that a million times more compute could bring personalized medicine and longer lives. Most results so far are lab tests and mice, and the acquisition details are his account of events.</p>
+<div class="kicker mt-5">Video &middot; Agentic Engineering</div>
+<a href="https://fittoprompt.com/study-guides/tiny-software-factories-agentic-engineering-done-wrong-study.html" class="story-link" data-study-guide>
+<h3 class="headline-standard mb-2">Tiny Software Factories: Agentic Engineering DONE WRONG</h3>
+</a>
+<p class="byline mb-2">IndyDevDan &middot; YouTube &middot; Nov 2</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">IndyDevDan opens a course on tiny software factories: single-purpose systems with an agent that works around the clock while you stay &ldquo;near the loop,&rdquo; giving feedback and approving work instead of prompting. He tours an empty factory, including the &ldquo;core four&rdquo; of context, model, prompt, and tools, and cron prompts that run while you are away.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-item">
+<div class="kicker">Video &middot; Software Factories</div>
+<a href="https://fittoprompt.com/study-guides/my-ai-software-factory-ships-hundreds-of-prs-a-week-heres-how-i-manage-it-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/YHKuUjicB3M/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">My AI Software Factory Ships Hundreds of PRs a Week (Here&rsquo;s How I Manage It)</h3>
+</a>
+<p class="byline mb-2">Cole Medin &middot; YouTube &middot; Nov 2</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Medin tours the mission control dashboard for his AI software factory, which turns issue tickets into pull requests. He moved from a fully autonomous &ldquo;dark factory&rdquo; to one with humans in the loop, and stores every run and decision in Neon Postgres for audit trails. He notes a partnership with Neon.</p>
+</div>
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-03-cartoon.png" alt="Two engineers at a launch podium point proudly at a screen reading PASSED while a small robot unlocks the vault door labeled SAFETY TESTS from the inside" class="w-full object-contain mb-2" style="max-height:380px;" loading="lazy">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;We tested it extensively. It said it passed.&rdquo;</p>
+<p class="byline mt-1">An engineer, at the launch podium</p>
+</div>
+<div class="story-wide">
+<div class="section-label">Scramble</div>
+<div class="sc-puzzle">
+<style>
+.sc-puzzle{max-width:760px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.sc-intro{font-size:11px;line-height:1.45;margin-bottom:10px;color:#444}
+.sc-q{margin-bottom:10px;border-top:1px solid #d1d5db;padding-top:8px}
+.scramble-word{font-size:20px;font-weight:700;letter-spacing:5px;margin-bottom:3px}
+.scramble-word .hl{color:#8B0000}
+.sc-clue{font-size:11px;line-height:1.4;color:#555;margin-bottom:5px}
+.sc-in{width:100%;box-sizing:border-box;font-family:inherit;font-size:13px;letter-spacing:3px;text-transform:uppercase;border:1px solid #bbb;padding:5px 7px;background:#fff;color:#1a1a1a}
+.sc-in.ok{background:#e1efe1;border-color:#2f6b2f}
+.sc-in.bad{background:#f3dcdc;border-color:#8B0000}
+.sc-bonus{border-top:2px solid #1a1a1a;padding-top:8px;margin-top:4px}
+.sc-bonus-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#8B0000;margin-bottom:3px}
+.sc-status{margin-top:6px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+.sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}@media (max-width:640px){.sc-grid{grid-template-columns:1fr}}
+.sc-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin:8px 6px 0 0}
+</style>
+<div class="sc-intro">Unscramble four words from today&rsquo;s stories. The red letters, taken in order, spell a bonus word.</div>
+<div class="sc-grid">
+<div class="sc-q"><div class="scramble-word">ONTR<span class="hl">L</span>OC</div><div class="sc-clue">What an AI lab may lose over models it releases, per the title of the lead story.</div><input class="sc-in" type="text" maxlength="7" data-ans="CONTROL" autocomplete="off" spellcheck="false" aria-label="Answer 1"></div>
+<div class="sc-q"><div class="scramble-word">TWAFS<span class="hl">O</span>RE</div><div class="sc-clue">What the tiny factories and Cole Medin&#8217;s dashboard are built to produce.</div><input class="sc-in" type="text" maxlength="8" data-ans="SOFTWARE" autocomplete="off" spellcheck="false" aria-label="Answer 2"></div>
+<div class="sc-q"><div class="scramble-word">CAR<span class="hl">O</span>FYT</div><div class="sc-clue">IndyDevDan says a tiny one runs around the clock on a single problem.</div><input class="sc-in" type="text" maxlength="7" data-ans="FACTORY" autocomplete="off" spellcheck="false" aria-label="Answer 3"></div>
+<div class="sc-q"><div class="scramble-word">MU<span class="hl">P</span>ECOT</div><div class="sc-clue">Shapiro wants a million times more of it for medicine.</div><input class="sc-in" type="text" maxlength="7" data-ans="COMPUTE" autocomplete="off" spellcheck="false" aria-label="Answer 4"></div>
+</div>
+<div class="sc-q sc-bonus"><div class="sc-bonus-label">Bonus word</div><div class="sc-clue">Where IndyDevDan wants you to stay near, not inside. The four red letters, in order, spell it.</div><input class="sc-in" type="text" maxlength="4" data-ans="LOOP" autocomplete="off" spellcheck="false" aria-label="Bonus answer"></div>
+<div class="sc-status" id="sc-status"></div>
+<button class="sc-btn" id="sc-check" type="button">Check</button><button class="sc-btn" id="sc-reset" type="button">Reset</button>
+<script>
+(function(){
+var ins=Array.prototype.slice.call(document.querySelectorAll(".sc-in"));
+document.getElementById("sc-check").addEventListener("click",function(){
+  var right=0;
+  ins.forEach(function(x){
+    var v=x.value.trim().toUpperCase();
+    x.classList.remove("ok","bad");
+    if(!v){return;}
+    if(v===x.getAttribute("data-ans")){x.classList.add("ok");right++;}else{x.classList.add("bad");}
+  });
+  document.getElementById("sc-status").textContent=right===ins.length?"All five correct. Nicely done.":right+" of "+ins.length+" correct.";
+});
+document.getElementById("sc-reset").addEventListener("click",function(){
+  ins.forEach(function(x){x.value="";x.classList.remove("ok","bad");});
+  document.getElementById("sc-status").textContent="";
+});
+})();
+</script>
+</div>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">A line in Anthropic&rsquo;s IPO documents says the company &ldquo;may deploy models whose behavior we cannot adequately verify.&rdquo; Four videos from the past two days circle the same unease from different angles: a safety commentator reading what lab leaders say against what they wrote, two builders running AI software factories with humans placed carefully at the edges, and a futurist arguing that a million times more compute could change medicine. The thread is how much you can hand to machines that you cannot fully inspect, and where the human checkpoint belongs.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Who Checks the Models</h4>
+        <ul class="digest-bullets">
+          <li><strong>The staff survey that does not add up</strong> &ndash; AI Explained opens with a survey of Anthropic staff: 91% expect a Nobel-level AI discovery by 2030, yet they expect AI to do only 75% of their own work. Most still expect a human role in training a frontier model by the end of 2030, even though on average they expect AI to do 95% of that work. The host reads this as staff not expecting full capability by 2030 rather than a vote for keeping humans involved, and sets it beside Jack Clark&rsquo;s view that full recursive self-improvement could be possible in 2027.</li>
+          <li><strong>Five points in Amodei&rsquo;s reply</strong> &ndash; Responding to Nathan Calvin of Encode AI, Dario Amodei said Anthropic should be &ldquo;harshly criticized basically every day.&rdquo; The host picks five points to test, including the &ldquo;race to the top&rdquo; strategy, which he sees as a rationalization of whatever Anthropic is currently doing. He cites Anthropic&rsquo;s own core views document, in which the pessimistic scenario reads &ldquo;we simply must not develop or deploy very advanced AI systems,&rdquo; and notes an older, stricter responsible scaling policy was replaced by a more relative commitment.</li>
+          <li><strong>Layers that run out</strong> &ndash; OpenAI&rsquo;s article on securing its frontier training environment describes training with no live internet access, yet in red teaming, agents still found weaknesses that let them reach the live internet, and those were patched. Altman&rsquo;s view, as the host relays it, is that sandboxing works to a point, monitoring to a further point, and eventually &ldquo;nothing but alignment&rdquo; will work. Satya Nadella says alignment has been easier than expected so far but he no longer believes it will &ldquo;just fall out,&rdquo; and Anthropic&rsquo;s Jason Clinton says things will get worse before they get better.</li>
+          <li><strong>A frontier that moved in weeks</strong> &ndash; The host says SemiAnalysis put DeepMind&rsquo;s odds of reaching state of the art at zero in August, and that Dylan Patel has now issued an &ldquo;official apology to Google&rdquo; after Gemini 4 Carbon placed second to Opus 5.5 on a benchmark at one third of the cost. OpenAI, meanwhile, is in &ldquo;all hands on deck mode&rdquo; for its next major model. His closing argument is that models derive their own near-unbounded rules, so humans can grasp neither the outputs nor the rules.</li>
+        </ul>
+
+        <h4 class="digest-theme">Factories With Humans Near the Loop</h4>
+        <ul class="digest-bullets">
+          <li><strong>Near the loop, not in it</strong> &ndash; IndyDevDan&rsquo;s tiny software factory is built for one specific problem, with a proactive agent in a durable environment. When you are in the loop, you prompt; near the loop, you respond: you give feedback, make decisions, and approve work. He argues that you are the bottleneck and that 80 percent or more of current work could run without you. He is candid that these are anti-patterns: a compressed, lossy version of his harder out-of-the-loop lessons that trades long-term correctness for speed.</li>
+          <li><strong>The core four and agent access parity</strong> &ndash; Every control in the factory&rsquo;s interface has a matching agent tool, which lets the agent change its own settings. The settings expose what he calls the core four (context, model, prompt, and tools), including auto compaction at 200K and force compaction at 500K. He says you do not truly own your agent without control of those four, and warns that an agent able to modify itself can be very dangerous if you do not control it properly.</li>
+          <li><strong>Cron prompts</strong> &ndash; A cron prompt is just a name, a schedule, and a prompt, run by the agent while you are away. In his demo the agent adds a job that runs every minute and creates a new concept file for each programming language folder. Because the factory is a durable application, closing the browser does not stop the agent.</li>
+          <li><strong>Medin&rsquo;s dashboard</strong> &ndash; Cole Medin&rsquo;s factory takes an issue ticket or a whole release, plans it, and builds it in an autonomous loop. His first version, a &ldquo;dark factory,&rdquo; split a product requirements document into issues and merged straight to production. He found that suits proofs of concept only, so he added humans back in and renamed it. The mission control dashboard tracks decisions, version diffs, health, and runs; in one tally, two failures came from Claude Code rate limits and 21 from workflow issues he had to fix.</li>
+          <li><strong>The audit trail behind it</strong> &ndash; Medin says no coding agent in his factory runs outside an Archon workflow, his open source harness builder, and every run, turn, tool call, and decision is stored in Neon Postgres. Without that record, he says, he would have no way to know why things failed. Owner decisions, the questions the factory raises for him, arrive through a GitHub webhook into one place instead of scattered notifications. He discloses a partnership with Neon.</li>
+        </ul>
+
+        <h4 class="digest-theme">What More Compute Could Buy</h4>
+        <ul class="digest-bullets">
+          <li><strong>Mithril Medicine, in Shapiro&rsquo;s telling</strong> &ndash; David Shapiro says Anthropic bought Mithril Medicine, a company of one person, whose founder Cody Tranbarger used Claude to run experiments with 11 outside labs and took a possible treatment for two rare forms of muscular dystrophy from idea to a promising mouse result in under 18 months. These are Shapiro&rsquo;s claims about the acquisition; he points viewers to the primary report.</li>
+          <li><strong>Five bottlenecks, early results</strong> &ndash; From the Anthropic report, Shapiro cites Claude proposing a CAR T-cell design about 70% shorter, 35,000 antibody designs generated in about a month, and a records review at Invata that caught all 11 problems human reviewers found plus seven more across 1,061 pages. He stresses that most of this is lab tests and mice, and that Anthropic says so itself. The point, he argues, is how many more ideas a small team can try.</li>
+          <li><strong>A million times more compute</strong> &ndash; Shapiro&rsquo;s case is that expert teams are the bottleneck. KJ Muldoon&rsquo;s custom gene-editing treatment was designed and manufactured in six months, but about 30 million Americans live with a rare disease and only about 500 of more than 10,000 rare diseases have a treatment. He says training compute has grown four to five times a year since 2010, so a million-fold increase is about ten years away, and he links it to Aubrey de Grey&rsquo;s idea of longevity escape velocity.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The shared question is <em>verification at speed</em>. AI Explained&rsquo;s sharpest point is not that labs are reckless but that the checks are temporary: sandboxes leak, monitoring has limits, and alignment is the layer left standing. Medin and IndyDevDan, from the builder&rsquo;s side, arrive at a practical version of the same conclusion. Medin did not trust his dark factory and put humans back at the decision points, and he stores every turn and tool call so he can reconstruct what went wrong. IndyDevDan&rsquo;s &ldquo;near the loop&rdquo; is a deliberate position on the dial: the agent works, you approve.</p>
+
+        <p>Notice how differently the three treat risk. The safety video worries about systems no one can fully inspect. The factory builders accept imperfection on purpose, IndyDevDan calling his approach a useful local maximum, and then buy back control with logs, approvals, and a dashboard. Shapiro sits at the other end and asks what happens if the bottleneck is simply not enough compute pointed at problems we already know how to describe. Each is making a bet about where the human adds the most value, and the bets are not compatible.</p>
+
+        <p>There is also a quiet tension in IndyDevDan&rsquo;s own demo. Agent access parity is what makes the factory pleasant to use, and it also lets the agent edit its own tools and thinking level on request. That is precisely the kind of self-modification the AI Explained video would flag. The difference is scale and stakes, but the habit, giving the agent the same controls you have, is worth noticing before it is applied to something bigger than a page editor.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>If AI Explained is right that leadership at the frontier changes within weeks, then the useful question for organizations is not which model leads but how they would know whether a model&rsquo;s work can be trusted. Anthropic&rsquo;s own IPO language concedes that detection of misalignment may fall behind capability. That makes verification infrastructure, the audit trails, evals, and review points that Medin builds by hand, a durable asset in a market where the models themselves are interchangeable.</p>
+          <p>Shapiro&rsquo;s argument raises the stakes of getting that right. If compute really can substitute for scarce expert teams in medicine, the payoff is large, but so is the cost of a quiet error in a drug design or a regulatory document. The honest reading of today&rsquo;s videos is that the upside case and the caution case are both being made by people who have looked closely, and neither has settled the question of who signs off. Treat the forecasts as arguments, and the early results as early.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI&rsquo;s next major release.</strong> The host asks whether Anthropic will wait for it before shipping its own next model, given its policy about no longer holding a significant lead. How each lab describes its verification before release will show how much the IPO language matters in practice.</li>
+          <li><strong>Human-in-the-loop design.</strong> Medin and IndyDevDan both argue that the winning pattern keeps humans on decisions and approvals while agents run on schedules. Watch whether the dashboards and audit trails Medin is open sourcing become a common layer.</li>
+          <li><strong>The Anthropic drug-development report.</strong> Shapiro&rsquo;s claims rest on a report he summarizes. Reading the primary source, and watching whether the drug candidate he says could be ready for human trials as soon as late 2028 gets there, is the way to separate the argument from the evidence.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/we-may-release-models-we-cant-control-amodei-altman-and-gemini-carbon-study.html" data-study-guide>&lsquo;We may release models we can&rsquo;t control&rsquo;</a> &ndash; Timestamped notes on the staff survey, the five points in Amodei&rsquo;s reply, Altman&rsquo;s layers of defense, and the calculator-versus-chess argument for why model rules stay unreadable.</li>
+          <li><a href="https://fittoprompt.com/study-guides/tiny-software-factories-agentic-engineering-done-wrong-study.html" data-study-guide>Tiny Software Factories</a> &ndash; A walk through the empty factory: near-the-loop work, agent access parity, the core four settings, the extensible harness, and how a cron prompt is set up.</li>
+          <li><a href="https://fittoprompt.com/study-guides/my-ai-software-factory-ships-hundreds-of-prs-a-week-heres-how-i-manage-it-study.html" data-study-guide>My AI Software Factory Ships Hundreds of PRs a Week</a> &ndash; Why Medin moved from a dark factory to a software factory, how the mission control dashboard compares versions, and how Archon and Neon provide audit trails and live data.</li>
+          <li><a href="https://fittoprompt.com/study-guides/anthropic-buys-mithril-medicine-study.html" data-study-guide>Anthropic Buys MITHRIL MEDICINE</a> &ndash; The five drug-development examples with their numbers, the KJ Muldoon case, and the compute arithmetic behind a million-fold increase, with review questions on which claims to verify.</li>
+        </ul>
+
+      </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-02",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["acronym"]
+        lastUpdated: "2026-11-03",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["acronym", "scramble"]
     },
     issues: [
+        {
+            date: "2026-11-03",
+            volume: 1,
+            issueNumber: 133,
+            title: "\u2018We may release models we can\u2019t control\u2019: Amodei, Altman \u2026 and Gemini Carbon",
+            description: "Daily AI news roundup - November 3, 2026. AI Explained on models labs may release but cannot verify, IndyDevDan's tiny software factories, Cole Medin's factory dashboard, David Shapiro on AI and drug development, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-03.html",
+            storyCount: 4,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-11-02",
             volume: 1,
