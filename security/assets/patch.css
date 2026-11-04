@@ -42,7 +42,7 @@ body {
 }
 a { color: var(--low); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
 .mono { font-family: var(--mono); }
 .topbar {
   border-bottom: 1px solid var(--line);
@@ -124,6 +124,52 @@ section.block { margin: 36px 0; }
 footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 48px; color: var(--dim); font-size: 13px; }
 footer a { color: var(--muted); }
 .theme-toggle { background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; font: 11px/1 var(--mono); padding: 5px 8px; cursor: pointer; }
+.issue-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 40px; }
+.col-side { min-width: 0; }
+.items { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.items .card { margin-bottom: 0; }
+.items .brief { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.items .brief:last-child { border-bottom: 1px solid var(--line); }
+.tldr ul { columns: 1; }
+.side-box { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin-bottom: 20px; }
+.side-box h2 { margin: 0 0 10px; font: 700 12px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.side-box .todo li { font-size: 14px; padding: 8px 0; }
+.inside { list-style: none; margin: 0; padding: 0; }
+.inside li { padding: 7px 0 7px 18px; border-bottom: 1px solid var(--line); font-size: 14px; position: relative; }
+.inside li:last-child { border-bottom: 0; }
+.inside li::before { content: "//"; position: absolute; left: 0; color: var(--accent); font: 700 12px/1.9 var(--mono); }
+.ledger { list-style: none; margin: 0; padding: 0; font: 12px/1.45 var(--mono); }
+.ledger li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.ledger li:last-child { border-bottom: 0; }
+.ledger a { font-weight: 700; }
+.ledger .meta { display: block; color: var(--muted); font-family: var(--sans); font-size: 13px; }
+.ledger .kev-yes { color: var(--kev); font-weight: 700; }
+.col-side .subscribe { margin: 0 0 20px; padding: 18px; }
+.col-side .subscribe form { flex-direction: column; }
+.col-side .subscribe input[type="email"] { flex: none; }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 40px; }
+.latest-hero { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 20px 22px; margin: 28px 0 8px; }
+.latest-hero .kicker { font: 700 12px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.latest-hero h2 { margin: 10px 0 8px; font: 800 clamp(22px, 3vw, 30px)/1.2 var(--sans); }
+.latest-hero h2 a { color: var(--fg); }
+.latest-hero p { margin: 0 0 12px; color: var(--muted); }
+.sister { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin-bottom: 20px; color: var(--fg); }
+.sister:hover { text-decoration: none; border-color: var(--accent); }
+.sister small { display: block; font: 700 11px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); margin-bottom: 6px; }
+.sister strong { font-size: 16px; }
+.sister span { display: block; color: var(--muted); font-size: 13px; margin-top: 4px; }
+@media (min-width: 760px) {
+  .items { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .items .card.wide { grid-column: 1 / -1; }
+  .tldr ul { columns: 2; column-gap: 32px; }
+  .tldr li { break-inside: avoid; }
+}
+@media (min-width: 1040px) {
+  .issue-grid { grid-template-columns: minmax(0, 1fr) 340px; }
+  .home-grid { grid-template-columns: minmax(0, 1fr) 340px; }
+  .col-side { position: sticky; top: 16px; align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; padding-top: 36px; }
+  .home-grid .col-side { padding-top: 28px; }
+}
 @media (max-width: 560px) {
   .archive li { grid-template-columns: 1fr; gap: 2px; }
   .block-head { flex-wrap: wrap; }

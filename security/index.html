@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fit to Patch</title>
-  <meta name="description" content="A daily web security briefing for web developers: what is being exploited, what to patch today, and how AI is changing attacks and defenses. Slightly skewed toward WordPress and PHP.">
+  <meta name="description" content="A daily web security briefing for web developers: what is being exploited, what to patch today, and how AI is changing attacks and defenses. With an eye on WordPress, PHP, Node.js and Apache.">
   <meta property="og:title" content="Fit to Patch">
-  <meta property="og:description" content="A daily web security briefing for web developers: what is being exploited, what to patch today, and how AI is changing attacks and defenses. Slightly skewed toward WordPress and PHP.">
+  <meta property="og:description" content="A daily web security briefing for web developers: what is being exploited, what to patch today, and how AI is changing attacks and defenses. With an eye on WordPress, PHP, Node.js and Apache.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fittoprompt.com/security/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -29,30 +29,55 @@
         <div class="brand-mark">&gt;_</div>
         <h1>Fit to <span>Patch</span></h1>
       </div>
-      <p class="tagline">The daily web security briefing. What is being exploited, what to patch today, and how AI is changing both sides. For web developers, with an eye on WordPress and PHP.</p>
+      <p class="tagline">The daily web security briefing. What is being exploited, what to patch today, and how AI is changing both sides. For web developers, with an eye on WordPress, PHP, Node.js and Apache.</p>
     </header>
 
-    <section class="subscribe" id="subscribe">
-      <h2>Get it every morning</h2>
-      <p>One short email a day with the patch list and the stories behind it.</p>
-      <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
-        <label class="sr" for="bd-email" hidden>Email address</label>
-        <input type="email" name="email" id="bd-email" placeholder="you@example.com" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="fine">No spam. Unsubscribe anytime. Separate from the AI newsletter.</p>
-    </section>
+    <div class="home-grid">
+      <main class="col-main">
+        <div class="latest-hero" id="latest" hidden>
+          <span class="kicker" id="latest-kicker">Latest briefing</span>
+          <h2><a id="latest-link" href="#"></a></h2>
+          <p id="latest-summary"></p>
+          <span class="pressure" id="latest-pressure"></span>
+        </div>
 
-    <section class="block">
-      <div class="block-head"><span class="num">//</span><h2>Latest briefings</h2></div>
-      <ul class="archive" id="archive"></ul>
-      <p class="method" id="empty" hidden>The first briefing is on its way.</p>
-    </section>
+        <section class="block">
+          <div class="block-head"><span class="num">//</span><h2>All briefings</h2></div>
+          <ul class="archive" id="archive"></ul>
+          <p class="method" id="empty" hidden>The first briefing is on its way.</p>
+        </section>
+      </main>
 
-    <section class="block method">
-      <div class="block-head"><span class="num">//</span><h2>How it works</h2></div>
-      <p>Every briefing starts from structured sources: the CISA Known Exploited Vulnerabilities catalog, the National Vulnerability Database, and the GitHub Advisory Database, plus security research and news feeds. Every CVE number, severity score, and "exploited" claim is checked against NVD or CISA before it is published. If something cannot be verified, the briefing says so.</p>
-    </section>
+      <aside class="col-side">
+        <section class="subscribe" id="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list and the stories behind it.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">No spam. Unsubscribe anytime. Separate from the AI newsletter.</p>
+        </section>
+
+        <section class="side-box">
+          <h2>What's inside</h2>
+          <ul class="inside">
+            <li>Patch now: what is being exploited today</li>
+            <li>WordPress &amp; PHP watch</li>
+            <li>Node.js &amp; Apache watch</li>
+            <li>Web stack &amp; supply chain</li>
+            <li>AI &times; security</li>
+          </ul>
+        </section>
+
+        <section class="side-box method">
+          <h2>How it works</h2>
+          <p style="margin:0;">Every briefing starts from the CISA Known Exploited Vulnerabilities catalog, the National Vulnerability Database, the GitHub Advisory Database and security research feeds. Every CVE number, severity score and "exploited" claim is checked against NVD or CISA before publishing.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
   </div>
   <footer>
     <div class="wrap">Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>. Not security advice for your specific systems; always confirm against the vendor advisory.</div>
@@ -60,9 +85,21 @@
   <script src="data/patch-data.js"></script>
   <script>
     (function () {
-      var list = document.getElementById("archive");
       var issues = getAllPatchIssues();
       if (!issues.length) { document.getElementById("empty").hidden = false; return; }
+      var latest = issues[0];
+      document.getElementById("latest").hidden = false;
+      document.getElementById("latest-kicker").textContent = "Latest briefing · " + latest.date + " · No. " + latest.issueNumber;
+      var link = document.getElementById("latest-link");
+      link.href = "issues/" + latest.date + ".html";
+      link.textContent = latest.title;
+      document.getElementById("latest-summary").textContent = latest.summary;
+      var pressure = document.getElementById("latest-pressure");
+      if (latest.pressure) {
+        pressure.className = "pressure " + latest.pressure;
+        pressure.textContent = "Patch pressure: " + latest.pressure;
+      }
+      var list = document.getElementById("archive");
       issues.forEach(function (issue) {
         var li = document.createElement("li");
         var time = document.createElement("time");
