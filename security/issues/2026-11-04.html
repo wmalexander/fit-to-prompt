@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attackers Are Now Exploiting the WordPress Core Upgrade Bug | Fit to Patch No. 1, November 4, 2026</title>
+  <meta name="description" content="CISA confirms attacks on a WordPress core upgrade flaw, the HTTP2Shell Brotli bug still needs host-level patching, cPGuard's update channel was hijacked, and AI tools show up in the Binance, WorkOS and LLMjacking incidents.">
+  <meta property="og:title" content="Fit to Patch No. 1: Attackers Are Now Exploiting the WordPress Core Upgrade Bug">
+  <meta property="og:description" content="CISA confirms attacks on a WordPress core upgrade flaw, the HTTP2Shell Brotli bug still needs host-level patching, cPGuard's update channel was hijacked, and AI tools show up in the Binance, WorkOS and LLMjacking incidents.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-04.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Wednesday, November 4, 2026</span>
+        <span>No. 1</span>
+        <span class="pressure critical">Patch pressure: Critical</span>
+      </div>
+    </header>
+
+    <aside class="tldr">
+      <h2>60-second read</h2>
+      <ul>
+        <li>CISA has confirmed attacks on a WordPress core bug that lets anyone run code during a core update, so check that every site is on 7.1.4 or its branch's patched release.</li>
+        <li>The HTTP2Shell bug lives in the Brotli compression library on the server, so updating WordPress does not fix it; your host has to.</li>
+        <li>The cPGuard security tool for cPanel servers shipped a backdoor through its own update channel, and affected servers should be treated as compromised.</li>
+        <li>AI keeps showing up in real incidents: stolen LLM API keys running up bills near $1 million, an internal AI tool in the Binance theft, and an AI attack framework at WorkOS.</li>
+      </ul>
+    </aside>
+
+    <section class="block" id="patch-now">
+      <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+
+      <article class="card kev">
+        <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-119977</span><span class="tag wp">WordPress core</span></div>
+        <h3><a href="https://www.wordfence.com/blog/2026/10/wordpress-7-1-4-security-release-rce/">Attackers are now exploiting the WordPress core upgrade bug</a></h3>
+        <p>During a full core update, WordPress 4.7 through 7.1.3 unpacks the new files, including the installer, into a predictable folder under <code>wp-content/upgrade</code> that the web can often reach. An attacker who hits that folder in the few seconds it exists can run code without an account. Attackers are polling for it constantly: Wordfence recorded more than 18,500 probes in the first 21 hours, and CISA added the bug to its exploited list on November 3.</p>
+        <p>WordPress 7.1.4 shipped October 28 with fixes for 22 vulnerabilities, and every older branch back to 4.7 got its own security release. Automatic background updates should have applied it, but Wordfence advises checking rather than assuming. Wordfence's firewall rule reaches free users only on November 27.</p>
+        <p class="do"><strong>Do</strong>Confirm each site reports 7.1.4, or the matching release for its branch (for example 7.0.8, 6.9.11, 6.8.12), under Dashboard &gt; Updates.</p>
+        <div class="sources">Sources: <a href="https://wordpress.org/news/2026/10/wordpress-7-1-4/">WordPress.org</a> · <a href="https://www.wordfence.com/blog/2026/10/wordpress-7-1-4-security-release-rce/">Wordfence</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">NVD</a> · <a href="https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html">The Hacker News</a></div>
+      </article>
+
+      <article class="card kev">
+        <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.2</span><span class="tag mono">CVE-2026-111497</span><span class="tag">Server library</span></div>
+        <h3><a href="https://www.wordfence.com/blog/2026/11/http2shell-wordpress-brotli/">HTTP2Shell is a server problem, not a WordPress update</a></h3>
+        <p>The bug nicknamed HTTP2Shell is a buffer overflow in Google's Brotli decoder, versions 1.0.3 through 1.2.0. A crafted compressed response can corrupt memory and may lead to remote code execution. Wordfence reproduced code execution through WordPress in a lab, using the XML-RPC pingback feature to make the site fetch a malicious response, but the public exploit only worked on the exact server setup it was built for. CISA lists the bug as exploited; Wordfence says the public reports it reviewed through November 2 do not document a confirmed compromise through WordPress.</p>
+        <p class="do"><strong>Do</strong>Have your host or server team update Brotli to 1.0.10, 1.1.1 or 1.2.1 and restart the services that load it. Turning off XML-RPC pingbacks you do not use closes the route shown in the public exploit.</p>
+        <div class="sources">Sources: <a href="https://www.wordfence.com/blog/2026/11/http2shell-wordpress-brotli/">Wordfence</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497">NVD</a></div>
+      </article>
+
+      <article class="card">
+        <div class="tags"><span class="tag crit">Supply chain</span><span class="tag">cPanel servers</span><span class="tag">No CVE</span></div>
+        <h3><a href="https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html">cPGuard's own update channel delivered a backdoor</a></h3>
+        <p>On November 2 an attacker used stolen credentials to get into the update system for cPGuard, a security tool for cPanel servers, and pushed a malicious script in versions 5.88.12 through 5.88.19. The script installed a backdoor and copied <code>/etc/shadow</code>, root's MySQL or MariaDB config, root's shell history and SSH files. Maker OPSSHIELD says it caught the attack within 12 hours, but it has not said how many servers took the update.</p>
+        <p class="do"><strong>Do</strong>Update to 5.88.25 or later, search the cPGuard update log for 5.88.12 through 5.88.19, and if you find one (or cannot tell), rotate root, database and SSH credentials and treat the server as compromised.</p>
+        <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html">The Hacker News</a> · <a href="https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/">SecurityWeek</a></div>
+      </article>
+    </section>
+
+    <section class="block" id="wordpress-php">
+      <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+
+      <article class="card">
+        <div class="tags"><span class="tag crit">CVSS 10.0</span><span class="tag mono">CVE-2026-81648</span><span class="tag wp">Plugin</span><span class="tag">No fix</span></div>
+        <h3><a href="https://thehackernews.com/2026/11/attackers-target-unpatched.html">Attackers probe an unpatched crypto payment plugin</a></h3>
+        <p>The CryptoPayment Gateway plugin, versions 1.2.1 through 1.2.2, skips an authorization check on an AJAX endpoint, so anyone can delete files, rewrite the gateway settings and read stored wallet credentials in plain text. Defused Cyber reports exploitation attempts. There is no fix, and WordPress.org closed the plugin in August after about 1,845 total downloads.</p>
+        <p class="do"><strong>Do</strong>Remove the plugin, rotate any wallet keys it stored, and check for unexpected file or setting changes.</p>
+        <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/attackers-target-unpatched.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-81648">NVD</a></div>
+      </article>
+
+      <div class="brief">
+        <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-120534</span><span class="tag wp">Plugin</span></div>
+        <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120534">Advanced Custom Fields: Extended PRO lets visitors call WordPress functions</a></h3>
+        <p>Versions up to 0.9.2.6 can let an unauthenticated visitor call arbitrary WordPress functions with chosen arguments. It only works if an admin enabled the non-default shortcode preview setting on a form, or if the server lacks OpenSSL functions. Update to the newest release.</p>
+      </div>
+
+      <div class="brief">
+        <div class="tags"><span class="tag low">PHP</span><span class="tag">Composer 2.11</span></div>
+        <h3><a href="https://socket.dev/blog/composer-dependency-cooldowns">Composer can now wait before installing brand-new package versions</a></h3>
+        <p>Composer 2.11 adds a <code>config.policy.cooldown</code> setting that holds newly published versions back for a set number of hours, days or weeks during <code>composer update</code> and <code>composer require</code>. The idea is that a hijacked release is often caught and pulled before the waiting period ends. It is off by default, and Socket says urgent security updates can still get through.</p>
+      </div>
+    </section>
+
+    <section class="block" id="web-stack">
+      <div class="block-head"><span class="num">03</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, servers, CI, hosting</p></div>
+
+      <div class="brief">
+        <div class="tags"><span class="tag high">Browser</span><span class="tag">Chrome 157</span></div>
+        <h3><a href="https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/">Chrome 157 fixes 213 security bugs, seven of them critical</a></h3>
+        <p>The release (157.0.8103.38 and .39) fixes seven critical memory bugs, two of them reported by an Anthropic researcher, plus 77 rated high. Google does not report any of them as exploited. Restart browsers on developer and admin machines.</p>
+      </div>
+
+      <div class="brief">
+        <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Guide</span></div>
+        <h3><a href="https://socket.dev/blog/hardening-github-actions-against-outside-threats">Most recent package attacks went through the release pipeline</a></h3>
+        <p>Socket's guide argues that the big 2025 and 2026 supply chain attacks came through compromised release automation, not typosquats. One of its rules: never build untrusted pull request code in a <code>pull_request_target</code> workflow.</p>
+      </div>
+
+      <div class="brief">
+        <div class="tags"><span class="tag">npm</span><span class="tag">Malware</span></div>
+        <h3><a href="https://github.com/advisories?query=type%3Amalware+ecosystem%3Anpm">At least 100 new npm malware advisories in a day and a half</a></h3>
+        <p>GitHub's advisory database added at least 100 malicious-package advisories for npm since Monday evening, most of them throwaway names. Lockfiles and a release-age cooldown keep these out of normal installs.</p>
+      </div>
+    </section>
+
+    <section class="block" id="ai-security">
+      <div class="block-head"><span class="num">04</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+
+      <article class="card">
+        <div class="tags"><span class="tag high">API keys</span><span class="tag mono">CVE-2026-40217</span><span class="tag">LiteLLM</span></div>
+        <h3><a href="https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/">Stolen LLM keys are costing some companies up to $1 million</a></h3>
+        <p>Google's threat intelligence group and Mandiant describe "LLMjacking" crews who find exposed AI endpoints or steal API keys, cloud credentials and GitHub tokens, then resell the access through cheap "unlimited" proxy services. One actor made more than 500,000 calls in under eight hours. Some victims saw more than $100,000 in charges in a single day. Attackers have also exploited a LiteLLM bug that runs code through its guardrail test endpoint.</p>
+        <p class="do"><strong>Do</strong>Keep LLM keys in a secrets manager rather than <code>.env</code> files in repos, scope and rotate them, set provider spending alerts, and do not expose LiteLLM admin endpoints to the internet.</p>
+        <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/">BleepingComputer</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40217">NVD</a></div>
+      </article>
+
+      <div class="brief">
+        <div class="tags"><span class="tag crit">Developer machines</span></div>
+        <h3><a href="https://www.securityweek.com/rigged-coding-assignment-abused-ai-tool-opened-path-to-6-billion-binance-heist/">The Binance theft started on engineers' laptops</a></h3>
+        <p>Binance's first report on the $6.34 billion theft says it began in June, when an engineer searching for an AI coding tool downloaded a tampered Homebrew install. A second engineer later ran a fake job-interview coding assignment that hid malware. The attackers then used an internal AI tool to take over more machines; the report does not explain how. The FBI attributes the theft to North Korea's TraderTraitor group, which North Korea denies.</p>
+      </div>
+
+      <div class="brief">
+        <div class="tags"><span class="tag high">AI attack tools</span></div>
+        <h3><a href="https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/">WorkOS says an AI attack framework breached its sales app</a></h3>
+        <p>The identity platform says an attacker reached an internal sales tool and took CRM contacts and summaries of customer conversations, but not app data or production systems. Its founder says the attacker used ARTEX AI, an AI penetration testing suite seen in several attacks this year. Its user agents included <code>artex-enrich/1.0</code> and <code>norma/0.4</code>, which are worth searching your logs for.</p>
+      </div>
+
+      <div class="brief">
+        <div class="tags"><span class="tag">Ransomware</span><span class="tag">Unconfirmed AI</span></div>
+        <h3><a href="https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/">Ransomware at a UK school looked like an AI agent loop</a></h3>
+        <p>Bitdefender saw commands that changed slightly on each retry, issued every 40 to 100 seconds, in an attack that encrypted about 37 of nearly 50 machines. Researchers say this looked like an AI agent loop, but they could not see the attacker's machine to confirm it.</p>
+      </div>
+    </section>
+
+    <section class="block" id="worth-reading">
+      <div class="block-head"><span class="num">05</span><h2>Worth reading</h2><p>Research and analysis with a longer shelf life</p></div>
+      <div class="brief">
+        <h3><a href="https://blog.cloudflare.com/zero-wire/">Cloudflare launches Zero Wire, a plain-language feed of critical vulnerabilities</a></h3>
+        <p>Cloudflare's new Radar section summarizes major vulnerabilities with who should look and what to do. Its pitch is the same as this briefing's: AI is speeding up discovery, so teams need faster triage.</p>
+      </div>
+    </section>
+
+    <section class="block" id="cve-ledger">
+      <div class="block-head"><span class="num">06</span><h2>CVE ledger</h2><p>Every CVE in this briefing, verified Nov 4, 2026 07:10 ET</p></div>
+      <div class="table-scroll">
+        <table class="cve-table">
+          <thead><tr><th>CVE</th><th>Product</th><th>CVSS</th><th>Exploited</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">CVE-2026-119977</a></td><td>WordPress core 4.7 to 7.1.3</td><td>8.1 v3.1</td><td>KEV 2026-11-03</td></tr>
+            <tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497">CVE-2026-111497</a></td><td>Google Brotli 1.0.3 to 1.2.0</td><td>9.2 v4.0</td><td>KEV 2026-10-27</td></tr>
+            <tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-81648">CVE-2026-81648</a></td><td>CryptoPayment Gateway plugin 1.2.1 to 1.2.2</td><td>10.0 v3.1</td><td>No (attempts reported)</td></tr>
+            <tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120534">CVE-2026-120534</a></td><td>ACF: Extended PRO up to 0.9.2.6</td><td>9.8 v3.1</td><td>No</td></tr>
+            <tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40217">CVE-2026-40217</a></td><td>LiteLLM</td><td>8.8 v3.1</td><td>No (exploitation reported by Google)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block" id="todo">
+      <div class="block-head"><span class="num">07</span><h2>Today's checklist</h2></div>
+      <ul class="todo">
+        <li>Confirm every WordPress site runs 7.1.4 or its branch's patched release.</li>
+        <li>Ask your host, or check your servers, for Brotli 1.0.10, 1.1.1 or 1.2.1, then restart the services that use it.</li>
+        <li>If you run cPGuard, update to 5.88.25 or later, check the update log for 5.88.12 through 5.88.19, and rotate credentials if found.</li>
+        <li>Remove CryptoPayment Gateway and update ACF: Extended PRO.</li>
+        <li>Move LLM API keys out of repos, set spending alerts, and rotate any key that has lived in a <code>.env</code> file.</li>
+      </ul>
+    </section>
+
+    <section class="subscribe" hidden>
+      <h2>Get Fit to Patch every morning</h2>
+      <p>One short email a day with the patch list and the stories behind it.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+        <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+    </section>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 26 security feeds. Every CVE above was checked against NVD and the KEV catalog at Nov 4, 2026 07:10 ET. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>

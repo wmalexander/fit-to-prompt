@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fit to Patch</title>
+  <meta name="description" content="A daily web security briefing for web developers: what is being exploited, what to patch today, and how AI is changing attacks and defenses. Slightly skewed toward WordPress and PHP.">
+  <meta property="og:title" content="Fit to Patch">
+  <meta property="og:description" content="A daily web security briefing for web developers: what is being exploited, what to patch today, and how AI is changing attacks and defenses. Slightly skewed toward WordPress and PHP.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fittoprompt.com/security/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/patch.css">
+  <script src="assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>fittoprompt.com/security</span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <p class="tagline">The daily web security briefing. What is being exploited, what to patch today, and how AI is changing both sides. For web developers, with an eye on WordPress and PHP.</p>
+    </header>
+
+    <section class="subscribe" id="subscribe" hidden>
+      <h2>Get it every morning</h2>
+      <p>One short email a day with the patch list and the stories behind it.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+        <label class="sr" for="bd-email" hidden>Email address</label>
+        <input type="email" name="email" id="bd-email" placeholder="you@example.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="fine">No spam. Unsubscribe anytime. Separate from the AI newsletter.</p>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><span class="num">//</span><h2>Latest briefings</h2></div>
+      <ul class="archive" id="archive"></ul>
+      <p class="method" id="empty" hidden>The first briefing is on its way.</p>
+    </section>
+
+    <section class="block method">
+      <div class="block-head"><span class="num">//</span><h2>How it works</h2></div>
+      <p>Every briefing starts from structured sources: the CISA Known Exploited Vulnerabilities catalog, the National Vulnerability Database, and the GitHub Advisory Database, plus security research and news feeds. Every CVE number, severity score, and "exploited" claim is checked against NVD or CISA before it is published. If something cannot be verified, the briefing says so.</p>
+    </section>
+  </div>
+  <footer>
+    <div class="wrap">Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>. Not security advice for your specific systems; always confirm against the vendor advisory.</div>
+  </footer>
+  <script src="data/patch-data.js"></script>
+  <script>
+    (function () {
+      var list = document.getElementById("archive");
+      var issues = getAllPatchIssues();
+      if (!issues.length) { document.getElementById("empty").hidden = false; return; }
+      issues.forEach(function (issue) {
+        var li = document.createElement("li");
+        var time = document.createElement("time");
+        time.dateTime = issue.date;
+        time.textContent = issue.date + " · No. " + issue.issueNumber;
+        var body = document.createElement("div");
+        var a = document.createElement("a");
+        a.href = "issues/" + issue.date + ".html";
+        a.textContent = issue.title;
+        var p = document.createElement("p");
+        p.textContent = issue.summary;
+        body.appendChild(a);
+        body.appendChild(p);
+        li.appendChild(time);
+        li.appendChild(body);
+        list.appendChild(li);
+      });
+    })();
+  </script>
+</body>
+</html>
