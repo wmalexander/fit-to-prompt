@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Attackers Are Now Exploiting the WordPress Core Upgrade Bug | Fit to Patch No. 1, November 4, 2026</title>
-  <meta name="description" content="CISA confirms attacks on a WordPress core upgrade flaw, HTTP2Shell needs host-level Brotli patching, Node.js security releases land November 11, Tomcat fixes three critical bugs, and a 2016 Struts flaw is under attack again.">
+  <meta name="description" content="CISA confirms attacks on a WordPress core upgrade flaw, HTTP2Shell needs host-level Brotli patching, Next.js fixes two critical RCE bugs, Node.js security releases land November 11, and Tomcat fixes three critical bugs.">
   <meta property="og:title" content="Fit to Patch No. 1: Attackers Are Now Exploiting the WordPress Core Upgrade Bug">
-  <meta property="og:description" content="CISA confirms attacks on a WordPress core upgrade flaw, HTTP2Shell needs host-level Brotli patching, Node.js security releases land November 11, Tomcat fixes three critical bugs, and a 2016 Struts flaw is under attack again.">
+  <meta property="og:description" content="CISA confirms attacks on a WordPress core upgrade flaw, HTTP2Shell needs host-level Brotli patching, Next.js fixes two critical RCE bugs, Node.js security releases land November 11, and Tomcat fixes three critical bugs.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-04.html">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -43,7 +43,7 @@
           <ul>
             <li>CISA has confirmed attacks on a WordPress core bug that lets anyone run code during a core update, so check that every site is on 7.1.4 or its branch's patched release.</li>
             <li>The HTTP2Shell bug lives in the Brotli compression library on the server, so updating WordPress does not fix it; your host has to.</li>
-            <li>Node.js ships security releases for 26.x, 24.x and 22.x on November 11, and Apache Tomcat's October releases fix three critical bugs.</li>
+            <li>Next.js 16.4.5 and 15.5.29 close two critical remote code execution bugs and seven cache leaks, Node.js ships security releases on November 11, and Tomcat fixes three critical bugs.</li>
             <li>A Struts bug from 2016 is being exploited again, and AI shows up in the Binance, WorkOS and LLMjacking incidents.</li>
           </ul>
         </aside>
@@ -102,8 +102,15 @@
         </section>
 
         <section class="block" id="node-apache">
-          <div class="block-head"><span class="num">03</span><h2>Node.js &amp; Apache watch</h2><p>The runtime and the servers under a lot of the web</p></div>
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
           <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Critical RCE</span><span class="tag mono">GHSA-2464-fhr4-w9xw</span><span class="tag mono">GHSA-673q-mjm6-r5xr</span><span class="tag">Next.js</span><span class="tag">No CVE yet</span></div>
+              <h3><a href="https://nextjs.org/blog/november-2026-security-release">Next.js: two critical October bugs, seven more fixes this week</a></h3>
+              <p>On October 22, Next.js disclosed two unauthenticated remote code execution bugs that do not have CVE numbers yet. One is in the Image Optimization API when SVG files are used, through the <code>sharp</code> image library on glibc-based Linux, and it affects every release from 10.0.0 up to 15.5.27 and 16.0.0 through 16.4.0. The other affects App Router apps whose <code>use cache</code> functions return multiple typed arrays, and has no workaround. On November 3, a second release fixed seven more bugs, one rated High, mostly cached content leaking between users or tenants.</p>
+              <p class="do"><strong>Do</strong>Upgrade to Next.js 16.4.5 or 15.5.29, which include every fix above, and make sure <code>sharp</code> is 0.35.5 or newer.</p>
+              <div class="sources">Sources: <a href="https://nextjs.org/blog/november-2026-security-release">Next.js</a> · <a href="https://github.com/advisories/GHSA-2464-fhr4-w9xw">GitHub advisory</a> · <a href="https://github.com/advisories/GHSA-673q-mjm6-r5xr">GitHub advisory</a></div>
+            </article>
             <article class="card">
               <div class="tags"><span class="tag high">Severity: High</span><span class="tag">Node.js 26 / 24 / 22</span><span class="tag">Nov 11</span></div>
               <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Node.js security releases land November 11</a></h3>
@@ -195,7 +202,7 @@
           <ul class="todo">
             <li>Confirm every WordPress site runs 7.1.4 or its branch's patched release.</li>
             <li>Ask your host for Brotli 1.0.10, 1.1.1 or 1.2.1, then restart services.</li>
-            <li>Book a Node.js update window for November 11.</li>
+            <li>Upgrade Next.js to 16.4.5 or 15.5.29 and book a Node.js update window for November 11.</li>
             <li>Upgrade Tomcat to 11.0.27, 10.1.61 or 9.0.123; turn off Struts Dynamic Method Invocation.</li>
             <li>If you run cPGuard, check for 5.88.12 through 5.88.19 and rotate credentials.</li>
             <li>Move LLM API keys out of repos and set spending alerts.</li>
@@ -232,7 +239,7 @@
       </aside>
     </div>
 
-    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database, the Node.js security feed and 25 other security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database, the Node.js security feed, the React and Next.js blogs and 25 other security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
   </div>
   <footer>
     <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
