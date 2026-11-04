@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-03",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["acronym", "scramble"]
+        lastUpdated: "2026-11-04",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["acronym", "scramble", "cryptogram"]
     },
     issues: [
+        {
+            date: "2026-11-04",
+            volume: 1,
+            issueNumber: 134,
+            title: "Anthropic\u2019s IPO Math and History Are Not on Its Side, Analysts Say",
+            description: "Daily AI news roundup - November 4, 2026. Anthropic's IPO math after its third-quarter results, FlashProve and proving which model answered, Apple's warning about rogue agents, Meta's automated moderation errors, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-04.html",
+            storyCount: 20,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-11-03",
             volume: 1,

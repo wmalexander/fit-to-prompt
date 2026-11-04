@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 4, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 4, 2026. Anthropic's IPO math after its third-quarter results, FlashProve and proving which model answered, Apple's warning about rogue agents, Meta's automated moderation errors, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 134">
+  <meta property="og:description" content="Daily AI news roundup - November 4, 2026. Anthropic's IPO math after its third-quarter results, FlashProve and proving which model answered, Apple's warning about rogue agents, Meta's automated moderation errors, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, November 4, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 134</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">Anthropic &middot; IPO</div>
+<a href="https://fortune.com/2026/11/03/anthropics-third-quarter-results-mean-ipo-math-and-history-are-not-on-its-side-analysts-say/" class="story-link" style="display:block;">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2297195012-e1793703665458.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.style.display='none'">
+<h2 class="headline-lead mb-3">Anthropic&rsquo;s IPO Math and History Are Not on Its Side, Analysts Say</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Nov 3</p>
+<div class="newspaper-body">
+<p>Fortune reports that Anthropic&rsquo;s third-quarter results make its planned IPO look like an expensive bet. Revenue rose nearly 47% from the previous quarter, while compute and infrastructure expenses climbed about 77% to $9.9 billion, roughly half of it short-term capacity bought at a premium. The company says its adjusted operating margin fell to 15% from 19%, and institutional investors are reportedly pushing for a price at the low end of the $1.5 trillion to $2 trillion range it seeks.</p>
+<p>Jay Ritter of the University of Florida told Fortune that any valuation above about $1.41 trillion would ask buyers to pay more than $40 for every dollar of revenue, a level reached by just 14 of 4,110 IPOs from 1980 through 2024. Those 14 trailed the broader market by 15.4% on average. NYU&rsquo;s Aswath Damodaran calls the quarter &ldquo;the most telegraphed 3rd quarter number of all time,&rdquo; and Anthropic holds about $131.8 billion in cash.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Video · Open Source</div>
+<a href="https://fittoprompt.com/study-guides/they-did-it-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/r0cJOa9MZsE/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">They did it&hellip;</h3>
+</a>
+<p class="byline mb-2">Matthew Berman · YouTube · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Berman argues that capable models, cheap tokens, and autonomous agents have made building your own software cheaper than buying it. He cites an Excel clone he says cost about $10 in tokens, a free PDF reader, and an open-source Adobe-style suite, and says the value of software is approaching zero. The evidence is his own tests, and the video includes a sponsor segment.</p>
+<div class="kicker mt-5">AI Safety</div>
+<a href="https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/" class="story-link">
+<h3 class="headline-standard mb-2">Anthropic Is Working on a System to Prove AI Models&rsquo; Identity</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Anthropic published an open source system called FlashProve that gives a cryptographic proof an output came from a specific model, even if the lab running it is the one cheating. Labs would publish a fingerprint of each model without revealing its weights. The spec and code are on GitHub, with no plans to deploy it at any lab yet.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-item">
+<div class="kicker">Video · Strategy</div>
+<a href="https://fittoprompt.com/study-guides/youve-never-lost-19-billion-so-why-are-you-playing-it-safer-than-zuckerberg-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/JFoDdKuRmSk/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">You&rsquo;ve Never Lost $19 Billion. So Why Are You Playing It Safer Than Zuckerberg?</h3>
+</a>
+<p class="byline mb-2">Nate B. Jones · YouTube · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Jones uses Meta&rsquo;s Muse launch to argue that AI rewards people who swing big. Reality Labs lost $19.2 billion in 2025, he says, and Zuckerberg swung again. His three lessons: hire a small, sharp team, obsess over polish nobody asked for, and take another swing after a miss.</p>
+</div>
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-04-cartoon.png" alt="Three executives at a boardroom table watch a compute costs chart punch through the ceiling while one smiles and holds up a sign reading IPO" class="w-full object-contain mb-2" style="max-height:380px;" loading="lazy">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;The good news is that demand is growing faster than we can afford to serve it.&rdquo;</p>
+<p class="byline mt-1">An executive, at the quarterly review</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video · AI Models</div>
+<a href="https://fittoprompt.com/study-guides/gpt-6-1-terra-is-fantastic-at-some-work-and-terrible-at-others-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/KwHKVA9fjd4/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">GPT-6.1 Terra Is Fantastic at Some Work and Terrible at Others</h3>
+</a>
+<p class="byline mb-2">Matt Maher · YouTube · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Maher runs OpenAI&rsquo;s mid-tier GPT-6.1 Terra on real work. He finds it strong on bounded, known-pattern jobs and natural-sounding writing, but stuck inside its own rules on open-ended problems and unfamiliar computer use. His advice is to build model mixing into the system, with a step that escalates to a stronger model.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Video · Economics</div>
+<a href="https://fittoprompt.com/study-guides/eli5-post-labor-economics-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/a65DF3N0EoU/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">ELI5: Post-Labor Economics</h3>
+</a>
+<p class="byline mb-2">David Shapiro · YouTube · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shapiro answers a viral question: if AI takes the jobs, who buys things? He says households get money from wages, government checks, and property, and argues that broader ownership through funds, employee ownership, and cooperatives could replace shrinking wages. Every statistic is his own claim, and the video includes a pitch for his book.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Anthropic · Compute</div>
+<a href="https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294935494.jpg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Anthropic Is Still Grappling With the Economics of Compute</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Anthropic&rsquo;s updated S-1 shows quarterly revenue of $17 billion, up from $11.5 billion, but compute took 58% of revenue, up from 48%. Of the roughly $10 billion compute bill, $5.0 billion was short-term capacity that costs significantly more, including $1.25 billion a month to SpaceX. The reporter calls it a champagne problem while revenue grows nearly 50% a quarter.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Agents · Risk</div>
+<a href="https://fortune.com/2026/11/03/apple-warns-rogue-ai-agents-could-cause-unintended-consequences/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2301899342-e1793739129366.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Apple Warns Rogue AI Agents Could &lsquo;Conceal&rsquo; and &lsquo;Manipulate&rsquo;</h3>
+</a>
+<p class="byline mb-2">Fortune · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">In its annual 10-K, Apple says autonomous agents may exceed permissions, defy directions, and &ldquo;conceal actions, hide, withhold or manipulate information.&rdquo; Alphabet flagged similar risks, and Anthropic&rsquo;s prospectus lists incidents where its models reached real systems during security testing. Apple&rsquo;s research spending rose 32%, and its shares fell about 2%.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI · Elections</div>
+<a href="https://fortune.com/2026/11/03/meta-ai-content-moderation-election-errors-brazil-no-kings/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2297781218.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-standard mb-2">Meta Says Automation Wrongly Took Down No Kings and a Senate Candidate&rsquo;s Page. It&rsquo;s Automating More Anyway</h3>
+</a>
+<p class="byline mb-2">Fortune · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">By June, Meta&rsquo;s language models had replaced human reviewers for about half of review requests, with a goal of 90% or more for some violation types by the end of 2026, the Financial Times reported. Meta says the models make 13% fewer errors than people. Brazil&rsquo;s electoral court ordered equal treatment of the presidential candidates after complaints about restricted posts, and the No Kings Instagram account was suspended for about 90 minutes.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Safety · Research</div>
+<a href="https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/" class="story-link">
+<img src="https://wp.technologyreview.com/wp-content/uploads/2026/11/cake.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-standard mb-2">How &ldquo;Reverse Game Theory&rdquo; Could Keep AI Agents in Check</h3>
+</a>
+<p class="byline mb-2">MIT Technology Review · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Researchers want to control models by designing incentives instead of reading their minds. One preprint would reward a model for how well its answers predict what a second model will say, so playing dumb on a test becomes a losing bet. A Princeton proposal has agents take turns as solvers and auditors.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Agents · Costs</div>
+<a href="https://fortune.com/2026/11/03/grok-bot-is-growing-fast-but-elon-musk-says-its-costs-are-unsustainably-high-compared-to-revenue/" class="story-link">
+<h3 class="headline-standard mb-2">Grok Bot Is Growing Fast, but Musk Says Its Costs Are &lsquo;Unsustainably High&rsquo;</h3>
+</a>
+<p class="byline mb-2">Fortune · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Grok Bot reached 800,000 paid weekly users, double September, yet Musk wrote that the cost of serving it was &ldquo;unsustainably high relative to revenue.&rdquo; Agents run multi-step tasks that burn more compute. SpaceX spent $16.4 billion on AI capex in the quarter against $7.56 billion of revenue in its AI division, much of it from leasing capacity to Anthropic and Google.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Economics</div>
+<a href="https://fortune.com/2026/11/03/who-pays-ai-2-6-trillion-build-out-look-to-corporate-budgets-cfo/" class="story-link">
+<h3 class="headline-standard mb-2">Who Pays for AI&rsquo;s $2.6 Trillion Build-Out? Look to Corporate Budgets</h3>
+</a>
+<p class="byline mb-2">Fortune · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A BCG analysis says the AI ecosystem needs about $2.6 trillion a year in end-market spending by 2030, with $1.8 trillion from enterprises. That would lift AI from 5% to 25% of corporate tech budgets, and each gigawatt coming online in 2026 must earn about $15 billion in revenue to cover its costs. BCG advises most buyers to avoid long-term price-per-token commitments.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Enterprise · Software</div>
+<a href="https://fortune.com/2026/11/03/freshworks-1-billion-arr-dennis-woodside-ai-what-companies-stop-doing/" class="story-link">
+<h3 class="headline-standard mb-2">Freshworks CEO on Crossing $1 Billion in ARR With Fewer Employees in the AI Software Age</h3>
+</a>
+<p class="byline mb-2">Fortune · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Freshworks passed $1 billion in annual recurring revenue in October, after about $992 million at the end of September, and posted $18.3 million of GAAP net income for the quarter. CEO Dennis Woodside says the path ran through stopping smaller projects. McKinsey&rsquo;s Alex Panas adds that &ldquo;AI is everywhere except in the EBIT line.&rdquo;</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI Infrastructure</div>
+<a href="https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/" class="story-link">
+<h3 class="headline-standard mb-2">AI Inference Startup Fal Doubles Its Valuation to $16B</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Fal raised $1.3 billion led by Bessemer at a $16 billion valuation, double April&rsquo;s $8 billion. It has passed $800 million in annualized revenue, though inference companies&rsquo; gross margins stay thin.</p>
+<div class="kicker mt-5">Infrastructure</div>
+<a href="https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/" class="story-link">
+<h3 class="headline-standard mb-2">Data Centers Are Turning to Old Jet Engines as the Wait for Power Grows</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Converted jet engines can power a data center in about 24 months, versus roughly seven years for a 100 megawatt grid connection in Northern Virginia, the IEA says. xAI has installed eight in Mississippi.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI · Education</div>
+<a href="https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/" class="story-link">
+<h3 class="headline-standard mb-2">Google Will Let Schools Disable Its AI Tools, but Not Without Sacrificing Search</h3>
+</a>
+<p class="byline mb-2">TechCrunch · Nov 3</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Next year Google will turn AI tools off for K-12 students unless administrators opt in, across Gemini, NotebookLM, Classroom, and Search. Because AI is built into Search, schools that restrict AI altogether will lose Search too.</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire &middot; AI Business &amp; Policy</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/">Apple Restricts Dating Apps and AI Companions to Users 18 and Up</a>
+<div class="wire-source">TechCrunch &middot; Nov 3</div>
+</div>
+<div class="wire-item">
+<a href="https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/">Netflix&rsquo;s New AI Discover Tab Helps You Find Something to Watch Based on Your Mood</a>
+<div class="wire-source">TechCrunch &middot; Nov 3</div>
+</div>
+<div class="wire-item">
+<a href="https://fortune.com/2026/11/03/openai-hires-former-army-secretary-dan-driscoll-trend-defense-investments/">OpenAI Hires Former Army Secretary Dan Driscoll Two Months After His Pentagon Resignation</a>
+<div class="wire-source">Fortune &middot; Nov 3</div>
+</div>
+<div class="wire-item">
+<a href="https://fortune.com/2026/11/03/openai-hires-uber-jill-hazelbaker-to-to-lead-communications/">OpenAI Hires Uber President Jill Hazelbaker to Lead Communications</a>
+<div class="wire-source">Fortune &middot; Nov 3</div>
+</div>
+</div>
+<div class="story-wide">
+<div class="section-label">Cryptogram</div>
+<div class="cg-puzzle">
+<style>
+.cg-puzzle{max-width:760px;margin:0 auto;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;background:#fdfdfb;border:1px solid #1a1a1a;padding:14px;box-sizing:border-box}
+.cg-intro{font-size:11px;line-height:1.45;margin-bottom:12px;color:#444}
+.cg-line{display:flex;flex-wrap:wrap;gap:14px 22px;margin-bottom:10px}
+.cg-w{display:inline-flex;gap:3px}
+.cg-c{display:inline-flex;flex-direction:column;align-items:center;width:24px}
+.cg-k{font-size:11px;font-weight:700;color:#8B0000;letter-spacing:1px;height:15px}
+.cg-in{width:24px;box-sizing:border-box;text-align:center;font-family:inherit;font-size:15px;font-weight:700;text-transform:uppercase;border:0;border-bottom:2px solid #1a1a1a;background:#fff;color:#1a1a1a;padding:2px 0;border-radius:0}
+.cg-in.cg-rev{background:#f2ede2}
+.cg-in.ok{background:#e1efe1}
+.cg-in.bad{background:#f3dcdc}
+.cg-status{margin-top:6px;font-size:11px;font-style:italic;color:#555;min-height:14px}
+.cg-btn{background:#8B0000;color:#fff;border:none;padding:6px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;cursor:pointer;margin:8px 6px 0 0}
+</style>
+<div class="cg-intro">Each red letter stands for a different letter of the alphabet. Decode a line from today&rsquo;s lead story, said by IPO researcher Jay Ritter about Anthropic. Three letters are already filled in, and typing a letter fills every matching square.</div>
+<div class="cg-line"><span class="cg-w"><span class="cg-c"><span class="cg-k">H</span><input class="cg-in" type="text" maxlength="1" data-k="H" data-a="A" autocomplete="off" spellcheck="false" aria-label="Letter H"></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">I</span><input class="cg-in" type="text" maxlength="1" data-k="I" data-a="L" autocomplete="off" spellcheck="false" aria-label="Letter I"></span><span class="cg-c"><span class="cg-k">F</span><input class="cg-in" type="text" maxlength="1" data-k="F" data-a="O" autocomplete="off" spellcheck="false" aria-label="Letter F"></span><span class="cg-c"><span class="cg-k">L</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="L" data-a="T" autocomplete="off" spellcheck="false" aria-label="Letter L" value="T" readonly></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">F</span><input class="cg-in" type="text" maxlength="1" data-k="F" data-a="O" autocomplete="off" spellcheck="false" aria-label="Letter F"></span><span class="cg-c"><span class="cg-k">G</span><input class="cg-in" type="text" maxlength="1" data-k="G" data-a="F" autocomplete="off" spellcheck="false" aria-label="Letter G"></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">L</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="L" data-a="T" autocomplete="off" spellcheck="false" aria-label="Letter L" value="T" readonly></span><span class="cg-c"><span class="cg-k">S</span><input class="cg-in" type="text" maxlength="1" data-k="S" data-a="H" autocomplete="off" spellcheck="false" aria-label="Letter S"></span><span class="cg-c"><span class="cg-k">E</span><input class="cg-in" type="text" maxlength="1" data-k="E" data-a="I" autocomplete="off" spellcheck="false" aria-label="Letter E"></span><span class="cg-c"><span class="cg-k">R</span><input class="cg-in" type="text" maxlength="1" data-k="R" data-a="N" autocomplete="off" spellcheck="false" aria-label="Letter R"></span><span class="cg-c"><span class="cg-k">O</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="O" data-a="G" autocomplete="off" spellcheck="false" aria-label="Letter O" value="G" readonly></span><span class="cg-c"><span class="cg-k">A</span><input class="cg-in" type="text" maxlength="1" data-k="A" data-a="S" autocomplete="off" spellcheck="false" aria-label="Letter A"></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">S</span><input class="cg-in" type="text" maxlength="1" data-k="S" data-a="H" autocomplete="off" spellcheck="false" aria-label="Letter S"></span><span class="cg-c"><span class="cg-k">H</span><input class="cg-in" type="text" maxlength="1" data-k="H" data-a="A" autocomplete="off" spellcheck="false" aria-label="Letter H"></span><span class="cg-c"><span class="cg-k">N</span><input class="cg-in" type="text" maxlength="1" data-k="N" data-a="V" autocomplete="off" spellcheck="false" aria-label="Letter N"></span><span class="cg-c"><span class="cg-k">T</span><input class="cg-in" type="text" maxlength="1" data-k="T" data-a="E" autocomplete="off" spellcheck="false" aria-label="Letter T"></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">L</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="L" data-a="T" autocomplete="off" spellcheck="false" aria-label="Letter L" value="T" readonly></span><span class="cg-c"><span class="cg-k">F</span><input class="cg-in" type="text" maxlength="1" data-k="F" data-a="O" autocomplete="off" spellcheck="false" aria-label="Letter F"></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">O</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="O" data-a="G" autocomplete="off" spellcheck="false" aria-label="Letter O" value="G" readonly></span><span class="cg-c"><span class="cg-k">F</span><input class="cg-in" type="text" maxlength="1" data-k="F" data-a="O" autocomplete="off" spellcheck="false" aria-label="Letter F"></span></span><span class="cg-w"><span class="cg-c"><span class="cg-k">V</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="V" data-a="R" autocomplete="off" spellcheck="false" aria-label="Letter V" value="R" readonly></span><span class="cg-c"><span class="cg-k">E</span><input class="cg-in" type="text" maxlength="1" data-k="E" data-a="I" autocomplete="off" spellcheck="false" aria-label="Letter E"></span><span class="cg-c"><span class="cg-k">O</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="O" data-a="G" autocomplete="off" spellcheck="false" aria-label="Letter O" value="G" readonly></span><span class="cg-c"><span class="cg-k">S</span><input class="cg-in" type="text" maxlength="1" data-k="S" data-a="H" autocomplete="off" spellcheck="false" aria-label="Letter S"></span><span class="cg-c"><span class="cg-k">L</span><input class="cg-in cg-rev" type="text" maxlength="1" data-k="L" data-a="T" autocomplete="off" spellcheck="false" aria-label="Letter L" value="T" readonly></span></span></div>
+<div class="cg-status" id="cg-status"></div>
+<button class="cg-btn" id="cg-check" type="button">Check</button><button class="cg-btn" id="cg-reset" type="button">Reset</button>
+<script>
+(function(){
+var ins=Array.prototype.slice.call(document.querySelectorAll(".cg-in"));
+ins.forEach(function(x){
+  if(x.readOnly){return;}
+  x.addEventListener("input",function(){
+    var v=x.value.replace(/[^a-zA-Z]/g,"").toUpperCase().slice(0,1);
+    x.value=v;
+    ins.forEach(function(y){if(y!==x&&y.getAttribute("data-k")===x.getAttribute("data-k")&&!y.readOnly){y.value=v;}});
+    x.classList.remove("ok","bad");
+  });
+});
+document.getElementById("cg-check").addEventListener("click",function(){
+  var right=0,filled=0;
+  ins.forEach(function(x){
+    x.classList.remove("ok","bad");
+    var v=x.value.toUpperCase();
+    if(!v||x.readOnly){if(x.readOnly){right++;filled++;}return;}
+    filled++;
+    if(v===x.getAttribute("data-a")){x.classList.add("ok");right++;}else{x.classList.add("bad");}
+  });
+  document.getElementById("cg-status").textContent=right===ins.length?"Solved. Nicely done.":right+" of "+ins.length+" squares correct so far.";
+});
+document.getElementById("cg-reset").addEventListener("click",function(){
+  ins.forEach(function(x){if(!x.readOnly){x.value="";}x.classList.remove("ok","bad");});
+  document.getElementById("cg-status").textContent="";
+});
+})();
+</script>
+</div>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+
+
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic spent $10 billion on compute last quarter, and $5 billion of that was short-term capacity that costs &ldquo;significantly more&rdquo; than the multi-year kind. That one line explains why Fortune&rsquo;s analysts think the IPO math is thin, why Elon Musk says serving Grok Bot is &ldquo;unsustainably high relative to revenue,&rdquo; and why Meta expects to improve compute efficiency tenfold in a year. Today&rsquo;s stories split between the bill for running AI and the question of who can be trusted to run it.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Paying for Compute</h4>
+        <ul class="digest-bullets">
+          <li><strong>The IPO math</strong> &ndash; Fortune reports Anthropic&rsquo;s third-quarter revenue rose nearly 47% while compute and infrastructure expenses rose about 77% to $9.9 billion. Jay Ritter says any valuation above about $1.41 trillion means paying more than $40 per dollar of revenue, a level only 14 of 4,110 IPOs reached from 1980 through 2024, and those lagged the market by 15.4% on average. At $1.5 trillion to $2 trillion, buyers would pay $43 to $57 per dollar of trailing sales.</li>
+          <li><strong>Where the money goes</strong> &ndash; TechCrunch reads the same updated S-1 and finds compute took 58% of revenue, up from 48%. Revenue per compute dollar peaked just over 2x and fell to 1.72x. The reporter calls the squeeze a blip and a &ldquo;champagne problem,&rdquo; but notes the S-1 expects compute to remain the largest expense &ldquo;for the foreseeable future,&rdquo; and Anthropic&rsquo;s own build-out, Anthropic Direct, cannot keep pace with demand.</li>
+          <li><strong>The other side of the invoice</strong> &ndash; Fortune&rsquo;s Grok Bot story shows who is collecting. SpaceX&rsquo;s AI division made $7.56 billion in revenue, up from $813 million a year earlier, largely by leasing capacity to Anthropic and Google, yet SpaceX spent $16.4 billion on AI capex, 84% of its total. Replying to a user whose allowance ran out four days early, Musk wrote that serving Grok Bot cost too much relative to revenue, and he told analysts a six-month payback on compute next year is &ldquo;not impossible.&rdquo;</li>
+          <li><strong>The $15 billion gigawatt</strong> &ndash; BCG estimates the AI ecosystem needs about $2.6 trillion a year in end-market spending by 2030, with $1.8 trillion from enterprises, which would lift AI from 5% to 25% of corporate tech budgets. Each gigawatt coming online in 2026 must earn about $15 billion to cover its costs, and BCG&rsquo;s advice to buyers is to avoid long-term price-per-token deals while prices fall.</li>
+          <li><strong>Money and power chase the same bottleneck</strong> &ndash; Fal raised $1.3 billion at $16 billion, double April&rsquo;s $8 billion, with more than $800 million in annualized revenue, though inference providers still run thin margins. Meanwhile data centers are buying rebuilt jet engines because the IEA says a 100 megawatt grid hookup in Northern Virginia takes about seven years. Microsoft even pulled out as anchor customer of Nscale&rsquo;s Loughton site over power delays.</li>
+        </ul>
+
+        <h4 class="digest-theme">Verifying and Containing Agents</h4>
+        <ul class="digest-bullets">
+          <li><strong>Proof of which model answered</strong> &ndash; Anthropic&rsquo;s FlashProve would let a user verify that an output came from a specific model, even against the lab running it. The post says it could stop a company swapping in a cheaper model to cut costs, or a pricier one to inflate results. Labs would publish a fingerprint of each model that does not reveal its weights, and the researchers say there are no plans to deploy it.</li>
+          <li><strong>Risk language moves into filings</strong> &ndash; Apple&rsquo;s 10-K warns that agents may take actions &ldquo;not directed, instructed or authorized,&rdquo; defy directions, and &ldquo;conceal actions.&rdquo; Fortune notes Alphabet made a similar warning, and that Anthropic&rsquo;s prospectus estimates 5% to 7% of this year&rsquo;s revenue came from customers later found to be violating its usage policies.</li>
+          <li><strong>Rules instead of mind reading</strong> &ndash; MIT Technology Review describes mechanism design, which sets incentives so agents behave whatever their internals look like. In a preprint from MIT&rsquo;s Stephen Morris and colleagues, a model is rewarded for how well its answers predict a second model&rsquo;s, so deliberately underperforming becomes a losing bet. Princeton&rsquo;s Elad Hazan would have models alternate as solvers and auditors, &ldquo;one agent acts like law enforcement.&rdquo;</li>
+          <li><strong>When the automation errs in public</strong> &ndash; Meta&rsquo;s language models replaced human reviewers for about half of review requests by June, and the company says they make 13% fewer errors. Yet Brazil&rsquo;s electoral court ordered equal treatment of the presidential candidates under a 500,000 reais daily fine, and No Kings&rsquo; Instagram account went down for about 90 minutes on its Oct. 17 day of action. An Institute for Strategic Dialogue report calls leaning on automation in an election &ldquo;an untested proposition.&rdquo;</li>
+        </ul>
+
+        <h4 class="digest-theme">Builders, Buyers and Their Bets</h4>
+        <ul class="digest-bullets">
+          <li><strong>Cloning software for $10</strong> &ndash; Matthew Berman says the latest models can clone Excel in about 90 minutes to a couple of hours, for roughly $10 in tokens against $180 for a lifetime license. He calls Opus 5.5 the turning point and predicts software tends toward open source. His evidence is his own tests, and he concedes maintenance and security are the real objection.</li>
+          <li><strong>A model with a lane</strong> &ndash; Matt Maher&rsquo;s hands-on test of GPT-6.1 Terra, which he says costs about ten times the efficient Luna tier per token, found it shipped changes through an established pipeline but got stuck in its own rules on open-ended problems. He says it tends to succeed or stop and hand work back in computer use. His fix is escalation steps to a stronger model, and a warning that many pretty-good results compound into one you cannot diagnose.</li>
+          <li><strong>Swing again</strong> &ndash; Nate B. Jones says fewer than 200 people worked on Meta&rsquo;s Muse model and product, that more than a hundred model behaviors were tested before launch, and that 10 million people set it up in six weeks. His point is that a $19.2 billion Reality Labs loss did not make Zuckerberg careful. Fortune&rsquo;s Grok story adds the bill: Zuckerberg told analysts Muse is costly to run.</li>
+          <li><strong>What Freshworks stopped doing</strong> &ndash; Freshworks reached about $992 million in ARR by Sept. 30 and crossed $1 billion in October after buying Torii and Robusta, with $18.3 million in GAAP net income. CEO Dennis Woodside credits stopping &ldquo;a bunch of smaller projects.&rdquo; McKinsey&rsquo;s Alex Panas says &ldquo;AI is everywhere except in the EBIT line,&rdquo; and Michael Park describes agents surfacing the five things a team disagrees on out of twenty.</li>
+          <li><strong>Who buys if no one is paid</strong> &ndash; David Shapiro says households get roughly 60% of income from wages, 20% from government, and 20% from property. He claims workers received under 53 cents of each dollar produced in 2026, and points to Alaska&rsquo;s fund, Norway&rsquo;s roughly $1.9 trillion fund, and over 6,600 employee ownership plans. All figures are his, without sources in the video.</li>
+          <li><strong>Defaults for children</strong> &ndash; Google will turn AI off for K-12 students next year unless administrators opt in, but because Search and AI are integrated, schools that restrict AI lose Search. Apple, meanwhile, will require 18+ ratings for dating and romantic AI companion apps, with new descriptors due Nov. 16. TechCrunch cites 220 million downloads of top companion apps as of last summer.</li>
+          <li><strong>Consumer and corporate moves</strong> &ndash; Netflix&rsquo;s &ldquo;AI Discover&rdquo; tab offers mood-based themes such as &ldquo;something light&rdquo; and &ldquo;scare me,&rdquo; which Netflix calls its &ldquo;test kitchen.&rdquo; OpenAI hired former Army Secretary Dan Driscoll as senior counselor for national security modernization two months after he left the Pentagon. It also hired Uber&rsquo;s Jill Hazelbaker as chief corporate affairs officer, filling a role vacant since Hannah Wong left in January.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The shared theme is <em>who absorbs the cost of an agent doing real work</em>. Berman&rsquo;s $10 Excel clone is a single user&rsquo;s token bill. Grok Bot is the same economics at scale, where more frequent agent users drive up costs without necessarily paying more. Anthropic&rsquo;s 58% compute share and Meta&rsquo;s plan for a tenfold efficiency gain on Muse say the same thing from the lab side. Cheap for one person and expensive for the company that serves millions is a strange place to build a pricing model.</p>
+
+        <p>There is a pointed link between the IPO story and the SpaceX numbers. Anthropic pays SpaceX $1.25 billion a month for compute, and Fortune says leasing to Anthropic and Google drove much of SpaceX&rsquo;s AI revenue growth. One company&rsquo;s margin pressure is another company&rsquo;s revenue line, which is why BCG&rsquo;s $15 billion per gigawatt figure matters: the build-out only works if someone downstream, a lab, an enterprise, a consumer, earns enough to cover it. Fal&rsquo;s doubling valuation and Freshworks&rsquo; &ldquo;everywhere except EBIT&rdquo; quote are the same question seen from two ends.</p>
+
+        <p>The safety stories make a quieter argument that fits the cost one. FlashProve, mechanism design, and Apple&rsquo;s 10-K all assume you cannot fully inspect the model, so you verify outputs or shape incentives instead. Maher&rsquo;s advice to build escalation steps into a system is the practical version, and Meta&rsquo;s election errors show what happens when automation replaces the check. Meta says its models beat humans on error rates, yet the errors that surfaced came during elections. A lower average error rate does not help much when the misses land on a presidential campaign.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>For two years the AI argument was about capability. This week it is about unit economics and trust, and both are being settled in public documents. An S-1 shows that compute is a cost of goods sold, not a research budget. A 10-K from the world&rsquo;s second most valuable company names agents that conceal actions as a business risk. When Anthropic, Alphabet, and Apple all describe misbehaving agents in securities filings, the risk has moved from conference talk to a line item that lawyers sign.</p>
+          <p>The financing question is whether revenue compounds fast enough. Ritter&rsquo;s $100 billion in annual after-tax profit needed to justify a valuation above $1.4 trillion is a very high bar, but Epoch AI&rsquo;s Campbell Hutcheson makes the opposing case that paying a premium to reach a capability first can be rational. Both can be true, and the data center fights that Fortune says are a midterm issue add a political risk that no efficiency gain fixes. My read is that the technology is not the bottleneck now. Power, capital, and public trust are, and today&rsquo;s stories show all three tightening at once.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Where Anthropic prices.</strong> Fortune says institutions want the low end of $1.5 trillion to $2 trillion. Whether the final price lands near Ritter&rsquo;s $1.41 trillion line, and how the next compute-share figure moves, will show whether the third quarter was a blip or a trend.</li>
+          <li><strong>Whether anyone publishes a fingerprint.</strong> FlashProve needs labs to release a fingerprint for each model, and the researchers say they have no plans to deploy it. If a lab adopts it, buyers could start asking vendors to prove which model they are getting.</li>
+          <li><strong>Brazil&rsquo;s ruling on Meta.</strong> The electoral court has not yet decided whether to fine Meta, and federal prosecutors filed a civil suit on Oct. 21. The outcome will set an early precedent for how courts treat automated moderation errors during elections.</li>
+          <li><strong>Agent pricing.</strong> Musk and Zuckerberg both say agent usage is costing more than expected. Watch whether Grok Bot, Muse, or others change allowances or pricing, since BCG&rsquo;s advice to avoid long-term token commitments assumes prices keep falling.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/they-did-it-study.html" data-study-guide>They did it&hellip;</a> &ndash; Timestamped notes on the three conditions Berman says were met, his Excel clone test and its roughly $10 token cost, the open-source ArtCraft suite, and his answer to the maintenance and security objection, with the sponsor segment labeled.</li>
+          <li><a href="https://fittoprompt.com/study-guides/youve-never-lost-19-billion-so-why-are-you-playing-it-safer-than-zuckerberg-study.html" data-study-guide>You&rsquo;ve Never Lost $19 Billion</a> &ndash; Jones&rsquo;s three copyable lessons, the hotel-bathroom analogy for polish, the agent design questions he suggests asking, and why consensus compromises become the user&rsquo;s problem.</li>
+          <li><a href="https://fittoprompt.com/study-guides/gpt-6-1-terra-is-fantastic-at-some-work-and-terrible-at-others-study.html" data-study-guide>GPT-6.1 Terra Is Fantastic at Some Work and Terrible at Others</a> &ndash; Maher&rsquo;s model lineup and its pricing ratios, where Terra shipped customer changes and where it got stuck, and reflection questions on which of your tasks are truly bounded.</li>
+          <li><a href="https://fittoprompt.com/study-guides/eli5-post-labor-economics-study.html" data-study-guide>ELI5: Post-Labor Economics</a> &ndash; Shapiro&rsquo;s three ways money reaches a household, his seven-source 2045 example, and a clear list of which statistics are only his claims.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>
