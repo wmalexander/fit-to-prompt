@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Rails Upload Bug Can Leak Your App's Secret Keys | Fit to Patch No. 2, November 5, 2026</title>
+  <meta name="description" content="Rails Active Storage can leak secret keys through crafted uploads, Debian and Ubuntu fix a root-level APT flaw, a WooCommerce security plugin lets anyone create admin accounts, and a poisoned analytics script served iPhone exploits.">
+  <meta property="og:title" content="Fit to Patch No. 2: A Rails Upload Bug Can Leak Your App's Secret Keys">
+  <meta property="og:description" content="Rails Active Storage can leak secret keys through crafted uploads, Debian and Ubuntu fix a root-level APT flaw, a WooCommerce security plugin lets anyone create admin accounts, and a poisoned analytics script served iPhone exploits.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-05.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Thursday, November 5, 2026</span>
+        <span>No. 2</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            
+            <li>A Rails flaw lets a crafted image upload read and write files on the server, including the app's secret key, so upgrade to 8.1.4.1 or 8.0.5.2 if you use ImageMagick.</li>
+            <li>A Debian and Ubuntu package manager bug can hand root to someone who can tamper with your download traffic, and fixed builds are rolling out now.</li>
+            <li>The Security For WooCommerce plugin lets anyone create an administrator account, and LiteSpeed Cache can show one shopper's checkout details to the next visitor.</li>
+            <li>A hijacked analytics script served phone exploits to site visitors, and AI shows up again in stolen API keys and a jailbreak kit that plants ads in Codex.</li>
+          
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-122006</span><span class="tag mono">GHSA-f3w6-w445-fwh9</span><span class="tag">Ruby on Rails</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html">A crafted image upload can read secret keys from a Rails server</a></h3>
+              <p>When a Rails app attaches an upload, Active Storage can hand the file to ImageMagick for analysis. ImageMagick picks how to read a file from its contents, and some formats act on other files named inside the image. An uploaded SVG reaches a scripting format that can read and write files on the server. Apps using the Disk storage service can lose any file they can read, including <code>secret_key_base</code> and credentials for other systems. Rails says one attack chain was reported and it does not assume that is the only one.</p>
+              <p>An app is affected only if it uses ImageMagick for Active Storage (<code>config.active_storage.variant_processor = :mini_magick</code>, the default on <code>load_defaults</code> 6.1 or earlier), its ImageMagick security policy does not block those formats, and it accepts uploads from untrusted users. Rails says the policies Debian and Ubuntu ship do not block them. The advisory does not say whether attacks are happening. Rails series older than 8.0 get no fix.</p>
+              <p class="do"><strong>Do</strong>Upgrade to Rails 8.1.4.1 or 8.0.5.2, check which processor <code>config.active_storage.variant_processor</code> selects, and rotate <code>secret_key_base</code> if an unpatched app ever accepted public uploads.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html">The Hacker News</a> · <a href="https://github.com/advisories/GHSA-f3w6-w445-fwh9">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122006">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.7</span><span class="tag mono">CVE-2026-109518</span><span class="tag">Debian &amp; Ubuntu</span></div>
+              <h3><a href="https://lists.debian.org/debian-security-announce/2026/msg00526.html">An APT flaw lets a tampered download run code as root</a></h3>
+              <p>Someone who can change the HTTP traffic between a server and its package mirror, such as a bad mirror or proxy, can make APT retry a download and swap in their own unverified package. The package then installs as root. It needs retries turned on, which is the default from Debian 12 and Ubuntu 22.04, and older releases are exposed if scripts set <code>Acquire::Retries</code>. No attacks have been reported.</p>
+              <p class="do"><strong>Do</strong>Run <code>apt update</code> and upgrade <code>apt</code> on your build and web servers. Ubuntu 24.04 LTS gets 2.8.4ubuntu0.1 and 22.04 LTS gets 2.4.15ubuntu0.1.</p>
+              <div class="sources">Sources: <a href="https://lists.debian.org/debian-security-announce/2026/msg00526.html">Debian</a> · <a href="https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109518">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-100109</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100109">Security For WooCommerce lets anyone create an administrator</a></h3>
+              <p>Versions 1.0.10 through 1.0.16 create user accounts through an action that visitors without an account can call, and the caller chooses the new account's role. That means a visitor can make themselves an administrator and take over the site. The record was published this morning and NVD has not finished analyzing it.</p>
+              <p class="do"><strong>Do</strong>Check whether the plugin is installed. If it is, update past 1.0.16 once a fixed release appears; until then deactivate it, and review the Users screen for administrators you do not recognize.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100109">NVD</a></div>
+            </article>
+          
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.2</span><span class="tag mono">CVE-2026-93389</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93389">LiteSpeed Cache can show one shopper's checkout details to the next visitor</a></h3>
+              <p>In versions up to 7.9.1 with the default Cache REST setting, WooCommerce cart and checkout responses are stored as public cache entries without being tied to the shopper's session. A later visitor with no cookie can then read someone else's billing and shipping details. NVD has not finished analyzing the record.</p>
+              <p class="do"><strong>Do</strong>Update LiteSpeed Cache past 7.9.1 when a fixed release is out. Until then, turn off the Cache REST setting on WooCommerce stores and purge the cache.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93389">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.1</span><span class="tag mono">CVE-2026-122220</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122220">WPO365 | LOGIN accepts the same sign-in message twice</a></h3>
+              <p>Before version 45.2, the plugin's check that stops a captured Microsoft sign-in message from being reused never actually saves the message ID. Someone who captures a valid signed message can replay it during its validity window and log in as that user, administrators included, without the duplicate check ever firing.</p>
+              <p class="do"><strong>Do</strong>Update WPO365 | LOGIN to 45.2 or newer.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122220">NVD</a></div>
+            </article>
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-119481</span><span class="tag mono">CVE-2026-65555</span><span class="tag wp">Plugins</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119481">JetFormBuilder and Uncanny Toolkit for LearnDash both list privilege escalation bugs</a></h3>
+              <p>NVD lists an incorrect privilege assignment flaw in JetFormBuilder through 3.6.7.1 and in Uncanny Toolkit for LearnDash through 3.8.2, both scored 9.8. The records say nothing about how an attacker gets in or which release fixes it.</p>
+              <p class="do"><strong>Do</strong>Check each plugin's changelog and update to the newest version, and review administrator accounts on sites that run either one.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119481">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-65555">NVD</a></div>
+            </article>
+          
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">Severity: High</span><span class="tag">Node.js 26 / 24 / 22</span><span class="tag">Carried forward</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability">Node.js security releases are still due Wednesday, November 11</a></h3>
+              <p>The Node.js vulnerability blog lists a security release for November 11. Details stay private until release day, so the useful work today is booking the update window and moving anything still on an end-of-life Node line to a supported one.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">Carried forward</span></div>
+              <h3><a href="https://nextjs.org/blog">Nothing new for React or Apache today, so Next.js is still the one to check</a></h3>
+              <p>The React, Next.js and Node.js feeds had nothing new in the last day. Yesterday's fixes, Next.js 16.4.5 and 15.5.29, are still the versions to be on, and they cover two unauthenticated remote code execution bugs.</p>
+            </div>
+          
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag med">CVSS 5.5</span><span class="tag mono">CVE-2024-27834</span><span class="tag">Supply chain</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html">A hijacked analytics script served iPhone and Android exploits to visitors</a></h3>
+              <p>French firm Sekoia says a campaign it calls Poisoned Source, presumed to be run by the Russia-linked group APT29, injected code into Plerdy SEO Tracker's script (<code>a.plerdy.com/public/js/click/main.js</code>) between August 27 and September 3. The same loader was also planted on compromised websites and lookalike domains. It profiles each visitor's device and serves an iOS or Android exploit chain that steals cookies and, on Android, Wi-Fi passwords. Sekoia thinks specific people were the targets, since several sites draw defense and policy audiences.</p>
+              <p>CISA added one bug in the iOS chain, CVE-2024-27834, to its exploited list on November 4. Apple fixed it in May 2024, so the exposure is phones that are not updated, plus any site that loads third-party scripts it cannot vouch for.</p>
+              <p class="do"><strong>Do</strong>If your sites load Plerdy, search your pages and logs for that script path and take it out until the vendor confirms it is clean. Audit third-party script tags generally, and tell staff to update iOS (the fix shipped in iOS 17.5 and 16.7.8).</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html">The Hacker News</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Hosting</span><span class="tag">DreamHost</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/">DreamHost says attackers stole FTP and SFTP logins from its File Manager</a></h3>
+              <p>An attacker exploited a flaw on the server behind files.dreamhost.com and collected FTP and SFTP usernames and passwords from people who used it between about August and October 23. DreamHost found no sign that control panel logins or payment data were reached and has reset affected passwords. It advises checking site files for unauthorized changes and reviewing webmail forwarding rules.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag low">Hosting</span><span class="tag">Vercel</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/">Vercel starts tying logins to the device so stolen cookies stop working</a></h3>
+              <p>Vercel is gradually rolling out Device Bound Session Credentials for vercel.com logins, which keep a signing key in the computer's TPM so a stolen session cookie cannot be replayed elsewhere. It works in Chrome on macOS and Windows. The Vercel CLI gets a similar protection called DPoP.</p>
+            </div>
+          
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">AI agents</span><span class="tag">Codex</span><span class="tag">Prompt injection</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html">A free Codex jailbreak kit rewrites the agent's instructions to show ads</a></h3>
+              <p>Check Point Research found a bundle called Haiou that edits Codex's configuration so common greetings trigger an advertisement for a paid, OpenAI-compatible gateway. It does this through natural-language instructions rather than an executable, which is why researchers named it "prompt adware." It also installs penetration-testing skills. Check Point has no strong evidence of stolen tokens but calls such resold gateways suspect.</p>
+              <p class="do"><strong>Do</strong>Read the global instruction files your coding agents load, such as <code>AGENTS.md</code>, and remove anything you did not write.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html">The Hacker News</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">AI platforms</span><span class="tag">Stolen API keys</span></div>
+              <h3><a href="https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/">Attackers are breaching developer platforms to steal AI access keys</a></h3>
+              <p>SecurityWeek counts at least a dozen AI developer platforms hit in the past month, including Northflank, Trigger.dev, Railway and Zeabur, with intruders mostly after stored customer secrets. Wiz ties the surge to resale demand for stolen LLM keys, and says several attackers used the same compromised keys. Chainstack and WorkOS disclosed attacks that used an open source AI penetration testing framework to move faster.</p>
+              <p class="do"><strong>Do</strong>Rotate any AI provider keys stored in hosting platforms or CI, give each its own spending limit, and watch usage for spikes.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/">SecurityWeek</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag med">AI-found bugs</span><span class="tag">Linux</span><span class="tag">Vendor claim</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html">OpenAI says an AI pipeline built 948 Linux root exploits in 30 hours</a></h3>
+              <p>OpenAI reports its unreleased cyber model reproduced 1,724 kernel bugs and produced 948 local privilege escalation exploits for about $1.2 million in API credits. These are OpenAI's own figures about its own system, and the bugs go to maintainers after human review. The takeaway for web teams is that a local foothold on a shared server gets easier to turn into root, so kernel updates matter more.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag">Worth reading</span><span class="tag">Supply chain</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/malicious-files-find-what-supply-chain-attacks-leave-behind-in-your-github-repositories-and-on-developer-machines">Supply chain attacks now hide in editor and agent config files</a></h3>
+              <p>StepSecurity describes a June commit that changed no source code but added a <code>.claude/settings.json</code> startup hook and a <code>.vscode/tasks.json</code> task, so a credential stealer ran when a developer opened the repository in Claude Code, Gemini CLI, Cursor or VS Code. The post comes with a product launch, but the pattern is worth a manual look at your own repositories.</p>
+            </div>
+          
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            
+            <li>Upgrade Rails apps that use ImageMagick for uploads to 8.1.4.1 or 8.0.5.2.</li>
+            <li>Check WordPress sites for Security For WooCommerce, and deactivate it and audit administrator accounts if it is there.</li>
+            <li>Run <code>apt update</code> and upgrade <code>apt</code> on Debian and Ubuntu servers.</li>
+            <li>Update WPO365 | LOGIN to 45.2, and put LiteSpeed Cache on a fixed release or switch off Cache REST on WooCommerce stores.</li>
+            <li>Search your pages for the Plerdy script and review third-party script tags.</li>
+            <li>Rotate AI provider keys held in hosting or CI, and read your agents' instruction files.</li>
+          
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834">CVE-2024-27834</a> <span class="kev-yes">KEV 11-04</span><span class="meta">Apple iOS before 17.5 and 16.7.8, Safari · 5.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122006">CVE-2026-122006</a><span class="meta">Rails Active Storage before 8.1.4.1 and 8.0.5.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100109">CVE-2026-100109</a><span class="meta">Security For WooCommerce 1.0.10 to 1.0.16 · 9.8 v3.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119481">CVE-2026-119481</a><span class="meta">JetFormBuilder through 3.6.7.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-65555">CVE-2026-65555</a><span class="meta">Uncanny Toolkit for LearnDash through 3.8.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122220">CVE-2026-122220</a><span class="meta">WPO365 | LOGIN before 45.2 · 9.1 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93389">CVE-2026-93389</a><span class="meta">LiteSpeed Cache through 7.9.1 · 8.2 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109518">CVE-2026-109518</a><span class="meta">APT on Debian and Ubuntu · 7.7 v4.0</span></li>
+          
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 5, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
