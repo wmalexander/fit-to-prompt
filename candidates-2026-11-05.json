@@ -1,0 +1,963 @@
+{
+  "fetchDate": "2026-11-05",
+  "lastCheckDate": "2026-11-04",
+  "sourcesChecked": 61,
+  "unreachableSources": [
+    "@3blue1brown",
+    "@AndrejKarpathy",
+    "@Chase-H-AI",
+    "@EzraKleinShow",
+    "@TinaHuang1",
+    "@YannicKilcher",
+    "@leonvanzyl",
+    "@sentdex",
+    "Associated Press",
+    "Bloomberg",
+    "Boris Cherny",
+    "Claude Code Changelog",
+    "Fortune",
+    "Kara Swisher",
+    "Meta AI",
+    "Microsoft Research",
+    "Mistral",
+    "Nathan Labenz",
+    "New York Times",
+    "OpenAI Blog",
+    "Papers With Code",
+    "Podcasts (9 shows)",
+    "Reddit r/LocalLLaMA",
+    "Reddit r/artificial",
+    "Reuters",
+    "The Atlantic",
+    "VentureBeat",
+    "Wall Street Journal",
+    "Washington Post",
+    "xAI"
+  ],
+  "sourceLog": [
+    {
+      "source": "Anthropic Blog",
+      "category": "A",
+      "url": "https://anthropic.com/news",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "curl"
+    },
+    {
+      "source": "Claude Code Changelog",
+      "category": "A",
+      "url": "https://claude.ai/changelog/code",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "OpenAI Blog",
+      "category": "A",
+      "url": "https://openai.com/blog",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "direct fetch returned 403; site: search returned no current posts",
+      "method": "curl"
+    },
+    {
+      "source": "Google DeepMind",
+      "category": "A",
+      "url": "https://deepmind.google/blog",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Meta AI",
+      "category": "A",
+      "url": "https://ai.meta.com/blog",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS feed unparseable",
+      "method": "RSS"
+    },
+    {
+      "source": "Microsoft Research",
+      "category": "A",
+      "url": "https://microsoft.com/en-us/research/blog",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS feed returned invalid response",
+      "method": "RSS"
+    },
+    {
+      "source": "Apple ML",
+      "category": "A",
+      "url": "https://machinelearning.apple.com",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Hugging Face",
+      "category": "A",
+      "url": "https://huggingface.co/blog",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Mistral",
+      "category": "A",
+      "url": "https://mistral.ai/news",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS feed unparseable",
+      "method": "RSS"
+    },
+    {
+      "source": "xAI",
+      "category": "A",
+      "url": "https://x.ai/blog",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "Simon Willison",
+      "category": "B",
+      "url": "https://simonwillison.net",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Ethan Mollick",
+      "category": "B",
+      "url": "https://oneusefulthing.org",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Ben Thompson",
+      "category": "B",
+      "url": "https://stratechery.com",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Kara Swisher",
+      "category": "B",
+      "url": "https://karaswisher.com",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "Gary Marcus",
+      "category": "B",
+      "url": "https://garymarcus.substack.com",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Boris Cherny",
+      "category": "B",
+      "url": "https://x.com/bcherny",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "X requires login; not fetched",
+      "method": "none"
+    },
+    {
+      "source": "Zvi Mowshowitz",
+      "category": "B",
+      "url": "https://thezvi.substack.com",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Nathan Labenz",
+      "category": "B",
+      "url": "https://cognitiverevolution.ai",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS feed unparseable",
+      "method": "RSS"
+    },
+    {
+      "source": "The Rundown AI",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "Superhuman AI",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "Import AI",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "The Batch",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "There's An AI For That",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "Eye on AI",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "AI Breakfast",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "newsletter, check inbox",
+      "method": "none"
+    },
+    {
+      "source": "Ars Technica",
+      "category": "C",
+      "url": "https://arstechnica.com/ai",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "MIT Technology Review",
+      "category": "C",
+      "url": "https://technologyreview.com/topic/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Wired",
+      "category": "C",
+      "url": "https://wired.com/tag/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 6,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "TechCrunch",
+      "category": "C",
+      "url": "https://techcrunch.com/category/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 7,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "The Verge",
+      "category": "C",
+      "url": "https://theverge.com/ai-artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 5,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "VentureBeat",
+      "category": "C",
+      "url": "https://venturebeat.com/category/ai",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS feed unparseable",
+      "method": "RSS"
+    },
+    {
+      "source": "404 Media",
+      "category": "C",
+      "url": "https://404media.co",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "New York Times",
+      "category": "D",
+      "url": "https://nytimes.com/topic/subject/artificial-intelligence",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run (paywall; no WebSearch fallback run)",
+      "method": "none"
+    },
+    {
+      "source": "Wall Street Journal",
+      "category": "D",
+      "url": "https://wsj.com/tech/ai",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run (paywall)",
+      "method": "none"
+    },
+    {
+      "source": "Bloomberg",
+      "category": "D",
+      "url": "https://bloomberg.com/technology",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run (paywall)",
+      "method": "none"
+    },
+    {
+      "source": "Reuters",
+      "category": "D",
+      "url": "https://reuters.com/technology/artificial-intelligence",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "Fortune",
+      "category": "D",
+      "url": "https://fortune.com/tag/artificial-intelligence",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "Washington Post",
+      "category": "D",
+      "url": "https://washingtonpost.com/technology",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run (paywall)",
+      "method": "none"
+    },
+    {
+      "source": "The Atlantic",
+      "category": "D",
+      "url": "https://atlantic.com/projects/artificial-intelligence",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run (paywall)",
+      "method": "none"
+    },
+    {
+      "source": "Associated Press",
+      "category": "D",
+      "url": "https://apnews.com/technology",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "@NateBJones",
+      "category": "E",
+      "url": "https://youtube.com/@NateBJones",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@IndyDevDan",
+      "category": "E",
+      "url": "https://youtube.com/@IndyDevDan",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@MetalSole",
+      "category": "E",
+      "url": "https://youtube.com/@MetalSole",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@Fireship",
+      "category": "E",
+      "url": "https://youtube.com/@Fireship",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@mreflow",
+      "category": "E",
+      "url": "https://youtube.com/@mreflow",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@AiExplained-official",
+      "category": "E",
+      "url": "https://youtube.com/@AiExplained-official",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@Claude",
+      "category": "E",
+      "url": "https://youtube.com/@Claude",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@matthew_berman",
+      "category": "E",
+      "url": "https://youtube.com/@matthew_berman",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@TwoMinutePapers",
+      "category": "E",
+      "url": "https://youtube.com/@TwoMinutePapers",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@DaveShap",
+      "category": "E",
+      "url": "https://youtube.com/@DaveShap",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@ColeMedin",
+      "category": "E",
+      "url": "https://youtube.com/@ColeMedin",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@aiadvantage",
+      "category": "E",
+      "url": "https://youtube.com/@aiadvantage",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@EzraKleinShow",
+      "category": "E",
+      "url": "https://youtube.com/@EzraKleinShow",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@hardfork",
+      "category": "E",
+      "url": "https://youtube.com/@hardfork",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@Chase-H-AI",
+      "category": "E",
+      "url": "https://youtube.com/@Chase-H-AI",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@leonvanzyl",
+      "category": "E",
+      "url": "https://youtube.com/@leonvanzyl",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@TinaHuang1",
+      "category": "E",
+      "url": "https://youtube.com/@TinaHuang1",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@3blue1brown",
+      "category": "E",
+      "url": "https://youtube.com/@3blue1brown",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@AndrejKarpathy",
+      "category": "E",
+      "url": "https://youtube.com/@AndrejKarpathy",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@YannicKilcher",
+      "category": "E",
+      "url": "https://youtube.com/@YannicKilcher",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "@sentdex",
+      "category": "E",
+      "url": "https://youtube.com/@sentdex",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "yt-dlp run stopped at background time limit before this channel, or returned no output",
+      "method": "yt-dlp"
+    },
+    {
+      "source": "Podcasts (9 shows)",
+      "category": "F",
+      "url": "",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run (RSS discovery not run)",
+      "method": "none"
+    },
+    {
+      "source": "Hacker News",
+      "category": "H",
+      "url": "https://news.ycombinator.com",
+      "status": "success",
+      "candidatesFound": 6,
+      "error": null,
+      "method": "curl"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "category": "H",
+      "url": "https://reddit.com/r/MachineLearning",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": null,
+      "method": "RSS"
+    },
+    {
+      "source": "Reddit r/LocalLLaMA",
+      "category": "H",
+      "url": "https://reddit.com/r/LocalLLaMA",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS request returned empty response",
+      "method": "RSS"
+    },
+    {
+      "source": "Reddit r/artificial",
+      "category": "H",
+      "url": "https://reddit.com/r/artificial",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "RSS feed unparseable",
+      "method": "RSS"
+    },
+    {
+      "source": "Papers With Code",
+      "category": "H",
+      "url": "https://paperswithcode.com",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "not fetched this run",
+      "method": "none"
+    },
+    {
+      "source": "AI News (X/Twitter Lists)",
+      "category": "H",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "no actionable URL",
+      "method": "none"
+    },
+    {
+      "source": "Anthropic Research",
+      "category": "A",
+      "url": "https://anthropic.com/research",
+      "status": "success",
+      "candidatesFound": 0,
+      "error": "listing checked; dated items already counted under Anthropic Blog",
+      "method": "curl"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "ColeMedin",
+      "title": "I REALLY Want Open Models to Win, But They Just Don't Cut It (Yet)",
+      "url": "https://www.youtube.com/watch?v=RYIV5E2Xq60",
+      "date": "20261105",
+      "type": "video"
+    },
+    {
+      "source": "NateBJones",
+      "title": "Elon's AI Agent Has a Massive Cost Problem",
+      "url": "https://www.youtube.com/watch?v=-5cDYPwNf5g",
+      "date": "20261104",
+      "type": "video"
+    },
+    {
+      "source": "mreflow",
+      "title": "How I Get Claude To Edit My Videos (No Code Needed)",
+      "url": "https://www.youtube.com/watch?v=ep4psgAFOqc",
+      "date": "20261104",
+      "type": "video"
+    },
+    {
+      "source": "Claude",
+      "title": "Collaborate on artifacts in Claude",
+      "url": "https://www.youtube.com/watch?v=kJA3fQnntpY",
+      "date": "20261104",
+      "type": "video"
+    },
+    {
+      "source": "matthew_berman",
+      "title": "The most important paper in AI right now",
+      "url": "https://www.youtube.com/watch?v=j09uV1oAuIo",
+      "date": "20261104",
+      "type": "video"
+    },
+    {
+      "source": "DaveShap",
+      "title": "No. Capitalism 2.0 Is Coming.",
+      "url": "https://www.youtube.com/watch?v=EagFtaET0vE",
+      "date": "20261104",
+      "type": "video"
+    },
+    {
+      "source": "aiadvantage",
+      "title": "How I Edit My Videos with Claude",
+      "url": "https://www.youtube.com/watch?v=fS-88gtHXIg",
+      "date": "20261104",
+      "type": "video"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Apple is reportedly cutting budgets for its internal AI usage",
+      "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+      "date": "2026-11-05",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "After the midterms, a bigger clash over data centers could be coming",
+      "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/",
+      "date": "2026-11-05",
+      "type": "article"
+    },
+    {
+      "source": "Ars Technica",
+      "title": "Big Tech claims voters' AI backlash is anti-Trump not anti-tech",
+      "url": "https://arstechnica.com/tech-policy/2026/11/big-tech-claims-voters-ai-backlash-is-anti-trump-not-anti-tech/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "404 Media",
+      "title": "American Voters Overwhelmingly Reject AI Data Centers",
+      "url": "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "404 Media",
+      "title": "There Is One Fight: American Voters Reject Tech Oligarchy",
+      "url": "https://www.404media.co/there-is-one-fight-american-voters-reject-tech-oligarchy/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "MIT Technology Review",
+      "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
+      "url": "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "MIT Technology Review",
+      "title": "Securing the agentic enterprise with data lineage",
+      "url": "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Stratechery",
+      "title": "AI on the Ballot",
+      "url": "https://stratechery.com/2026/ai-on-the-ballot/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hugging Face Blog",
+      "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+      "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Simon Willison",
+      "title": "datasette-llm 0.1a10",
+      "url": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Simon Willison",
+      "title": "datasette-apps 0.3a0",
+      "url": "https://simonwillison.net/2026/Nov/4/datasette-apps/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Wired",
+      "title": "The Blue Wave Has Tech Bros Scrambling for Data Centers in Space",
+      "url": "https://www.wired.com/story/the-blue-wave-has-tech-bros-scrambling-for-data-centers-in-space/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Wired",
+      "title": "The Biggest Pro-AI Super PAC Network Didn't Really Impact the Midterms",
+      "url": "https://www.wired.com/story/the-biggest-pro-ai-super-pac-network-didnt-really-impact-the-midterms/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Wired",
+      "title": "Google Is Forcing AI Overviews in Classrooms. Schools Are Searching for a Way Out",
+      "url": "https://www.wired.com/story/google-is-forcing-ai-overviews-in-classrooms-schools-are-searching-for-a-way-out/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Wired",
+      "title": "Hugging Face's CEO Says His P(Doom) Is Close to Zero",
+      "url": "https://www.wired.com/story/wired-world-fair-2026-clement-delangue-hugging-face/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Wired",
+      "title": "The Results Are In: Voters Hate Data Centers",
+      "url": "https://www.wired.com/story/the-results-are-in-voters-hate-data-centers/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Wired",
+      "title": "UK Officials Said AI Would Add £400 Billion to the Economy. That Figure Mainly Came From Google",
+      "url": "https://www.wired.com/story/uk-officials-said-ai-would-add-400-billion-to-the-economy-that-figure-mainly-came-from-google/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Meta acquires AI coding startup Conductor",
+      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Almost no one uses AI agents to book their Uber, company says",
+      "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "OpenAI is already trying to shape the 2028 election",
+      "url": "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "AI PACs spent millions trying to shape Congress: here's how they fared",
+      "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
+      "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "The Verge",
+      "title": "Data centers lost the midterms",
+      "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "The Verge",
+      "title": "Uber only fulfilled 4 rides from AI agents last quarter",
+      "url": "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "The Verge",
+      "title": "ChatGPT will now make you animated GIFs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "The Verge",
+      "title": "Google hasn't figured out how to make AI pay like its search engine",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "The Verge",
+      "title": "Qualcomm is betting big on data centers as smartphone sales sink",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Anthropic",
+      "title": "Investigating vault particles with Claude",
+      "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "title": "Hydrogen-1.0: open-weight scientific model beats GPT-6 Astra on FSR with 72% lower estimated output cost [P]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xnjhdd/hydrogen10_openweight_scientific_model_beats_gpt6/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "title": "Do looped transformers save HBM traffic? Profiling weight reuse in Huginn on a B200 [P]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xnskvt/do_looped_transformers_save_hbm_traffic_profiling/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hacker News",
+      "title": "Images 2.6",
+      "url": "https://openai.com/index/introducing-images-2-6/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hacker News",
+      "title": "Kimi K3.1 Pro model weights are out",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hacker News",
+      "title": "Conductor is joining Meta",
+      "url": "https://www.conductor.build/announcement",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hacker News",
+      "title": "OpenAI to acquire Pierre Computer Company",
+      "url": "https://openai.com/index/openai-to-acquire-pierre/",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hacker News",
+      "title": "Tencent Hy4",
+      "url": "https://hy.tencent.ai/research/hy4",
+      "date": "2026-11-04",
+      "type": "article"
+    },
+    {
+      "source": "Hacker News",
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "url": "https://www.ricursive.com/ripple",
+      "date": "2026-11-04",
+      "type": "article"
+    }
+  ]
+}

@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-04",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["acronym", "scramble", "cryptogram"]
+        lastUpdated: "2026-11-05",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["acronym", "scramble", "cryptogram", "crossword"]
     },
     issues: [
+        {
+            date: "2026-11-05",
+            volume: 1,
+            issueNumber: 135,
+            title: "American Voters Overwhelmingly Reject AI Data Centers",
+            description: "Daily AI news roundup - November 5, 2026. Voters reject AI data centers across 38 races, what the blue wave means for Texas, Apple's AI spending caps, a paper on models rewriting model weights, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-05.html",
+            storyCount: 15,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-11-04",
             volume: 1,
