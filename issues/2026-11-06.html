@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 6, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 6, 2026. Protesters break into a Microsoft data center site in Amsterdam, Thinking Machines's Inkling 2 Small, Palo Alto Networks' $500M Clutch talks, a humanoid robot cleaner, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 136">
+  <meta property="og:description" content="Daily AI news roundup - November 6, 2026. Protesters break into a Microsoft data center site in Amsterdam, Thinking Machines's Inkling 2 Small, Palo Alto Networks' $500M Clutch talks, a humanoid robot cleaner, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, November 6, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 136</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; Data Centers</div>
+<a href="https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam" class="story-link" style="display:block;">
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2303323844.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.style.display='none'">
+<h2 class="headline-lead mb-3">Protesters Break Into Microsoft Data Center Site in Amsterdam</h2>
+</a>
+<p class="byline mb-3">The Verge &middot; Nov 6</p>
+<div class="newspaper-body">
+<p>Around 100 people got into the construction site of a new Microsoft data center on the edge of Amsterdam on Friday morning, according to Reuters as cited by The Verge, and some climbed a crane to hang banners. The Geef Tegengas group helped organize the protest against three planned 85-meter data center towers. Amsterdam banned new data centers until 2030, but this project follows plans dating to 2016, Microsoft will be its sole tenant, and the British developer Pure Data Centres navigated some loopholes to reach construction.</p>
+<p>It is the latest in a week of European protests, after activists staged a mock military checkpoint outside a Microsoft data center in Dublin on Tuesday. Microsoft also abandoned the UK&rsquo;s largest data center project last month, after grid officials said the site would not get power until the 2030s.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI Models</div>
+<a href="https://thinkingmachines.ai/news/inkling-2-small/" class="story-link" style="display:block;">
+<h3 class="headline-feature mb-2">Thinking Machines Introduces Inkling 2 Small</h3>
+</a>
+<p class="byline mb-2">Thinking Machines &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The lab&rsquo;s second model generation is a mixture-of-experts model with 594 billion total parameters, 17 billion active, and image input. It scores 31 on the Artificial Analysis Intelligence Index, per the company. Weights are closed for now, with an Apache 2.0 release promised next week after outside safety testing.</p>
+<div class="kicker mt-5">Security &middot; M&amp;A</div>
+<a href="https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/" class="story-link">
+<h3 class="headline-standard mb-2">Palo Alto Networks in Talks to Buy AI Agent Security Startup Clutch for $500M</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 5</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The deal would pay $500 million in cash plus milestone payments, per a source. Clutch was last valued at $85 million and is near $10 million in annual recurring revenue, roughly 50 times ARR. It would be Palo Alto&rsquo;s seventh acquisition this year, according to PitchBook.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-06-cartoon.png" alt="A founder gestures reassuringly at a skeptical homeowner while a cleaning robot holds a mop and, through a doorway, a man in a VR headset and gloves mimes mopping" class="w-full object-contain mb-2" style="max-height:380px;" loading="lazy">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;It&rsquo;s fully autonomous. Gary just helps with the stairs, the laundry, and the toilet.&rdquo;</p>
+<p class="byline mt-1">A founder, during the demo</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Politics</div>
+<a href="https://www.nytimes.com/2026/11/05/technology/house-republicans-nvidia-jensen-huang-china.html" class="story-link">
+<h3 class="headline-standard mb-2">House G.O.P. Leaders Ask Nvidia&rsquo;s Huang to Speak in Closed-Door Briefing</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 5</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The request follows the Times&rsquo; report last week that Huang had a close relationship with an executive U.S. officials determined was funneling information to Chinese intelligence. The article was paywalled, so this summary comes from the Times&rsquo; own description.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Robotics</div>
+<a href="https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/" class="story-link">
+<img src="https://wp.technologyreview.com/wp-content/uploads/2026/11/TauRobot-3up.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">I Watched a Humanoid Robot Clean My Apartment. It Felt Like a Taste of the Future.</h3>
+</a>
+<p class="byline mb-2">MIT Technology Review &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The writer booked Tau Robotics&rsquo; cleaning service in San Francisco without saying they were a journalist. The robots are piloted remotely by humans, who collect training data. The first visit ended early when heat shut down the pilot&rsquo;s equipment. On the second, the robot cleaned the kitchen and the toilet but left taps dripping and knocked over a bottle of olive oil.</p>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+<div class="ws26-wrap">
+<style>
+.ws26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.ws26-grid{display:grid;grid-template-columns:repeat(10,1fr);width:260px;border:2px solid #1a1a1a;margin-bottom:0.6rem;user-select:none}
+.ws26-c{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:600;cursor:pointer;background:#fff}
+.ws26-c:hover{background:#fff8dc}
+.ws26-c.ws26-sel{background:#fde68a}
+.ws26-c.ws26-found{background:#e1efe1;color:#059669}
+.ws26-words{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:0.7rem;font-weight:600;letter-spacing:0.06em;color:#374151}
+.ws26-words span.ws26-done{text-decoration:line-through;color:#9ca3af}
+.ws26-msg{font-size:0.65rem;color:#6b7280;margin-top:6px;min-height:1em}
+</style>
+<div class="ws26-grid" id="ws26-grid"></div>
+<div class="ws26-words" id="ws26-words"></div>
+<div class="ws26-msg" id="ws26-msg" aria-live="polite">Click the first and last letter of a word.</div>
+<script>
+(function(){
+var rows=["APODOOTLEG", "NGTOKENIRC", "ALEDROBOTL", "TMTNMODELO", "GPMITOUIPU", "PGOELINLID", "OOAPUOROHA", "WEUOTINICP", "EETOVLIPIU", "RNNPSRDRDD"];
+var words=["TOKEN", "AGENT", "MODEL", "ROBOT", "CHIP", "CLOUD", "POWER", "VOTE"];
+var N=10,grid=document.getElementById("ws26-grid"),list=document.getElementById("ws26-words"),msg=document.getElementById("ws26-msg");
+var cells=[],start=null,found=0;
+words.forEach(function(w){var s=document.createElement("span");s.id="ws26-w-"+w;s.textContent=w;list.appendChild(s);});
+for(var r=0;r<N;r++){for(var c=0;c<N;c++){(function(r,c){
+  var d=document.createElement("div");d.className="ws26-c";d.textContent=rows[r].charAt(c);
+  d.addEventListener("click",function(){
+    if(!start){start=[r,c];d.classList.add("ws26-sel");return;}
+    var dr=r-start[0],dc=c-start[1],len=Math.max(Math.abs(dr),Math.abs(dc))+1;
+    var ok=(dr===0||dc===0||Math.abs(dr)===Math.abs(dc));
+    cells[start[0]*N+start[1]].classList.remove("ws26-sel");
+    if(!ok){start=null;return;}
+    var sr=dr===0?0:dr/Math.abs(dr),sc=dc===0?0:dc/Math.abs(dc),str="",idx=[];
+    for(var i=0;i<len;i++){var rr=start[0]+sr*i,cc=start[1]+sc*i;str+=rows[rr].charAt(cc);idx.push(rr*N+cc);}
+    var rev=str.split("").reverse().join("");
+    var hit=words.indexOf(str)>-1?str:(words.indexOf(rev)>-1?rev:null);
+    start=null;
+    if(!hit){msg.textContent="Not a hidden word. Try again.";return;}
+    var el=document.getElementById("ws26-w-"+hit);
+    if(el.className){return;}
+    el.className="ws26-done";idx.forEach(function(i){cells[i].classList.add("ws26-found");});
+    found++;msg.textContent=found===words.length?"All found. Nicely done.":found+" of "+words.length+" found.";
+  });
+  grid.appendChild(d);cells.push(d);
+})(r,c);}}
+})();
+</script>
+</div>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire &middot; AI &amp; Markets</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-06/tsmc-mulls-making-advanced-ai-memory-chips-information-says">TSMC Mulls Making Advanced AI Memory Chips, Information Says</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-06/protesters-break-into-microsoft-data-center-site-in-amsterdam">Protesters Break Into Microsoft Data Center in Amsterdam</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-06/ecb-considers-review-of-banks-data-center-lending-as-fears-rise">ECB Considers Review of Banks&rsquo; Data Center Lending as Fears Rise</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-06/strategist-who-warned-before-rout-sees-anthropic-as-bigger-risk">Strategist Who Warned Before Rout Sees Anthropic as Bigger Risk</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-06/pentagon-taps-robotics-startup-in-push-for-cheap-attack-drones">Pentagon Taps Robotics Startup in Push for Cheap Attack Drones</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-06/markets-focused-more-on-ai-than-jobs-jeffrey-rosenberg-video">Markets Focused More on AI Than Jobs Report, BlackRock&rsquo;s Rosenberg Says (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-06/is-ai-degrading-our-music-taste-video">Is AI Degrading Our Music Taste? (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 6</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1xpbjku/qwen_4_is_stealth_announced/">Qwen 4 Is Stealth Announced</a>
+<div class="wire-source">Reddit r/LocalLLaMA &middot; Nov 6</div>
+</div>
+</div>
+
+<div class="story-item">
+<div class="kicker">Robotics &middot; Funding</div>
+<a href="https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/physicl-studio-hero-kitchen-16x9-1.jpg?resize=1200,675" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Physicl Raises $10M to Make the Digital World Real Enough for Robots</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Founder Alex de Vigan is repurposing the 3D rendering pipeline from his last company to build simulated worlds for training robots. The seed round was led by Inovia Capital, and the first product, Studio, ships with 10,000 3D environments and 100,000 assets.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI Models &middot; On-Device</div>
+<a href="https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Screenshot-2026-11-05-at-7.02.34-PM.jpg?resize=1200,542" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-standard mb-2">Underdog Shows Off a 32MB Speech Model in New Demo</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Underdog&rsquo;s Woof model has about 31 million parameters and runs in a browser with no internet connection, powering a small typewriter game that speaks whatever you type. It is open for download, and TechCrunch says it likely will not replace bigger models.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Newsletter &middot; Markets</div>
+<a href="https://www.technologyreview.com/2026/11/06/1148154/the-download-humanoid-robot-cleaner-samsung-ai-chip-boom/" class="story-link">
+<h3 class="headline-feature mb-2">The Download: A Humanoid Cleans House and Samsung Builds for the AI Boom</h3>
+</a>
+<p class="byline mb-2">MIT Technology Review &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Today&rsquo;s edition notes almost $2.5 trillion wiped off tech stocks, with the Nasdaq suffering its worst day since April 2025 amid AI slowdown fears, per CNN. It also covers Democrats preparing to call tech CEOs to Congress, and Samsung&rsquo;s memory chip campus in South Korea, where a fifth fab is being built.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Opinion &middot; AI Policy</div>
+<a href="https://fortune.com/2026/11/06/white-house-ai-accord-independent-assessments-auditors-schellman/" class="story-link">
+<h3 class="headline-standard mb-2">Schellman CEO: The Giant Loophole in the White House AI Deal</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Sept. 29 accord calls for independent assessments of AI safeguards without saying who qualifies, what independence requires, or how conflicts are handled. The author runs an AI assurance firm and asks for minimum assessor qualifications and conflict disclosures.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Opinion &middot; Enterprise AI</div>
+<a href="https://fortune.com/2026/11/06/ai-payoff-sp-493-apollo-slok-operating-model-ceos-adam-dumey/" class="story-link">
+<h3 class="headline-standard mb-2">AI Won&rsquo;t Pay Off for the S&amp;P 493 Until CEOs Rebuild the Work</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Citing an Apollo economist&rsquo;s note that AI has delivered no financial payoff outside tech, the author argues the CEO must own the effort and redesign workflows around it. The author works for a firm that sells this kind of integration work.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Creators</div>
+<a href="https://fortune.com/2026/11/06/kickstarter-ceo-everette-taylor-human-creativity-ai/" class="story-link">
+<h3 class="headline-standard mb-2">Kickstarter&rsquo;s CEO Is Championing Human Creativity in a Flood of AI</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 6</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Fortune&rsquo;s CEO Daily cites a Goldman Sachs projection that creators will grow from 67 million to 107 million by 2030, then turns to Kickstarter CEO Everette Taylor. This summary reflects only the newsletter&rsquo;s opening.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI Infrastructure</div>
+<a href="https://www.nytimes.com/2026/11/05/technology/openai-data-centers-midterms.html" class="story-link">
+<h3 class="headline-standard mb-2">OpenAI Pledges to Give Locals More Say in Data Center Projects</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 5</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Times reports that OpenAI pledged to be more collaborative with the communities where it is building data centers. The article was paywalled, so this summary comes from the Times&rsquo; own description.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Almost $2.5 trillion was wiped off tech stocks in a single session, the Nasdaq&rsquo;s worst day since April 2025, and on the same Friday about 100 people climbed into a Microsoft construction site in Amsterdam, some of them up a crane. Those are two ends of one story. The AI buildout is being priced, in markets and in public, and the people paying for it are asking what they get back. Today&rsquo;s stories keep circling that question.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">The Sell-Off and the Payoff Question</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Download: A Humanoid Cleans House and Samsung Builds for the AI Boom.</strong> MIT Technology Review&rsquo;s newsletter leads its news roundup with the rout: almost $2.5 trillion off tech stocks, the Magnificent Seven down more than $1 trillion, and Tesla and SpaceX down more than $420 billion combined, per CNBC. It adds that the sell-off spread to Asia and Europe. Two other items matter for the rest of the day: Democrats are preparing to haul tech CEOs before Congress, and a Reuters report says the backlash could delay Anthropic&rsquo;s IPO.</li>
+          <li><strong>AI Won&rsquo;t Pay Off for the S&amp;P 493 Until CEOs Rebuild the Work.</strong> Adam Dumey of World Wide Technology starts from an Oct. 24 note by Apollo&rsquo;s Torsten Slok saying revenue per worker and margins are rising at the Magnificent 7 and flat across the other 493 companies in the S&amp;P 500. Azure grew 48% and Google Cloud 103% last quarter, he notes, while the buyers of that capacity reported job cuts, not margin gains. His numbers: BCG puts AI spending at 3.3% of revenue, up from 1.7% in late 2025. He also discloses that his firm sells the integration work he recommends.</li>
+          <li><strong>Kickstarter&rsquo;s CEO Is Championing Human Creativity in a Flood of AI.</strong> Fortune&rsquo;s CEO Daily opens with Goldman Sachs&rsquo; projection that the number of creators will grow from 67 million to 107 million by 2030, with a creator economy approaching half a trillion dollars by next year. The newsletter&rsquo;s own lead item that day is the tech sell-off. Only the opening was available, so treat this as a partial read.</li>
+          <li><strong>From Bloomberg.</strong> Bloomberg&rsquo;s pieces were paywalled, so what follows comes from headlines only. The ECB is considering a review of banks&rsquo; data center lending as fears rise, a strategist who warned before the rout sees Anthropic as a bigger risk, and BlackRock&rsquo;s Jeffrey Rosenberg says markets are focused more on AI than on the jobs report.</li>
+        </ul>
+
+        <h4 class="digest-theme">Permission, Protest and Politics</h4>
+        <ul class="digest-bullets">
+          <li><strong>Protesters Break Into Microsoft Data Center Site in Amsterdam.</strong> The Verge, citing Reuters, says around 100 people entered the site of three planned 85-meter data center towers. The detail that matters is the legal one: Amsterdam banned new data centers until 2030, but this project follows plans from 2016, Microsoft is the sole tenant, and the developer used loopholes to get to construction. The Verge adds that Microsoft abandoned the UK&rsquo;s largest data center project last month because the grid would not supply power until the 2030s.</li>
+          <li><strong>OpenAI Pledges to Give Locals More Say in Data Center Projects.</strong> The New York Times says OpenAI pledged to be more collaborative with the communities where it is building. The article was paywalled, so all we have is the headline and the Times&rsquo; one-sentence description, but the timing, days after a midterm in which data centers were on ballots, speaks for itself.</li>
+          <li><strong>House G.O.P. Leaders Ask Nvidia&rsquo;s Huang to Speak in Closed-Door Briefing.</strong> The Times ties the request to its report last week that Huang had a close relationship with an executive U.S. officials determined was funneling information to Chinese intelligence. Again only the description was available.</li>
+          <li><strong>Schellman CEO: The Giant Loophole in the White House AI Deal.</strong> Avani Desai says the Sept. 29 accord asks developers to bring in outside auditors but never defines who qualifies, what independence means, or how conflicts of interest are handled. Her own firm sells accredited AI assurance, which she discloses. She points to an AICPA and AIUC joint offering that pairs SOC 2 exams with AIUC-1 certification and quarterly retesting as a promising step.</li>
+        </ul>
+
+        <h4 class="digest-theme">Models, Chips, Robots and Security</h4>
+        <ul class="digest-bullets">
+          <li><strong>Thinking Machines Introduces Inkling 2 Small.</strong> A mixture-of-experts model with 594 billion total parameters and 17 billion active, scoring 31 on the Artificial Analysis Intelligence Index per the company. The headline demo is an autoresearch run: the model trained a Qwen3.5-4B forecaster on Tinker for 4.5 hours and $426 of spend and more than doubled its forecasting score. Weights are closed today, with an Apache 2.0 release promised next week after outside safety testing. These are vendor-published benchmarks.</li>
+          <li><strong>Underdog Shows Off a 32MB Speech Model in New Demo.</strong> The Woof model has about 31 million parameters and runs in a browser with no connection. TechCrunch&rsquo;s read is modest: it likely will not replace larger models, but it could drive local assistants. The company also released a 167MB speech-to-text model, Bark, weeks ago.</li>
+          <li><strong>Physicl Raises $10M to Make the Digital World Real Enough for Robots.</strong> Founder Alex de Vigan&rsquo;s earlier 3D product-rendering business is being repurposed to build simulated environments for robot training. Customer SpAItial&rsquo;s founder says the appeal is generating training data on the fly, when a model discovers it needs more of a certain case.</li>
+          <li><strong>I Watched a Humanoid Robot Clean My Apartment.</strong> The robot was remotely piloted. The price is low ($30 for an hour at booking, now $60 for a weekly visit with two robots) because every counter wiped becomes training data. It climbed stairs &ldquo;as if it were drunk,&rdquo; the first visit ended when heat shut down the human pilot&rsquo;s equipment, and the second cleaned the kitchen and toilet but left taps dripping.</li>
+          <li><strong>Palo Alto Networks in Talks to Buy Clutch for $500M.</strong> About 50 times Clutch&rsquo;s near-$10 million in ARR, in cash plus milestones, for a company that secures AI agents&rsquo; access to company systems. TechCrunch lists the neighbors: Cyera bought Oasis Security for $1 billion and Cisco bought Astrix for roughly $400 million.</li>
+          <li><strong>Also today.</strong> Bloomberg headlines say TSMC is weighing making advanced AI memory chips, per The Information, and the Pentagon tapped a robotics startup in a push for cheap attack drones. Samsung is building a fifth fab on its Pyeongtaek memory campus. r/LocalLLaMA is buzzing over a &ldquo;stealth announced&rdquo; Qwen 4 (we could not open the thread, so that is a headline only). Bloomberg also asks in a video whether AI is degrading our music taste.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Put the Dumey piece next to the sell-off and you get the cleanest reading of the day. Slok&rsquo;s point is that AI&rsquo;s value so far sits with the sellers of capacity, not the buyers. Dumey&rsquo;s numbers show why the market might be nervous: cloud revenue growing 48% and 103% while the customers report job cuts, and AI spending rising from 1.7% to 3.3% of revenue in under a year. The <em>spend</em> is real and the <em>return</em> is still mostly a promise. One day of selling does not prove the return will not come, but it is what it looks like when investors ask for the receipt.</p>
+
+        <p>The robot stories show the same economics in miniature. Tau&rsquo;s cleaners are cheap because they are subsidized by the value of the data they generate, and they work because a human is quietly piloting them. Physicl is raising money to make simulated data good enough that robots need less of that human labor. In both cases the scarce input is not hardware or even model quality. It is training data, and someone is paying for it, either the founders or the customer who accepts a robot that overheats and knocks over the olive oil. That is a very different story from the one in which AI simply replaces work.</p>
+
+        <p>Then notice who is telling us what to do about it. Both Fortune opinion pieces come from executives whose firms sell the remedy: Dumey&rsquo;s company does enterprise AI integration, Desai&rsquo;s does AI assurance. Both disclose it, which is to their credit, and both make a reasonable argument. But Desai&rsquo;s own thesis is that an assessment is only as good as the assessor&rsquo;s independence, and the same test applies to the people grading the payoff. Inkling 2 Small&rsquo;s benchmarks are the lab&rsquo;s own. Underdog&rsquo;s claims are its own. The sell-off is partly the market discovering how much of the evidence in this field is self-reported.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and three constraints on AI are converging on the same week: capital, power and consent. Capital is what the sell-off and the ECB&rsquo;s reported look at data center lending are about. Power is what ended Microsoft&rsquo;s UK project, where the grid could not supply the site until the 2030s. Consent is Amsterdam, where a city that banned new data centers until 2030 still found one under construction because the plans predated the ban. Each of these is slower and more political than the training-run bottlenecks the industry spent the last three years solving.</p>
+          <p>The honest read is that this is a repricing, not a collapse. A single session&rsquo;s drop, even a record one, is not a verdict on whether AI works, and the capability news today (a 594-billion-parameter model that can run a four-hour research project, a 32MB voice model that runs in a browser) cuts the other way. What has changed is who gets a vote. Investors, utilities, city councils, and now Congress all want a say, and the companies that can show a measurable return and a willing neighbor will have a structural advantage over those that can only show a larger cluster.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Inkling 2 Small&rsquo;s open weights.</strong> Thinking Machines says full weights arrive under Apache 2.0 next week after external safety testing. Whether the benchmarks hold up when others can run the model will say a lot about how much weight to give lab-published numbers.</li>
+          <li><strong>Congressional hearings.</strong> The Download reports Democrats are lining up to call tech CEOs before Congress, and House Republicans are already seeking a closed-door briefing from Nvidia&rsquo;s Huang. Watch which companies are called first.</li>
+          <li><strong>Lending scrutiny.</strong> If the ECB does review banks&rsquo; data center lending, it would be the first formal check on how much debt is behind the buildout. The detail will be in the Bloomberg piece we could not read.</li>
+          <li><strong>Agent-security consolidation.</strong> If Palo Alto closes Clutch, that is another deal at 40 to 50 times revenue in a category where Cyera and Cisco have already bought rivals. Whether valuations hold if the market stays rattled is the open question.</li>
+        </ul>
+
+      </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

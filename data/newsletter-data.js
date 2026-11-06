@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-05",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["acronym", "scramble", "cryptogram", "crossword"]
+        lastUpdated: "2026-11-06",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: []
     },
     issues: [
+        {
+            date: "2026-11-06",
+            volume: 1,
+            issueNumber: 136,
+            title: "Protesters Break Into Microsoft Data Center Site in Amsterdam",
+            description: "Daily AI news roundup - November 6, 2026. Protesters break into a Microsoft data center site in Amsterdam, Thinking Machines' Inkling 2 Small, Palo Alto Networks' $500M Clutch talks, a humanoid robot cleaner, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-06.html",
+            storyCount: 20,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-11-05",
             volume: 1,
