@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WordPress Core Upgrade Bug: Attackers Are Probing, Federal Deadline Is Today | Fit to Patch No. 3, November 6, 2026</title>
+  <meta name="description" content="Attackers are probing the WordPress core upgrade bug as the federal deadline arrives, OpenSSH fixes a login bypass on Alpine Linux, and fake cPGuard updates and a trojanized Control Web Panel put backdoors on hosting servers.">
+  <meta property="og:title" content="Fit to Patch No. 3: WordPress Core Upgrade Bug: Attackers Are Probing, Federal Deadline Is Today">
+  <meta property="og:description" content="Attackers are probing the WordPress core upgrade bug as the federal deadline arrives, OpenSSH fixes a login bypass on Alpine Linux, and fake cPGuard updates and a trojanized Control Web Panel put backdoors on hosting servers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-06.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Friday, November 6, 2026</span>
+        <span>No. 3</span>
+        <span class="pressure critical">Patch pressure: Critical</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>A WordPress core bug that runs code during an upgrade is now being probed by attackers, and the federal patch deadline is today, so get on 7.1.4.</li>
+            <li>An OpenSSH flaw lets anyone log in to some Alpine Linux accounts with a very long password, and the fix is OpenSSH 10.6p2.</li>
+            <li>BuddyForms, WP Libre Form and two more WordPress plugins list critical bugs, and SuiteCRM and Apache OFBiz also have critical fixes.</li>
+            <li>Fake cPGuard updates and a trojanized Control Web Panel binary both put hidden backdoors on hosting servers, and GitHub will block pull_request_target workflows starting December 2.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-119977</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://www.wordfence.com/blog/2026/11/attackers-actively-probing-for-upgrade-window-rce-vulnerability-in-wordpress-core/">Attackers are probing WordPress sites for the core upgrade bug, and the federal deadline is today</a></h3>
+              <p>WordPress core versions 4.7 through 7.1.3 use staging folders during a full core upgrade that attackers can guess and reach from the web. During that short window, an unauthenticated visitor can run code on the server. WordPress shipped 7.1.4 and matching releases for older branches on October 28. CISA added the bug to its exploited list on November 3 and gave federal agencies until today to patch, and Wordfence reports that attackers are actively probing for it. The Wordfence page itself could not be read by our tools today, so its details here come from its published summary.</p>
+              <p class="do"><strong>Do</strong>Update to WordPress 7.1.4, or the matching security release for your branch, and check that every site on your server updated, not just the ones you manage by hand.</p>
+              <div class="sources">Sources: <a href="https://www.wordfence.com/blog/2026/11/attackers-actively-probing-for-upgrade-window-rce-vulnerability-in-wordpress-core/">Wordfence</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">NVD</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-123158</span><span class="tag>OpenSSH</span></div>
+              <h3><a href="https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/">OpenSSH lets anyone log in to some Alpine Linux accounts with one very long password</a></h3>
+              <p>On Linux systems that use the musl C library without PAM, such as Alpine Linux, OpenWrt, Buildroot and Yocto, an attacker can send a password longer than 256 characters and get into accounts that should only accept keys. The server also needs at least one other account with a normal password. Debian, Ubuntu, Fedora and anything using PAM are not affected. No attacks had been reported when the articles were written, but the steps are public and take one connection. The researcher says he found it with AI agents, and the OpenSSH maintainer says quick AI rediscovery is why this fix shipped a day after he heard of it.</p>
+              <p class="do"><strong>Do</strong>Upgrade to OpenSSH 10.6p2 (on Alpine, run <code>apk upgrade openssh</code>) and restart sshd, because the package upgrade alone does not replace the running process. If you cannot upgrade yet, set <code>PasswordAuthentication no</code> and restart sshd.</p>
+              <div class="sources">Sources: <a href="https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/">Alpine Linux advisory</a> · <a href="https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/">BleepingComputer</a> · <a href="https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/">SecurityWeek</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-107622</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107622">BuddyForms lets a logged-out visitor create content of the wrong type and gain more access</a></h3>
+              <p>All BuddyForms versions up to and including 2.10.5 trust a post type sent by the visitor on public submission forms. That lets someone who is not logged in create objects they should not be able to, which can lead to privilege escalation. NVD has not finished its analysis, so treat the score as provisional.</p>
+              <p class="do"><strong>Do</strong>Update BuddyForms to 2.10.6 or later, the current release on WordPress.org, and confirm the fix in the Wordfence entry for your version.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107622">NVD</a> · <a href="https://wordpress.org/plugins/buddyforms/">WordPress.org plugin page</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 10.0</span><span class="tag mono">CVE-2026-118423</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118423">WP Libre Form 1.5.0.1 accepts PHP file uploads from anyone</a></h3>
+              <p>The plugin does not check the type of files sent through its forms. An unauthenticated visitor can upload a PHP file to a folder reachable from the web and run it, which means full control of the site. NVD lists version 1.5.0.1 and does not name a fixed release.</p>
+              <p class="do"><strong>Do</strong>If you run this plugin, deactivate it and delete any unexpected PHP files in your uploads folder until the author publishes a fixed version.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118423">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-119516</span><span class="tag mono">CVE-2026-120844</span><span class="tag wp">Plugins</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119516">Radius Booking and miniOrange OAuth Single Sign On both list critical bugs</a></h3>
+              <p>Radius Booking through 1.0.20 can be tricked into rebuilding attacker-supplied data as objects. The miniOrange OAuth Single Sign On client through 7.1.3 can give a user the wrong privileges. NVD names no fixed version for either, so check each plugin's changelog before you rely on it.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119516">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120844">NVD</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.9</span><span class="tag mono">CVE-2026-71550</span><span class="tag mono">CVE-2026-100358</span><span class="tag>PHP app</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71550">SuiteCRM fixes two critical bugs in versions before 7.15.2 and 8.10.2</a></h3>
+              <p>One flaw lets a path-traversal value in the workflow controller pull in files it should not (9.9). The other lets an administrator write PHP into a language file that runs on later page loads (9.4). Update to 7.15.2 or 8.10.2.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71550">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100358">NVD</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag>Node.js</span><span class="tag>React</span><span class="tag>Next.js</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability">Nothing new for Node.js, React or Next.js today, and Node.js security releases are still due November 11</a></h3>
+              <p>The Node.js security page still lists a security release for Wednesday, November 11. Plan a window to update that day. If you have not yet applied the Next.js fixes from the November 4 briefing, do that first.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-83542</span><span class="tag mono">CVE-2026-82907</span><span class="tag mono">CVE-2026-68524</span><span class="tag>Apache OFBiz</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html">Apache OFBiz 24.09.08 fixes bugs that let an unauthenticated visitor run code</a></h3>
+              <p>Versions before 24.09.08 have a code injection bug (CVE-2026-83542) and a reusable-session bug (CVE-2026-82907), both scored 9.8. A third, CVE-2026-68524, also allows unauthenticated code execution and has no NVD score yet. The Hacker News counts 46 fixes in this release. None of these is reported as exploited. Upgrade to 24.09.08.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-83542">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82907">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68524">NVD</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CI</span><span class="tag>GitHub Actions</span></div>
+              <h3><a href="https://socket.dev/blog/github-to-block-pull-request-target">GitHub will block pull_request_target workflows in public repos starting December 2</a></h3>
+              <p>Unless a repository has an Actions policy that allows it, public repositories will stop running workflows triggered by pull_request_target, including safe ones. The trigger has been behind several package compromises, because it runs with the repository's secrets. GitHub is also running two test blocks, on November 9 and November 16 from 16:00 to 18:00 UTC, when affected workflows will fail.</p>
+              <p class="do"><strong>Do</strong>Search your public repos for <code>pull_request_target</code> now, and either move the workflow to a safer trigger or add an Actions event policy that allows that one file before December 2.</p>
+              <div class="sources">Sources: <a href="https://socket.dev/blog/github-to-block-pull-request-target">Socket</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Hosting</span><span class="tag>Control Web Panel</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/">A trojanized Control Web Panel server binary hides a backdoor that leaves no log entry</a></h3>
+              <p>XLab found that cwpsrv versions 1.15.10 and 1.24.0 were replaced with a copy that waits for a signed request in a special header and runs commands without logging. XLab counts more than 340,000 exposed CWP instances. Look for the <code>ngx_http_integrity_helper</code> socket and the <code>X-Ngx-Integrity</code> strings, and if you find them, replace the binary and rotate every panel credential.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/">BleepingComputer</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Hosting</span><span class="tag>cPGuard</span></div>
+              <h3><a href="https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/">Fake cPGuard updates gave attackers a root shell on about 2,950 hosting servers</a></h3>
+              <p>Attackers got into the vendor OpsShield and pushed cPGuard 5.88.12 through 5.88.19 for roughly 70 minutes on Monday. The update ran as root and left a hidden root shell. The figures are OpsShield's own. Move to 5.88.25 or later, check the vendor's indicators of compromise, and reset your billing portal password.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/">SecurityWeek</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag med">Browser</span></div>
+              <h3><a href="https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/">Chrome 157 fixes 213 bugs, seven rated critical, and none are reported as exploited</a></h3>
+              <p>The release also fixes 77 high-severity bugs. Google does not say any were used in attacks. Update to 157.0.8103.38 or later and restart the browser, then check your Chromium-based browsers and Electron apps for their own updates.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/">SecurityWeek</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">Coding agents</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html">A browser extension could drive Claude Desktop through Dispatch and run code on your computer</a></h3>
+              <p>Forever Security showed that an extension able to run scripts on claude.ai could send Claude Desktop instructions through the Dispatch feature, click every approval button, and get it to install an npm package. The researchers say the flaw can still be exploited and report no real attacks. Remove extensions you do not need, turn Dispatch off if you do not use it, and avoid one personal Claude account across work and home machines.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html">The Hacker News</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag>Worth reading</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html">The UK NCSC says AI tools have almost certainly increased how many zero-days get found</a></h3>
+              <p>The agency says defenders can patch faster with the same tools, but only if the tools are set up well, and that internal patching and testing have to speed up to match. Today's OpenSSH fix is an example of that shorter gap.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Confirm every WordPress site you run is on 7.1.4 or its branch security release, and look in your logs for odd requests during past upgrades.</li>
+            <li>Upgrade Alpine and other musl-based hosts to OpenSSH 10.6p2, restart sshd, or turn off password logins.</li>
+            <li>List the plugins on your sites and check BuddyForms, WP Libre Form, Radius Booking and miniOrange OAuth SSO against the versions above.</li>
+            <li>Search your public repositories for <code>pull_request_target</code> before the November 9 test block.</li>
+            <li>If you run Control Web Panel or cPGuard, check for the indicators listed in the items above.</li>
+            <li>Update Chrome to 157 and put the November 11 Node.js release on your calendar.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">CVE-2026-119977</a> <span class="kev-yes">KEV 11-03</span><span class="meta">WordPress core 4.7 through 7.1.3 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">CVE-2026-123158</a><span class="meta">OpenSSH before 10.6p2 on musl Linux without PAM · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118423">CVE-2026-118423</a><span class="meta">WP Libre Form 1.5.0.1 · 10.0 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71550">CVE-2026-71550</a><span class="meta">SuiteCRM before 7.15.2 and 8.10.2 · 9.9 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107622">CVE-2026-107622</a><span class="meta">BuddyForms through 2.10.5 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119516">CVE-2026-119516</a><span class="meta">Radius Booking through 1.0.20 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120844">CVE-2026-120844</a><span class="meta">miniOrange OAuth Single Sign On through 7.1.3 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-83542">CVE-2026-83542</a><span class="meta">Apache OFBiz before 24.09.08 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82907">CVE-2026-82907</a><span class="meta">Apache OFBiz before 24.09.08 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-100358">CVE-2026-100358</a><span class="meta">SuiteCRM before 7.15.2 and 8.10.2 · 9.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68524">CVE-2026-68524</a><span class="meta">Apache OFBiz before 24.09.08 · not yet scored by NVD</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 6, 2026 10:05 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 31 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>

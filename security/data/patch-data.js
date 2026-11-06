@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-05"
+        lastUpdated: "2026-11-06"
     },
     issues: [
+        {
+            date: "2026-11-06",
+            issueNumber: 3,
+            title: "WordPress Core Upgrade Bug: Attackers Are Probing, Federal Deadline Is Today",
+            summary: "Attackers are probing the WordPress core upgrade bug as the federal deadline arrives, OpenSSH fixes a login bypass on Alpine Linux, and fake cPGuard updates and a trojanized Control Web Panel put backdoors on hosting servers.",
+            url: "https://fittoprompt.com/security/issues/2026-11-06.html",
+            pressure: "critical",
+            itemCount: 14
+        },
         {
             date: "2026-11-05",
             issueNumber: 2,
