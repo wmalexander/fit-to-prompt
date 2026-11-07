@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-06",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: []
+        lastUpdated: "2026-11-07",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["cryptogram"]
     },
     issues: [
+        {
+            date: "2026-11-07",
+            volume: 1,
+            issueNumber: 137,
+            title: "From the Front Row to the Hot Seat: What the Midterms Mean for Big Tech",
+            description: "Daily AI news roundup - November 7, 2026. Big Tech tries to win over Democrats after the midterms, Crusoe sells a troubled Wyoming data center to Google, Anthropic's IPO under the sell-off, Meta pauses its AI-training terms, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-07.html",
+            storyCount: 20,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-11-06",
             volume: 1,
