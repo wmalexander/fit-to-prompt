@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-06"
+        lastUpdated: "2026-11-07"
     },
     issues: [
+        {
+            date: "2026-11-07",
+            issueNumber: 4,
+            title: "Installing the WordPress security fix can still expose a site while it updates",
+            summary: "Installing the WordPress core fix can still expose a site for a moment, attackers are trying the OpenSSH *sshole bug on Alpine, and Claude Code's saved approvals have leaked secrets into public repositories.",
+            url: "https://fittoprompt.com/security/issues/2026-11-07.html",
+            pressure: "critical",
+            itemCount: 12
+        },
         {
             date: "2026-11-06",
             issueNumber: 3,

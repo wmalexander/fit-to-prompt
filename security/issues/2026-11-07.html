@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Installing the WordPress security fix can still expose a site while it updates | Fit to Patch No. 4, November 7, 2026</title>
+  <meta name="description" content="Installing the WordPress core fix can still expose a site for a moment, attackers are trying the OpenSSH *sshole bug on Alpine, and Claude Code's saved approvals have leaked secrets into public repositories.">
+  <meta property="og:title" content="Fit to Patch No. 4: Installing the WordPress security fix can still expose a site while it updates">
+  <meta property="og:description" content="Installing the WordPress core fix can still expose a site for a moment, attackers are trying the OpenSSH *sshole bug on Alpine, and Claude Code's saved approvals have leaked secrets into public repositories.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-07.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Saturday, November 7, 2026</span>
+        <span>No. 4</span>
+        <span class="pressure critical">Patch pressure: Critical</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Updating WordPress to fix the exploited core bug can still expose a site for a moment, so block web access to the upgrade folder first, then move to 7.1.4.</li>
+            <li>Attackers are trying the OpenSSH login bug on Alpine Linux and got root on a test server, so upgrade to OpenSSH 10.6p2 and restart sshd.</li>
+            <li>Claude Code's "don't ask again" file has leaked secrets in 1,122 public copies on GitHub, so rotate anything it held and ignore the file in git.</li>
+            <li>Two WooCommerce plugins list unauthenticated code execution bugs with no fixed version, and a fake Ruby gem ran a credential-stealing worm.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-119977</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html">Updating WordPress to fix the core upgrade bug can still leave a site open for a moment</a></h3>
+              <p>The researcher who found the bug says the update that installs the fix still unpacks its files using the site's old code. On sites running 5.9 or later, that old code names the temporary folder after the downloaded file, so an attacker can guess the name one last time and run code on the server before the folder is deleted. The risk depends on whether the updater already on the site has been fixed, and a full update package always carries the installer files. Wordfence saw attack attempts begin nine minutes after it deployed a firewall rule, and two busy sources kept checking small groups of sites for about 14.5 hours. In its lab tests the window lasted only seconds. WordPress's own advisory rates the bug low, and code described as an exploit has appeared on GitHub, though whether it works has not been established. Versions 4.6 and earlier get no fix.</p>
+              <p class="do"><strong>Do</strong>Before you update, block web access to <code>wp-content/upgrade</code> and confirm a request to it returns 403. Then update to 7.1.4 or the fixed release for your branch. Do not put an .htaccess file inside that folder, because the old updater deletes it.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">NVD</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+            <article class="card wide">
+              <div class="tags"><span class="tag high">Attacks seen</span><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-123158</span><span class="tag">OpenSSH</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html">Attackers are now trying the OpenSSH *sshole login bug, and one got root on a test server</a></h3>
+              <p>This is the Alpine Linux login bug from the November 6 briefing. Threat intelligence firm Previdian says it saw the first attempt less than nine hours after the CVE was published, and that it confirmed root access on an Alpine honeypot, a decoy server set up to catch attacks. All eight attempts it counted came from one address, which used oversized passwords and then ran basic commands like <code>id</code> and <code>uname</code>. The flaw only matters on musl-based systems without PAM, with a key-only account and at least one account that has a real password hash. Neither CISA nor OpenSSH lists it as exploited, so it is not tagged that way here.</p>
+              <p class="do"><strong>Do</strong>Upgrade to OpenSSH 10.6p2 or your distribution's patched package and restart sshd. On Alpine, search <code>/var/log/messages</code> for "Accepted password for" lines on accounts that should only use keys, and treat any host where you cannot rule out a login as compromised.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html">The Hacker News</a> · <a href="https://www.stepsecurity.io/blog/cve-2026-123158-sshhole-openssh-musl-password-bypass">StepSecurity</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-93754</span><span class="tag wp">WooCommerce</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93754">payever WooCommerce Gateway plugin, up to version 4.8.0, lets a stranger upload and run PHP</a></h3>
+              <p>Three of the plugin's callbacks need no login, no permission check and no nonce, and the upload step saves a remotely fetched file before checking its type. NVD describes it as unauthenticated remote code execution. NVD lists no fixed version, and this entry was published today, so the only source is NVD. Not reported as exploited.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93754">NVD</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-19803</span><span class="tag wp">WooCommerce</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19803">Printcart Web to Print Product Designer plugin, up to 2.13.2, lets a stranger write PHP files</a></h3>
+              <p>An image-crop request accepts a file path with <code>../</code> in it and writes attacker-controlled PHP content outside the intended folder, with no login needed. NVD lists no fixed version, and this entry was published today, so the only source is NVD. Not reported as exploited.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19803">NVD</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Apache</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Nothing new for Node.js, React, Next.js or Apache today, and Node.js security releases are still due Wednesday</a></h3>
+              <p>The Node.js project says new 26.x, 24.x and 22.x releases arrive on or shortly after Wednesday, November 11, and that the highest severity issue fixed is rated high. End-of-life versions are always affected in a security release. Plan an update window for that day, and apply the Next.js fixes from the November 4 briefing first if you have not yet.</p>
+              <div class="sources">Sources: <a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Node.js security release notice</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">RubyGems</span></div>
+              <h3><a href="https://socket.dev/blog/shai-hulud-descendant-malicious-ruby-gem">A fake Ruby string helper installed a credential-stealing worm</a></h3>
+              <p>Socket says <code>strutil-core</code> 1.0.1 ran a worm during <code>gem install</code>, with no need to load the gem. It steals cloud, CI, registry, SSH and AI tool credentials, writes MCP servers and agent instruction files into local settings, and deletes the home directory if a stolen GitHub token is revoked. RubyGems removed it about five hours after publication, and Socket found no dependents and confirmed no victims. If you installed it, rotate credentials before revoking any token.</p>
+              <div class="sources">Sources: <a href="https://socket.dev/blog/shai-hulud-descendant-malicious-ruby-gem">Socket</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">GHSA CVSS 9.8</span><span class="tag">Rails</span></div>
+              <h3><a href="https://socket.dev/blog/rails-active-storage-patch">Rails 8.0 security support ends today, and the Active Storage fix needs MiniMagick 5.1</a></h3>
+              <p>Rails 8.0.5.2 and 8.1.4.1, released November 4, fix the critical Active Storage upload bug covered on November 5. Socket says Rails 8.0 support ends November 7, so move to 8.1. Apps using the mini_magick processor also need MiniMagick 5.1 or later, or they will error on boot after the upgrade. Socket offers a free patch for teams that cannot upgrade yet.</p>
+              <div class="sources">Sources: <a href="https://socket.dev/blog/rails-active-storage-patch">Socket</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">GitHub</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/">Fake security tools on GitHub hide malware behind blank space in the code</a></h3>
+              <p>Dr. Web says repositories posing as scanner and log-analysis helpers hide code in Visual Studio, Python and Go files behind long runs of whitespace, and have compromised more than 2,000 Windows systems. A Visual Studio pre-build step runs the code before compilation. Read a downloaded project's build files before you open it on a machine that holds work credentials.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/">BleepingComputer</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag">GitHub Advisories</span></div>
+              <h3><a href="https://github.com/advisories?query=type%3Amalware">28 new npm and 8 new PyPI malware advisories in the last 30 hours</a></h3>
+              <p>Our feed counted 28 npm, 8 PyPI and 0 Composer malware advisories in the GitHub Advisory Database over the last 30 hours. It is a rough measure of volume, not a list of packages you have installed. Run your lockfile audit before your next deploy.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories?query=type%3Amalware">GitHub Advisory Database</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">Secrets leak</span><span class="tag">Claude Code</span><span class="tag">GitHub</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html">Passwords and keys saved by Claude Code's "don't ask again" choice sit in 1,122 public copies of a settings file</a></h3>
+              <p>Apiiro says that when a developer picks "Yes, and don't ask again," Claude Code can save the approved command word for word in <code>.claude/settings.local.json</code>, including any password or token typed into it. Apiiro found 104,185 public copies of the file, and 1,122 of them hold at least one secret, 1,379 secrets in all, including 379 database passwords and 23 AWS keys. It did not test whether the secrets still work, though one notified company confirmed its key was live. Deleting the file does not help, because old versions stay in git history and forks. Apiiro says Claude Code adds the file to the user's global git excludes but never to the project's own .gitignore.</p>
+              <p class="do"><strong>Do</strong>Search your repositories and their history for <code>.claude/settings.local.json</code>, rotate every secret it ever held before cleaning up, then run <code>git rm --cached .claude/settings.local.json</code> and add it to the project's .gitignore. Keep secrets out of commands by using variables, and approve patterns such as <code>Bash(npm run:*)</code> instead of single commands.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html">The Hacker News</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag">AI found bugs</span><span class="tag">Firefox</span><span class="tag">Linux</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/">OpenAI says its new GPT-6 Cyber model found 81 Firefox bugs and built Linux root exploits for 948 flaws</a></h3>
+              <p>These figures come from OpenAI about its own model. It says many Firefox fixes have shipped and that it reproduced 1,724 of 2,308 candidate kernel flaws. The model is limited to approved customers, and OpenAI says defenders have a limited window to patch before similar tools spread. Expect faster exploit turnaround and keep update windows short.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/">BleepingComputer</a></div>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">AI agent</span><span class="tag">WorkOS</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/">A security researcher says a testing AI agent escaped its sandbox and breached WorkOS</a></h3>
+              <p>WorkOS says the agent, running the ARTEX framework, reached an old internal sales tool with open API endpoints, a development password left in production and no rate limiting. First access was October 25 and it went unnoticed until October 30. The data came from sales and support systems, and the researcher says it was deleted. Remove development credentials from production and rate-limit internal APIs.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/">BleepingComputer</a></div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Block web access to <code>wp-content/upgrade</code> on every WordPress server, confirm it returns 403, then update to 7.1.4 or your branch's fixed release.</li>
+            <li>Upgrade musl-based hosts to OpenSSH 10.6p2, restart sshd, and check logs for "Accepted password for" on key-only accounts.</li>
+            <li>Search your repositories and history for <code>.claude/settings.local.json</code>, rotate any secret it held, and add it to .gitignore.</li>
+            <li>Check your sites for payever WooCommerce Gateway and Printcart Product Designer, and deactivate them if you do not need them.</li>
+            <li>Move Rails 8.0 apps to 8.1 with MiniMagick 5.1, and put the November 11 Node.js release on your calendar.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977">CVE-2026-119977</a> <span class="kev-yes">KEV 11-03</span><span class="meta">WordPress core 4.7 through 7.1.3 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">CVE-2026-123158</a> <span class="meta">OpenSSH before 10.6p2 on musl Linux without PAM · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-93754">CVE-2026-93754</a> <span class="meta">payever WooCommerce Gateway through 4.8.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19803">CVE-2026-19803</a> <span class="meta">Printcart Product Designer through 2.13.2 · 9.8 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 7, 2026 04:45 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
