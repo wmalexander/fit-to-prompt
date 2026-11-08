@@ -7,11 +7,20 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-07",
+        lastUpdated: "2026-11-08",
         lastPuzzleType: "cryptogram",
         puzzleHistory: ["cryptogram"]
     },
     issues: [
+        {
+            date: "2026-11-08",
+            volume: 1,
+            issueNumber: 138,
+            title: "OpenAI's Astra Just Opened The Black Box Of AI",
+            description: "Daily AI news roundup - November 8, 2026. OpenAI's Astra opens the black box of AI, David Shapiro on whether AI deserves rights, Matthew Berman on 12 months to the singularity, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-08.html",
+            storyCount: 4
+        },
         {
             date: "2026-11-07",
             volume: 1,
