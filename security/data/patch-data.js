@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-07"
+        lastUpdated: "2026-11-08"
     },
     issues: [
+        {
+            date: "2026-11-08",
+            issueNumber: 5,
+            title: "SonicWall is patching a VPN bug that lets attackers skip two-step login",
+            summary: "SonicWall's firewall VPN has an exploited bug that can skip two-step login, a LatePoint booking plugin bug can let strangers take over accounts, and Node.js security releases arrive Wednesday.",
+            url: "https://fittoprompt.com/security/issues/2026-11-08.html",
+            pressure: "elevated",
+            itemCount: 8
+        },
         {
             date: "2026-11-07",
             issueNumber: 4,

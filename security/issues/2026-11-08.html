@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SonicWall is patching a VPN bug that lets attackers skip two-step login | Fit to Patch No. 5, November 8, 2026</title>
+  <meta name="description" content="SonicWall's firewall VPN has an exploited bug that can skip two-step login, a LatePoint booking plugin bug can let strangers take over accounts, and Node.js security releases arrive Wednesday.">
+  <meta property="og:title" content="Fit to Patch No. 5: SonicWall is patching a VPN bug that lets attackers skip two-step login">
+  <meta property="og:description" content="SonicWall's firewall VPN has an exploited bug that can skip two-step login, a LatePoint booking plugin bug can let strangers take over accounts, and Node.js security releases arrive Wednesday.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-08.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Sunday, November 8, 2026</span>
+        <span>No. 5</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+                        <li>SonicWall says attackers are already using a bug that lets someone with a login for one sign-in method skip its SAML two-step check, so update SonicOS to 7.3.4-7013 or 8.2.3-8015.</li>
+            <li>The LatePoint booking plugin, up to 5.7.6, has a login bypass that lets strangers take over accounts, and the current release is 5.7.8.</li>
+            <li>Two WooCommerce plugins list critical bugs (a password reset anyone can finish and a way to give yourself any user role) with no fixed version yet.</li>
+            <li>Node.js security releases for 26.x, 24.x and 22.x are still due on or shortly after Wednesday, November 11, and the worst bug fixed is rated high.</li>
+          
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 7.5</span><span class="tag mono">CVE-2026-19868</span><span class="tag">SonicWall</span></div>
+              <h3><a href="https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/">SonicWall firewall VPN bug lets attackers skip two-step login, and SonicWall says it may be exploited</a></h3>
+              <p>The bug is in the SSL VPN part of SonicOS, the system that runs SonicWall firewalls. Someone who holds a valid login for a different sign-in method can get past SAML login, including a two-step (MFA) check that SAML enforces. SonicWall says the VPN is only exposed if SAML login is turned on. Affected are Gen7 TZ, NSa, NSsp and NSv firewalls on SonicOS 7.3.3-7015 or older, and Gen8 TZ, NSa and NSv firewalls on 8.2.2-8015 or older. SonicWall says it investigated a report of possible exploitation, and CISA added the bug to its exploited list on November 6 with a federal deadline of November 20. Neither has shared details of the attacks. SonicWall rates the bug 7.1, while NVD currently lists 7.5.</p>
+              <p class="do"><strong>Do</strong>Upgrade to SonicOS 7.3.4-7013 or 8.2.3-8015, because SonicWall lists no workaround. If SAML login is on and you cannot patch today, review recent VPN sign-ins for accounts that used a different method than SAML.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/">SecurityWeek</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868">NVD</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.1</span><span class="tag mono">CVE-2026-118066</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118066">LatePoint booking plugin, up to 5.7.6, lets a stranger take over accounts</a></h3>
+              <p>NVD says the plugin builds part of a database query from request values without binding them, so an unauthenticated visitor can abuse the password reset step to take over an account. The plugin's WordPress.org page lists 5.7.8 as the current release, last updated November 3, and about 1.8 million downloads overall. NVD's analysis is still deferred, and it is not reported as exploited.</p>
+              <p class="do"><strong>Do</strong>Update LatePoint to 5.7.8 or later, and review recently reset passwords on booking accounts.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/latepoint/">WordPress.org plugin page</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118066">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-104014</span><span class="tag wp">WooCommerce</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104014">Email OTP Verification for WooCommerce, up to 2.1.0, lets anyone finish a password reset</a></h3>
+              <p>The reset step only checks that an email is marked "verified" in the database, with no time limit or per-reset token, so an abandoned reset can be finished by someone else. NVD lists no fixed version, and the only source is NVD. Not reported as exploited. Deactivate it if you can.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-119075</span><span class="tag wp">WooCommerce</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119075">Registration Form for WooCommerce, up to 1.1.4, lets a buyer pick their own user role</a></h3>
+              <p>The checkout path accepts a role value from the request without checking it against the allowed roles, so a new customer could register as an administrator. NVD lists no fixed version, and the only source is NVD. Not reported as exploited. Deactivate it if you do not need the role field.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.0</span><span class="tag mono">CVE-2026-121491</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121491">Fiber Admin before 4.0.1 can run attacker code if its custom database error page is on</a></h3>
+              <p>A request header is written into a PHP file without cleaning, and an attacker has to win a timing race against an administrator saving settings. The plugin's WordPress.org page lists 4.0.1 as current. It has a small install base, so check only if you use it. Not reported as exploited.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Apache</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Nothing new today, and Node.js security releases are still due Wednesday</a></h3>
+              <p>The Node.js project says new 26.x, 24.x and 22.x releases arrive on or shortly after Wednesday, November 11, and that the highest severity issue fixed is rated high. End-of-life versions are always affected. Plan an update window for that day, and apply the Next.js fixes from the November 4 briefing first if you have not yet.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.1</span><span class="tag mono">CVE-2026-120984</span><span class="tag">Keycloak</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120984">Keycloak lets a user with client management rights run JavaScript on the server</a></h3>
+              <p>If a client is created or imported with authorization services on, a leftover session value lets an attacker with client management permission upload a malicious policy that runs when an authorization request comes in. NVD lists no fixed version and its analysis is pending, so the only source is NVD. Not reported as exploited. Limit who holds client management rights until a fixed release appears.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.3</span><span class="tag mono">CVE-2026-123614</span><span class="tag">imgproxy</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123614">imgproxy 4.0.0 to 4.0.15 can be crashed or possibly taken over with a crafted ICO image</a></h3>
+              <p>A size value in the ICO image loader wraps around and corrupts memory, which can crash the process or run code. NVD says versions before 4.0.16 are affected, and the only source is NVD. Upgrade to 4.0.16, or stop accepting ICO files if you cannot. Not reported as exploited.</p>
+            </div>
+          </div>
+        </section>
+
+        
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+                        <li>Check your SonicWall firewalls for SonicOS 7.3.3-7015 or older (or 8.2.2-8015 or older), and upgrade to 7.3.4-7013 or 8.2.3-8015 if SAML login is on.</li>
+            <li>Update the LatePoint plugin to 5.7.8 or later and review recent password resets on booking accounts.</li>
+            <li>Check your sites for Email OTP Verification for WooCommerce and Registration Form for WooCommerce, and deactivate them if you can.</li>
+            <li>Upgrade imgproxy to 4.0.16 and review who has client management rights in Keycloak.</li>
+            <li>Put the November 11 Node.js security release on your calendar.</li>
+          
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+                        <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868">CVE-2026-19868</a> <span class="kev-yes">KEV 11-06</span><span class="meta">SonicOS SSLVPN, 7.3.3-7015 and older (Gen7), 8.2.2-8015 and older (Gen8) · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104014">CVE-2026-104014</a> <span class="meta">Email OTP Verification for WooCommerce through 2.1.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119075">CVE-2026-119075</a> <span class="meta">Registration Form for WooCommerce through 1.1.4 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123614">CVE-2026-123614</a> <span class="meta">imgproxy 4.0.0 before 4.0.16 · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118066">CVE-2026-118066</a> <span class="meta">LatePoint through 5.7.6 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120984">CVE-2026-120984</a> <span class="meta">Keycloak client management, no fixed version listed · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121491">CVE-2026-121491</a> <span class="meta">Fiber Admin before 4.0.1 · 9.0 v3.1</span></li>
+          
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 8, 2026 04:32 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 6 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
