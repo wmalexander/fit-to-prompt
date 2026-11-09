@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 9, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 9, 2026. Nate B Jones asks whether the AI boom is over, David Shapiro on why AI will not pay off until work is redesigned, Gary Marcus on the Huang affair, Apple's push to make Siri more agentic, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 139">
+  <meta property="og:description" content="Daily AI news roundup - November 9, 2026. Nate B Jones asks whether the AI boom is over, David Shapiro on why AI will not pay off until work is redesigned, Gary Marcus on the Huang affair, Apple's push to make Siri more agentic, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Monday, November 9, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 139</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">Video &middot; AI Infrastructure</div>
+<a href="https://fittoprompt.com/study-guides/is-the-ai-boom-over-lets-talk-about-it-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/illf65HD_t4/maxresdefault.jpg" alt="Thumbnail for Nate B Jones's video Is the AI Boom Over?" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.style.display='none'">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:56px;height:56px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h2 class="headline-lead mb-3">Is the AI Boom Over? Let&rsquo;s Talk About It.</h2>
+</a>
+<p class="byline mb-3">Nate B Jones &middot; YouTube &middot; Nov 8</p>
+<div class="newspaper-body">
+<p>Nate B Jones argues that the AI data center buildout &ldquo;had a terrible night&rdquo; on election night, Nov. 3, when communities voted to block or restrict new facilities. He sets two numbers side by side: a May Edison Research survey found 65% of U.S. adults had used an AI chatbot in the previous week, up from 52% in February, while an October ABC News, Washington Post and Ipsos poll found 72% of Americans opposed a new data center in their community. His reading is that demand is not falling, so blocked projects change where and by whom compute gets built.</p>
+<p>The pain lands unevenly. Jones says leveraged &ldquo;neoclouds&rdquo; that planned fast Texas expansion could be squeezed by longer approvals, while existing data centers gain from fewer competitors, so the backlash &ldquo;may end up, ironically, strengthening big tech.&rdquo; He also floats a possible upside, citing Derek Thompson: slower building gives demand time to catch up and could lower the odds of a supply glut. The full WFU study guide opens in a window.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Video &middot; Enterprise AI</div>
+<a href="https://fittoprompt.com/study-guides/ai-wont-pay-off-until-you-redesign-the-work-study.html" class="story-link" data-study-guide style="display:block;position:relative;">
+<img src="https://img.youtube.com/vi/5qb6JrO-Z1M/maxresdefault.jpg" alt="Thumbnail for David Shapiro's video AI Won't Pay Off Until You Redesign the Work" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:44px;height:44px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-style:solid;border-width:8px 0 8px 14px;border-color:transparent transparent transparent #fff;margin-left:3px;"></div></div>
+<h3 class="headline-feature mb-2">AI Won&rsquo;t Pay Off Until You Redesign the Work</h3>
+</a>
+<p class="byline mb-2">David Shapiro &middot; YouTube &middot; Nov 8</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shapiro says three companies, with about five, 40 and 700 employees, described the same problem in a single day: everyone is more productive, yet the company is not delivering more. He ties it to Solow&rsquo;s paradox and the productivity J curve, and argues for redesigning workflows around the real bottleneck. His layoff figures come from his own client experience, not a cited study.</p>
+<div class="kicker mt-5">AI &middot; Chips &middot; Politics</div>
+<a href="https://garymarcus.substack.com/p/the-huang-affair-what-did-they-know" class="story-link">
+<h3 class="headline-standard mb-2">The Huang Affair: What Did They Know and When Did They Know It?</h3>
+</a>
+<p class="byline mb-2">Gary Marcus &middot; Substack &middot; Nov 9</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Marcus writes that Nvidia CEO Jensen Huang admitted in a letter to employees that he had an affair with Alice Huang, a Megaspeed executive Marcus says is believed to be a Chinese spy. This is an opinion newsletter that quotes social media posts, and its account was not independently confirmed here. Marcus expects Congress to ask who knew what, and notes Nvidia has no obvious succession plan.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-09-cartoon.png" alt="A weary code reviewer sits at a cluttered desk while a cheerful robot holds a pull request description printed on a paper scroll that unrolls across the floor and out the door, as the reviewer's monitor shows only a tiny collapsed details arrow" class="w-full object-contain mb-2" style="max-height:380px;" loading="lazy">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;It&rsquo;s accurate, it&rsquo;s comprehensive, and I&rsquo;m not reading any of it.&rdquo;</p>
+<p class="byline mt-1">A code reviewer, to the robot</p>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire &middot; Reddit</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/MachineLearning/comments/1xrdn7p/loraconditioned_model_skips_the_first_line_of_its/">LoRA-Conditioned Model Skips the First Line of Its Output When the Caption Is Short. Any Idea Why?</a>
+<div class="wire-source">Reddit r/MachineLearning &middot; Nov 9</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/MachineLearning/comments/1xrj2ld/have_mlsys_2027_reviewers_received_their_paper/">Have MLSys 2027 Reviewers Received Their Paper Assignments Yet?</a>
+<div class="wire-source">Reddit r/MachineLearning &middot; Nov 9</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/artificial/comments/1xrhmpk/what_are_you_actually_using_ai_agents_for_in_your/">What Are You Actually Using AI Agents for in Your Day-to-Day Life?</a>
+<div class="wire-source">Reddit r/artificial &middot; Nov 9</div>
+</div>
+<div class="wire-item">
+<a href="https://www.reddit.com/r/artificial/comments/1xrie2x/runtimewire_discovers_midjourney_patent_for_an/">RuntimeWire Discovers Midjourney Patent for an Ultrasound Collar That Reads Speech From Your Neck</a>
+<div class="wire-source">Reddit r/artificial &middot; Nov 9</div>
+</div>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Acronym Quiz</div>
+<div class="aq26-wrap">
+<style>
+.aq26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.aq26-q{margin-bottom:0.85rem}
+.aq26-term{font-size:0.8rem;font-weight:700;letter-spacing:0.08em;margin-bottom:0.25rem}
+.aq26-opt{display:block;font-size:0.75rem;line-height:1.35;padding:0.15rem 0;cursor:pointer;color:#374151}
+.aq26-opt input{margin-right:0.4rem}
+.aq26-opt.aq26-right{color:#059669;font-weight:600}
+.aq26-opt.aq26-wrong{color:#dc2626;text-decoration:line-through}
+.aq26-btn{background:#1a1a1a;color:#f8f8f8;padding:0.4rem 1.1rem;font-family:'Inter',system-ui,sans-serif;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;border:none;cursor:pointer}
+.aq26-btn:hover{background:#8B0000}
+.aq26-msg{font-size:0.75rem;color:#374151;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<div id="aq26-body"></div>
+<button type="button" class="aq26-btn" id="aq26-submit">Submit</button>
+<div class="aq26-msg" id="aq26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var qs=[
+{t:"LLM",o:["Large Language Model","Linear Learning Machine","Layered Logic Module"],a:0},
+{t:"RAG",o:["Rapid Attention Gating","Retrieval-Augmented Generation","Recursive Agent Graph"],a:1},
+{t:"MoE",o:["Mixture of Experts","Memory of Embeddings","Model on Edge"],a:0},
+{t:"RLHF",o:["Recurrent Learning with Hidden Features","Random Layer Hash Function","Reinforcement Learning from Human Feedback"],a:2},
+{t:"MCP",o:["Machine Control Panel","Model Context Protocol","Multi-Core Processor"],a:1}
+];
+var body=document.getElementById("aq26-body"),msg=document.getElementById("aq26-msg"),btn=document.getElementById("aq26-submit"),done=false;
+qs.forEach(function(q,i){
+  var d=document.createElement("div");d.className="aq26-q";
+  var h=document.createElement("div");h.className="aq26-term";h.textContent=(i+1)+". "+q.t;d.appendChild(h);
+  q.o.forEach(function(o,j){
+    var l=document.createElement("label");l.className="aq26-opt";
+    var r=document.createElement("input");r.type="radio";r.name="aq26-"+i;r.value=j;
+    l.appendChild(r);l.appendChild(document.createTextNode(o));d.appendChild(l);
+  });
+  body.appendChild(d);
+});
+btn.addEventListener("click",function(){
+  if(done){return;}
+  var score=0,answered=0;
+  qs.forEach(function(q,i){
+    var labels=body.querySelectorAll('input[name="aq26-'+i+'"]');
+    labels.forEach(function(inp,j){
+      if(inp.checked){answered++;if(j===q.a){score++;}else{inp.parentNode.classList.add("aq26-wrong");}}
+    });
+  });
+  if(answered<qs.length){msg.textContent="Answer all "+qs.length+" first ("+answered+" answered).";body.querySelectorAll(".aq26-wrong").forEach(function(e){e.classList.remove("aq26-wrong");});return;}
+  qs.forEach(function(q,i){body.querySelectorAll('input[name="aq26-'+i+'"]')[q.a].parentNode.classList.add("aq26-right");});
+  done=true;btn.disabled=true;
+  msg.textContent="You scored "+score+" of "+qs.length+(score===qs.length?". Perfect.":".");
+});
+})();
+</script>
+</div>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Apple</div>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic" class="story-link">
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Siri-AI-Being-invoked-3.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.727837220746%2C100%2C78.544325558509&amp;w=1200" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Apple Is Racing to Make Siri More Agentic</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 8</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Citing Bloomberg&rsquo;s Mark Gurman, The Verge says CEO John Ternus is pressing AI chief Craig Federighi to speed up Siri and deliver an agent that can compete with OpenAI&rsquo;s Dots or Meta&rsquo;s Muse. Finer control of Apple&rsquo;s own apps is expected in iOS 27.3, with third-party apps such as Grubhub or OpenTable likely in the spring. Gurman says Apple wants Siri to pursue ongoing goals, not just one-off requests.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Developer Tools</div>
+<a href="https://simonwillison.net/2026/Nov/9/details-summary/" class="story-link">
+<img src="https://static.simonwillison.net/static/2026/details-summary-card.webp" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Hide Your Slop PR Descriptions Behind &lt;details&gt;&lt;summary&gt;</h3>
+</a>
+<p class="byline mb-2">Simon Willison &middot; Nov 9</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Most of Willison&rsquo;s project changes now arrive as pull requests opened by Claude Code or Codex, and he says the agents write descriptions that are accurate but too long to read. His fix is a short, human-approved opener at the top, with the full agent write-up folded inside a collapsed HTML details element labeled with the model name. GitHub Markdown supports it.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Consumer</div>
+<a href="https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/" class="story-link">
+<h3 class="headline-standard mb-2">I Used NYT Cooking&rsquo;s New AI-Powered Recipe Modifier, and It&rsquo;s Actually Pretty Good</h3>
+</a>
+<p class="byline mb-2">WIRED &middot; Nov 8</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">An iOS-only beta lets subscribers ask the app to modify a recipe, with every change shown in red-orange text. Commenters revolted after the Oct. 23 announcement, and comments were turned off after four days and 172 mostly angry replies. The reviewer expected to side with them, then found it worked well, with one miss: it left shredded chicken simmering for about 30 extra minutes.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Consumer</div>
+<a href="https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review" class="story-link">
+<h3 class="headline-standard mb-2">NYT Cooking&rsquo;s AI Assistant Saved My Weeknight Chicken, but Almost Ruined My Cake</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 7</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The reviewer tested ingredient swaps, scaling and a missing Bundt pan. The assistant rewrote a chicken and rice dish around green beans and Thai basil, leaves the original recipe untouched, and was trained partly on reader comments. It also almost had the reviewer use half the butter a cake needed. Alexa Plus gave similar substitution advice but could not show the modified recipe.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Developer Tools</div>
+<a href="https://simonwillison.net/2026/Nov/9/hn-50421091/" class="story-link">
+<h3 class="headline-standard mb-2">Comment: The Web Is More Than Enough, by Paul Ford</h3>
+</a>
+<p class="byline mb-2">Simon Willison &middot; Nov 9</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Willison says a Hacker News comment convinced him to try a Three.js project, a nudibranch-themed Faberg&eacute; egg. He then asked Claude Opus 5.5 to port it to vanilla JavaScript and WebGL in the same chat. The two versions differ and he does not fully understand why, but he concludes the model can do the job. He finds the Three.js code easier to read, though he rarely reads the code for these projects.</p>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- STUDY GUIDE MODAL -->
+  <div id="sg-modal" class="sg-modal-overlay" aria-hidden="true">
+    <div class="sg-modal-container">
+      <div class="sg-modal-header">
+        <a id="sg-modal-external" href="#" target="_blank" rel="noopener" class="sg-modal-open-external">Open in new tab ↗</a>
+        <button id="sg-modal-close" class="sg-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <iframe id="sg-modal-iframe" class="sg-modal-iframe" src="about:blank" title="Study Guide"></iframe>
+    </div>
+  </div>
+  <style>
+    .sg-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .sg-modal-overlay.active {
+      display: flex;
+    }
+    .sg-modal-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .sg-modal-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .sg-modal-open-external {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #6b7280;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .sg-modal-open-external:hover {
+      color: #8B0000;
+    }
+    .sg-modal-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .sg-modal-close:hover {
+      color: #1a1a1a;
+    }
+    .sg-modal-iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+    @media print {
+      .sg-modal-overlay { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var overlay = document.getElementById('sg-modal');
+    var iframe = document.getElementById('sg-modal-iframe');
+    var externalLink = document.getElementById('sg-modal-external');
+    var closeBtn = document.getElementById('sg-modal-close');
+    function openModal(url) {
+      iframe.src = url;
+      externalLink.href = url;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[data-study-guide]');
+      if (link) {
+        e.preventDefault();
+        openModal(link.href);
+      }
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
+  })();
+  </script>
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Nate B Jones sets two numbers side by side: 65% of American adults used an AI chatbot in the past week, and 72% oppose a new data center in their community. Both can be true because, as he puts it, Americans seem to expect AI to come &ldquo;out of the air.&rdquo; That gap between wanting the product and refusing the plumbing runs through today&rsquo;s issue, from a bottleneck inside a company to Siri&rsquo;s roadmap to a recipe app whose own readers tried to shout the feature down.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Demand, Supply and the Backlash</h4>
+        <ul class="digest-bullets">
+          <li><strong>Is the AI Boom Over? Let&rsquo;s Talk About It.</strong> Jones says Google reported model API usage up 40% quarter over quarter and more than four times a year earlier, and had begun using outside compute because of supply constraints on its own cloud. Against that, he cites unofficial results in Edgewater, Florida, where more than three quarters of voters backed a ban on new data centers, which he calls typical. His claim is that blocked projects do not remove demand, they relocate it, and he adds that if you keep a data center out of your community &ldquo;it doesn&rsquo;t keep the technology out,&rdquo; you just rent it. His most speculative section is orbital compute: he would move his own estimate from 10 years to &ldquo;maybe 6 to 8,&rdquo; and he presents that as a personal guess.</li>
+          <li><strong>The Huang Affair: What Did They Know and When Did They Know It?</strong> Gary Marcus writes that Nvidia CEO Jensen Huang admitted, in a letter to employees, to an affair with Alice Huang, an executive of Megaspeed whom Marcus says is believed to be a Chinese spy. Treat this one carefully: it is an opinion newsletter built largely from quoted social media posts, and I could not confirm its account elsewhere. What Marcus argues is that Congress will want to know who knew what and when, pointing to a 2024 photo from a Taipei bar that a quoted post circulated last year, and to Nvidia&rsquo;s claim a week ago not to know. He also notes Nvidia has no obvious succession plan.</li>
+        </ul>
+
+        <h4 class="digest-theme">Making the Work Pay Off</h4>
+        <ul class="digest-bullets">
+          <li><strong>AI Won&rsquo;t Pay Off Until You Redesign the Work.</strong> David Shapiro says three companies, with about five, 40 and 700 employees, described the same problem in one day: people are five to ten times more productive, yet the company ships no faster. He reaches for Solow&rsquo;s 1987 paradox, which he says took about another ten years to resolve for personal computers, and the J curve, where restructuring costs money before it pays. His own case: after redesigning his content workflow, he says he went from one video a week to one a day and from about 200,000 to about 1.8 million monthly views. Those figures, and his claim that about 60% of premature AI layoffs get regretted, are his own statements, not a cited study.</li>
+          <li><strong>Hide Your Slop PR Descriptions Behind &lt;details&gt;&lt;summary&gt;.</strong> Simon Willison&rsquo;s complaint is about readers, not accuracy. An agent-written pull request description is comprehensive, he says, and his instant reaction is &ldquo;I&rsquo;m not reading all of that,&rdquo; even when the agent&rsquo;s author is himself. His fix is a short opener he has judged worth a human&rsquo;s time, with the full essay folded inside a collapsed details block labeled with the model and effort level, such as &ldquo;Claude Opus 5.5 Medium.&rdquo; His promise to readers is that the opener reflects his judgment about what deserves attention.</li>
+          <li><strong>Comment: The Web Is More Than Enough, by Paul Ford.</strong> Willison says a Hacker News comment pushed him to try a Three.js project, a nudibranch-themed Faberg&eacute; egg, then asked Claude Opus 5.5 to port it to vanilla JavaScript and WebGL in the same chat. The Three.js file is 77KB and the port is 98KB, and the two are not identical, which he says he does not fully understand. His verdict is that the model can do 3D in plain WebGL, though he finds the Three.js code easier to read.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents Come Home</h4>
+        <ul class="digest-bullets">
+          <li><strong>Apple Is Racing to Make Siri More Agentic.</strong> Citing Bloomberg&rsquo;s Mark Gurman, The Verge reports that CEO John Ternus is pressing AI chief Craig Federighi to speed up Siri, and that Apple &ldquo;has no illusions&rdquo; about keeping pace with rivals such as OpenAI&rsquo;s Dots and Meta&rsquo;s Muse. Control of Apple&rsquo;s own apps, such as cropping photos or organizing Safari tabs, is expected in iOS 27.3, and third-party integrations such as Grubhub and OpenTable likely in the spring. The larger ambition is an assistant that keeps track of goals and continues pursuing them without being prompted at each step.</li>
+          <li><strong>I Used NYT Cooking&rsquo;s New AI-Powered Recipe Modifier, and It&rsquo;s Actually Pretty Good.</strong> WIRED&rsquo;s reviewer found 172 mostly angry comments under the Oct. 23 announcement before comments were turned off after four days. In testing, a swap from chicken thighs to breasts in a chicken and dumplings recipe correctly shortened the simmer and added butter to the roux, but left shredded breast in the pot for about 30 extra minutes. The assistant draws on the recipe, the Times&rsquo; substitution guide, reader comments, and only then its own AI knowledge, in that order. The general manager says &ldquo;you shouldn&rsquo;t be chatting with it,&rdquo; and says the team is &ldquo;hiring more than ever.&rdquo;</li>
+          <li><strong>NYT Cooking&rsquo;s AI Assistant Saved My Weeknight Chicken, but Almost Ruined My Cake.</strong> The Verge&rsquo;s reviewer asked for a chicken and rice dish built around green beans and got a rewritten recipe with every change highlighted under a &ldquo;Your Version&rdquo; tab, with the original available at any point. It refused a request to put minced beef in a trifle, and nearly put half the required butter in a cake. Alexa Plus offered similar substitutions, but when asked to walk through the modified recipe it improvised a step that was not in it.</li>
+          <li><strong>Also today.</strong> Four Reddit threads, which I read by title only: a question about a LoRA-conditioned model that skips the first line of its output when the caption is short, a thread asking whether MLSys 2027 reviewers have received paper assignments, a poll on what people actually use AI agents for day to day, and a post that credits RuntimeWire with finding a Midjourney patent for an ultrasound collar that reads speech from your neck.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Jones and Shapiro are making the same argument at two different scales. Jones says demand for compute is real and growing, so the thing that binds is where capacity can be sited and who can finance the wait. Shapiro says individual productivity is real and growing, so the thing that binds is wherever the work actually jams. In both cases adding more of the input, whether chips or faster employees, does not move output, because <em>the constraint is somewhere else</em>. Shapiro&rsquo;s theory of constraints is the clean version: an improvement away from the bottleneck does not change throughput. The practical lesson is the same for a data center developer and a manager. Find the binding constraint before you buy more of anything.</p>
+
+        <p>Willison and the NYT Cooking story show the other half, which is what to do when the machine is fluent and abundant. Both put a human-shaped layer on top. Willison writes a short opener and folds the agent&rsquo;s essay away. The Times built an assistant that leaves the original recipe alone, marks every change in red-orange, lets you flip back, and is explicitly not a chatbot. Then look at what the reviewers found, because it is why those layers exist: breast meat left simmering for an extra half hour, half the butter in a cake. The model is good enough to be trusted and not good enough to be left unreviewed, and that is precisely the zone where design matters more than capability. The 172 angry comments are a reminder that even a careful rollout starts with a trust deficit.</p>
+
+        <p>Last, concentration. Jones argues delays favor big, funded operators and that the backlash &ldquo;may end up, ironically, strengthening big tech,&rdquo; because smaller AI companies end up renting capacity from the giants. Marcus, in a very different register and with every caveat above, argues the AI economy is bound up with one company that lacks a clear successor. I would not lean on his specifics until news organizations confirm them. The shared theme is worth holding on to anyway: the more AI depends on a few firms and a few people, the more a siting fight or a personal scandal becomes a market event.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and AI is turning from a technology problem into a siting, governance and organizational-design problem. The scarce things are no longer only models and chips. They are land, power and local consent on the supply side, and workflow redesign and trust on the demand side. Jones&rsquo;s read of the Nov. 3 votes is that the boom is not ending but being reshaped, and the Shapiro piece suggests the same of the enterprise: the payoff arrives after the restructuring, as it did with personal computers, if his Solow comparison holds. That would mean a lag measured in years, not quarters, between spending and measurable returns.</p>
+          <p>The honest read is that today&rsquo;s evidence is thinner than its confidence. Most of the striking numbers here are speakers&rsquo; own claims: Shapiro&rsquo;s layoff percentages and view counts, Jones&rsquo;s orbital timeline, Marcus&rsquo;s account of events. What is solid is the pattern that the products keep teaching. People will use AI heavily and still resist what it takes to build it, and the companies that pair capability with visible human judgment, a short opener or a highlighted change, earn the benefit of the doubt. Jones says Silicon Valley &ldquo;has itself to blame&rdquo; for the messaging. I would add that the fix is not better slogans but more products that show their work.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Where the next project goes.</strong> Jones&rsquo;s test is to watch what companies do with the next facility they planned: wait, relocate, pay more for a site with power and local support, or buy capacity from someone else. Those choices will say more about commitment to AI than any announcement.</li>
+          <li><strong>Whether the Huang account is confirmed.</strong> Marcus expects Congress to investigate and Nvidia to face questions. The thing to look for is confirmation or correction from news organizations with direct sourcing, since today&rsquo;s account rests on one commentator and quoted posts.</li>
+          <li><strong>Siri&rsquo;s first real test.</strong> If Gurman is right, iOS 27.3 brings fine-grained control of Apple&rsquo;s own apps and the spring brings third-party apps. The gap between that and an assistant that pursues goals on its own is the one to measure.</li>
+        </ul>
+
+        <h3 class="digest-section-head">Go Deeper</h3>
+        <ul class="digest-bullets">
+          <li><a href="https://fittoprompt.com/study-guides/is-the-ai-boom-over-lets-talk-about-it-study.html" data-study-guide>Is the AI Boom Over? Let&rsquo;s Talk About It.</a>: Timestamped notes on Jones&rsquo;s eight sections, including why delays hurt leveraged neoclouds more than large operators, the Derek Thompson argument that slower building could prevent a glut, and a section that separates his figures from his forecasts.</li>
+          <li><a href="https://fittoprompt.com/study-guides/ai-wont-pay-off-until-you-redesign-the-work-study.html" data-study-guide>AI Won&rsquo;t Pay Off Until You Redesign the Work</a>: Shapiro&rsquo;s walk through Solow&rsquo;s paradox, the J curve and the theory of constraints, his step-by-step content pipeline, and a section flagging which of his numbers are his own claims.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

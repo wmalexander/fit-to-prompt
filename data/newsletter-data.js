@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-08",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["cryptogram"]
+        lastUpdated: "2026-11-09",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["cryptogram", "acronym"]
     },
     issues: [
+        {
+            date: "2026-11-09",
+            volume: 1,
+            issueNumber: 139,
+            title: "Is the AI Boom Over? Let's Talk About It.",
+            description: "Daily AI news roundup - November 9, 2026. Nate B Jones asks whether the AI boom is over, David Shapiro on why AI will not pay off until work is redesigned, Gary Marcus on the Huang affair, Apple's push to make Siri more agentic, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-09.html",
+            storyCount: 12,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-11-08",
             volume: 1,
