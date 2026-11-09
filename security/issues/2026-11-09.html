@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attackers are testing a long-password bug in OpenSSH on Alpine Linux | Fit to Patch No. 6, November 9, 2026</title>
+  <meta name="description" content="Attackers are trying very long passwords against OpenSSH on Alpine-style Linux, Contact Form 7 before 6.2.4 allows risky file uploads, and a poisoned npm release steals wallet data.">
+  <meta property="og:title" content="Fit to Patch No. 6: Attackers are testing a long-password bug in OpenSSH on Alpine Linux">
+  <meta property="og:description" content="Attackers are trying very long passwords against OpenSSH on Alpine-style Linux, Contact Form 7 before 6.2.4 allows risky file uploads, and a poisoned npm release steals wallet data.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-09.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Monday, November 9, 2026</span>
+        <span>No. 6</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Attackers are trying very long passwords on SSH servers, so upgrade OpenSSH to 10.6p2 or later on Alpine-style Linux hosts.</li>
+            <li>Contact Form 7 before 6.2.4 lets strangers upload files, which can run code on some Apache servers, so update it to 6.2.4 or later.</li>
+            <li>CISA gave federal agencies until November 20 to patch the SonicWall VPN login bypass, and a poisoned npm release, @ethersphere/bee-js 13.3.0, steals wallet data on install.</li>
+            <li>Node.js security releases for 26.x, 24.x and 22.x are due on or shortly after Wednesday, November 11, and the worst bug fixed is rated high.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-123158</span><span class="tag ">OpenSSH</span></div>
+              <h3><a href="https://isc.sans.edu/diary/rss/33498">Attackers are trying very long passwords against OpenSSH on Alpine-style Linux</a></h3>
+              <p>NVD says OpenSSH before 10.6p2 on Linux, when it uses musl libc without PAM, can accept any password between 256 and 1,024 characters for some accounts. Alpine Linux is the example NVD gives, so many container images are in scope. The SANS Internet Storm Center saw its honeypots receive a rising number of very long passwords from November 4, peaking at 713 on November 6 and falling to 51 on November 8, with the first real exploit attempt on November 5. Some of those long passwords came from buggy brute-force scripts, not exploits. Risky Business also reports exploitation in the wild. It is not in the CISA KEV catalog.</p>
+              <p class="do"><strong>Do</strong>Upgrade OpenSSH to 10.6p2 or later on any Alpine or other musl-without-PAM host that accepts SSH from the internet, including base images you build on. Until then, limit SSH to known addresses.</p>
+              <div class="sources">Sources: <a href="https://isc.sans.edu/diary/rss/33498">SANS ISC</a> · <a href="https://news.risky.biz/risky-bulletin-pro-kremlin-hacktivists-dox-eu-politicians-law-enforcement/">Risky Bulletin</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 7.5</span><span class="tag mono">CVE-2026-19868</span><span class="tag ">SonicWall</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html">CISA now sets a November 20 deadline for the SonicWall VPN login bypass</a></h3>
+              <p>This is the SonicOS SSL VPN bug from yesterday's briefing, where a valid login for one sign-in method can skip SAML login and its two-step check. CISA lists it in the Known Exploited Vulnerabilities catalog (added November 6), and U.S. federal agencies must patch by November 20. SonicWall also fixed three other high-severity bugs: CVE-2026-107155 and CVE-2026-107154 (both 8.8, management interface) and CVE-2026-82308 (7.5, a VPN crash).</p>
+              <p class="do"><strong>Do</strong>Upgrade to SonicOS 7.3.4-7013 or 8.2.3-8015 as listed in yesterday's briefing. SonicWall lists no workaround for the login bypass.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868">NVD</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-114432</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7 before 6.2.4 lets strangers upload files, which can run code on some Apache servers</a></h3>
+              <p>NVD says the plugin does not check the type or extension of files sent through a form file field, and its cleanup step leaves the file on disk. On a stock Debian or Ubuntu Apache setup that lists folder contents and runs .phar files as PHP, an attacker can find and run the uploaded file. On nginx, or Apache with .htaccess overrides on, the result is a file written to the uploads folder, which can still be served as active content. The WordPress.org plugin page lists 6.2.4.1 as the current release, updated October 29. NVD's analysis is still pending and I found no report of exploitation.</p>
+              <p class="do"><strong>Do</strong>Update Contact Form 7 to 6.2.4 or later (6.2.4.1 is current) and look in the uploads folder for .phar, .php or other files you do not recognize.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/contact-form-7/">WordPress.org plugin page</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114432">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-110963</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110963">Userplace, up to 1.2.0, lets anyone create an administrator account</a></h3>
+              <p>An AJAX action skips its permission check and the nonce that guards it is shown publicly, so a visitor can create an admin account or change site options. NVD lists no fixed version, I could not find the plugin in the WordPress.org directory, and the only source is NVD. Not reported as exploited. Deactivate and remove it, then check your user list for admins you do not recognize.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.1</span><span class="tag mono">CVE-2026-119506</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119506">Frontend Admin by DynamiApps, up to 3.30.1, has a privilege escalation bug</a></h3>
+              <p>NVD gives few details beyond incorrect privilege assignment, and its analysis is deferred. The WordPress.org page lists 3.30.2 as current, updated November 1, but NVD does not say which release fixes it, so read the changelog. Not reported as exploited. Update to 3.30.2 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.6</span><span class="tag mono">CVE-2026-109900</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109900">Melapress Role Editor, up to 1.3.0, has a privilege escalation bug</a></h3>
+              <p>NVD lists incorrect privilege assignment and nothing more, and its analysis is deferred. The WordPress.org page lists 1.4.0 as current, updated October 30, but NVD does not say which release fixes it. Not reported as exploited. Update to 1.4.0 or later and review who holds the administrator role.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.7</span><span class="tag mono">CVE-2026-124430</span><span class="tag mono">CVE-2026-124427</span><span class="tag ">Craft CMS</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124430">Craft CMS 5.x before 5.11.2 has a code execution bug for logged-in staff and a data leak</a></h3>
+              <p>CVE-2026-124430 (8.7, versions 5.10.0 up to 5.11.2) lets a control panel user who is not an administrator run operating system commands. CVE-2026-124427 (9.3, versions 5.0.0 up to 5.11.2) lets anonymous GraphQL visitors read entries from sections that should be hidden. The only source is NVD, and neither is reported as exploited. Upgrade to 5.11.2.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Apache</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Nothing new today, and Node.js security releases are due Wednesday</a></h3>
+              <p>The Node.js project says new 26.x, 24.x and 22.x releases arrive on or shortly after Wednesday, November 11, and that the highest severity issue fixed is rated high. End-of-life versions are always affected. Plan an update window for that day.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Supply chain</span><span class="tag ">npm</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/ethersphere-bee-js-13-3-0-compromise">A poisoned npm release, @ethersphere/bee-js 13.3.0, steals crypto wallet data when you install it</a></h3>
+              <p>StepSecurity says version 13.3.0 was published to npm on November 9 at 00:09 UTC. It moves a script to run at install time, downloads JavaScript from a server the attacker controls, and runs it. The payload goes after Swarm Desktop wallet files and tries to stay on the machine on Linux, macOS and Windows. The release carries valid build provenance because the attacker pushed the code to the project's own release branch under a bot identity, so a provenance badge alone would not have caught it. StepSecurity is the vendor that found it, and it has not said how the account was reached.</p>
+              <p class="do"><strong>Do</strong>Search your lockfiles and CI logs for @ethersphere/bee-js 13.3.0 and pin 13.2.0. If 13.3.0 was installed with install scripts enabled, treat that machine as compromised and rotate its secrets, because removing the package does not remove the persistence.</p>
+              <div class="sources">Sources: <a href="https://www.stepsecurity.io/blog/ethersphere-bee-js-13-3-0-compromise">StepSecurity</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag ">AI</span><span class="tag ">Cryptography</span></div>
+              <h3><a href="https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack/">Google DeepMind says its AI agents made attacks on old 1024-bit RSA keys cheaper</a></h3>
+              <p>Working with outside cryptographers, DeepMind reports that AI agents helped cut the cost of forging signatures on a 1024-bit RSA key by 3.5 times in a test (391 CPU core-years versus 1,380 in an earlier study), and sketched a method that makes factoring each extra key of that size about 30 times cheaper on average, which has not been built. The forgery needs about four billion signing requests and does not work on devices that hash messages internally. DeepMind says 2048-bit and larger keys remain secure. These figures come from the vendor about its own research.</p>
+              <p class="do"><strong>Do</strong>Search for RSA keys under 2048 bits in your TLS certificates, JWT signing keys and code-signing setups, and replace any you find.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack/">SecurityWeek</a></div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Check Alpine and other musl-without-PAM Linux hosts for OpenSSH older than 10.6p2 and upgrade, including container base images.</li>
+            <li>Upgrade SonicWall firewalls to SonicOS 7.3.4-7013 or 8.2.3-8015 if SAML login is on.</li>
+            <li>Update Contact Form 7 to 6.2.4 or later and scan the uploads folder for .phar and .php files.</li>
+            <li>Remove Userplace, update Frontend Admin and Melapress Role Editor, and review your administrator list.</li>
+            <li>Upgrade Craft CMS 5.x sites to 5.11.2.</li>
+            <li>Search lockfiles and CI logs for @ethersphere/bee-js 13.3.0 and pin 13.2.0.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868">CVE-2026-19868</a> <span class="kev-yes">KEV 11-06</span><span class="meta">SonicOS SSLVPN, 7.3.3-7015 and older (Gen7), 8.2.2-8015 and older (Gen8) · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114432">CVE-2026-114432</a><span class="meta">Contact Form 7 before 6.2.4 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110963">CVE-2026-110963</a><span class="meta">Userplace through 1.2.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109900">CVE-2026-109900</a><span class="meta">Melapress Role Editor through 1.3.0 · 9.6 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119506">CVE-2026-119506</a><span class="meta">Frontend Admin by DynamiApps through 3.30.1 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124427">CVE-2026-124427</a><span class="meta">Craft CMS 5.0.0 before 5.11.2 · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124430">CVE-2026-124430</a><span class="meta">Craft CMS 5.10.0 before 5.11.2 · 8.7 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">CVE-2026-123158</a><span class="meta">OpenSSH before 10.6p2 on Linux with musl libc and no PAM · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107155">CVE-2026-107155</a><span class="meta">SonicOS management interface · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-107154">CVE-2026-107154</a><span class="meta">SonicOS management interface · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82308">CVE-2026-82308</a><span class="meta">SonicOS SSL VPN · 7.5 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 9, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>

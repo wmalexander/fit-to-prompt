@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-08"
+        lastUpdated: "2026-11-09"
     },
     issues: [
+        {
+            date: "2026-11-09",
+            issueNumber: 6,
+            title: "Attackers are testing a long-password bug in OpenSSH on Alpine Linux",
+            summary: "Attackers are trying very long passwords against OpenSSH on Alpine-style Linux, Contact Form 7 before 6.2.4 allows risky file uploads, and a poisoned npm release steals wallet data.",
+            url: "https://fittoprompt.com/security/issues/2026-11-09.html",
+            pressure: "high",
+            itemCount: 10
+        },
         {
             date: "2026-11-08",
             issueNumber: 5,
