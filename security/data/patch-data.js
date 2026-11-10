@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-09"
+        lastUpdated: "2026-11-10"
     },
     issues: [
+        {
+            date: "2026-11-10",
+            issueNumber: 7,
+            title: "Chrome fixes an exploited zero-day, and CISA lists the OpenSSH login bug",
+            summary: "Chrome patches an exploited zero-day in its XML code, CISA adds the OpenSSH SSHole bug to its exploited list, and a German web host says attackers got in through its AI assistant connector.",
+            url: "https://fittoprompt.com/security/issues/2026-11-10.html",
+            pressure: "high",
+            itemCount: 16
+        },
         {
             date: "2026-11-09",
             issueNumber: 6,

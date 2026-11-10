@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chrome fixes an exploited zero-day, and CISA lists the OpenSSH login bug | Fit to Patch No. 7, November 10, 2026</title>
+  <meta name="description" content="Chrome patches an exploited zero-day in its XML code, CISA adds the OpenSSH SSHole bug to its exploited list, and a German web host says attackers got in through its AI assistant connector.">
+  <meta property="og:title" content="Fit to Patch No. 7: Chrome fixes an exploited zero-day, and CISA lists the OpenSSH login bug">
+  <meta property="og:description" content="Chrome patches an exploited zero-day in its XML code, CISA adds the OpenSSH SSHole bug to its exploited list, and a German web host says attackers got in through its AI assistant connector.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-10.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Tuesday, November 10, 2026</span>
+        <span>No. 7</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Chrome has fixed its eighth exploited zero-day this year, so update to 157.0.8103.50 or later and relaunch.</li>
+            <li>CISA now lists the OpenSSH long-password bug on Alpine-style Linux as exploited, so upgrade to OpenSSH 10.6p2 or later.</li>
+            <li>WP Duplicate, Grand Job, WPML and Everest Forms have new WordPress plugin bugs, and two of them have no fixed version listed.</li>
+            <li>Node.js security releases are due tomorrow, and a German web host says attackers got in through its AI assistant connector.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-123158</span><span class="tag ">OpenSSH</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">CISA now lists the OpenSSH "SSHole" long-password bug as exploited</a></h3>
+              <p>This is the bug from the last two briefings. NVD says OpenSSH before 10.6p2 on Linux, when it uses musl libc without PAM, accepts any password between 256 and 1,024 characters for some accounts, and Alpine Linux is its example. CISA added it to the Known Exploited Vulnerabilities catalog on November 9 with a November 12 deadline for federal agencies. The Hacker News reports that GreyNoise saw its first attempt on November 7 and has since seen six source addresses carry out 18 attack chains, which included reading password hashes and root SSH keys, asking cloud metadata services for credentials, and editing the authorized_keys file to stay in. In at least one case the attacker installed a Python command-and-control agent.</p>
+              <p class="do"><strong>Do</strong>Upgrade OpenSSH to 10.6p2 or later on Alpine and any other musl-without-PAM host that accepts SSH from the internet, including container base images you build on. If a host was exposed, check its authorized_keys files and look for new keys or accounts.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">The Hacker News</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">NVD</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag ">Chrome</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/">Chrome fixes its eighth exploited zero-day of the year, a memory bug in its XML code</a></h3>
+              <p>Google says it knows an exploit exists in the wild for a use-after-free bug in Chrome's XML component, a flaw where the browser keeps using memory it already released. Google has not shared who is being attacked or how. The fix is in Chrome 157.0.8103.50 for Linux and 157.0.8103.50/.51 for Windows and Mac, and the Android build carries the same fixes. The bug has a CVE number, but it was not in NVD when I checked, so I am not printing it here.</p>
+              <p class="do"><strong>Do</strong>Open chrome://settings/help, let Chrome update, and relaunch it. Do the same for Edge, Brave and other Chromium browsers when their updates land.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/">BleepingComputer</a> · <a href="https://chromereleases.googleblog.com/">Chrome Releases</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-102895</span><span class="tag ">GPUStack</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">GPUStack, the AI model server, can be taken over by anyone who can reach it</a></h3>
+              <p>NVD says versions before 2.2.0 treat a request that looks like it came from the same machine as the built-in administrator. Behind a same-host reverse proxy, or with a made-up X-GPUStack-Real-IP header, a stranger can make users and API keys, read cloud secrets, and run code. It was added to CISA's catalog on November 9, and The Hacker News says the fix shipped in July.</p>
+              <p class="do"><strong>Do</strong>Upgrade GPUStack to 2.2.0 or later, and rotate any worker or cloud keys on an instance that was reachable from the internet.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895">NVD</a></div>
+            </article>
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-116779</span><span class="tag mono">CVE-2026-123218</span><span class="tag ">FreeSWITCH</span><span class="tag ">IBM Aspera</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">Two more bugs joined the exploited list: FreeSWITCH calls and IBM Aspera Faspex</a></h3>
+              <p>CVE-2026-116779 affects FreeSWITCH before 1.11.3. A user whose chat message is accepted can run FreeSWITCH API commands, which NVD says reach operating system commands, and inbound chat is on in the stock profiles. CVE-2026-123218 affects IBM Aspera Faspex 5.0.0 through 5.0.19, where a signed-in user can send a crafted message and gain full administrator rights. Both were added to CISA's catalog on November 9. These matter most to teams that run their own voice or file-transfer servers next to their web stack.</p>
+              <p class="do"><strong>Do</strong>Upgrade FreeSWITCH to 1.11.3 or later. For Aspera Faspex, install IBM's November fix as described in its advisory, since NVD does not name a fixed release.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-123751</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123751">WP Duplicate, up to 1.1.11, lets strangers write files and run code</a></h3>
+              <p>NVD says the plugin does not check a request token and does not check the path or type of uploaded files, so an unauthenticated visitor can write files to the server. The NVD entry itself says the bug is being exploited, but it is not in CISA's catalog and I found no second source. I could not find a fixed version, so remove the plugin and look for new .php files in the uploads folder.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-115237</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-115237">Grand Job, up to 1.2.1, lets anyone reset an administrator's password</a></h3>
+              <p>NVD says the plugin does not properly check the password reset code, so an unauthenticated attacker can set any account's password and take over the site. NVD lists no fixed version and the only source is NVD. Not reported as exploited. Remove the plugin and check your administrator list for accounts you do not recognize.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.1</span><span class="tag mono">CVE-2026-76877</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76877">WPML, up to 4.9.7, can let a stranger sign in as another user</a></h3>
+              <p>NVD says the cross-domain sign-in step used when each language has its own domain builds its token on the logout page, where no user session exists, so the token is the same for everyone for up to 12 hours. That can let an attacker sign in as a victim. It only applies to sites that run a separate domain per language. NVD does not name a fixed release and its analysis is deferred, so open the WPML changelog and update to the newest version. Not reported as exploited.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.2</span><span class="tag mono">CVE-2026-120513</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://wordpress.org/plugins/everest-forms/">Everest Forms, up to 3.6.2, lets strangers delete files in the uploads folder</a></h3>
+              <p>NVD says an unauthenticated visitor can delete files under wp-content/uploads, but only when the Save and Continue add-on is active. On a hardened Apache setup, deleting the uploads .htaccess file can turn PHP execution back on there. The WordPress.org page lists over 100,000 active sites. NVD names no fixed version, so update to the newest release and read its changelog. Not reported as exploited.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag ">Node.js</span><span class="tag ">React</span><span class="tag ">Next.js</span><span class="tag ">Apache</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Nothing new today, and Node.js security releases are due tomorrow</a></h3>
+              <p>The Node.js project says new 26.x, 24.x and 22.x releases arrive on or shortly after Wednesday, November 11, and that the worst issue fixed is rated high. End-of-life versions are always affected. Block out time tomorrow to update. I saw no new React, Next.js or Apache httpd advisories today.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-125120</span><span class="tag ">npm</span><span class="tag ">Mongoose</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125120">Mongoose countDocuments() skips the sanitizeFilter protection</a></h3>
+              <p>NVD says that before 6.13.11, 7.8.12, 8.24.3 and 9.9.2, countDocuments() ignores the sanitizeFilter setting, so a query object sent by an attacker is treated as query operators. The effect described is a wrong count, which can matter if your app makes an access decision from that count. The 9.8 score comes from NVD's rating, and the only source is NVD. Not reported as exploited. Update Mongoose to one of the fixed versions.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Supply chain</span><span class="tag ">npm</span><span class="tag ">Desktop app</span></div>
+              <h3><a href="https://socket.dev/blog/bee-js-compromise">The bee-js poisoning also hit the Swarm Desktop app, and its auto-updater spread it</a></h3>
+              <p>Yesterday's briefing covered the poisoned @ethersphere/bee-js 13.3.0. Socket's write-up adds that the same release pipeline also published a trojanized Swarm Desktop 0.56.2 on GitHub, and that the Windows and Apple Silicon builds reached users through the app's auto-updater. The npm package was published by the project's own trusted-publishing job with valid provenance, and npm removed it about 75 minutes later. The desktop release stayed up for about eight and a half hours, and the Mac build was signed and notarized. Socket says the loader reuses command-and-control infrastructure from an earlier campaign against Open VSX extensions. Socket sells security tooling, and the download counts come from its own analysis.</p>
+              <p class="do"><strong>Do</strong>If anyone installed Swarm Desktop 0.56.2 or bee-js 13.3.0, treat that machine as compromised and rotate its secrets. Pin bee-js to 13.2.0 until a clean release is published.</p>
+              <div class="sources">Sources: <a href="https://socket.dev/blog/bee-js-compromise">Socket</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">Supply chain</span><span class="tag ">Hosting</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html">Attackers hijacked the cPGuard update channel to push a backdoor</a></h3>
+              <p>The Hacker News quotes OPSSHIELD, the maker of the cPGuard web security suite, saying an attacker used stolen credentials on November 2 to get into its update servers and sent out a malicious script through the normal update channel. The attacker got in through the company's billing app. The reports I read do not say which versions or how many sites were affected. If you run cPGuard on a cPanel host, check the vendor notice and look for files you did not expect.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">Supply chain</span><span class="tag ">Hosting</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html">A fake Control Web Panel server file hides a backdoor named CWPdoor</a></h3>
+              <p>XLab, quoted by The Hacker News, says a script called cwpsrv_update.sh swaps the real cwpsrv web server for a trojanized copy that waits for a specially built request, runs the commands in it, and keeps that request out of the access logs. The reports do not say how the script reaches a server. If you run Control Web Panel, compare the cwpsrv binary against a known good copy and reinstall it from the vendor if it differs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">AI attack</span><span class="tag ">MCP</span><span class="tag ">Hosting</span></div>
+              <h3><a href="https://therecord.media/cyberattack-germany-ai-mittwald">A German web host says attackers got in through its AI assistant connector</a></h3>
+              <p>Mittwald, a hosting provider for web agencies, says an attacker abused a flaw in its Model Context Protocol (MCP) server, the connector that lets customers link an AI assistant to their hosting account. The attacker went unnoticed for eight days and compromised 56 customer projects. Mittwald does not yet know whether the flaw is in its own code or in the open-source MCP libraries it uses. The company says the logs show steps taken seconds apart and believes AI tools were used, but it has given no other evidence, so that part is a claim, not a finding. The company says it saw no further attacker activity as of Friday and will publish a full account this week.</p>
+              <p class="do"><strong>Do</strong>If you expose an MCP server that can act on customer accounts, check that every tool call is limited to the signed-in user's own resources, and look at the logs for bursts of calls only a script could make.</p>
+              <div class="sources">Sources: <a href="https://therecord.media/cyberattack-germany-ai-mittwald">The Record</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 7.7</span><span class="tag mono">CVE-2026-88968</span><span class="tag ">Claude Code</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-5xjx-9qx6-jcrv">Claude Code before 2.1.251 could be tricked into writing files outside the project on macOS</a></h3>
+              <p>The advisory says a race in the Edit tool let code running in Claude Code's Bash sandbox swap a folder for a symlink after the safety check, so the Edit tool wrote to a file outside the workspace. It needs attacker code to already run in the sandbox, for example from a malicious repository or dependency script. Not reported as exploited. Update to 2.1.251 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">AI attack</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html">One attacker used AI agents to break into emergency services data in Taiwan</a></h3>
+              <p>Acronis researchers, quoted by The Hacker News, say a single person in Taiwan pointed AI agents at hundreds of organizations in at least 11 countries and got data or access at about 10. The attacker mostly used local models with the safety training removed, because commercial models refused to help. The researchers found his server with more than 90,000 files. Acronis is the vendor that did the research.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Chrome to 157.0.8103.50 or later and relaunch it.</li>
+            <li>Upgrade OpenSSH to 10.6p2 or later on Alpine and other musl-without-PAM hosts, and check authorized_keys on exposed ones.</li>
+            <li>Remove WP Duplicate and Grand Job, update WPML and Everest Forms, and review your administrator list.</li>
+            <li>Upgrade GPUStack to 2.2.0 and FreeSWITCH to 1.11.3 if you run them.</li>
+            <li>Pin @ethersphere/bee-js to 13.2.0 and check for Swarm Desktop 0.56.2.</li>
+            <li>Block out time tomorrow for the Node.js security releases.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158">CVE-2026-123158</a> <span class="kev-yes">KEV 11-09</span><span class="meta">OpenSSH before 10.6p2, musl without PAM · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895">CVE-2026-102895</a> <span class="kev-yes">KEV 11-09</span><span class="meta">GPUStack before 2.2.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779">CVE-2026-116779</a> <span class="kev-yes">KEV 11-09</span><span class="meta">FreeSWITCH before 1.11.3 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218">CVE-2026-123218</a> <span class="kev-yes">KEV 11-09</span><span class="meta">IBM Aspera Faspex 5.0.0 through 5.0.19 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123751">CVE-2026-123751</a><span class="meta">WP Duplicate through 1.1.11 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-115237">CVE-2026-115237</a><span class="meta">Grand Job through 1.2.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125120">CVE-2026-125120</a><span class="meta">Mongoose before 6.13.11, 7.8.12, 8.24.3 and 9.9.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120513">CVE-2026-120513</a><span class="meta">Everest Forms through 3.6.2 · 8.2 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76877">CVE-2026-76877</a><span class="meta">WPML through 4.9.7 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88968">CVE-2026-88968</a><span class="meta">Claude Code before 2.1.251 · 7.7 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 10, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
