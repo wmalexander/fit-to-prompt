@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-09",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["cryptogram", "acronym"]
+        lastUpdated: "2026-11-10",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["cryptogram", "acronym", "crossword"]
     },
     issues: [
+        {
+            date: "2026-11-10",
+            volume: 1,
+            issueNumber: 140,
+            title: "Jensen Huang's Troubles Leave the AI Industry Reeling",
+            description: "Daily AI news roundup - November 10, 2026. Nvidia's board reviews Jensen Huang's affair with a suspected Chinese intelligence asset, Anthropic presses ahead with its IPO, Chase AI on ten new rules for prompting Claude Fable 5.2, DeepMind's formal proof for the Signal protocol, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-10.html",
+            storyCount: 20,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-11-09",
             volume: 1,
