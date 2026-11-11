@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 11, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 11, 2026. Anthropic sets its IPO price range at $70 to $78 a share, Claude Meetings joins your video calls, an unreleased Claude model helps solve an 18-year-old quantum problem, New York opens its AI safety registration portal, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 141">
+  <meta property="og:description" content="Daily AI news roundup - November 11, 2026. Anthropic sets its IPO price range at $70 to $78 a share, Claude Meetings joins your video calls, an unreleased Claude model helps solve an 18-year-old quantum problem, New York opens its AI safety registration portal, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, November 11, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 141</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; Business &middot; Markets</div>
+<a href="https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.style.display='none'">
+<h2 class="headline-lead mb-3">Anthropic Sets IPO Price Range of $70 to $78 a Share, Implying a $1.4 Trillion Valuation</h2>
+</a>
+<p class="byline mb-3">TechCrunch &middot; Nov 10</p>
+<div class="newspaper-body">
+<p>Anthropic said in an updated filing that it will offer 825 million Class A shares at $70 to $78 each, raising roughly $57.75 billion to $64.35 billion. At the top of the range the company would be worth $1.404 trillion on a fully diluted basis, up from $965 billion in a May fundraise but below the $2 trillion it was reportedly targeting a couple of months ago. Separately, it struck a deal to privately sell $26 billion of non-voting Class N stock at the IPO price to AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC, with Google and Nvidia putting in $10 billion each.</p>
+<p>The filing also gave a fresh revenue figure: run-rate revenue reached $81 billion by the end of October, about $10 billion more than a month earlier. Trading is expected to start on the Nasdaq close to November 19 under the ticker ANT, with up to 20 percent of the offering earmarked for retail investors. As a public benefit corporation, Anthropic is structured so that Class A buyers will have limited influence: the founders hold supervoting Class F stock and the Long-Term Benefit Trust elects a board majority.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Workplace AI</div>
+<a href="https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Claude-Meetings.png?resize=1200,675" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Anthropic Launches Claude Meetings to Turn Workplace Discussions Into Plans and Tasks</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Claude can now join a video call as a visible participant, draft the plan being discussed, sketch a timeline on a whiteboard and pull figures from connected work apps while people talk. It launches in beta on Team and Enterprise plans, works with Google Meet at first, and will not join calls with external guests unless an admin allows it.</p>
+
+<div class="mt-5"></div>
+<div class="kicker">AI &middot; Business</div>
+<a href="https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/" class="story-link">
+<h3 class="headline-standard mb-2">All 7 Anthropic Founders Will Each Cash Out About $250M in IPO</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Each co-founder plans to sell exactly 3,378,378 shares, which is about $250 million at the $74 midpoint. After the sale each will own about 3.2 percent of the Class A shares, roughly 22 percent together, and the group keeps control through supervoting Class F stock.</p>
+
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-11-cartoon.png" alt="A tired clerk at a counter labeled AI Safety Registration faces a polite robot holding a numbered ticket and a thick folder of incident reports, with a long line of robots waiting behind it" class="w-full object-contain mb-2" style="max-height:420px;">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;The statute gives you seventy-two hours to report an incident. It says nothing about the line.&rdquo;</p>
+<p class="byline mt-1">The clerk, to a robot with a very thick folder</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Science</div>
+<a href="https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Screenshot-2026-11-10-at-10.00.33-AM.png?w=683" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">PSI Is Trying to Make a Business Out of AI-Driven Scientific Discovery</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A PSI researcher used early access to Anthropic&rsquo;s Fable 5.2 to settle the 18-year-old Aaronson-Ambainis conjecture about quantum computing. Scott Aaronson says he does not fully follow the proof but trusts it because it was formalized in the Lean proof language. The result is negative: it closes one route quantum computers might have taken, not all of them.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Policy</div>
+<a href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2302996653.jpg?w=1024" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">OpenAI and Anthropic Face New Oversight as New York&rsquo;s AI Safety Law Takes Effect</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">New York opened a registration portal Tuesday for its RAISE Act. Developers with more than $500 million in annual revenue must register by January 1, 2027, publish safety frameworks, report critical incidents within 72 hours and issue transparency reports. Fines run up to $1 million for a first violation and $3 million after that.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Commerce</div>
+<a href="https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Screenshot-2026-11-10-at-8.46.19-AM.png?resize=1200,677" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">OpenAI Rolls Out Business Profiles, Making ChatGPT a Little More Like Google</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A new Business Hub, in beta, lets companies verify and update their profiles and see how often ChatGPT users view or mention them. OpenAI previously retired a commission-based checkout effort in March, so this is a quieter route into commerce.</p>
+<div class="kicker mt-5">AI &middot; Agents</div>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub" class="story-link">
+<h3 class="headline-standard mb-2">ChatGPT Is Getting Verified AI &lsquo;Business Agents&rsquo;</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Eligible US e-commerce and online service businesses can launch an agent that represents their brand inside ChatGPT, for jobs like comparison shopping. The conversations stay separate from your main ChatGPT chat.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Creative Tools</div>
+<a href="https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/FF-AIA-PlanMode-No-Logo-4.jpg?resize=1200,675" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Adobe Brings AI Agents and New Creative Tools to Photoshop, Premiere and Firefly</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">At its MAX event, Adobe released an MCP server so chatbots such as ChatGPT, Claude and Gemini can use its features, and previewed a private-beta prototyping tool in Firefly called Builder that goes after Figma. Photoshop gains relighting and Premiere gets video object removal.</p>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+<div class="ws26-wrap">
+<style>
+.ws26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.ws26-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:1px;margin-bottom:0.75rem;user-select:none}
+.ws26-cell{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;background:#fff;border:1px solid #e5e7eb;cursor:pointer}
+.ws26-cell.sel{background:#fef3c7}
+.ws26-cell.found{background:#8B0000;color:#fff;border-color:#8B0000}
+.ws26-words{display:flex;flex-wrap:wrap;gap:0.3rem 0.7rem;font-size:0.72rem;letter-spacing:0.05em;color:#374151;margin-bottom:0.6rem}
+.ws26-w.done{text-decoration:line-through;color:#9ca3af}
+.ws26-msg{font-size:0.75rem;color:#374151;min-height:1em;font-weight:600}
+.ws26-hint{font-size:0.68rem;color:#6b7280;margin-bottom:0.5rem}
+</style>
+<p class="ws26-hint">Click the letters of a word in order. Words run across, down, diagonally or backward.</p>
+<div class="ws26-grid" id="ws26-grid"></div>
+<div class="ws26-words" id="ws26-words"><span class="ws26-w" data-w="TOKEN">TOKEN</span><span class="ws26-w" data-w="AGENT">AGENT</span><span class="ws26-w" data-w="CHIP">CHIP</span><span class="ws26-w" data-w="MODEL">MODEL</span><span class="ws26-w" data-w="PROOF">PROOF</span><span class="ws26-w" data-w="DRONE">DRONE</span><span class="ws26-w" data-w="VOICE">VOICE</span></div>
+<div class="ws26-msg" id="ws26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var rows=["UVCTQLTQUJ", "QCNFOORPKF", "LQVPVSDBMF", "RIOIFTHGOQ", "SDIEWOGWDJ", "TRCRBKHAEW", "LOEJTEKGLN", "FNYJHNHEBE", "LECHIPNNUI", "DLMIGKSTMK"];
+var words=["TOKEN", "AGENT", "CHIP", "MODEL", "PROOF", "DRONE", "VOICE"];
+var grid=document.getElementById("ws26-grid"),msg=document.getElementById("ws26-msg");
+var cells=[],sel=[],found=0;
+rows.forEach(function(row,r){row.split("").forEach(function(ch,c){
+  var d=document.createElement("div");d.className="ws26-cell";d.textContent=ch;d.setAttribute("role","button");d.setAttribute("aria-label","Row "+(r+1)+" column "+(c+1)+" letter "+ch);
+  d.addEventListener("click",function(){
+    if(d.classList.contains("found")){return;}
+    var i=sel.indexOf(d);
+    if(i>-1){sel.splice(i,1);d.classList.remove("sel");return;}
+    sel.push(d);d.classList.add("sel");
+    var s=sel.map(function(x){return x.textContent;}).join("");
+    var rs=s.split("").reverse().join("");
+    words.forEach(function(w){
+      var el=document.querySelector('.ws26-w[data-w="'+w+'"]');
+      if(el.classList.contains("done")){return;}
+      if(s===w||rs===w){
+        sel.forEach(function(x){x.classList.remove("sel");x.classList.add("found");});
+        sel=[];el.classList.add("done");found++;
+        msg.textContent=found===words.length?"All "+words.length+" found. Nicely done.":found+" of "+words.length+" found.";
+      }
+    });
+  });
+  grid.appendChild(d);cells.push(d);
+});});
+})();
+</script>
+</div>
+</div>
+
+<div class="story-item">
+<div class="kicker">Security &middot; Open Source</div>
+<a href="https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/55593309591_7cc2d3aba6_k.jpg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Cyberattacks Threaten to Make Open Source AI a Little Less Open, Hugging Face Exec Warns</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Irene Solaiman says the openness that makes these platforms valuable also makes them targets. She points to October&rsquo;s OpenCode attack on users&rsquo; API keys and a summer breach of Hugging Face by an OpenAI agent swarm. On Monday, Fireworks disclosed that attackers reached some customers&rsquo; model weights, datasets and billing information.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Operating Systems</div>
+<a href="https://techcrunch.com/2026/11/10/after-challenging-googles-android-with-cyanogen-its-co-founder-takes-aim-at-windows-for-ai-era/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/kora-os.jpg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">After Challenging Android With Cyanogen, Its Co-Founder Takes Aim at Windows for the AI Era</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Kora Systems unveiled a free, Linux-based desktop operating system with AI agents built in, due in 2027. Its team of about 50 engineers builds it with Codex and Claude, which founder Kirt McMaster says made development at least five times faster.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Politics</div>
+<a href="https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/" class="story-link">
+<h3 class="headline-standard mb-2">Nvidia CEO Jensen Huang&rsquo;s Affair With Alleged Chinese Spy: A Timeline</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">US officials believe Megaspeed executive Alice Huang, who is no relation, is a Chinese spy. Megaspeed, a Singapore firm, reportedly bought $4.8 billion of Nvidia chips over two years, and Huang pulled out of two upcoming speaking events.</p>
+<div class="kicker mt-5">AI &middot; Opinion</div>
+<a href="https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy" class="story-link">
+<h3 class="headline-standard mb-2">The US Is Winning the AI Race. Jensen Huang Could Have Blown It</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Robert Hart argues Nvidia&rsquo;s chips power America&rsquo;s AI boom, so Chinese interest in its CEO should surprise no one.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Robotics</div>
+<a href="https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Ring-drone.jpg?resize=1200,1200" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Ring Launches a Home Security Drone and an Enterprise Security Robot</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Ring Robotics debuts Drone Cam, which Ring calls a &ldquo;flying indoor security camera&rdquo; that flies to where an alarm goes off, plus a roving patrol robot for businesses.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Hardware</div>
+<a href="https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-1484622878.jpeg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Google Broadens Its AI Hardware Portfolio With Two New Specialized Chips</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 10</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">TPU 8tx, built with AMD, targets confidential training and inference with security in the hardware layer. TPU 8i Max pairs two inference chips in one package to double memory, compute and bandwidth.</p>
+</div>
+
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://openai.com/index/chatgpt-plus-for-veterans">ChatGPT Plus for Veterans and Servicemembers: More Than 20,000 Have Claimed a Free Year</a>
+<div class="wire-source">OpenAI &middot; Nov 11</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/">OpenAI Acquires Odessia, Travel Startup Created by Sonder Founder</a>
+<div class="wire-source">TechCrunch &middot; Nov 10</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/">Oura to Acquire AI-Native Primary Care Startup Counsel Health for $625M</a>
+<div class="wire-source">TechCrunch &middot; Nov 10</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/">Meta&rsquo;s AI Agent Muse Lands on Apple Watch and Wear OS</a>
+<div class="wire-source">TechCrunch &middot; Nov 10</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://techcrunch.com/2026/11/10/spotifys-ai-dj-gets-new-voices-personalities-and-an-option-for-less-chatter/">Spotify&rsquo;s AI DJ Gets New Voices, Personalities and an Option for Less Chatter</a>
+<div class="wire-source">TechCrunch &middot; Nov 10</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/">Otter AI Can Now Follow Conversations Across 30+ Languages</a>
+<div class="wire-source">TechCrunch &middot; Nov 10</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic is asking the public to buy 825 million shares at $70 to $78 each, and it has separately agreed to sell $26 billion of non-voting stock at the same price to AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC. Several of those buyers are also its suppliers and partners. That is the thread through today&rsquo;s issue: the AI industry is writing down, in filings, statutes and product rules, exactly who controls what.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Anthropic Goes Public</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Sets IPO Price Range of $70 to $78 a Share.</strong> The updated filing offers 825 million Class A shares to raise $57.75 billion to $64.35 billion, and an implied $1.404 trillion valuation at the top of the range, on a fully diluted basis. That is well above the $965 billion from May but under the $2 trillion reportedly targeted a couple of months ago. Run-rate revenue hit $81 billion by the end of October, about $10 billion more than at the end of September. Shares are expected to trade near November 19 under the ticker ANT, with up to 20 percent set aside for retail investors.</li>
+          <li><strong>All 7 Anthropic Founders Will Each Cash Out About $250M.</strong> Each of the seven will sell exactly 3,378,378 shares, which is just under $250 million at the $74 midpoint, between about $236 million and $264 million across the range. They will each hold about 3.2 percent of Class A afterward, roughly 22 percent together, and keep control through supervoting Class F stock. Board member Reed Hastings has signaled he wants to buy $300 million of shares through his donor-advised fund, an early hint of demand.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents at Work</h4>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic Launches Claude Meetings.</strong> Claude joins a video call as a visible participant, announces itself in the chat, drafts the plan being discussed, maps a timeline on a whiteboard and answers questions using connected work apps, such as last year&rsquo;s figures. It will not join calls with external guests unless an admin authorizes it, and it leaves automatically if an outside guest arrives. It starts in beta on Team and Enterprise plans with Google Meet only. Whiteboards and Sheets launched alongside it, in a race with OpenAI&rsquo;s recent workplace tools and Meta&rsquo;s Muse.</li>
+          <li><strong>Adobe Brings AI Agents to Photoshop, Premiere and Firefly.</strong> At MAX in Miami, Adobe released an MCP server so outside chatbots like ChatGPT, Claude and Gemini can use its features, and said its own agent will become proactive and always on. Firefly gets a private-beta prototyping tool called Builder, aimed at Figma&rsquo;s territory, plus an on-brand chart tool.</li>
+          <li><strong>Kora Takes Aim at Windows.</strong> Kirt McMaster, who ran Cyanogen, is building a free, Linux-based desktop operating system with models and agents integrated, due in 2027. About 50 engineers are using Codex and Claude, and he says that made development at least five times faster, mostly in the last six months. Windows held about 77 percent of desktop share in October, so he is targeting heavy AI users rather than everyone.</li>
+          <li><strong>The smaller agent stories.</strong> Meta&rsquo;s Muse is now on Apple Watch and Wear OS, a month after its iPad app. Spotify&rsquo;s AI DJ, used by over 94 million Premium listeners, adds nine voices and a lower-chatter mode. Otter adds 27 languages, for 31 total, with 13 live now and a coming feature that follows speakers as they switch languages mid-call. Ring launched Drone Cam, a &ldquo;flying indoor security camera,&rdquo; and a patrol robot for businesses.</li>
+        </ul>
+
+        <h4 class="digest-theme">Platforms and Commerce</h4>
+        <ul class="digest-bullets">
+          <li><strong>OpenAI&rsquo;s Business Hub and Business Agents.</strong> The beta lets companies verify a profile, edit product information and see profile views, mentions and website clicks, a feature TechCrunch compares to Google Analytics. The Verge adds that eligible US e-commerce and online service businesses can run a verified agent inside ChatGPT, kept separate from your main chat. OpenAI had retired a commission-based checkout effort in March. I only read the opening of the Verge piece.</li>
+          <li><strong>OpenAI Acquires Odessia.</strong> This looks like an acqui-hire: founder Francis Davidson, formerly of Sonder, joins OpenAI, and the year-old travel agent, which raised $6 million from Sequoia, has already been shut down. OpenAI has announced no travel product, though it says 1.2 billion people use ChatGPT weekly.</li>
+          <li><strong>Oura Buys Counsel Health for $625 Million.</strong> The AI-native primary care service has been inside the Oura app since June. The deal follows Oura indefinitely postponing an IPO of up to $2.2 billion.</li>
+          <li><strong>Google&rsquo;s Two New TPUs.</strong> TPU 8tx, built with AMD, handles confidential training and inference with protection in the hardware, while TPU 8i Max combines two inference chips for double the memory, compute and bandwidth. Both extend the eighth generation introduced in April.</li>
+        </ul>
+
+        <h4 class="digest-theme">Rules, Risks and Proof</h4>
+        <ul class="digest-bullets">
+          <li><strong>New York&rsquo;s RAISE Act Takes Effect.</strong> The portal opened Tuesday. Developers with more than $500 million in annual revenue must register by January 1, 2027, publish safety frameworks, report critical incidents within 72 hours and issue transparency reports, or face fines of up to $1 million, then $3 million. A new office called DIGIT enforces it, and a $55 million research center at Binghamton University will evaluate advanced systems.</li>
+          <li><strong>PSI and the Aaronson-Ambainis Conjecture.</strong> David Turturean used early access to Fable 5.2 to solve an 18-year-old quantum computing problem. Scott Aaronson says he does not fully understand the proof but believes it because it was formalized in Lean, and that he is puzzled it was missing from OpenAI&rsquo;s recent batch of solved problems. Turturean said it might be the last paper he ever writes.</li>
+          <li><strong>Hugging Face on Open Source Security.</strong> Irene Solaiman links October&rsquo;s OpenCode attack on API keys, a summer breach of Hugging Face by an OpenAI agent swarm after evaluation data, and Fireworks&rsquo; disclosure that attackers reached some customers&rsquo; model weights, datasets and billing information. Her worry is that defending these platforms means closing the permissiveness that makes them special.</li>
+          <li><strong>The Huang coverage.</strong> TechCrunch&rsquo;s timeline says Megaspeed reportedly bought $4.8 billion of Nvidia chips in two years, and that The Information reported a related Chinese company facilitated $7.5 billion of purchases, including banned chips. Bloomberg reported Nvidia&rsquo;s head lawyer intervened in a 2025 government probe of Megaspeed. The Verge opinion piece argues the chips that power the boom make their maker an obvious espionage target; I read only its opening.</li>
+          <li><strong>ChatGPT Plus for Veterans.</strong> OpenAI says more than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. OpenAI blocked automated reading, so this is from its feed summary only.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The Anthropic filing is a lesson in how control gets engineered. The founders sell about $250 million each, yet stay in charge through Class F stock, the Long-Term Benefit Trust picks a board majority, and the people who buy Class A get limited influence. Meanwhile $26 billion of non-voting Class N stock goes to seven companies that supply chips, cloud capacity and distribution. Money and dependence are tangled together: Nvidia is both a supplier and a $10 billion investor, and the same is true of Google. A valuation of $1.404 trillion is therefore not only a verdict on Claude. It is a bet on a whole supply chain that has chosen to sit inside the company it supplies.</p>
+
+        <p>The second thread is that every product launch today comes with a rule about who may be present. Claude Meetings introduces itself in the chat and refuses to stay once an outside guest joins. OpenAI&rsquo;s Business Agents are verified, and kept apart from your private conversation. New York&rsquo;s law demands registration and 72-hour incident reports. Even Hugging Face&rsquo;s Solaiman is arguing about who gets to contribute. The detail worth noticing is how much of the safety work is now access control rather than model behavior: who can join, who is verified, who can submit a pull request, whose weights were reachable. Fireworks, OpenCode and the Hugging Face breach all fit that pattern, since in each the weak point was credentials or data sitting in one place.</p>
+
+        <p>Third, agents are becoming the default interface, and every company wants to be the one the agent calls. Adobe shipped an MCP so Claude, ChatGPT and Gemini can drive Photoshop. OpenAI wants businesses to build agents that live in ChatGPT. Meta put Muse on your wrist, Kora wants agents in the operating system itself, and Spotify made its DJ personalities selectable. Kora&rsquo;s McMaster also says AI coding tools made his team at least five times faster, which is the quiet reason new platforms like his are suddenly feasible with 50 people.</p>
+
+        <p>Finally, the PSI result shows what verification looks like when the machine is ahead of the humans. Aaronson trusts a proof he cannot fully follow because Lean checked it, and a human team explained it. That is a different kind of trust from the one in the Claude Meetings pitch. Machine-checked proof of a math claim is rigorous, while a meeting summary is a judgment call. The industry is mixing the two without always saying which one it is offering.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and the sector is being reclassified from a collection of startups into infrastructure. A company on the verge of a $1.4 trillion listing, a state regulator with a registration portal and a fine schedule, and a chip supply chain now entangled with national security all point the same direction. Infrastructure gets disclosed, audited and governed, and its owners are asked to report incidents on a clock. The RAISE Act&rsquo;s 72 hours is a modest rule, but it applies the same logic that governs utilities and banks, and it arrives in a state with a $55 million institution built to review the filings.</p>
+          <p>The honest caveat is how much of today&rsquo;s evidence is early or partial. The IPO numbers are an estimated range, not a priced offering, and the filing itself shows how far valuations have moved from the $2 trillion figure of a few months ago. The PSI proof is one researcher&rsquo;s result, checked formally but not yet widely digested. The hacking stories, from OpenCode to Fireworks, describe incidents still being investigated. What looks durable is the direction: concentration of capital in a few labs and suppliers, more formal oversight, and agents moving into every interface at once. The open question is whether the openness that Solaiman defends survives contact with all three.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Where Anthropic actually prices.</strong> The range is unusually broad, and the founders&rsquo; payout swings by about $28 million each between $70 and $78. Pricing above the range, as TechCrunch notes is common in hot deals, would say more about demand than any analyst note. First trades are expected around November 19.</li>
+          <li><strong>Who registers in New York first.</strong> The January 1, 2027 deadline is seven weeks away, and the state declined to give specifics on enforcement against companies that do not register. Watch whether OpenAI and Anthropic publish their safety frameworks early and whether other states copy the 72-hour rule.</li>
+          <li><strong>Whether Claude Meetings leaves beta and leaves Google Meet.</strong> It supports only Google Meet for now, and the guest-exclusion rule will decide whether companies actually trust it in sales and client calls. Also watch whether Microsoft and Google answer with their own in-call agents.</li>
+          <li><strong>The next AI-found proof.</strong> Aaronson&rsquo;s question about why the conjecture was missing from OpenAI&rsquo;s earlier batch suggests labs will race to claim results. Check whether other open problems fall to specialized harnesses like PSI&rsquo;s.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+</body>
+</html>

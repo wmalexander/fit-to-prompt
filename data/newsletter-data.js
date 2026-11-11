@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-10",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["cryptogram", "acronym", "crossword"]
+        lastUpdated: "2026-11-11",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: ["cryptogram", "acronym", "crossword", "wordsearch"]
     },
     issues: [
+        {
+            date: "2026-11-11",
+            volume: 1,
+            issueNumber: 141,
+            title: "Anthropic Sets IPO Price Range of $70 to $78 a Share, Implying a $1.4 Trillion Valuation",
+            description: "Daily AI news roundup - November 11, 2026. Anthropic sets its IPO price range at $70 to $78 a share, Claude Meetings joins your video calls, an unreleased Claude model helps solve an 18-year-old quantum problem, New York opens its AI safety registration portal, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-11.html",
+            storyCount: 20,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-11-10",
             volume: 1,
