@@ -154,7 +154,7 @@
             <article class="card">
               <div class="tags"><span class="tag high">CVSS 8.8</span><span class="tag mono">CVE-2026-113663</span><span class="tag ">AG2</span></div>
               <h3><a href="https://github.com/advisories/GHSA-2h4w-29cv-2cmv">AG2's "read-only" shell tool for agents can be tricked with a newline</a></h3>
-              <p>NVD says the sandbox filter in AG2 and AutoGen skips newline characters, so a command that passes the allow-list can carry a second command that runs on the host. That undoes <code>allowed=[...]</code> and <code>readonly=True</code>. It is fixed in AG2 1.1.1 and AutoGen 0.14.1 or later.</p>
+              <p>NVD says the sandbox filter in AG2 and AutoGen skips newline characters, so a command that passes the allow-list can carry a second command that runs on the host. That undoes <code>allowed=[...]</code> and <code>readonly=True</code>. It affects AG2 before 1.1.1 and AutoGen 0.13.2 through 0.14.1.</p>
               <p class="do"><strong>Do</strong>Upgrade AG2 to 1.1.1 or later and AutoGen to a version past 0.14.1. Run agent shells in a container, not on the host.</p>
               <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-2h4w-29cv-2cmv">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-113663">NVD</a></div>
             </article>
