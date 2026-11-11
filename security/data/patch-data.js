@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-10"
+        lastUpdated: "2026-11-11"
     },
     issues: [
+        {
+            date: "2026-11-11",
+            issueNumber: 8,
+            title: "React, Rails and Git all have serious bugs to patch before you clone anything",
+            summary: "React Server Components has a critical remote code execution bug fixed in 19.0.9 and later, Rails Active Storage can leak secrets, and Git fixes a submodule clone attack.",
+            url: "https://fittoprompt.com/security/issues/2026-11-11.html",
+            pressure: "high",
+            itemCount: 15
+        },
         {
             date: "2026-11-10",
             issueNumber: 7,

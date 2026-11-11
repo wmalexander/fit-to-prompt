@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>React, Rails and Git all have serious bugs to patch before you clone anything | Fit to Patch No. 8, November 11, 2026</title>
+  <meta name="description" content="React Server Components has a critical remote code execution bug fixed in 19.0.9 and later, Rails Active Storage can leak secrets, and Git fixes a submodule clone attack.">
+  <meta property="og:title" content="Fit to Patch No. 8: React, Rails and Git all have serious bugs to patch before you clone anything">
+  <meta property="og:description" content="React Server Components has a critical remote code execution bug fixed in 19.0.9 and later, Rails Active Storage can leak secrets, and Git fixes a submodule clone attack.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-11.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Wednesday, November 11, 2026</span>
+        <span>No. 8</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>The React team patched a critical remote code execution bug in React Server Components, so check your apps and upgrade to 19.0.9, 19.1.10, 19.2.9 or 19.3.1.</li>
+            <li>Rails apps that resize images with ImageMagick can leak secrets, so upgrade to 8.1.4.1 or 8.0.5.2.</li>
+            <li>Git fixed a bug where cloning an untrusted repository with submodules can run an attacker's code, so install 2.56.1.</li>
+            <li>Node.js security releases are due today, and attackers are using a login bypass on Xen Orchestra.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.5 v4.0</span><span class="tag mono">CVE-2026-126187</span><span class="tag ">React</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3">React Server Components has a critical bug that lets strangers run code on the server</a></h3>
+              <p>The React team says crafted requests aimed at frameworks that use React Server Components can run code on the server with no login. It affects react-server-dom-webpack, react-server-dom-parcel and react-server-dom-turbopack in versions 19.0.0 through 19.0.8, 19.1.0 through 19.1.9, 19.2.0 through 19.2.8, and 19.3.0. React says it only applies in extremely rare cases, where a response carries several typed arrays and a value the attacker controls. An app with no server-side React, or no framework or bundler plugin that supports Server Components, is not affected. I found no report of attacks in the wild, and the bug is not in the CISA catalog.</p>
+              <p class="do"><strong>Do</strong>Run <code>npm ls react-server-dom-webpack react-server-dom-parcel react-server-dom-turbopack</code> in each app and any framework starter it came from. Upgrade to 19.0.9, 19.1.10, 19.2.9 or 19.3.1, whichever matches your line. Next.js and other frameworks may bundle their own copy, so check their release notes too.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126187">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-126082</span><span class="tag ">Ruby on Rails</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126082">Rails apps that resize images with ImageMagick can leak secrets to strangers</a></h3>
+              <p>NVD says Active Storage before 8.1.4.1 and 8.0.5.2 can let an unauthenticated attacker write files on the server, and read files too when attachments sit on the Disk service. Those files usually include <code>secret_key_base</code> and credentials for other systems. It applies to apps that process attachments with ImageMagick. I did not find a vendor advisory yet, so this rests on the NVD record, which is still marked "Received".</p>
+              <p class="do"><strong>Do</strong>Upgrade Rails to 8.1.4.1 or 8.0.5.2. If an app was exposed, rotate <code>secret_key_base</code> and any credentials stored on the server.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126082">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">Fixed in 2.56.1</span><span class="tag ">Git</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html">Git fixes a bug where cloning a booby-trapped repository with submodules can run the attacker's code</a></h3>
+              <p>An extremely long path in a repository can slip past Git's safety check, then get written to disk under a shorter name set to <code>.git</code>. That lets an attacker swap a submodule's <code>.git</code> file for a link to a folder of malicious hooks, which Git then runs. The Hacker News says the same releases fix five other flaws. The CVE number is not in NVD yet, so I am not printing it. GitHub has fixed github.com, and says GitHub Enterprise Server is fixed in 3.19.15, 3.20.11, 3.21.9 and 3.22.4. Git for Windows had no fixed build as of Tuesday evening.</p>
+              <p class="do"><strong>Do</strong>Install Git 2.56.1, or the fix for your line (2.50.2, 2.51.3, 2.52.1, 2.53.1, 2.54.1 or 2.55.1). Until then, do not recursively clone repositories you do not trust, and update CI images that ship their own Git.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html">The Hacker News</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-89324</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-89324">Basel Post Types plugin lets anyone forge a login</a></h3>
+              <p>NVD says every version up to and including 1.18 has an authentication bypass. A coding slip makes the plugin always fall back to a fixed signing secret that is visible in the theme's source, so an attacker can build a valid login callback offline and send it to a public endpoint. The record does not list a fixed version and is marked "Deferred", and I found no report of attacks. Nothing else in the WordPress feeds met the bar today: Wordfence's 9.1.0 post is a product release, and the PHP and WordPress.org feeds were quiet.</p>
+              <p class="do"><strong>Do</strong>If you run Basel, which usually comes bundled with the Basel theme, check the plugin version. On 1.18 or earlier, deactivate it until the author ships a fix, and review recent new or changed administrator accounts.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-89324">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">Due today</span><span class="tag ">Node.js</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Node.js security releases are due today, and none were posted yet when I checked</a></h3>
+              <p>The project says new 26.x, 24.x and 22.x releases land on or shortly after November 11, and the highest severity fixed is High. The latest release on the blog at 4:30 AM ET was 26.13.0 from October 28. Plan to upgrade the same day; End-of-Life lines are always affected.</p>
+            </div>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.2</span><span class="tag mono">CVE-2026-125117</span><span class="tag high">CVSS 7.5</span><span class="tag mono">CVE-2026-125119</span><span class="tag ">Mongoose</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-8332-j7wj-wjw4">Mongoose has two new bugs, one that overwrites built-in functions and one that quietly turns off query filtering</a></h3>
+              <p>Per NVD, CVE-2026-125117 lets crafted keys such as <code>toString</code> make Mongoose write into shared built-in functions, which can break later queries on unrelated models. CVE-2026-125119 means the <code>sanitizeFilter</code> option set on the connection is never read, so an app that trusts it can still match accounts with a crafted password object. Both are fixed in 6.13.12, 7.8.13, 8.24.7 and 9.11.4. Neither is marked exploited. Yesterday's Mongoose bug was a different one.</p>
+              <p class="do"><strong>Do</strong>Upgrade Mongoose to the fixed version for your line. Set <code>sanitizeFilter</code> on each query too, and cast request values to strings before using them in a filter.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-8332-j7wj-wjw4">Mongoose advisory</a> · <a href="https://github.com/advisories/GHSA-gg4r-jv3p-qx3c">second advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125117">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125119">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 7.5</span><span class="tag mono">CVE-2026-119191</span><span class="tag ">node-forge</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-rhr8-3pm8-cq29">node-forge can be made to burn CPU and memory on nested input</a></h3>
+              <p>NVD says versions before 1.4.1 skip the depth limit when reading nested BIT STRING values, so a crafted certificate can cause heavy CPU and memory use. It matters if your server parses certificates or keys from strangers. Upgrade node-forge to 1.4.1 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag low">Quiet</span></div>
+              <h3><a href="https://httpd.apache.org/security/vulnerabilities_24.html">Nothing new for Apache today</a></h3>
+              <p>The candidate feeds showed no new httpd, Tomcat or Struts advisories, and none of the new KEV entries touch Apache. This slot stays open for the next one.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag kev">Exploited per vendor</span><span class="tag crit">Auth bypass</span><span class="tag ">Xen Orchestra</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html">Attackers are using a cookie trick to log in as admin on Xen Orchestra</a></h3>
+              <p>Vates says a crafted <code>authenticationToken</code> cookie makes Xen Orchestra treat an empty object as a valid token and sign the request in as the first token's owner, which leads to admin access and code running as root on managed hosts. Vates says it is seeing exploitation and lists indicators, including cron files named <code>zz-ustar</code>. There is no CVE yet (it is tracked as VSA-2026-062), and it is unclear whether it was a zero-day. This is infrastructure rather than web code, but many web teams run it.</p>
+              <p class="do"><strong>Do</strong>Upgrade to Xen Orchestra 6.9.1 (stable) or 6.10.0 (latest). Keep it off the public internet, and if the indicators match, rotate every password and secret.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html">The Hacker News</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 8.8</span><span class="tag mono">CVE-2026-125350</span><span class="tag ">Chrome</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html">The Chrome zero-day from yesterday now has a CVE number, and a second serious Chrome bug was fixed with it</a></h3>
+              <p>Yesterday's briefing covered the exploited Chrome XML bug without a number. It is now CVE-2026-125350, and CISA added it to its exploited list on November 10 with a November 24 deadline. NVD also lists CVE-2026-125347 (9.6, a file system permission bug that needs social engineering and could run code outside the sandbox) in the same Chrome 157.0.8103.50 release. That second one is not marked exploited.</p>
+              <p class="do"><strong>Do</strong>If Chrome and other Chromium browsers are not on 157.0.8103.50 or later, update and relaunch. That includes browsers embedded in test tools.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/google-issues-chrome-security-update.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125350">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125347">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Breach</span><span class="tag ">Railway</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html">Railway says stolen customer AI keys led to about $740,000 in unauthorized charges</a></h3>
+              <p>The hosting platform says an October breach let an attacker decrypt stored variables in at most 1.85% of workspaces, about 100,000, and the queries hunted for AI provider keys. Linked-account tokens for 1,852 users were also taken and have been reset. Railway also says it will pay the charges itself when an AI provider will not refund them. The figures are the company's own. Treat any key kept as a platform environment variable as exposed if you were a customer, and rotate it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag kev">Exploited per vendor</span><span class="tag crit">RCE</span><span class="tag ">SGLang</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html">A bug in the SGLang inference server let an attacker run code on NEAR AI's servers</a></h3>
+              <p>NEAR AI says an attacker used a remote code execution flaw in SGLang on an inference server last Sunday, then reached a deprecated product and 18 AI agents on an older deployment. About 100 users' account details were downloaded, and two customers' API keys showed up in logs and were revoked. The privacy mode that runs inside a trusted execution environment did not help, since the vulnerable software ran inside it. The flaw has no CVE number yet. These details come from NEAR AI's own report.</p>
+              <p class="do"><strong>Do</strong>If you run SGLang, ask the project for the fixed release and keep the server off the open internet. Keep API keys out of logs.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html">The Hacker News</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.8</span><span class="tag mono">CVE-2026-113663</span><span class="tag ">AG2</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-2h4w-29cv-2cmv">AG2's "read-only" shell tool for agents can be tricked with a newline</a></h3>
+              <p>NVD says the sandbox filter in AG2 and AutoGen skips newline characters, so a command that passes the allow-list can carry a second command that runs on the host. That undoes <code>allowed=[...]</code> and <code>readonly=True</code>. It is fixed in AG2 1.1.1 and AutoGen 0.14.1 or later.</p>
+              <p class="do"><strong>Do</strong>Upgrade AG2 to 1.1.1 or later and AutoGen to a version past 0.14.1. Run agent shells in a container, not on the host.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-2h4w-29cv-2cmv">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-113663">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Secrets</span><span class="tag ">Coding agents</span></div>
+              <h3><a href="https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github">Dark Reading says a Claude Code command left credentials in public Git repositories</a></h3>
+              <p>I could not read the article because the site blocked automated access, so this is only what the feed summary says: a command in Claude Code can save files containing credentials and other sensitive data into public Git repositories. I cannot confirm the details. Until the full report is readable, check what your agent writes into repos and scan for committed keys.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag med">Worth reading</span><span class="tag ">Pen-test tools</span></div>
+              <h3><a href="https://www.darkreading.com/cyberattacks-data-breaches/artex-ai-pen-test-tool-hackers-weapon">Artex, a pen-testing framework, is being used by attackers</a></h3>
+              <p>Again from the feed summary only, since the page was blocked: forks of the open source Artex framework, plus 45 similar tools, can still run credential attacks and cloud breaches at machine speed. The takeaway is that attackers use the same AI testing tools you do.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Check every app for react-server-dom-* packages and upgrade to 19.0.9, 19.1.10, 19.2.9 or 19.3.1.</li>
+            <li>Upgrade Rails apps that use ImageMagick to 8.1.4.1 or 8.0.5.2.</li>
+            <li>Update Git to 2.56.1 (or your line's fix) on laptops and CI images.</li>
+            <li>Update Chrome and other Chromium browsers to 157.0.8103.50 or later.</li>
+            <li>Upgrade Xen Orchestra to 6.9.1 or 6.10.0 and take it off the public internet.</li>
+            <li>Watch for the Node.js security releases today and plan the upgrade.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125350">CVE-2026-125350</a> <span class="kev-yes">KEV 11-10</span><span class="meta">Chrome before 157.0.8103.50 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126187">CVE-2026-126187</a><span class="meta">React Server Components packages, see fixed versions · 9.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126082">CVE-2026-126082</a><span class="meta">Rails Active Storage before 8.1.4.1 and 8.0.5.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-89324">CVE-2026-89324</a><span class="meta">Basel Post Types through 1.18 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125347">CVE-2026-125347</a><span class="meta">Chrome before 157.0.8103.50 · 9.6 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125117">CVE-2026-125117</a><span class="meta">Mongoose before 6.13.12, 7.8.13, 8.24.7 and 9.11.4 · 8.2 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125119">CVE-2026-125119</a><span class="meta">Mongoose before 6.13.12, 7.8.13, 8.24.7 and 9.11.4 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-113663">CVE-2026-113663</a><span class="meta">AG2 before 1.1.1, AutoGen through 0.14.1 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119191">CVE-2026-119191</a><span class="meta">node-forge before 1.4.1 · 7.5 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 11, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
