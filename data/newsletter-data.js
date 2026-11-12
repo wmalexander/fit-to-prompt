@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-11",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["cryptogram", "acronym", "crossword", "wordsearch"]
+        lastUpdated: "2026-11-12",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["cryptogram", "acronym", "crossword", "wordsearch", "scramble"]
     },
     issues: [
+        {
+            date: "2026-11-12",
+            volume: 1,
+            issueNumber: 142,
+            title: "Nvidia Preparing to Oust CEO Jensen Huang After Affair With Woman U.S. Officials Deemed a Chinese Spy",
+            description: "Daily AI news roundup - November 12, 2026. Nvidia's board prepares to oust CEO Jensen Huang, who might succeed him, how much of your 401(k) rides on the chipmaker, Google's Gemini Decision 1 and the System One model wave, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-12.html",
+            storyCount: 20,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-11-11",
             volume: 1,
