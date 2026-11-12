@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-11"
+        lastUpdated: "2026-11-12"
     },
     issues: [
+        {
+            date: "2026-11-12",
+            issueNumber: 9,
+            title: "Apache's HTTP/2 module has a code-running bug, and Node.js fixes key-leaking flaws",
+            summary: "Apache HTTP Server 2.4.71 fixes a critical HTTP/2 bug that can let strangers run code, Node.js fixes flaws that can leak TLS keys, and a GitHub Actions secret stealer is hitting thousands of repositories.",
+            url: "https://fittoprompt.com/security/issues/2026-11-12.html",
+            pressure: "high",
+            itemCount: 14
+        },
         {
             date: "2026-11-11",
             issueNumber: 8,

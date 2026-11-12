@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apache's HTTP/2 module has a code-running bug, and Node.js fixes key-leaking flaws | Fit to Patch No. 9, November 12, 2026</title>
+  <meta name="description" content="Apache HTTP Server 2.4.71 fixes a critical HTTP/2 bug that can let strangers run code, Node.js fixes flaws that can leak TLS keys, and a GitHub Actions secret stealer is hitting thousands of repositories.">
+  <meta property="og:title" content="Fit to Patch No. 9: Apache's HTTP/2 module has a code-running bug, and Node.js fixes key-leaking flaws">
+  <meta property="og:description" content="Apache HTTP Server 2.4.71 fixes a critical HTTP/2 bug that can let strangers run code, Node.js fixes flaws that can leak TLS keys, and a GitHub Actions secret stealer is hitting thousands of repositories.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-12.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Thursday, November 12, 2026</span>
+        <span>No. 9</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Apache HTTP Server has a critical bug in its HTTP/2 module that can let a stranger run code, so upgrade to 2.4.71 or turn HTTP/2 off.</li>
+            <li>Node.js fixed 16 flaws, including HTTP/2 and HTTPS bugs that can crash a server or leak other users' data and TLS keys, so install 22.23.5, 24.22.3 or 26.13.1.</li>
+            <li>An attacker with thousands of stolen GitHub logins is planting a secret stealer in CI workflows, so search your repositories for the signs and rotate secrets if you find them.</li>
+            <li>Two WordPress plugins, AskAny and Security For WooCommerce, let strangers run code or log in as any user.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Red Hat 9.8</span><span class="tag mono">CVE-2026-119618</span><span class="tag ">Apache httpd</span></div>
+              <h3><a href="https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2026-119618">Apache's HTTP/2 module has a critical bug that can let a stranger run code on the server</a></h3>
+              <p>A timing bug in mod_http2 can corrupt memory and lead to remote code execution with no login. It affects Apache HTTP Server 2.4.55 through 2.4.70, and the standalone mod_h2 module from 2.0.8 through 2.0.42. Only servers with HTTP/2 turned on are exposed, which means a <code>Protocols</code> line that lists <code>h2</code> or <code>h2c</code>, server-wide or in any virtual host. NVD has no score yet; the 9.8 is Red Hat's rating, and Red Hat labels it Important on RHEL 9 and 10 because its builds make the attack harder. The sources disagree on proof: Red Hat says public research shows a reliable exploit, while Wiz says no exploit is available and no attacks have been reported. I found no CISA listing. Wiz also says 64% of the cloud environments it sees run a vulnerable version, which is the vendor's own figure.</p>
+              <p class="do"><strong>Do</strong>Run <code>httpd -v</code> (or <code>apache2 -v</code>) and upgrade to 2.4.71. On a distro package, install the vendor's fix instead: RHEL 9 ships mod_http2-2.0.26-7.el9_9.1 and RHEL 10 ships mod_http2-2.0.29-5.el10_3.1, while Debian bookworm and trixie had no fix listed when I checked. If you cannot patch today, set <code>Protocols http/1.1</code> and remove <code>h2</code> and <code>h2c</code> everywhere, then reload.</p>
+              <div class="sources">Sources: <a href="https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2026-119618">Apache advisory</a> · <a href="https://access.redhat.com/security/cve/cve-2026-119618">Red Hat</a> · <a href="https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability">Wiz</a> · <a href="https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119618">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.2 v3.0</span><span class="tag mono">CVE-2026-123863</span><span class="tag high">CVSS 8.1 v3.0</span><span class="tag mono">CVE-2026-123864</span><span class="tag high">CVSS 7.5 v3.0</span><span class="tag mono">CVE-2026-123866</span><span class="tag ">Node.js</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Node.js fixes 16 flaws, including ones that crash servers and leak other users' data</a></h3>
+              <p>CVE-2026-123863 lets any client crash a default HTTP/2 server that replies before the request body arrives. CVE-2026-123866 can make an HTTP/2 server send a client pieces of memory, including other connections' responses. CVE-2026-123864 can expose TLS private keys and other users' requests on HTTPS servers, but only when a handler calls <code>res.flushHeaders()</code> early and later calls <code>res.end()</code> with data. Seven of the 16 are rated high. Plain <code>node:http</code> servers are not affected by the HTTPS bug. The project lists no workaround and reports no attacks, and it does not say whether to replace TLS keys after updating. End-of-life lines such as 20.x and 25.x get no fix.</p>
+              <p class="do"><strong>Do</strong>Upgrade to 22.23.5, 24.22.3 or 26.13.1, and move off 20.x and 25.x. If a Node process terminates TLS or HTTP/2 itself and has a handler like the one above, consider replacing its TLS key as a precaution.</p>
+              <div class="sources">Sources: <a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Node.js advisory</a> · <a href="https://thehackernews.com/2026/11/nodejs-fixes-16-flaws-including-http2.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123863">NVD 123863</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123864">NVD 123864</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123866">NVD 123866</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">Active campaign</span><span class="tag ">GitHub Actions</span><span class="tag ">npm</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/wfx-phantom-the-github-actions-secret-stealer">Stolen GitHub logins are being used to plant a secret stealer in CI workflows</a></h3>
+              <p>Starting November 10, an attacker with stolen tokens for thousands of accounts opened pull requests titled <code>docs: dependency audit notes</code> from a <code>wfx-docs</code> branch, then pushed a script that copies the secrets and cloud credentials a workflow can reach and reverts the change within minutes. Aikido counts 1,806 or more repositories where it ran; SafeDep counts 8,093 that received malicious commits. It is not a GitHub bug, and the source of the stolen tokens is unexplained. StepSecurity says new copies now send data only to Telegram, so blocking the published IP addresses no longer helps.</p>
+              <p class="do"><strong>Do</strong>Search every repository you can write to for the branch <code>wfx-docs</code> and for commits titled <code>ci: refresh build cache</code>, <code>chore: add ci helper</code> or <code>chore: add dependency audit workflow</code>. A missing run number in the Actions tab after such a commit means it probably ran. If you find one, rotate every secret and cloud role the workflow could reach, revoke the author's tokens and keys, and turn on 2FA.</p>
+              <div class="sources">Sources: <a href="https://www.stepsecurity.io/blog/wfx-phantom-the-github-actions-secret-stealer">StepSecurity</a> · <a href="https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories">Aikido</a> · <a href="https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html">The Hacker News</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-121497</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121497">AskAny lets strangers upload PHP files and run code</a></h3>
+              <p>Per NVD, the AskAny plugin before 2.2.0 trusts the file type the browser reports on chat attachments, so an unauthenticated visitor can upload a PHP file and run it. It only applies when visitor attachments are turned on.</p>
+              <p class="do"><strong>Do</strong>Update AskAny to 2.2.0 or later. If you cannot, turn off visitor attachments or deactivate the plugin, and look for unexpected .php files in its upload folder.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121497">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-123695</span><span class="tag wp">WordPress</span><span class="tag ">WooCommerce</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123695">Security For WooCommerce lets anyone log in as any user, including admins</a></h3>
+              <p>Per NVD, the plugin leaves several REST routes open, so an unauthenticated visitor can generate login tokens for every user, fetch them, and sign in as an administrator. It affects versions through 1.0.16, and I found no fixed version listed.</p>
+              <p class="do"><strong>Do</strong>Deactivate and remove Security For WooCommerce until the author ships a fix. Check the user list for administrators you do not recognize and reset passwords for existing admins.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123695">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.1 v3.1</span><span class="tag mono">CVE-2026-126537</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126537">Ninja Forms File Uploads add-on can be used to delete or read server files</a></h3>
+              <p>NVD says versions up to 3.3.36 let a public form submission point the add-on at a file path of the attacker's choosing, which can delete that file or send it out through S3, Dropbox or Google Drive. NVD marks the entry deferred, and I found no fixed version, so update to the newest release and check its changelog.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.8 v3.1</span><span class="tag mono">CVE-2026-118041</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118041">Contest Gallery lets an author-level user upload files that run as code</a></h3>
+              <p>Per NVD, versions before 34.0.3 do not clean file names in the sale file-replacement feature, so a user with Author access or above can write a file with any name and reach remote code execution. Update to 34.0.3 or later and review who holds Author roles.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.8 v3.1</span><span class="tag mono">CVE-2026-118411</span><span class="tag ">Apache Roller</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118411">Apache Roller can be tricked into creating an attacker's admin account</a></h3>
+              <p>Per NVD, Roller 5.0.1 through 6.1.6 only checked the request token on POST requests, but admin actions also accepted GET. If a logged-in admin opens a link the attacker controls, a new administrator account can be created. Upgrade to Roller 6.1.7 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Still open</span><span class="tag mono">CVE-2026-126187</span><span class="tag ">React</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-xqc2-xf4c-x3h3">Yesterday's React Server Components fix still needs checking in your apps</a></h3>
+              <p>The critical bug (9.5, CVSS v4.0) in react-server-dom-webpack, react-server-dom-parcel and react-server-dom-turbopack is fixed in 19.0.9, 19.1.10, 19.2.9 and 19.3.1. React says it applies only in rare cases, and I found no new reports of attacks today. Frameworks such as Next.js can bundle their own copy, so check their release notes too.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">Research</span><span class="tag ">CSP</span></div>
+              <h3><a href="https://portswigger.net/research/blind-trust-stealing-credentials-through-csp">A Content Security Policy that trusts the wrong host can still let attackers steal logins</a></h3>
+              <p>PortSwigger describes two common mistakes. A script allow-list that names a host serving a JSONP endpoint or an old AngularJS copy lets an attacker load code from an allowed origin, and PortSwigger's new Burp AT skill checks policies against a list of more than 350 known examples. A policy that does not restrict <code>form-action</code> lets an injected form send typed credentials to an attacker even when no script runs, because <code>form-action</code> does not fall back to <code>default-src</code>.</p>
+              <p class="do"><strong>Do</strong>Open your site's <code>Content-Security-Policy</code> header, add an explicit <code>form-action 'self'</code>, and remove wildcard or CDN hosts from <code>script-src</code> in favor of nonces or hashes with <code>strict-dynamic</code>.</p>
+              <div class="sources">Sources: <a href="https://portswigger.net/research/blind-trust-stealing-credentials-through-csp">PortSwigger Research</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">AI-assisted attacks</span><span class="tag ">AWS</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/">Attackers are running an AI pentest tool to steal AWS keys from web servers</a></h3>
+              <p>Arctic Wolf reports attackers hosting the open-source AntiFox agent platform on Alibaba Cloud, using it to deploy webshells, read config files and database connection strings, and then call AWS with valid IAM keys. In one case they made hundreds of API calls in about 30 minutes. AWS says its services were not compromised and that the keys came from customers' compromised applications.</p>
+              <p class="do"><strong>Do</strong>Keep AWS keys out of app config files, remove unused IAM users, and review CloudTrail for bursts of denied calls followed by a success.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/">BleepingComputer</a> · <a href="https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html">The Hacker News</a> · <a href="https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/">Unit 42</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">AI-built apps</span><span class="tag ">Grok</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html">Most apps built with Grok's chat builder are open to anyone, and some hold private data</a></h3>
+              <p>Claroc found 37,571 Grok-built apps online, and 35,578 needed no sign-in. About 1 in 10 held internal business or personal data, and the researchers estimate roughly 2% held high or critical material. The share-with-anyone-who-has-the-link option was preselected, and app addresses can be found through DNS records. These figures come from the researchers' own report.</p>
+              <p class="do"><strong>Do</strong>If you or your staff publish apps from an AI builder, set access to "Only you" or "Invited users" and move any password or customer data out of the app.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html">The Hacker News</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Research</span><span class="tag ">AI agents</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html">Microsoft shows a coding agent's model can be backdoored by editing fewer than 10 neurons</a></h3>
+              <p>The attacker has to be able to change the model's weights. A chosen trigger, such as a tool error, then makes the model output a command the agent runs with its own permissions. Microsoft says it has not seen attackers use it. The practical advice is to download models only from sources you trust and to limit what an agent is allowed to run.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag low">Worth reading</span><span class="tag ">Unit 42</span></div>
+              <h3><a href="https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/">Unit 42 counts more than 1,900 exposed AI red-team tool servers</a></h3>
+              <p>As of October, Unit 42 found 1,323 internet-facing hosts running CyberStrikeAI and 609 running ARTEX, and it describes attackers using these tools against login and API workflows to reach cloud accounts. It is a short read on what defenders should watch for.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Check Apache servers with <code>httpd -v</code>; upgrade to 2.4.71 or set <code>Protocols http/1.1</code>.</li>
+            <li>Search your GitHub repositories for the <code>wfx-docs</code> branch and rotate secrets if you find a hit.</li>
+            <li>Upgrade Node.js to 22.23.5, 24.22.3 or 26.13.1.</li>
+            <li>Update AskAny to 2.2.0 and remove Security For WooCommerce.</li>
+            <li>Check React Server Components packages against yesterday's fixed versions.</li>
+            <li>Add <code>form-action 'self'</code> to your Content Security Policy.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121497">CVE-2026-121497</a><span class="meta">AskAny plugin before 2.2.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123695">CVE-2026-123695</a><span class="meta">Security For WooCommerce through 1.0.16 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119618">CVE-2026-119618</a><span class="meta">Apache httpd 2.4.55 to 2.4.70, fixed in 2.4.71 · NVD score pending</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126187">CVE-2026-126187</a><span class="meta">React Server Components packages · 9.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126537">CVE-2026-126537</a><span class="meta">Ninja Forms File Uploads through 3.3.36 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118041">CVE-2026-118041</a><span class="meta">Contest Gallery before 34.0.3 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118411">CVE-2026-118411</a><span class="meta">Apache Roller 5.0.1 to 6.1.6 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123863">CVE-2026-123863</a><span class="meta">Node.js 22.x, 24.x, 26.x HTTP/2 crash · 8.2 v3.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123864">CVE-2026-123864</a><span class="meta">Node.js HTTPS memory read · 8.1 v3.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123866">CVE-2026-123866</a><span class="meta">Node.js HTTP/2 memory leak · 7.5 v3.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 12, 2026 04:37 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
