@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-12",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["cryptogram", "acronym", "crossword", "wordsearch", "scramble"]
+        lastUpdated: "2026-11-13",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["cryptogram"]
     },
     issues: [
+        {
+            date: "2026-11-13",
+            volume: 1,
+            issueNumber: 143,
+            title: "Nvidia CEO Jensen Huang's Affair With Alleged Chinese Spy: A Timeline",
+            description: "Daily AI news roundup - November 13, 2026. The Jensen Huang scandal timeline, Washington losing Nvidia's AI policy backer, Huang agreeing to testify, Claude Whiteboards, Sheets and Data, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-13.html",
+            storyCount: 20,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-11-12",
             volume: 1,
