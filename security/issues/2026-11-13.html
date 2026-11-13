@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHP's code-running bugs are now exploited, and CISA lists two Barracuda flaws | Fit to Patch No. 10, November 13, 2026</title>
+  <meta name="description" content="PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two remote code execution bugs that CISA lists as exploited, Barracuda gateways are being attacked, and MongoDB has a critical crash bug.">
+  <meta property="og:title" content="Fit to Patch No. 10: PHP's code-running bugs are now exploited, and CISA lists two Barracuda flaws">
+  <meta property="og:description" content="PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two remote code execution bugs that CISA lists as exploited, Barracuda gateways are being attacked, and MongoDB has a critical crash bug.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-13.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Friday, November 13, 2026</span>
+        <span>No. 10</span>
+        <span class="pressure critical">Patch pressure: Critical</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>PHP has two code-running bugs that CISA lists as exploited, so upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35.</li>
+            <li>Barracuda gateways are being attacked through two chained bugs, and MongoDB has a critical bug that can crash a database after a failover.</li>
+            <li>Five WordPress plugins, including Descope and Ultimate Addons for Elementor Forms, let strangers log in as admin or run code.</li>
+            <li>The GitHub secret-stealing campaign grew to 61,764 repositories probed and has now reached a Packagist package.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-109618</span><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-109619</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://www.php.net/releases/8_5_12.php">Two PHP bugs that let a stranger run code on the server are now on CISA's exploited list</a></h3>
+              <p>Both bugs are in how PHP handles a request's memory, so they do not depend on a flaw in your app. CVE-2026-109618 comes from an out-of-memory error leaving data half set up, and CVE-2026-109619 comes from leftover state pointing at freed memory. NVD lists PHP 7.3.0 up to 8.2.35, 8.3 before 8.3.36, 8.4 before 8.4.27 and 8.5 before 8.5.12 as affected. Arctic Wolf says Apache with mod_php, PHP-FPM, php-cgi, FrankenPHP and LiteSpeed are all in scope, and that mod_php has the clearest demonstrated attack, in one request with no login. CISA added both on October 26. Public exploit code exists, but Arctic Wolf says most activity it sees is scanning, with few reliable attacks at scale. Check Point reports that attackers used PHP2Shell activity against the Mobile Access portal of unpatched Check Point gateways starting October 30, then used a separate root-access bug (CVE-2026-123039, 7.8 v3.1, not in KEV) to install a backdoor and, in some cases, wipe a VMware ESXi host. Arctic Wolf says the PHP bugs were found with AI-assisted research.</p>
+              <p class="do"><strong>Do</strong>Run <code>php -v</code> on every server and container, and upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35. PHP 7.x and 8.1 get no upstream fix, so use your OS vendor's backport or move to a supported branch. If you run Check Point gateways with Mobile Access, apply Check Point's fix for those bugs and the Gaia OS bug.</p>
+              <div class="sources">Sources: <a href="https://www.php.net/releases/8_5_12.php">PHP 8.5.12 release</a> · <a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w">PHP security advisory</a> · <a href="https://arcticwolf.com/resources/blog/php2shell-critical-php-vulnerabilities-enable-unauthenticated-remote-code-execution/">Arctic Wolf</a> · <a href="https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html">The Hacker News on Check Point</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618">NVD 109618</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619">NVD 109619</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123039">NVD 123039</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.3 v4.0</span><span class="tag mono">CVE-2026-116606</span><span class="tag high">CVSS 8.6 v4.0</span><span class="tag mono">CVE-2026-111560</span><span class="tag ">Barracuda</span></div>
+              <h3><a href="https://www.securityweek.com/recently-patched-barracuda-vulnerabilities-exploited-in-attacks/">Barracuda gateways can be taken over by chaining two bugs, and attackers are doing it</a></h3>
+              <p>CVE-2026-116606 is a login bypass in Barracuda Email Security Gateway versions before 9.4.0.030 that lets someone restore a crafted backup and change the appliance's settings. CVE-2026-111560 lets an administrator run commands as root on the Email Security Gateway, Load Balancer ADC, Web Application Firewall, Web Security Gateway, Message Archiver and WAF Control Center. Together they give root access. Barracuda says a small number of organizations were attacked, and CISA added both on November 10 with a November 13 deadline. Previdian counted 17 attempts against the first bug between November 9 and 11.</p>
+              <p class="do"><strong>Do</strong>Update every Barracuda product to the fixed release in Barracuda's November 2 advisory, and make sure the admin interface is not reachable from the internet.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/recently-patched-barracuda-vulnerabilities-exploited-in-attacks/">SecurityWeek</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116606">NVD 116606</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111560">NVD 111560</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.5 v4.0</span><span class="tag mono">CVE-2026-118383</span><span class="tag ">MongoDB</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html">A critical MongoDB bug lets an unauthenticated client crash a server after a failover</a></h3>
+              <p>Two requests with no login can leave a replica set member holding a booby-trapped waiting task. If that member later wins an election while still behind, it crashes before taking writes. Replica set, shard and config server members are affected; a standalone mongod is not. MongoDB rates it 9.5 and says it knows of no attacks. It mentions possible code execution, but Datadog's lab only produced a crash. Atlas clusters get the fix during maintenance.</p>
+              <p class="do"><strong>Do</strong>Upgrade every self-managed replica set member to the fixed release for your branch (8.0.37 is the fix on 8.0), then check the version each member reports. Until then, limit network access to the database.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118383">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-110959</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110959">Descope plugin before 1.2.0 accepts any login token and signs the visitor in as an admin</a></h3>
+              <p>Per NVD, the Descope plugin before 1.2.0 does not check the token it receives, so an unauthenticated attacker can get a session for any account, including an administrator, by supplying that account's email address. Update Descope to 1.2.0 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-124814</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124814">Ultimate Addons for Elementor Forms before 1.0.8 lets strangers upload PHP files</a></h3>
+              <p>Per NVD, the file upload field does not check file extensions, so an unauthenticated visitor can upload a PHP script and run code. Update to 1.0.8 or later, and look for unexpected .php files in your uploads folder.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 10.0 v3.1</span><span class="tag mono">CVE-2026-124815</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124815">Clockinator Lite before 1.1.0 lets strangers delete and read data from any database table</a></h3>
+              <p>Per NVD, several delete actions have no access check and take a table name from the visitor, so an unauthenticated attacker can run SQL injection. Update to 1.1.0 or later, or deactivate the plugin.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.6 v3.1</span><span class="tag mono">CVE-2026-124647</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124647">TI WooCommerce Wishlist before 2.0.7 has an SQL injection that needs no login</a></h3>
+              <p>Per NVD, user input reaches a database query unescaped in a front-end endpoint. Update to 2.0.7 or later on any store that uses the wishlist.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.1 v3.1</span><span class="tag mono">CVE-2026-111579</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111579">Forminator Forms before 1.58.4 can hand out an admin role without payment</a></h3>
+              <p>Per NVD, when a payment-gated registration form's payment gateway is unavailable, Forminator does not enforce payment on the server, so a visitor can register without paying and get the form's configured role, up to administrator. Update to 1.58.4 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Weekly count</span></div>
+              <h3><a href="https://www.wordfence.com/blog/2026/11/wordfence-intelligence-weekly-wordpress-vulnerability-report-november-2-2026-to-november-8-2026/">Wordfence counted 497 new plugin vulnerabilities in the week of November 2 to 8</a></h3>
+              <p>Wordfence's own report says 497 vulnerabilities in 312 plugins and one theme were added to its database that week, reported by 218 researchers. The figures are a week old and I read only the summary, but they show why keeping plugins updated on a schedule matters.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag ">Apache httpd</span><span class="tag mono">CVE-2026-119618</span></div>
+              <h3><a href="https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2026-119618">Apache's HTTP/2 bug from yesterday is still open, and it was found by AI scanners</a></h3>
+              <p>Apache credits Anthropic's OSS Scanner, which reported it on October 26, and two Google Cloud researchers who found it independently on November 3. A public proof of concept on GitHub reproduces crashes but does not show code execution. Defiant warns that WordPress updates cannot fix it because the bug is in the web server. Upgrade to 2.4.71 or set <code>Protocols http/1.1</code>. NVD still shows no score.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Node.js</span><span class="tag ">React</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Nothing new for Node.js, React or Next.js today, and two fixes from this week are still open</a></h3>
+              <p>None of today's feeds posted a new Node.js, React or Next.js release. Still open from this week: Node.js 22.23.5, 24.22.3 and 26.13.1, and React Server Components packages 19.0.9, 19.1.10, 19.2.9 and 19.3.1 (CVE-2026-126187). Confirm your servers and lockfiles use them.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">Browsers</span></div>
+              <h3><a href="https://www.securityweek.com/chrome-firefox-updates-patch-180-vulnerabilities/">Chrome 157 fixes 83 security bugs and Firefox 160 fixes 99</a></h3>
+              <p>Chrome 157.0.8103.78 and .79 include five critical use-after-free bugs, and neither Google nor Mozilla reports attacks. Firefox ESR 153.7 and 115.45 also shipped fixes. Update your own browsers and any test machines that run headless Chrome.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">Active campaign</span><span class="tag ">GitHub Actions</span><span class="tag ">Packagist</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/">The GitHub secret-stealing campaign grew: 4,837 hijacked accounts probed 61,764 repositories</a></h3>
+              <p>Aikido says the wfx-loot attacker has stolen secrets from at least 1,835 targets, and 92% of its pull requests are still open. Automated publishing also pushed the payload into the Packagist package digitalelvis/neuronai-studio 3.14.3 and two versions of a Go module, v1.0.278 and v1.0.280 of onuragtas/docker-env. Close any open pull request titled <code>docs: dependency audit notes</code>, and rotate secrets if a workflow ran one.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.3 v4.0</span><span class="tag mono">CVE-2026-120868</span><span class="tag mono">CVE-2026-120869</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html">Citrix fixes 12 NetScaler flaws, including a login bypass on NetScaler Console</a></h3>
+              <p>CVE-2026-120868 is a memory bug in packet handling that can crash any NetScaler ADC or Gateway. CVE-2026-120869 lets an unauthenticated attacker skip authentication on NetScaler Console. Citrix lists 14.1-73.57 and 13.1-64.39 as the fixed ADC and Gateway builds. I found no report of attacks.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.4 v4.0</span><span class="tag mono">CVE-2026-128067</span><span class="tag ">PyPI</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-xcvg-w56q-r89m">Pillow up to 12.3.0 can overflow memory when saving some TIFF images</a></h3>
+              <p>Python sites that save TIFFs through Pillow with custom size tags can hit a heap buffer overflow. GitHub's advisory lists 13.0.0 as the patched version. Upgrade Pillow if your app resizes or re-saves user uploads as TIFF.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Active campaign</span><span class="tag ">AI agent</span></div>
+              <h3><a href="https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/">Attackers used an open-source AI pentest tool to break into 10 of 19 targeted organizations</a></h3>
+              <p>Unit 42 says Chinese-speaking attackers ran the open-source Cairn framework, paired with the Zhipu GLM and DeepSeek models, in 25 operations against at least 19 organizations in August and September. Given only a target and a goal, it planned and ran its own steps. It got in at 10 of them, including dozens of valid credentials, more than a million personal records at one organization, and new administrator accounts on a production system. Unit 42 tracks the group as CL-STA-1238 and has moderate confidence it is China-linked intelligence collection. The article lists indicators such as 154.44.31[.]4 and 82.29.129[.]54.</p>
+              <p class="do"><strong>Do</strong>Assume your logins and admin panels are probed by tools that do not tire. Turn on MFA for admin accounts, rotate any credential that has appeared in a leak, and compare your firewall logs against Unit 42's indicator list.</p>
+              <div class="sources">Sources: <a href="https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/">Unit 42</a> · <a href="https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/">SecurityWeek on a related campaign</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">AI-found bugs</span></div>
+              <h3><a href="https://www.securityweek.com/chrome-firefox-updates-patch-180-vulnerabilities/">AI tools found today's biggest bugs: PHP, Apache and 18 Chrome flaws</a></h3>
+              <p>Arctic Wolf says the PHP bugs came from OpenAI-backed research, Apache credits Anthropic's scanner and Google researchers, and Google says researchers from Anthropic and OpenAI reported 18 of Chrome 157's fixes. Expect more patch days like this one.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Worth reading</span></div>
+              <h3><a href="https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer">Dark Reading looks at an attack where the intruder switched to AI-written scripts</a></h3>
+              <p>Per Dark Reading's summary, hand-typed commands failed against a US retailer, so the attacker used AI-generated scripts and moved sideways inside the network within minutes. I could not open the full article, so this is the feed summary only.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Run <code>php -v</code> everywhere and upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35.</li>
+            <li>Upgrade Apache to 2.4.71, or set <code>Protocols http/1.1</code> until you can.</li>
+            <li>Update every Barracuda device and take its admin interface off the internet.</li>
+            <li>Upgrade each MongoDB replica set member and confirm the version it reports.</li>
+            <li>Update Descope, Ultimate Addons for Elementor Forms, Clockinator Lite, TI WooCommerce Wishlist and Forminator.</li>
+            <li>Search your repositories for open <code>docs: dependency audit notes</code> pull requests.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618">CVE-2026-109618</a><span class="kev-yes">KEV 10-26</span><span class="meta">PHP before 8.2.35, 8.3.36, 8.4.27, 8.5.12 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619">CVE-2026-109619</a><span class="kev-yes">KEV 10-26</span><span class="meta">PHP before 8.2.35, 8.3.36, 8.4.27, 8.5.12 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116606">CVE-2026-116606</a><span class="kev-yes">KEV 11-10</span><span class="meta">Barracuda Email Security Gateway before 9.4.0.030 · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111560">CVE-2026-111560</a><span class="kev-yes">KEV 11-10</span><span class="meta">Barracuda ESG, ADC, WAF and others · 8.6 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118383">CVE-2026-118383</a><span class="meta">MongoDB replica set members · 9.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119618">CVE-2026-119618</a><span class="meta">Apache httpd 2.4.55 to 2.4.70, fixed in 2.4.71 · NVD score pending</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126187">CVE-2026-126187</a><span class="meta">React Server Components packages · 9.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124815">CVE-2026-124815</a><span class="meta">Clockinator Lite before 1.1.0 · 10.0 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110959">CVE-2026-110959</a><span class="meta">Descope plugin before 1.2.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124814">CVE-2026-124814</a><span class="meta">Ultimate Addons for Elementor Forms before 1.0.8 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120868">CVE-2026-120868</a><span class="meta">Citrix NetScaler ADC and Gateway · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120869">CVE-2026-120869</a><span class="meta">Citrix NetScaler Console · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124647">CVE-2026-124647</a><span class="meta">TI WooCommerce Wishlist before 2.0.7 · 8.6 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128067">CVE-2026-128067</a><span class="meta">Pillow up to 12.3.0, fixed in 13.0.0 · 8.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111579">CVE-2026-111579</a><span class="meta">Forminator Forms before 1.58.4 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123039">CVE-2026-123039</a><span class="meta">Check Point Gaia OS, local root · 7.8 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 13, 2026 04:50 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 31 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>

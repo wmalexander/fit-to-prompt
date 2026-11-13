@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-12"
+        lastUpdated: "2026-11-13"
     },
     issues: [
+        {
+            date: "2026-11-13",
+            issueNumber: 10,
+            title: "PHP's code-running bugs are now exploited, and CISA lists two Barracuda flaws",
+            summary: "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two remote code execution bugs that CISA lists as exploited, Barracuda gateways are being attacked through two chained bugs, and MongoDB has a critical crash bug.",
+            url: "https://fittoprompt.com/security/issues/2026-11-13.html",
+            pressure: "critical",
+            itemCount: 18
+        },
         {
             date: "2026-11-12",
             issueNumber: 9,
