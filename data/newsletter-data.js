@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-13",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["cryptogram"]
+        lastUpdated: "2026-11-14",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["cryptogram", "crossword"]
     },
     issues: [
+        {
+            date: "2026-11-14",
+            volume: 1,
+            issueNumber: 144,
+            title: "FAA Lifts Ground Stop as Homeland Security Chief Blames Tech Upgrades for 'Overwhelming' Antiquated Systems",
+            description: "Daily AI news roundup - November 14, 2026. The nationwide FAA ground stop, the Microsoft outage that stalled courts and police, Huang's exit hitting AI startup funding, banned Nvidia chips behind Chinese models, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-14.html",
+            storyCount: 20,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-11-13",
             volume: 1,

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 14, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 14, 2026. The nationwide FAA ground stop, the Microsoft outage that stalled courts and police, Huang&rsquo;s exit hitting AI startup funding, banned Nvidia chips behind Chinese models, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 144">
+  <meta property="og:description" content="Daily AI news roundup - November 14, 2026. The nationwide FAA ground stop, the Microsoft outage that stalled courts and police, Huang&rsquo;s exit hitting AI startup funding, banned Nvidia chips behind Chinese models, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Saturday, November 14, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 144</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">Infrastructure &middot; Aviation &middot; Outages</div>
+<a href="https://fortune.com/2026/11/13/faa-ground-us-airports-european-airlines-bomb-threats/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2301186720-e1794607585903.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.style.display='none'">
+<h2 class="headline-lead mb-3">FAA Lifts Ground Stop as Homeland Security Chief Blames Tech Upgrades for &lsquo;Overwhelming&rsquo; Antiquated Systems</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Nov 13</p>
+<div class="newspaper-body">
+<p>Millions of U.S. travelers were thrown into limbo Friday afternoon when the FAA ordered a nationwide ground stop at every U.S. airport, Fortune reports. Hours later it was lifted. Transportation Secretary Sean Duffy first blamed a communication issue affecting all Air Route Traffic Control Centers, then said the fix pointed to a legacy network problem. Homeland Security Secretary Markwayne Mullin said technology upgrades had &ldquo;overwhelmed&rdquo; the antiquated equipment.</p>
+<p>Mullin said it &ldquo;doesn&rsquo;t appear&rdquo; a cyberattack was involved but admitted &ldquo;there&rsquo;s nothing certain right now,&rdquo; and he ruled out a terrorist attack. Duffy asked Congress for emergency money to fix the FAA&rsquo;s aging systems, first saying $30 billion and then $50 billion. The stop came days after the FAA announced an AI tool for air traffic controllers and a day after a major Microsoft outage; Microsoft said it saw no link.</p>
+</div>
+</div>
+<div>
+<div class="kicker">Infrastructure &middot; Microsoft</div>
+<a href="https://fortune.com/2026/11/13/microsoft-outage-courts-police-hospitals-it-monoculture/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2301531894.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">One Microsoft Glitch Stalled Courts, Government Offices and Police, Exposing How Fragile America&rsquo;s Systems Really Are</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">An email outage that began Thursday left police, courts, hospitals and city halls scrambling. Maine&rsquo;s judicial branch warned that protection-order requests sent by email might never have arrived, New York City suspended Friday evictions, and a Manchester criminal trial was halted while court staff searched for a fax machine. Australia&rsquo;s spy agency and Japan&rsquo;s Foreign Ministry were hit too.</p>
+
+<div class="mt-5"></div>
+<div class="kicker">Opinion &middot; Security</div>
+<a href="https://fortune.com/2026/11/13/faa-ground-stop-microsoft-outage-china-espionage-national-security-sonnenfeld/" class="story-link">
+<h3 class="headline-standard mb-2">Air Traffic Control, Phone Systems and Emails Are All Down Following China&rsquo;s AI Espionage Scandal. Is There a Connection?</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Opinion &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A Fortune opinion column argues that two nationwide blackouts in two days, landing right after the Huang story, deserve clearer answers than officials have given. It concedes it is too early to know whether anything hostile is involved.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-14-cartoon.png" alt="A tired air traffic controller in a headset sits at an old CRT monitor and rotary phone above a huge tangle of cables, while a cheerful robot with a clipboard and wrench stands beside him with one foot on a frayed cable" class="w-full object-contain mb-2" style="max-height:420px;">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;The new AI tool is flawless. It just needs the old network to hold still.&rdquo;</p>
+<p class="byline mt-1">The robot, to the controller</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Startups &middot; Funding</div>
+<a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Jensen-Huang-nvidia.jpg?w=1024" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Jensen Huang&rsquo;s Departure Blasts Big Hole in AI Startup Funding, VCs and Founders Say</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Nvidia took part in 105 funding rounds this year, often as the largest investor, according to PitchBook. Investors say interim CEO Colette Kress is more conservative and may not keep writing the same checks, which could mean smaller rounds and lower valuations. One investor noted those checks also tied startups to Nvidia chips, so a pullback could open room for rivals.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; China</div>
+<a href="https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2301327883.jpg?resize=1200,795" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Export-Banned Nvidia Chips Are Behind China&rsquo;s Most Powerful AI Models. Uh-Oh, Jensen!</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Will DePue of Unemployment Labs analyzed the weights of open models from DeepSeek, Moonshot AI, MiniMax and Ant Group and found fingerprints of training on Blackwell chips, which the U.S. bans for China. TechCrunch notes this does not prove laws were broken, since the chips could have sat in offshore data centers such as those in Malaysia.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Consumer &middot; Commerce</div>
+<a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/chatgpt-wallet.jpg?resize=1200,729" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">ChatGPT&rsquo;s New Wallet Lets AI Agents Shop and Check Out for You</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">OpenAI&rsquo;s agents, called dots, can now complete purchases for a limited group of U.S. Pro subscribers with a Visa, Mastercard or American Express. Users review the items, total and card, then approve with Face ID or a fingerprint. Payments use a token instead of the real card number, and OpenAI plans spending limits later.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Agents &middot; Funding</div>
+<a href="https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Raising-money.jpg?resize=1200,829" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">AI Agent Startup LangChain Hits $3B Valuation</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">LangChain raised a $300 million Series C led by CapitalG, more than double its $1.25 billion valuation of a year ago. It says its LangSmith agent management tool has 7,000 customers, including Harvey, Rippling, Nvidia, Toyota and Salesforce, and pitches letting businesses own their own intelligence.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Security &middot; Data Breach</div>
+<a href="https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2024/07/GettyImages-2043993878-e1722276196662.jpg?resize=1200,676" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Uber Confirms Hackers Stole Thousands of Drivers&rsquo; License Information in Data Breach</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The data sat with Fireworks AI, which lets developers use open models and was breached last month. Notices list 2,567 people in Massachusetts, 3,430 in South Carolina and 1,873 in Rhode Island, and the total is expected to grow. Fireworks blamed a group that wants to sell stolen tokens for accessing LLMs. Notion also confirmed its data was taken.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Infrastructure &middot; Energy</div>
+<a href="https://techcrunch.com/2026/11/13/this-young-startup-wants-to-power-floating-data-centers-with-the-oceans-heat-and-investors-are-already-on-board/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/drogue-team.jpeg?resize=1200,900" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">This Young Startup Wants to Power Floating Data Centers With the Ocean&rsquo;s Heat, and Investors Are Already on Board</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Drogue, founded six months ago, has raised $20 million to harvest ocean heat to power data centers on floating vessels. A multi-megawatt prototype on an ocean-going ship is set to go to sea in early 2028. Its founder says developers plan on 8 to 10 year timelines while AI demand has grown 10x in three years.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Infrastructure &middot; Aviation</div>
+<a href="https://techcrunch.com/2026/11/13/u-s-government-grounds-all-flights-across-the-united-states-due-to-extraordinary-cirumstances/" class="story-link">
+<h3 class="headline-standard mb-2">U.S. Government Grounds All Flights Across the United States &lsquo;Due to Extraordinary Circumstances&rsquo;</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">TechCrunch&rsquo;s first report, filed mid-afternoon. The FAA cited communication issues at multiple Air Route Traffic Control Centers and an equipment outage, held departures on the ground until further notice, and handled inbound international flights case by case. Its own website was briefly down.</p>
+
+<div class="mt-5"></div>
+<div class="kicker">Travel &middot; Outages</div>
+<a href="https://www.fox5dc.com/news/amtrak-outage-ticket-booking-faa-ground-stop-november-13-2026" class="story-link">
+<h3 class="headline-standard mb-2">Amtrak Booking System Returns to Normal After Outage During Nationwide FAA Ground Stop</h3>
+</a>
+<p class="byline mb-2">FOX 5 DC &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Hundreds of users reported problems on DownDetector starting shortly before 5 p.m. Amtrak blamed a system-wide update, said booking returned to normal around 9 p.m., and reported longer call-center waits.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Leadership</div>
+<a href="https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/" class="story-link">
+<h3 class="headline-standard mb-2">The Unfolding Jensen Huang Scandal: A Timeline</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">TechCrunch&rsquo;s updated timeline, the story behind yesterday&rsquo;s lead. It now includes the Times report of a relationship with Kimberly Powell, Reuters&rsquo; report of a third affair, and the Justice Department taking over the Megaspeed investigation.</p>
+
+<div class="mt-5"></div>
+<div class="kicker">AI &middot; Chips &middot; GPUs</div>
+<a href="https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus" class="story-link">
+<h3 class="headline-standard mb-2">NVIDIA Allegedly Engineered Scarcity by Funding AI Startups to Buy Its GPUs</h3>
+</a>
+<p class="byline mb-2">TechPowerUp &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Citing a Wall Street Journal report relayed by Wccftech, TechPowerUp says Nvidia inflated the GPU and memory shortage by investing in startups that then bought its GPUs and built data centers. Only the summary was readable.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">Consumer &middot; Gadgets</div>
+<a href="https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/IMG_3403.jpg?resize=1200,925" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-standard mb-2">Amazon&rsquo;s New Kindle Colorsoft Is a Premium E-Reader With a Premium Price</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 13</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Aisha Malik tested the $320 Signature Edition; the base model starts at $290. It is lighter and thinner with an edge-to-edge 7-inch color display, but she says first-generation Colorsoft owners have little reason to upgrade. Colors are still more muted than on an iPad.</p>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+<div class="cw26-wrap">
+<style>
+.cw26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.cw26-grid{display:grid;grid-template-columns:repeat(5,44px);grid-auto-rows:44px;gap:2px;margin-bottom:0.75rem}
+.cw26-cell{position:relative;background:#fff;border:1px solid #1a1a1a}
+.cw26-cell.cw26-block{background:#1a1a1a}
+.cw26-num{position:absolute;top:1px;left:3px;font-size:0.55rem;font-weight:600;color:#6b7280;line-height:1}
+.cw26-cell input{width:100%;height:100%;border:none;background:transparent;text-align:center;font-size:1.15rem;font-weight:700;text-transform:uppercase;font-family:'Inter',sans-serif;color:#1a1a1a;padding:8px 0 0;outline:none}
+.cw26-cell input:focus{background:#fef3c7}
+.cw26-cell.cw26-ok input{color:#059669}
+.cw26-cell.cw26-bad input{color:#dc2626}
+.cw26-clues{font-size:0.75rem;line-height:1.4;color:#374151;margin-bottom:0.75rem}
+.cw26-clues strong{color:#1a1a1a}
+.cw26-btn{background:#1a1a1a;color:#f8f8f8;padding:0.4rem 1.1rem;font-family:'Inter',system-ui,sans-serif;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;border:none;cursor:pointer}
+.cw26-btn:hover{background:#8B0000}
+.cw26-msg{font-size:0.75rem;color:#374151;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<div class="cw26-grid" id="cw26-grid"></div>
+<div class="cw26-clues">
+<p style="margin-bottom:0.25rem;"><strong>Across</strong></p>
+<p style="margin-bottom:0.15rem;"><strong>1.</strong> One full pass through a repeating process</p>
+<p style="margin-bottom:0.15rem;"><strong>3.</strong> What a diffusion model produces</p>
+<p style="margin-bottom:0.5rem;"><strong>4.</strong> Begin, as in kicking off a run</p>
+<p style="margin-bottom:0.25rem;"><strong>Down</strong></p>
+<p style="margin-bottom:0.15rem;"><strong>1.</strong> Silicon at the center of the Nvidia story</p>
+<p style="margin-bottom:0;"><strong>2.</strong> A ground stop or an outage, for example</p>
+</div>
+<button type="button" class="cw26-btn" id="cw26-check">Check</button>
+<div class="cw26-msg" id="cw26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var rows=["CYCLE","H...V","IMAGE","P...N","START"];
+var nums={"0,0":1,"0,4":2,"2,0":3,"4,0":4};
+var grid=document.getElementById("cw26-grid"),msg=document.getElementById("cw26-msg"),inputs={};
+rows.forEach(function(row,r){
+  row.split("").forEach(function(ch,c){
+    var d=document.createElement("div");d.className="cw26-cell";
+    if(ch==="."){d.className+=" cw26-block";grid.appendChild(d);return;}
+    var k=r+","+c;
+    if(nums[k]){var n=document.createElement("span");n.className="cw26-num";n.textContent=nums[k];d.appendChild(n);}
+    var i=document.createElement("input");i.maxLength=1;i.setAttribute("aria-label","Row "+(r+1)+" column "+(c+1));
+    i.addEventListener("input",function(){
+      i.value=i.value.replace(/[^a-zA-Z]/g,"").toUpperCase();
+      d.classList.remove("cw26-ok","cw26-bad");
+      if(i.value){
+        var keys=Object.keys(inputs),idx=keys.indexOf(k);
+        if(idx>-1&&idx<keys.length-1){inputs[keys[idx+1]].input.focus();}
+      }
+    });
+    inputs[k]={input:i,cell:d,ans:ch};
+    d.appendChild(i);grid.appendChild(d);
+  });
+});
+document.getElementById("cw26-check").addEventListener("click",function(){
+  var ok=0,filled=0,total=0;
+  Object.keys(inputs).forEach(function(k){
+    var o=inputs[k];total++;o.cell.classList.remove("cw26-ok","cw26-bad");
+    if(!o.input.value){return;}
+    filled++;
+    if(o.input.value===o.ans){ok++;o.cell.classList.add("cw26-ok");}else{o.cell.classList.add("cw26-bad");}
+  });
+  if(ok===total){msg.textContent="Solved. Nicely done.";}
+  else if(filled<total){msg.textContent=ok+" of "+filled+" filled letters correct. "+(total-filled)+" still blank.";}
+  else{msg.textContent=ok+" of "+total+" letters correct. Keep going.";}
+});
+})();
+</script>
+</div>
+</div>
+
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure">White House Urges Easing Liability to Encourage AI Disclosure</a>
+<div class="wire-source">Bloomberg &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-14/fed-s-jefferson-says-inflation-will-determine-rate-decisions">Fed&rsquo;s Jefferson Says Inflation Will Determine Rate Decisions</a>
+<div class="wire-source">Bloomberg &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1xvsb5f/instead_of_lowering_gpu_prices_former_nvidia_ceo/">Instead of Lowering GPU Prices, Former NVIDIA CEO Jensen Huang Reportedly Financed AI Startups to Absorb Excess Silicon</a>
+<div class="wire-source">r/LocalLLaMA &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1xvst4u/salesforcesovereignintelligencesovtranscribe1/">Salesforce Posts SOV-Transcribe-1, an Open-Weight Speech Recognition Model</a>
+<div class="wire-source">r/LocalLLaMA &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1xvuclv/ernie_55_flash_base_ernie/">ERNIE 5.5 Flash Base</a>
+<div class="wire-source">r/LocalLLaMA &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reddit.com/r/LocalLLaMA/comments/1xvuit5/paper_read_less_solve_more_tokenefficient_sparse/">Paper: Read Less, Solve More, Token-Efficient Sparse Reading of External Content for AI Agents</a>
+<div class="wire-source">r/LocalLLaMA &middot; Nov 14</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">In under 30 hours the U.S. had a Microsoft outage that, by one Fortune column&rsquo;s count, hit 74 countries, and then only the third nationwide FAA ground stop ever ordered, with 10,243 flights delayed and 3,234 canceled four hours in. Officials blame old equipment overwhelmed by upgrades, not an attack, but the explanation is thin, and it landed in the same week Nvidia lost its CEO over a China-linked scandal. The common thread is dependence: on one vendor, one aging network, one chipmaker.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">The Blackouts</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Ground Stop.</strong> Fortune reports the FAA halted departures at every U.S. airport Friday afternoon and lifted the order hours later. Transportation Secretary Sean Duffy first cited a communication problem across all Air Route Traffic Control Centers, then said the fix pointed to a legacy network that went down. Homeland Security Secretary Markwayne Mullin blamed technology upgrades for &ldquo;overwhelming&rdquo; antiquated systems and said a cyberattack &ldquo;doesn&rsquo;t appear&rdquo; to be involved, while admitting &ldquo;there&rsquo;s nothing certain right now.&rdquo; Duffy asked Congress for emergency funding, naming $30 billion and then $50 billion. The last nationwide stop was in 2023, when files tied to a pilot alert system were deleted by accident.</li>
+          <li><strong>TechCrunch&rsquo;s First Report.</strong> The early version carried the FAA&rsquo;s own wording: &ldquo;communication issues impacting multiple Air Route Traffic Control Centers,&rdquo; and an alert that departures stay down &ldquo;until further notice.&rdquo; It also noted the stop came the same week the administration rolled out an AI tool for air traffic controllers, though nothing in the reporting ties the two together.</li>
+          <li><strong>Amtrak Goes Down Too.</strong> FOX 5 DC says hundreds of users reported booking errors on DownDetector from shortly before 5 p.m. Amtrak called it a system-wide update, said booking returned to normal around 9 p.m., and warned of payment problems and long call-center waits. Amtrak also reported increased demand for travel across its network.</li>
+          <li><strong>The Microsoft Outage.</strong> Fortune details how the Thursday email failure reached well past the office. Police in Los Angeles County, Florida, Colorado and several British forces had trouble with email or online crime reports, Maine warned that email protection-order requests might never have reached the courts, New York City suspended Friday evictions, and a Manchester trial was halted. A Colorado jail could not take online bond payments, so releases required payment in person. Australia&rsquo;s spy agency and Japan&rsquo;s Foreign Ministry were affected, and a Toronto hospital network declared a Code Grey.</li>
+          <li><strong>Is There a Connection?</strong> A Fortune opinion column says Microsoft&rsquo;s failure began at 11:17 a.m. ET Thursday and spread across 19 Microsoft 365 services, with Outlook complaints running over 2,000 times normal within an hour. It points to the timing against the Huang story and demands transparent answers, but it also admits it is too early to know whether anything hostile is involved. This is a question, not a finding.</li>
+        </ul>
+
+        <h4 class="digest-theme">Nvidia After Huang</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Startup Funding Hole.</strong> TechCrunch says Nvidia joined 105 funding rounds this year, per PitchBook, often as the largest investor. One neocloud founder said the news was &ldquo;like a bomb went off,&rdquo; and a Seligman Ventures partner said most big startup investment decisions came from Huang himself. Interim CEO Colette Kress is described as &ldquo;much more conservative.&rdquo; Nvidia&rsquo;s biggest bets were neoclouds, inference providers and open-weight model makers, including an $800 million check into Reflection AI&rsquo;s $2 billion Series B, and its $13 billion Hugging Face purchase is not expected to close until 2027. The flip side, TechCrunch notes, is that those checks locked startups into Nvidia chips, so a retreat could help rivals; Google announced two new chips this week.</li>
+          <li><strong>Banned Chips, Chinese Models.</strong> Will DePue of Unemployment Labs analyzed model weights from DeepSeek, Moonshot AI, MiniMax and Ant Group and says Kimi K3 and DeepSeek V4 show fingerprints of training on Blackwell chips, which are banned for China. Epoch AI estimates about two million advanced chips entered China in 2024 and 2025 through schemes that hide their destination. TechCrunch is careful to say this does not prove a law was broken, because offshore data centers, such as the 275,000 Nvidia accelerators shipped to Malaysia in those two years, are a legal route. Bloomberg separately reported that a company linked to Alice Huang helped smuggle banned chips to a Shanghai data center.</li>
+          <li><strong>The Scarcity Allegation.</strong> TechPowerUp, relaying a Wall Street Journal report through Wccftech, says Nvidia inflated the GPU and memory shortage by investing in startups that then bought its GPUs and built data centers. The page was behind a bot check, so I could only read the summary, and a r/LocalLLaMA thread picked up the same claim. Treat it as an allegation until the full reporting is in hand.</li>
+          <li><strong>The Timeline Grows.</strong> TechCrunch&rsquo;s updated timeline, written up in yesterday&rsquo;s issue, now covers the Times report of a relationship with Kimberly Powell, Reuters&rsquo; third affair, and the Justice Department taking over the Megaspeed investigation. It adds that Nvidia&rsquo;s possible liability for export violations probably factored into the decision to part ways with Huang.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents, Money and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>ChatGPT Wallet.</strong> OpenAI&rsquo;s agents, called dots, can now complete purchases for a limited group of U.S. Pro subscribers aged 18 and up with a Visa, Mastercard or American Express. Users review the items, total and card, and approve with Face ID or a fingerprint, which creates a record. A payment token stands in for the real card, so neither the agent nor the merchant sees it, and card rewards and dispute rights still apply. TechCrunch says DoorDash and Uber have seen few agent orders, while Meta&rsquo;s Muse, with over 10 million users, has made shopping a top activity. Retailers blocking agents remain a challenge.</li>
+          <li><strong>LangChain at $3 Billion.</strong> The $300 million Series C, led by CapitalG with GIC, DFJ Growth, IVP and Sapphire, more than doubles the $1.25 billion valuation from a year ago. LangChain began in 2022 as an open source project and moved to agent management as the frontier labs absorbed its original jobs. It claims 7,000 LangSmith customers and sells model and cloud neutrality, though TechCrunch points out plenty of rivals pitch the same thing.</li>
+          <li><strong>Uber and Fireworks.</strong> Uber was told on October 9 that attackers stole credentials at Fireworks AI and used them to reach its data. Filings list 2,567 people in Massachusetts, 3,430 in South Carolina and 1,873 in Rhode Island, with Illinois pending and California unquantified. Fireworks attributed the attack to a financially motivated group that sells stolen tokens for accessing LLMs. Notion confirmed its data was taken as well, and it is Uber&rsquo;s second known breach this year.</li>
+        </ul>
+
+        <h4 class="digest-theme">Infrastructure and Gadgets</h4>
+        <ul class="digest-bullets">
+          <li><strong>Floating Data Centers.</strong> Drogue, founded six months ago in Washington, D.C., has raised $20 million from investors including Toyota Ventures and Slow Ventures. A multi-megawatt prototype on an ocean-going ship goes to sea in early 2028, with later versions closer to offshore platforms. Its founder, a former Navy E-2D pilot, says data center developers work on 8 to 10 year timelines while AI demand grew 10x in three years.</li>
+          <li><strong>Kindle Colorsoft.</strong> Aisha Malik tested the $320 Signature Edition (32GB; the base model is $290 with 16GB). It has a 7-inch display at 300ppi for black and white and 150ppi for color, and she says first-generation owners should not bother upgrading. Colors are muted compared with an iPad, though it suits comics, cookbooks and color highlighting.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Wire (headlines only)</h4>
+        <ul class="digest-bullets">
+          <li><strong>Sources I could not read in full.</strong> Bloomberg and Reddit block automated reading, so these come from feed summaries. Bloomberg says a White House AI task force recommended agencies ease cyber liability policies so AI companies will report critical incidents, and that Fed Vice Chair Philip Jefferson called inflation the most important measure as policymakers weigh more rate hikes. On r/LocalLLaMA, Salesforce posted SOV-Transcribe-1, an open-weight speech model that its card says ranks first among open-weight models for non-streaming speech-to-text on Artificial Analysis. There is also an ERNIE 5.5 Flash Base release, and a SparseRead paper arguing that agents waste tokens by reading whole pages when they need only a few passages.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The two blackouts share a shape: one point of failure took down many institutions at once. A single vendor&rsquo;s email stopped courts and police in several countries, and one legacy network stopped every flight in the U.S. The explanations on offer, upgrades that overloaded old gear and no sign of an attack, are plausible and also unfinished. Mullin said himself that &ldquo;there&rsquo;s nothing certain right now.&rdquo; The Fortune opinion column is right that the public deserves more detail, but its leap from timing to China is a hypothesis it admits it cannot support, and the news reporting says officials see no sign of a hostile act. Coincidence plus bad infrastructure is the simpler story until someone shows otherwise.</p>
+
+        <p>The Nvidia stories show the same dependence in capital instead of cables. Huang&rsquo;s deal-making made Nvidia the lender, investor and supplier for much of the AI economy, and TechCrunch&rsquo;s reporting suggests nobody else plans to replace that. Now three accounts press on the same loop from different sides. The funding story says the checks may shrink under Kress. The export story says the chips themselves leak into China&rsquo;s best models through third countries. The scarcity allegation, if it holds, says the money may have helped create the demand it served. Each of these is partial and only the first rests on full reporting, but together they describe a company whose growth depended on circular relationships that are now being examined.</p>
+
+        <p>The agent stories are about a quieter dependence: trust in who holds the credentials. ChatGPT Wallet is built so the agent never sees the card, using a payment token and a biometric approval. The Fireworks breach shows the reverse, where the valuable thing to steal was access tokens for LLMs, and where a vendor few Uber drivers had heard of held their license data. Tokens protect and endanger depending on who holds them. LangChain&rsquo;s pitch that businesses should own their own intelligence is a response to the same worry, that too much sits in someone else&rsquo;s hands.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Step back and today looks like a stress test of the physical and financial base AI is being built on. The FAA is running on equipment its own secretary calls legacy while asking for as much as $50 billion, and the same week it announced an AI tool for controllers. Data center developers plan in decades while demand grows tenfold in three years, which is the gap Drogue is betting on. Demand for AI compute has outrun the institutions meant to supply and oversee it: power, chips, networks and rules. That is the context for the White House task force&rsquo;s push to make AI companies report incidents, a signal that disclosure is becoming an infrastructure question.</p>
+          <p>The caution is that much here is early or secondhand. The cause of the ground stop is unconfirmed, the chip-training claims come from one researcher&rsquo;s weight analysis, the scarcity story reached me through two relays, and the Fortune column asks questions it cannot answer. The direction is clear, with concentration risk everywhere and little redundancy, but the scale of each problem is not.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The official cause.</strong> Whether the FAA and Homeland Security publish a root cause for the ground stop, and whether Congress acts on the $30 billion to $50 billion request. Watch for any evidence tying it to Microsoft, which says it has none.</li>
+          <li><strong>Microsoft&rsquo;s explanation.</strong> The opinion column says the company&rsquo;s explanations have shifted. A clear post-incident report would test that.</li>
+          <li><strong>Nvidia&rsquo;s checkbook.</strong> Whether Kress cuts back startup investing, whether the Journal&rsquo;s scarcity allegation is confirmed in full, and whether more researchers publish chip-fingerprint analyses of Chinese models.</li>
+          <li><strong>The Fireworks fallout.</strong> The number of affected drivers is expected to rise as more notices arrive, and other Fireworks customers may follow Notion in confirming theft.</li>
+          <li><strong>Agent payments.</strong> How quickly ChatGPT Wallet moves beyond Pro subscribers, when spending limits arrive, and how many retailers keep blocking agents.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>
