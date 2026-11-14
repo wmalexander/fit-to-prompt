@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-13"
+        lastUpdated: "2026-11-14"
     },
     issues: [
+        {
+            date: "2026-11-14",
+            issueNumber: 11,
+            title: "PostgreSQL fixes a 22-year-old code-running bug, and an AI hacking tool gets an FBI alert",
+            summary: "PostgreSQL 18.7, 17.12, 16.16, 15.20 and 14.25 fix a 22-year-old bug that can run code on the server, OpenMage and FrankenPHP have critical fixes, and the FBI warns about the AI hacking tool ARTEX.",
+            url: "https://fittoprompt.com/security/issues/2026-11-14.html",
+            pressure: "elevated",
+            itemCount: 16
+        },
         {
             date: "2026-11-13",
             issueNumber: 10,

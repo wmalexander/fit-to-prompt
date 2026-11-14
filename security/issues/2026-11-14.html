@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PostgreSQL fixes a 22-year-old code-running bug, and an AI hacking tool gets an FBI alert | Fit to Patch No. 11, November 14, 2026</title>
+  <meta name="description" content="PostgreSQL 18.7, 17.12, 16.16, 15.20 and 14.25 fix a 22-year-old bug that can run code on the server, OpenMage and FrankenPHP have critical fixes, and the FBI warns about the AI hacking tool ARTEX.">
+  <meta property="og:title" content="Fit to Patch No. 11: PostgreSQL fixes a 22-year-old code-running bug, and an AI hacking tool gets an FBI alert">
+  <meta property="og:description" content="PostgreSQL 18.7, 17.12, 16.16, 15.20 and 14.25 fix a 22-year-old bug that can run code on the server, OpenMage and FrankenPHP have critical fixes, and the FBI warns about the AI hacking tool ARTEX.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-14.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Saturday, November 14, 2026</span>
+        <span>No. 11</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>PostgreSQL fixes a 22-year-old bug that can run code on the server, so update to 18.7, 17.12, 16.16, 15.20 or 14.25 and rebuild your extensions.</li>
+            <li>OpenMage and FrankenPHP both have critical fixes, and five WordPress plugins let strangers upload files, delete files or run code.</li>
+            <li>The FBI says the AI hacking tool ARTEX keeps spreading, and the fastest way in is a password or key left in a public repository.</li>
+            <li>A fake job interview slipped malware into look-alike Tailwind packages that stayed on npm for months.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 8.8 v3.1</span><span class="tag mono">CVE-2026-6460</span><span class="tag ">CVSS 5.3 v3.1</span><span class="tag mono">CVE-2026-116322</span><span class="tag ">PostgreSQL</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html">PostgreSQL fixes a 22-year-old bug that lets a database user run code on the server</a></h3>
+              <p>PostgreSQL's November 12 release fixes 52 security flaws. The worst known one, CVE-2026-6460, comes from a type change that leaves old values read as the wrong type. A database user who can create objects can use it to run code with the rights of the operating system account that runs PostgreSQL. All versions before 18.7, 17.12, 16.16, 15.20 and 14.25 are affected. The project and CISA's record report no attacks so far, but a researcher published a write-up that shows a working crash and a memory leak on 18.6 and withholds the final step. A second bug, CVE-2026-116322, needs no login: an anonymous client can restart a PostgreSQL 18 server before 18.7. Older branches are not affected by that one. Several client tools also got fixes, including <code>pg_restore</code> and <code>psql</code>, which can run code from a crafted archive or a compromised source server. PostgreSQL 14 reaches end of life with 14.25.</p>
+              <p class="do"><strong>Do</strong>Update the server to 18.7, 17.12, 16.16, 15.20 or 14.25, and rebuild or update every C-language extension at the same time, because extensions built against older releases may not be protected. Restart PostgreSQL right after updating if it runs outside its package's service unit, as it does under Patroni. Update <code>pg_dump</code>, <code>pg_restore</code> and <code>psql</code> on every machine that runs them. Plan a move off 14, and do not turn off the new <code>composite_type_mismatch</code> check.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html">The Hacker News</a> · <a href="https://www.postgresql.org/support/security/">PostgreSQL security page</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6460">NVD 6460</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116322">NVD 116322</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.4 v4.0</span><span class="tag mono">CVE-2026-128049</span><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-128046</span><span class="tag ">OpenMage</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128046">OpenMage (Magento LTS) lets a stranger upload a PHP-type file, and a second bug can hijack an admin's session</a></h3>
+              <p>Per NVD, the file blocklist in OpenMage 20.17.0 before 20.18.2 and 21.0.0-beta1 before 21.0.0-beta3 leaves out <code>phar</code>, <code>php8</code> and <code>phps</code>. An unauthenticated visitor can upload a <code>.phar</code> file through a product's File custom option and request it directly. That runs code on servers that treat <code>.phar</code> as PHP and serve that folder. CVE-2026-128049 is a cross-site request forgery bug in the OAuth confirm pages. An attacker who holds OAuth consumer credentials can trick a logged-in admin or customer into approving the attacker's token. No attacks are reported in the sources I read.</p>
+              <p class="do"><strong>Do</strong>Update to 20.18.2, or 21.0.0-beta3 if you run the beta line. Until then, make sure your web server does not run <code>.phar</code> files from <code>media/</code>.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128046">NVD 128046</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128049">NVD 128049</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-128014</span><span class="tag crit">CVSS 9.1 v4.0</span><span class="tag mono">CVE-2026-128023</span><span class="tag ">FrankenPHP</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128023">FrankenPHP before 1.13.0 can be fooled about who is logged in, and its static builds can crash on bad data</a></h3>
+              <p>Per NVD, FrankenPHP before 1.13.0 lets a visitor spoof trusted headers. PHP rewrites dots in header names to underscores, so a header such as <code>X.Forwarded.For</code> lands in the same server variable as the real one. That can fake a user identity, a client IP address or the scheme. Separately, standalone static binaries 1.8.0 before 1.13.2 bundle a Brotli decoder with an out-of-bounds write. An unauthenticated visitor can crash the whole process by sending data to an app that passes it to <code>brotli_uncompress_add()</code>, and NVD says code execution or a memory leak may be possible.</p>
+              <p class="do"><strong>Do</strong>Update FrankenPHP to 1.13.2 or later, including any Docker images and static binaries you ship. Check whether your app trusts <code>X-Forwarded-For</code> or similar headers from PHP's server variables, and strip them at the proxy.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128023">NVD 128023</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128014">NVD 128014</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 10.0 v3.1</span><span class="tag mono">CVE-2026-124822</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124822">Easy DragDrop File Uploader before 1.1.10 lets strangers delete any file, including wp-config.php</a></h3>
+              <p>Per NVD, the plugin does not check a path it is given before deleting it, so an unauthenticated visitor can delete files and folders on the server. Deleting <code>wp-config.php</code> can put a site back into install mode. Update to 1.1.10 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-126119</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126119">Streamit before 1.3.10 lets strangers run any PHP function, which can create an admin account</a></h3>
+              <p>Per NVD, one unauthenticated AJAX route runs a PHP function chosen by the visitor with arguments the visitor supplies, with no permission or nonce check. NVD names creating an administrator and running code as results. Update to 1.3.10 or later.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-119077</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119077">ELEX HelpDesk plugin through 3.3.9 lets strangers run code through a ticket form</a></h3>
+              <p>Per NVD, the plugin unserializes a form field without a class allowlist, and the only guard is a nonce printed on any page that carries the <code>[wsdesk_support]</code> shortcode. NVD lists all versions through 3.3.9 and I found no fixed version, so deactivate it or remove the shortcode pages until the author ships one.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-125055</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125055">Chatterbug Forms through 1.0.2 accepts PHP uploads from anyone</a></h3>
+              <p>Per NVD, when a form field has no file restriction, the plugin accepts any extension, including <code>.php</code>, and a nonce on every public form page lets a visitor use it. NVD lists versions through 1.0.2 and I found no fixed version, so deactivate it until one appears.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-126173</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126173">AutomatorWP Pro through 1.4.4 can let a stranger reset an admin's password, but only with one setup</a></h3>
+              <p>Per NVD, this affects the Webhooks add-on only when an automation pairs a Receive Webhook trigger with an Update User action whose User ID is blank and whose password field uses the webhook password tag. Check your automations for that pattern and update past 1.4.4 when a fix is out.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-124020</span><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-124021</span><span class="tag ">Control Web Panel</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124020">Control Web Panel before 1.30.6 has a password-reset bug that leads to commands on the server</a></h3>
+              <p>Per NVD, a forged Host header poisons the password-reset link, and a mail scanner that opens the link leaks the token. A second bug lets someone holding that token add cron commands and read account lists with password hashes. Update to 1.30.6 and keep the panel off the open internet.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag ">Apache httpd</span></div>
+              <h3><a href="https://httpd.apache.org/security/vulnerabilities_24.html">Apache's HTTP/2 code-running bug is still open: upgrade to 2.4.71 or turn HTTP/2 off</a></h3>
+              <p>Nothing new landed today, so this carries forward from earlier in the week. The critical HTTP/2 module bug affects Apache HTTP Server 2.4.55 to 2.4.70. Upgrade to 2.4.71, or set <code>Protocols http/1.1</code> until you can. Updating WordPress does not fix it, because the bug is in the web server.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Node.js</span><span class="tag ">React</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability/november-2026-security-releases">Nothing new for Node.js, React or Next.js today, and this week's fixes are still open</a></h3>
+              <p>None of today's feeds posted a new Node.js, React or Next.js release. Still open from this week: Node.js 22.23.5, 24.22.3 and 26.13.1, and React Server Components packages 19.0.9, 19.1.10, 19.2.9 and 19.3.1. Confirm your servers and lockfiles use them.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">Active campaign</span><span class="tag ">npm</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/accurasofthire-fake-interview-developer-machines">A fake job interview ran malware through look-alike Tailwind packages that stayed on npm for months</a></h3>
+              <p>JFrog exposed a fake company, AccuraSoftHire, whose take-home test loads a malicious copy of a Tailwind plugin when the CSS builds. StepSecurity checked the npm records and found that two of the packages, <code>tailwind-lines-clamps</code> and <code>tailwind-lineclamp</code>, were installable for about seven and five months until npm replaced them on November 13 and 12, with more than 4,000 downloads this year between them (mirrors and scanners included). Binance says its $6.34 billion theft began with a similar fake assignment. Search developer laptops for those package names and for <code>.vscode/tasks.json</code> files with <code>"runOn": "folderOpen"</code>. Treat any machine that ran an interview assignment as compromised.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Takedown</span></div>
+              <h3><a href="https://www.securityweek.com/law-enforcement-disrupts-gootloader-castlerat-and-stealc-infrastructure/">Police seized Gootloader, CastleRAT and StealC servers, and 681 infected websites were cleaned up</a></h3>
+              <p>Europol says Operation Endgame seized 235 servers and 257 domains and collected 6.4 million stolen credentials, which went to Have I Been Pwned. Gootloader spreads through hacked websites that show fake legal documents, so it is worth searching your own sites for unexpected pages. If your team uses Have I Been Pwned, check your domains this week.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Active campaign</span><span class="tag ">AI agents</span><span class="tag ">FBI</span></div>
+              <h3><a href="https://therecord.media/artex-ai-tool-fbi-flash-alert">The FBI warns that the open-source AI hacking tool ARTEX is spreading even after its author pulled it</a></h3>
+              <p>ARTEX lets AI agents plan and run a penetration test on their own. The FBI's Friday flash alert says some intrusions went from first targeting to privileged access in under three hours, and that forks, archived copies and a commercial version keep it available after the author removed it on October 8. Censys counted more than 1,600 exposed ARTEX consoles. Cloudflare says it has seen more than 50 similar tool families scanning its customers in three days, and daily requests from these tools are up 30 times since October 1. StepSecurity's review of the public reporting finds that the agents get in fastest with a credential left in the open: a secret in a public GitHub repository, or a development password that reached production. These are vendor and agency reports, and the attack counts come from their own telemetry.</p>
+              <p class="do"><strong>Do</strong>Scan your public and internal repositories, including git history, for secrets, and rotate every one you find, because deleting the file does not make a leaked secret safe. Replace long-lived cloud keys in CI with short-lived OIDC tokens, set an expiry on every personal access token, and make sure no internet-facing system accepts a development or default login.</p>
+              <div class="sources">Sources: <a href="https://therecord.media/artex-ai-tool-fbi-flash-alert">The Record on the FBI alert</a> · <a href="https://www.stepsecurity.io/blog/artex-ai-pentesting-tool-attackers-leaked-secrets">StepSecurity</a> · <a href="https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/">Cloudflare</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">AI tools</span></div>
+              <h3><a href="https://www.securityweek.com/openai-unveils-daybreak-red-team-defense-factory-security-tools/">OpenAI launches Daybreak Red Team, an AI agent that tests web apps, and Defense Factory, which drafts patches</a></h3>
+              <p>OpenAI announced both on November 12. Red Team uses agents to investigate and confirm attack paths in web applications, and Defense Factory traces findings through your code and opens draft GitHub pull requests for engineers to review. Nothing deploys on its own. Red Team is early access and Defense Factory is a preview. This is a vendor announcement, and I have not tested either product.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Worth reading</span></div>
+              <h3><a href="https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/">Cloudflare's six-part plan for defending against AI penetration-testing tools</a></h3>
+              <p>Cloudflare names rate limits and a WAF, anomaly detection, bot defense, identity-gated access for risky apps, schema validation and threat intelligence. It is vendor guidance and leans on its own products, but the list of what the tools target (partner portals, mobile backends, staging and legacy apps) is useful for an inventory.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update PostgreSQL to 18.7, 17.12, 16.16, 15.20 or 14.25, rebuild C extensions, and restart.</li>
+            <li>Update OpenMage to 20.18.2 and FrankenPHP to 1.13.2 if you run either.</li>
+            <li>Update Easy DragDrop to 1.1.10 and Streamit to 1.3.10, and deactivate ELEX HelpDesk and Chatterbug Forms.</li>
+            <li>Update Control Web Panel to 1.30.6, and Apache httpd to 2.4.71 if you have not yet.</li>
+            <li>Search developer laptops for the fake Tailwind packages and <code>runOn: folderOpen</code> task files.</li>
+            <li>Scan repositories for leaked secrets, rotate what you find, and set token expiry dates.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124822">CVE-2026-124822</a><span class="meta">Easy DragDrop before 1.1.10 · 10.0 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119077">CVE-2026-119077</a><span class="meta">ELEX HelpDesk through 3.3.9 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125055">CVE-2026-125055</a><span class="meta">Chatterbug Forms through 1.0.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126119">CVE-2026-126119</a><span class="meta">Streamit before 1.3.10 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126173">CVE-2026-126173</a><span class="meta">AutomatorWP Pro through 1.4.4 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128049">CVE-2026-128049</a><span class="meta">OpenMage before 20.18.2 · 9.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128046">CVE-2026-128046</a><span class="meta">OpenMage before 20.18.2 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128014">CVE-2026-128014</a><span class="meta">FrankenPHP static binaries before 1.13.2 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124020">CVE-2026-124020</a><span class="meta">Control Web Panel before 1.30.6 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124021">CVE-2026-124021</a><span class="meta">Control Web Panel before 1.30.6 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128023">CVE-2026-128023</a><span class="meta">FrankenPHP before 1.13.0 · 9.1 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6460">CVE-2026-6460</a><span class="meta">PostgreSQL before 18.7, 17.12, 16.16, 15.20, 14.25 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-116322">CVE-2026-116322</a><span class="meta">PostgreSQL 18 before 18.7 · 5.3 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 14, 2026 04:36 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
