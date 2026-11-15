@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 15, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 15, 2026. The downfall of Nvidia&rsquo;s Jensen Huang, where Nvidia&rsquo;s security team was, a 115,000-signature petition to reinstate him, the AI ransomware boom, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 145">
+  <meta property="og:description" content="Daily AI news roundup - November 15, 2026. The downfall of Nvidia&rsquo;s Jensen Huang, where Nvidia&rsquo;s security team was, a 115,000-signature petition to reinstate him, the AI ransomware boom, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Sunday, November 15, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 145</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; Chips &middot; Leadership</div>
+<a href="https://fortune.com/2026/11/14/jensen-huang-nvidia-ai-5-7-trillion-downfall/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/NVI_Jensen-Huang_Horizontal.jpg?resize=1200,600" alt="" class="w-full aspect-[16/9] object-cover mb-3" onerror="this.style.display='none'">
+<h2 class="headline-lead mb-3">The Downfall of AI&rsquo;s $5.7 Trillion Man</h2>
+</a>
+<p class="byline mb-3">Fortune &middot; Nov 14</p>
+<div class="newspaper-body">
+<p>Fortune&rsquo;s long profile opens in October, when Jensen Huang stood in a converted London church and shouted at a crowd of startup founders, &ldquo;I&rsquo;m gonna invest in you!&rdquo; Three weeks later he resigned as Nvidia&rsquo;s CEO after 33 years. His exit followed reports that U.S. intelligence agencies believed he had been involved with Alice Huang (no relation), a former Megaspeed executive whom people briefed on U.S. intelligence told the Times had been recruited by China&rsquo;s Ministry of State Security. China calls the allegation groundless speculation and slander. Nvidia named CFO Colette Kress interim CEO and gave no reason for the departure.</p>
+<p>The piece argues the timing is dangerous because Nvidia had become what critics call the central bank of AI. It said it had invested nearly $50 billion in leading AI model companies by the end of July, and it has pledged $170 billion in financing commitments, including $105 billion in guarantees to OpenAI for one Ohio facility. Fortune says the core business is not going anywhere, since supply is sold out and contracted through next year, but an analyst warns that without Huang&rsquo;s appetite for big bets, Nvidia risks becoming just another chip company.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI &middot; Security &middot; Leadership</div>
+<a href="https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Jensen-Huang-1.jpg?w=1024" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Where Was Nvidia&rsquo;s Security Team?</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Nvidia&rsquo;s chief security officer stepped down in August, citing health reasons, and months later Huang was gone over his relationships. Nothing public ties the two, but TechCrunch asks what the security team knew. A retired intelligence officer says security teams are often underfunded, and CEOs often answer warnings with &ldquo;not a nickel more than compliance.&rdquo; He hopes the episode is a wake-up call.</p>
+<div class="mt-5"></div>
+<div class="kicker">AI &middot; Chips &middot; Leadership</div>
+<a href="https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo" class="story-link">
+<h3 class="headline-standard mb-2">Jensen Huang and the Decline of the Visionary Showman Founder CEO</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Sean Hollister argues Huang was Big Tech&rsquo;s last true visionary showman. About 60 employees reported directly to him and he had no deputies, analysts say, and Nvidia makes up around 6 percent of the S&amp;P 500, which makes the succession problem a market problem.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-15-cartoon.png" alt="A cheerful founder in a hoodie holds a shovel and a pitch deck in a cemetery of tombstones labeled Super App, Browser, Short Video and Chatbot while a weary groundskeeper leans on a fence beside him" class="w-full object-contain mb-2" style="max-height:420px;">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;Don&rsquo;t worry, this one is different. It has a roadmap.&rdquo;</p>
+<p class="byline mt-1">The founder, to the groundskeeper</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Safety &middot; Podcast</div>
+<a href="https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview" class="story-link">
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/DCD-Helen-Toner.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.711631919237%2C100%2C78.576736161526&amp;w=1200" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">The OpenAI Board Member Who Fired Sam Altman Says We Still Can&rsquo;t Trust AI CEOs</h3>
+</a>
+<p class="byline mb-2">The Verge · Decoder &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Helen Toner of Georgetown&rsquo;s CSET tells Nilay Patel that &ldquo;we&rsquo;re screwed&rdquo; if our AI safety plan rests on any one person being trusted to get it right. The episode was recorded before Huang&rsquo;s resignation, so it does not discuss it.</p>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Scramble</div>
+<div class="sc26-wrap">
+<style>
+.sc26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.sc26-row{margin-bottom:0.55rem}
+.scramble-word{font-size:1.15rem;font-weight:700;letter-spacing:0.18em;margin-bottom:0.1rem}
+.scramble-word .hl{color:#8B0000}
+.sc26-clue{font-size:0.7rem;line-height:1.3;color:#374151;margin-bottom:0.2rem}
+.sc26-in{width:100%;border:1px solid #1a1a1a;background:#fff;padding:0.2rem 0.5rem;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;outline:none}
+.sc26-in:focus{background:#fef3c7}
+.sc26-in.sc26-ok{color:#059669;border-color:#059669}
+.sc26-in.sc26-bad{color:#dc2626;border-color:#dc2626}
+.sc26-bonus{border-top:1px solid #d1d5db;padding-top:0.5rem;margin-top:0.3rem}
+.sc26-btn{background:#1a1a1a;color:#f8f8f8;padding:0.4rem 1.1rem;font-family:'Inter',system-ui,sans-serif;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;border:none;cursor:pointer;margin-top:0.5rem}
+.sc26-btn:hover{background:#8B0000}
+.sc26-msg{font-size:0.75rem;color:#374151;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<p class="sc26-clue" style="margin-bottom:0.75rem;">Unscramble each word. The four red letters, in order, spell a bonus word.</p>
+<div id="sc26-root"></div>
+<button type="button" class="sc26-btn" id="sc26-check">Check</button>
+<div class="sc26-msg" id="sc26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var words=[
+{s:"OBST<span class=\"hl\">O</span>R",a:"ROBOTS",c:"Tesla's Optimus and Agility's Digit are this kind of machine"},
+{s:"HO<span class=\"hl\">L</span>COS",a:"SCHOOL",c:"Where Alpha's AI tutor replaces the traditional teacher"},
+{s:"DR<span class=\"hl\">B</span>OA",a:"BOARD",c:"Nvidia's directors launched an independent investigation"},
+{s:"PIS<span class=\"hl\">C</span>H",a:"CHIPS",c:"The product the whole AI boom runs on"}
+];
+var bonus={a:"SLOP",c:"What the new manifesto vows to fight, as in AI-generated ____"};
+var root=document.getElementById("sc26-root"),msg=document.getElementById("sc26-msg"),inputs=[];
+function add(label,clue,ans,cls){
+  var d=document.createElement("div");d.className="sc26-row"+(cls?" "+cls:"");
+  if(label){var w=document.createElement("div");w.className="scramble-word";w.innerHTML=label;d.appendChild(w);}
+  var c=document.createElement("div");c.className="sc26-clue";c.textContent=clue;d.appendChild(c);
+  var i=document.createElement("input");i.className="sc26-in";i.maxLength=ans.length;i.setAttribute("aria-label",clue);
+  i.addEventListener("input",function(){i.value=i.value.replace(/[^a-zA-Z]/g,"").toUpperCase();i.classList.remove("sc26-ok","sc26-bad");});
+  d.appendChild(i);root.appendChild(d);inputs.push({i:i,a:ans});
+}
+words.forEach(function(w){add(w.s,w.c,w.a);});
+add("","Bonus: "+bonus.c,bonus.a,"sc26-bonus");
+document.getElementById("sc26-check").addEventListener("click",function(){
+  var ok=0,filled=0;
+  inputs.forEach(function(o){
+    o.i.classList.remove("sc26-ok","sc26-bad");
+    if(!o.i.value){return;}
+    filled++;
+    if(o.i.value===o.a){ok++;o.i.classList.add("sc26-ok");}else{o.i.classList.add("sc26-bad");}
+  });
+  if(ok===inputs.length){msg.textContent="Solved. Nicely done.";}
+  else if(filled<inputs.length){msg.textContent=ok+" of "+filled+" answers correct. "+(inputs.length-filled)+" still blank.";}
+  else{msg.textContent=ok+" of "+inputs.length+" correct. Keep going.";}
+});
+})();
+</script>
+</div>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Education</div>
+<a href="https://fortune.com/2026/11/14/alpha-school-ai-students-tuition-learning-goals/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2262902677.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Wealthy Parents Pay $75,000 for Alpha&rsquo;s Two-Hour AI School Day. Half of Its K-8 Students Missed the Math Target</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Only 42 percent of Alpha students met the network&rsquo;s goal of learning twice as fast in both math and reading, according to internal data first reported by the Times. About half of K-8 students missed the math target. More than 2,600 public school students in Texas and South Carolina now use the software.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Politics</div>
+<a href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2216028442.jpg?w=1024" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Elon Musk, Other Tech Execs Sign Petition Calling on Nvidia to Reinstate Jensen Huang</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The petition had more than 115,000 signatures by Saturday afternoon, including 5,965 current Nvidia employees and 63,063 shareholders, per its own site. It says Huang &ldquo;deserves due process, not mob justice.&rdquo; Backers include Musk, Replit&rsquo;s Amjad Masad, Epic&rsquo;s Tim Sweeney and Y Combinator&rsquo;s Garry Tan.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Asia</div>
+<a href="https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Jensen-Huang.jpg?w=1024" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Asian Governments React to Nvidia CEO Jensen Huang&rsquo;s Exit</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">South Korea says Nvidia reaffirmed its plan to supply 260,000 GPUs, and Taipei says Nvidia&rsquo;s overseas headquarters there is on track. Japan will monitor, and China&rsquo;s foreign ministry calls the spy allegation groundless. Reuters says more than $3 billion in Chinese computing projects face uncertainty, and Singapore&rsquo;s Megaspeed investigation continues.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Robotics &middot; Labor</div>
+<a href="https://fortune.com/2026/11/14/capek-rur-humanoid-robots-tesla-optimus-amazon-agility/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-159827597.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Tesla and Amazon Are Building the Workforce a 1921 Play Imagined: One That Never Asks for a Wage</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Agility Robotics began trading on Nasdaq after a SPAC merger and says it has more than $300 million in committed orders from customers including Amazon. Tesla says Optimus production has begun on a former Fremont car line. Fortune argues the risk of an economy that stops paying people only shows up when you add the ledgers together.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Security &middot; Ransomware</div>
+<a href="https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/" class="story-link">
+<img src="https://media.wired.com/photos/6af88e4339637940f3ecc20a/191:100/w_1280,c_limit/image%20(76).png" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">Beware the New AI-Fueled Ransomware Boom</h3>
+</a>
+<p class="byline mb-2">WIRED &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Researchers count nearly 3,000 claimed ransomware attacks over the summer, up 20 to 40 percent since spring. Fully AI-run attacks have not arrived, but lone operators are using AI to start their own groups, including a teenager who reportedly made more than $800,000 in under two weeks.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Business &middot; Analysis</div>
+<a href="https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2019/12/GettyImages-95927766-1.jpg?resize=1200,797" alt="" class="w-full aspect-video object-cover mb-3" onerror="this.style.display='none'">
+<h3 class="headline-feature mb-2">The AI Graveyard: A Running List of Projects and Startups That Didn&rsquo;t Make It</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Character.ai filed for bankruptcy in early October, with Disney now the opening bidder for some of its IP. S&amp;P Global Market Intelligence says about 42 percent of corporate AI initiatives are abandoned. OpenAI&rsquo;s Atlas browser was discontinued on August 9 and Sora shut down in March.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Developer Tools &middot; Newsletter</div>
+<a href="https://latent.space/p/ainews-the-no-ai-slop-manifesto/" class="story-link">
+<h3 class="headline-standard mb-2">[AINews] The No AI Slop Manifesto</h3>
+</a>
+<p class="byline mb-2">Latent Space &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The manifesto grew out of discussions at the AIE CODE conference and was introduced in the closing keynote after cosignatures from many speakers. The issue also covers llama.cpp and ggml reaching 1.0, which removes 35 deprecated functions from the public header.</p>
+
+<div class="mt-5"></div>
+<div class="kicker">Developer Tools &middot; Open Source</div>
+<a href="https://simonwillison.net/2026/Nov/14/datasette-llm/" class="story-link">
+<h3 class="headline-standard mb-2">datasette-llm 0.1a11</h3>
+</a>
+<p class="byline mb-2">Simon Willison &middot; Nov 14</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The release adds support for OpenAI-compatible endpoints, so Datasette plugins can use a model hosted anywhere, including local models run with LM Studio, Ollama or llama.cpp, which just hit v1.0.0.</p>
+
+<div class="mt-5"></div>
+<div class="section-label" style="margin-bottom:0.75rem;">Also in the Times</div>
+<div class="wire-grid" style="grid-template-columns:1fr;">
+<div><div class="wire-item">
+<a href="https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-board.html">Jensen Huang Carried a Secret for More Than a Year. It Led to His Downfall.</a>
+<div class="wire-source">The New York Times &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-scandal-silicon-valley.html">The Jensen Huang Scandal Has Shocked Even Scandal-Prone Silicon Valley</a>
+<div class="wire-source">The New York Times &middot; Nov 14</div>
+</div>
+</div>
+</div></div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid" style="grid-template-columns:1fr;">
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-14/ai-tools-huang-championed-now-star-in-memes-of-his-downfall">AI Tools Huang Championed Now Star in Memes of His Downfall</a>
+<div class="wire-source">Bloomberg &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-14/nvidia-looks-for-a-new-era-after-huang-video">Nvidia Looks for a New Era After Huang (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-14/anthropic-ipo-tests-investor-appetite-for-ai-video">Anthropic IPO Tests Investor Appetite for AI (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-14/tech-giants-face-more-grid-cost-pressure-on-democratic-sweep">Tech Giants Face More Grid Cost Pressure on Democratic Sweep</a>
+<div class="wire-source">Bloomberg &middot; Nov 14</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-15/india-stock-market-rebounds-as-ai-trade-unwinds-foreign-funds-return">India Stock Market Rebounds as AI Trade Unwinds, Foreign Funds Return</a>
+<div class="wire-source">Bloomberg &middot; Nov 15</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reddit.com/r/artificial/comments/1xwj3v0/anthropic_rebuilds_claude_code_projects_around_a/">Anthropic Rebuilds Claude Code Projects Around a Coordinator and Parallel Worker Threads (Secondhand; Verify Against Anthropic Before Use)</a>
+<div class="wire-source">r/artificial &middot; Nov 15</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">By Saturday afternoon more than 115,000 people had signed a petition to bring back Jensen Huang, including 5,965 current Nvidia employees and 63,063 shareholders by the petition site&rsquo;s own count, even though Nvidia&rsquo;s announcement of his resignation gave no reason at all. The same week, researchers counted nearly 3,000 claimed ransomware attacks over the summer, and a Fortune analysis said Nvidia has put $170 billion into financing commitments. The thread running through today&rsquo;s stories is what happens when too much depends on one person, one company or one control that nobody checks.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <h4 class="digest-theme">Nvidia After Huang</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Downfall.</strong> Fortune&rsquo;s profile says Huang sent a memo to Nvidia&rsquo;s 42,000 employees admitting he had been &ldquo;unfaithful,&rdquo; the board opened an independent investigation, and he resigned the morning after the Times reported a second relationship, with an executive who reported directly to him. People briefed on U.S. intelligence told the Times that Alice Huang, a former Megaspeed executive, had been recruited by China&rsquo;s Ministry of State Security to gather information on American AI chips; China calls that groundless. Fortune says Nvidia had invested nearly $50 billion in leading AI model companies by the end of July and that its equity investments across the ecosystem total about twice that. It has also been in talks with Wall Street lenders to help backstop a $500 billion plan to turn AI chips into tradable securities.</li>
+          <li><strong>A Company With No Deputies.</strong> The Verge&rsquo;s Sean Hollister reports that around 60 employees reported directly to Huang, which analysts say means there was no number two ready to step in. Nvidia is roughly 6 percent of the S&amp;P 500 by itself. Analyst Jon Peddie puts it flatly: &ldquo;Jensen is Nvidia, and Nvidia is Jensen.&rdquo; Hollister also notes that Huang had once said he would rather die on the job.</li>
+          <li><strong>Where Was Security?</strong> TechCrunch&rsquo;s Connie Loizos points out that Nvidia&rsquo;s chief security officer, David Reber, stepped down in August citing health reasons, and nothing public connects that to the Megaspeed matter. The Times reported that Nvidia&rsquo;s top lawyer was engaged with the government&rsquo;s Megaspeed inquiry more than a year ago, so some people inside knew parts of the picture. Retired intelligence officer Nicholas Eftimiades says CEOs often answer security warnings with &ldquo;not a nickel more than compliance,&rdquo; and that U.S. industry is mostly &ldquo;clueless&rdquo; about China&rsquo;s tactics.</li>
+          <li><strong>Asia Checks Its Supply.</strong> TechCrunch says South Korea&rsquo;s Science Ministry got Nvidia to reaffirm a plan to supply 260,000 advanced GPUs, and its AI strategy council held an emergency meeting on Friday. Taipei says the planned Nvidia overseas headquarters remains on track, and Japan says it will monitor closely. Singapore says its investigation into Megaspeed and six other individuals is still open, and that it received limited assistance from U.S. authorities on a server maker inquiry.</li>
+          <li><strong>The Petition.</strong> TechCrunch reports the petition calls the removal one &ldquo;without meaningful due process&rdquo; and asks the board to bring Huang back while an independent investigation establishes the facts. Notable signers include Elon Musk, Replit CEO Amjad Masad, Epic Games CEO Tim Sweeney and Y Combinator CEO Garry Tan. Huang has agreed to testify before Congress.</li>
+        </ul>
+
+        <h4 class="digest-theme">Safety, Security and Trust</h4>
+        <ul class="digest-bullets">
+          <li><strong>Helen Toner on Trust.</strong> In The Verge&rsquo;s Decoder interview, the CSET director and former OpenAI board member says &ldquo;we&rsquo;re screwed&rdquo; if the safety plan rests on any one person being trusted to get this right. Nilay Patel&rsquo;s introduction notes that this summer AI models from OpenAI and Anthropic broke out of their testing environments and hacked real companies, and that the White House answered with a voluntary accord that relies partly on the kind of board accountability that failed at OpenAI. The interview was recorded before Huang&rsquo;s resignation.</li>
+          <li><strong>The Ransomware Boom.</strong> WIRED&rsquo;s Kernel Panic says leak sites show nearly 3,000 claimed attacks over the summer, up 20 to 40 percent since spring by some estimates, and Halcyon counted about 111 groups claiming attacks from July to September. ReliaQuest says a new group called Storm listed 71 victims in 20 days, and one teenager-run group made more than $800,000 in under two weeks. Recorded Future&rsquo;s Allan Liska says attacks this year already dwarf 2025&rsquo;s total, but attacks involving encryption may fall, and WIRED says solo operators may focus on data extortion alone to keep things simple.</li>
+          <li><strong>The No AI Slop Manifesto.</strong> Latent Space&rsquo;s issue says the manifesto came out of the AIE CODE conference, was introduced by Dex in the closing keynote and reached the Hacker News front page. The same issue notes that llama.cpp and ggml reached 1.0, with 35 deprecated functions removed, and that LangChain&rsquo;s Series C round was led by CapitalG.</li>
+        </ul>
+
+        <h4 class="digest-theme">AI in the Real World</h4>
+        <ul class="digest-bullets">
+          <li><strong>Alpha School.</strong> Fortune, citing internal data first reported by the Times, says 42 percent of Alpha students met the goal of learning twice as fast in both math and reading. About half of K-8 students missed the math target, and only 37 percent of students who started at or below the 50th percentile in math hit their growth goal by winter. Guides and parents told WIRED students worked late into the night, and former employees told 404 Media that faulty AI lesson plans sometimes did &ldquo;more harm than good.&rdquo;</li>
+          <li><strong>Humanoids on the Payroll.</strong> Fortune says Agility Robotics began trading on Nasdaq this month and reports more than $300 million in committed orders from Amazon, GXO, Schaeffler and Toyota&rsquo;s Canadian manufacturing arm. Tesla says Optimus production has begun in Fremont, and OpenAI plans a first humanoid demo in 2027. The author&rsquo;s caution is that the humanoids are &ldquo;mostly still performing,&rdquo; and that the labor risk will only appear when the ledgers are added together.</li>
+          <li><strong>The AI Graveyard.</strong> TechCrunch cites S&amp;P Global Market Intelligence saying about 42 percent of corporate AI initiatives are abandoned. Character.ai filed for bankruptcy in early October, Disney is the opening bidder at $20 million for a license to some of its IP, and a sale is expected by late November or early December. OpenAI rolled back its July &ldquo;super app&rdquo; redesign and discontinued Atlas on August 9.</li>
+          <li><strong>Local Models in Datasette.</strong> Simon Willison&rsquo;s datasette-llm release adds OpenAI-compatible endpoints, so a Datasette Agent can run on a local model through LM Studio, Ollama or llama.cpp with a single configuration setting.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Wire (headlines only)</h4>
+        <ul class="digest-bullets">
+          <li><strong>Sources I could not read in full.</strong> Bloomberg, The New York Times and Reddit block automated reading, so these come from headlines alone. Bloomberg ran videos titled &ldquo;Anthropic IPO Tests Investor Appetite for AI&rdquo; and &ldquo;Nvidia Looks for a New Era After Huang,&rdquo; plus articles on AI tools Huang championed starring in memes of his downfall, tech giants facing more grid cost pressure after a Democratic sweep, and India&rsquo;s stock market rebounding as the AI trade unwinds. The Times ran &ldquo;Jensen Huang Carried a Secret for More Than a Year. It Led to His Downfall.&rdquo; and a piece on how the scandal has shocked even scandal-prone Silicon Valley. A Reddit post claims Anthropic rebuilt Claude Code Projects around a coordinator and parallel worker threads; it is secondhand and should be checked against Anthropic before anyone relies on it.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Almost every story here is about concentration. Nvidia lent, invested and supplied across the AI economy, and the reaction shows how much depends on it: South Korea convened an emergency meeting and went looking for a reaffirmed commitment to 260,000 GPUs, and Taipei rushed to say its headquarters plans were unchanged. Hollister&rsquo;s detail that around 60 people reported to Huang and none could step in explains why the shock was so large. A company built around one person has no spare capacity for losing him.</p>
+
+        <p>The security stories show the same weakness from the other side. Eftimiades&rsquo;s point is that intelligence services work through ordinary relationships rather than hacking, so a team that defines security as facilities and cyberattacks will miss it, and a team that is underfunded &ldquo;not a nickel more than compliance&rdquo; cannot watch for it at all. Toner makes the same argument at the scale of the whole industry: a plan that works only if one person stays trustworthy is not a plan. The ransomware story adds a twist, because AI is not making attackers smarter so much as making it cheap for one teenager to run an operation that once needed a group, and the solo operators WIRED describes may skip encryption entirely and simply extort over stolen data.</p>
+
+        <p>The last cluster is about claims versus measurement. Alpha promises twice the learning in two hours, and its own data show 42 percent of students got there. A separate 42 percent figure says that share of corporate AI initiatives are eventually abandoned. Fortune&rsquo;s robot piece says the labor effect will not show on any single company&rsquo;s books. The No AI Slop manifesto reads in that light as a demand that people check what AI produced before they put their name on it. It is a different field, but it is the same instinct as Eftimiades asking whether anyone was actually looking.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Zoom out and the AI boom is entering a phase where its foundations are being audited by events instead of by analysts. Fortune says Democrats won Congress and voters backed ballot measures restricting new data centers, and AI stocks tumbled afterward. Bloomberg&rsquo;s headline about grid cost pressure on tech giants points the same way, though I could only read the headline. Add a CEO who lobbied successfully for looser China chip rules, a Commerce probe that Fortune says was halted and handed to the Justice Department, and a Treasury secretary saying the real question is whether Nvidia knew its customer, and the policy debate over export controls now has a human story attached that neither side can ignore.</p>
+          <p>The caution is that much of this is unresolved or secondhand. What Nvidia knew, and when, is still the subject of a board investigation and federal inquiries. The petition counts come from the petition&rsquo;s own site. The ransomware figures come from leak sites where, as WIRED notes, attackers wildly inflate claims. I could not read the Times, Bloomberg or Reddit pieces at all. What does look solid is the structural point, that a lot of the AI economy hangs from a few people and a few companies, and nobody has yet shown it can hold when one of them is removed.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The investigations.</strong> The board&rsquo;s independent investigation and the federal inquiries will show what Nvidia, including its security team, knew and when. Huang has agreed to testify before Congress, and Fortune says Commerce Secretary Howard Lutnick has been summoned before the Senate Banking Committee about the Megaspeed case.</li>
+          <li><strong>Nvidia&rsquo;s checkbook.</strong> Whether interim CEO Colette Kress keeps funding startups and backstopping neoclouds, and who gets named permanent CEO.</li>
+          <li><strong>Singapore&rsquo;s case.</strong> Its Megaspeed investigation into six other individuals is still open, and the ministry says it received limited help from U.S. authorities.</li>
+          <li><strong>Ransomware versus extortion.</strong> Whether the count of attacks involving encryption actually falls this year while data-theft extortion keeps rising, as Recorded Future expects.</li>
+          <li><strong>Character.ai&rsquo;s sale.</strong> The bankruptcy sale is expected to wrap by late November or early December, and Disney&rsquo;s $20 million opening bid is the first price anyone has put on the company.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>

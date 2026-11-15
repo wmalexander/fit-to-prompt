@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-14",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["cryptogram", "crossword"]
+        lastUpdated: "2026-11-15",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["cryptogram", "crossword", "scramble"]
     },
     issues: [
+        {
+            date: "2026-11-15",
+            volume: 1,
+            issueNumber: 145,
+            title: "The Downfall of AI's $5.7 Trillion Man",
+            description: "Daily AI news roundup - November 15, 2026. The downfall of Nvidia's Jensen Huang, where Nvidia's security team was, a 115,000-signature petition to reinstate him, the AI ransomware boom, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-15.html",
+            storyCount: 20,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-11-14",
             volume: 1,
