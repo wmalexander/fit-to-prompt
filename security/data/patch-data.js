@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-14"
+        lastUpdated: "2026-11-15"
     },
     issues: [
+        {
+            date: "2026-11-15",
+            issueNumber: 12,
+            title: "Fake Claude Code extension traced to a stolen key; WordPress plugins need updates",
+            summary: "Cursor says a stolen Fireworks AI key led to a trojan Claude Code extension, four WordPress plugins have takeover or code-running bugs, and UnrealIRCd 6.2.7.1 fixes a bug attackers are exploiting.",
+            url: "https://fittoprompt.com/security/issues/2026-11-15.html",
+            pressure: "elevated",
+            itemCount: 12
+        },
         {
             date: "2026-11-14",
             issueNumber: 11,

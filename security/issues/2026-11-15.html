@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake Claude Code extension traced to a stolen key; WordPress plugins need updates | Fit to Patch No. 12, November 15, 2026</title>
+  <meta name="description" content="A trojan Claude Code extension on Cursor's marketplace came from a stolen vendor key, four WordPress plugins have takeover or code-running bugs, and UnrealIRCd is being exploited.">
+  <meta property="og:title" content="Fit to Patch No. 12: Fake Claude Code extension traced to a stolen key; WordPress plugins need updates">
+  <meta property="og:description" content="A trojan Claude Code extension on Cursor's marketplace came from a stolen vendor key, four WordPress plugins have takeover or code-running bugs, and UnrealIRCd is being exploited.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-15.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Sunday, November 15, 2026</span>
+        <span>No. 12</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>A fake Claude Code extension reached up to 5,000 Cursor users on October 29, and Cursor now says an exposed access key tied to its AI vendor Fireworks AI started it.</li>
+            <li>Four WordPress plugins have bugs that let strangers run code, take over an admin account or plant a backdoor, so update or remove them today.</li>
+            <li>Attackers are exploiting a bug in the UnrealIRCd chat server, and the maintainer says AI helped find it.</li>
+            <li>Google's Project Zero will now publish bug details 90 days after it reports them, dropping to 30 days by 2028.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag ">No NVD score yet</span><span class="tag mono">CVE-2026-127048</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://wpscan.com/vulnerability/b88c5a75-56ab-4722-8994-bbd6d97d2844/">Custom Block Builder before 3.0.0 lets any visitor run PHP code on the site</a></h3>
+              <p>The plugin's permission checks on its REST routes return a value that WordPress reads as "allowed," so a request with no login can use them. NVD says this lets an unauthenticated visitor run arbitrary PHP on the server. NVD has not scored it yet, and I did not find a report of exploitation.</p>
+              <p class="do"><strong>Do</strong>Update Custom Block Builder to 3.0.0 or later, or deactivate it until you can.</p>
+              <div class="sources">Sources: <a href="https://wpscan.com/vulnerability/b88c5a75-56ab-4722-8994-bbd6d97d2844/">WPScan</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-127048">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-120522</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/58fd04ae-fff2-42b1-ae98-168195d84290?source=cve">Cloud Storage Manager for Fluent Forms lets a stranger write a file anywhere the site can</a></h3>
+              <p>Two REST endpoints in the add-on have no permission check, and the Google Drive download code builds a file path from a name the remote side supplies. NVD says an attacker can use that to save a file outside the downloads folder, and a PHP file in a public folder means code running on the server. Versions up to 1.2.0 are affected.</p>
+              <p class="do"><strong>Do</strong>Update to the current release (1.2.9 on WordPress.org today) and check the uploads and plugin folders for PHP files you do not recognize.</p>
+              <div class="sources">Sources: <a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/58fd04ae-fff2-42b1-ae98-168195d84290?source=cve">Wordfence</a> · <a href="https://wordpress.org/plugins/cloud-storage-manager/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120522">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-19907</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/ce5ea515-5ae1-4771-9bfb-5a0f4b3fce22?source=cve">Shipo 1.6 to 1.8.0 trusts a login cookie without checking it, so anyone can act as an admin</a></h3>
+              <p>The plugin reads the username out of the login cookie and signs that user in without checking the cookie's signature. Per NVD, an attacker who knows a username, including an administrator's, can use the REST API to act as that person and create a new administrator account.</p>
+              <p class="do"><strong>Do</strong>Update Shipo to the current release (1.8.4 on WordPress.org today), then review the administrator list for accounts you did not create.</p>
+              <div class="sources">Sources: <a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/ce5ea515-5ae1-4771-9bfb-5a0f4b3fce22?source=cve">Wordfence</a> · <a href="https://wordpress.org/plugins/shipo/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19907">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag ">No NVD score yet</span><span class="tag mono">CVE-2026-126697</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://wpscan.com/vulnerability/9eb3f68c-f8ce-493f-8b0f-ddab376e0f3b/">Quick Page/Post Redirect shipped with a hidden updater that pushed a backdoored build</a></h3>
+              <p>Per NVD, version 5.2.1 on WordPress.org carried an update checker that polled the author's own server, and in March 2021 that server delivered a changed 5.2.3 that added spam and a remote-code path. WordPress.org shows the plugin closed for a security issue since April 14, 2026. Treat any site that ran the tampered build as compromised.</p>
+              <p class="do"><strong>Do</strong>Remove the plugin. If you must keep it, install the clean 5.2.4, delete any <code>updater/</code> folder, and search your logs and plugin files for <code>anadnet.com</code>.</p>
+              <div class="sources">Sources: <a href="https://wpscan.com/vulnerability/9eb3f68c-f8ce-493f-8b0f-ddab376e0f3b/">WPScan</a> · <a href="https://wordpress.org/plugins/quick-pagepost-redirect-plugin/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126697">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.1 v3.1</span><span class="tag mono">CVE-2026-124969</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.20">Optimole 4.2.19 and earlier can be tricked into deleting files, including wp-config.php</a></h3>
+              <p>Per NVD, the image plugin does not check a file path in its rename feature. Exploiting it needs PEAR's Archive_Tar library on the server, which NVD says is common in official WordPress Docker images, and an administrator who uses the plugin's Rename control after the attacker plants a payload in a comment. So it is not a one-step attack.</p>
+              <p class="do"><strong>Do</strong>Update Optimole to 4.2.20 or later, and avoid the Rename control on older versions.</p>
+              <div class="sources">Sources: <a href="https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.20">Plugin code, 4.2.20</a> · <a href="https://wordpress.org/plugins/optimole-wp/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124969">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag ">No NVD score yet</span><span class="tag mono">CVE-2026-117487</span><span class="tag mono">CVE-2026-117490</span><span class="tag wp">WordPress theme</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-117487">Flatsome before 3.20.13 leaks unpublished posts to strangers and lets contributors publish</a></h3>
+              <p>Per NVD, an AJAX action in the Flatsome theme has no permission check, so a visitor can read draft and pending posts by ID. A second bug lets users as low as Contributor publish their own content and change its post type, for example to a product. NVD has not scored either one.</p>
+              <p class="do"><strong>Do</strong>Update Flatsome to 3.20.13 or later through the theme's own update channel.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-117487">NVD 117487</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-117490">NVD 117490</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.2 v4.0</span><span class="tag mono">CVE-2026-129319</span><span class="tag ">npm</span><span class="tag ">Node.js</span></div>
+              <h3><a href="https://www.npmjs.com/package/create-ecdh">create-ecdh 4.0.4 and earlier skips a key check that can leak a private key</a></h3>
+              <p>Bundlers pull this package in to stand in for Node's built-in ECDH when the native one is missing. Per NVD, it did not check that a peer's public key is on the curve, so someone who can send keys to a service that reuses one private key can slowly recover that key. Version 4.0.5 was published to npm on November 14. NVD has not finished its analysis.</p>
+              <p class="do"><strong>Do</strong>Run <code>npm ls create-ecdh</code>, and update to 4.0.5 where it shows up.</p>
+              <div class="sources">Sources: <a href="https://www.npmjs.com/package/create-ecdh">npm</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129319">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Apache httpd</span><span class="tag ">Node.js</span><span class="tag ">React</span></div>
+              <h3><a href="https://httpd.apache.org/security/vulnerabilities_24.html">Nothing new from Apache, Node.js or React today, and this week's fixes are still open</a></h3>
+              <p>None of today's feeds posted a new release. Still open from this week: Apache httpd 2.4.71 (or <code>Protocols http/1.1</code> as a stopgap), Node.js 22.23.5, 24.22.3 and 26.13.1, and React Server Components packages 19.0.9, 19.1.10, 19.2.9 and 19.3.1. Confirm your servers and lockfiles use them.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 8.6 v3.1</span><span class="tag mono">CVE-2026-114713</span><span class="tag ">UnrealIRCd</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html">Attackers are exploiting UnrealIRCd, the chat server, and CISA wants it fixed by November 16</a></h3>
+              <p>This one is not a web server, but teams that run IRC for communities or support often forget it. UnrealIRCd 6.0.0 before 6.2.7.1 does not escape a message tag, so any user on a network with two or more linked servers can inject server-to-server commands. The maintainer says attacks began the day after the November 7 hotfix and that AI helped find the bugs fixed in 6.2.7.1. CISA added it to KEV on November 13.</p>
+              <p class="do"><strong>Do</strong>Update UnrealIRCd to 6.2.7.1, or deploy the maintainer's spamfilter workaround if you cannot restart yet.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html">The Hacker News</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114713">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">PyPI</span></div>
+              <h3><a href="https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/">PyPI's project pages now show a Security tab with where each release was built</a></h3>
+              <p>PyPI says the redesign is live. The new tab shows each release's provenance state, meaning whether every file carries an attestation tying it to a Trusted Publisher or a source commit. It is a quick check before you add an unfamiliar Python package, though a missing attestation alone does not mean a package is bad.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Supply chain</span><span class="tag ">Claude Code</span><span class="tag ">Cursor</span></div>
+              <h3><a href="https://cursor.com/blog/security-incident-update">A stolen vendor key led to a trojan Claude Code extension on Cursor's marketplace</a></h3>
+              <p>Cursor's incident report says an attacker got an access key Cursor had issued to Fireworks AI, which Fireworks exposed, and used it to copy a storage bucket of older coding-agent traces. Some traces held credentials nobody had removed, and those opened Cursor's other tools. On October 29 the attacker placed fake copies of Anthropic's Claude Code extension, versions 2.1.312 and 2.1.313, in the cache behind Cursor's extension marketplace. They were up about 11 hours, and at most 5,000 users may have received them. Cursor says Anthropic's own extension and Open VSX were not changed. BleepingComputer reports the fake extension tried to install an attacker's SSH key, though coding errors likely stopped it on many Windows and Mac machines. Cursor says it has seen no new malicious activity since November 1, and that Privacy Mode users were not affected.</p>
+              <p class="do"><strong>Do</strong>If anyone on your team updated Claude Code inside Cursor on October 29, check for those two versions and look for an unfamiliar key in <code>~/.ssh/authorized_keys</code>, then follow Cursor's remediation steps. Also rotate any key you ever pasted into an agent session or sent to a vendor's support team.</p>
+              <div class="sources">Sources: <a href="https://cursor.com/blog/security-incident-update">Cursor incident report</a> · <a href="https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/">BleepingComputer</a> · <a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">The Hacker News</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Worth reading</span></div>
+              <h3><a href="https://projectzero.google/2026/11/disclosure-policy.html">Project Zero will publish bug details 90 days after reporting, then 60, then 30</a></h3>
+              <p>Google's team says AI has cut the time attackers need to find and exploit a bug, and to work one out from a patch, so the old "90 plus 30 days" rule no longer fits. The new policy is "Full 90" now, "Full 60" from February 2, 2027 and "Full 30" from January 3, 2028. Actively exploited bugs follow Google's separate policy. Its point is that the gap between a fix shipping and your update landing matters more now.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Credential theft</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/">The Cursor breach is part of a wave Wiz calls "Black October"</a></h3>
+              <p>BleepingComputer says attackers have targeted AI developer platforms to steal credentials, including at Railway, Northflank, Lightning AI, OpenCode and Warp. It reports about $740,000 in fraudulent AI charges at Railway. The stolen credentials were mostly ones that give access to AI models, so give those keys expiry dates and spending limits.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Custom Block Builder to 3.0.0, Cloud Storage Manager for Fluent Forms to 1.2.9 and Shipo to 1.8.4, or deactivate them.</li>
+            <li>Remove Quick Page/Post Redirect, and search your logs for <code>anadnet.com</code>.</li>
+            <li>Update UnrealIRCd to 6.2.7.1 if you run it.</li>
+            <li>Check Cursor installs for Claude Code 2.1.312 or 2.1.313, and rotate keys that were pasted into agent sessions.</li>
+            <li>Update Optimole to 4.2.20 and Flatsome to 3.20.13, and run <code>npm ls create-ecdh</code> for 4.0.5.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114713">CVE-2026-114713</a><span class="kev-yes">KEV 11-13</span><span class="meta">UnrealIRCd 6.0.0 before 6.2.7.1 · 8.6 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120522">CVE-2026-120522</a><span class="meta">Cloud Storage Manager for Fluent Forms through 1.2.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19907">CVE-2026-19907</a><span class="meta">Shipo 1.6 through 1.8.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129319">CVE-2026-129319</a><span class="meta">create-ecdh 4.0.4 and below · 8.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124969">CVE-2026-124969</a><span class="meta">Optimole through 4.2.19 · 7.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-127048">CVE-2026-127048</a><span class="meta">Custom Block Builder before 3.0.0 · not scored yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126697">CVE-2026-126697</a><span class="meta">Quick Page/Post Redirect before 5.2.4 · not scored yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-117487">CVE-2026-117487</a><span class="meta">Flatsome before 3.20.13 · not scored yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-117490">CVE-2026-117490</a><span class="meta">Flatsome before 3.20.13 · not scored yet</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 15, 2026 04:38 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
