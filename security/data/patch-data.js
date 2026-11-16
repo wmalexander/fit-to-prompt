@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-15"
+        lastUpdated: "2026-11-16"
     },
     issues: [
+        {
+            date: "2026-11-16",
+            issueNumber: 13,
+            title: "Four WordPress plugins have critical bugs, and attackers are using AI agents to steal AI keys",
+            summary: "Document Library Pro, Advanced Form Integration, Estatik and Give Peer-to-Peer need updates, Apache Shiro can let anyone log in as a known user, and Amazon describes AI agents hunting for AI keys.",
+            url: "https://fittoprompt.com/security/issues/2026-11-16.html",
+            pressure: "elevated",
+            itemCount: 12
+        },
         {
             date: "2026-11-15",
             issueNumber: 12,

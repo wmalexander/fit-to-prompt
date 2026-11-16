@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Four WordPress plugins have critical bugs, and attackers are using AI agents to steal AI keys | Fit to Patch No. 13, November 16, 2026</title>
+  <meta name="description" content="Document Library Pro, Advanced Form Integration, Estatik and Give Peer-to-Peer need updates, Apache Shiro can let anyone log in as a known user, and Amazon describes AI agents hunting for AI keys.">
+  <meta property="og:title" content="Fit to Patch No. 13: Four WordPress plugins have critical bugs, and attackers are using AI agents to steal AI keys">
+  <meta property="og:description" content="Document Library Pro, Advanced Form Integration, Estatik and Give Peer-to-Peer need updates, Apache Shiro can let anyone log in as a known user, and Amazon describes AI agents hunting for AI keys.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-16.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Monday, November 16, 2026</span>
+        <span>No. 13</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Four WordPress plugins (Document Library Pro, Advanced Form Integration, Estatik and Give Peer-to-Peer) have critical or code-running bugs, so update or deactivate them.</li>
+            <li>Apache Shiro through 3.0.0 can accept any password for a known user when LDAP login caching is turned on, and 3.0.1 fixes it.</li>
+            <li>Amazon says attackers' AI agents are searching exposed AI apps such as LiteLLM and Dify for provider keys.</li>
+            <li>A new Linux kernel bug called NoisyTCP can crash web servers, and the fix is in the next kernel update.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-122662</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122662">Document Library Pro before 4.2.2 can be fed hostile data that the site turns into code objects</a></h3>
+              <p>NVD lists this as an unsafe handling of untrusted data (object injection) in the Barn2 plugin, scored 9.8 with no login needed. Whether it leads to code running depends on what other plugins and themes are installed, and I did not find a report of exploitation. NVD has not finished its analysis.</p>
+              <p class="do"><strong>Do</strong>Update Document Library Pro to 4.2.2 or later through your Barn2 account, and deactivate it until you can.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122662">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-125769</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125769">Advanced Form Integration 2.11.3 and earlier lets a stranger give themselves more privileges</a></h3>
+              <p>NVD describes a wrong-privilege-assignment bug in this form-connector plugin, scored 9.8. That kind of bug usually means a visitor can gain an administrator role. NVD gives no more detail yet, and I did not find a report of exploitation. WordPress.org lists 2.11.6 as current.</p>
+              <p class="do"><strong>Do</strong>Update Advanced Form Integration to 2.11.6, then review the administrator list for accounts you did not create.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/advanced-form-integration/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125769">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-125795</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125795">Estatik 4.3.6 and earlier can be tricked into loading a file it should not</a></h3>
+              <p>The real estate plugin builds a file name from a request without limiting it, which NVD calls local file inclusion and scores 9.8. On many servers that lets an attacker run code if they can also place a file on the site. I did not find a report of exploitation.</p>
+              <p class="do"><strong>Do</strong>Update Estatik to 4.3.7 or later.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/estatik/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125795">NVD</a></div>
+            </article>
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 7.5 v3.1</span><span class="tag mono">CVE-2026-82568</span><span class="tag mono">CVE-2026-82663</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82568">Give Peer-to-Peer has two bugs that, per the CVE text, chain into code running with no login</a></h3>
+              <p>One bug (versions through 2.9.3) lets a visitor slip database commands into the <code>sort</code> parameter. The other (versions through 2.9.5) lets a visitor change a fundraising team's settings and upload media files. The CVE text says the two can be combined for unauthenticated code execution. At least one Peer-to-Peer campaign must exist on the site. Each is scored 7.5.</p>
+              <p class="do"><strong>Do</strong>Update the Give Peer-to-Peer add-on to a release newer than 2.9.5, and deactivate it until you can.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82568">NVD 82568</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82663">NVD 82663</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.3 v3.1</span><span class="tag mono">CVE-2026-124672</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124672">Burst Statistics before 3.7.5 lets a visitor switch off other plugins' protections for one request</a></h3>
+              <p>Per NVD, the plugin unloads every other active plugin when a request is not really meant for its own REST API, and an unauthenticated visitor can trigger that. Protections such as REST restrictions, hidden login pages and two-factor checks then do not run for that request. The same release fixes two smaller data leaks.</p>
+              <p class="do"><strong>Do</strong>Update Burst Statistics to 3.7.5 or later (3.7.5 is current on WordPress.org).</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/burst-statistics/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124672">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.2 v3.1</span><span class="tag mono">CVE-2026-125771</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125771">MCP Server for WordPress 2.0.3 and earlier lets a user raise their own privileges</a></h3>
+              <p>This plugin connects AI assistants to a site. NVD lists a wrong-privilege-assignment bug scored 7.2, and the details are thin so far. I did not find a report of exploitation.</p>
+              <p class="do"><strong>Do</strong>Update to 2.0.4, the current release, and review which AI tools can reach the site.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/ai-workflow-automation-ai-agent-hub/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125771">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag ">No NVD score yet</span><span class="tag mono">CVE-2026-110960</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110960">Auth Armor 1.0.3 and earlier lets a visitor read stored API keys and take over an admin account</a></h3>
+              <p>Per NVD, several handlers in the login-security plugin need no login. They leak the site's stored API credentials and let an attacker reset an administrator's enrollment to take the account. NVD has not scored it, and I did not find a fixed version.</p>
+              <p class="do"><strong>Do</strong>Deactivate and remove Auth Armor until the author ships a fix, and rotate the API credentials it stored.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110960">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.1 v3.1</span><span class="tag mono">CVE-2026-129091</span><span class="tag wp">WordPress</span><span class="tag ">Theme add-on</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129091">GrandPrix Core has a file-loading bug, and no fixed version is listed</a></h3>
+              <p>NVD lists local file inclusion in the Mikado-Themes GrandPrix Core plugin, version 1.0 and earlier, scored 8.1. Because no fix is named, the safest read is that it is unpatched.</p>
+              <p class="do"><strong>Do</strong>Remove GrandPrix Core if the theme does not need it, and ask the theme author for a patched release.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129091">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.1 v4.0</span><span class="tag mono">CVE-2026-129349</span><span class="tag ">Apache Shiro</span><span class="tag ">Java</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129349">Apache Shiro can let anyone log in as a known user when LDAP login caching is on</a></h3>
+              <p>Per NVD, Shiro through 3.0.0 accepts any password for a user who has already logged in once, if the app uses <code>DefaultLdapRealm</code> (or <code>JndiLdapRealm</code>) with <code>authenticationCachingEnabled</code> turned on. That setting is off by default, so only apps that turned it on are exposed. An attacker also needs a valid username.</p>
+              <p class="do"><strong>Do</strong>Upgrade Shiro to 3.0.1 or later. If you cannot yet, turn authentication caching off for those realms.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129349">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">React</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/cve-2026-126187-react-flight-rce">No new React, Node.js or Apache httpd release today, and last week's React fix is still the one to confirm</a></h3>
+              <p>The feeds I watch posted nothing new. Still open from last week is the React Server Components code-running bug (CVE-2026-126187, fixed in 19.0.9, 19.1.10, 19.2.9 and 19.3.1). Check your lockfiles for <code>react-server-dom-webpack</code>, <code>-parcel</code> and <code>-turbopack</code>.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag ">No NVD score yet</span><span class="tag mono">CVE-2026-99288</span><span class="tag ">Linux kernel</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-99288">NoisyTCP can crash a Linux web server with specially timed network packets</a></h3>
+              <p>BleepingComputer reports an 11-year-old Linux kernel bug that lets an attacker with no login crash a server running Nginx, Apache or SSH in a default setup. The researcher says it causes a crash only, not code running or data changes, and that the timing is narrow, so a quiet single-queue server can take a long time to hit. The fix was merged into the mainline kernel about two weeks ago. NVD has not scored it.</p>
+              <p class="do"><strong>Do</strong>Install your distribution's next kernel update and reboot. If you cannot yet, the researcher suggests turning off SYN cookies (which weakens flood protection) or limiting the network card to one receive queue.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/">BleepingComputer</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-99288">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">AI-assisted attacks</span><span class="tag ">LiteLLM</span><span class="tag ">Dify</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html">Amazon says attackers' AI agents are hunting for AI provider keys in exposed LiteLLM, Dify and similar apps</a></h3>
+              <p>Amazon's decoy servers captured records from agents, which it believes with moderate confidence ran on ARTEX, the AI hacking tool the FBI warned about on November 14. The agents scanned for exposed apps such as LiteLLM, One API, Dify, Langflow and Open WebUI, tried default admin keys, unfinished installs and known bugs, then tested the stolen keys. Amazon says it cannot verify the outcomes the agents reported. Separately, Cloudflare says static CI/CD tokens that never expire were the common root cause in ARTEX cases it investigated, including one account-level token with no IP limits.</p>
+              <p class="do"><strong>Do</strong>Do not leave AI gateways reachable from the internet with default keys, put provider keys on spending limits, and replace long-lived CI/CD tokens with short-lived ones that have IP restrictions.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html">The Hacker News</a></div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Document Library Pro to 4.2.2, Advanced Form Integration to 2.11.6 and Estatik to 4.3.7.</li>
+            <li>Update or deactivate Give Peer-to-Peer, and remove Auth Armor and GrandPrix Core until fixes ship.</li>
+            <li>Update Burst Statistics to 3.7.5 and MCP Server for WordPress to 2.0.4.</li>
+            <li>Upgrade Apache Shiro to 3.0.1 if any app uses LDAP realms with caching.</li>
+            <li>Make sure no AI gateway or app builder is exposed with default keys, and set spending limits on provider keys.</li>
+            <li>Schedule your distribution's kernel update for NoisyTCP.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-122662">CVE-2026-122662</a><span class="meta">Document Library Pro before 4.2.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125769">CVE-2026-125769</a><span class="meta">Advanced Form Integration through 2.11.3 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125795">CVE-2026-125795</a><span class="meta">Estatik through 4.3.6 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129349">CVE-2026-129349</a><span class="meta">Apache Shiro through 3.0.0 (LDAP caching on) · 9.1 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129091">CVE-2026-129091</a><span class="meta">GrandPrix Core through 1.0 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82568">CVE-2026-82568</a><span class="meta">Give Peer-to-Peer through 2.9.3 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82663">CVE-2026-82663</a><span class="meta">Give Peer-to-Peer through 2.9.5 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124672">CVE-2026-124672</a><span class="meta">Burst Statistics before 3.7.5 · 7.3 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125771">CVE-2026-125771</a><span class="meta">MCP Server for WordPress through 2.0.3 · 7.2 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-110960">CVE-2026-110960</a><span class="meta">Auth Armor through 1.0.3 · not scored yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-99288">CVE-2026-99288</a><span class="meta">Linux kernel (NoisyTCP) · not scored yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126187">CVE-2026-126187</a><span class="meta">React Server Components before 19.0.9, 19.1.10, 19.2.9, 19.3.1 · 9.5 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 16, 2026 05:26 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
