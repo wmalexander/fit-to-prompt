@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-15",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["cryptogram", "crossword", "scramble"]
+        lastUpdated: "2026-11-16",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["cryptogram", "crossword", "scramble", "acronym"]
     },
     issues: [
+        {
+            date: "2026-11-16",
+            volume: 1,
+            issueNumber: 146,
+            title: "Wall Street Braces for Anthropic's Aggressive Spending",
+            description: "Daily AI news roundup - November 16, 2026. Anthropic's IPO spending forecast, what Jensen Huang's exit means for the AI industry, Apple's AI health study, OpenAI's ChatGPT Wallet, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-16.html",
+            storyCount: 20,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-11-15",
             volume: 1,

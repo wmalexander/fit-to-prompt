@@ -1,0 +1,983 @@
+{
+  "fetchDate": "2026-11-16",
+  "lastCheckDate": "2026-11-15",
+  "sourcesChecked": 68,
+  "unreachableSources": [
+    "Kara Swisher",
+    "Latent Space",
+    "Reddit r/artificial",
+    "The Atlantic",
+    "Papers With Code"
+  ],
+  "sourceLog": [
+    {
+      "source": "Anthropic",
+      "category": "A",
+      "url": "https://www.anthropic.com/news",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-html"
+    },
+    {
+      "source": "Claude Code Changelog",
+      "category": "A",
+      "url": "https://claude.ai/changelog/code",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-json"
+    },
+    {
+      "source": "OpenAI",
+      "category": "A",
+      "url": "https://openai.com/blog",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": "Direct fetch returned 403; Google News fallback used",
+      "method": "google-news"
+    },
+    {
+      "source": "Google DeepMind",
+      "category": "A",
+      "url": "https://deepmind.google/blog",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-html"
+    },
+    {
+      "source": "Meta AI",
+      "category": "A",
+      "url": "https://ai.meta.com/blog",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-html"
+    },
+    {
+      "source": "Microsoft Research",
+      "category": "A",
+      "url": "https://www.microsoft.com/en-us/research/blog/feed/",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Apple ML",
+      "category": "A",
+      "url": "https://machinelearning.apple.com/rss.xml",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Hugging Face",
+      "category": "A",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Mistral",
+      "category": "A",
+      "url": "https://mistral.ai/rss.xml",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "xAI",
+      "category": "A",
+      "url": "https://x.ai/blog",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": "Direct fetch not used; Google News fallback used",
+      "method": "google-news"
+    },
+    {
+      "source": "Simon Willison",
+      "category": "B",
+      "url": "https://simonwillison.net/atom/everything/",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Ethan Mollick (One Useful Thing)",
+      "category": "B",
+      "url": "https://oneusefulthing.org",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "First attempt timed out; retry succeeded",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Stratechery",
+      "category": "B",
+      "url": "https://stratechery.com",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Kara Swisher",
+      "category": "B",
+      "url": "https://karaswisher.com",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "Direct feed unreachable (curl 000) on two attempts; Google News returned no items",
+      "method": "google-news"
+    },
+    {
+      "source": "Gary Marcus",
+      "category": "B",
+      "url": "https://garymarcus.substack.com",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Boris Cherny",
+      "category": "B",
+      "url": "https://x.com/bcherny",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": "X posts via Google News; no direct fetch",
+      "method": "google-news"
+    },
+    {
+      "source": "Zvi Mowshowitz",
+      "category": "B",
+      "url": "https://thezvi.substack.com",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Nathan Labenz (Cognitive Revolution blog)",
+      "category": "B",
+      "url": "https://cognitiverevolution.ai",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "Blog feed returned 404; podcast feed checked under Podcasts",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Ars Technica",
+      "category": "C",
+      "url": "https://arstechnica.com/ai",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "MIT Technology Review",
+      "category": "C",
+      "url": "https://technologyreview.com/topic/artificial-intelligence",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Wired",
+      "category": "C",
+      "url": "https://wired.com/tag/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "TechCrunch",
+      "category": "C",
+      "url": "https://techcrunch.com/category/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "The Verge",
+      "category": "C",
+      "url": "https://theverge.com/ai-artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "VentureBeat",
+      "category": "C",
+      "url": "https://venturebeat.com/category/ai",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": "Direct feed rate-limited (429); Google News fallback used",
+      "method": "google-news"
+    },
+    {
+      "source": "404 Media",
+      "category": "C",
+      "url": "https://404media.co",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "One item found, not AI-related",
+      "method": "curl-rss"
+    },
+    {
+      "source": "New York Times",
+      "category": "D",
+      "url": "https://nytimes.com/topic/subject/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Wall Street Journal",
+      "category": "D",
+      "url": "https://wsj.com/tech/ai",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": "Direct feed unreachable (curl 000); Google News fallback used",
+      "method": "google-news"
+    },
+    {
+      "source": "Bloomberg",
+      "category": "D",
+      "url": "https://bloomberg.com/technology",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Reuters",
+      "category": "D",
+      "url": "https://reuters.com/technology/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 4,
+      "error": "Direct feed not used; Google News fallback used",
+      "method": "google-news"
+    },
+    {
+      "source": "Fortune",
+      "category": "D",
+      "url": "https://fortune.com/tag/artificial-intelligence",
+      "status": "success",
+      "candidatesFound": 2,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Washington Post",
+      "category": "D",
+      "url": "https://washingtonpost.com/technology",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": "Direct feed not used; Google News fallback used",
+      "method": "google-news"
+    },
+    {
+      "source": "The Atlantic",
+      "category": "D",
+      "url": "https://theatlantic.com/feed/channel/technology/",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "Feed returned malformed XML; parse failed",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Associated Press",
+      "category": "D",
+      "url": "https://apnews.com/technology",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Google News fallback used; nothing AI-specific",
+      "method": "google-news"
+    },
+    {
+      "source": "NateBJones",
+      "category": "E",
+      "url": "https://youtube.com/@NateBJones",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "IndyDevDan",
+      "category": "E",
+      "url": "https://youtube.com/@IndyDevDan",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Fireship",
+      "category": "E",
+      "url": "https://youtube.com/@Fireship",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "MetalSole",
+      "category": "E",
+      "url": "https://youtube.com/@MetalSole",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Retry succeeded after first attempt timed out",
+      "method": "curl-rss"
+    },
+    {
+      "source": "AiExplained-official",
+      "category": "E",
+      "url": "https://youtube.com/@AiExplained-official",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Retry succeeded after first attempt timed out",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Claude",
+      "category": "E",
+      "url": "https://youtube.com/@Claude",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Retry succeeded after first attempt timed out",
+      "method": "curl-rss"
+    },
+    {
+      "source": "mreflow",
+      "category": "E",
+      "url": "https://youtube.com/@mreflow",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "matthew_berman",
+      "category": "E",
+      "url": "https://youtube.com/@matthew_berman",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "TwoMinutePapers",
+      "category": "E",
+      "url": "https://youtube.com/@TwoMinutePapers",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "ColeMedin",
+      "category": "E",
+      "url": "https://youtube.com/@ColeMedin",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Retry succeeded after first attempt timed out",
+      "method": "curl-rss"
+    },
+    {
+      "source": "aiadvantage",
+      "category": "E",
+      "url": "https://youtube.com/@aiadvantage",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "DaveShap",
+      "category": "E",
+      "url": "https://youtube.com/@DaveShap",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Hard Fork (YouTube)",
+      "category": "E",
+      "url": "https://youtube.com/@hardfork",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "EzraKleinShow",
+      "category": "E",
+      "url": "https://youtube.com/@EzraKleinShow",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Chase-H-AI",
+      "category": "E",
+      "url": "https://youtube.com/@Chase-H-AI",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "leonvanzyl",
+      "category": "E",
+      "url": "https://youtube.com/@leonvanzyl",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "3blue1brown",
+      "category": "E",
+      "url": "https://youtube.com/@3blue1brown",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "TinaHuang1",
+      "category": "E",
+      "url": "https://youtube.com/@TinaHuang1",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "AndrejKarpathy",
+      "category": "E",
+      "url": "https://youtube.com/@AndrejKarpathy",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "YannicKilcher",
+      "category": "E",
+      "url": "https://youtube.com/@YannicKilcher",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "sentdex",
+      "category": "E",
+      "url": "https://youtube.com/@sentdex",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Hard Fork",
+      "category": "F",
+      "url": "https://feeds.simplecast.com/l2i9YnTd",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Latest episode 2026-11-12",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Latent Space",
+      "category": "F",
+      "url": "https://latent.space/feed",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "Direct feed unreachable (curl 000) on two attempts; Google News returned only a September item",
+      "method": "google-news"
+    },
+    {
+      "source": "Machine Learning Street Talk",
+      "category": "F",
+      "url": "https://anchor.fm/s/1e4a0eac/podcast/rss",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Latest episode 2026-11-02; feed XML needed regex parsing",
+      "method": "curl-rss"
+    },
+    {
+      "source": "The Cognitive Revolution",
+      "category": "F",
+      "url": "https://feeds.megaphone.fm/RINTP3108857801",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Latest episode 2026-11-14",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Practical AI",
+      "category": "F",
+      "url": "https://changelog.com/practicalai/feed",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Latest episode 2026-11-13",
+      "method": "curl-rss"
+    },
+    {
+      "source": "NVIDIA AI Podcast",
+      "category": "F",
+      "url": "https://feeds.megaphone.fm/nvidiaaipodcast",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Latest episode 2026-06-24",
+      "method": "curl-rss"
+    },
+    {
+      "source": "AI in Business (Emerj)",
+      "category": "F",
+      "url": "https://emerj.com/feed",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": "Retry succeeded after first attempt timed out",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Lex Fridman",
+      "category": "F",
+      "url": "https://lexfridman.com/feed/podcast/",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Your Undivided Attention",
+      "category": "F",
+      "url": "https://feeds.simplecast.com/rZ0cYk12",
+      "status": "empty",
+      "candidatesFound": 0,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Hacker News",
+      "category": "H",
+      "url": "https://news.ycombinator.com",
+      "status": "success",
+      "candidatesFound": 1,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "category": "H",
+      "url": "https://reddit.com/r/MachineLearning",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": null,
+      "method": "curl-rss"
+    },
+    {
+      "source": "Reddit r/LocalLLaMA",
+      "category": "H",
+      "url": "https://reddit.com/r/LocalLLaMA",
+      "status": "success",
+      "candidatesFound": 3,
+      "error": "First attempt rate-limited; retry succeeded",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Reddit r/artificial",
+      "category": "H",
+      "url": "https://reddit.com/r/artificial",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "Rate-limited (429) on two attempts; no alternate source used",
+      "method": "curl-rss"
+    },
+    {
+      "source": "Papers With Code",
+      "category": "H",
+      "url": "https://paperswithcode.com",
+      "status": "error",
+      "candidatesFound": 0,
+      "error": "No feed; HTML index fetched but not parsed",
+      "method": "curl-html"
+    },
+    {
+      "source": "The Rundown AI (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "Superhuman AI (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "Import AI (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "The Batch (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "There's An AI For That (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "Eye on AI (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "AI Breakfast (newsletter)",
+      "category": "G",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "Newsletter; check email inbox",
+      "method": "none"
+    },
+    {
+      "source": "AI News (X/Twitter Lists)",
+      "category": "H",
+      "url": "",
+      "status": "skipped",
+      "candidatesFound": 0,
+      "error": "No actionable URL",
+      "method": "none"
+    }
+  ],
+  "candidates": [
+    {
+      "source": "OpenAI Blog",
+      "title": "Our new blog for science",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0xMG5vSllDdjVHa3N1MmhSV2VBMnJIZ0tMcXg3dzJmY2ZvS2V3Zk9zaXRZY1h5enlLRzJDMURCbUZjN3ZJNnJuR1g2TnMxZ1hOaXdZQ21paTRXLWJ4dDl3?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "OpenAI Blog",
+      "title": "Introducing ChatGPT Wallet",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA3OVRyWjFFZGk4Y29sdjlicGNHOEdOdnlvZzlTcVFVc1NTRXhtbXlTMFNSVnp6VXJ4NUtKX2xkaEdyUE5sMWdmUEVWUlA2X3ZTeWl3bF9vTzZfR190c0R5RnE0eDdTbXladGc?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "OpenAI Research",
+      "title": "A step toward defining the Standard Model on a lattice",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4xSGFfWmVQdlE5eUpDUzdzczVqWV9MSnhzQnhKXzlicXUtdmFfandZbE9fUTAtVnVUeElydnowdzQ0dkY0Q0VxeTlDQ2JpeU5iR0JGaW5uN3FibEZaVFFFOE5jVUVwS2dvWXRNTHpGUkNpUU0?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "xAI Blog",
+      "title": "AI teammates that finish the work (Grok Bot)",
+      "url": "https://news.google.com/rss/articles/CBMiMkFVX3lxTE9KUlpuaWtVOGw0VTlVRGlxYVdJZUZRQ3BPakJPYVQ5UjNyaGQyVHk3RWdn?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Simon Willison",
+      "title": "datasette-agent 0.6a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-agent/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Boris Cherny (X via Google News)",
+      "title": "I built a voice mode for Claude Code. Like a phone call: speak, listen, interrupt.",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBselR1WG0teDBKSlM5T3pJRWhseTJmdmZQMndHZmxKN2l6T2djWjhmZ2NDdXhKU0kyZ1pkUzBtRFVpYzFlVm13V2ZybWtrdXk2bnprdGxzZDV6cFA3bWp5Yg?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "X post via Google News; original author unclear from feed, verify. Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Wired AI",
+      "title": "AI DJs Completely Kill My Groove",
+      "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Wired AI",
+      "title": "This AI Tamagotchi Turns Everyday Objects Into Needy Virtual Pets",
+      "url": "https://www.wired.com/story/this-ai-tamagotchi-oats-turns-everyday-objects-into-needy-virtual-pets/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Apple launches new app to study how people use AI for health",
+      "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Apple's new study looks to improve the effectiveness of AI health tools",
+      "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "The Verge AI",
+      "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
+      "url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "VentureBeat",
+      "title": "One compromised MCP server can trick an AI agent into misusing tools you already trust",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNmkwanhHbjBxWlFHSTFMMTBsV05hWHM3NHRfTFYxZS1xVTVOTXh5aWRUTkxSNTJ2WEtyeU5aOUdKT1F0V0dBa3BUSUozcE9hcjYtWlFRWUtYaW4yb3BCbC0wWDhsWjNrbVJlOEM3X0FqRmU4dlNWb2FaNThQei1KbVZwVExuRTNaZFNiMEc0R05FcTNObHNLdGFhQm1PeHpWdGxGeEVONHhQeUlfaHlfcWZzZHNlYzRudmJpZVVMc3Rmdw?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Direct feed rate-limited (429); Google News redirect; resolve at build"
+    },
+    {
+      "source": "New York Times Tech",
+      "title": "Wall Street Braces for Anthropic's Spending",
+      "url": "https://www.nytimes.com/2026/11/13/technology/anthropic-ipo-spending-plans.html",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "URL path is dated 2026/11/13 but the feed pubDate is 2026-11-16; confirm the date before using"
+    },
+    {
+      "source": "Bloomberg Tech",
+      "title": "How Dual-Class Stock Entrenches Founder Control at Anthropic, SpaceX, Google",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/how-dual-class-stock-entrenches-founder-control-at-anthropic-spacex-google",
+      "date": "2026-11-16",
+      "type": "article"
+    },
+    {
+      "source": "Bloomberg Tech",
+      "title": "Nvidia's CEO Search Draws Fire With Bessent's Call for Shakeup",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/nvidia-s-ceo-search-draws-fire-with-bessent-s-call-for-shakeup",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Bloomberg Tech",
+      "title": "Tech Stocks Plunge as Investors Await Anthropic IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-16/tech-stocks-plunge-as-investors-await-anthropic-ipo-video",
+      "date": "2026-11-16",
+      "type": "video"
+    },
+    {
+      "source": "WSJ (via Google News)",
+      "title": "Exclusive: Trump Administration to Name Nvidia Among AI 'National Champions'",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbVZuRkZvWWp2cTVZRkh3Tm96YThHTGFtSmk4TjhOMWZqT0xsSXZkbEFQRzRZcWFaMHlzNGYxZHBzTF9YYUZJa0ktNFNua1ZiLTVvNDRNZGViZlFxMVVsQlZXM09faWZOSDZkNDRiaTJjYXFfMUgxN3p1UWZkZXVuOEQxUFJRSHI4TG9yRU1kT0Rlb2ZoUGQtQUNndkdnajdTZmc?oc=5",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "Google News redirect; resolve at build. Reuters also covered this story."
+    },
+    {
+      "source": "WSJ (via Google News)",
+      "title": "Nvidia's Days as an Open Checkbook for the AI Economy Are Numbered",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdXRsejdndmRqaEQtdlRCZE1mc19mWVdObHdta0hXcHBSbVo1N09pa3NHT1VpbVFoSjBjYnd4S1VaZDR5WVdnQVdOOGl3X2pFdHVOT01VQnBfVXVyLWV0dGFGbEtsYk1XaTNmMHdrTGhUM0pSTHhnTlhqVGVneUl2bnNDV1ZtdFFHZExBenBGa05DdWZRZTBPYzUtMXpORDU4M2dKVg?oc=5",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "Google News redirect; resolve at build. Replace this URL with the real article when resolved."
+    },
+    {
+      "source": "Reuters (via Google News)",
+      "title": "Alibaba unveils new flagship AI model with safety upgrades",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUVhrY1I2NEhJUndRTG5sMWlxRXUxTS0wOHdOLVg2bG83NS10R0RuM1h2VWpMVTFrcHd3SmlsVy1hWFhiNld3NGdzcGxLWVVwN0UtUjhjUTdwaFdzMnVoSEkwZWR0MHYxMUw1NDVxbW5GZkFNbWZuaXlGZlRHUjRaTU1JM3FiVGRONXNCaTNtb3dFa1hmZlYxbUd6ZWRBdmgxVk1od0RDT3dscl9XaDRncU84RkxmYnNlcVFF?oc=5",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Reuters (via Google News)",
+      "title": "Top scorer on South Korean tax exam confesses to cheating with AI",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVjJtaVF1ZGdVTmRVNlB2Mk5GeEVtaTk2UHIxbW16RHU2M0hNQ1hTZW1XTkVPTzlYQnNYV2FDMlZGQjZpMXdySHZhMDFUMDkxOWJybnE4ekV6LVRuV3p5bHZiU3dTVWsyNkpOTkdaV3gxR3plNTF1TTdyVDlIUklCekFkNG5yaFdQZ3lQVjhyQXNxX09UQnVuYlhLMjNoMVVDZFk4R2xhQVd4T2xjaWNfdVZFZW4?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Reuters (via Google News)",
+      "title": "Inside China's drive to build an AI-native generation",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdVUtY3hKeno0SFNRY2lXTS1Ka29uakhJcGlqMmw5YldNRElPQWJPVjRWcU5IXzZRaDhPZ2F5MExxQjdGZEVsNXZNd1dvSnA3OEJoSVNlbzFxdHFRNWF3RUNSV21rOW12Z1NSdVROTXdfdU5hS1p6SHh2eFdyaXJUN1BJbk9YZWtGamowbWVhTV92SGNTMjhTVS1ZZHdtQQ?oc=5",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Reuters (via Google News)",
+      "title": "US and Russia to oppose talks on limiting autonomous weapons",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUS1qMHhiR1ozLTIyenNWclR0dVZYNnBsSG01eHJkN0VMSGFnSnIxNjc5Q01HNFJma2JEazF2aWh2U3VlWnNwYm82NUFWZGM1ME5CVTZaTWxseU5nRmppbWVDalBPODdzVWJBUDNEemdteXhFbXNXdEVvNnZiZ1FSRWIyS1JNSVBFUkxGVEoyaUNZTDNHQndZ?oc=5",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Fortune",
+      "title": "Treasury Secretary Scott Bessent says if Nvidia was a bank, 'a lot of the executives would...'",
+      "url": "https://fortune.com/2026/11/15/treasury-secretary-scott-bessent-nvidia-jensen-huang-nvidia-china-spy-scandal/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Fortune",
+      "title": "What a Tiny Chorus of the 'Bring Back Jensen' Tech Bros Gets Wrong",
+      "url": "https://fortune.com/2026/11/15/bring-back-jensen-huang-nvidia-tech-bros-wrong/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Washington Post (via Google News)",
+      "title": "Opinion: Nvidia might have an unsolvable problem",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYm5nSGRhdjdQOWhYTlllbnAtZXlVVkllVVZETnV1YzFNd01UX1dZTE9aelZUb3NrMmdBQS1IaWtMbnQ1OXV6ZlNmbjZkV2hNbVVoOWZjb3hqVVRDNGlrUnN3eE5LZG1iU1MyUEw2NFNCNEdFSUN5VUVDVHZHQ3VwMmRpLWV6Y2Q4VFdPYm1SdG9KclRoQnZSaGJxRkt6bVdxbVUyT2RRbmRqbEhzQVFxcQ?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Washington Post (via Google News)",
+      "title": "It's not just an affair. Nvidia's bigger issue could be chip smuggling.",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN2hPSWp5RThSSER6RU9KM2xsRkplcUx2eXVFdUlLYURuQ0tkQVFPeDRUa0t6cUJ2TmRMU0pFaGV1YU1GalExUWtqVTc4LS10THUyRFJJeXI3cUt4Sm9uRWhTOElzYzJhekJUWTR4RXRoQXV4aGR2NzRMZmdDTDFQVXVrSkd3Z0N6OFhvTGNFS0U0M1A0bGJKMUVOaTdscEZQakYxR3hoakxMdHpCaHVEVExyZ0o4Q1FLYkE?oc=5",
+      "date": "2026-11-15",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Washington Post (via Google News)",
+      "title": "Questions swirl around FAA's new SMART AI system, though officials say no link to ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVXdDeUJMb3NpSktxRV8tVk1vS2tEQ1ZPZ2RjdjBCOU5pc19SYklyZDFBQUU0NTNOdjRwbmRjZ0RoZHlLSktwWjB0VENQN1kzeUtUVjFMR3RwLVVtR3FJc1lhWGtkX1o0LTJTVXpiYXBTZVRjQzc5MTdzQUxGdmdocUtQZVo5SnQ3dC1JY3BjS19pdkhsakJGTlo5eWpRcGFfSk85VHpFaEtSN3gtNmhjMFB2LXZVVWhPd0E?oc=5",
+      "date": "2026-11-16",
+      "type": "article",
+      "note": "Google News redirect URL; resolve at build"
+    },
+    {
+      "source": "Hard Fork (YouTube Shorts)",
+      "title": "How 'Hubris' Tanked the Most Powerful Man in A.I.",
+      "url": "https://www.youtube.com/shorts/g1ijWHS8dxw",
+      "date": "2026-11-15",
+      "type": "video",
+      "note": "YouTube Short"
+    },
+    {
+      "source": "Hacker News",
+      "title": "What's Next for Nvidia?",
+      "url": "https://steveblank.com/2026/11/15/whats-next-for-nvidia/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "title": "[Meta FAIR + NYU] Unbundling Multimodal Vision Encoding: training 200+ MLLMs to find encoders",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xx1k2o/meta_fair_nyu_unbundling_multimodal_vision/",
+      "date": "2026-11-15",
+      "type": "paper"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "title": "Marimba: a System One model for speech [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xwzsm4/marimba_a_system_one_model_for_speech_r/",
+      "date": "2026-11-15",
+      "type": "paper"
+    },
+    {
+      "source": "Reddit r/MachineLearning",
+      "title": "Making cudaMemcpy 5x faster on a B300 [P]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xx2n25/making_cudamemcpy_5x_faster_on_a_b300_p/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Reddit r/LocalLLaMA",
+      "title": "EUROPA, the EU's open AI model, is aiming for nearly 1 trillion parameters",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xwr917/europa_the_eus_open_ai_model_is_aiming_for_nearly/",
+      "date": "2026-11-15",
+      "type": "article"
+    },
+    {
+      "source": "Reddit r/LocalLLaMA",
+      "title": "[Paper] No Second Run: Does RSI Stop at Frontier Pre-training?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xwt3ri/paper_no_second_run_does_rsi_stop_at_frontier/",
+      "date": "2026-11-15",
+      "type": "paper"
+    },
+    {
+      "source": "Reddit r/LocalLLaMA",
+      "title": "Basalt 0.4.0: More models, still as fast (Qwen 27B up to 770 tok/s on a 5090)",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xx1cu9/basalt_040_more_models_still_as_fast_qwen_27b_up/",
+      "date": "2026-11-15",
+      "type": "article"
+    }
+  ]
+}
