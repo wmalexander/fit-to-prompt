@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-16",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["cryptogram", "crossword", "scramble", "acronym"]
+        lastUpdated: "2026-11-17",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: []
     },
     issues: [
+        {
+            date: "2026-11-17",
+            volume: 1,
+            issueNumber: 147,
+            title: "Madison Huang, Jensen Huang's Daughter, Became a Powerful Force at Nvidia",
+            description: "Daily AI news roundup - November 17, 2026. Nvidia's Madison Huang problem, a US move to block China's indirect access to American AI, bubble warnings ahead of Anthropic's IPO, a $1B cybersecurity AI startup, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-17.html",
+            storyCount: 20,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-11-16",
             volume: 1,
