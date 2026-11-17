@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-16"
+        lastUpdated: "2026-11-17"
     },
     issues: [
+        {
+            date: "2026-11-17",
+            issueNumber: 14,
+            title: "Hijacked Optimizely scripts hit 178 sites; WordPress Soledad theme has a no-login bug",
+            summary: "Optimizely scripts on 178 organizations' sites carried a card skimmer, Soledad 8.7.7 and earlier has a no-login code bug, phpMyFAQ needs 4.1.12, and attackers are chaining LiteLLM and Starlette bugs.",
+            url: "https://fittoprompt.com/security/issues/2026-11-17.html",
+            pressure: "high",
+            itemCount: 15
+        },
         {
             date: "2026-11-16",
             issueNumber: 13,

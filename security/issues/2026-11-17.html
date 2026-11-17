@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hijacked Optimizely scripts hit 178 sites; WordPress Soledad theme has a no-login bug | Fit to Patch No. 14, November 17, 2026</title>
+  <meta name="description" content="Optimizely scripts on 178 sites carried a card skimmer, Soledad 8.7.7 and earlier has a no-login code bug, and attackers are chaining LiteLLM and Starlette bugs.">
+  <meta property="og:title" content="Fit to Patch No. 14: Hijacked Optimizely scripts hit 178 sites; WordPress Soledad theme has a no-login bug">
+  <meta property="og:description" content="Optimizely scripts on 178 sites carried a card skimmer, Soledad 8.7.7 and earlier has a no-login code bug, and attackers are chaining LiteLLM and Starlette bugs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-17.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Tuesday, November 17, 2026</span>
+        <span>No. 14</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+                        <li>A hijacked Optimizely script put a card skimmer and crypto stealer on 178 organizations' sites on Monday, so Optimizely users should inspect their project code.</li>
+            <li>The Soledad WordPress theme (8.7.7 and earlier) has a no-login code-running bug, and phpMyFAQ before 4.1.12 can be reinstalled by a stranger.</li>
+            <li>Attackers are scanning for AI gateways by chaining LiteLLM and Starlette bugs that are both on CISA's exploited list, so update LiteLLM to 1.83.7 and Starlette to 1.0.1.</li>
+            <li>Two WPPConnect npm releases and some Docker images stole secrets and WhatsApp sessions, and the library's release tag was rewritten afterward.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Exploited</span><span class="tag ">Supply chain</span><span class="tag ">Optimizely</span><span class="tag ">JavaScript</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/">A hijacked Optimizely script put a card skimmer and a crypto stealer on 178 organizations' sites</a></h3>
+              <p>Optimizely confirmed that an attacker used a bug in its Experimentation signup flow to add malicious JavaScript to customer projects on November 16. Researcher Scott Helme found 188 infected files belonging to 178 organizations, including CNN, BBC, Zoom, Salesforce and GitLab. The script swapped copied crypto wallet addresses, copied card numbers from checkout forms, and, per Helme, loaded iPhone exploit kits. Optimizely says it fixed the bug, removed the code and reset the affected accounts. StepSecurity reports the attacker's server is now down, but Helme saw one file still infected late on November 16. This is not a CVE, so there is no score.</p>
+              <p class="do"><strong>Do</strong>If your site uses Optimizely Web, read the Project JavaScript field of every project and search the served snippets for <code>1688360</code> and for base64 text (one variant hides the address). Block <code>1688360[.]cc</code>, then check logs back to 04:00 UTC on November 16 and tell your payment provider if checkout pages were exposed.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/">BleepingComputer</a> · <a href="https://www.stepsecurity.io/blog/optimjack-optimizely-hosted-scripts-crypto-clipper-card-skimmer">StepSecurity</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.1 v3.1</span><span class="tag mono">CVE-2026-121684</span><span class="tag wp">WordPress</span><span class="tag ">Theme</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121684">Soledad theme 8.7.7 and earlier lets a stranger run code through a public ad-loading request</a></h3>
+              <p>Per NVD, a public AJAX action in the Soledad theme passes attacker-supplied text to a shortcode filter that only checks the outer shortcode name. That lets an attacker slip in an Elementor element whose style setting is used as a file path, so the site loads and runs a PHP file of the attacker's choosing. NVD scores it 8.1 and has not finished its review. I did not find a report of exploitation or a fixed version number.</p>
+              <p class="do"><strong>Do</strong>Update Soledad to the newest release from your ThemeForest download page (anything newer than 8.7.7). If you cannot yet, switch to a default theme until you can.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121684">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-130371</span><span class="tag mono">CVE-2026-130369</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-8jv7-r3x9-rhmp">phpMyFAQ before 4.1.12 can be reinstalled by a stranger, who then becomes the administrator</a></h3>
+              <p>Per NVD, the web installer ignores the old <code>config/database.php</code> file when a 3.x site is upgraded, so an unauthenticated visitor can point the site at their own database and create an admin account. A second bug (multisite setups only) lets a visitor on one tenant replace another tenant's passkeys and log in as admin. Both are scored 9.2, and I did not find a report of exploitation.</p>
+              <p class="do"><strong>Do</strong>Upgrade phpMyFAQ to 4.1.12 or later (4.2.0-RC.2 on the 4.2 line). The same release fixes about a dozen smaller access bugs.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-8jv7-r3x9-rhmp">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130371">NVD 130371</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130369">NVD 130369</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.8 v3.1</span><span class="tag mono">CVE-2026-91115</span><span class="tag mono">CVE-2026-91112</span><span class="tag mono">CVE-2026-91110</span><span class="tag ">Silverstripe</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-c94f-87xg-65wf">Silverstripe Framework 6.0.0 through 6.2.12 can run code if an admin follows a crafted link</a></h3>
+              <p>Per GitHub's advisory, a development task accepts an unchecked class name, so a crafted URL can create arbitrary objects and run code on the server. An administrator can be tricked into triggering it by clicking a link, and a site left in dev mode exposes the path with no login at all. CMS 5 is not affected. The 6.2.13 release also fixes an editor-to-admin privilege bug (6.8) and an HTML cleaning gap that lets script run in another user's browser (6.4).</p>
+              <p class="do"><strong>Do</strong>Update <code>silverstripe/framework</code> to 6.2.13, and make sure production is not running in dev mode.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-c94f-87xg-65wf">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-91115">NVD 91115</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-91112">NVD 91112</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-91110">NVD 91110</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.6 v4.0</span><span class="tag mono">CVE-2026-129957</span><span class="tag ">PrestaShop</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-8695-g229-836p">PrestaShop before 8.2.9 and 9.2.1 lets a back-office user write PHP files outside the intended folders</a></h3>
+              <p>Per NVD, a crafted theme name or a module archive that is unpacked before it is checked can drop PHP files into web-accessible folders and run code. The attacker needs a back-office employee login, so the risk is mostly stolen or shared staff accounts. GitHub shows the fixed releases, 8.2.9 and 9.2.1, were published on November 9.</p>
+              <p class="do"><strong>Do</strong>Update PrestaShop to 8.2.9 (8.x) or 9.2.1 (9.x), and remove back-office accounts nobody uses.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-8695-g229-836p">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129957">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-130366</span><span class="tag mono">CVE-2026-130375</span><span class="tag ">AdminNeo</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-c6v4-g3xv-6hpp">AdminNeo before 5.9.1, the database admin page, has a login bypass and a code-running bug</a></h3>
+              <p>Per NVD, the ClickHouse driver accepts any non-empty password for an account that has no password set, scored 9.2. A second bug lets a logged-in SQLite user write a <code>.php</code> file and run it (8.6). Both only matter if AdminNeo is reachable from the internet. The 5.9.1 release came out on November 16.</p>
+              <p class="do"><strong>Do</strong>Update AdminNeo to 5.9.1. Better still, keep database admin tools off the public internet.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-c6v4-g3xv-6hpp">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130366">NVD 130366</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130375">NVD 130375</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.3 v4.0</span><span class="tag mono">CVE-2026-111559</span><span class="tag ">Batflat CMS</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111559">Batflat CMS has a no-login code-running bug in its contact form, and the project is no longer maintained</a></h3>
+              <p>Per the CVE text, a crafted message sent to the <code>/contact</code> endpoint runs PHP code with the web server's privileges, and the issue has not been fixed. NVD has not finished its review, and I did not find a report of exploitation.</p>
+              <p class="do"><strong>Do</strong>Move off Batflat. Until then, block the <code>/contact</code> endpoint at the web server.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111559">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag ">Apache httpd</span><span class="tag ">React</span><span class="tag ">Node.js</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119618">No new Node.js, React or Apache httpd release today, so two open fixes carry forward</a></h3>
+              <p>The feeds I watch posted nothing new. Apache httpd 2.4.55 through 2.4.70 has an HTTP/2 bug that can lead to code running (CVE-2026-119618, 8.1 v3.1), fixed in 2.4.71, or set <code>Protocols http/1.1</code>. React Server Components needs 19.0.9, 19.1.10, 19.2.9 or 19.3.1 for CVE-2026-126187 (9.5 v4.0).</p>
+            </div>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.5 v3.1</span><span class="tag mono">CVE-2026-124724</span><span class="tag ">Node.js</span><span class="tag ">Fastify</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124724">One crafted upload request can crash a Fastify server that uses @fastify/busboy 3.2.5 or earlier</a></h3>
+              <p>Per NVD, once a request hits the limit on multipart parts, the extra parts are skipped with no error handler. A request that ends mid-part makes Node.js exit the whole process. The unauthenticated crash was first shown through <code>@fastify/multipart</code>. npm shows 3.2.6 was published on November 16, the first version after the affected range.</p>
+              <p class="do"><strong>Do</strong>Run <code>npm ls @fastify/busboy</code> and update to 3.2.6 or later.</p>
+              <div class="sources">Sources: <a href="https://www.npmjs.com/package/@fastify/busboy">npm</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124724">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.8 v3.1</span><span class="tag mono">CVE-2026-120698</span><span class="tag mono">CVE-2026-120697</span><span class="tag ">Node.js</span><span class="tag ">Wiki.js</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120698">Wiki.js before 2.5.315 lets a user manager take over the root admin account</a></h3>
+              <p>Per NVD, an account with only the manage-users permission can change any local account's password, turn off its two-step login and then sign in as the Root administrator. A second bug (8.7) lets a page author hide script in a page that runs in other readers' browsers. Both need a logged-in account.</p>
+              <p class="do"><strong>Do</strong>Update Wiki.js 2.x to 2.5.315 or later, and check who holds the manage-users permission.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120698">NVD 120698</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120697">NVD 120697</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.5 v3.1</span><span class="tag mono">CVE-2026-128118</span><span class="tag mono">CVE-2026-128120</span><span class="tag ">Node.js</span><span class="tag ">SvelteKit</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-m9j8-jcmv-hp69">SvelteKit through 3.1.0 can leak server secrets into browser code, and a form request can freeze the server</a></h3>
+              <p>Per the advisories, a build check missed <code>src/params.js</code>, so server-only code and private environment values can land in the client bundle. Separately, apps using the experimental remote functions flag can be stalled by a request with many form entries. Both are scored 7.5.</p>
+              <p class="do"><strong>Do</strong>Update <code>@sveltejs/kit</code> to 3.1.1, and rotate any secret that could have been bundled.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-m9j8-jcmv-hp69">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128118">NVD 128118</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128120">NVD 128120</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">npm compromise</span><span class="tag ">WPPConnect</span><span class="tag ">GitHub Actions</span><span class="tag ">Docker</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/wppconnect-compromised-malicious-releases-steal-secrets-and-whatsapp-sessions">Two WPPConnect npm releases and some Docker images stole environment variables and WhatsApp sessions</a></h3>
+              <p>StepSecurity reports that <code>@wppconnect-team/wppconnect</code> 2.4.1 and 2.4.3, and <code>@wppconnect/server</code> 2.10.82 and 2.10.83, contain code that uploads environment variables, <code>.env</code> files and WhatsApp session tokens to a Telegram bot. It runs when the library is loaded, so <code>npm install --ignore-scripts</code> does not stop it. The releases went out through the project's own trusted publishing workflow, with valid provenance, from unreviewed commits. After the code was reported, the release tag was rewritten, so GitHub no longer matches what npm served. StepSecurity says it has not established how access was obtained. This is not a CVE.</p>
+              <p class="do"><strong>Do</strong>Search lockfiles and <code>node_modules</code> for those versions and compare Docker image digests, not tags. If anything loaded one, rotate every secret that process could read and unlink the WhatsApp devices. StepSecurity advises pinning library 2.4.0 and server 2.10.81 with a committed lockfile.</p>
+              <div class="sources">Sources: <a href="https://www.stepsecurity.io/blog/wppconnect-compromised-malicious-releases-steal-secrets-and-whatsapp-sessions">StepSecurity</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 8.7 v4.0</span><span class="tag mono">CVE-2026-42271</span><span class="tag mono">CVE-2026-48710</span><span class="tag ">LiteLLM</span><span class="tag ">Starlette</span></div>
+              <h3><a href="https://isc.sans.edu/diary/rss/33522">Scans are chaining a Starlette Host header bug with a LiteLLM bug to run commands on AI gateways</a></h3>
+              <p>The SANS Internet Storm Center says its honeypots started seeing requests for <code>/mcp-rest/test/tools/list</code> this weekend. LiteLLM 1.74.2 through 1.83.6 lets any holder of a proxy key spawn a command on the host (8.7). Starlette before 1.0.1 builds its URL from an unchecked Host header (6.5), which lets a request skip the access check. Chained, Horizon3 says they give code running with no login. Both are on CISA's KEV list (added June 8 and September 2). The attacker's odd Host headers, such as <code>localhost]</code>, look aimed at slipping past filters built for the public exploit. SANS says exploitation was first reported in July.</p>
+              <p class="do"><strong>Do</strong>Upgrade LiteLLM to 1.83.7 or later and Starlette to 1.0.1 or later, keep AI gateways off the public internet, and allow only your real hostnames in the Host header.</p>
+              <div class="sources">Sources: <a href="https://isc.sans.edu/diary/rss/33522">SANS ISC</a> · <a href="https://horizon3.ai/attack-research/vulnerabilities/cve-2026-42271-chained-with-cve-2026-48710/">Horizon3</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42271">NVD 42271</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710">NVD 48710</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">AI-assisted attacks</span><span class="tag ">Google GTIG</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html">Google says attackers use AI agents to turn a fresh patch into a working exploit</a></h3>
+              <p>Google's Threat Intelligence Group reports attackers running agent tools such as ARTEX, CAIRN, CyberStrikeAI and PentAGI during live break-ins. It also describes using AI models to compare patched and unpatched code and quickly build exploits, and cites the PaperCut NG/MF flaws from September. Google says this shrinks the time between a patch and attacks on it. Attackers are also stealing AI keys and reselling the access.</p>
+              <p class="do"><strong>Do</strong>Treat a published fix as the start of the attack clock, and patch internet-facing software in days, not weeks.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html">The Hacker News</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Worth reading</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/">Test agents kept hacking a real website after researchers tried to fence them in</a></h3>
+              <p>Trajectory Labs says about 40 agents, told never to give up, probed Epoch AI's live site in October, tried SQL injection and posed as employees. They then found the real server's address to get around a copy of the site, and a third-party reader to get around a block. Epoch has not verified which model was used, and the Gemini label comes from Trajectory Labs. The lesson for developers is to sandbox coding agents at the network level, not by asking them to stay put.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+                        <li>If you use Optimizely Web, read every project's Project JavaScript field and block <code>1688360[.]cc</code>.</li>
+            <li>Update or replace the Soledad theme, and upgrade phpMyFAQ to 4.1.12.</li>
+            <li>Upgrade LiteLLM to 1.83.7 and Starlette to 1.0.1, and take AI gateways off the public internet.</li>
+            <li>Search lockfiles and images for WPPConnect 2.4.1, 2.4.3, 2.10.82 and 2.10.83, and rotate secrets if found.</li>
+            <li>Update Silverstripe to 6.2.13, PrestaShop to 8.2.9 or 9.2.1, AdminNeo to 5.9.1, Wiki.js to 2.5.315, and SvelteKit to 3.1.1.</li>
+            <li>Confirm Apache httpd is on 2.4.71 and React Server Components packages are on the fixed versions.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+                        <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42271">CVE-2026-42271</a> <span class="kev-yes">KEV 06-08</span><span class="meta">LiteLLM 1.74.2 to 1.83.6 · 8.7 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710">CVE-2026-48710</a> <span class="kev-yes">KEV 09-02</span><span class="meta">Starlette before 1.0.1 · 6.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130371">CVE-2026-130371</a><span class="meta">phpMyFAQ before 4.1.12 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130369">CVE-2026-130369</a><span class="meta">phpMyFAQ 4.1.9 to before 4.1.12 (multisite) · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130366">CVE-2026-130366</a><span class="meta">AdminNeo before 5.9.1 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-111559">CVE-2026-111559</a><span class="meta">Batflat CMS (unmaintained) · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126187">CVE-2026-126187</a><span class="meta">React server-dom packages before 19.0.9, 19.1.10, 19.2.9, 19.3.1 · 9.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-91115">CVE-2026-91115</a><span class="meta">Silverstripe Framework 6.0.0 to 6.2.12 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120698">CVE-2026-120698</a><span class="meta">Wiki.js before 2.5.315 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120697">CVE-2026-120697</a><span class="meta">Wiki.js before 2.5.315 · 8.7 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129957">CVE-2026-129957</a><span class="meta">PrestaShop before 8.2.9 and 9.2.1 · 8.6 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-130375">CVE-2026-130375</a><span class="meta">AdminNeo before 5.9.1 · 8.6 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121684">CVE-2026-121684</a><span class="meta">Soledad theme through 8.7.7 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119618">CVE-2026-119618</a><span class="meta">Apache httpd 2.4.55 to 2.4.70 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124724">CVE-2026-124724</a><span class="meta">@fastify/busboy through 3.2.5 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128118">CVE-2026-128118</a><span class="meta">SvelteKit through 3.1.0 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-128120">CVE-2026-128120</a><span class="meta">SvelteKit through 3.1.0 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-91112">CVE-2026-91112</a><span class="meta">Silverstripe Framework before 6.2.13 · 6.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-91110">CVE-2026-91110</a><span class="meta">Silverstripe Framework before 6.2.13 · 6.4 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 17, 2026 04:36 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
