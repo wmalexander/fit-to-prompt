@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-17"
+        lastUpdated: "2026-11-18"
     },
     issues: [
+        {
+            date: "2026-11-18",
+            issueNumber: 15,
+            title: "Java4Shell can let strangers run code on Jenkins, Jira and Keycloak; update Java now",
+            summary: "Java4Shell can let strangers run code on Jenkins, Jira and Keycloak, Apache Roller is being exploited, and Microsoft's agent-framework Python package shipped two credential stealers.",
+            url: "https://fittoprompt.com/security/issues/2026-11-18.html",
+            pressure: "high",
+            itemCount: 13
+        },
         {
             date: "2026-11-17",
             issueNumber: 14,
