@@ -17,7 +17,7 @@ const PATCH_DATA = {
             summary: "Java4Shell can let strangers run code on Jenkins, Jira and Keycloak, Apache Roller is being exploited, and Microsoft's agent-framework Python package shipped two credential stealers.",
             url: "https://fittoprompt.com/security/issues/2026-11-18.html",
             pressure: "high",
-            itemCount: 13
+            itemCount: 14
         },
         {
             date: "2026-11-17",
