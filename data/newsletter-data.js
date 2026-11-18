@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-17",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: []
+        lastUpdated: "2026-11-18",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["scramble"]
     },
     issues: [
+        {
+            date: "2026-11-18",
+            volume: 1,
+            issueNumber: 148,
+            title: "Nvidia Chair Closes the Door on a Jensen Huang Comeback",
+            description: "Daily AI news roundup - November 18, 2026. Nvidia's board rules out a Jensen Huang comeback, $115.8 billion in quarterly revenue, Microsoft calls Copilot \"the new OS for work,\" a Gallup study on Gen Z and AI companions, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-18.html",
+            storyCount: 20,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-11-17",
             volume: 1,
