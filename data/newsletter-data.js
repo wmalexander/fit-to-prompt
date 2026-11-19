@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-18",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["scramble"]
+        lastUpdated: "2026-11-19",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["scramble", "crossword"]
     },
     issues: [
+        {
+            date: "2026-11-19",
+            volume: 1,
+            issueNumber: 149,
+            title: "Anthropic Sells $81.3 Billion in Shares for a Record IPO",
+            description: "Daily AI news roundup - November 19, 2026. Anthropic's record $81.3 billion IPO, how Nvidia chips ended up within reach of China's military, Nvidia's interim CEO addresses employees, Trump warns against AI regulation, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-19.html",
+            storyCount: 20,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-11-18",
             volume: 1,

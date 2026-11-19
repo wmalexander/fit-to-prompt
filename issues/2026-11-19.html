@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 19, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 19, 2026. Anthropic&rsquo;s record $81.3 billion IPO, Nvidia chips and China&rsquo;s military, Nvidia&rsquo;s interim CEO addresses employees, Trump warns against AI regulation, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 149">
+  <meta property="og:description" content="Daily AI news roundup - November 19, 2026. Anthropic&rsquo;s record $81.3 billion IPO, Nvidia chips and China&rsquo;s military, Nvidia&rsquo;s interim CEO addresses employees, Trump warns against AI regulation, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, November 19, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 149</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+
+
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; IPO &middot; Business</div>
+<a href="https://www.nytimes.com/2026/11/18/technology/anthropic-ipo-pricing.html" class="story-link">
+<h2 class="headline-lead mb-3">Anthropic Sells $81.3 Billion in Shares for a Record IPO</h2>
+</a>
+<p class="byline mb-3">The New York Times &middot; Nov 18</p>
+<div class="newspaper-body">
+<p>The sale valued the A.I. company, which makes the Claude chatbot, at more than $1.5 trillion. Shares begin trading on Thursday.</p>
+<p>Bloomberg reports that about $3 billion of the offering came from Japanese investors, at the lower end of Anthropic&rsquo;s planned range for that tranche, according to a regulatory filing. Bloomberg also says the offering is set to bring billions of dollars in returns to several financial firms that bet heavily on the Claude chatbot maker.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI &middot; Chips &middot; China</div>
+<a href="https://www.nytimes.com/2026/11/18/technology/nvidia-alibaba-china-military.html" class="story-link">
+<h3 class="headline-feature mb-2">How Nvidia Chips Ended Up Within Reach of China&rsquo;s Military</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 18</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Alibaba, the Chinese internet giant behind the company at the center of the Nvidia spy saga, has used its A.I. computing technology to aid a lab with links to China&rsquo;s military.</p>
+</div>
+</div>
+</section>
+
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-19-cartoon.png" alt="A small robot on a stool rings an enormous stock exchange bell while a row of men in suits stare up at it, one briefcase spilling paper onto the floor" class="w-full object-contain mb-2" style="max-height:420px;">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;Congratulations on the record IPO. Now, about that free tier.&rdquo;</p>
+<p class="byline mt-1">A trader, looking up</p>
+</div>
+
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">The AI Mini</div>
+<div class="cw26-wrap">
+<style>
+.cw26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.cw26-grid{display:grid;grid-template-columns:repeat(5,40px);grid-template-rows:repeat(5,40px);gap:2px;margin-bottom:0.75rem}
+.cw26-cell{position:relative;background:#1a1a1a}
+.cw26-cell.open{background:#fff;border:1px solid #1a1a1a}
+.cw26-cell .n{position:absolute;top:1px;left:3px;font-size:0.55rem;font-weight:600;color:#374151;pointer-events:none}
+.cw26-cell input{width:100%;height:100%;box-sizing:border-box;border:none;background:transparent;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;padding:8px 0 0}
+.cw26-cell.ok{background:#ecfdf5}
+.cw26-cell.no{background:#fef2f2}
+.cw26-clues{font-size:0.72rem;color:#374151;line-height:1.45}
+.cw26-clues strong{color:#1a1a1a}
+.cw26-wrap button{background:#1a1a1a;color:#f8f8f8;border:none;padding:0.4rem 1rem;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;margin-top:0.6rem}
+.cw26-wrap button:hover{background:#8B0000}
+.cw26-msg{font-size:0.75rem;color:#374151;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<div class="cw26-grid" id="cw26-grid"></div>
+<div class="cw26-clues">
+<p><strong>Across</strong></p>
+<p>1. Unit of text an AI model reads and bills by<br>3. What a reasoning model is supposed to follow<br>4. Size, as in the AI buildout&rsquo;s record ___</p>
+<p style="margin-top:0.4rem"><strong>Down</strong></p>
+<p>1. Cautionary ___ of an AI bubble<br>2. A specialty market, the opposite of mass</p>
+</div>
+<button type="button" id="cw26-check">Check</button>
+<div class="cw26-msg" id="cw26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var rows=["TOKEN","A___I","LOGIC","E___H","SCALE"],nums={"0,0":1,"0,4":2,"2,0":3,"4,0":4},g=document.getElementById("cw26-grid"),cells=[];
+rows.forEach(function(r,y){for(var x=0;x<5;x++){
+  var c=document.createElement("div"),ch=r.charAt(x);
+  if(ch==="_"){c.className="cw26-cell";g.appendChild(c);continue;}
+  c.className="cw26-cell open";
+  if(nums[y+","+x]){var n=document.createElement("span");n.className="n";n.textContent=nums[y+","+x];c.appendChild(n);}
+  var i=document.createElement("input");i.maxLength=1;i.setAttribute("data-a",ch);i.setAttribute("aria-label","Row "+(y+1)+" column "+(x+1));
+  i.addEventListener("input",function(){if(this.value&&this.parentNode.nextElementSibling){var nx=this.parentNode.nextElementSibling.querySelector("input");if(nx)nx.focus();}});
+  c.appendChild(i);g.appendChild(c);cells.push(c);
+}});
+document.getElementById("cw26-check").addEventListener("click",function(){
+  var good=0;
+  cells.forEach(function(c){var i=c.querySelector("input"),v=i.value.trim().toUpperCase(),ok=v===i.getAttribute("data-a");c.className="cw26-cell open"+(v===""?"":(ok?" ok":" no"));if(ok)good++;});
+  document.getElementById("cw26-msg").textContent=good===cells.length?"Solved. Nice work.":good+" of "+cells.length+" letters correct.";
+});
+})();
+</script>
+</div>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Leadership</div>
+<a href="https://www.nytimes.com/2026/11/18/technology/nvidia-jensen-huang-affair-colette-kress.html" class="story-link">
+<h3 class="headline-feature mb-2">What Nvidia&rsquo;s Interim CEO, Colette Kress, Said to Employees After Jensen Huang&rsquo;s Resignation</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 18</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">At an all-hands meeting with employees, Colette Kress sought to put the indiscretions of Nvidia&rsquo;s co-founder, Jensen Huang, behind them.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Policy &middot; Washington</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/trump-warns-against-regulations-that-would-stifle-ai-industry" class="story-link">
+<h3 class="headline-feature mb-2">Trump Warns Against Regulations That Would &lsquo;Stifle&rsquo; AI Industry</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">President Trump warned that any &ldquo;robust&rdquo; regulation of AI, or superintelligence as he terms it, would stifle development, even as the US imposes new restrictions on access to advanced AI technology.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; IPO &middot; Finance</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/the-biggest-winners-in-anthropic-s-landmark-public-offering" class="story-link">
+<h3 class="headline-feature mb-2">The Biggest Winners in Anthropic&rsquo;s Landmark Public Offering</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Anthropic&rsquo;s record-breaking IPO is set to bring billions of dollars in returns to several financial firms that have bet the house on the Claude chatbot maker.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Data Centers &middot; Google</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/google-ruth--porat-pledges-data-center-local-support-amid-backlash" class="story-link">
+<h3 class="headline-feature mb-2">Google&rsquo;s Porat Pledges Data Center Local Support Amid Backlash</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Alphabet&rsquo;s chief investment officer, Ruth Porat, said the company and its peers need to invest in jobs in the communities where data centers are being built, as projects across the country face backlash.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; India &middot; Models</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/india-startup-sells-deepseek-access-while-pursuing-sovereign-ai" class="story-link">
+<h3 class="headline-feature mb-2">India Startup Sells DeepSeek Access While Pursuing Sovereign AI</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Indian startup Sarvam has begun selling access to DeepSeek and other Chinese AI models, triggering an online backlash over its role as a leading proponent of the country&rsquo;s AI independence.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Finance &middot; Agents</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/mas-warns-ai-agents-could-move-money-faster-raise-finance-risks" class="story-link">
+<h3 class="headline-feature mb-2">MAS Warns AI Agents Could Move Money Faster, Raise Finance Risks</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Singapore&rsquo;s central bank warned that AI agents could move deposits and other funds more quickly, raising new liquidity and financial-stability risks.</p>
+</div>
+
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; China</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/alibaba-s-ai-ambitions-face-steep-challenge-in-us-chip-controls" class="story-link">
+<h3 class="headline-feature mb-2">Alibaba&rsquo;s AI Ambitions Face Steep Challenge in US Chip Controls</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Alibaba is facing mounting pressure to show it can deliver on its AI business plan despite new limits on its access to data center chips.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Sovereign AI &middot; Asia</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/us-malaysia-to-strengthen-sovereign-ai-cloud-development" class="story-link">
+<h3 class="headline-feature mb-2">US, Malaysia To Strengthen Sovereign AI Cloud Development</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Malaysia and the US plan to cooperate on the Southeast Asian nation&rsquo;s sovereign AI cloud, with Washington offering $50 million in support.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Banking &middot; Infrastructure</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/top-australia-bank-cba-invests-in-own-compute-power-for-ai-push" class="story-link">
+<h3 class="headline-feature mb-2">Top Australia Bank CBA Invests In Own Compute Power For AI Push</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 19</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Commonwealth Bank of Australia is investing in its own digital infrastructure to drive its AI push, as data centers in the country face increased opposition and delays.</p>
+</div>
+
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://www.washingtonpost.com/technology/2026/11/18/anthropic-blockbuster-ipo-could-test-fears-about-an-ai-bubble/">Anthropic&rsquo;s Blockbuster IPO Could Test Fears About an AI Bubble</a>
+<div class="wire-source">The Washington Post &middot; Nov 18</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.washingtonpost.com/business/2026/11/18/fed-officials-worry-an-ai-bust-could-shake-financial-system/">Fed Officials Worry an AI Bust Could Shake Financial System</a>
+<div class="wire-source">The Washington Post &middot; Nov 18</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reuters.com/legal/transactional/arizona-says-it-is-investigating-openai-other-firms-over-possible-rogue-agents-2026-11-19/">Arizona Says It Is Investigating OpenAI, Other Firms Over Possible Rogue Agents</a>
+<div class="wire-source">Reuters &middot; Nov 19</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reuters.com/technology/trump-says-he-referred-ex-nvidia-boss-huangs-situation-briefly-talk-with-xi-2026-11-19/">Trump Says He Referred Ex-Nvidia Boss Huang&rsquo;s Situation Briefly in Talk With Xi</a>
+<div class="wire-source">Reuters &middot; Nov 19</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-19/anthropic-raises-3-billion-in-japan-tranche-of-us-mega-ipo">Anthropic IPO Raises $3 Billion in Japan, Lower End of Range</a>
+<div class="wire-source">Bloomberg &middot; Nov 19</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.reuters.com/world/china/global-markets-wrapup-1-2026-11-19/">Global Markets Wrapup</a>
+<div class="wire-source">Reuters &middot; Nov 19</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-19/lores-says-ai-commerce-is-an-opportunity-for-paypal-video">Lores Says AI Commerce Is an Opportunity for PayPal (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 19</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-19/alphabet-s-ruth-porat-on-the-ai-investment-frenzy-video">Inside Google&rsquo;s AI Race with Ruth Porat (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 19</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-19/gftn-s-mohanty-on-fintech-anthropic-ipo-video">GFTN&rsquo;s Mohanty on Fintech, Anthropic IPO (Video)</a>
+<div class="wire-source">Bloomberg &middot; Nov 19</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic sold $81.3 billion of shares in what The New York Times calls a record IPO, valuing the Claude maker at more than $1.5 trillion, and its first trading day is today. Bloomberg adds the detail that the Japanese tranche raised only about $3 billion, the lower end of its planned range. The rest of the issue is about what happens around that number: chips, regulation, and who is exposed if the bet goes wrong.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <p><em>A note on sources: The New York Times, Bloomberg, Reuters and The Washington Post all blocked automated access today. Everything below comes from their headlines and the summary lines their feeds publish, not from the full articles, so treat it as a guide to what each piece says, not a substitute for reading it.</em></p>
+
+        <h4 class="digest-theme">The Anthropic IPO</h4>
+        <ul class="digest-bullets">
+          <li><strong>The pricing.</strong> The Times says Anthropic sold $81.3 billion in shares at a valuation above $1.5 trillion, with trading starting Thursday. Bloomberg reports the Japan tranche brought in about $3 billion, at the low end of its range, per a regulatory filing.</li>
+          <li><strong>The winners.</strong> Bloomberg says several financial firms &ldquo;bet the house&rdquo; on Anthropic and are now set for billions of dollars in returns.</li>
+          <li><strong>The bubble question.</strong> The Washington Post&rsquo;s headline says the offering &ldquo;could test fears about an AI bubble,&rdquo; and a second Post headline says Fed officials worry an AI bust could shake the financial system. Bloomberg also ran a video interview with GFTN&rsquo;s Mohanty on investor sentiment around the debut.</li>
+        </ul>
+
+        <h4 class="digest-theme">Nvidia and China</h4>
+        <ul class="digest-bullets">
+          <li><strong>The Alibaba link.</strong> The Times reports that Alibaba, the giant behind the company at the center of what it calls the Nvidia spy saga, used its AI computing technology to aid a lab with links to China&rsquo;s military.</li>
+          <li><strong>Inside the company.</strong> The Times says interim CEO Colette Kress used an all-hands meeting to try to put the &ldquo;indiscretions&rdquo; of co-founder Jensen Huang behind the company after his resignation. Reuters says Trump referred Huang&rsquo;s situation briefly in a talk with Xi.</li>
+          <li><strong>Alibaba under pressure.</strong> Bloomberg says Alibaba faces mounting pressure to show its AI business plan can deliver despite new limits on its access to data center chips.</li>
+        </ul>
+
+        <h4 class="digest-theme">Rules and Risk</h4>
+        <ul class="digest-bullets">
+          <li><strong>Washington.</strong> Bloomberg reports Trump warned that &ldquo;robust&rdquo; regulation of AI would &ldquo;stifle&rdquo; the industry, even as the US adds new restrictions on access to advanced AI technology.</li>
+          <li><strong>Agents.</strong> Singapore&rsquo;s central bank warned that AI agents could move deposits and other funds faster, raising liquidity and financial-stability risks (Bloomberg). Reuters reports Arizona is investigating OpenAI and other firms over possible rogue agents.</li>
+        </ul>
+
+        <h4 class="digest-theme">Infrastructure and Sovereignty</h4>
+        <ul class="digest-bullets">
+          <li><strong>Data center backlash.</strong> Ruth Porat says Alphabet and its peers need to invest in jobs where data centers are built, as projects face backlash. In Australia, Bloomberg says CBA is buying its own compute while data centers there face opposition and delays.</li>
+          <li><strong>Sovereign AI.</strong> The US and Malaysia plan to work on Malaysia&rsquo;s sovereign AI cloud, with $50 million in US support. In India, Sarvam is selling access to DeepSeek and other Chinese models while championing national AI independence, which drew an online backlash.</li>
+          <li><strong>Also on the wire.</strong> Bloomberg video interviews with PayPal&rsquo;s Enrique Lores on agentic commerce and with Porat on Google&rsquo;s AI race, plus Reuters&rsquo; global markets wrapup.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Today&rsquo;s stories all describe the same exposure from different sides. The Anthropic offering is the largest test yet of whether public markets will price AI companies the way private ones have been priced. A lower-end Japan tranche is a small signal, but it is the kind of detail that matters when the headline number is $1.5 trillion. The Post&rsquo;s bubble framing and the Fed worry are the other side of the same bet, and they are already in the same morning&rsquo;s news.</p>
+
+        <p>The second thread is that chips and policy are now one subject. Alibaba is squeezed by chip limits at the same moment the Times links its AI computing to a lab tied to China&rsquo;s military, and Trump is arguing against regulation while the US tightens access to advanced AI. Those two positions can both be true, but they pull in different directions, and the companies caught between them (Nvidia, Alibaba, Sarvam reselling Chinese models) are the ones to watch.</p>
+
+        <p>The third thread is agents moving money. Singapore&rsquo;s regulator and Arizona&rsquo;s investigators are asking the same question from different angles: what happens when software acts for people at machine speed. PayPal&rsquo;s CEO calls agentic commerce an opportunity. The regulators are listing the failure modes.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>An AI company is now being priced like a utility-scale bet on the future, and it is arriving at the exact moment regulators are starting to ask what a failure would cost. That does not mean a bust is coming. It means the sector has become large enough that its financing, its supply chain and its rules are a financial-stability topic, not just a technology one.</p>
+          <p>The same pattern shows up outside the US. Malaysia, India and Australia are each trying to secure their own compute and models, and each is running into the same constraints of chips, power and local opposition to data centers. Sovereignty is turning out to be an infrastructure problem before it is a policy one.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>The first trading day.</strong> Anthropic shares begin trading today, and the first sessions will show whether the lower-end Japan result was an outlier or an early read.</li>
+          <li><strong>Agent oversight.</strong> Arizona&rsquo;s investigation and the Singapore warning suggest regulators are moving on agents before any federal rule exists. Watch whether other states or central banks follow.</li>
+          <li><strong>Nvidia leadership.</strong> Kress is interim CEO and the China questions are still open, so further disclosures about Alibaba and the Huang situation are likely.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>
