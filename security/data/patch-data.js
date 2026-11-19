@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-18"
+        lastUpdated: "2026-11-19"
     },
     issues: [
+        {
+            date: "2026-11-19",
+            issueNumber: 16,
+            title: "NGINX with HTTP/2 can let strangers run code on your server; update to 1.30.7 or 1.31.9",
+            summary: "NGINX with HTTP/2 turned on can let a stranger run code, WordPress 7.1.5 fixes 20 security issues, PHP ships critical fixes today, and CISA lists REDCap and Apache Axis 1.x as exploited.",
+            url: "https://fittoprompt.com/security/issues/2026-11-19.html",
+            pressure: "high",
+            itemCount: 16
+        },
         {
             date: "2026-11-18",
             issueNumber: 15,

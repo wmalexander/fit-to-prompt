@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NGINX with HTTP/2 can let strangers run code on your server; update to 1.30.7 or 1.31.9 | Fit to Patch No. 16, November 19, 2026</title>
+  <meta name="description" content="NGINX with HTTP/2 turned on can let a stranger run code, WordPress 7.1.5 fixes 20 security issues, and PHP ships critical fixes today.">
+  <meta property="og:title" content="Fit to Patch No. 16: NGINX with HTTP/2 can let strangers run code on your server; update to 1.30.7 or 1.31.9">
+  <meta property="og:description" content="NGINX with HTTP/2 turned on can let a stranger run code, WordPress 7.1.5 fixes 20 security issues, and PHP ships critical fixes today.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-19.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Thursday, November 19, 2026</span>
+        <span>No. 16</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>NGINX fixed two critical bugs, both rated 9.2, that can let a stranger run code on servers with HTTP/2 turned on, so update to 1.30.7 or 1.31.9.</li>
+            <li>WordPress 7.1.5 is a security release with 20 fixes, including one that can start with a stranger and end in code running on the site.</li>
+            <li>PHP ships critical security fixes for every supported version today between 14:00 and 14:30 UTC, and the version numbers are not out yet.</li>
+            <li>CISA says attackers are using flaws in REDCap and in the old Apache Axis 1.x, and Axis will never get a fix.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-123007</span><span class="tag mono">CVE-2026-123633</span><span class="tag ">NGINX</span></div>
+              <h3><a href="https://nginx.org/en/security_advisories.html">NGINX before 1.30.7 and 1.31.9 can let a stranger run code on the server when HTTP/2 is on</a></h3>
+              <p>NGINX fixed five bugs on November 18 that its vendor F5 says can lead to code running on the server. NVD scores all five 9.2 out of 10. The two worst need HTTP/2 turned on. CVE-2026-123007 is a memory bug in HTTP/2 flow control that is present in every release from 1.9.5 (2015) through 1.31.8. Wiz says it got code running against a server that only served plain static files. CVE-2026-123633 hits servers that pass HTTP/2 requests on to a backend, when the worker is running low on connections. The other three need other setups: CVE-2026-123634 needs a proxy address built from a variable plus a mirror or Server Side Includes request, CVE-2026-121810 needs HTTP/3, and CVE-2026-113425 needs the mail proxy. Code that runs this way gets the rights of an NGINX worker, not root. F5 says attackers can run code when address randomization (ASLR) is off or can be bypassed, and Wiz says it bypassed it in tests. A proof of concept is public on GitHub, but The Hacker News says its notes limit it to a demonstration in a fresh Docker container. Neither F5 nor the researchers report attacks, and none of these CVEs is in CISA's exploited list.</p>
+              <p>Turning HTTP/2 off blocks only CVE-2026-123007 and CVE-2026-123633. It does not block the other three. Per Aikido, ingress-nginx is affected by CVE-2026-123633 and will not get a patch. NGINX Plus is affected too, and F5 has its own fixed builds. Distribution packages may carry the fix without changing the version number.</p>
+              <p class="do"><strong>Do</strong>Upgrade open source NGINX to 1.30.7 (stable) or 1.31.9 (mainline), or install your distribution's patched package after reading its security notice for these CVE numbers. Start with servers that face the internet and have <code>http2</code> on in the <code>listen</code> or <code>http2 on;</code> setting. If you cannot upgrade today, turn HTTP/2 off as a stopgap, and plan to move off ingress-nginx.</p>
+              <div class="sources">Sources: <a href="https://nginx.org/en/security_advisories.html">nginx.org advisories</a> · <a href="https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities">Wiz Research</a> · <a href="https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html">The Hacker News</a> · <a href="https://www.aikido.dev/blog/nginx2root-critical-nginx-rce-vulnerabilities">Aikido</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123007">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123633">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123634">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121810">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-113425">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">Security release</span><span class="tag wp">WordPress</span><span class="tag ">7.1.5</span></div>
+              <h3><a href="https://wordpress.org/news/2026/11/wordpress-7-1-5-release/">WordPress 7.1.5 fixes 20 security issues, including a no-login path to code running on the site</a></h3>
+              <p>WordPress says this is a security release and asks you to update right away. Patchstack counts 20 fixes, 18 of them real vulnerabilities and 2 hardening changes. The worst one lets a visitor with no account plant a malicious Template Part block, and WordPress says that can lead to code running on the site; Patchstack says it needs an editor to open the content. Other fixes cover SQL injection in meta queries and in Customizer previews, stored cross-site scripting from comment shortcodes, a no-login denial of service through batched XML-RPC pingbacks, and a multisite bug that lets a site Administrator take over a Super Admin account. The fixes were not given CVE numbers in the sources I read.</p>
+              <p class="do"><strong>Do</strong>Update every site to WordPress 7.1.5 today, and on multisite confirm the network and every site report 7.1.5. Sites with background updates may already have it.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/news/2026/11/wordpress-7-1-5-release/">WordPress.org</a> · <a href="https://patchstack.com/articles/wordpress-7-1-5-security-release/">Patchstack</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-90817</span><span class="tag ">REDCap</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817">CISA says attackers are using a REDCap bug that lets a stranger run code through a public survey link</a></h3>
+              <p>Per NVD, REDCap 13.3.0 and later has a bug in survey routing and data import that lets someone with no account run code on the server. The attacker needs the secret hash from a valid public survey link. CISA added it to its exploited list on November 18 and gave federal agencies until November 21. I could not find a fixed version number in the sources I could read.</p>
+              <p class="do"><strong>Do</strong>Check the REDCap consortium site for the vendor's fixed release and install it. Until then, think about taking public survey links offline, and look in your web logs for odd data import requests that start from survey URLs.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817">NVD</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-90817">CISA KEV catalog</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">Today, 14:00 UTC</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html">PHP ships critical security fixes for every supported version today</a></h3>
+              <p>PHP will release security updates for all supported versions on November 19 between 14:00 and 14:30 UTC (9:00 to 9:30 AM Eastern). The top severity is critical, and PHP says the critical bugs need non-default or uncommon setups. Fixed version numbers are not published yet. One expected fix is for a code-running bug in session upload progress that PHP described in October. Until the release, set <code>session.upload_progress.enabled=0</code>, then upgrade as soon as the numbers appear.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-127021</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-127021">Flamix Bitrix24 and WooCommerce Products Sync before 1.7.0 lets anyone write a PHP file to the site</a></h3>
+              <p>Per NVD, one request with no login can write a file with a name and path of the attacker's choice, which then runs as PHP. I could not find an install count. Update the plugin to 1.7.0 or remove it.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-124990</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124990">Masteriyo LMS 3.5.1 and earlier unpacks untrusted data in its course importer</a></h3>
+              <p>Per NVD, a stranger can exploit this only on sites that allow instructor sign-up and guest checkout and sell a course, which is not the default. On a default install it needs an Author account or higher. The record lists no fixed version, so check the plugin's changelog for a release newer than 3.5.1, and turn off instructor sign-up until you have it.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.9 v3.1</span><span class="tag mono">CVE-2026-129048</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129048">WP Photo Album Plus through 9.3.06.003 has a code injection bug</a></h3>
+              <p>Per NVD, the plugin allows remote code inclusion in versions through 9.3.06.003. The record gives no detail on who can trigger it and no fixed version, and it is still awaiting NVD analysis. If you run it, look for a newer release and consider deactivating the plugin until one is out.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-90436</span><span class="tag ">Apache Axis 1.x</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436">CISA says attackers are using a flaw in Apache Axis 1.x, which will never be fixed</a></h3>
+              <p>Per the Apache record in NVD, Axis 1.x through 1.4 loads and builds a class named inside an incoming SOAP error message before any login check runs. If a suitable class is on the application's classpath, a stranger can run code. CISA added it to its exploited list on November 18, with a November 21 due date for federal agencies. Axis 1 is end of life and the project does not expect to release a fix.</p>
+              <p class="do"><strong>Do</strong>Find apps that bundle Axis 1.x (look for <code>axis-1.4.jar</code> in your builds) and move them to Apache Axis 2 or another SOAP library. If you cannot, Apache points to a patch commit you can build into your own copy.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436">NVD</a> · <a href="https://github.com/apache/axis-axis1-java/commit/41f3b4e8d04e310ca81f86b92630ab2c11d608bd">Apache patch commit</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-90436">CISA KEV catalog</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Nothing new today</span><span class="tag ">Node.js &amp; React</span></div>
+              <h3>No new Node.js, React or Next.js advisories</h3>
+              <p>The Node.js security feed, the React blog and the Next.js blog posted nothing in the last day. Apache httpd and Tomcat advisories did not show up in today's sources either. The Apache Roller bug from yesterday's issue still needs 6.1.6 or later.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">Update</span><span class="tag ">Ruby</span></div>
+              <h3><a href="https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/">Ruby 4.0.10, 3.4.13 and 3.3.14 fix seven memory bugs, and some have proof-of-concept code-running exploits</a></h3>
+              <p>Ruby's team says seven bugs in its regular expression engine and in changing the case of strings affect Ruby 3.3.13 and earlier, 3.4.0 through 3.4.12, and 4.0.0 through 4.0.9. They know of proofs of concept that run code for some of them. The risky pattern is an app that compiles regular expressions or changes the case of text that a visitor controls. CVE numbers were requested but not yet assigned, so Ruby uses GitHub advisory IDs. Ruby 3.2 and earlier are end of life and will not get fixes.</p>
+              <p class="do"><strong>Do</strong>Upgrade Rails and other Ruby apps to 4.0.10, 3.4.13 or 3.3.14, and plan to leave Ruby 3.2 and earlier.</p>
+              <div class="sources">Sources: <a href="https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/">Ruby security advisory</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.5 v3.1</span><span class="tag mono">CVE-2026-71481</span><span class="tag ">Composer</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-82w8-65qw-gch6">ALTCHA PHP 2.0.0 to 2.0.2 skips its signature check when the signature is missing</a></h3>
+              <p>In <code>altcha-org/altcha</code>, the verify step skips the signature check if the challenge has no signature, even when a secret is set. An attacker can issue their own easy challenge, solve it, and pass the bot check. The fix is in 2.0.3.</p>
+              <p class="do"><strong>Do</strong>Run <code>composer update altcha-org/altcha</code> to get 2.0.3 or later.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-82w8-65qw-gch6">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71481">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.5 v3.1</span><span class="tag mono">CVE-2026-73864</span><span class="tag ">npm</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-88q3-gch3-5396">npm package install-artifact-from-github 1.6.0 and earlier loads downloaded code without checking it</a></h3>
+              <p>The install script downloads a prebuilt native add-on and loads it with no checksum or signature check. Anyone who can alter that download can run code in your build. The fix is in 1.7.0.</p>
+              <p class="do"><strong>Do</strong>Search lockfiles for <code>install-artifact-from-github</code>, and move to 1.7.0 or later where it is a direct or nested dependency.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-88q3-gch3-5396">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-73864">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Research</span><span class="tag ">Browsers</span></div>
+              <h3><a href="https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals">A new HTML element lets script run in innerHTML even when the equals sign is blocked</a></h3>
+              <p>Guest researcher Masato Kinugawa published a payload that uses the <code>selectedcontent</code> element to run script where filters strip the equals sign. PortSwigger says it no longer works in Chrome since version 153 but still works in Safari 27.2. Do not rely on blocking one character to stop injection into <code>innerHTML</code>; sanitize or avoid it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag ">AI-found bugs</span></div>
+              <h3><a href="https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities">Wiz used its own AI scanner to find the NGINX bugs, and says AI shortens the gap between disclosure and attack</a></h3>
+              <p>Wiz says it found both NGINX HTTP/2 flaws with Wiz Atlas, its AI code scanning harness, and used two AI models to confirm the impact. Four other teams reported the same bugs on their own. This is a vendor describing its own tool, so treat the claim about speed as its view. WordPress's 7.1.5 notes also credit Anthropic with two of the reports, a reflected XSS in the legacy media popup and a REST API leak of private taxonomy terms.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.8 v3.1</span><span class="tag mono">CVE-2026-63129</span><span class="tag ">MCP server</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-2m9m-6cr5-9x25">mssql-mcp write tools build SQL from text an AI agent supplies, so a bad prompt can change your data</a></h3>
+              <p>The <code>@connorbritain/mssql-mcp</code> packages put table names and WHERE clauses straight into SQL. An agent that reads untrusted text can be steered into sending SQL that updates or deletes more than intended. Fixed in core and server 0.6.0, reader and writer 0.5.0. Use a database login with only the rights the agent needs.</p>
+            </div>
+            <div class="brief" style="grid-column:1/-1">
+              <div class="tags"><span class="tag ">Worth reading</span></div>
+              <h3><a href="https://isc.sans.edu/diary/rss/33532">SANS: treat nginx2shell, PHP2Shell and Java4Shell as the new normal, not emergencies</a></h3>
+              <p>Johannes Ullrich writes that SANS stays at Infocon Green because you cannot stay on alert all the time. His honeypots see many Java attacks but none using Java4Shell yet. His advice is that you cannot patch a large estate before an exploit appears, so automate patching for less critical systems and build procedures for a steady stream of critical bugs.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Upgrade NGINX to 1.30.7 or 1.31.9 (or your distro's patched package), internet-facing HTTP/2 servers first, and turn HTTP/2 off where you cannot.</li>
+            <li>Update every WordPress site and multisite network to 7.1.5.</li>
+            <li>Watch for the PHP security releases at 14:00 UTC and set <code>session.upload_progress.enabled=0</code> until you upgrade.</li>
+            <li>If you run REDCap, install the vendor's fix or take public surveys offline; CISA's due date is November 21.</li>
+            <li>Find apps that bundle Apache Axis 1.x and plan to replace it.</li>
+            <li>Upgrade Ruby to 4.0.10, 3.4.13 or 3.3.14, <code>altcha-org/altcha</code> to 2.0.3 and <code>install-artifact-from-github</code> to 1.7.0.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90436">CVE-2026-90436</a> <span class="kev-yes">KEV 11-18</span><span class="meta">Apache Axis 1.x through 1.4, no fix planned · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817">CVE-2026-90817</a> <span class="kev-yes">KEV 11-18</span><span class="meta">REDCap 13.3.0 and later · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123007">CVE-2026-123007</a><span class="meta">NGINX 1.9.5 to 1.31.8, HTTP/2; fixed 1.30.7, 1.31.9 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123633">CVE-2026-123633</a><span class="meta">NGINX 1.19.7 to 1.31.8, HTTP/2 with proxy · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123634">CVE-2026-123634</a><span class="meta">NGINX 0.6.18 to 1.31.8, proxy with variables · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-121810">CVE-2026-121810</a><span class="meta">NGINX 1.25.0 to 1.31.8, HTTP/3 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-113425">CVE-2026-113425</a><span class="meta">NGINX 0.5.33 to 1.31.8, mail proxy · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-127021">CVE-2026-127021</a><span class="meta">Flamix Bitrix24 and WooCommerce Products Sync before 1.7.0 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124990">CVE-2026-124990</a><span class="meta">Masteriyo LMS up to 3.5.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129048">CVE-2026-129048</a><span class="meta">WP Photo Album Plus through 9.3.06.003 · 9.9 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-71481">CVE-2026-71481</a><span class="meta">altcha-org/altcha 2.0.0 to 2.0.2 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-73864">CVE-2026-73864</a><span class="meta">install-artifact-from-github up to 1.6.0 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63129">CVE-2026-63129</a><span class="meta">@connorbritain/mssql-mcp packages · 8.8 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 19, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
