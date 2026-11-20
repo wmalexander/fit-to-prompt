@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-19"
+        lastUpdated: "2026-11-20"
     },
     issues: [
+        {
+            date: "2026-11-20",
+            issueNumber: 17,
+            title: "Drupal installer bug can let strangers take over sites; PHP fixes seven critical flaws",
+            summary: "Drupal fixed a critical installer bug that can let a stranger take over a site, PHP's new releases fix seven critical flaws, and a VMware vCenter bug has been used in attacks since September.",
+            url: "https://fittoprompt.com/security/issues/2026-11-20.html",
+            pressure: "high",
+            itemCount: 12
+        },
         {
             date: "2026-11-19",
             issueNumber: 16,

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drupal installer bug can let strangers take over sites; PHP fixes seven critical flaws | Fit to Patch No. 17, November 20, 2026</title>
+  <meta name="description" content="Drupal fixed a critical installer bug that can let a stranger take over a site, PHP's new releases fix seven critical flaws, and a VMware vCenter bug has been used in attacks since September.">
+  <meta property="og:title" content="Fit to Patch No. 17: Drupal installer bug can let strangers take over sites; PHP fixes seven critical flaws">
+  <meta property="og:description" content="Drupal fixed a critical installer bug that can let a stranger take over a site, PHP's new releases fix seven critical flaws, and a VMware vCenter bug has been used in attacks since September.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-20.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Friday, November 20, 2026</span>
+        <span>No. 17</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Drupal fixed a critical bug in its installer that can let a stranger with no account take over a site, and the Drupal team expects attacks within hours or days.</li>
+            <li>PHP 8.5.13, 8.4.28, 8.3.37 and 8.2.36 fix seven critical flaws, and two of them can reach a normal WordPress host.</li>
+            <li>Broadcom fixed a VMware vCenter login bypass that Google's Mandiant says a China-linked group has used since September.</li>
+            <li>Ruby2Shell can let a stranger run code on a default Rails app, and GitHub Enterprise Server has no fixed release yet.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">Critical</span><span class="tag ">Drupal</span><span class="tag ">Not yet exploited</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/">Drupal installer bug can let a stranger take over a site; update to 10.6.22, 11.3.22 or 11.4.13</a></h3>
+              <p>Drupal core ships an <code>install.php</code> file. The Drupal Security Team says that under specific conditions an attacker can use it to try to reinstall the site, which can end in a site takeover or code running on the server. A visitor with no account can try it. Some attack paths fail if the web server cannot write to or change permissions on <code>settings.php</code>. The team warned on Monday that exploits could appear within hours or days. Anthropic's OSS Scanner found the bug. I could not confirm a CVE number in NVD yet, so none is printed here.</p>
+              <p>Drupal also fixed a second bug rated moderately critical. It lets an administrator reach code execution, but only if the site also deserializes untrusted data because of another flaw. Sites behind the paid Drupal Steward firewall are covered against the known attack paths, and Drupal still advises updating.</p>
+              <p class="do"><strong>Do</strong>Update Drupal core to 10.6.22, 11.3.22 or 11.4.13 today. If you cannot, block <code>/core/install.php</code> in the web server configuration or in the <code>.htaccess</code> file in the web root, and make <code>settings.php</code> read-only for the web server user.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/">BleepingComputer, quoting the Drupal advisory</a> · <a href="https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html">The Hacker News</a></div>
+            </article>
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.2 v4.0</span><span class="tag mono">CVE-2026-129496</span><span class="tag mono">CVE-2026-129289</span><span class="tag ">PHP</span></div>
+              <h3><a href="https://patchstack.com/articles/php-november-2026-security-release-wordpress/">PHP 8.5.13, 8.4.28, 8.3.37 and 8.2.36 fix seven critical flaws, and two can reach an ordinary WordPress host</a></h3>
+              <p>PHP released all four versions on November 19 with 18 fixes, seven of them rated critical at 9.2. Most need unusual settings. Patchstack's analysis says two deserve attention this week. CVE-2026-129496 is a memory bug that a stranger can trigger on a non-thread-safe build (the usual kind with PHP-FPM) when PHP writes a startup warning to a file-based error log, for example because of a bad <code>date.timezone</code> value. Patchstack says researchers crashed a worker on default settings and showed code execution. CVE-2026-129289 lets a stranger smuggle a forged request to PHP-FPM, but only if the front end reuses FastCGI connections. That is <code>fastcgi_keep_conn on</code> in NGINX or <code>enablereuse=on</code> with Apache <code>mod_proxy_fcgi</code>, and neither is the default. WordPress opens <code>php://input</code> on every REST request, so the application side of the condition is always met.</p>
+              <p>This is a PHP update, not a WordPress update, so installing a new WordPress release does nothing for it. The other five critical bugs need session handling, upload progress or PHP 8.5 error settings that most sites do not use.</p>
+              <p class="do"><strong>Do</strong>Move to PHP 8.5.13, 8.4.28, 8.3.37 or 8.2.36 through your host or your container image. Before then, search your NGINX and Apache configuration for <code>fastcgi_keep_conn</code> and <code>enablereuse</code> and turn them off, and fix any PHP startup warnings in your error log.</p>
+              <div class="sources">Sources: <a href="https://www.php.net/index.php#2026-11-19-4">php.net release announcement</a> · <a href="https://patchstack.com/articles/php-november-2026-security-release-wordpress/">Patchstack</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129496">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129289">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-14492</span><span class="tag wp">Plugin</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14492">WP Duplicate through 1.1.11 lets a logged-in user run code on the server</a></h3>
+              <p>Per NVD, the plugin's batch file save step has a loose comparison that can be tricked, plus a file path that is not checked, so an authenticated user with custom-level access or higher can write files and run code. It only applies once the site owner has finished the plugin's setup. NVD lists no fixed version and I could not find an install count. Check the plugin page for a release newer than 1.1.11, and remove the plugin if you only used it for a one-time migration.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.4 v4.0</span><span class="tag mono">CVE-2026-129396</span><span class="tag mono">CVE-2026-129410</span><span class="tag ">Joomla</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129396">Joomla extension Visforms has two bugs that let a backend user run PHP</a></h3>
+              <p>Per NVD, the CSS editor in Visforms does not restrict file names or paths, and calculation fields run their formulas through PHP <code>eval()</code> without checking them. Both need a backend login. They affect versions through 5.6.4 and 6.2.1 depending on the bug. Update Visforms to its newest release, and review who has backend access to forms. NVD still has both records as deferred.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-114516</span><span class="tag ">Node.js</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-mc8w-wjhw-45x5">Etherpad before 3.3.3 lets anyone with no login read any file on the server</a></h3>
+              <p>Etherpad is a shared editor built on Node.js. Its file handler for <code>/static/*</code> turns backslashes into slashes after the safety check has already run, so a crafted request with encoded backslashes can climb out of the folder. The handler runs before any login check. GitHub says an attacker can read <code>settings.json</code>, which holds the admin password, and from there reach code execution through the admin plugin installer. Affected versions are 1.8.14 up to 3.3.3.</p>
+              <p class="do"><strong>Do</strong>Upgrade <code>ep_etherpad-lite</code> to 3.3.3. If your instance faced the internet, change the admin password and any keys in <code>settings.json</code>.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-mc8w-wjhw-45x5">GitHub advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114516">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Nothing new today</span><span class="tag mono">CVE-2026-129448</span><span class="tag ">Apache</span></div>
+              <h3>No new Node.js, React or Next.js advisories; the Apache Roller bug is still being exploited</h3>
+              <p>The Node.js security feed, the React blog and the Next.js blog posted nothing in the last day. Apache's own notice says the Roller bug covered on November 18 is being exploited, and that it hits versions 4.0.0 through 6.1.4 through the XML-RPC endpoint before login. Turning XML-RPC off in the admin screen does not stop it. Apache says to upgrade to 6.1.6 or later, and 6.1.7 fixes 15 more bugs. Details are in <a href="https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/">SecurityWeek</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448">NVD</a>.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.4 v3.1</span><span class="tag mono">CVE-2026-132825</span><span class="tag ">Ruby on Rails</span></div>
+              <h3><a href="https://verialabs.com/ruby2shell/">Ruby2Shell can let a stranger run code on a default Rails app, and GitHub Enterprise Server has no fix yet</a></h3>
+              <p>Veria Labs found that changing the case of text in some older single-byte encodings, such as ISO-8859-1 and Windows-1252, writes one byte past the end of a buffer. Rails and classic-style Sinatra do this in their default setup. It affects Ruby 2.4.0 through 3.3.13, 3.4.0 through 3.4.12 and 4.0.0 through 4.0.9. NVD scores it 7.4, and Aikido calls it critical. No attacks have been reported, but the researchers plan to publish their exploit in about a week. Per Veria's table, GitLab, Mastodon, OpenProject, Discourse and Chatwoot have fixed releases. GitHub Enterprise Server 3.22.5 and earlier has none yet.</p>
+              <p class="do"><strong>Do</strong>Upgrade Ruby to 3.3.14, 3.4.13 or 4.0.10 and redeploy, and update GitLab to 19.6.1, 19.5.8 or 19.4.10. If you run GitHub Enterprise Server, limit who can reach it until GitHub ships a fix. Ruby 3.2 and older have no fix, so plan the move.</p>
+              <div class="sources">Sources: <a href="https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/">Ruby advisory</a> · <a href="https://verialabs.com/ruby2shell/">Veria Labs</a> · <a href="https://www.aikido.dev/blog/ruby2shell">Aikido</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132825">NVD</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-123890</span><span class="tag ">VMware vCenter</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/">VMware vCenter login bypass was used in attacks for two months before the patch</a></h3>
+              <p>A flaw in the VMware Directory Service lets someone with network access to vCenter skip the login and get administrator access. Google's Mandiant says a suspected China-linked group it calls Armory Castle used it as a zero-day starting in early September, to run commands and copy files such as the directory database. Broadcom has not itself confirmed the attacks. Broadcom calls this an emergency update and says there is no workaround, although limiting network access to vCenter helps. It is not in the CISA exploited list as of today.</p>
+              <p class="do"><strong>Do</strong>Apply the fixes in Broadcom advisory VMSA-2026-0009: vCenter 9.1.1.0200, 9.0.2.0200 or 8.0 U3m, per NVD. Until then, keep vCenter off any network that web servers and developer machines can reach.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/">BleepingComputer</a> · <a href="https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/">SecurityWeek</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123890">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8 v3.1</span><span class="tag mono">CVE-2026-132891</span><span class="tag ">CI</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132891">JetBrains TeamCity before 2026.2, 2026.1.4 and 2025.11.8 can run code from an outside pull request</a></h3>
+              <p>Per NVD, code execution was possible through external pull requests. The record has no more detail and I could not read the JetBrains advisory. If your TeamCity builds pull requests from forks, update to 2026.2, 2026.1.4 or 2025.11.8, and until then stop building outside pull requests automatically.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.3 v4.0</span><span class="tag mono">CVE-2026-63412</span><span class="tag ">Composer</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-q8v2-3j4h-xg2p">jane-php/open-api-3 before 7.12.0 can run code when it generates a client from a hostile OpenAPI file</a></h3>
+              <p>The generator writes parameter names straight into code comments, so a name that closes the comment can add its own code to the generated client, and that code runs when the client is created. GitHub lists several sibling advisories for the same package, all fixed in the same release. Only teams that generate clients from OpenAPI files they do not control are at risk. Run <code>composer update jane-php/open-api-3</code> to get 7.12.0 or later.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.3</span><span class="tag mono">CVE-2026-76807</span><span class="tag mono">CVE-2026-77359</span><span class="tag ">MCP</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-833v-v58w-294h">A website you visit can drive the Todoist and Jupyter MCP servers running on your laptop</a></h3>
+              <p>Both servers listen on a local web port without checking which website is calling, so a malicious page can use DNS rebinding to send commands to them. Per NVD, Todoist MCP Server before 10.3.3 lets a page write and delete Todoist data through its optional HTTP mode, scored 9.3 on version 3.1. Jupyter MCP Server before 1.0.3 leaves management routes open in standalone HTTP mode, so a page can take over the Jupyter backend, scored 9.3 on version 4.0. GitHub also lists a similar bug in an Obsidian MCP server. This is the same class of bug for any coding agent tool that exposes a local HTTP port.</p>
+              <p class="do"><strong>Do</strong>Upgrade <code>@doist/todoist-mcp</code> to 10.3.3 and <code>jupyter-mcp-server</code> to 1.0.3. Use the stdio mode instead of HTTP where you can, and check that any local MCP server you run rejects requests with an unexpected <code>Host</code> or <code>Origin</code> header.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-833v-v58w-294h">Todoist advisory</a> · <a href="https://github.com/advisories/GHSA-9x8x-crjq-g64h">Jupyter advisory</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76807">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77359">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">AI attack</span><span class="tag ">ARTEX</span></div>
+              <h3><a href="https://therecord.media/european-commission-confirms-cyberattack-using-ai">The European Commission says an AI hacking tool was used in an attack on its staff systems</a></h3>
+              <p>The Commission confirmed that the first signs of an attack appeared on October 22 and called it an AI-generated campaign. POLITICO reported that CERT-EU found the open-source AI platform ARTEX in use, which the FBI warned about last week. Payroll, leave and other staff services were down for more than 10 days. The Commission says it has no evidence of a broad data breach. The FBI says some intrusions with the tool went from first contact to privileged access in under three hours, which leaves little time to react to alerts.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Drupal core to 10.6.22, 11.3.22 or 11.4.13, or block <code>/core/install.php</code> today.</li>
+            <li>Ask your host for PHP 8.5.13, 8.4.28, 8.3.37 or 8.2.36, and turn off FastCGI connection reuse until then.</li>
+            <li>Apply Broadcom VMSA-2026-0009 to vCenter and limit network access to it.</li>
+            <li>Upgrade Ruby to 3.3.14, 3.4.13 or 4.0.10 and redeploy Rails apps.</li>
+            <li>Upgrade local MCP servers (Todoist 10.3.3, Jupyter 1.0.3) and prefer stdio over HTTP.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123890">CVE-2026-123890</a> <span class="kev-yes">Exploited per Mandiant</span><span class="meta">VMware vCenter, see VMSA-2026-0009 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129496">CVE-2026-129496</a><span class="meta">PHP before 8.5.13, 8.4.28, 8.3.37, 8.2.36 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129289">CVE-2026-129289</a><span class="meta">PHP-FPM, same releases · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132825">CVE-2026-132825</a><span class="meta">Ruby before 3.3.14, 3.4.13, 4.0.10 · 7.4 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448">CVE-2026-129448</a> <span class="kev-yes">Exploited per Apache</span><span class="meta">Apache Roller 4.0.0 to 6.1.4 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114516">CVE-2026-114516</a><span class="meta">Etherpad before 3.3.3 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132891">CVE-2026-132891</a><span class="meta">JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14492">CVE-2026-14492</a><span class="meta">WP Duplicate through 1.1.11 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129396">CVE-2026-129396</a><span class="meta">Visforms for Joomla · 9.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129410">CVE-2026-129410</a><span class="meta">Visforms for Joomla · 9.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63412">CVE-2026-63412</a><span class="meta">jane-php/open-api-3 before 7.12.0 · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76807">CVE-2026-76807</a><span class="meta">Todoist MCP Server before 10.3.3 · 9.3 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-77359">CVE-2026-77359</a><span class="meta">Jupyter MCP Server before 1.0.3 · 9.3 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 20, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
