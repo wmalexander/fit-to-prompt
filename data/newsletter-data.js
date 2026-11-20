@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-19",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["scramble", "crossword"]
+        lastUpdated: "2026-11-20",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["scramble", "crossword", "acronym"]
     },
     issues: [
+        {
+            date: "2026-11-20",
+            volume: 1,
+            issueNumber: 150,
+            title: "Anthropic Shares Set to Trade Publicly After Record-Breaking IPO",
+            description: "Daily AI news roundup - November 20, 2026. Anthropic shares set to trade publicly after a record IPO, token fraud against free AI trials, Nvidia export-control and subpoena fallout, Anthropic's Australian data center, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-20.html",
+            storyCount: 20,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-11-19",
             volume: 1,
