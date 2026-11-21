@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 21, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 21, 2026. The blame game over Anthropic&rsquo;s turbulent trading debut, Alice Huang and Nvidia&rsquo;s China ties, an AI-assisted Riemann claim, a market correction, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 151">
+  <meta property="og:description" content="Daily AI news roundup - November 21, 2026. The blame game over Anthropic&rsquo;s turbulent trading debut, Alice Huang and Nvidia&rsquo;s China ties, an AI-assisted Riemann claim, a market correction, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Saturday, November 21, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 151</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+
+
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; IPO &middot; Markets</div>
+<a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQd0p4QVlqUGxNcEQwUVJFWkU2cnBwOGRoMjk0ZDRSaFlNZzZMdmt5d3p0QzZzeDZXZks1TGhyN1JPNDI0clRKSHMtSWpOdHNMeUMyNHU5YlpJY0NITnJ4MUhJeTByWmtKdU9QdlZIZGtvYmJlZW1oTjVKZ25WRGowQVRXSWp1cDZYLTRONXRoVkRSc3ZjdDNvWE5jLUhnY2lHd202LXd5Umk3ZlQt?oc=5" class="story-link">
+<h2 class="headline-lead mb-3">The Blame Game Has Begun Over Anthropic&rsquo;s Turbulent Trading Debut</h2>
+</a>
+<p class="byline mb-3">The Wall Street Journal &middot; Nov 21</p>
+<div class="newspaper-body">
+<p>The Wall Street Journal blocked automated access when this issue was built, so we are linking its headline without a summary.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI &middot; Chips &middot; China</div>
+<a href="https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html" class="story-link">
+<h3 class="headline-feature mb-2">Alice Huang, Accused of Spying on Nvidia&rsquo;s CEO, Is Linked to Firms With Ties to China&rsquo;s Military</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 20</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Times reports that Alice Huang, accused of spying on Nvidia&rsquo;s CEO, is linked to firms with ties to China&rsquo;s military, according to its headline.</p>
+</div>
+</div>
+</section>
+
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-21-cartoon.png" alt="A rumpled mathematician and a polite robot stand at a chalkboard of equations ending in QED with a coffee ring beside it" class="w-full object-contain mb-2" style="max-height:420px;">
+<p class="font-serif text-sm text-gray-600 italic">&ldquo;It did the proof. I did the coffee.&rdquo;</p>
+<p class="byline mt-1">The mathematician, to the robot</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+<div class="ws26-wrap">
+<style>
+.ws26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a;font-size:0.78rem}
+.ws26-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:2px;margin-bottom:0.6rem}
+.ws26-c{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;background:#fff;font-weight:600;cursor:pointer;user-select:none;font-size:0.8rem}
+.ws26-c.sel{background:#fde68a}
+.ws26-c.found{background:#8B0000;color:#fff;border-color:#8B0000}
+.ws26-words{display:flex;flex-wrap:wrap;gap:0.25rem 0.75rem;font-weight:600;font-size:0.72rem}
+.ws26-words span.done{text-decoration:line-through;color:#9ca3af}
+.ws26-msg{font-size:0.75rem;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<div class="ws26-grid" id="ws26-grid"></div>
+<div class="ws26-words" id="ws26-words"></div>
+<div class="ws26-msg" id="ws26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var rows=["UDILPLPPIF", "QLPMAXCRLJ", "OLSPUOHOGD", "CFTUDWIOJG", "LJOFINPFQK", "AOCHTVSEWR", "UXKYJIXAXU", "DXSZHDZIXW", "ERKMRIMATH", "JZQRIAWUWB"],words=["NVIDIA", "CHIPS", "STOCKS", "AUDIT", "PROOF", "MATH", "CLAUDE"],sel=[],found={},n=0;
+var g=document.getElementById("ws26-grid"),wl=document.getElementById("ws26-words"),msg=document.getElementById("ws26-msg");
+rows.forEach(function(r,i){for(var j=0;j<r.length;j++){var c=document.createElement("div");c.className="ws26-c";c.textContent=r[j];c.dataset.i=i*10+j;c.addEventListener("click",click);g.appendChild(c);}});
+words.forEach(function(w){var s=document.createElement("span");s.id="ws26-w-"+w;s.textContent=w;wl.appendChild(s);});
+function click(e){var c=e.currentTarget;if(c.classList.contains("found"))return;var k=c.dataset.i,ix=sel.indexOf(k);if(ix>-1){sel.splice(ix,1);c.classList.remove("sel");return;}sel.push(k);c.classList.add("sel");check();}
+function check(){var t=sel.map(function(k){return g.children[k].textContent;}).join(""),rv=t.split("").reverse().join("");words.forEach(function(w){if(found[w])return;if(t===w||rv===w){found[w]=1;n++;sel.forEach(function(k){g.children[k].classList.remove("sel");g.children[k].classList.add("found");});sel=[];document.getElementById("ws26-w-"+w).className="done";msg.textContent=n===words.length?"All "+n+" found!":"Found "+n+" of "+words.length;}});}
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Math &middot; Anthropic</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-21/anthropic-researcher-claims-to-solve-riemann-problem-with-claude" class="story-link">
+<h3 class="headline-feature mb-2">Anthropic Researcher Claims to Solve Riemann Problem With Claude</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 21</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Math &middot; Research</div>
+<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWnR2Ny1uWG1YVUdRQmI2QlEyUkFoalhFZFp3Rng1ZWVlRVR4SHVzaHFnRnZuNWFfRmM5YkpVNFJCSmNHWFk2WDJia1lfOG1mYVY5MHZjY2F1d05XMlhHRUVlVklvc2RiWUR4aURGLWh4MGJMZWFsOW1Obm0taDVHek54Tk1GckZpYl80QXRncVNIbmxLdHlWUkZqMGJfSktFQ0hFV1VJWVQzZDZjbHN6Z3I0LS1aVGNJTElMZ2QzWHo2QQ?oc=5" class="story-link">
+<h3 class="headline-feature mb-2">Using AI, mathematician claims to have solved one of math&rsquo;s great mysteries</h3>
+</a>
+<p class="byline mb-2">The Washington Post &middot; Nov 21</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Anthropic &middot; People</div>
+<a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOZGJyNGh6cktKS0FsM3FIbF9LbjFqVThfY3MyRURJREVmd1JqVGtVX3pTV1FuQzBUUUI3VDdXVHdUYkpKTDk1Ml9vZzdoN1p5T0pVZ3g1eGpwQ1NfVFp6VlhJX1FSXzZ6ajVDYjVKazF5N2FGbXVHLUdjN05YRzVQZnRYaVZtMkE?oc=5" class="story-link">
+<h3 class="headline-feature mb-2">The Brother-Sister Duo Who Want to Keep Anthropic Weird</h3>
+</a>
+<p class="byline mb-2">The Wall Street Journal &middot; Nov 21</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Export Controls</div>
+<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPYTNWdm5ZVVFLUDV0SDQtRy1KMzV3dlVUVDg5aTJaMXNZTXpxRmY4Z3VKUFA2dVhKclpKbml2MjQxZmdLdEgyMGE2dkRzdnJnSzRkU0ItdVNuSnpVMHhSeHdzZXM3Y2ZJaGZsVzJ2cVRWTFNZWGlmckVxcUk1eTNSdzVZZ0hnNDE0cHlsblcxVGJuNnYtTUMwNFpISUktUGNyMWZlTGRwWlV0QW5kN3ZWV0wxNnRYQQ?oc=5" class="story-link">
+<h3 class="headline-feature mb-2">Officials approved the sale of 580,000 Nvidia chips to Chinese companies</h3>
+</a>
+<p class="byline mb-2">The Washington Post &middot; Nov 21</p>
+</div>
+<div class="story-item">
+<div class="kicker">Tech &middot; Legal &middot; India</div>
+<a href="https://techcrunch.com/2026/11/20/startup-sues-apple-in-india-over-tap-to-share-contacts-feature/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/apple-namedrop.jpg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Startup sues Apple in India over tap-to-share contacts feature</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 21</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A U.S. startup is seeking $162 million in damages and an injunction that would affect iPhone and Apple Watch imports to India.</p>
+</div>
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQUmlPb2NNTTRIVWI5NXJFQUd2MXNkdkFtNzIxODZMZjdEbVFsUWQyWjRQT1AxMUE5YS1nRnZ6U21mN0J1V21IVFFRZEthZms4bkM0MDRNQlR6RkRtcUp2aUJqTnQ2YlloTU9ObkpmLUs1NWgyUXpubUxndklKTElFbExrY3ZtamdWNEpRUG5lNGd2VVZZdHVIUHp3eU1Wc0RzenQ0YQ?oc=5">U.S. stocks slump into correction territory amid tech and AI worries</a>
+<div class="wire-source">The Washington Post &middot; Nov 21</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOb2ljbUJ2WkRpSnFueGcwQU9qcTlhb3oxc09Zby15RHZIUUZ2eUdHRllHcG5ZOWVTTzJYTExaaUg4Nk5Mdkh3cWN1aTRFZW53ejluR2lTdTVRVXFfQk4xV0hRTENGX2ZDY3JmS1pPNFB2QkprRldEU055eHdZMkdCM2xqcjJZOWZxeHJNVUFCRncwZnd1MDNCY2ZBdlEzZG44MlZGQVZzbXJCbHlNaEE?oc=5">Pentagon watchdog to audit deals with defense tech start-ups</a>
+<div class="wire-source">The Washington Post &middot; Nov 21</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-21/china-deploys-5g-across-manufacturing-base-as-6g-testing-advances-cctv-reports">China Deploys 5G Across Manufacturing Base as 6G Testing Advances, CCTV Reports</a>
+<div class="wire-source">Bloomberg &middot; Nov 21</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-21/wall-street-week-gaming-blockbuster-cybersecurity-video">Wall Street Week | Gaming Blockbuster, Healthcare Costs, Cybersecurity Meets AI</a>
+<div class="wire-source">Bloomberg &middot; Nov 21</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">The only figure we could verify today comes from TechCrunch: a U.S. startup is seeking $162 million in damages from Apple in India, plus an injunction that would affect iPhone and Apple Watch imports, over a tap-to-share contacts feature. Everything else in this issue is a headline we could not read past, and the headlines share a mood: the AI trade is being argued over, whether in a trading debut, a chip shipment or a proof.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <p><em>A note on sources: The Wall Street Journal, The Washington Post, The New York Times and Bloomberg all blocked automated access when this issue was built, and the Google News links for Journal and Post stories do not expose article text. Only the TechCrunch story was read. Everything else below comes from headlines, so treat it as a map of what each piece covers and read the originals for the substance.</em></p>
+
+        <h4 class="digest-theme">Anthropic and the Market</h4>
+        <ul class="digest-bullets">
+          <li><strong>A rough debut.</strong> The Journal&rsquo;s headline says the blame game has begun over Anthropic&rsquo;s turbulent trading debut. A second Journal headline profiles a brother and sister who want to keep Anthropic &ldquo;weird.&rdquo;</li>
+          <li><strong>Wider jitters.</strong> The Post&rsquo;s headline says U.S. stocks slumped into correction territory amid tech and AI worries.</li>
+        </ul>
+
+        <h4 class="digest-theme">Nvidia, China and Oversight</h4>
+        <ul class="digest-bullets">
+          <li><strong>Chip sales.</strong> The Post reports that officials approved the sale of 580,000 Nvidia chips to Chinese companies, per its headline.</li>
+          <li><strong>The spying allegation.</strong> The Times says Alice Huang, accused of spying on Nvidia&rsquo;s CEO, is linked to firms with ties to China&rsquo;s military.</li>
+          <li><strong>Defense start-ups.</strong> The Post says a Pentagon watchdog will audit deals with defense tech start-ups.</li>
+        </ul>
+
+        <h4 class="digest-theme">Math, Networks and Legal Fights</h4>
+        <ul class="digest-bullets">
+          <li><strong>A Riemann claim.</strong> Bloomberg says an Anthropic researcher claims to have solved a Riemann problem with Claude, and the Post describes a mathematician who used AI and claims to have solved one of math&rsquo;s great mysteries. Whether these are the same claim, and whether it holds up, is not something the headlines settle.</li>
+          <li><strong>Apple in India.</strong> The $162 million suit described above is the one story here we read in full.</li>
+          <li><strong>Also on the wire.</strong> China deploying 5G across its manufacturing base as 6G testing advances, per CCTV via Bloomberg, and a Bloomberg Wall Street Week episode on cybersecurity meeting AI.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Three of today&rsquo;s headlines are about scrutiny: of a trading debut, of chip sales to China, and of Pentagon contracts with start-ups. When a technology becomes both an asset class and a strategic material, it draws auditors, investigators and critics at the same time. We cannot say more than the headlines allow.</p>
+
+        <p>The Riemann headlines are the odd ones out, and the most worth reading carefully. A claim to have solved a famous problem with a model is easy to announce and slow to verify, so the honest posture is to wait for mathematicians to check it.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Over the past few issues the story has moved from a record offering to its first trading days. A headline about a blame game suggests the easy phase is over, and that expectations, not just products, now move AI companies.</p>
+          <p>Meanwhile the chip headlines show that the hardware side stays entangled with politics. That is a pattern, not a prediction, and a thin day of sourcing is a reason to hold conclusions loosely.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Verification of the Riemann claim.</strong> Look for independent mathematicians weighing in.</li>
+          <li><strong>Anthropic&rsquo;s next trading sessions.</strong> The Journal and Post headlines point to a nervous market.</li>
+          <li><strong>Nvidia and China.</strong> The sale approvals and the spying allegation may draw follow-up from officials.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>

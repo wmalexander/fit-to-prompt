@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-20",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["scramble", "crossword", "acronym"]
+        lastUpdated: "2026-11-21",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: ["scramble", "crossword", "acronym", "wordsearch"]
     },
     issues: [
+        {
+            date: "2026-11-21",
+            volume: 1,
+            issueNumber: 151,
+            title: "Blame Game Begins Over Anthropic's Turbulent Trading Debut",
+            description: "Daily AI news roundup - November 21, 2026. The blame game over Anthropic's turbulent trading debut, Alice Huang and Nvidia's China ties, an AI-assisted Riemann claim, a market correction, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-21.html",
+            storyCount: 11,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-11-20",
             volume: 1,
