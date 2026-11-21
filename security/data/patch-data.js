@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-20"
+        lastUpdated: "2026-11-21"
     },
     issues: [
+        {
+            date: "2026-11-21",
+            issueNumber: 18,
+            title: "Attackers are using an Apache Roller bug; nginx and PHP need updates too",
+            summary: "CISA says attackers are exploiting an Apache Roller bug that needs no login, nginx has a public exploit for its HTTP/2 bug, PHP's phpAfterShell fix is out, and a WordPress plugin can be hit with a single web request.",
+            url: "https://fittoprompt.com/security/issues/2026-11-21.html",
+            pressure: "high",
+            itemCount: 14
+        },
         {
             date: "2026-11-20",
             issueNumber: 17,

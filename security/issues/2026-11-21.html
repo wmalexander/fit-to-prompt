@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attackers are using an Apache Roller bug; nginx and PHP need updates too | Fit to Patch No. 18, November 21, 2026</title>
+  <meta name="description" content="CISA says attackers are exploiting an Apache Roller bug that needs no login, nginx has a public exploit for a code-running HTTP/2 bug, PHP's phpAfterShell fix is out, and a WordPress plugin can be hit with a single web request.">
+  <meta property="og:title" content="Fit to Patch No. 18: Attackers are using an Apache Roller bug; nginx and PHP need updates too">
+  <meta property="og:description" content="CISA says attackers are exploiting an Apache Roller bug that needs no login, nginx has a public exploit for a code-running HTTP/2 bug, PHP's phpAfterShell fix is out, and a WordPress plugin can be hit with a single web request.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-21.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Saturday, November 21, 2026</span>
+        <span>No. 18</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+
+            <li>CISA added an Apache Roller bug to its exploited list; a stranger with no account can run code on Roller 4.0.0 through 6.1.4, and the fix is 6.1.6.</li>
+            <li>A WordPress plugin called Restrictions for BuddyPress can be taken over with one web request on sites that also run BuddyPress and Paid Memberships Pro; update to 1.5.5.</li>
+            <li>A public exploit exists for the nginx HTTP/2 bug, though it needs unusual conditions, so update to nginx 1.30.7 or 1.31.9.</li>
+            <li>Amazon says suspected Chinese attackers used an AI agent tool to find and use a new bug in a medical imaging server in minutes.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-129448</span><span class="tag ">Apache</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448">Apache Roller 4.0.0 through 6.1.4 can let a stranger run code, and CISA says it is being used in attacks</a></h3>
+              <p>Apache Roller is a Java blog server. Its XML-RPC address accepts special data types and unpacks them before it checks who is asking, so anyone who can reach that address can make the server run their code. The Roller maintainers said the bug is being exploited, and CISA added it to its Known Exploited Vulnerabilities list on November 20. Federal agencies have until November 23 to fix it. Nobody has said who is behind the attacks or how they are being carried out.</p>
+              <p>Turning XML-RPC off in the admin screen does not help on old versions, because they unpack the request before they look at that setting.</p>
+              <p class="do"><strong>Do</strong>Upgrade Roller to 6.1.6 or later. If you cannot upgrade today, set <code>enabledForExtensions</code> to <code>false</code> in <code>WEB-INF/web.xml</code> or remove the <code>/roller-services/xmlrpc</code> servlet mapping, restart Roller, and look through the logs for XML-RPC requests from strangers.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html">The Hacker News on the CISA additions</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-120539</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://github.com/seventhqueen/buddypress-restrict/releases/tag/1.5.5">Restrictions for BuddyPress 1.5.4 and earlier runs code from a web address</a></h3>
+              <p>The plugin pastes part of the page address into PHP code and runs it. One request from a stranger is enough, with no login. It only affects sites that also run BuddyPress and Paid Memberships Pro, and it works with the plugin's default settings. We did not find a public report of attacks, and we could not confirm the plugin's install count.</p>
+              <p class="do"><strong>Do</strong>Update Restrictions for BuddyPress to 1.5.5 or remove it.</p>
+              <div class="sources">Sources: <a href="https://github.com/seventhqueen/buddypress-restrict/releases/tag/1.5.5">Plugin release 1.5.5</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120539">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.2 (v4.0)</span><span class="tag mono">CVE-2026-123007</span><span class="tag ">nginx</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/cve-2026-123007-nginx-http2-rce">A public exploit exists for the nginx HTTP/2 bug, but it needs unusual conditions</a></h3>
+              <p>This is the nginx HTTP/2 bug from earlier this week. StepSecurity says one team published a working exploit. It needs a direct connection to nginx with no HTTP/2 proxy in front, about 119 GiB of traffic within nginx's one-hour connection limit, an otherwise idle server, and an x86-64 CPU with AVX-512. A smaller public tool only crashes the worker. StepSecurity reports no attacks as of November 20, and the bug is not on the CISA list. That is why it is a patch-this-week item rather than a drop-everything one.</p>
+              <p class="do"><strong>Do</strong>Update nginx to 1.31.9 (mainline) or 1.30.7 (stable), or install your distribution's backport, on every server with HTTP/2 turned on.</p>
+              <div class="sources">Sources: <a href="https://www.stepsecurity.io/blog/cve-2026-123007-nginx-http2-rce">StepSecurity</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123007">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.2 (v4.0)</span><span class="tag mono">CVE-2026-126714</span><span class="tag mono">CVE-2026-129289</span><span class="tag wp">PHP</span><span class="tag ">No attacks reported</span></div>
+              <h3><a href="https://blog.cloudflare.com/phpaftershell-waf-protection/">What phpAfterShell and the PHP-FPM bug need before they work, and what Cloudflare blocks</a></h3>
+              <p>The PHP releases from November 19 fix phpAfterShell, a flaw in PHP's default file-based session storage. If a session write is cut short, the file can mix new and old data, and PHP can then rebuild objects an attacker chose. It needs an attacker who can influence session data (for example through PHP's upload-progress feature), a badly timed interruption, and a suitable code path in the application, so it is hard to pull off. The same releases fix a PHP-FPM bug that lets a stranger forge a second request, but only where the front end reuses connections to PHP-FPM (nginx with <code>fastcgi_keep_conn on</code>, Apache <code>mod_proxy_fcgi</code> with <code>enablereuse=on</code>, or HAProxy), which is not the default.</p>
+              <p>Cloudflare says its firewall blocks known phpAfterShell patterns on every plan, including Free, and that it saw no reports of attacks as of November 19. Its new rules for the PHP-FPM bug and two SOAP bugs start in log-only mode on paid plans. Cloudflare is clear that a firewall rule is an extra layer and not a replacement for the patch.</p>
+              <p class="do"><strong>Do</strong>Update PHP to 8.2.36, 8.3.37, 8.4.28 or 8.5.13 and restart every PHP-FPM pool and worker. On Linux, check your distribution's advisory, because fixes are often backported without a version change.</p>
+              <div class="sources">Sources: <a href="https://blog.cloudflare.com/phpaftershell-waf-protection/">Cloudflare</a> · <a href="https://www.wordfence.com/blog/2026/11/cve-2026-129289-wordpress-php-vulnerabilities/">Wordfence</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126714">NVD (126714)</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129289">NVD (129289)</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-80188</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://buddyboss.com/resources/buddyboss-addons/addons-1-2-2/">BuddyBoss Addons 1.2.1 and earlier lets a stranger sign in as any user who has an email address on file</a></h3>
+              <p>The social login endpoint trusts Apple and Facebook sign-in claims without checking them, so an attacker who knows a user's email address, including an administrator's, can link their own login to that account. It needs BuddyBoss Platform active with the Social Login module and a provider turned on.</p>
+              <p class="do"><strong>Do</strong>Update BuddyBoss Addons to 1.2.2.</p>
+              <div class="sources">Sources: <a href="https://buddyboss.com/resources/buddyboss-addons/addons-1-2-2/">BuddyBoss release notes</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-80188">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-129073</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129073">miniOrange OTP Verification 5.6.1 and earlier has a way around its login check</a></h3>
+              <p>NVD lists an authentication bypass through an alternate path in the plugin, which WordPress.org shows with about 5,000 active installs. The record gives no detail beyond that, and no public attacks were found.</p>
+              <p class="do"><strong>Do</strong>Update to 5.6.2 or later, the version WordPress.org lists now, and read its changelog to confirm the fix.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/miniorange-otp-verification/">WordPress.org plugin page</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129073">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-129039</span><span class="tag mono">CVE-2026-129043</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129039">Newsletters (Tribulant) 4.18.2 and earlier has two critical bugs</a></h3>
+              <p>One unpacks untrusted data (9.8) and one allows SQL injection (9.3). WordPress.org lists about 2,000 installs and 4.18.3 as current. Update to 4.18.3 or later, and check its changelog for the fix.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Context</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://www.wordfence.com/blog/2026/11/wordfence-intelligence-weekly-wordpress-vulnerability-report-november-9-2026-to-november-15-2026/">Wordfence logged 388 plugin and theme vulnerabilities in one week</a></h3>
+              <p>Wordfence says 388 vulnerabilities in 288 plugins and 29 themes were added to its database from November 9 to 15, reported by 178 researchers. The figures are Wordfence's own, about its own database. Remove plugins you no longer use.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.0</span><span class="tag mono">CVE-2026-133212</span><span class="tag ">Node.js</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133212">@fastify/reply-from before 12.9.1 can let an attacker sneak a second request through your proxy</a></h3>
+              <p>When this Fastify proxy plugin forwards a request with a body it does not send (a GET with a body, or an empty JSON body), it still passes along the <code>Content-Length</code> header. The server behind it then reads the next request as the missing body, which lets an attacker slip a request past the proxy. We did not find reports of attacks.</p>
+              <p class="do"><strong>Do</strong>Upgrade <code>@fastify/reply-from</code> to 12.9.1 or later and rerun your lockfile install.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133212">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Nothing new</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability">No new Node.js, React or Next.js advisories today</a></h3>
+              <p>The Node.js security page's latest release is dated November 11, 2026, and the React and Next.js feeds posted nothing new. The Apache Roller bug above is today's Apache item.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.3 (v4.0)</span><span class="tag mono">CVE-2026-133949</span><span class="tag ">PyPI</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133949">pip before 26.2.2 ships a certificate bundle that still trusts compromised eMudhra certificates</a></h3>
+              <p>The certificate list bundled inside pip still includes certificates from eMudhra that were found to be compromised, so pip could trust a connection it should refuse. Python itself added a block list for these certificates (CVE-2026-115557), and pip is not affected when it runs on a Python version that rejects them. NVD lists this record as not yet analyzed.</p>
+              <p class="do"><strong>Do</strong>Upgrade pip to 26.2.2 or later, or use a Python version that rejects the compromised certificates, and use hash pinning in CI.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133949">NVD (pip)</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-115557">NVD (Python)</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Supply chain</span><span class="tag ">npm</span></div>
+              <h3><a href="https://github.com/advisories?query=type%3Amalware+ecosystem%3Anpm">GitHub's database added 97 npm malware reports in the last 30 hours</a></h3>
+              <p>Our feed pulled 97 npm and 9 PyPI malware advisories from GitHub's advisory database for that window, and none for Composer. We did not review the individual packages. Keep installs pinned to a lockfile and review new dependencies before adding them.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-133968</span><span class="tag ">AI-found bug</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/">An AI agent tool found a new MONAI Label bug and took over a server in minutes</a></h3>
+              <p>Amazon says suspected Chinese attackers pointed an AI penetration-testing tool called Cairn at East Asian universities and told it to "obtain shell access." The agents found a file-path bug in MONAI Label, a medical imaging server, and went from mapping its API to exploiting it in 11 minutes. They failed against a Redis server and a GPU server, so the tool is not magic. Amazon attributes the activity with moderate confidence and says the attackers left their Cairn server open to the internet. The CVE covers MONAI Label 0.8.5 and earlier; Amazon says the maintainers shipped a fix on November 18.</p>
+              <p class="do"><strong>Do</strong>If you run MONAI Label, install the release the maintainers published after November 18 and keep it off the public internet.</p>
+              <div class="sources">Sources: <a href="https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day">The Record on Amazon's report</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133968">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Incident</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/">Bell Canada says an "agentic" attacker took enterprise customer data</a></h3>
+              <p>Bell says an attacker it calls agentic got into some systems on November 17, including a pre-production system used to order circuits, and copied business contact details and some IP addresses. Bell says no credentials were taken. The word suggests AI tools were used, but Bell has not said so directly.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+
+            <li>Running Apache Roller? Upgrade to 6.1.6 or later today, and check logs for XML-RPC requests.</li>
+            <li>Update PHP to 8.2.36, 8.3.37, 8.4.28 or 8.5.13 and restart every PHP-FPM pool.</li>
+            <li>Update nginx to 1.30.7 or 1.31.9 wherever HTTP/2 is on.</li>
+            <li>Update or remove Restrictions for BuddyPress (1.5.5), BuddyBoss Addons (1.2.2), miniOrange OTP and Newsletters.</li>
+            <li>Upgrade pip to 26.2.2 and <code>@fastify/reply-from</code> to 12.9.1.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448">CVE-2026-129448</a> <span class="kev-yes">KEV 11-20</span><span class="meta">Apache Roller 4.0.0 to 6.1.4, fixed in 6.1.6 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120539">CVE-2026-120539</a> <span class="meta">Restrictions for BuddyPress to 1.5.4 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123007">CVE-2026-123007</a> <span class="meta">nginx 1.9.5 to 1.31.8 with HTTP/2 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-126714">CVE-2026-126714</a> <span class="meta">PHP before 8.2.36, 8.3.37, 8.4.28, 8.5.13 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129289">CVE-2026-129289</a> <span class="meta">PHP-FPM, same releases · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-80188">CVE-2026-80188</a> <span class="meta">BuddyBoss Addons to 1.2.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129073">CVE-2026-129073</a> <span class="meta">miniOrange OTP Verification to 5.6.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129039">CVE-2026-129039</a> <span class="meta">Newsletters to 4.18.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129043">CVE-2026-129043</a> <span class="meta">Newsletters to 4.18.2 · 9.3 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133212">CVE-2026-133212</a> <span class="meta">@fastify/reply-from before 12.9.1 · 9.0 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133949">CVE-2026-133949</a> <span class="meta">pip before 26.2.2 · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-115557">CVE-2026-115557</a> <span class="meta">Python certificate denylist · 9.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133968">CVE-2026-133968</a> <span class="meta">MONAI Label to 0.8.5 · 9.8 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 21, 2026 04:45 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 27 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
