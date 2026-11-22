@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-21"
+        lastUpdated: "2026-11-22"
     },
     issues: [
+        {
+            date: "2026-11-22",
+            issueNumber: 19,
+            title: "A file upload can run code through Ghostscript, and Fastify login checks can be skipped",
+            summary: "A Ghostscript flaw can turn an ordinary file upload into code running on the server, five Fastify add-on bugs can skip login checks, and the Nexter Blocks Pro WordPress plugin can make a visitor an administrator.",
+            url: "https://fittoprompt.com/security/issues/2026-11-22.html",
+            pressure: "high",
+            itemCount: 11
+        },
         {
             date: "2026-11-21",
             issueNumber: 18,

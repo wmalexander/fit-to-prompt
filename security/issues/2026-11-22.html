@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A file upload can run code through Ghostscript, and Fastify login checks can be skipped | Fit to Patch No. 19, November 22, 2026</title>
+  <meta name="description" content="A Ghostscript flaw can turn an ordinary file upload into code running on the server, several Fastify add-ons can skip login checks, and a WordPress plugin can be told to make anyone an administrator.">
+  <meta property="og:title" content="Fit to Patch No. 19: A file upload can run code through Ghostscript, and Fastify login checks can be skipped">
+  <meta property="og:description" content="A Ghostscript flaw can turn an ordinary file upload into code running on the server, several Fastify add-ons can skip login checks, and a WordPress plugin can be told to make anyone an administrator.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-22.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Sunday, November 22, 2026</span>
+        <span>No. 19</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Ghostscript, which many servers use to make thumbnails of uploads, had a bug that lets a crafted file run commands; update Ghostscript to 10.08.0 and WordPress to 7.0.4 or later.</li>
+            <li>Five critical Fastify add-on bugs can let a stranger skip login checks on protected routes; update <code>@fastify/express</code> to 4.0.10 or later and <code>@fastify/middie</code> to 9.3.8 or later.</li>
+            <li>The Nexter Blocks Pro WordPress plugin lets a visitor give themselves administrator rights; update past 5.0.10 or turn it off.</li>
+            <li>A GnuPG library used inside many apps has a serious memory bug; update GPGME to 2.3.1.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 8.5 (v4.0)</span><span class="tag mono">CVE-2026-125396</span><span class="tag mono">CVE-2026-65640</span><span class="tag wp">WordPress</span><span class="tag ">No attacks reported</span></div>
+              <h3><a href="https://pwn.ai/upload2shell">Ghostscript before 10.08.0 can run an attacker's commands when a crafted file is uploaded</a></h3>
+              <p>Ghostscript is the program many Linux servers use to turn uploaded PDFs, PostScript and images into thumbnails and previews. Image libraries such as ImageMagick hand a file to Ghostscript even when it is named <code>.png</code> or <code>.jpg</code>, so an app does not have to call it directly. Researchers at pwn.ai showed a crafted file escaping Ghostscript's sandbox and running commands on the server as the low-privilege account that does the rendering. Their tests reached it through about ten applications, including public upload forms in the WordPress plugins Forminator and Essential Addons for Elementor, a Roundcube email attachment, and a print job sent to a Debian 13 server. Artifex fixed the bug on September 8, and no attacks have been reported.</p>
+              <p>WordPress Core closed its own upload path in 7.0.4 on August 12. In WordPress, Authors and higher roles can upload files by default, so Core needs a logged-in user, while the two plugin forms needed none. The two fixes cover different points in the same chain, so one does not replace the other. The Ghostscript fix only helps where it reaches the copy your app actually uses, such as the one inside a container image.</p>
+              <p class="do"><strong>Do</strong>Update Ghostscript to 10.08.0 or your distribution's patched build (including inside container images), update WordPress to 7.0.4 or later, and update Forminator and Essential Addons for Elementor if you allow public file uploads.</p>
+              <div class="sources">Sources: <a href="https://pwn.ai/upload2shell">pwn.ai research</a> · <a href="https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125396">NVD</a> (Ghostscript) · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-65640">NVD</a> (WordPress)</div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8</span><span class="tag mono">CVE-2026-125294</span><span class="tag wp">WordPress</span><span class="tag ">No attacks reported</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125294">Nexter Blocks Pro 5.0.10 and earlier lets a visitor make themselves an administrator</a></h3>
+              <p>The plugin's user sign-up function tries to block attempts to set a user's role, but its check misses look-alike Unicode letters, and the database treats those letters as the same as the plain ones. A stranger can register an account and end up with administrator rights. We found no report of attacks and no vendor advisory yet, so the fixed version number is not confirmed.</p>
+              <p class="do"><strong>Do</strong>If the plugin is on a site, update to a release newer than 5.0.10 as soon as the vendor lists one, and until then turn off public registration or the plugin.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125294">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.4</span><span class="tag mono">CVE-2026-119114</span><span class="tag wp">WordPress</span><span class="tag ">No attacks reported</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119114">WP Fastest Cache 1.5.4 and earlier can let a stranger delete files such as wp-config.php</a></h3>
+              <p>A stranger can make the plugin delete files outside its cache folder, which can lead to code execution if the right file goes. It only works on sites that also run the Custom Permalinks or GeoDirectory plugin, because those let the attacker store the bad path. We found no report of attacks.</p>
+              <p class="do"><strong>Do</strong>Update WP Fastest Cache to a release newer than 1.5.4, and look at sites that also run Custom Permalinks or GeoDirectory first.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119114">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 6.5</span><span class="tag mono">CVE-2026-104904</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104904">Shortcodes Ultimate 7.9.1 and earlier can include PHP files from the active theme</a></h3>
+              <p>A forged <code>Host</code> header can get a stranger's text into the QR code shortcode, and the plugin then loads PHP files from the active theme folder. It is limited to the theme's own files, so the impact depends on the theme. Update to a release newer than 7.9.1.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">CVSS 8.8</span><span class="tag mono">CVE-2026-129220</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129220">Everest Forms 3.6.4 and earlier lets a form creator turn on any installed plugin</a></h3>
+              <p>It only matters on sites where an administrator gave the <code>everest_forms_create_forms</code> capability to a lower role. Those users can switch on plugins that are installed but off, which can lead to administrator access. Update to a release newer than 3.6.4, or review who holds that capability.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.1</span><span class="tag mono">CVE-2026-124626</span><span class="tag mono">CVE-2026-129504</span><span class="tag mono">CVE-2026-133120</span><span class="tag mono">CVE-2026-133250</span><span class="tag mono">CVE-2026-133867</span><span class="tag ">Node.js</span><span class="tag ">No attacks reported</span></div>
+              <h3><a href="https://www.npmjs.com/package/@fastify/express">Five Fastify add-on bugs can let a stranger skip your login checks</a></h3>
+              <p>Fastify's <code>@fastify/express</code> and <code>@fastify/middie</code> add-ons let you run Express-style middleware, such as an auth check, on chosen paths. In all five bugs, Fastify's router sends a request to a route while the add-on decides the path is different, so the middleware is skipped and the route still runs. The triggers include empty path parameters, a mount path missing its leading slash, odd encodings such as an encoded backslash, and regular-expression mount paths under a prefix. The affected ranges are <code>@fastify/express</code> 4.0.0 through 4.0.9 and <code>@fastify/middie</code> up to 9.3.7. We found no report of attacks. How bad it is for you depends on what the skipped middleware protected.</p>
+              <p class="do"><strong>Do</strong>Upgrade <code>@fastify/express</code> to 4.0.10 or later (4.0.11 is current) and <code>@fastify/middie</code> to 9.3.8 or later (9.3.9 is current), rerun your lockfile install, and check that protected routes reject requests with empty or odd path segments.</p>
+              <div class="sources">Sources: <a href="https://www.npmjs.com/package/@fastify/express">npm: @fastify/express</a> · <a href="https://www.npmjs.com/package/@fastify/middie">npm: @fastify/middie</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124626">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129504">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133120">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133250">NVD</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133867">NVD</a></div>
+            </article>
+            <div class="brief wide">
+              <div class="tags"><span class="tag ">Nothing new</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability">Nothing new from the Node.js, React, Next.js or Apache feeds today</a></h3>
+              <p>Those feeds returned no new items in the last day. The Fastify bugs above are today's Node.js item.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">Critical (vendor)</span><span class="tag ">GnuPG</span><span class="tag ">No attacks reported</span></div>
+              <h3><a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html">GPGME before 2.3.1 can leak app data when it reads a malicious OpenPGP key</a></h3>
+              <p>GPGME is the library apps use to talk to GnuPG. A key with an unusually long user ID can trigger a double free (memory released twice), which could be used to pull data out of an app that checks signed data. GnuPG says remote code execution cannot be ruled out. It was reported through GitLab and disclosed on November 20, earlier than planned. NVD has no record for its CVE number yet, so we are not printing it, and we have no scores to verify.</p>
+              <p class="do"><strong>Do</strong>Update GPGME to 2.3.1 or your distribution's patched build, and rebuild anything that bundles it statically, such as Gpg4win.</p>
+              <div class="sources">Sources: <a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html">GnuPG advisory (T8557)</a> · <a href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw.html">The Hacker News</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">Breach</span><span class="tag ">Kubernetes</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/">Rackspace Spot breach exposed Kubernetes secrets in some customer clusters</a></h3>
+              <p>Rackspace says someone used leaked credentials to get into parts of Rackspace Spot on November 17 for about 22 hours. They could create pods, read Kubernetes Secrets and list nodes in some customer organizations. Rackspace says it has revoked affected tokens and removed the unauthorized pods.</p>
+              <p class="do"><strong>Do</strong>If you use Rackspace Spot, reissue Spot API tokens, download fresh kubeconfig files, rotate every credential stored in cluster Secrets, and check database, registry, Git and cloud logs back to November 17.</p>
+              <div class="sources">Sources: <a href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/">BleepingComputer</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">Prompt theft</span><span class="tag ">AI providers</span></div>
+              <h3><a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens">Researchers caught three AI hosting providers leaking customers' prompts for months</a></h3>
+              <p>Dragos sent about two million prompts containing fake AWS keys and tracking links to AI services between July and November, then watched for anyone using them. It says attackers had stolen data from three providers, including requests marked Zero Data Retention. One attacker tested the stolen keys within hours. OpenRouter, a gateway that routes requests to outside providers, says it removed those three providers and told affected customers, and that its own systems were not breached. The numbers come from Dragos and OpenRouter, about their own research and platform.</p>
+              <p class="do"><strong>Do</strong>Never paste real keys into prompts, rotate any key that has been, and treat a "zero data retention" label as a promise rather than proof.</p>
+              <div class="sources">Sources: <a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens">Dragos</a> · <a href="https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html">The Hacker News</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag ">Research</span><span class="tag ">Fixed</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html">One malicious web page could pull a Meta Muse user's private chats</a></h3>
+              <p>NebuSec showed a web page the agent opened pulling out chat history and stored memories with no approval prompt, then chaining to a kernel bug for control of that user's cloud machine. It was a lab demo and NebuSec says Muse's team fixed it all before publishing. Meta has not confirmed. The lesson for agent builders is that a page an agent reads is untrusted input.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Ghostscript to 10.08.0 (or your distribution's build), including inside container images, and WordPress to 7.0.4 or later.</li>
+            <li>Update <code>@fastify/express</code> to 4.0.10 or later and <code>@fastify/middie</code> to 9.3.8 or later, then test your protected routes.</li>
+            <li>Check sites for Nexter Blocks Pro, WP Fastest Cache, Shortcodes Ultimate and Everest Forms, and update or remove them.</li>
+            <li>Update GPGME to 2.3.1 and rebuild anything that bundles it.</li>
+            <li>On Rackspace Spot? Rotate tokens and cluster Secrets today.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125396">CVE-2026-125396</a><span class="meta">Ghostscript before 10.08.0 · 8.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-65640">CVE-2026-65640</a><span class="meta">WordPress before 7.0.4 (upload path) · 8.8 v3.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125294">CVE-2026-125294</a><span class="meta">Nexter Blocks Pro to 5.0.10 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124626">CVE-2026-124626</a><span class="meta">@fastify/express 4.0.5 to 4.0.9 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129504">CVE-2026-129504</a><span class="meta">@fastify/express 4.0.0 to 4.0.9 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133120">CVE-2026-133120</a><span class="meta">@fastify/express before 4.0.10 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133867">CVE-2026-133867</a><span class="meta">@fastify/express 4.0.7 to 4.0.9 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133250">CVE-2026-133250</a><span class="meta">@fastify/middie to 9.3.7 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129220">CVE-2026-129220</a><span class="meta">Everest Forms to 3.6.4 · 8.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119114">CVE-2026-119114</a><span class="meta">WP Fastest Cache to 1.5.4 · 7.4 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104904">CVE-2026-104904</a><span class="meta">Shortcodes Ultimate to 7.9.1 · 6.5 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 22, 2026 04:50 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 40 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
