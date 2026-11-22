@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-21",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["scramble", "crossword", "acronym", "wordsearch"]
+        lastUpdated: "2026-11-22",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["cryptogram"]
     },
     issues: [
+        {
+            date: "2026-11-22",
+            volume: 1,
+            issueNumber: 152,
+            title: "The Outages Are Just Getting Started",
+            description: "Daily AI news roundup - November 22, 2026. A week of tech outages tied to AI-speeded patching, Nvidia's tale of two realities, Signal's stand against agentic AI, Meta's privacy-troubled Muse agent, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-22.html",
+            storyCount: 20,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-11-21",
             volume: 1,
