@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-22",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["cryptogram"]
+        lastUpdated: "2026-11-23",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["cryptogram", "scramble"]
     },
     issues: [
+        {
+            date: "2026-11-23",
+            volume: 1,
+            issueNumber: 153,
+            title: "Stocks Rebound From Correction as Anthropic's Early Backers Count Their Gains",
+            description: "Daily AI news roundup - November 23, 2026. Stocks rebound from a correction as Wall Street stays upbeat on 2027, the investors who bet big on Anthropic before its IPO, an AI selloff in emerging markets, a defense AI startup raise, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-23.html",
+            storyCount: 4,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-11-22",
             volume: 1,
