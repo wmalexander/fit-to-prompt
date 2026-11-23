@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-22"
+        lastUpdated: "2026-11-23"
     },
     issues: [
+        {
+            date: "2026-11-23",
+            issueNumber: 20,
+            title: "Cisco Expressway flaw exploited; simple-git needs 4.1.0",
+            summary: "CISA says a critical Cisco Expressway bug is being exploited, simple-git has a critical command-injection fix in 4.1.0, and the Members, Simple Shopping Cart and APCu Manager WordPress plugins need updates.",
+            url: "https://fittoprompt.com/security/issues/2026-11-23.html",
+            pressure: "elevated",
+            itemCount: 11
+        },
         {
             date: "2026-11-22",
             issueNumber: 19,
