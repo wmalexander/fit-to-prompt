@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-23",
-        lastPuzzleType: "scramble",
-        puzzleHistory: ["cryptogram", "scramble"]
+        lastUpdated: "2026-11-24",
+        lastPuzzleType: "crossword",
+        puzzleHistory: ["cryptogram", "scramble", "crossword"]
     },
     issues: [
+        {
+            date: "2026-11-24",
+            volume: 1,
+            issueNumber: 154,
+            title: "Jensen Huang Is Back at Nvidia, and the AI Trade Breathes Again",
+            description: "Daily AI news roundup - November 24, 2026. Jensen Huang returns as Nvidia's CEO, the market rally that followed, new US blacklists reaching Alibaba-owned and Megaspeed-linked firms, Southeast Asia's data-center fallout, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-24.html",
+            storyCount: 17,
+            puzzleType: "crossword"
+        },
         {
             date: "2026-11-23",
             volume: 1,
