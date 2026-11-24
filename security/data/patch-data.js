@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-23"
+        lastUpdated: "2026-11-24"
     },
     issues: [
+        {
+            date: "2026-11-24",
+            issueNumber: 21,
+            title: "Six WordPress plugins were backdoored, and an exploited ASP.NET library has no fix",
+            summary: "Six WP connect WordPress plugins carried a hidden backdoor, attackers are using the abandoned Idunno.AntiCsrf ASP.NET library with no patch available, and MONAI Label and Xen Orchestra have exploited bugs with fixes.",
+            url: "https://fittoprompt.com/security/issues/2026-11-24.html",
+            pressure: "elevated",
+            itemCount: 12
+        },
         {
             date: "2026-11-23",
             issueNumber: 20,

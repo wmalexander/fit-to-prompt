@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Six WordPress plugins were backdoored, and an exploited ASP.NET library has no fix | Fit to Patch No. 21, November 24, 2026</title>
+  <meta name="description" content="Six WP connect WordPress plugins carried a hidden backdoor, attackers are using an abandoned ASP.NET anti-forgery library with no patch, and the MONAI Label bug is on CISA's exploited list.">
+  <meta property="og:title" content="Fit to Patch No. 21: Six WordPress plugins were backdoored, and an exploited ASP.NET library has no fix">
+  <meta property="og:description" content="Six WP connect WordPress plugins carried a hidden backdoor, attackers are using an abandoned ASP.NET anti-forgery library with no patch, and the MONAI Label bug is on CISA's exploited list.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-24.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Tuesday, November 24, 2026</span>
+        <span>No. 21</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Six WordPress plugins from one publisher, WP connect, had a hidden backdoor added to them; check whether any of them are on your sites and remove them.</li>
+            <li>Attackers are using an old ASP.NET anti-forgery add-on called Idunno.AntiCsrf to run code on web servers, and there is no patch, so it has to be replaced.</li>
+            <li>CISA says attackers are exploiting MONAI Label, a medical imaging tool; version 0.8.6 fixes it.</li>
+            <li>Xen Orchestra, a Node.js management tool, had a login bypass that its maintainers say is being used; update to 6.9.2 or 6.10.1.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-135202</span><span class="tag wp">WordPress</span><span class="tag high">Backdoored releases</span></div>
+              <h3><a href="https://www.wordfence.com/blog/2026/11/supply-chain-compromise-backdoors-six-wp-connect-plugins-blocked-by-wordpress-orgs-release-hold/">Six WP connect plugins were backdoored through a hijacked developer account</a></h3>
+              <p>Wordfence says a compromised developer account was used to push a remote-control backdoor into six plugins: Air WP Sync, WP Sync for Notion, Orders Sync to Airtable for WooCommerce, Add-On for Contact Form 7 to Notion, Add-On for Contact Form 7 to Airtable, and Add-on Brevo for Gravity Forms. According to the NVD record, the bad releases phone home to a server at tascredit-pay.com, run whatever PHP code it sends back, and can read or delete files, dump the users table and drop a web shell. Wordfence reports that WordPress.org's release hold stopped the releases before they reached sites, so most installs may be clean. I could only read Wordfence's summary, not the full post, so confirm that against their write-up. NVD marks the plugins closed with no patched versions, and its record has not been fully reviewed yet.</p>
+              <p class="do"><strong>Do</strong>Search every site for these six plugins. If one is installed, uninstall it, run a full malware scan, and check for unknown files in the uploads folder and for blocked or unexpected requests to tascredit-pay.com.</p>
+              <div class="sources">Sources: <a href="https://www.wordfence.com/blog/2026/11/supply-chain-compromise-backdoors-six-wp-connect-plugins-blocked-by-wordpress-orgs-release-hold/">Wordfence</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135202">NVD</a></div>
+            </article>
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-133968</span><span class="tag">Python</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html">MONAI Label lets anyone write files to the server and gain control</a></h3>
+              <p>CISA added this to its exploited list on November 23. A crafted request to the image upload endpoint can write files outside the intended folder, and one real attack used that to plant a reverse shell that ran as root. MONAI Label is an open-source medical imaging tool, so this matters most to university and hospital teams that run it. Versions before 0.8.6 are affected, and the federal due date is November 26.</p>
+              <p class="do"><strong>Do</strong>Update MONAI Label to 0.8.6 or later, and keep it off the open internet until you have.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html">The Hacker News</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133968">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">Exploited</span><span class="tag crit">CVSS 9.3 (v4.0)</span><span class="tag mono">CVE-2026-131914</span><span class="tag">ASP.NET</span><span class="tag">No fix</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html">An old ASP.NET anti-forgery add-on lets strangers run code on IIS</a></h3>
+              <p>Idunno.AntiCsrf, a WebForms add-on last updated in 2008, trusts form data it should check first. One request with no login can run code on the web server, and Google's Mandiant says it has seen this used in real attacks. The project is abandoned, so no patch is coming. Versions 0.9.1.0 and 0.9.1 Beta are affected.</p>
+              <p class="do"><strong>Do</strong>Search your <code>Web.config</code> files and <code>bin/</code> folders for <code>Idunno.AntiCsrf</code>, replace it with <code>System.Web.Helpers.AntiForgery</code> or ASP.NET Core antiforgery, and rotate the secrets in <code>Web.config</code> if you find signs of attack.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html">The Hacker News</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131914">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.7 (v4.0)</span><span class="tag mono">CVE-2026-135470</span><span class="tag wp">WordPress</span><span class="tag">No attacks reported</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135470">WPC Product Options for WooCommerce lets shoppers name their own price</a></h3>
+              <p>Versions before 4.0.9 accept a price sent from the browser, so a visitor with no account can submit a negative option price and check out at zero or any amount they choose. I could not confirm the plugin's install count.</p>
+              <p class="do"><strong>Do</strong>Update WPC Product Options for WooCommerce to 4.0.9, and review recent orders for odd totals.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135470">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.7 (v4.0)</span><span class="tag mono">CVE-2026-135446</span><span class="tag wp">WordPress</span><span class="tag">No attacks reported</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135446">Bold pagos en linea can be tricked into marking unpaid orders as paid</a></h3>
+              <p>Versions before 3.5.1 check payment notifications in a way an outsider can fake: a notification whose reference starts with "test" is signed with an empty key, which marks any unpaid WooCommerce order as paid. I could not confirm the plugin's install count.</p>
+              <p class="do"><strong>Do</strong>Update Bold pagos en linea to 3.5.1, and compare recent "paid" orders against your payment dashboard.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135446">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">Exploited</span><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-133469</span><span class="tag">Node.js</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g">Xen Orchestra can be logged into with an empty token</a></h3>
+              <p>Xen Orchestra, a Node.js tool for managing XCP-ng and XenServer hosts, accepts a cookie that holds an empty object instead of a real token and signs the visitor in as the owner of the first saved token. The maintainers say it is being exploited. Versions before 6.9.2 and 6.10.1 are affected.</p>
+              <p class="do"><strong>Do</strong>Update to 6.9.2 or 6.10.1, keep the web interface off the public internet, and revoke the saved login tokens if you cannot rule out a visit.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-2r3w-c2vx-fv5g">GitHub advisory</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133469">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag">Nothing new</span></div>
+              <h3>No new Node.js, React or Apache advisories today</h3>
+              <p>The Node.js security feed, the React and Next.js blogs and the Apache projects we follow had nothing new in the last day. Xen Orchestra is the day's Node item.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.6 (v3.1)</span><span class="tag mono">CVE-2026-134401</span><span class="tag">Chrome</span><span class="tag">No attacks reported</span></div>
+              <h3><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01734282054.html">Chrome 158 fixes a critical bug that could escape the browser sandbox</a></h3>
+              <p>The only security fix in this release is rated Critical by Chromium. A crafted web page could potentially run code outside the sandbox. Google lists no attacks and says it found the bug itself. Windows and Mac get 158.0.8127.88 or .89, and Linux gets .88, rolling out over the coming days.</p>
+              <p class="do"><strong>Do</strong>Update Chrome to 158.0.8127.88 or later and restart it. Check for the matching update in other Chromium-based browsers.</p>
+              <div class="sources">Sources: <a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01734282054.html">Chrome Releases</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134401">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">NuGet</span></div>
+              <h3><a href="https://socket.dev/blog/malicious-nuget-packages-fake-job-assessments">13 fake NuGet packages hide inside job-interview coding tests</a></h3>
+              <p>Socket found a campaign that hands .NET developers a "home assessment" project. Building or running it pulls files from GitHub, side-loads a malicious DLL or runs a downloaded program. It began on npm in July. One package, WinUI.Button 1.0.0, was still listed on NuGet when Socket wrote. Open take-home projects from recruiters in a throwaway virtual machine, not on your work machine.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">AI-assisted attacks</span><span class="tag">Cloud</span></div>
+              <h3><a href="https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks">AI attack tools are now behind a wave of cloud break-ins</a></h3>
+              <p>Wiz Research says attacks run by AI agent frameworks such as ARTEX, Cairn and CyberStrikeAI have grown quickly, with twenty more incidents disclosed since its late-October warning. These tools are noisy: they spray passwords, create test accounts and label their own work as "pentest" or "recon", and they rotate through residential proxies, so blocking by IP does little. Wiz's report of 3x more incident-response requests is about its own customers. Watch for fast bursts of failed logins, sign-ups and password resets.</p>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">AI-found zero-day</span><span class="tag">Exploited</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html">AI agents found and used the MONAI Label bug in about 11 minutes</a></h3>
+              <p>Amazon's security chief says a suspected China-linked operator pointed Cairn at a list of university servers with the goal "obtain shell access." The agents found the MONAI Label flaw above, planted a reverse shell and ran as root, with the operator not choosing each step. Patch speed is now measured in minutes.</p>
+            </div>
+            <div class="brief wide">
+              <div class="tags"><span class="tag high">Worth reading</span><span class="tag">WordPress</span></div>
+              <h3><a href="https://www.wordfence.com/blog/2026/11/staying-ahead-of-the-new-threat-landscape-in-2027/">Wordfence: how the WordPress threat landscape changed in 2026</a></h3>
+              <p>Wordfence argues that the WordPress threat landscape changed drastically this year and expects the pace to continue in 2027, because researchers and attackers both use AI coding agents to find vulnerabilities faster. I could only read the post's summary, so check the full article for its specific advice. For site owners the practical point is to shorten the time between a plugin fix and your update.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Search every WordPress site for the six WP connect plugins (Air WP Sync, WP Sync for Notion, Orders Sync to Airtable, and the Contact Form 7 and Brevo add-ons) and remove any you find.</li>
+            <li>Search your ASP.NET sites for <code>Idunno.AntiCsrf</code> and replace it, since no patch exists.</li>
+            <li>Update MONAI Label to 0.8.6 and Xen Orchestra to 6.9.2 or 6.10.1 if you run either.</li>
+            <li>Update WPC Product Options for WooCommerce to 4.0.9 and Bold pagos en linea to 3.5.1.</li>
+            <li>Update Chrome to 158.0.8127.88 or later and restart it.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133968">CVE-2026-133968</a> <span class="kev-yes">KEV 11-23</span><span class="meta">MONAI Label before 0.8.6 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135202">CVE-2026-135202</a><span class="meta">WP connect plugins, six backdoored releases · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131914">CVE-2026-131914</a><span class="meta">Idunno.AntiCsrf 0.9.1.0 and 0.9.1 Beta · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133469">CVE-2026-133469</a><span class="meta">Xen Orchestra before 6.9.2 and 6.10.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134401">CVE-2026-134401</a><span class="meta">Chrome before 158.0.8127.88 · 9.6 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135470">CVE-2026-135470</a><span class="meta">WPC Product Options for WooCommerce before 4.0.9 · 8.7 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135446">CVE-2026-135446</a><span class="meta">Bold pagos en linea before 3.5.1 · 8.7 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 24, 2026 04:45 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
