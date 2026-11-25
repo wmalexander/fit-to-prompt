@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drupal's installer bug is being used to take over sites | Fit to Patch No. 22, November 25, 2026</title>
+  <meta name="description" content="CISA says attackers are using a Drupal core flaw that lets them reinstall a site and take it over. Also today: a WHMCS login-free SQL injection, a Joomla remote code execution fix, and AI-driven attackers that start with web shells.">
+  <meta property="og:title" content="Fit to Patch No. 22: Drupal's installer bug is being used to take over sites">
+  <meta property="og:description" content="CISA says attackers are using a Drupal core flaw that lets them reinstall a site and take it over. Also today: a WHMCS login-free SQL injection, a Joomla remote code execution fix, and AI-driven attackers that start with web shells.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-25.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Wednesday, November 25, 2026</span>
+        <span>No. 22</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Drupal core has a bug in its installer that attackers are already using to reinstall sites and take them over; update to 11.4.13, 11.3.22 or 10.6.22.</li>
+            <li>WHMCS fixed a flaw that lets anyone on the internet read customer records and admin password hashes without logging in.</li>
+            <li>Joomla shipped a fix for a critical remote code execution bug affecting versions up to 5.4.10 and 6.2.0.</li>
+            <li>Palo Alto's Unit 42 says AI-driven attackers in more than 10 campaigns all got in through web shells planted on vulnerable web apps.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">Highly critical</span><span class="tag">Drupal</span><span class="tag">Remote code execution</span></div>
+              <h3><a href="https://www.drupal.org/sa-core-2026-018">Attackers are abusing Drupal's installer to take over live sites</a></h3>
+              <p>Drupal core ships an installer that sets up new sites. Under certain conditions an unauthenticated visitor can use it to reinstall Drupal, which can hand them the site or let them run code. Drupal says it was exploited on live sites as early as Nov 19, one day after the Nov 18 patch, and raised the rating to "highly critical" afterward. CISA added it to its Known Exploited Vulnerabilities list on Nov 24 with a Nov 27 deadline for federal agencies. The NVD has no record for this one yet, so no CVE number or CVSS score is printed here. Anthropic's open source scanner is credited with finding it.</p>
+              <p class="do"><strong>Do</strong>Update to Drupal 11.4.13, 11.3.22 or 10.6.22 today. End-of-life branches get no fix, so move them. Also make settings.php read-only for the web server and block the installer path, which Drupal says closes some of the attack routes.</p>
+              <div class="sources">Sources: <a href="https://www.drupal.org/sa-core-2026-018">Drupal advisory SA-CORE-2026-018</a> &middot; <a href="https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/">SecurityWeek</a> &middot; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">CVSS 7.1 (v4.0)</span><span class="tag mono">CVE-2026-132224</span><span class="tag">Optimizely</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132224">Optimizely's signup flow let attackers plant code in the script your site loads</a></h3>
+              <p>A flaw in how Optimizely Web Experimentation handled account signup could leave attacker-controlled code in the Project JavaScript field of assets served from cdn.optimizely.com. Any site that loads that script runs whatever is in it. NVD says versions before 2026-11-17 are affected, and CISA added it to its exploited list on Nov 24. The fix is on the vendor side, so there is no package to update.</p>
+              <p class="do"><strong>Do</strong>If your pages load an Optimizely snippet, open your project's JavaScript and look for code you did not write, and review any Optimizely accounts created recently.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132224">NVD</a> &middot; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 8.7 (v4.0)</span><span class="tag mono">CVE-2026-82981</span><span class="tag">WHMCS</span><span class="tag">PHP</span><span class="tag">No attacks reported</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html">WHMCS shopping cart bug lets strangers read customer data</a></h3>
+              <p>WHMCS is the billing system many hosting companies run. A SQL injection in its shopping cart lets anyone who can load the cart read client records and admin password hashes, with no login. Two more flaws, including CVE-2026-82979 (7.1, v4.0), need a logged-in client. WHMCS has not reported attacks. Self-hosted installs must update themselves; WHMCS Cloud updates automatically.</p>
+              <p class="do"><strong>Do</strong>Update to WHMCS 9.0.10, 8.13.8 or 9.1.2. Installs on 8.0 to 8.12 have no fix and need to upgrade to a supported release.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html">The Hacker News</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82981">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.4 (v4.0)</span><span class="tag mono">CVE-2026-129393</span><span class="tag">Joomla</span></div>
+              <h3><a href="https://developer.joomla.org/security-centre/">Joomla fixes a remote code execution bug in media fields</a></h3>
+              <p>Joomla core versions 4.0.0 to 5.4.10 and 6.0.0 to 6.2.0 let crafted media field parameters change the form definition and run code. Joomla's Nov 24 release is 5.4.11 and 6.2.1; The advisory text was not readable at build time and NVD's entry is still deferred, so confirm in the Joomla security centre that those versions cover this bug.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag wp">WordPress</span><span class="tag high">Malware</span></div>
+              <h3><a href="https://www.wordfence.com/blog/2026/11/machine-generated-fake-plugin-turns-wordpress-sites-into-javascript-delivery-points/">A fake plugin with machine-made names turns sites into script delivery points</a></h3>
+              <p>Wordfence analyzed a campaign that installs a fake plugin whose titles, folders, functions and REST namespaces are all generated from a prefix, a tech word and a suffix, such as "trijavascriptly" and "ultravueal". This summary comes from Wordfence's feed excerpt, not the full post. Look for plugins you never installed.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag">Nothing new today</span><span class="tag mono">CVE-2026-119618</span><span class="tag">Apache httpd</span></div>
+              <h3><a href="https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/">No new Node.js, React or Apache advisories today</a></h3>
+              <p>The Node.js, React and Next.js feeds had nothing new. The open item is still Apache HTTP Server 2.4.55 through 2.4.70, where a race condition in mod_http2 can allow remote code execution; it is fixed in 2.4.71 (Nov 11), and servers that only serve HTTP/1.1 are not affected. Update if you have not.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">GitHub Actions</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html">Pinning a GitHub Action to a SHA does not prove who wrote it</a></h3>
+              <p>The Hacker News, in a piece promoting a webinar, says attackers used forks to get code that looks like it came from GitHub's official checkout action into pinned workflows. It names the March 2026 Trivy hijack and the May actions-cool/issues-helper attack. A SHA can be a commit from a fork. Check that each pinned SHA exists in the action's own repository, not just that it is pinned.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag high">AI-driven attacks</span><span class="tag">Web shells</span></div>
+              <h3><a href="https://unit42.paloaltonetworks.com/autonomous-ai-agent-threat-campaigns/">Unit 42: in 10+ AI-agent campaigns, the way in was always a vulnerable web app</a></h3>
+              <p>Palo Alto's Unit 42 tracked more than 10 campaigns between July and September 2026 where attackers used autonomous AI agents. Every one started with a web shell on a vulnerable web application. The agents ran hundreds of commands in minutes but left obvious marks, such as structured output and reasoning comments inside shell scripts. This is the vendor's own research.</p>
+            </div>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 10.0 (v3.1)</span><span class="tag mono">CVE-2026-59726</span><span class="tag">npm</span><span class="tag">MCP</span></div>
+              <h3><a href="https://github.com/advisories/GHSA-c4hm-4h84-2cf3">ruflo's default Docker setup exposes an MCP bridge with no login</a></h3>
+              <p>Ruflo, a harness for Claude Code and Codex, exposed its MCP bridge endpoints in the default docker-compose setup without authentication. An outsider could run terminal commands in the container, read provider API keys and tamper with its stored learning data.</p>
+              <p class="do"><strong>Do</strong>Update ruflo to 3.16.3 or later, and rotate any API keys it held if the bridge was reachable from outside.</p>
+              <div class="sources">Sources: <a href="https://github.com/advisories/GHSA-c4hm-4h84-2cf3">GitHub advisory</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59726">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">AI-assisted attack</span></div>
+              <h3><a href="https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/">GreyNoise: AI tooling used against Check Point management servers</a></h3>
+              <p>GreyNoise says one actor used agentic tools to find and exploit targets across at least 22 organizations since early October, with hands-on activity too. It is a security appliance story, but the same speed applies to any exposed web service.</p>
+            </div>
+            <div class="brief wide">
+              <div class="tags"><span class="tag">Worth reading</span><span class="tag">Linux</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/">Shirudo: OpenAI and Cisco's open source tool for blocking exploits before you patch</a></h3>
+              <p>Shirudo uses Linux eBPF to load temporary "shields" that block a vulnerable code path without restarting services. AI agents can help write and test shields, but a human approves deployment. It is a stopgap while you roll out patches, not a replacement for them.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Drupal to 11.4.13, 11.3.22 or 10.6.22, and lock down settings.php and the installer.</li>
+            <li>Update WHMCS to 9.0.10, 8.13.8 or 9.1.2 if you run it self-hosted.</li>
+            <li>Check Joomla sites against the security centre and move to 5.4.11 or 6.2.1.</li>
+            <li>Review any Optimizely project JavaScript for code you did not write.</li>
+            <li>Confirm Apache httpd is on 2.4.71 or later if HTTP/2 is on.</li>
+            <li>Update ruflo to 3.16.3 and rotate keys if its bridge was exposed.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132224">CVE-2026-132224</a> <span class="kev-yes">KEV 11-24</span><span class="meta">Optimizely Web Experimentation before 2026-11-17 · 7.1 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59726">CVE-2026-59726</a><span class="meta">ruflo before 3.16.3 · 10.0 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129393">CVE-2026-129393</a><span class="meta">Joomla 4.0.0-5.4.10, 6.0.0-6.2.0 · 9.4 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82981">CVE-2026-82981</a><span class="meta">WHMCS shopping cart · 8.7 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119618">CVE-2026-119618</a><span class="meta">Apache httpd 2.4.55-2.4.70 · 8.1 v3.1</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 25, 2026 04:45 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 38 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>

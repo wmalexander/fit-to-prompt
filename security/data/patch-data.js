@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-24"
+        lastUpdated: "2026-11-25"
     },
     issues: [
+        {
+            date: "2026-11-25",
+            issueNumber: 22,
+            title: "Drupal's installer bug is being used to take over sites",
+            summary: "CISA says attackers are exploiting a Drupal core installer flaw fixed in 11.4.13, 11.3.22 and 10.6.22. Also a login-free WHMCS SQL injection, a Joomla remote code execution fix, and Unit 42 on AI-driven attackers that start with web shells.",
+            url: "https://fittoprompt.com/security/issues/2026-11-25.html",
+            pressure: "high",
+            itemCount: 11
+        },
         {
             date: "2026-11-24",
             issueNumber: 21,
