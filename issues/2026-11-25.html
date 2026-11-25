@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 25, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 25, 2026. Anthropic shares fall below the IPO price, Yale's Sonnenfeld on Nvidia's board risk, Jensen Huang's all-hands apology, a benchmark showing AI agents stumble on everyday tasks, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 155">
+  <meta property="og:description" content="Daily AI news roundup - November 25, 2026. Anthropic shares fall below the IPO price, Yale's Sonnenfeld on Nvidia's board risk, Jensen Huang's all-hands apology, a benchmark showing AI agents stumble on everyday tasks, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Wednesday, November 25, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 155</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+
+
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; Markets &middot; IPOs</div>
+<a href="https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2305298275.jpg?w=594" alt="" class="w-full aspect-video object-cover mb-3">
+<h2 class="headline-lead mb-3">Anthropic Shares Fall Below IPO Price, a Worrying Sign for AI Startups</h2>
+</a>
+<p class="byline mb-3">TechCrunch &middot; Nov 24</p>
+<div class="newspaper-body">
+<p>Anthropic&rsquo;s stock dropped below its $83 IPO price on Tuesday, trading as low as $76 by midday, down nearly 12% from Monday&rsquo;s close. The slide comes less than a week after the shares debuted on Nasdaq at $111.50, and observers say the stock is being watched as a barometer for how public investors value the whole sector.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI &middot; Chips &middot; Governance</div>
+<a href="https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/" class="story-link">
+<h3 class="headline-feature mb-2">Yale&rsquo;s Sonnenfeld: Nvidia Is a &lsquo;Detriment&rsquo; to US Industrial Might, Not a Champion</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The Yale business academic argues investors are celebrating a mistake in Jensen Huang&rsquo;s return, and that the directors who went along face &ldquo;historic&rdquo; personal liability as five lawsuits pile up in Northern California.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-25-cartoon.png" alt="A small robot in a party hat holds a balloon labeled IPO that has sunk close to the floor while three tired traders in suits stare up at a ticker board with a downward arrow" class="w-full object-contain mb-2" style="max-height:520px;">
+<p class="byline mt-1">The robot, holding the balloon</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Acronym Quiz</div>
+<div class="aq26-wrap">
+<style>
+.aq26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.aq26-q{margin-bottom:0.6rem;font-size:0.75rem;line-height:1.35}
+.aq26-q p{margin:0 0 0.2rem}
+.aq26-q label{display:block;cursor:pointer;padding:1px 0;color:#374151}
+.aq26-q label input{margin-right:0.4rem}
+.aq26-q.ok{background:#ecfdf5}
+.aq26-q.no{background:#fef2f2}
+.aq26-wrap button{background:#1a1a1a;color:#f8f8f8;border:none;padding:0.4rem 1rem;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;margin-top:0.4rem}
+.aq26-wrap button:hover{background:#8B0000}
+.aq26-msg{font-size:0.75rem;color:#374151;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<p style="font-size:0.72rem;color:#374151;margin:0 0 0.6rem">Pick what each acronym from today&rsquo;s issue stands for.</p>
+<div id="aq26-form">
+<div class="aq26-q"><p><strong>1. IPO</strong></p><label><input type="radio" name="aq26-0" value="0"> Initial Public Offering</label><label><input type="radio" name="aq26-0" value="1"> Internal Price Option</label><label><input type="radio" name="aq26-0" value="2"> Investor Profit Order</label></div>
+<div class="aq26-q"><p><strong>2. HBM</strong></p><label><input type="radio" name="aq26-1" value="0"> High-Bit Matrix</label><label><input type="radio" name="aq26-1" value="1"> High-Bandwidth Memory</label><label><input type="radio" name="aq26-1" value="2"> Hybrid Binary Module</label></div>
+<div class="aq26-q"><p><strong>3. TEE</strong></p><label><input type="radio" name="aq26-2" value="0"> Token Embedding Encoder</label><label><input type="radio" name="aq26-2" value="1"> Total Encryption Engine</label><label><input type="radio" name="aq26-2" value="2"> Trusted Execution Environment</label></div>
+<div class="aq26-q"><p><strong>4. SEC</strong></p><label><input type="radio" name="aq26-3" value="0"> Securities and Exchange Commission</label><label><input type="radio" name="aq26-3" value="1"> Senate Ethics Committee</label><label><input type="radio" name="aq26-3" value="2"> Standard Export Control</label></div>
+<div class="aq26-q"><p><strong>5. CUDA</strong></p><label><input type="radio" name="aq26-4" value="0"> Central Unified Data Array</label><label><input type="radio" name="aq26-4" value="1"> Compute Unified Device Architecture</label><label><input type="radio" name="aq26-4" value="2"> Cloud Unified Deep Accelerator</label></div>
+<div class="aq26-q"><p><strong>6. GPU</strong></p><label><input type="radio" name="aq26-5" value="0"> General Purpose Utility</label><label><input type="radio" name="aq26-5" value="1"> Gigabit Processing Unit</label><label><input type="radio" name="aq26-5" value="2"> Graphics Processing Unit</label></div>
+</div>
+<button type="button" id="aq26-submit">Submit</button>
+<div class="aq26-msg" id="aq26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var ans=[0, 1, 2, 0, 1, 2],qs=document.querySelectorAll("#aq26-form .aq26-q");
+document.getElementById("aq26-submit").addEventListener("click",function(){
+  var good=0,answered=0;
+  qs.forEach(function(q,i){var sel=q.querySelector("input:checked");q.className="aq26-q";if(!sel)return;answered++;if(parseInt(sel.value,10)===ans[i]){good++;q.className="aq26-q ok";}else{q.className="aq26-q no";}});
+  document.getElementById("aq26-msg").textContent=answered<ans.length?good+" of "+ans.length+" correct so far. Answer all "+ans.length+" to finish.":(good===ans.length?"Perfect score. Well done.":good+" of "+ans.length+" correct.");
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-span-2">
+<div class="kicker">AI &middot; Chips &middot; Leadership</div>
+<a href="https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/" class="story-link">
+<h3 class="headline-feature mb-2">In All-Hands Meeting, Jensen Huang Thanks White House and Says He&rsquo;s in Therapy</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Huang struck a remorseful tone with staff, telling them &ldquo;I hurt all of you,&rdquo; and said he is grateful for a second chance. He also thanked the administration for quick access to intelligence that helped the board judge the risks of reinstating him as low.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Washington</div>
+<a href="https://techcrunch.com/2026/11/24/trump-reportedly-says-pardoning-jensen-huang-is-an-option-but-that-he-doesnt-think-it-will-be-necessary/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2297774940.jpg?resize=1200,832" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Trump Reportedly Says Pardoning Jensen Huang Is &lsquo;an Option&rsquo;</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Trump told the New York Post a pardon is &ldquo;always an option&rdquo; but that he does not think it will be necessary.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Management</div>
+<a href="https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2192215566.jpg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Jensen Huang Still Thinks a Succession Plan Creates Unnecessary Hierarchy</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">It is a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.</p>
+</div>
+<div class="story-span-2">
+<div class="kicker">AI &middot; Agents &middot; Research</div>
+<a href="https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/" class="story-link">
+<h3 class="headline-feature mb-2">Even the Best AI Agents Struggle With Everyday Life</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A new benchmark called ShellBench found even the most advanced models failed more than a third of everyday tasks, and 15.7% of all attempts failed at least one safety requirement.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Models &middot; Google</div>
+<a href="https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/" class="story-link">
+<img src="https://latent.space/og/card/post/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/cbe347eb1fb1c" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Gemini 4 Neon Marks GDM&rsquo;s Full Return as a Frontier Lab</h3>
+</a>
+<p class="byline mb-2">Latent Space &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Neon beats Astra and Fable on LiveBench and cuts one TypeScript-to-Rust benchmark runtime by 48.6%.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; Korea</div>
+<a href="https://fortune.com/2026/11/25/rebellions-ceo-samsung-sk-hynix-soveriegn-ai-nvidia/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/INFA_Sunghyun-Park_Rebellions_Horizontal.jpg?resize=1200,675" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Backed by Samsung, SK Hynix and the Korean Government, Rebellions Wants to Prove Sovereign AI Pays Off</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 25</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The $2.3 billion startup targets running AI models cheaply rather than training them, as part of a wave of challengers to Nvidia.</p>
+</div>
+<div class="story-span-2">
+<div class="kicker">AI &middot; Retail &middot; Agents</div>
+<a href="https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" class="story-link">
+<h3 class="headline-feature mb-2">Walmart Teams Up With Meta to Bring Black Friday Deals to AI Agent Muse</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Shoppers can ask Muse to find and compare Walmart deals, with spending limits and approval-before-purchase options. Walmart is leaning in while Amazon works to stop third-party agents from buying for customers.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Privacy &middot; Startups</div>
+<a href="https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/01-maple-hero-chargebacks-photo-16x9-1.png?resize=1200,675" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Maple Raises $5.3M to Build AI Products That Protect Your Data, Even From Itself</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Its encrypted architecture is designed so even the company cannot see users&rsquo; private data.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Security &middot; Shipping</div>
+<a href="https://techcrunch.com/2026/11/24/dozens-of-oil-and-shipping-tankers-hacked-in-recent-weeks-per-report/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/oil-tanker-1244308661.jpg?resize=1200,800" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Dozens of Oil and Shipping Tankers Hacked in Recent Weeks, Per Report</h3>
+</a>
+<p class="byline mb-2">TechCrunch &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Iran is the chief suspect behind the cyberattacks on oil and chemical vessels.</p>
+</div>
+<div class="story-span-2">
+<div class="kicker">Developer Tools &middot; From Anthropic</div>
+<a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.332" class="story-link">
+<h3 class="headline-feature mb-2">Claude Code v2.1.332 Adds Skills From MCP Servers</h3>
+</a>
+<p class="byline mb-2">GitHub &middot; Nov 25</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The release adds skills from MCP servers (beta), a PreSkillShellCommand hook event that can refuse a skill&rsquo;s inline shell commands, and a fix so claude auth login no longer reports success when a login could not be saved.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Research &middot; Models</div>
+<a href="https://greydanus.github.io/2026/11/12/pengpt/" class="story-link">
+<img src="https://greydanus.github.io/assets/pengpt/thumbnail.png" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">PenGPT: A Generative Transformer for Handwriting and Sketches</h3>
+</a>
+<p class="byline mb-2">Natural Intelligence &middot; Nov 12</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A 6M-parameter model writes and a 54M-parameter model sketches from text. The author says the effort was 80% data, 15% speed and 5% architecture.</p>
+</div>
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf">OpenAI Math Preprint: The Matrix Multiplication Exponent Is Nine Fourths</a>
+<div class="wire-source">GitHub &middot; Nov 24</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-25/malaysia-tightens-controls-amid-us-ai-chip-curbs-video">Malaysia Tightens Controls Amid US AI Chip Curbs</a>
+<div class="wire-source">Bloomberg &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-25/nvidia-still-faces-key-man-risk-in-huang-professor">Nvidia Still Faces Key-Man Risk in Huang, Professor Says</a>
+<div class="wire-source">Bloomberg &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-25/alibaba-in-talks-for-potential-yuan-dollar-bond-sale-next-year">Alibaba in Talks for Potential Yuan, Dollar Bond Sale Next Year</a>
+<div class="wire-source">Bloomberg &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-25/huawei-found-guilty-of-us-charges-in-landmark-case-video">Huawei Found Guilty of US Charges in Landmark Case</a>
+<div class="wire-source">Bloomberg &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-25/us-criticizes-australia-social-media-law-as-harming-free-speech">US Criticizes Australia Social Media Law as Harming Free Speech</a>
+<div class="wire-source">Bloomberg &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-25/ai-chip-boom-to-see-won-build-on-best-year-in-almost-a-decade">AI Chip Boom to See Won Build on Best Year in Almost a Decade</a>
+<div class="wire-source">Bloomberg &middot; Nov 25</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Anthropic priced its IPO at $83, debuted on Nasdaq at $111.50, and by midday Tuesday was trading as low as $76, down nearly 12% from Monday&rsquo;s close. That is less than a week from first trade to below the offer price, and TechCrunch notes that the AI industry has been treating the stock as a barometer for how public investors value the whole sector. Nvidia fell more than 7% the same day, giving back part of the 30%-plus jump it posted Monday on Jensen Huang&rsquo;s reinstatement. Two of the biggest AI stories of the month are now trading in the same direction, and the rest of today&rsquo;s issue explains why that is uncomfortable.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <p><em>A note on sources: Bloomberg blocked automated access when this issue was built, so its six items are summarized from published headlines only. The OpenAI math preprint and the Claude Code release page were summarized from their titles and release notes.</em></p>
+
+        <h4 class="digest-theme">Nvidia After the Comeback</h4>
+        <ul class="digest-bullets">
+          <li><strong>The legal bill is arriving.</strong> Yale&rsquo;s Jeffrey Sonnenfeld says the directors who brought Huang back face a &ldquo;historic level of individual liability.&rdquo; TechCrunch counts five suits, all filed in Northern California: a class action, a shareholder derivative suit alleging the board ignored red flags about Alice Huang, and three more on November 18. Sonnenfeld predicts about 30 eventually. Nvidia is also juggling a Justice Department antitrust investigation, a reported SEC probe, a possible FBI review and a California subpoena.</li>
+          <li><strong>A pardon is &ldquo;an option.&rdquo;</strong> Trump told the New York Post that pardoning Huang is &ldquo;always an option, I guess, but I don&rsquo;t think it&rsquo;ll be necessary.&rdquo; Huang is scheduled to testify at a public Senate Banking Committee hearing next week, and Trump said he wants him to &ldquo;just tell the truth.&rdquo;</li>
+          <li><strong>The all-hands was an apology tour.</strong> CNBC reported Huang told staff &ldquo;I hurt all of you&rdquo; and that he is in therapy. He said the code of conduct, which he largely devised, still applies, but that violating it &ldquo;does not mean, the moment you violate a code of conduct, we walk you out the door,&rdquo; as Wired reported it. He also thanked the administration for quick access to intelligence that the Wall Street Journal says helped the board judge the national security risk of reinstating him as low.</li>
+          <li><strong>No succession plan, on purpose.</strong> Huang reportedly told staff a plan would create unnecessary hierarchy. Nvidia has five executive officers and Huang says he has about 60 direct reports. CFO Colette Kress served as interim CEO for 12 days, which is the only live test of the alternative.</li>
+        </ul>
+
+        <h4 class="digest-theme">Agents, Privacy and Retail</h4>
+        <ul class="digest-bullets">
+          <li><strong>Agents fail more often than the marketing implies.</strong> ShellBench, built with researchers from the OpenClaw Foundation, Hugging Face, Red Hat and UC Berkeley and drawing on more than 10 million anonymized agent interactions, found top models from OpenAI, Anthropic and Meta failed more than a third of the time. Across all models, 15.7% of attempts broke at least one safety requirement. The top scorer, OpenAI&rsquo;s GPT-6 Astra, got all three runs of the same task right less than half the time. Agents failed to account for a child&rsquo;s school pickup 79.5% of the time and failed to withhold a sensitive bank upload token in 18.6% of attempts on one task.</li>
+          <li><strong>Walmart is letting Meta&rsquo;s Muse shop for you.</strong> Customers sign in to Walmart inside Muse and the agent finds, compares and builds a cart, with spending limits and approval-before-purchase options. Muse does not see shopping history. The connection runs through Walmart&rsquo;s Agent Gateway, launched in October and planned to open to more AI platforms, while Amazon has taken steps to stop third-party agents from buying for customers.</li>
+          <li><strong>Maple&rsquo;s pitch is verifiability, not trust.</strong> The startup closed a $5.3 million seed round led by Epic Ventures and runs its AI in trusted execution environments with open-source code, so users can check what runs on its servers. It launched a desktop agent called Maple Work and plans a cloud agent next and a Series A in the first half of 2027.</li>
+        </ul>
+
+        <h4 class="digest-theme">Chips, Models and Research</h4>
+        <ul class="digest-bullets">
+          <li><strong>Korea&rsquo;s one-champion strategy.</strong> Fortune reports Rebellions, valued at $2.3 billion, is backed by both Samsung and SK Hynix, with SK Telecom and KT asked to become customers. A $400 million round in March was co-led by the Korea National Growth Fund. CEO Sunghyun Park says that backing makes it &ldquo;more powerful compared to any other player in the United States,&rdquo; though shelved data center IPOs will test the confidence.</li>
+          <li><strong>Gemini 4 Neon.</strong> Latent Space says Neon beats Astra and Fable on LiveBench and cut one TypeScript-to-Rust benchmark runtime by 48.6%, and that sentiment about Google DeepMind has reversed from three months ago. The same roundup relays an unconfirmed claim of a VP vs. VNP proof posted by Anthropic and a counter-release from OpenAI, with the caveat that neither lab announced a model.</li>
+          <li><strong>PenGPT.</strong> A 6M-parameter model writes print and cursive in a new person&rsquo;s hand after seeing a few of their words, and a 54M-parameter model sketches from text. The data was 495,590 words from 1,255 writers and 477,670 sketches. The author says the post was written by Claude and that he will rewrite it himself.</li>
+          <li><strong>Hacked tankers.</strong> The Wall Street Journal reports U.S. officials suspect Iranian hackers in as many as 50 attacks on oil, gas and chemical ships, possibly through a bug dubbed FortiBleed in Fortinet routers that an FBI and Coast Guard alert flagged in September.</li>
+          <li><strong>Developer tools.</strong> Claude Code v2.1.332 adds skills from MCP servers (beta) and a hook event that can refuse a skill&rsquo;s inline shell commands.</li>
+          <li><strong>On the wire.</strong> Bloomberg headlines cover Malaysia tightening controls amid U.S. AI chip curbs, key-man risk at Nvidia, Alibaba exploring a yuan and dollar bond sale, a guilty verdict for Huawei on U.S. charges, a U.S. critique of Australia&rsquo;s social media law, and a strong year for the won on the AI chip boom. OpenAI also posted a preprint titled &ldquo;The Matrix Multiplication Exponent Is Nine Fourths.&rdquo;</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>Sonnenfeld ties the day together in a way the other stories only imply. He argues Anthropic&rsquo;s sinking shares reflect a growing view that China&rsquo;s open source models are in part copies of top U.S. labs&rsquo; work, made with high-end Nvidia chips, and he notes Nvidia has denied that its most advanced chips were smuggled. Whether or not you accept his causal story, the market data he cites lines up: Nvidia up more than 30% Monday, down more than 7% Tuesday, and Anthropic below its offer price. Investors seem to be pricing the same unresolved risk from two directions.</p>
+
+        <p>The ShellBench result is the quiet counterweight. The industry is selling personal agents to millions of people, and Meta says more than 10 million set up Muse within six weeks. The benchmark says the best models are inconsistent and sometimes unsafe in exactly the messy territory consumers hand them. Walmart&rsquo;s spending limits and approval gates, and Maple&rsquo;s verifiable privacy, read as admissions that the guardrails matter more than the model.</p>
+
+        <p>Huang&rsquo;s management story belongs here too. A company run with 60 direct reports and no succession plan worked until the founder&rsquo;s personal conduct became a market event. His own all-hands answer, that the code of conduct still applies but circumstances matter, is a policy position that will be tested in a Senate hearing next week.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>The AI trade has been priced as one story, with Nvidia as the supplier and a handful of labs as the customers. This week showed it can come apart. A leadership reversal moved the whole market up on Monday, and a lab&rsquo;s first week as a public company moved sentiment down on Tuesday. If the sector now trades on a few names, then governance and politics at those names matter as much as model quality.</p>
+          <p>Rebellions points to the longer arc. Korea is concentrating Samsung&rsquo;s foundries, SK Hynix&rsquo;s memory and state money behind one inference-focused chip company so it does not depend on Nvidia. Add the hacked tankers and the Malaysian chip controls, and AI infrastructure is now a national security question, not just a procurement one. The honest unknown is whether sovereign champions can beat an incumbent that, for now, is also fighting a pile of lawsuits.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Anthropic&rsquo;s stock.</strong> TechCrunch says continued weakness could pressure private AI valuations and other IPO plans. Watch whether the price recovers toward $83 or keeps sliding.</li>
+          <li><strong>Huang&rsquo;s Senate Banking testimony.</strong> It is scheduled for next week, with closed House Intelligence, Foreign Affairs and China Select Committee hearings to follow.</li>
+          <li><strong>The lawsuit count.</strong> Five suits are filed, and Sonnenfeld expects far more. Each new filing tests whether the board&rsquo;s reliance on government assurances holds up.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>

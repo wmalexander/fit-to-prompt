@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-24",
-        lastPuzzleType: "crossword",
-        puzzleHistory: ["cryptogram", "scramble", "crossword"]
+        lastUpdated: "2026-11-25",
+        lastPuzzleType: "acronym",
+        puzzleHistory: ["cryptogram", "scramble", "crossword", "acronym"]
     },
     issues: [
+        {
+            date: "2026-11-25",
+            volume: 1,
+            issueNumber: 155,
+            title: "Anthropic Shares Slip Below Their IPO Price as Huang's Nvidia Comeback Draws Fire",
+            description: "Daily AI news roundup - November 25, 2026. Anthropic shares fall below the IPO price, Yale's Sonnenfeld on Nvidia's board risk, Jensen Huang's all-hands apology, a benchmark showing AI agents stumble on everyday tasks, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-25.html",
+            storyCount: 20,
+            puzzleType: "acronym"
+        },
         {
             date: "2026-11-24",
             volume: 1,
