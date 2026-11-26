@@ -17,7 +17,7 @@ const PATCH_DATA = {
             summary: "Drupal says last week's installer patch left some sites open and attackers are using it, WP Rocket has a critical file-path bug fixed in 3.24.2, and the VirtueMart and ChronoForms Joomla extensions need updates.",
             url: "https://fittoprompt.com/security/issues/2026-11-26.html",
             pressure: "high",
-            itemCount: 12
+            itemCount: 10
         },
         {
             date: "2026-11-25",
