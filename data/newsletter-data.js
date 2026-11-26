@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-25",
-        lastPuzzleType: "acronym",
-        puzzleHistory: ["cryptogram", "scramble", "crossword", "acronym"]
+        lastUpdated: "2026-11-26",
+        lastPuzzleType: "wordsearch",
+        puzzleHistory: ["cryptogram", "scramble", "crossword", "acronym", "wordsearch"]
     },
     issues: [
+        {
+            date: "2026-11-26",
+            volume: 1,
+            issueNumber: 156,
+            title: "Google's Patent for Custom AI Video Feeds Paints a Bleak Picture of Entertainment's Future",
+            description: "Daily AI news roundup - November 26, 2026. Google's patent for AI video feeds starring you, how data and AI could finally tame airplane turbulence, SoftBank's credit risk topping 500 basis points, Xpeng's humanoid robot priced like a car, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-26.html",
+            storyCount: 19,
+            puzzleType: "wordsearch"
+        },
         {
             date: "2026-11-25",
             volume: 1,

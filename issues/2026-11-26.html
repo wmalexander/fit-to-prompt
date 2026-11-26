@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 26, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 26, 2026. Google's patent for AI video feeds starring you, how data and AI could finally tame airplane turbulence, SoftBank's credit risk topping 500 basis points, Xpeng's humanoid robot priced like a car, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 156">
+  <meta property="og:description" content="Daily AI news roundup - November 26, 2026. Google's patent for AI video feeds starring you, how data and AI could finally tame airplane turbulence, SoftBank's credit risk topping 500 basis points, Xpeng's humanoid robot priced like a car, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Thursday, November 26, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 156</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+
+
+
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; Entertainment &middot; Google</div>
+<a href="https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent" class="story-link">
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Screenshot-2026-11-25-at-11.34.07-AM.png?quality=90&strip=all&crop=2.859375%2C11.97652241473%2C93.788122558594%2C75.148782257541&w=1200" alt="" class="w-full aspect-video object-cover mb-3">
+<h2 class="headline-lead mb-3">Google&rsquo;s Patent for Custom AI Video Feeds Paints a Bleak Picture of Entertainment&rsquo;s Future</h2>
+</a>
+<p class="byline mb-3">The Verge &middot; Nov 25</p>
+<div class="newspaper-body">
+<p>A Google patent for a system called My Channel describes feeds of AI-generated videos and ads built from what the company knows about each user, down to digital avatars that make the viewer the lead character. The patent has been rejected, but The Verge notes Google could appeal or resubmit an amended version.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI &middot; Markets &middot; Japan</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/softbank-credit-risk-tops-500-basis-points-as-ai-worries-mount" class="story-link">
+<h3 class="headline-feature mb-2">SoftBank Credit Risk Tops 500 Basis Points as AI Worries Mount</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 26</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-26-cartoon.png" alt="A man in a striped robe sits in an armchair watching a TV that shows him as a caped astronaut, while a small robot butler with a bowl of popcorn holds a sign reading Rendering You" class="w-full object-contain mb-2" style="max-height:520px;">
+<p class="byline mt-1">The viewer, starring in his own feed</p>
+</div>
+<div class="story-item">
+<div class="section-label" style="margin-bottom:0.75rem;">Word Search</div>
+<div class="ws26-wrap">
+<style>
+.ws26-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.ws-row{display:flex}
+.ws-c{width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:600;cursor:pointer;user-select:none;border:1px solid transparent}
+.ws-c.sel{background:#fde68a}
+.ws-c.found{background:#8B0000;color:#fff}
+.ws26-list{list-style:none;padding:0;margin:0.6rem 0 0;display:flex;flex-wrap:wrap;gap:0.25rem 0.9rem;font-size:0.72rem;font-weight:600;letter-spacing:0.05em}
+.ws26-list li.done{text-decoration:line-through;color:#9ca3af}
+.ws26-msg{font-size:0.75rem;color:#374151;margin-top:0.5rem;min-height:1em;font-weight:600}
+</style>
+<p style="font-size:0.72rem;color:#374151;margin:0 0 0.6rem">Words from today&rsquo;s issue hide across, down and diagonally. Click the first and last letter of each word.</p>
+<div id="ws26-grid"><div class="ws-row"><span class="ws-c" data-r="0" data-c="0">E</span><span class="ws-c" data-r="0" data-c="1">J</span><span class="ws-c" data-r="0" data-c="2">J</span><span class="ws-c" data-r="0" data-c="3">F</span><span class="ws-c" data-r="0" data-c="4">R</span><span class="ws-c" data-r="0" data-c="5">D</span><span class="ws-c" data-r="0" data-c="6">X</span><span class="ws-c" data-r="0" data-c="7">E</span><span class="ws-c" data-r="0" data-c="8">B</span><span class="ws-c" data-r="0" data-c="9">P</span></div><div class="ws-row"><span class="ws-c" data-r="1" data-c="0">W</span><span class="ws-c" data-r="1" data-c="1">K</span><span class="ws-c" data-r="1" data-c="2">I</span><span class="ws-c" data-r="1" data-c="3">R</span><span class="ws-c" data-r="1" data-c="4">C</span><span class="ws-c" data-r="1" data-c="5">O</span><span class="ws-c" data-r="1" data-c="6">F</span><span class="ws-c" data-r="1" data-c="7">F</span><span class="ws-c" data-r="1" data-c="8">C</span><span class="ws-c" data-r="1" data-c="9">D</span></div><div class="ws-row"><span class="ws-c" data-r="2" data-c="0">T</span><span class="ws-c" data-r="2" data-c="1">U</span><span class="ws-c" data-r="2" data-c="2">R</span><span class="ws-c" data-r="2" data-c="3">B</span><span class="ws-c" data-r="2" data-c="4">U</span><span class="ws-c" data-r="2" data-c="5">L</span><span class="ws-c" data-r="2" data-c="6">E</span><span class="ws-c" data-r="2" data-c="7">N</span><span class="ws-c" data-r="2" data-c="8">C</span><span class="ws-c" data-r="2" data-c="9">E</span></div><div class="ws-row"><span class="ws-c" data-r="3" data-c="0">W</span><span class="ws-c" data-r="3" data-c="1">S</span><span class="ws-c" data-r="3" data-c="2">L</span><span class="ws-c" data-r="3" data-c="3">K</span><span class="ws-c" data-r="3" data-c="4">M</span><span class="ws-c" data-r="3" data-c="5">E</span><span class="ws-c" data-r="3" data-c="6">M</span><span class="ws-c" data-r="3" data-c="7">O</span><span class="ws-c" data-r="3" data-c="8">R</span><span class="ws-c" data-r="3" data-c="9">Y</span></div><div class="ws-row"><span class="ws-c" data-r="4" data-c="0">J</span><span class="ws-c" data-r="4" data-c="1">B</span><span class="ws-c" data-r="4" data-c="2">J</span><span class="ws-c" data-r="4" data-c="3">R</span><span class="ws-c" data-r="4" data-c="4">O</span><span class="ws-c" data-r="4" data-c="5">B</span><span class="ws-c" data-r="4" data-c="6">O</span><span class="ws-c" data-r="4" data-c="7">T</span><span class="ws-c" data-r="4" data-c="8">D</span><span class="ws-c" data-r="4" data-c="9">X</span></div><div class="ws-row"><span class="ws-c" data-r="5" data-c="0">R</span><span class="ws-c" data-r="5" data-c="1">P</span><span class="ws-c" data-r="5" data-c="2">T</span><span class="ws-c" data-r="5" data-c="3">E</span><span class="ws-c" data-r="5" data-c="4">S</span><span class="ws-c" data-r="5" data-c="5">P</span><span class="ws-c" data-r="5" data-c="6">A</span><span class="ws-c" data-r="5" data-c="7">C</span><span class="ws-c" data-r="5" data-c="8">E</span><span class="ws-c" data-r="5" data-c="9">X</span></div><div class="ws-row"><span class="ws-c" data-r="6" data-c="0">L</span><span class="ws-c" data-r="6" data-c="1">A</span><span class="ws-c" data-r="6" data-c="2">H</span><span class="ws-c" data-r="6" data-c="3">K</span><span class="ws-c" data-r="6" data-c="4">U</span><span class="ws-c" data-r="6" data-c="5">R</span><span class="ws-c" data-r="6" data-c="6">I</span><span class="ws-c" data-r="6" data-c="7">V</span><span class="ws-c" data-r="6" data-c="8">Y</span><span class="ws-c" data-r="6" data-c="9">X</span></div><div class="ws-row"><span class="ws-c" data-r="7" data-c="0">L</span><span class="ws-c" data-r="7" data-c="1">R</span><span class="ws-c" data-r="7" data-c="2">H</span><span class="ws-c" data-r="7" data-c="3">U</span><span class="ws-c" data-r="7" data-c="4">A</span><span class="ws-c" data-r="7" data-c="5">W</span><span class="ws-c" data-r="7" data-c="6">E</span><span class="ws-c" data-r="7" data-c="7">I</span><span class="ws-c" data-r="7" data-c="8">J</span><span class="ws-c" data-r="7" data-c="9">Y</span></div><div class="ws-row"><span class="ws-c" data-r="8" data-c="0">T</span><span class="ws-c" data-r="8" data-c="1">S</span><span class="ws-c" data-r="8" data-c="2">J</span><span class="ws-c" data-r="8" data-c="3">J</span><span class="ws-c" data-r="8" data-c="4">Z</span><span class="ws-c" data-r="8" data-c="5">F</span><span class="ws-c" data-r="8" data-c="6">L</span><span class="ws-c" data-r="8" data-c="7">S</span><span class="ws-c" data-r="8" data-c="8">M</span><span class="ws-c" data-r="8" data-c="9">P</span></div><div class="ws-row"><span class="ws-c" data-r="9" data-c="0">H</span><span class="ws-c" data-r="9" data-c="1">E</span><span class="ws-c" data-r="9" data-c="2">C</span><span class="ws-c" data-r="9" data-c="3">H</span><span class="ws-c" data-r="9" data-c="4">I</span><span class="ws-c" data-r="9" data-c="5">P</span><span class="ws-c" data-r="9" data-c="6">Z</span><span class="ws-c" data-r="9" data-c="7">I</span><span class="ws-c" data-r="9" data-c="8">U</span><span class="ws-c" data-r="9" data-c="9">G</span></div></div>
+<ul class="ws26-list" id="ws26-list"><li data-w="TURBULENCE">TURBULENCE</li><li data-w="HUAWEI">HUAWEI</li><li data-w="SPACEX">SPACEX</li><li data-w="ROBOT">ROBOT</li><li data-w="MEMORY">MEMORY</li><li data-w="PARSE">PARSE</li><li data-w="CHIP">CHIP</li></ul>
+<div class="ws26-msg" id="ws26-msg" aria-live="polite"></div>
+<script>
+(function(){
+var cells=document.querySelectorAll("#ws26-grid .ws-c"),first=null,words=["TURBULENCE", "HUAWEI", "SPACEX", "ROBOT", "MEMORY", "PARSE", "CHIP"],done=0;
+function at(r,c){return document.querySelector('#ws26-grid .ws-c[data-r="'+r+'"][data-c="'+c+'"]');}
+cells.forEach(function(el){el.addEventListener("click",function(){
+  if(!first){first=el;el.classList.add("sel");return;}
+  var r1=+first.dataset.r,c1=+first.dataset.c,r2=+el.dataset.r,c2=+el.dataset.c;
+  first.classList.remove("sel");first=null;
+  var dr=Math.sign(r2-r1),dc=Math.sign(c2-c1),n=Math.max(Math.abs(r2-r1),Math.abs(c2-c1))+1;
+  if(!(r1===r2||c1===c2||Math.abs(r2-r1)===Math.abs(c2-c1)))return;
+  var s="",path=[];
+  for(var i=0;i<n;i++){var e=at(r1+dr*i,c1+dc*i);s+=e.textContent;path.push(e);}
+  var rev=s.split("").reverse().join(""),w=words.indexOf(s)>-1?s:(words.indexOf(rev)>-1?rev:null);
+  if(!w)return;
+  var li=document.querySelector('#ws26-list li[data-w="'+w+'"]');
+  if(li.className==="done")return;
+  li.className="done";path.forEach(function(p){p.classList.add("found");});done++;
+  if(done===words.length)document.getElementById("ws26-msg").textContent="All "+words.length+" found. Well done.";
+  else document.getElementById("ws26-msg").textContent=done+" of "+words.length+" found.";
+});});
+})();
+</script>
+</div>
+</div>
+<div class="story-item">
+<div class="kicker">Science &middot; Machine Learning</div>
+<a href="https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/" class="story-link">
+<img src="https://media.wired.com/photos/6b0548d39ef0144d4a117a16/191:100/w_1280,c_limit/GettyImages-1291069581.jpg" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Airplane Turbulence Is Extremely Hard to Predict, but Maybe Not for Long</h3>
+</a>
+<p class="byline mb-2">Wired &middot; Nov 25</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Crowdsourced flight data and new machine learning methods are giving researchers a better shot at forecasting turbulence. A new $30 million National Science Foundation center will study it in air, fusion reactors and space.</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Open Source &middot; NVIDIA</div>
+<a href="https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin" class="story-link">
+<img src="https://cdn-uploads.huggingface.co/production/uploads/6365c3f398da81987e2753f2/zArpuP9uLsLz9luMW0K2g.png" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference</h3>
+</a>
+<p class="byline mb-2">Hugging Face &middot; NVIDIA &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">NVIDIA is open-sourcing three synthetic datasets, including 9.98M chart examples, and a fine-tuning recipe for its document-parsing model.</p>
+</div>
+<div class="story-item">
+<div class="kicker">Space &middot; Markets</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/musk-says-every-us-kid-to-get-two-spacex-shares-doubling-pledge" class="story-link">
+<h3 class="headline-feature mb-2">Musk Says Every US Kid to Get Two SpaceX Shares, Doubling Pledge</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 26</p>
+</div>
+<div class="story-span-2">
+<div class="kicker">AI &middot; Robotics &middot; China</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/xpeng-says-its-humanoid-robot-will-cost-the-same-as-an-ev" class="story-link">
+<h3 class="headline-feature mb-2">Xpeng Says Its Humanoid Robot Will Cost the Same as an EV</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 26</p>
+</div>
+<div class="story-item">
+<div class="kicker">AI &middot; Chips &middot; China</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/huawei-teases-next-gen-ai-memory-chip-to-take-on-samsung-hynix" class="story-link">
+<h3 class="headline-feature mb-2">Huawei Teases Next-Gen AI Memory Chip to Take On Samsung, Hynix</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 26</p>
+</div>
+<div class="story-wide">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/videos/2026-11-26/us-chip-curbs-stall-asia-data-center-financing-video">US Chip Curbs Stall Asia Data Center Financing</a>
+<div class="wire-source">Bloomberg &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/microdramas-rake-in-20-billion-as-world-gloms-on-to-quick-hits">Microdramas Rake In $20 Billion as World Gloms On to Quick Hits</a>
+<div class="wire-source">Bloomberg &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/apple-to-expand-india-retail-network-with-new-store-in-hyderabad">Apple to Expand India Retail Network With New Store in Hyderabad</a>
+<div class="wire-source">Bloomberg &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/N2kJEZbHmyE">Why It Took 13 Years to Make Grand Theft Auto VI</a>
+<div class="wire-source">Hard Fork &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/Iz3SmwKVKqk">How Jensen Huang &lsquo;Got Away With Everything&rsquo;</a>
+<div class="wire-source">Hard Fork &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/EENXn_J7eZo">Trump Was Warned About Jensen Huang. He Didn&rsquo;t Care.</a>
+<div class="wire-source">Hard Fork &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/m_5gel293hc">Welcome Back to the Low-Trust Internet</a>
+<div class="wire-source">The Ezra Klein Show &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/BWpsNrkt6Z4">I&rsquo;ve Never Seen a Drone Do This&hellip;</a>
+<div class="wire-source">Matt Wolfe &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/nMPyC3s4Q-0">They&rsquo;re Doing What in the Arctic?!</a>
+<div class="wire-source">Matthew Berman &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/ngZ1_I_RWS0">This Changed My Life&hellip;</a>
+<div class="wire-source">Matthew Berman &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/OVCciEedcUQ">The Secret Test: Let Claude Code Break Your App</a>
+<div class="wire-source">Leon van Zyl &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.youtube.com/shorts/9EHKb8mGjG4">Vibe Coding Isn&rsquo;t Enough. Stop Shipping Broken Apps</a>
+<div class="wire-source">Leon van Zyl &middot; YouTube Short &middot; Nov 25</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+      <div class="digest-body">
+        <p class="digest-hook">Twenty terabytes of data come off an airplane engine in a single hour of flying, according to the International Air Transport Association, and a few researchers now think the planes&rsquo; ordinary position broadcasts are enough to spot turbulence nobody can see. Google, meanwhile, filed a patent for a system that would use what it knows about you to generate an endless feed of AI videos in which you play the hero. One story is about using data to make a hard physical problem more predictable. The other is about using data to make entertainment more personal, and the difference in ambition says a lot about where AI effort is going.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <p><em>A note on sources: Bloomberg blocked automated access when this issue was built, so its seven items are summarized from published headlines only, and the nine YouTube Shorts are listed by title. The Verge, Wired and Hugging Face pieces were read in full.</em></p>
+
+        <h4 class="digest-theme">AI Gets Personal and Physical</h4>
+        <ul class="digest-bullets">
+          <li><strong>Google&rsquo;s &ldquo;My Channel.&rdquo;</strong> The patent was filed last May and published last week. It describes building prompts from a person&rsquo;s demographics and viewing history, plus device data such as IP address, GPS location and age, and from current news like sports scores. An LLM would turn those prompts into videos and ads generated on Google&rsquo;s servers, up to entire movies, and the system could link to other streaming services for more data. Its most unsettling feature, in The Verge&rsquo;s telling, is the use of photos, video and audio of a user to create an avatar that becomes &ldquo;the protagonist or lead character.&rdquo; The patent has been rejected, but Google could appeal or resubmit.</li>
+          <li><strong>Turbulence, with a data assist.</strong> Wired reports that more than 200 people were seriously injured on US airplanes in turbulence incidents between 2009 and 2023, per FAA data, and that climate change is making sudden clear-air turbulence worse. NCAR physicist Larry Cornman and an FAA air traffic controller found that the position, altitude and speed broadcasts aircraft already must send can reveal unexpected turbulence without new onboard hardware. In September the National Science Foundation announced a $30 million award to nine universities for a center called Tempest, which will study turbulence in air, fusion reactors and gas clouds in space.</li>
+        </ul>
+
+        <h4 class="digest-theme">Chips, Robots and Money</h4>
+        <ul class="digest-bullets">
+          <li><strong>SoftBank&rsquo;s credit risk.</strong> Bloomberg&rsquo;s headline says the cost of insuring SoftBank&rsquo;s debt topped 500 basis points as AI worries mount. The article itself was not accessible, so the drivers behind the move are not summarized here.</li>
+          <li><strong>Xpeng&rsquo;s humanoid.</strong> Bloomberg reports Xpeng says its humanoid robot will cost the same as an EV.</li>
+          <li><strong>Huawei&rsquo;s memory chip.</strong> Huawei teased a next-generation AI memory chip aimed at Samsung and SK Hynix, per Bloomberg. A related Bloomberg video says US chip curbs have stalled data center financing in Asia.</li>
+          <li><strong>On the wire.</strong> Musk says every US child will get two SpaceX shares, doubling an earlier pledge. Microdramas are reported to have earned $20 billion, and Apple plans a new store in Hyderabad.</li>
+        </ul>
+
+        <h4 class="digest-theme">Open Models and Research</h4>
+        <ul class="digest-bullets">
+          <li><strong>NVIDIA opens its parsing data.</strong> Alongside Nemotron 3.5 Parse, NVIDIA released Synthetic Charts V1 (9.98M examples), Synthetic Tables V1 (1M) and OCR Synthetic Multilingual v2 (7.9M), plus a fine-tuning recipe. In a controlled comparison, adding reinforcement learning after supervised fine-tuning cut looping outputs from 126 pages to 29, about 77% fewer, and raised the overall score from 66.24 to 71.38, with gains of 5.18 points on tables and 4.15 on charts. A companion speculator drafts up to 32 tokens ahead and averages about 14 accepted per step.</li>
+          <li><strong>Hard Fork, Ezra Klein and creators.</strong> The Shorts in The Wire include Hard Fork clips on Jensen Huang and Grand Theft Auto VI, an Ezra Klein Show clip on the low-trust internet, and Claude Code testing tips from Leon van Zyl.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The Wired and Verge stories are both about what happens when AI meets a flood of data, and they land in opposite places. Aviation has more data than it can use: 20 terabytes an hour per engine, plus public broadcasts, plus satellites. The hard part is turning it into a forecast, and the researchers are honest that it will never be perfect, because tiny changes in wind or temperature can alter the flow. Google&rsquo;s patent starts from the same raw material, data about people, and uses it to maximize attention rather than to reduce harm.</p>
+
+        <p>NVIDIA&rsquo;s Parse release is a quieter version of the same lesson. Its chart gains came from synthetic data with known answers, rendering variations and training the model to reverse them. That is the pattern behind most of today&rsquo;s progress: a verifiable target, a reward that checks it, and a lot of generated examples. Turbulence prediction and document parsing are both problems where you can check the answer, which is why they improve. A personalized entertainment feed has no such check, only engagement.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Wired quotes Michael Murillo of Michigan State saying turbulence &ldquo;has been a problem only human minds could work on; as of this year, that&rsquo;s no longer true,&rdquo; pointing to OpenAI&rsquo;s fall announcement that it had resolved the Navier-Stokes problem. Whether or not that claim holds up, it signals where scientists now expect help from AI: hard physics, with fusion energy tied to the same turbulence problem.</p>
+          <p>The consumer side looks different. A rejected patent is not a product, and The Verge itself says it may never ship. Still, the filing shows how companies think about the next feed: not recommending content made by others, but generating content made for you. The credit-market worry about SoftBank in the same day&rsquo;s headlines is a reminder that the money behind these bets is being watched more closely.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>Google&rsquo;s next patent move.</strong> The Verge says Google could appeal or resubmit an amended version of My Channel.</li>
+          <li><strong>The Tempest center.</strong> The $30 million NSF award is new, so early results on turbulence prediction are the thing to look for.</li>
+          <li><strong>SoftBank&rsquo;s credit spread.</strong> It crossed 500 basis points today, and whether it keeps widening will show how nervous lenders are about AI exposure.</li>
+        </ul>
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+</body>
+</html>
