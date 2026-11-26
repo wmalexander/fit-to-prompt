@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-25"
+        lastUpdated: "2026-11-26"
     },
     issues: [
+        {
+            date: "2026-11-26",
+            issueNumber: 23,
+            title: "Drupal's installer fix had a gap, and WP Rocket needs 3.24.2",
+            summary: "Drupal says last week's installer patch left some sites open and attackers are using it, WP Rocket has a critical file-path bug fixed in 3.24.2, and the VirtueMart and ChronoForms Joomla extensions need updates.",
+            url: "https://fittoprompt.com/security/issues/2026-11-26.html",
+            pressure: "high",
+            itemCount: 12
+        },
         {
             date: "2026-11-25",
             issueNumber: 22,

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drupal's installer fix had a gap, and WP Rocket needs 3.24.2 | Fit to Patch No. 23, November 26, 2026</title>
+  <meta name="description" content="Drupal says last week's installer patch left some sites open and attackers are using it, WP Rocket has a critical file-path bug fixed in 3.24.2, and two Joomla extensions need updates.">
+  <meta property="og:title" content="Fit to Patch No. 23: Drupal's installer fix had a gap, and WP Rocket needs 3.24.2">
+  <meta property="og:description" content="Drupal says last week's installer patch left some sites open and attackers are using it, WP Rocket has a critical file-path bug fixed in 3.24.2, and two Joomla extensions need updates.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-26.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Thursday, November 26, 2026</span>
+        <span>No. 23</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Drupal says last week's installer fix did not protect every site and attackers are already using the gap; update to 11.4.14, 11.3.23 or 10.6.23, then run the update hook.</li>
+            <li>WP Rocket, a very common WordPress speed plugin, has a critical file-path bug fixed in 3.24.2.</li>
+            <li>Two Joomla extensions, VirtueMart and ChronoForms, have critical bugs that let strangers upload or run code, and VirtueMart's is reported as exploited.</li>
+            <li>The Hex.pm package registry was broken into, so Elixir and Erlang developers should reset their passwords and two-factor setup.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">Site takeover</span><span class="tag mono">CVE-2026-136716</span><span class="tag mono">CVE-2026-132165</span><span class="tag">Drupal</span></div>
+              <h3><a href="https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/">Last week's Drupal installer fix left a gap, and attackers are using it</a></h3>
+              <p>Drupal core includes an installer that sets up new sites. The Nov 18 update closed one way to abuse it (CVE-2026-132165, on CISA's exploited list since Nov 24). On Nov 25 Drupal said some sites in unusual or incomplete install states, including production sites, can still be taken over, and that this second bug (CVE-2026-136716) is also being exploited. The UI does not show whether a site is in the affected state. Drupal rates it 21 out of 25 on its own scale. NVD has no CVSS score for either bug yet. Sites whose installer was already locked down are not affected.</p>
+              <p class="do"><strong>Do</strong>Update to Drupal 11.4.14, 11.3.23 or 10.6.23, and on production sites run the update hook after upgrading. Check logs for installer requests and for new admin accounts, since a site that was already hit may no longer look vulnerable.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/">SecurityWeek</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/">BleepingComputer</a> &middot; <a href="https://www.stepsecurity.io/blog/fail2install-cve-2026-132165">StepSecurity</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-136716">NVD CVE-2026-136716</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132165">NVD CVE-2026-132165</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-125812</span><span class="tag wp">WordPress</span><span class="tag">WP Rocket</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125812">WP Rocket before 3.24.2 has a critical path traversal bug</a></h3>
+              <p>A path traversal flaw lets a request reach files outside the folder the plugin means to use. NVD scores it 9.8 and lists every version before 3.24.2 as affected. The record gives no detail on how it is triggered, and I found no report of attacks, so treat this as a patch-soon item for the most widely installed paid caching plugin.</p>
+              <p class="do"><strong>Do</strong>Update WP Rocket to 3.24.2 or later on every site that runs it.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125812">NVD</a> (the only public source found at build time)</div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">Reported exploited</span><span class="tag crit">CVSS 9.2 and 9.5 (v4.0)</span><span class="tag mono">CVE-2026-133335</span><span class="tag mono">CVE-2026-133336</span><span class="tag">Joomla</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133335">Two Joomla extensions let strangers run or upload code</a></h3>
+              <p>VirtueMart 4.0.0 to 4.8.7 includes any PHP file a visitor names, which can lead to code execution depending on server setup; its CVE record says it has been exploited in the wild. ChronoForms 8.0.0 to 8.0.53 checks the wrong filename on uploads, so an unauthenticated visitor can upload a dangerous file type.</p>
+              <p class="do"><strong>Do</strong>Update VirtueMart to 4.8.8 and ChronoForms to 8.0.54, then look for PHP files you did not add in upload and cache folders.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133335">NVD CVE-2026-133335</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133336">NVD CVE-2026-133336</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag high">Exploited</span><span class="tag mono">CVE-2026-109618</span><span class="tag mono">CVE-2026-109619</span><span class="tag">PHP</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/">The PHP2Shell chain now has a Palo Alto confirmation</a></h3>
+              <p>We covered the two critical PHP memory bugs (both 9.2, v4.0, on CISA's list since Oct 26) earlier this month. Today Palo Alto Networks confirmed attackers chain them with a Linux kernel flaw named Fragnesia against firewalls whose management page faces the internet. If your servers run PHP, confirm your build includes the fixes for both CVEs. Nothing else new from the WordPress feeds today.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag crit">CVSS 10.0 (v4.0)</span><span class="tag mono">CVE-2026-78114</span><span class="tag">Apache JSPWiki</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-78114">Apache JSPWiki: login keeps the same session ID, fixed in 3.0.1 and 2.12.6</a></h3>
+              <p>JSPWiki 2.10 through 3.0.0 did not issue a new session ID when someone logged in, so an attacker who could plant a known ID in a victim's browser could reuse it afterward. NVD shows a 10.0 score from the reporting CNA, which looks high for this kind of bug, so read the advisory before you rank it. Upgrade to 3.0.1 or 2.12.6. The Node.js, React and Next.js feeds had nothing new today.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">Exploited</span><span class="tag crit">CVSS 10.0 (v4.0)</span><span class="tag mono">CVE-2026-129514</span><span class="tag">Hex.pm</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html">Attackers ran commands on six Hex.pm registry servers</a></h3>
+              <p>Hex.pm is the package registry for Elixir and Erlang. A bug in how it read one kind of request body, present since 2016, let an unauthenticated attacker run commands on six production servers on Nov 23. The maintainers patched within about 15 minutes and found no sign any package was changed, but they could not rule out that account emails, password hashes and two-factor secrets were read. Everyone was logged out. The registry signing key has not been replaced yet.</p>
+              <p class="do"><strong>Do</strong>If you have a hex.pm account, change the password, set up two-factor again, and log back in with <code>mix hex.user auth</code> or <code>rebar3 hex user auth</code>. Fetch only from repo.hex.pm until the new client ships.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html">The Hacker News</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129514">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">GitHub</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/">1Password: one hacked GitHub account led to stolen customer records</a></h3>
+              <p>An attacker used an employee's GitHub account to push code into backend services that pulled customer account records. 1Password says vaults and their keys were not touched, and that only a small number of users were affected and have been told directly. The lesson for any team is how much one developer account on GitHub can reach.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Exploited</span><span class="tag">GeoServer</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html">GeoServer: two new bugs under attack, update to 3.0.2, 2.28.6 or 2.27.7</a></h3>
+              <p>watchTowr saw attackers probe GeoServer on Nov 25 using an unauthenticated file read and an authorization bypass, and researchers say they can be chained into code execution. CVE numbers are left out because NVD had no record for them at build time. Update the gs-wfs-core and gs-ows packages if you run GeoServer.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <div class="brief">
+              <div class="tags"><span class="tag high">AI-driven attacks</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/">Italy and Switzerland warn of AI agents hacking in parallel</a></h3>
+              <p>Italy's CSIRT says autonomous AI agents found and exploited exposed systems at scale, in one case five agents working together within hours. Switzerland reports its first successful AI-assisted attacks. Both agencies advise patching internet-facing systems first and closing remote management pages.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag">Worth reading</span><span class="tag">Wiz Research</span></div>
+              <h3><a href="https://www.wiz.io/blog/agentic-offensive-frameworks-intent-ids-artex-cairn">Wiz: attack tools leak a counter you can search your logs for</a></h3>
+              <p>Wiz says two families of AI attack tools, ARTEX and Cairn, number each sub-goal and the model copies that number into file names, workflow names and account names, such as i19ghci.yml. Defenders can use the pattern to link attacks across rotating IP addresses. This is the vendor's own research.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update Drupal to 11.4.14, 11.3.23 or 10.6.23 and run the update hook on production.</li>
+            <li>Update WP Rocket to 3.24.2 on every WordPress site that uses it.</li>
+            <li>Update Joomla's VirtueMart to 4.8.8 and ChronoForms to 8.0.54.</li>
+            <li>Reset your hex.pm password and two-factor setup if you have an account.</li>
+            <li>Update GeoServer to 3.0.2, 2.28.6 or 2.27.7 if you run it.</li>
+            <li>Upgrade Apache JSPWiki to 3.0.1 or 2.12.6 if you host one.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132165">CVE-2026-132165</a> <span class="kev-yes">KEV 11-24</span><span class="meta">Drupal core before 10.6.22, 11.3.22, 11.4.13 · no NVD score yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618">CVE-2026-109618</a> <span class="kev-yes">KEV 10-26</span><span class="meta">PHP memory handling · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619">CVE-2026-109619</a> <span class="kev-yes">KEV 10-26</span><span class="meta">PHP request state · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-136716">CVE-2026-136716</a><span class="meta">Drupal core before 10.6.23, 11.3.23, 11.4.14 · no NVD score yet</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125812">CVE-2026-125812</a><span class="meta">WP Rocket before 3.24.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133335">CVE-2026-133335</a><span class="meta">VirtueMart 4.0.0-4.8.7 · 9.2 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133336">CVE-2026-133336</a><span class="meta">ChronoForms 8.0.0-8.0.53 · 9.5 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129514">CVE-2026-129514</a><span class="meta">Hex.pm registry · 10.0 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-78114">CVE-2026-78114</a><span class="meta">Apache JSPWiki 2.10-3.0.0 · 10.0 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 26, 2026 04:34 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
