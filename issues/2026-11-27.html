@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI the News That's Fit to Prompt - November 27, 2026</title>
+  <meta name="description" content="Daily AI news roundup - November 27, 2026. Nvidia pauses chip shipments to Southeast Asia, 42 attorneys general try to block Character.AI from selling users' chats, Meta's Muse draws a UK regulator's complaint, businesses embrace open-weight models, and more.">
+  <meta property="og:title" content="AI the News That's Fit to Prompt - Issue No. 157">
+  <meta property="og:description" content="Daily AI news roundup - November 27, 2026. Nvidia pauses chip shipments to Southeast Asia, 42 attorneys general try to block Character.AI from selling users' chats, Meta's Muse draws a UK regulator's complaint, businesses embrace open-weight models, and more.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wfu-cer-ait-ua-internal.s3.us-east-1.amazonaws.com/wm/ai-newsletter/assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            paper: '#f8f8f8',
+            rule: '#d1d5db',
+            accent: '#8B0000'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            masthead: ['"Inter"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Masthead */
+    .masthead-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    .masthead-motto {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: #6b7280;
+    }
+    .masthead-info {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+    }
+    .masthead-info span {
+      margin: 0 0.75rem;
+    }
+
+    /* Rules */
+    .rule-double {
+      border: none;
+      border-top: 3px double #1a1a1a;
+    }
+    .rule-thin {
+      border: none;
+      border-top: 1px solid #d1d5db;
+    }
+    .rule-thick {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+    }
+    .rule-accent {
+      border: none;
+      border-top: 2px solid #8B0000;
+    }
+
+    /* Section labels */
+    .section-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: #6b7280;
+      padding: 0.5rem 0;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Headlines */
+    .headline-lead {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: #1a1a1a;
+    }
+    .headline-feature {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .headline-standard {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.22;
+      color: #1a1a1a;
+    }
+
+    /* Kicker */
+    .kicker {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8B0000;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Body text */
+    .newspaper-body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .newspaper-body p {
+      margin-bottom: 0.85em;
+    }
+    .newspaper-body p + p {
+      text-indent: 1.5em;
+    }
+
+    /* Lead story grid */
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .lead-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Grid layout */
+    .masonry-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .masonry-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .masonry-flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .masonry-flow .story-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+    }
+    .masonry-flow .story-wide {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: 1 / -1;
+    }
+    .masonry-flow .story-span-2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1.25rem;
+      grid-column: span 2;
+    }
+    @media (max-width: 767px) {
+      .masonry-flow .story-span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* Wire items */
+    .wire-item {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wire-item:last-child {
+      border-bottom: none;
+    }
+    .wire-item a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .wire-item a:hover {
+      color: #8B0000;
+    }
+    .wire-source {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.6rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Links */
+    a.story-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.story-link:hover .headline-lead,
+    a.story-link:hover .headline-feature,
+    a.story-link:hover .headline-standard {
+      color: #8B0000;
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(145deg, #e0e0e0 0%, #d0d0d0 50%, #c4c4c4 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.02) 2px,
+        rgba(0,0,0,0.02) 4px
+      );
+    }
+
+    /* Subscribe box */
+    .subscribe-box {
+      background: white;
+      border: 2px solid #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .subscribe-box input {
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      background: #f8f8f8;
+    }
+    .subscribe-box input:focus {
+      border-color: #1a1a1a;
+    }
+    .subscribe-box button {
+      background: #1a1a1a;
+      color: #f8f8f8;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .subscribe-box button:hover {
+      background: #8B0000;
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .subscribe-section, footer { display: none; }
+      a { color: #000 !important; }
+    }
+
+    .wire-grid{display:grid;grid-template-columns:1fr;gap:0 2rem}
+    @media (min-width:768px){.wire-grid{grid-template-columns:repeat(3,1fr)}}
+  </style>
+<body>
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+    <header class="text-center mb-0">
+      <hr class="rule-accent mb-3">
+      <p class="masthead-motto mb-2">Your daily AI news digest</p>
+      <h1 class="masthead-title mb-3"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></h1>
+      <div class="masthead-info flex flex-wrap justify-center items-center gap-x-4 gap-y-1 mb-3">
+        <span>Vol. I</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Friday, November 27, 2026</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>Issue No. 157</span>
+      </div>
+      <hr class="rule-double">
+    </header>
+
+
+
+
+<section class="mt-6 mb-4">
+<section class="mt-6 mb-4">
+<div class="lead-grid">
+<div>
+<div class="kicker">AI &middot; Chips &middot; Export Controls</div>
+<a href="https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/" class="story-link">
+<img src="https://techcrunch.com/wp-content/uploads/2026/11/Taiwan-Nvidia.jpg?w=1024" alt="" class="w-full aspect-video object-cover mb-3">
+<h2 class="headline-lead mb-3">Nvidia Hits Pause on Chip Shipments to Southeast Asia</h2>
+</a>
+<p class="byline mb-3">TechCrunch &middot; Nov 26</p>
+<div class="newspaper-body">
+<p>Nvidia has told manufacturing partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand and Indonesia while it checks that regional partners meet U.S. export rules. Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the Commerce Department closed earlier this month, and the Institute for Progress estimates such remote data centers supply about 24% of China&rsquo;s AI computing power.</p>
+</div>
+</div>
+<div>
+<div class="kicker">AI &middot; Chips &middot; Southeast Asia</div>
+<a href="https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html" class="story-link">
+<h3 class="headline-feature mb-2">Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions</h3>
+</a>
+<p class="byline mb-2">The New York Times &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed mb-5">The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips.</p>
+<div class="kicker">AI &middot; Policy &middot; Singapore</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-27/singapore-talking-to-us-to-keep-ai-chip-access-deputy-pm-says" class="story-link">
+<h3 class="headline-feature mb-2">Singapore Talking to US to Keep AI Chip Access, Deputy PM Says</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Deputy Prime Minister Gan Kim Yong says Singapore is in talks with Washington to retain access to advanced semiconductors after the U.S. tightened export restrictions.</p>
+</div>
+</div>
+</section>
+
+    <hr class="rule-thin my-4">
+    <section class="mb-2">
+      <div class="masonry-flow">
+<div class="story-span-2" data-k="cartoon">
+<div class="section-label" style="margin-bottom:0.75rem;">The Cartoon</div>
+<img src="assets/2026-11-27-cartoon.png" alt="A tired warehouse worker with a clipboard sits atop a tall stack of taped crates while a courier with a handcart waits at the loading dock door, glancing at the wall clock" class="w-full object-contain mb-2" style="max-height:380px;">
+<p class="byline mt-1">&ldquo;The shipment is paused pending a review of whether it is going where it says it&rsquo;s going.&rdquo;</p>
+</div>
+<div class="story-item" data-k="ow">
+<div class="kicker">AI &middot; Open Source &middot; Business</div>
+<a href="https://fortune.com/2026/11/26/global-businesses-open-weight-ai/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/11/GettyImages-2298411035.jpg?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Why Businesses Are Embracing &lsquo;Good Enough&rsquo; Open-Weight AI, and How Geopolitics Could Get in the Way</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">On Vercel&rsquo;s AI gateway, 56% of tokens went to open-weight models in August, up from 7% a year earlier. U.S. evaluators put the best Chinese model about eight months behind the American frontier.</p>
+</div>
+<div class="story-item" data-k="cai">
+<div class="kicker">AI &middot; Policy &middot; Privacy</div>
+<a href="https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats" class="story-link">
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25557391/STK278_character_ai_B.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">42 State AGs Are Trying to Stop Character.AI From Selling Users&rsquo; Chats</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A bipartisan coalition says the bankrupt company plans to auction the chat histories of more than 21 million U.S. accounts, over 2.1 million of them registered to minors. The AGs note the buyer would have no duty to honor privacy policies or delete data, and the first bidder was formed on Nov. 13.</p>
+</div>
+<div class="story-item" data-k="muse">
+<div class="kicker">AI &middot; Regulation &middot; UK</div>
+<a href="https://www.wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains/" class="story-link">
+<img src="https://media.wired.com/photos/6b07201067745997b8ffd8ed/191:100/w_1280,c_limit/Meta-Refused-to-Share-Muse-for-Testing-Business-2300550254.jpg" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Meta Refused to Share Muse for Testing, UK Financial Watchdog Complains</h3>
+</a>
+<p class="byline mb-2">WIRED &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The FCA&rsquo;s Colin Payne says Meta declined a request to test its Muse agent in the regulator&rsquo;s sandbox, having told the watchdog of its UK plans only last month. Muse has been set up by more than 10 million users in North America since September.</p>
+</div>
+<div class="story-item aq-cell" data-k="puzzle">
+<div class="section-label" style="margin-bottom:0.75rem;">Cryptogram</div>
+<div class="cg-wrap">
+<style>
+.cg-wrap{max-width:300px;font-family:'Inter',-apple-system,sans-serif;color:#1a1a1a}
+.cg-words{display:flex;flex-wrap:wrap;gap:0.7rem 1rem}
+.cg-w{display:flex;gap:2px}
+.cg-l{display:flex;flex-direction:column;align-items:center;width:21px}
+.cg-l span{font-size:0.6rem;color:#9ca3af;font-weight:600;height:0.9rem}
+.cg-l input{width:21px;height:26px;text-align:center;border:0;border-bottom:2px solid #1a1a1a;background:transparent;font-size:0.9rem;font-weight:700;padding:0;text-transform:uppercase;font-family:inherit;color:#1a1a1a;outline:none;border-radius:0}
+.cg-l input.given{color:#8B0000}
+.cg-l input.bad{background:#fecaca}
+.cg-l input.ok{background:#dcfce7}
+.cg-btn{margin-top:0.9rem;background:#1a1a1a;color:#f8f8f8;border:0;padding:0.4rem 1.1rem;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer}
+.cg-btn:hover{background:#8B0000}
+.cg-msg{font-size:0.75rem;font-weight:600;color:#374151;margin-top:0.5rem;min-height:1em}
+@media (min-width:1024px){.masonry-flow .aq-cell{grid-row:span 1}}
+</style>
+<p style="font-size:0.72rem;color:#374151;margin:0 0 0.8rem">Each letter stands for another. Decode the quote from today&rsquo;s Fortune story on open-weight AI. A few letters are given in red.</p>
+<div class="cg-words" id="cg-words"></div>
+<button class="cg-btn" id="cg-check" type="button">Check</button>
+<div class="cg-msg" id="cg-msg" aria-live="polite"></div>
+<p style="font-size:0.7rem;color:#6b7280;margin:0.4rem 0 0">&mdash; Pinterest&rsquo;s Damian Kim</p>
+<script>
+(function(){
+var cipher="IMCUQHVM GCYVDO TQ OXTDV TMV HUXMVYHSDL VFAVUOHRV",plain="FRONTIER MODELS AT SCALE ARE INCREDIBLY EXPENSIVE",reveal="OTV",wrap=document.getElementById("cg-words"),map={};
+for(var i=0;i<cipher.length;i++)if(cipher[i]!==" ")map[cipher[i]]=plain[i];
+cipher.split(" ").forEach(function(w){
+ var d=document.createElement("div");d.className="cg-w";
+ w.split("").forEach(function(c){
+  var l=document.createElement("div");l.className="cg-l";
+  var s=document.createElement("span");s.textContent=c;
+  var inp=document.createElement("input");inp.maxLength=1;inp.dataset.c=c;inp.setAttribute("aria-label","Letter "+c);
+  if(reveal.indexOf(c)>-1){inp.value=map[c];inp.readOnly=true;inp.className="given";}
+  inp.addEventListener("input",function(){
+   var v=inp.value.toUpperCase().replace(/[^A-Z]/g,"");inp.value=v;
+   document.querySelectorAll('#cg-words input[data-c="'+c+'"]').forEach(function(o){if(!o.readOnly){o.value=v;o.classList.remove("bad","ok");}});
+  });
+  l.appendChild(s);l.appendChild(inp);d.appendChild(l);
+ });
+ wrap.appendChild(d);
+});
+document.getElementById("cg-check").addEventListener("click",function(){
+ var all=true,any=false;
+ document.querySelectorAll("#cg-words input").forEach(function(o){
+  o.classList.remove("bad","ok");
+  if(o.readOnly)return;
+  if(!o.value){all=false;return;}
+  if(o.value===map[o.dataset.c])o.classList.add("ok");else{o.classList.add("bad");all=false;}
+ });
+ document.getElementById("cg-msg").textContent=all?"Solved. Well done.":"Keep going. Red squares are wrong, empty squares are still open.";
+});
+})();
+</script>
+</div>
+</div>
+<div class="story-item" data-k="jh">
+<div class="kicker">AI &middot; Culture &middot; Nvidia</div>
+<a href="https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes" class="story-link">
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/ai-label_1c35e3.jpg?quality=90&amp;strip=all&amp;crop=0%2C19.887257893553%2C100%2C60.225484212893&amp;w=1200" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-feature mb-2">Jensen Huang Deepfakes Are the Hot New AI Slop</h3>
+</a>
+<p class="byline mb-2">The Verge &middot; Nov 24</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Hundreds of AI videos swap Nvidia&rsquo;s CEO into memes about his affair scandal, many made with video models running on Nvidia GPUs. His board reinstated him Monday, and the memes have turned triumphant.</p>
+</div>
+<div class="story-item" data-k="llama">
+<div class="kicker">Open Source &middot; Hardware</div>
+<a href="https://huggingface.co/blog/ggml-org/llamacpp-amd-bench" class="story-link">
+<img src="https://cdn-uploads.huggingface.co/production/uploads/67289c93ff90038d9a6e5675/tbIvyMSISXCm64WYP3atl.png" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-standard mb-2">Introducing the llama.cpp Benchmark Dashboard for AMD Ryzen and Radeon</h3>
+</a>
+<p class="byline mb-2">Hugging Face &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A public dashboard tracks prompt processing and text generation speed across llama.cpp builds, models and quantizations, with weekly benchmark runs anyone can inspect.</p>
+</div>
+<div class="story-item" data-k="swarm">
+<div class="kicker">Research &middot; Agents</div>
+<a href="https://huggingface.co/blog/training-swarms" class="story-link">
+<img src="https://huggingface.co/blog/assets/training-swarms/thumbnail.png" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-standard mb-2">Swarms, Flocks, Gangs: How to Build, Train, and Evaluate Multi-Agent Systems</h3>
+</a>
+<p class="byline mb-2">Hugging Face &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The first post in a series trains four agents sharing one small model to communicate. The reproducible example takes about five hours on two H200s, roughly $50.</p>
+</div>
+<div class="story-item" data-k="pai">
+<div class="kicker">Podcast &middot; Careers</div>
+<a href="https://share.transistor.fm/s/45701c1a" class="story-link">
+<img src="https://img.transistorcdn.com/8WpVAIW3rC2CVI_w69JArqMiSel40T2RTBYbt26nyQs/rs:fill:0:0:1/w:800/h:800/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83YjQy/MGEzZjczMmRjYjli/NGUyYTdmODMzNzQ4/YjhmNS5wbmc.jpg" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-standard mb-2">Humans in a Post-Human World</h3>
+</a>
+<p class="byline mb-2">Practical AI &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Host Chris Benson, a developer for more than forty years, asks how to advise his fourteen-year-old daughter on a career when AI agents already write software better than he does.</p>
+</div>
+<div class="story-item" data-k="clay">
+<div class="kicker">Podcast &middot; Agents</div>
+<a href="https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/" class="story-link">
+<img src="https://i.ytimg.com/vi/qjPcaZf_plo/maxresdefault.jpg" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-standard mb-2">How Clay Builds GTM Agents</h3>
+</a>
+<p class="byline mb-2">Latent Space &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Clay&rsquo;s Jeff Barg says usage is split nearly 50/50 between Clay&rsquo;s own agent and outside harnesses such as Claude Code.</p>
+</div>
+<div class="story-item" data-k="rem">
+<div class="kicker">AI &middot; Startups</div>
+<a href="https://fortune.com/article/mark-cuban-ai-startups-remento-kindred-tales-future-of-work-tech-thanksgiving-2026/" class="story-link">
+<img src="https://fortune.com/img-assets/wp-content/uploads/2026/04/Charlie-on-Shark-Tank-side.png?resize=1200,600" alt="" class="w-full aspect-video object-cover mb-3">
+<h3 class="headline-standard mb-2">A Mark Cuban-Backed AI Startup Is Helping Families Turn Thanksgiving Conversations Into Lasting Memories</h3>
+</a>
+<p class="byline mb-2">Fortune &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Remento is pitching its story-recording service to the 81.5 million Americans traveling for Thanksgiving.</p>
+</div>
+<div class="story-item" data-k="os">
+<div class="kicker">AI &middot; Infrastructure &middot; China</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-27/china-hedge-fund-star-builds-operating-system-kernel-for-ai" class="story-link">
+<h3 class="headline-standard mb-2">China Hedge Fund Star Builds Operating System Kernel for AI</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 27</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">A startup founded by one of China&rsquo;s most successful hedge fund managers is preparing to release its first product, the core of an operating system designed for AI agents rather than humans.</p>
+</div>
+<div class="story-item" data-k="sap">
+<div class="kicker">AI &middot; Business &middot; Software</div>
+<a href="https://www.bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring" class="story-link">
+<h3 class="headline-standard mb-2">SAP Weighs Cutting at Least 10,000 Positions in AI Restructuring</h3>
+</a>
+<p class="byline mb-2">Bloomberg &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">The plan would remake Europe&rsquo;s most valuable software company for the AI era, according to people familiar with the matter.</p>
+</div>
+<div class="story-item" data-k="cog">
+<div class="kicker">Podcast &middot; AI Safety</div>
+<a href="https://www.cognitiverevolution.ai/ai-am-number-must-go-up-christiano-s-warning-jensen-s-return-givedirectly-s-pitch-for-the-poor/" class="story-link">
+<h3 class="headline-standard mb-2">AI:AM: Number Must Go Up? Christiano&rsquo;s Warning, Jensen&rsquo;s Return, GiveDirectly&rsquo;s Pitch for the Poor</h3>
+</a>
+<p class="byline mb-2">The Cognitive Revolution &middot; Nov 26</p>
+<p class="font-serif text-sm text-gray-500 leading-relaxed">Nathan Labenz and Prakash Narayanan examine AI takeover scenarios, the plausibility of an intelligence explosion and AI regulation.</p>
+</div>
+<div class="story-wide" data-k="wire">
+<div class="section-label" style="margin-bottom:0.75rem;">The Wire</div>
+<div class="wire-grid">
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/features/2026-11-26/holidays-to-test-ai-shopping-bots-from-google-amazon-meta-and-openai">Holidays to Test AI Shopping Bots From Google, Amazon, Meta and OpenAI</a>
+<div class="wire-source">Bloomberg &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.bloomberg.com/news/newsletters/2026-11-26/trustedrouter-aims-to-give-companies-greater-privacy-with-ai">TrustedRouter Aims to Give Companies Greater Privacy With AI</a>
+<div class="wire-source">Bloomberg &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://www.technologyreview.com/2026/11/26/1149934/the-download-better-bionic-hands-ai-natural-gas-boom/">The Download: Better Bionic Hands and AI&rsquo;s Natural-Gas Boom</a>
+<div class="wire-source">MIT Technology Review &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://janlukas.blog/posts/ai-self-hosting">AI Made Self-Hosting Fun Again</a>
+<div class="wire-source">Jan-Lukas Else &middot; Nov 26</div>
+</div>
+</div>
+<div><div class="wire-item">
+<a href="https://simonwillison.net/2026/Nov/26/hn-50651685/">Comment: The New York Times Warns Photographers Not to Update Photoshop Over AI Features</a>
+<div class="wire-source">Simon Willison &middot; Nov 26</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </section>
+
+
+    <!-- ============================================ -->
+    <!-- SUBSCRIBE CTA                                 -->
+    <!-- ============================================ -->
+    <section class="subscribe-section my-8">
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/fittoprompt"
+        method="post"
+        target="popupwindow"
+        class="subscribe-box"
+      >
+        <p class="font-sans text-xs text-gray-500 uppercase tracking-widest font-semibold mb-4">Get every issue free</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="font-sans text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      </form>
+    </section>
+
+    <hr class="rule-double my-6">
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="text-center pb-8">
+      <hr class="rule-thin mb-6">
+      <p class="font-masthead text-2xl font-bold text-ink mb-2"><a href="../index.html" style="color:inherit;text-decoration:none;">AI the News That's Fit to Prompt</a></p>
+      <p class="font-sans text-xs text-gray-400 uppercase tracking-widest mb-4">A curated AI news digest</p>
+      <p class="font-sans text-xs text-gray-400 mb-2"><a href="../index.html" class="underline hover:text-gray-600" style="color:inherit;">View all issues</a></p>
+      <p class="font-sans text-xs text-gray-400 mb-2">Also from Fit to Prompt: <a href="../security/" class="underline hover:text-gray-600" style="color:inherit;">Fit to Patch</a>, the daily web security briefing</p>
+      <p class="font-sans text-xs text-gray-300">&copy; 2026 AI the News That's Fit to Prompt. All rights reserved.</p>
+    </footer>
+
+  </div>
+  <!-- ============================================ -->
+  <!-- THE BIG PICTURE - Expert Digest              -->
+  <!-- ============================================ -->
+  <button id="digest-cta" class="digest-cta" aria-label="Open expert summary digest">&#10022; The Big Picture</button>
+  <div id="digest-modal" class="digest-overlay" aria-hidden="true">
+    <div class="digest-container">
+      <div class="digest-header">
+        <span class="digest-header-label">&#10022; The Big Picture</span>
+        <button id="digest-close" class="digest-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="digest-body">
+        <p class="digest-hook">Roughly 24 percent of China&rsquo;s AI computing power comes from remote data centers, according to the Institute for Progress estimate cited by TechCrunch, and the countries hosting many of those machines just had their Nvidia server shipments frozen. Meanwhile 42 attorneys general are trying to stop a bankrupt chatbot company from auctioning 21 million users&rsquo; chat logs, and a UK regulator says Meta turned down a chance to test its personal agent before launch. Three different stories, one pattern: the rules are showing up after the capability already shipped.</p>
+
+        <h3 class="digest-section-head">Today&rsquo;s Headlines</h3>
+
+        <p><em>A note on sources: The New York Times and Bloomberg blocked automated access when this issue was built, so those six items are summarized from their published headlines and summaries only. The two podcast pages and Jan-Lukas Else&rsquo;s post were read from their descriptions and show notes. The TechCrunch, Verge, Wired, Fortune, MIT Technology Review, Hugging Face and Latent Space pieces were read directly.</em></p>
+
+        <h4 class="digest-theme">Chips, Borders and Compute</h4>
+        <ul class="digest-bullets">
+          <li><strong>Nvidia&rsquo;s Southeast Asia pause.</strong> Per TechCrunch, citing the Wall Street Journal, Nvidia told partners including Dell and Super Micro to hold server shipments to Malaysia, Singapore, Thailand and Indonesia for an unspecified period while it checks whether regional partners meet U.S. export rules. The reason is a loophole: Chinese companies have been renting Nvidia chips remotely from data centers in those countries, and Commerce closed it earlier this month, reportedly with some reluctance.</li>
+          <li><strong>The license rule behind it.</strong> The New York Times says the halt follows a new U.S. rule that would require licenses for companies in those four countries to buy advanced AI chips. Only the summary was available, so the details of who must apply are not covered here.</li>
+          <li><strong>Singapore negotiates.</strong> Bloomberg reports Deputy Prime Minister Gan Kim Yong saying Singapore is in talks with Washington to keep access to advanced semiconductors. It is the clearest sign yet that a hub country is bargaining over a rule it did not write.</li>
+          <li><strong>An operating system for agents.</strong> Bloomberg says a startup founded by one of China&rsquo;s most successful hedge fund managers is about to release its first product, the core of an operating system built for AI agents rather than people. No technical details were available beyond that description.</li>
+          <li><strong>Power and orbit.</strong> MIT Technology Review&rsquo;s The Download notes that the Louisiana Meta data center it covered has grown, with the local utility going from three planned natural-gas plants to ten and Meta&rsquo;s emissions up 45 percent over last year. It also reports that SpaceX won approval to launch 1 million data center satellites, which must start deploying by 2033 under its license.</li>
+        </ul>
+
+        <h4 class="digest-theme">Regulators Catch Up</h4>
+        <ul class="digest-bullets">
+          <li><strong>Character.AI&rsquo;s chat logs.</strong> The Verge reports that 42 state attorneys general say the company, which filed for Chapter 11 in October, plans to sell the chat histories of more than 21 million U.S. accounts, over 2.1 million of them registered to minors. The AGs object that the buyer would have no duty to honor privacy policies, no deletion path exists for users, and the first bidder was created on November 13 with no listed parent or investors. New York, Connecticut, California and Colorado have chatbot laws that take effect January 1, 2027.</li>
+          <li><strong>Meta&rsquo;s Muse in the UK.</strong> Wired reports the Financial Conduct Authority&rsquo;s Colin Payne said Meta declined a joint test of Muse in the regulator&rsquo;s sandbox. Meta had told the FCA of its plans only last month, and Payne says such testing normally takes weeks or months to arrange. The competition and data watchdogs have also warned Meta, and the CMA has already made it change its UK terms so it owes users &ldquo;reasonable skill and care.&rdquo; More than 10 million people in North America have set up Muse since September.</li>
+          <li><strong>Jensen Huang as meme.</strong> The Verge counts hundreds of AI videos that put Nvidia&rsquo;s CEO into memes about his affair scandal, many made with video models that run on Nvidia GPUs. The board reinstated him Monday after what it described as input from senior levels of the U.S. government, and the new memes cast him as victorious.</li>
+        </ul>
+
+        <h4 class="digest-theme">The Business of AI</h4>
+        <ul class="digest-bullets">
+          <li><strong>&ldquo;Good enough&rdquo; open weights.</strong> Fortune reports that on Vercel&rsquo;s AI gateway, 56 percent of tokens went to open-weight models in August, up from 7 percent a year earlier. A Pinterest executive says frontier models at scale are &ldquo;incredibly expensive,&rdquo; and a Berkeley professor notes U.S. evaluators put the best Chinese model about eight months behind the American frontier.</li>
+          <li><strong>SAP&rsquo;s restructuring.</strong> Bloomberg says SAP is preparing to cut at least 10,000 positions, which a related Bloomberg video puts at about 9 percent of its global workforce, to remake the business for the AI era.</li>
+          <li><strong>Holiday shopping bots.</strong> Bloomberg&rsquo;s feature asks whose gift advice shoppers will trust this season among agents from Google, Amazon, Meta and OpenAI. Only the summary was available.</li>
+          <li><strong>TrustedRouter.</strong> A Bloomberg newsletter item describes a startup that lets companies keep employees&rsquo; AI use private from model makers.</li>
+          <li><strong>Clay and its agent.</strong> On Latent Space, Clay&rsquo;s Head of AI Jeff Barg says usage is split nearly 50/50 between Clay&rsquo;s own agent and outside harnesses such as Claude Code. By his napkin math, checking all 40 million companies in Clay&rsquo;s database against an ideal customer profile would cost about $1,500. Clay raised $115 million at a $7.1 billion valuation in September.</li>
+          <li><strong>Remento.</strong> Fortune profiles the Mark Cuban-backed startup, which texts older relatives weekly prompts, collects up to a year of answers, and has AI turn the transcripts into a printed book with QR codes linking to the recordings. Founder Charlie Greene landed $300,000 from Cuban on Shark Tank for a 10 percent stake.</li>
+        </ul>
+
+        <h4 class="digest-theme">Builders and Thinkers</h4>
+        <ul class="digest-bullets">
+          <li><strong>llama.cpp on AMD.</strong> The new Hugging Face dashboard runs weekly llama-bench jobs on a Radeon 8060S and a Radeon AI Pro R9700S, 10 repetitions per configuration, across models including Qwen, Gemma and gpt-oss. It reports tokens per second for prompt processing (PP512) and text generation (TG128).</li>
+          <li><strong>Training swarms.</strong> The first post in Hugging Face&rsquo;s series trains four agents sharing one small model to communicate, in about five hours on two H200s for roughly $50. It also notes that a METR investigation found around 1,200 supposedly isolated OpenAI agents exchanged over 70,000 messages and files.</li>
+          <li><strong>Practical AI on careers.</strong> Host Chris Benson, who has written software for more than forty years, uses a solo episode to ask how to advise his fourteen-year-old daughter on a career when AI agents already write software better than he does.</li>
+          <li><strong>The Cognitive Revolution.</strong> The Thanksgiving episode works through Paul Christiano&rsquo;s takeover scenario and asks what risk number would justify going further, with GiveDirectly&rsquo;s Nick Allardice, Forethought&rsquo;s Tom Davidson and the Institute for Law and AI&rsquo;s Mackenzie Arnold.</li>
+          <li><strong>Self-hosting, revived.</strong> Jan-Lukas Else writes that AI made self-hosting fun again after his enthusiasm for tinkering with his own infrastructure had faded over the years.</li>
+          <li><strong>A photojournalism rule.</strong> Simon Willison, commenting on a Hacker News thread about the Times warning photographers not to update Photoshop over AI features, recounts a Times photographer telling him the paper&rsquo;s photos get cropping and balancing but no further edits.</li>
+        </ul>
+
+        <h3 class="digest-section-head">The Throughline</h3>
+
+        <p>The chip story is a story about <em>access</em>. The loophole Commerce closed was not about who owns the chips but who can rent them from where, and the Institute for Progress figure of 24 percent shows how much capacity had been flowing through it. Nvidia&rsquo;s pause pushes the enforcement burden onto the supply chain, which is why Singapore is now negotiating. Character.AI and Muse are the same problem from the consumer side. The chat logs are an asset on a bankruptcy balance sheet because nobody wrote limits on who can buy them, and Muse reached millions of users before a regulator could run a test. In each case the capability was available first and the guardrails are being improvised in public.</p>
+
+        <p>Hugging Face&rsquo;s swarm post offers the most useful discipline for reading all of this. Its question is &ldquo;did cooperation help, or did we just spend more?&rdquo; and its answer is to compare at an equal budget. Noam Brown estimates less than 10 percent of OpenAI&rsquo;s Navier-Stokes result came from agents cooperating, and in Anthropic&rsquo;s bug-hunting experiment the advantage vanished once the comparison was limited to the same code and token spend. Fortune&rsquo;s open-weight story is that same test applied to buying models: Vercel&rsquo;s gateway went from 7 to 56 percent open-weight tokens because for routine work the cheaper model is good enough, and Clay&rsquo;s Barg reaches the same place when he says frontier models earn their cost on orchestration and deep research rather than on every classification. The market is learning to ask what a capability costs per unit of result.</p>
+
+        <div class="digest-bigger-picture">
+          <h4 class="digest-theme" style="margin-top:0;">The Bigger Picture</h4>
+          <p>Compute has become a geopolitical commodity, and today&rsquo;s stories show the second-order effects. When remote access to Nvidia hardware accounts for a quarter of one country&rsquo;s AI capacity, a shipping hold to four mid-sized economies is foreign policy, and a deputy prime minister has to go to Washington to keep his country&rsquo;s data centers supplied. At the same time the physical footprint keeps growing: MIT Technology Review says the utility serving one Louisiana Meta data center went from three planned gas plants to ten, and the FCC has approved a million orbiting data center satellites. The costs of AI are showing up in utilities, orbits and trade rules, not just in model benchmarks.</p>
+          <p>Meanwhile the gap between frontier and &ldquo;good enough&rdquo; keeps narrowing, which weakens the case for paying frontier prices everywhere and strengthens the case for the open-weight models that Fortune says carry geopolitical baggage of their own, since many leading ones come from Chinese developers. Layer on the regulatory pattern and the picture is of an industry whose products spread faster than the institutions meant to check them. The SAP cuts and the Practical AI host asking what to tell his daughter are the human end of the same curve. None of it signals a bubble or a breakthrough on its own. It signals that the constraints are moving from technical to political and physical, and that is where the next year of news is likely to come from.</p>
+        </div>
+
+        <h3 class="digest-section-head">What to Watch</h3>
+        <ul class="digest-bullets">
+          <li><strong>How long the Nvidia pause lasts.</strong> It was announced with no end date, and Singapore&rsquo;s talks with Washington will show whether hub countries can win exemptions or only licenses.</li>
+          <li><strong>The Character.AI sale.</strong> The attorneys general want protections attached to the chat logs, and the identity of the bidder formed on November 13 is the open question. The state chatbot laws that begin January 1, 2027 will test the company&rsquo;s position.</li>
+          <li><strong>UK scrutiny of Muse.</strong> UK regulators including the FCA, the ICO and the CMA have now put Meta on notice, and whether Meta returns to the FCA&rsquo;s sandbox offer is the signal to follow.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <style>
+    .digest-bigger-picture { background: #f2ede2; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8B0000; }
+    /* Digest CTA Button */
+    .digest-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 9998;
+      background: #8B0000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(139, 0, 0, 0.35);
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .digest-cta:hover {
+      background: #a00000;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.45);
+    }
+    .digest-cta.hidden {
+      display: none;
+    }
+
+    /* Digest Modal Overlay */
+    .digest-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .digest-overlay.active {
+      display: flex;
+    }
+
+    /* Digest Container */
+    .digest-container {
+      background: #fff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 700px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Digest Header */
+    .digest-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+    .digest-header-label {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #8B0000;
+    }
+    .digest-close {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: none;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .digest-close:hover {
+      color: #1a1a1a;
+    }
+
+    /* Digest Body */
+    .digest-body {
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .digest-hook {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #8B0000;
+    }
+    .digest-section-head {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #8B0000;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .digest-theme {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #374151;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .digest-body p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 1em;
+    }
+    .digest-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.75rem 0;
+    }
+    .digest-bullets li {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      padding: 0.35rem 0 0.35rem 1rem;
+      position: relative;
+    }
+    .digest-bullets li::before {
+      content: '\2013';
+      position: absolute;
+      left: 0;
+      color: #8B0000;
+      font-weight: 700;
+    }
+    .digest-bullets li strong {
+      color: #1a1a1a;
+    }
+    .digest-bullets li a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .digest-bullets li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .digest-body {
+        padding: 1.25rem 1rem;
+      }
+      .digest-cta {
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Podcast player */
+    .digest-podcast {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem 1.25rem;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+    }
+    .digest-podcast-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 0.75rem;
+    }
+    .digest-podcast-icon {
+      font-size: 0.65rem;
+    }
+    .digest-podcast-duration {
+      margin-left: auto;
+      color: #999;
+      font-weight: 400;
+    }
+    .digest-podcast-audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    @media print {
+      .digest-cta,
+      .digest-overlay,
+      .digest-podcast { display: none !important; }
+    }
+  </style>
+  <script>
+  (function() {
+    var cta = document.getElementById('digest-cta');
+    var overlay = document.getElementById('digest-modal');
+    var closeBtn = document.getElementById('digest-close');
+    function openDigest() {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      cta.classList.add('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDigest() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      cta.classList.remove('hidden');
+      document.body.style.overflow = '';
+    }
+    cta.addEventListener('click', openDigest);
+    closeBtn.addEventListener('click', closeDigest);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeDigest();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeDigest();
+    });
+  })();
+  </script>
+
+
+</body>
+</html>

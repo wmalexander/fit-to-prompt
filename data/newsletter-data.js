@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-26",
-        lastPuzzleType: "wordsearch",
-        puzzleHistory: ["cryptogram", "scramble", "crossword", "acronym", "wordsearch"]
+        lastUpdated: "2026-11-27",
+        lastPuzzleType: "cryptogram",
+        puzzleHistory: ["cryptogram"]
     },
     issues: [
+        {
+            date: "2026-11-27",
+            volume: 1,
+            issueNumber: 157,
+            title: "Nvidia Hits Pause on Chip Shipments to Southeast Asia",
+            description: "Daily AI news roundup - November 27, 2026. Nvidia pauses chip shipments to Southeast Asia, 42 attorneys general try to block Character.AI from selling users' chats, Meta's Muse draws a UK regulator's complaint, businesses embrace open-weight models, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-27.html",
+            storyCount: 20,
+            puzzleType: "cryptogram"
+        },
         {
             date: "2026-11-26",
             volume: 1,
