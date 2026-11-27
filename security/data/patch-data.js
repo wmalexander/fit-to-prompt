@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-26"
+        lastUpdated: "2026-11-27"
     },
     issues: [
+        {
+            date: "2026-11-27",
+            issueNumber: 24,
+            title: "Cacti has an unpatched login-free code execution bug",
+            summary: "Cacti 1.2.31 can be taken over in four requests when its guest account is on, with a public exploit and no patch. Also critical bugs in Ultimate Member and FunnelKit Automations, a @fastify/express authentication bypass, and the PolinRider loader hiding in GitHub repos.",
+            url: "https://fittoprompt.com/security/issues/2026-11-27.html",
+            pressure: "elevated",
+            itemCount: 13
+        },
         {
             date: "2026-11-26",
             issueNumber: 23,

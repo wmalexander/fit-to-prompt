@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cacti has an unpatched login-free code execution bug | Fit to Patch No. 24, November 27, 2026</title>
+  <meta name="description" content="Cacti 1.2.31 has a public, unpatched way to run code when its guest account is on. Also critical bugs in Ultimate Member and FunnelKit Automations, a Fastify authentication bypass, and a North Korea-linked loader hiding in GitHub repos.">
+  <meta property="og:title" content="Fit to Patch No. 24: Cacti has an unpatched login-free code execution bug">
+  <meta property="og:description" content="Cacti 1.2.31 has a public, unpatched way to run code when its guest account is on. Also critical bugs in Ultimate Member and FunnelKit Automations, a Fastify authentication bypass, and a North Korea-linked loader hiding in GitHub repos.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-27.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Friday, November 27, 2026</span>
+        <span>No. 24</span>
+        <span class="pressure elevated">Patch pressure: Elevated</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>Cacti 1.2.31, the newest release, can be taken over by a stranger in four web requests when its guest account is on, a public proof of concept exists, and there is no patch yet.</li>
+            <li>Ultimate Member and FunnelKit Automations, two big WordPress plugins, have critical bugs scored 9.8, and both have newer releases to install.</li>
+            <li>The Fastify Express plugin can skip your authentication middleware on some routes; update @fastify/express to 4.0.14.</li>
+            <li>A North Korea-linked loader is hiding in the utils package or conftest.py of public GitHub repos, so check code you clone, especially take-home job tests.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">No patch yet</span><span class="tag high">Public exploit</span><span class="tag">No CVE yet</span><span class="tag">Cacti</span><span class="tag">PHP</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html">Cacti can be taken over without a login in four requests</a></h3>
+              <p>Cacti is a PHP tool many teams use to watch their network. A researcher published a working exploit that goes from an anonymous visit to running commands on the server in four web requests. It works on Cacti Core 1.2.31, the latest version, when the guest account is turned on. Guest has been off by default since version 0.8.7. The bug lets a guest save text that is not a number into a graph setting, and that text later runs as part of a database query. From there an attacker can change a poller entry so the server runs a command. Cacti often stores logins for routers, switches and servers, so a break-in can spread well beyond the monitoring box. No CVE number has been assigned and The Hacker News does not report attacks in the wild yet.</p>
+              <p class="do"><strong>Do</strong>Turn off the guest account today, limit who can reach the Cacti web interface, and look through poller entries for commands you did not add. Install the fix as soon as the Cacti project ships one.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html">The Hacker News</a> &middot; <a href="https://watchtowr.com/intelligence/4http2root-cacti-zero-day-faq/">watchTowr FAQ</a> &middot; <a href="https://github.com/Cacti/cacti/releases">Cacti releases</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-134481</span><span class="tag wp">WordPress</span><span class="tag">Ultimate Member</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134481">Ultimate Member through 2.14.1 has a critical object injection bug</a></h3>
+              <p>Ultimate Member runs membership, login and profile pages on many WordPress sites. NVD lists an unsafe deserialization bug (PHP object injection) in every version through 2.14.1 and scores it 9.8, which means no login is needed. NVD gives no exploit detail yet, and this issue found no report of attacks.</p>
+              <p class="do"><strong>Do</strong>Update to Ultimate Member 2.14.3, the current release on WordPress.org, and check the plugin changelog for the fix note.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/ultimate-member/">WordPress.org</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134481">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-131767</span><span class="tag wp">WordPress</span><span class="tag">FunnelKit Automations</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131767">FunnelKit Automations through 3.9.0.1 has the same kind of bug</a></h3>
+              <p>FunnelKit Automations handles email marketing and customer records for WordPress and WooCommerce stores. NVD lists a PHP object injection bug in every version through 3.9.0.1 and scores it 9.8. Details are thin and no attacks are reported.</p>
+              <p class="do"><strong>Do</strong>Update to FunnelKit Automations 3.9.0.2, the current release, and confirm the version on each store.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/wp-marketing-automations/">WordPress.org</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131767">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.1 (v3.1)</span><span class="tag mono">CVE-2026-119071</span><span class="tag wp">WordPress</span><span class="tag">W3 Total Cache</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119071">W3 Total Cache lets post editors delete other media files</a></h3>
+              <p>In versions through 2.11.0, a setting that any user who can edit a post can write is later used to pick which attachments get deleted, with no check that they belong to that user. A contributor account could remove media it does not own.</p>
+              <p class="do"><strong>Do</strong>Update W3 Total Cache to 2.11.1 and review who has editor or contributor accounts.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/w3-total-cache/">WordPress.org</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119071">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.1 (v3.1)</span><span class="tag mono">CVE-2026-133951</span><span class="tag wp">WordPress</span><span class="tag">Simple Membership</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133951">Simple Membership made its signing secret too easy to guess</a></h3>
+              <p>Through version 4.8.9, the plugin creates its site-wide secret with a weak random function. The guess space is small enough that an attacker can narrow it using the public date of the registration page, then use the registration form to check the guess and raise their own access level.</p>
+              <p class="do"><strong>Do</strong>Update Simple Membership to 4.9.1, the current release. Check the changelog on whether the secret is regenerated, and review members with elevated levels.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/simple-membership/">WordPress.org</a> &middot; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133951">NVD</a></div>
+            </article>
+            <div class="brief wide">
+              <div class="tags"><span class="tag high">CVSS 8.2 (v4.0)</span><span class="tag mono">CVE-2026-137559</span><span class="tag">PHP</span><span class="tag">Composer</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137559">web-token jwt-framework: tiny tokens can keep PHP workers busy for minutes</a></h3>
+              <p>On PHP without the GMP extension, the library does slow math on oversized key values before checking their length. An unauthenticated caller who knows only the curve can send small encrypted tokens that tie up a worker for seconds to minutes each. Fixed in 3.4.13, 4.0.9, 4.1.11 and 4.2.6. Run <code>composer update web-token/jwt-framework web-token/jwt-library</code>, or install the GMP extension.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137559">NVD</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.1 (v3.1)</span><span class="tag mono">CVE-2026-135279</span><span class="tag">Fastify</span><span class="tag">Node.js</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135279">@fastify/express can skip Express middleware on some routes</a></h3>
+              <p>The plugin lets Express middleware run inside a Fastify app. Before 4.0.14, a request with an empty route parameter reaches the Fastify handler while middleware mounted inside an Express router is skipped, and a loose regular-expression mount is skipped the same way. An earlier fix covered only some mounts. NVD says this can bypass authentication.</p>
+              <p class="do"><strong>Do</strong>Update @fastify/express to 4.0.14, and do not rely on Express middleware alone to protect a route.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135279">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag crit">CVSS 9.1 (v4.0)</span><span class="tag mono">CVE-2026-137465</span><span class="tag">Parse Server</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137465">Parse Server: Google Play Games login can be used to take over accounts</a></h3>
+              <p>The adapter does not check that the player ID belongs to the access token, so an attacker can sign in with their own credential while naming someone else's ID. It affects 3.10.0 before 8.6.123 and 9.0.0 before 9.11.1-alpha.4, and only apps using that adapter. Update, or turn the adapter off.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">GitHub</span><span class="tag">Python</span><span class="tag">North Korea-linked</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html">PolinRider hides a loader in a small utils package or conftest.py</a></h3>
+              <p>SafeDep found a Python loader in 375 public GitHub repositories from 260 accounts. It sits in a small utils package or in conftest.py, so it runs when Python imports the file or when tests start. The loader reads the newest transaction an Ethereum wallet sent to itself, decodes it as JavaScript and runs it with Node.js, which then looks up a second wallet to find its command server. The Hacker News headline puts the wider PolinRider campaign at over 7,600 repositories, and reports it may date back to February 2025. SafeDep found no sign of it on PyPI or npm. Fake job interviews are one delivery route, with take-home projects, a fake camera check that asks for a driver, and copy-and-paste terminal commands.</p>
+              <p class="do"><strong>Do</strong>Search your repos and forks for odd code in conftest.py and small utils packages, run take-home or unknown projects only in a throwaway virtual machine, and if you ran one on a work laptop, rotate your GitHub tokens and check for pushes you did not make.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html">The Hacker News</a> (citing SafeDep, StepSecurity and Unit 42)</div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Browser extensions</span><span class="tag">Microsoft</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html">SleeperWidget: 250+ extensions turn bad only if you found them through an ad</a></h3>
+              <p>Microsoft's Edge Extensions Security Team documented over 250 extensions on the Edge, Chrome and Firefox stores. They work as advertised, but when installed through a paid search ad they collect browsing data, inject ads and change shopping links. Review the extensions on developer and store-admin machines.</p>
+            </div>
+            <div class="brief">
+              <div class="tags"><span class="tag high">E-commerce</span><span class="tag">Skimmers</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html">Guardio: about 1 in 195 online shops scanned was hijacked in October</a></h3>
+              <p>Guardio Labs (a vendor, measuring its own scan) says about 12,200 of 2.38 million stores were hijacked. Tactics include sending shoppers to scam pages, fake "I'm not a robot" checks that tell them to paste a command (about 900 shops), and card skimmers. Store owners should review checkout scripts and update their plugins.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card kev">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag high">Suspected AI use</span><span class="tag">Mitel MiCollab</span></div>
+              <h3><a href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/">Mitel MiCollab: attackers used the bugs before the patch, and may have used AI</a></h3>
+              <p>Accenture's Apex Labs says five MiCollab conferencing bugs were used as zero-days before Mitel's Nov 16 patches. One attacker ran commands 12 minutes after the first request, had root in half an hour, and reached backup and database servers about 20 hours in. The attacker's servers also talked to two commercial AI services, which Accenture calls consistent with sorting stolen data, helping with the web shell and preparing extortion, but it cannot say how they were used. CISA added the five bugs to its exploited list on Nov 25. This is not a web stack product, but the speed is the lesson.</p>
+              <p class="do"><strong>Do</strong>Patch MiCollab using Mitel's Nov 16 advisory. If a server was exposed before patching, treat it as possibly compromised and check Accenture's indicators of compromise.</p>
+              <div class="sources">Sources: <a href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/">SecurityWeek</a> &middot; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 8.1 (v3.1)</span><span class="tag mono">CVE-2026-131688</span><span class="tag wp">WordPress</span><span class="tag">MCP</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131688">A WordPress MCP plugin turns any valid agent token into an admin</a></h3>
+              <p>The Secure MCP Server for Claude, ChatGPT, Gemini, Cursor and other AI Agents plugin, through 1.5.8, does not check who is allowed to do what. Per NVD, an attacker holding any valid MCP bearer token, even a limited test token, can act with the token owner's Administrator role by sending it to endpoints such as admin-ajax.php. Getting a token is the hard part, but tokens leak into config files and logs.</p>
+              <p class="do"><strong>Do</strong>Update the plugin once a release newer than 1.5.8 is out (this issue could not confirm a fixed version), revoke unused MCP tokens, and give each token only the scope it needs.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131688">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Turn off the Cacti guest account and restrict who can reach the web interface.</li>
+            <li>Update Ultimate Member to 2.14.3 and FunnelKit Automations to 3.9.0.2.</li>
+            <li>Update W3 Total Cache to 2.11.1 and Simple Membership to 4.9.1.</li>
+            <li>Update @fastify/express to 4.0.14 and Parse Server to 8.6.123 or 9.11.1-alpha.4 if you use the Google Play Games login.</li>
+            <li>Run composer update on web-token/jwt-framework and jwt-library, or install GMP.</li>
+            <li>Check clones and forks for odd code in conftest.py, and never run take-home projects on a work laptop.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134481">CVE-2026-134481</a><span class="meta">Ultimate Member through 2.14.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131767">CVE-2026-131767</a><span class="meta">FunnelKit Automations through 3.9.0.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-133951">CVE-2026-133951</a><span class="meta">Simple Membership through 4.8.9 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135279">CVE-2026-135279</a><span class="meta">@fastify/express before 4.0.14 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137465">CVE-2026-137465</a><span class="meta">Parse Server 3.10.0 before 8.6.123, 9.0.0 before 9.11.1-alpha.4 · 9.1 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119071">CVE-2026-119071</a><span class="meta">W3 Total Cache through 2.11.0 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-131688">CVE-2026-131688</a><span class="meta">Secure MCP Server plugin through 1.5.8 · 8.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137559">CVE-2026-137559</a><span class="meta">web-token jwt-framework and jwt-library before 4.2.6 and earlier lines · 8.2 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 27, 2026 04:33 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>
