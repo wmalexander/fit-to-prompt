@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A popular WordPress speed plugin is being hacked right now | Fit to Patch No. 25, November 28, 2026</title>
+  <meta name="description" content="WP Rocket before 3.24.2 is under active attack, and CISA says GeoServer bugs are exploited. Four more WordPress plugins and a PHP PDF library have fixes to install.">
+  <meta property="og:title" content="Fit to Patch No. 25: A popular WordPress speed plugin is being hacked right now">
+  <meta property="og:description" content="WP Rocket before 3.24.2 is under active attack, and CISA says GeoServer bugs are exploited. Four more WordPress plugins and a PHP PDF library have fixes to install.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fittoprompt.com/security/issues/2026-11-28.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/patch.css">
+  <script src="../assets/patch.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span><a href="../">fittoprompt.com/security</a></span>
+      <span><a href="/">AI the News That's Fit to Prompt &rarr;</a> &nbsp; <button class="theme-toggle" type="button">theme</button></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="brand">
+        <div class="brand-mark">&gt;_</div>
+        <h1>Fit to <span>Patch</span></h1>
+      </div>
+      <div class="issue-meta">
+        <span>Saturday, November 28, 2026</span>
+        <span>No. 25</span>
+        <span class="pressure high">Patch pressure: High</span>
+      </div>
+    </header>
+
+        <div class="issue-grid">
+      <main class="col-main">
+        <aside class="tldr">
+          <h2>60-second read</h2>
+          <ul>
+            <li>WP Rocket, a very common WordPress speed plugin, is now being attacked by several groups; update to 3.24.2 and look for PHP files you did not add.</li>
+            <li>CISA says GeoServer bugs are exploited and can be chained into remote code execution without a login; update to 2.27.7, 2.28.6 or 3.0.2.</li>
+            <li>Card skimmers hid in marketing pixels and cookie-banner settings on five shop sites before Black Friday, so lock down your checkout page script rules.</li>
+            <li>Amelia, WebinarIgnition, WPMasterToolKit and Simple Membership all have new releases that fix serious bugs.</li>
+          </ul>
+        </aside>
+
+        <section class="block" id="patch-now">
+          <div class="block-head"><span class="num">01</span><h2>Patch now</h2><p>Confirmed exploited or critical and easy to reach</p></div>
+          <div class="items">
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-125812</span><span class="tag wp">WordPress</span></div>
+              <h3><a href="https://patchstack.com/articles/critical-wp-rocket-rce-cve-2026-125812-under-active-attack/">WP Rocket is being used to plant PHP files on sites; update to 3.24.2</a></h3>
+              <p>Yesterday's issue listed this as a patch-soon bug with no known attacks. That has changed. Patchstack says an attacker with no login can make a site download a file from a server they control, save it as PHP and run it. It affects versions before 3.24.2 when either "LazyLoad for CSS background images" or "Host Fonts Locally" is turned on. Both are off by default but common on tuned sites. Patchstack saw the first attempt on November 25 at 15:27 UTC and reports tens of thousands of blocked attempts on November 26 alone, from several separate attackers. Requests go to /wp-admin/admin-ajax.php with the action rocket_beacon. Patchstack puts the plugin at more than 5.5 million sites, which is its own figure. NVD calls the flaw a path traversal and scores it 9.8; Patchstack describes it as remote code execution.</p>
+              <p class="do"><strong>Do</strong>Update WP Rocket to 3.24.2 or later. If you cannot yet, switch off both options above. The update does not remove files already planted, so look for unfamiliar PHP files such as wp-media-*.php in wp-content, wp-content/uploads and wp-content/wp-rocket-config, and for outbound requests to nip.io or trycloudflare.com names.</p>
+              <div class="sources">Sources: <a href="https://patchstack.com/articles/critical-wp-rocket-rce-cve-2026-125812-under-active-attack/">Patchstack</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125812">NVD</a></div>
+            </article>
+            <article class="card kev wide">
+              <div class="tags"><span class="tag kev">Exploited</span><span class="tag crit">Chains to code execution</span><span class="tag">GeoServer</span><span class="tag">Java</span></div>
+              <h3><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-39mw-5chv-jh47">GeoServer: CISA says two bugs are exploited; update to 2.27.7, 2.28.6 or 3.0.2</a></h3>
+              <p>GeoServer is a Java server that publishes map data on the web. On November 27 CISA added two of its bugs to the exploited list. One lets a stranger slip XML into a WFS GetFeatureById request, which can read a text file from the server or make the server fetch a web address of the attacker's choosing. The other lets a request skip the service-level permission checks by putting a prefix in front of the service name, such as x/WFS. CISA says these can be chained with three other GeoServer bugs to get remote code execution with no login. The project's advisories date from November 23. None of these CVE numbers are in NVD yet, so this issue does not print them; the KEV entries and advisories name them. CISA set a due date of November 30 for federal agencies.</p>
+              <p class="do"><strong>Do</strong>Update GeoServer to 2.27.7, 2.28.6 or 3.0.2. If you cannot today, restrict or turn off WFS for anonymous users, which is the project's stated mitigation for the XML bug. Treat any GeoServer that was reachable from the internet as possibly visited and check its logs.</p>
+              <div class="sources">Sources: <a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-39mw-5chv-jh47">GeoServer advisory (XML bug)</a> · <a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-rv5g-g2r9-58rj">GeoServer advisory (permission bypass)</a> · <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="wordpress-php">
+          <div class="block-head"><span class="num">02</span><h2>WordPress &amp; PHP watch</h2><p>Core, plugins, themes, PHP and the frameworks on top of it</p></div>
+          <div class="items">
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.1 (v3.1)</span><span class="tag mono">CVE-2026-135930</span><span class="tag wp">WordPress</span><span class="tag">Amelia</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135930">Amelia booking lets someone pretend to be another user</a></h3>
+              <p>NVD lists an identity spoofing bug in the Amelia booking plugin in every version through 2.4.14 and scores it 9.1. NVD gives no steps for how it works, and no attacks are reported.</p>
+              <p class="do"><strong>Do</strong>Update Amelia to 2.4.15, the current release on WordPress.org, and confirm the version on each booking site.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/ameliabooking/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135930">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.8 (v3.1)</span><span class="tag mono">CVE-2026-135933</span><span class="tag wp">WordPress</span><span class="tag">WebinarIgnition</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135933">WebinarIgnition can hand out the wrong user role</a></h3>
+              <p>NVD lists an incorrect privilege assignment bug in every version through 4.28.1 and scores it 9.8, which means no login is needed. The record says only that it allows privilege escalation, and no attacks are reported.</p>
+              <p class="do"><strong>Do</strong>Update WebinarIgnition to 4.29.4, the current release, and check your user list for administrator accounts you did not create.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/webinar-ignition/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135933">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.9 (v3.1)</span><span class="tag mono">CVE-2026-134963</span><span class="tag wp">WordPress</span><span class="tag">WPMasterToolKit</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134963">WPMasterToolKit has a code injection bug scored 9.9</a></h3>
+              <p>NVD lists a code injection bug in every version through 2.26.1. The 9.9 score points to a low-privilege login being enough, but the record gives no further detail and no attacks are reported.</p>
+              <p class="do"><strong>Do</strong>Update WPMasterToolKit to 2.26.3, the current release, or remove it if you do not use it.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/wpmastertoolkit/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134963">NVD</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">CVSS 7.5 (v3.1)</span><span class="tag mono">CVE-2026-135626</span><span class="tag wp">WordPress</span><span class="tag">Simple Membership</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135626">Simple Membership: a contributor can make an administrator</a></h3>
+              <p>In versions through 4.9.0 a user with Contributor access or above can create a membership level that names the administrator role, then have that role applied to a member account. The plugin never checks the role against an allowed list. This is a second Simple Membership bug in two days.</p>
+              <p class="do"><strong>Do</strong>Update Simple Membership to 4.9.1, and review who holds contributor accounts and which membership levels exist.</p>
+              <div class="sources">Sources: <a href="https://wordpress.org/plugins/simple-membership/">WordPress.org</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135626">NVD</a></div>
+            </article>
+            <article class="card wide">
+              <div class="tags"><span class="tag high">CVSS 8.7 (v4.0)</span><span class="tag mono">CVE-2026-134129</span><span class="tag">PHP</span><span class="tag">Composer</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134129">smalot/pdfparser: a small crafted PDF can tie up PHP workers</a></h3>
+              <p>Before 2.14.0, this PHP library for reading PDFs takes far longer than it should on a file with deeply nested, unbalanced parentheses in a text string. A small upload can stall a worker for seconds to minutes. It matters for any site that parses uploaded PDFs, such as search indexing or document import plugins. NVD has not analyzed the record yet.</p>
+              <p class="do"><strong>Do</strong>Run composer update smalot/pdfparser to get 2.14.0 or later, and cap upload size and parse time where users can send PDFs.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134129">NVD</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" id="node-apache">
+          <div class="block-head"><span class="num">03</span><h2>Node.js, React &amp; Apache watch</h2><p>The runtime, the front-end framework and the servers under a lot of the web</p></div>
+          <div class="items">
+            <div class="brief wide">
+              <div class="tags"><span class="tag low">Nothing new today</span><span class="tag">Node.js</span></div>
+              <h3><a href="https://nodejs.org/en/blog/vulnerability">No new Node.js, React, Next.js or Apache advisories in today's feeds</a></h3>
+              <p>The Node.js, React and Next.js feeds had nothing new. Carrying forward from yesterday: if you use the Fastify Express plugin, update @fastify/express to 4.0.14, because middleware can be skipped on some routes.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="web-stack">
+          <div class="block-head"><span class="num">04</span><h2>Web stack &amp; supply chain</h2><p>npm, Composer, PyPI, browsers, CI, hosting</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">Checkout</span><span class="tag">Black Friday</span></div>
+              <h3><a href="https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer">Card skimmers on five shop sites used WebRTC to slip past script rules</a></h3>
+              <p>InfoHawk found a card-skimming script on the shops of Lascana, Samsonite, American Tourister, Revolve and FWRD in the week before Black Friday. It got onto pages three ways: an altered marketing pixel, a changed cookie-banner setting, and an altered file on a retailer's own CDN. It ran only on phone-sized screens, and the Samsonite version only on the checkout page. The setup requests are ordinary web requests, but the stolen data and the skimmer code travel over a WebRTC data channel, which a connect-src rule does not cover. InfoHawk saw test card details leave Lascana's checkout this way. All five sites removed the code on November 24 or 25. The researchers do not know how many real cards were taken.</p>
+              <p class="do"><strong>Do</strong>On every payment page, set a Content-Security-Policy connect-src that lists only the hosts you use, since that blocks the two web requests the skimmer needs before WebRTC opens. Then check tag managers, cookie-banner settings and CDN files for scripts from S3 buckets named like brand-static, and test checkout on a phone, because desktop checks miss it.</p>
+              <div class="sources">Sources: <a href="https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer">InfoHawk</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag high">Supply chain</span><span class="tag">GitHub</span><span class="tag">CI</span></div>
+              <h3><a href="https://www.stepsecurity.io/blog/polinrider-malware-open-source-pull-requests">PolinRider malware was force-pushed into open pull requests, and one project's release build ran it</a></h3>
+              <p>StepSecurity reports that an account now suspended by GitHub swapped malware into open pull requests at AsyncAPI, CircuitVerse, Open Food Facts and Jaeger, then replaced it with clean code within 30 to 40 minutes at AsyncAPI. At CircuitVerse the pull request workflows ran it, including the release workflow that built 40 desktop installers, which the maintainers deleted. Open Food Facts' CI ran it too and the project rotated a secret. None of the account's 145 merged pull requests contained the loader.</p>
+              <p class="do"><strong>Do</strong>Require maintainer approval before CI runs on pull requests from forks, keep release workflows off pull request triggers, and rotate any secret a pull request workflow could read.</p>
+              <div class="sources">Sources: <a href="https://www.stepsecurity.io/blog/polinrider-malware-open-source-pull-requests">StepSecurity</a></div>
+            </article>
+            <article class="card">
+              <div class="tags"><span class="tag crit">CVSS 9.3 (v4.0)</span><span class="tag mono">CVE-2026-137964</span><span class="tag">ToolJet</span><span class="tag">GitHub Actions</span></div>
+              <h3><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137964">ToolJet's own release workflow ran shell commands hidden in a pull request title</a></h3>
+              <p>Before 3.21.96-LTS, ToolJet's GitHub Actions release workflow put the pull request title straight into a shell command. A title with shell characters, merged into a release branch, would run with a token that reaches other repositories. This is a bug in ToolJet's project setup, and the same pattern can sit in any workflow that inserts titles or branch names into a script.</p>
+              <p class="do"><strong>Do</strong>If you run ToolJet, use 3.21.96-LTS or later. In your own workflows, pass titles and branch names in through environment variables, never directly into run blocks.</p>
+              <div class="sources">Sources: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137964">NVD</a></div>
+            </article>
+            <div class="brief">
+              <div class="tags"><span class="tag high">Breach</span><span class="tag">GitHub</span></div>
+              <h3><a href="https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/">SAP confirms an incident after reports that stolen tokens let attackers copy and change code on GitHub</a></h3>
+              <p>SAP says it found suspicious activity and acted to protect customers, and that it has found no evidence of unauthorized access to customer business data. Der Spiegel, citing an internal memo, reports the attackers stole employee authentication tokens and used them to copy and alter source code. SAP has not said which environments were affected, so if you pull SAP code from GitHub, pin versions and check hashes.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="ai-security">
+          <div class="block-head"><span class="num">05</span><h2>AI &times; security</h2><p>AI-found bugs, AI-assisted attacks, prompt injection, coding agents</p></div>
+          <div class="items">
+            <article class="card wide">
+              <div class="tags"><span class="tag high">AI-assisted attack</span><span class="tag">Switzerland</span></div>
+              <h3><a href="https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html">Switzerland says AI agents broke into organizations in four of five reported attacks</a></h3>
+              <p>The head of Switzerland's national cyber security agency told public broadcaster SRF that AI agents got into systems at Swiss organizations in four of five confirmed cases, the first such cases in the country. Three of the five targeted critical infrastructure operators and two of those succeeded, with no major disruption reported. The victims are not named and no one has been tied to the attacks. The agency says these agents scan for known, unpatched weaknesses, run many attacks at once, and switch methods when defenses respond. It also says the number of AI attack tools reachable online has nearly doubled since October, a count of tools and not of victims.</p>
+              <p class="do"><strong>Do</strong>Treat the time between a patch release and attempted exploitation as hours, not weeks. Start with the internet-facing items in this issue, such as WP Rocket and GeoServer.</p>
+              <div class="sources">Sources: <a href="https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html">The Hacker News</a></div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-side">
+        <section class="side-box" id="todo">
+          <h2>Today's checklist</h2>
+          <ul class="todo">
+            <li>Update WP Rocket to 3.24.2, then look for unfamiliar PHP files such as wp-media-*.php in wp-content and its uploads folder.</li>
+            <li>Update GeoServer to 2.27.7, 2.28.6 or 3.0.2, or turn off anonymous WFS access until you can.</li>
+            <li>Update Amelia to 2.4.15, WebinarIgnition to 4.29.4, WPMasterToolKit to 2.26.3 and Simple Membership to 4.9.1.</li>
+            <li>Set a connect-src policy on payment pages and check tag managers, cookie banners and CDN files for scripts you do not recognize.</li>
+            <li>Require approval before CI runs on fork pull requests, and move pull request titles out of workflow shell commands.</li>
+            <li>Run composer update smalot/pdfparser to reach 2.14.0 if your site parses uploaded PDFs.</li>
+          </ul>
+        </section>
+
+        <section class="subscribe">
+          <h2>Get it every morning</h2>
+          <p>One short email a day with the patch list.</p>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/fittopatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/fittopatch', 'popupwindow')">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="fine">Separate from the AI newsletter. Unsubscribe anytime.</p>
+        </section>
+
+        <section class="side-box" id="cve-ledger">
+          <h2>CVE ledger</h2>
+          <ul class="ledger">
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125812">CVE-2026-125812</a><span class="meta">WP Rocket before 3.24.2 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135933">CVE-2026-135933</a><span class="meta">WebinarIgnition through 4.28.1 · 9.8 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134963">CVE-2026-134963</a><span class="meta">WPMasterToolKit through 2.26.1 · 9.9 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135930">CVE-2026-135930</a><span class="meta">Amelia through 2.4.14 · 9.1 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-135626">CVE-2026-135626</a><span class="meta">Simple Membership through 4.9.0 · 7.5 v3.1</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-137964">CVE-2026-137964</a><span class="meta">ToolJet before 3.21.96-LTS · 9.3 v4.0</span></li>
+            <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-134129">CVE-2026-134129</a><span class="meta">smalot/pdfparser before 2.14.0 · 8.7 v4.0</span></li>
+          </ul>
+          <p class="method" style="margin:10px 0 0;">Checked against NVD and CISA KEV, Nov 28, 2026 04:33 ET.</p>
+        </section>
+
+        <a class="sister" href="/"><small>Also from Fit to Prompt</small><strong>AI the News That's Fit to Prompt</strong><span>The daily AI news digest.</span></a>
+      </aside>
+    </div>
+
+    <p class="method">How this briefing is made: candidates come from the CISA KEV catalog, NVD, the GitHub Advisory Database and 32 security feeds. Every CVE was checked against NVD and the KEV catalog before publishing. Not advice for your specific systems; confirm against the vendor advisory before acting.</p>
+  </div>
+  <footer>
+    <div class="wrap"><a href="../">All briefings</a> · Fit to Patch is a companion to <a href="/">AI the News That's Fit to Prompt</a>.</div>
+  </footer>
+</body>
+</html>

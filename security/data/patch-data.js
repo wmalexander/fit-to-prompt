@@ -7,9 +7,18 @@ const PATCH_DATA = {
         title: "Fit to Patch",
         subtitle: "The daily web security briefing",
         buttondownUsername: "fittopatch",
-        lastUpdated: "2026-11-27"
+        lastUpdated: "2026-11-28"
     },
     issues: [
+        {
+            date: "2026-11-28",
+            issueNumber: 25,
+            title: "A popular WordPress speed plugin is being hacked right now",
+            summary: "WP Rocket before 3.24.2 is under active attack, and CISA says GeoServer bugs are exploited. Four more WordPress plugins and a PHP PDF library have fixes to install.",
+            url: "https://fittoprompt.com/security/issues/2026-11-28.html",
+            pressure: "high",
+            itemCount: 13
+        },
         {
             date: "2026-11-27",
             issueNumber: 24,
