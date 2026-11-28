@@ -7,11 +7,21 @@ const NEWSLETTER_DATA = {
     meta: {
         title: "AI the News That's Fit to Prompt",
         subtitle: "A daily AI news digest",
-        lastUpdated: "2026-11-27",
-        lastPuzzleType: "cryptogram",
-        puzzleHistory: ["cryptogram"]
+        lastUpdated: "2026-11-28",
+        lastPuzzleType: "scramble",
+        puzzleHistory: ["cryptogram", "scramble"]
     },
     issues: [
+        {
+            date: "2026-11-28",
+            volume: 1,
+            issueNumber: 158,
+            title: "Jensen Huang Was Gone for 11 Days. That Was Nvidia's Succession Test, and the Board Failed It",
+            description: "Daily AI news roundup - November 28, 2026. Nvidia's board fails its succession test, chips that compute with light, OpenAI's Astra draws a wisdom complaint, two states sue SpaceX over Grok images, and more.",
+            url: "https://fittoprompt.com/issues/2026-11-28.html",
+            storyCount: 18,
+            puzzleType: "scramble"
+        },
         {
             date: "2026-11-27",
             volume: 1,
